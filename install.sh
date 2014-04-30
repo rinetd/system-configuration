@@ -27,6 +27,7 @@ else
 fi
 
 # export system type, so in other shell scripts can use it
+echo "system type is $system_type"
 export system_type
 
 
