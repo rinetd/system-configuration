@@ -1,0 +1,155 @@
+# The functions from this component can be overwritten in the personal theme.
+DestroyMenu  MenuFvwmWindowGroupQuickMove
+AddToMenu    MenuFvwmWindowGroupQuickMove
++ "&Right	Page%menu/window-move.xpm%" Pick All ($r) MoveToPage +1p +0p
++ "&Left	Page%menu/window-move.xpm%" Pick All ($r) MoveToPage -1p +0p
++ "D&own	Page%menu/window-move.xpm%" Pick All ($r) MoveToPage +0p +1p
++ "&Up  	Page%menu/window-move.xpm%" Pick All ($r) MoveToPage +0p -1p
+
+DestroyFunc WindowListFunc
+AddToFunc   WindowListFunc
++ I Iconify false
++ I FlipFocus
++ I Raise
++ I WarpToWindow 10p 10p
+
+DestroyFunc FuncFvwmSelectWindow
+AddToFunc   FuncFvwmSelectWindow
++ I Focus
++ I Raise
++ I WarpToWindow 50 50
+
+# ----------------------------------------------------------------------------
+
+DestroyFunc FuncFvwmDeiconifyFocusAndRaise
+AddToFunc   FuncFvwmDeiconifyFocusAndRaise
++ I Iconify off
++ I Focus
++ I Raise
+
+DestroyFunc FuncFvwmIconifyOrFocusAndRaise
+AddToFunc   FuncFvwmIconifyOrFocusAndRaise
++ I ThisWindow (Iconic) Iconify off
++ I TestRc (NoMatch) ThisWindow (Raised) Iconify on
++ I ThisWindow (!Iconic) Focus
++ I ThisWindow (!Iconic) Raise
+
+DestroyFunc FuncFvwmDeiconifyFocusAndWarp
+AddToFunc   FuncFvwmDeiconifyFocusAndWarp
++ I Iconify off
++ I Focus
++ I WarpToWindow 10p 10p
+
+DestroyFunc FuncFvwmRestore
+AddToFunc   FuncFvwmRestore
++ I ThisWindow (!Iconic !Shaded Maximized) Maximize    false
++ I ThisWindow (!Iconic  Shaded          ) WindowShade false
++ I ThisWindow ( Iconic                  ) Iconify     false
+
+DestroyFunc FuncFvwmDelete
+AddToFunc   FuncFvwmDelete
++ I Delete
+
+DestroyFunc FuncFvwmDeleteOrDestroy
+AddToFunc   FuncFvwmDeleteOrDestroy
++ H Nop
++ M Nop
++ C Delete
++ D Destroy
+
+#DestroyFunc FuncFvwmMaximize
+#AddToFunc   FuncFvwmMaximize
+#+ M Nop
+#+ H Maximize 0 95
+#+ C Maximize 100 95
+#+ D Maximize 100 100
+
+DestroyFunc FuncFvwmMaximize
+AddToFunc   FuncFvwmMaximize
++ M Nop
++ H Nop
++ C Maximize
++ D Menu MenuFvwmWindowMaximize
+
+DestroyFunc FuncFvwmMaximizeVertically
+AddToFunc   FuncFvwmMaximizeVertically
++ H Maximize 0 100
++ M Maximize 0 100
++ C Maximize 0 100
+
+DestroyFunc FuncFvwmMaximizeHorizontally
+AddToFunc   FuncFvwmMaximizeHorizontally
++ H Maximize 100 0
++ M Maximize 100 0
++ C Maximize 100 0
+
+DestroyFunc FuncFvwmSimpleMaximize
+AddToFunc   FuncFvwmSimpleMaximize
++ I Maximize $0
+
+DestroyFunc FuncFvwmSimpleMaximizeVertically
+AddToFunc   FuncFvwmSimpleMaximizeVertically
++ I Maximize $0 0 100
+
+DestroyFunc FuncFvwmSimpleMaximizeHorizontally
+AddToFunc   FuncFvwmSimpleMaximizeHorizontally
++ I Maximize $0 100 0
+
+DestroyFunc FuncFvwmSimpleMaximizePartially
+AddToFunc   FuncFvwmSimpleMaximizePartially
++ I Maximize $0 0 95
+
+DestroyFunc FuncFvwmIconifySameResource
+AddToFunc   FuncFvwmIconifySameResource
++ I All ($r) Iconify $0
+
+DestroyFunc FuncFvwmIconify
+AddToFunc   FuncFvwmIconify
++ C Iconify
+
+DestroyFunc FuncFvwmConsole
+AddToFunc   FuncFvwmConsole
++ I Module FvwmConsole -fg $[fg.cs22] -bg $[bg.cs22] $*
+
+# ----------------------------------------------------------------------------
+# These functions probably need not be configurable (move to themes-rc?).
+
+DestroyFunc FuncFvwmShowMessage
+AddToFunc   FuncFvwmShowMessage
++ I Test (x xmessage) Exec echo "$1" | \
+	perl -pe 's/\^n/\n/g; s/\^t/\t/g; s/\^d/\$/g; s/\^\^/^/g' - | \
+	xmessage -g 480x124 -nearmouse -title "$0" -file - \
+	-xrm "*form*foreground:$[fg.cs35]" -xrm "*form*background:$[bg.cs35]" \
+	-xrm "*form*message*foreground:$[fg.cs36]" -xrm "*form*message*background:$[bg.cs36]"
++ I TestRc (!Match) FvwmPerl -e \
+	'$_ = qq{$1}; s/\^n/\n/g; s/\^t/\t/g; s/\^d/\044/g; s/\^\^/^/g; showMessage($_, $0, 1)'
+
+DestroyFunc FuncFvwmShowButtonInfo
+AddToFunc   FuncFvwmShowButtonInfo
++ I FuncFvwmShowMessage "Button Info" "$0"
+
+DestroyFunc FuncFvwmWithGtk
+AddToFunc   FuncFvwmWithGtk
++ I PipeRead `fvwm-config --supports-gtk && echo '$*' || \
+	echo 'FuncFvwmShowMessage "FVWM Error" "There is no GTK support in your FVWM.^nThe requested command is not executed."'`
+
+DestroyFunc FuncFvwmConfirm
+AddToFunc   FuncFvwmConfirm
++ I FvwmScript FvwmScript-Confirm --line2 `$0` --command `$1` \
+	`$2` `$3` `$4` `$5` `$6` `$7` `$8` `$9`
+
+DestroyFunc FuncFvwmShowColorset
+AddToFunc   FuncFvwmShowColorset
++ I FvwmPerl -e 'cmd("FuncFvwmShowMessage `Colorset $0 Information` `" . $module->track("Colorsets")->dump($0) . "`")'
+
+DestroyFunc FuncFvwmShowAllColorsets
+AddToFunc   FuncFvwmShowAllColorsets
++ I FvwmButtons X $[FT_DATADIR]/FvwmButtons-Colorsets
+
+DestroyFunc FuncFvwmNoColourTable
+AddToFunc   FuncFvwmNoColourTable
++ I FuncFvwmShowMessage "Information" "No palette defined for the current colors component"
+
+DestroyFunc FuncFvwmShowColourTable
+AddToFunc   FuncFvwmShowColourTable
++ I FuncFvwmNoColourTable

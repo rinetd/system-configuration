@@ -1,0 +1,11 @@
+;; Sawfish user customization -- do not edit by hand!
+;; Use the configurator instead.
+;; sawfish version 1.10, written Sat Jan 18 14:53:01 2014
+
+(custom-set-typed-variable (quote default-frame-style) (quote aq3) (quote frame-style))
+(custom-set-typed-variable (quote root-background) (quote "/home/vinurs/.sawfish/images/bg/13.jpg") (quote file-name))
+(custom-set-typed-variable (quote menu-changes-default-bg) (quote t) (quote boolean))
+(custom-set-keymap (quote global-keymap) (quote (keymap (my-toggle-show-hide-desktop . "Super-d") (toggle-window-shaded . "Super-t") (popup-root-menu . "Super-m") (jump-or-exec-emacs . "Super-e") (cycle-windows . "W-TAB") (next-workspace . "W-Right") (previous-workspace . "W-Left"))))
+(custom-set-keymap (quote title-keymap) (quote (keymap (tab-add-to-group . "Button2-Off") (move-window-interactively . "Button1-Move") (toggle-window-shaded . "Button1-Off2") (resize-window-interactively . "Button2-Move") (raise-lower-window . "Button3-Off"))))
+(custom-set-typed-variable (quote tooltips-enabled) (quote t) (quote boolean) (quote sawfish.wm.ext.tooltips))
+(custom-set-typed-variable (quote styletab-c:proposals) (quote Darkblue) (quote symbol))

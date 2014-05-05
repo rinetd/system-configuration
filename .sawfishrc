@@ -1,0 +1,15 @@
+;; 设置sawfish扩展的路径
+ (setq load-path (cons "~/.sawfish/" 
+                      load-path))
+ (setq load-path (cons "~/.sawfish/extensions" 
+                      load-path))
+ (setq load-path (cons "~/.sawfish/lisp" 
+                     load-path))
+
+(setq load-path (cons "~/.sawfish/rep" 
+                      load-path))
+
+;; 我自己的配置文件
+(require 'vinurs-sawfish)
+
+

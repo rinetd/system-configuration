@@ -1,0 +1,50 @@
+################## FvwmButtons button-bar ################################
+*FvwmButtonsBack bisque3
+*MainPanel: Geometry 80x18+40+4
+*MainPanel: Back SeaGreen
+*MainPanel: (Panel(down, indicator, delay 0, steps 1) \
+                PagerPanel "Module FvwmButtons PagerPanel")
+*MainPanel: Font  -*-simsun-medium-r-*-*-16-*-*-*-*-*-*-*
+*PagerPanel: Geometry 80x352
+*PagerPanel: (Swallow FvwmPager "Module FvwmPager 0 3")
+*PagerPanel: Font  -*-simsun-medium-r-*-*-16-*-*-*-*-*-*-*
+
+
+
+######################## FvwmButtons ButtonBar ################################
+
+#下面设定的是在我桌面的左上角的一排快捷程序按钮。其具体的样式（透明的），字体等。
+*FvwmButtons: Hilight3DOff, HilightBack #424164, ActiveFore white
+*FvwmButtons: Colorset 0 Transparent,fg white #颜色
+#*FvwmButtons: ShowTips
+#*FvwmButtons: FocusFore cornsilk
+#*FvwmButtons: NoSeparators
+#*FvwmButtons: UseSkipList
+*FvwmButtons: Colorset 0
+*FvwmButtons: Foreground grey90
+*FvwmButtons: Background #1c5572
+*FvwmButtons: Font "-adobe-helvetica-bold-r-*-*-12-*,-*-simsun-medium-r-*-*-12-*-*-*-*-*-*-*" #显示的字体及大小
+#*FvwmButtons: Face VGradient 128 1 #2c80A0 1 #1c5572 
+#*FvwmButtons: WindowBorderWidth 1
+#*FvwmButtons: Window3DBorders
+*FvwmButtons: Geometry +000 #显示在屏幕上的位置》（在左上角）
+*FvwmButtons: Columns 8 #显示8个按钮
+*FvwmButtons: Rows 1 #显示 一行
+ColormapFocus FollowsFocus
+Style FvwmButtons NoTitle,WindowListSkip,BorderWidth 1, HandleWidth 1,Sticky,/
+StaysOnTop,CirculateSkip
+
+#下面的是具体设定了哪些程序
+#*FvwmButtons: (Title (Side) "", Left, Back #dedbde, Icon term.png, / 
+Action (Mouse 1) `Exec exec xterm +sb -bg black -fg gray -fw -*-simsun-medium-r-normal-*-*-115-*-*-*-*-iso10646-1`) 
+# *FvwmButtons: (Title (Side) "文件管理", Left, Back #dedbde, Icon file.png,Action (Mouse 1) `Exec exec xffm`) 
+*FvwmButoons: (TiTle (Side) "Mlt", Left, Bach #dedbde,Action (Mouse 1) `Exec exec mlterm`)
+*FvwmButtons: (Title (Side) "", Left, Back #dedbde, Icon firefox.png,Action (Mouse 1) `Exec exec firefox`) 
+*FvwmButtons: (Title (Side) "", Left, Back #dedbde, Icon kwrite.png,Action (Mouse 1) `Exec exec kwrite`) 
+*FvwmButtons: (Title (Side) , Left, Back #dedbde, Icon opera.png,Action (Mouse 1) `Exec exec opera`) 
+*FvwmButtons: (Title (Side) "", Left, Back #dedbde, Icon xmms.png,Action (Mouse 1) `Exec exec xmms`) 
+*FvwmButtons: (Title (Side) "", Left, Back #dedbde, Icon gimp.png,Action (Mouse 1) `Exec exec gimp-2.0`) 
+#*FvwmButtons: (Title (Side) "运行", Left, Back #dedbde, Icon run.png,Action (Mouse 1) `Exec exec grun`) 
+#*FvwmButtons: (Title (Side) "锁屏", Left, Back #dedbde, Icon lock.png,Action (Mouse 1) `Exec exec xscreensaver-command --lock`) 
+*FvwmButtons: (Title (Side) "重启", Left, Back #dedbde, Icon reload.png,Action (Mouse 1) `Restart`) 
+*FvwmButtons: (Title (Side) "退出", Left, Back #dedbde, Icon exit.png,Action (Mouse 1) `Quit`)

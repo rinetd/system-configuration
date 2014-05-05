@@ -1,0 +1,51 @@
+#编辑器 直接在 Mutt 的终端里使用非图形界面的 Emacs (emacs -nw)
+set editor="vim"
+#set editor="emacsclient -nw %s"
+
+#设置邮件发送程序
+set sendmail="/usr/bin/msmtp"
+
+# 邮箱相关的设置
+source ~/.mutt/mutt.box
+
+# 自定义界面颜色
+source ~/.mutt/mutt.color
+
+# index界面的显示设置,包括邮件列表的添加
+source ~/.mutt/mutt.show
+
+#地址簿
+source ~/.mutt/mutt.address
+
+
+# 给邮件进行打分
+source ~/.mutt/mutt.score
+
+# 键绑定
+source ~/.mutt/mutt.bind
+
+# 字符编码设置
+source ~/.mutt/mutt.charset
+
+# Check my mutt-specific mailcap before consulting the system-wide one.
+set mailcap_path="${HOME}/.mutt/mutt.mailcap:/etc/mailcap"
+
+# 其他设置
+source ~/.mutt/mutt.misc
+
+# set up the sidebar, default not visible
+
+set sidebar_width=36
+
+set sidebar_visible=yes
+
+set sidebar_delim='|'
+
+set sidebar_sort=yes
+color sidebar_new yellow default
+bind index \CP sidebar-prev
+bind index \CN sidebar-next
+bind index \CO sidebar-open
+bind pager \CP sidebar-prev
+bind pager CN sidebar-next
+bind pager CO sidebar-open

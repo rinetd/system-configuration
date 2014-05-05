@@ -1,0 +1,86 @@
+###################################################################
+#### Dock
+####################################################################
+
+DestroyModuleConfig FvwmDock: *
+*FvwmDock: Rows 1
+*FvwmDock: Columns 28
+*FvwmDock: Frame 0
+*FvwmDock: Colorset 60
+*FvwmDock: ActiveColorset 61
+*FvwmDock: PressColorset 63
+
+#RootMenu
+*FvwmDock: (1x1, Icon icons/24x24/x.png, ActionOnPress, Action(Mouse 1)  `Menu MenuFvwmRoot rectangle $widthx$height+$left+$top 0 -100m`)
+*FvwmDock: (1x1, Icon decoration/nop.png)
+
+# web browser
+*FvwmDock: (1x1, Icon icons/24x24/firefox.png, ActionOnPress, Action(Mouse 1) `Exec exec firefox`)
+
+# thunderbird
+*FvwmDock: (1x1, Icon icons/24x24/thunderbird.png, ActionOnPress, Action(Mouse 1) `Exec exec thunderbird`)
+
+*FvwmDock: (1x1, Icon icons/24x24/nt.png, ActionOnPress, Action(Mouse 1) `Exec exec nt`)
+
+*FvwmDock: (1x1, Icon icons/24x24/gftp.xpm, ActionOnPress, Action(Mouse 1) `Exec exec gftp`)
+
+#Gnome-Terminal
+*FvwmDock: (1x1, Icon icons/24x24/xterm.png, ActionOnPress, Action(Mouse 1) `Exec exec gnome-terminal`)
+
+# rox
+*FvwmDock: (1x1, Icon icons/24x24/rox.png, ActionOnPress, Action(Mouse 1) `Exec exec rox`)
+
+*FvwmDock: (1x1, Icon icons/24x24/stardict.png, ActionOnPress, Action(Mouse 1) `Exec exec stardict`)
+
+*FvwmDock: (1x1, Icon icons/24x24/kdict.png, ActionOnPress, Action(Mouse 1) `Exec exec kdict`)
+
+
+*FvwmDock: (1x1, Icon decoration/nop.png)
+
+# gimp
+*FvwmDock: (1x1, Icon icons/24x24/gimp.png, ActionOnPress, Action(Mouse 1) `Exec exec gimp`)
+
+*FvwmDock: (1x1, Icon icons/24x24/gqview.png, ActionOnPress, Action(Mouse 1) `Exec exec gqview`)
+
+*FvwmDock: (1x1, Icon icons/24x24/compupic.png, ActionOnPress, Action(Mouse 1) `Exec exec compupic`)
+
+*FvwmDock: (1x1, Icon icons/24x24/xv.png, ActionOnPress, Action(Mouse 1) `Exec exec xv`)
+
+*FvwmDock: (1x1, Icon decoration/nop.png)
+
+# office
+*FvwmDock: (1x1, Icon icons/24x24/office.png, ActionOnPress, Action(Mouse 1) `Exec exec openoffice.org-2.3.1`)
+
+
+*FvwmDock: (1x1, Icon icons/24x24/gvim.png, ActionOnPress, Action(Mouse 1) `Exec exec gvim`)
+
+*FvwmDock: (1x1, Icon icons/24x24/emacs.png, ActionOnPress, Action(Mouse 1) `Exec exec emacs`)
+
+*FvwmDock: (1x1, Icon icons/24x24/kedit.png, ActionOnPress, Action(Mouse 1) `Exec exec kedit`)
+
+*FvwmDock: (1x1, Icon icons/24x24/gedit.png, ActionOnPress, Action(Mouse 1) `Exec exec gedit`)
+
+*FvwmDock: (1x1, Icon decoration/nop.png)
+
+*FvwmDock: (1x1, Icon icons/24x24/acroread.png, ActionOnPress, Action(Mouse 1) `Exec exec acroread`)
+
+*FvwmDock: (1x1, Icon icons/24x24/gv.png, ActionOnPress, Action(Mouse 1) `Exec exec gv`)
+
+# xmms
+*FvwmDock: (1x1, Icon icons/24x24/xmms.png, ActionOnPress, Action(Mouse 1) `Exec exec xmms`)
+
+# Mplayer
+*FvwmDock: (1x1, Icon icons/24x24/mplayer.png, ActionOnPress, Action(Mouse 1) `Exec exec gmplayer`)
+
+*FvwmDock: (1x1, Icon icons/24x24/totem.png, ActionOnPress, Action(Mouse 1) `Exec exec totem`)
+
+*FvwmDock: (1x1, Icon icons/24x24/xmixer.png, ActionOnPress, Action(Mouse 1) `Exec exec mixmos`)
+
+
+DestroyFunc DockLaunch
+AddToFunc DockLaunch
++ C Any ($1) Next ($1) WindowListFunc
++ C TestRc (NoMatch) Exec $0
++ H Any ($1) WindowList ($1) Rectangle +$2+$3 0 -100m CurrentAtEnd UseListSkip SortByClass NoCurrentDeskTitle
++ D Exec $0
+

@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 28
+/svn/!svn/ver/11/trunk/.mutt
+END
+mutt.address
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/2/trunk/.mutt/mutt.address
+END
+mutt.mailcap
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/11/trunk/.mutt/mutt.mailcap
+END
+mutt.box
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/svn/!svn/ver/2/trunk/.mutt/mutt.box
+END
+mutt.charset
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/2/trunk/.mutt/mutt.charset
+END
+mutt.alias
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/11/trunk/.mutt/mutt.alias
+END
+mutt.score
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/!svn/ver/2/trunk/.mutt/mutt.score
+END
+mutt.misc
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/!svn/ver/2/trunk/.mutt/mutt.misc
+END
+mutt.bind
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/!svn/ver/2/trunk/.mutt/mutt.bind
+END
+mutt.color
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/!svn/ver/2/trunk/.mutt/mutt.color
+END
+mutt.show
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/!svn/ver/2/trunk/.mutt/mutt.show
+END
+mutt.signature
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/2/trunk/.mutt/mutt.signature
+END

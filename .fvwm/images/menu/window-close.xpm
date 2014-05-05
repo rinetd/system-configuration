@@ -1,0 +1,26 @@
+/* XPM */
+static char *ft_xpm[] = {
+/* columns rows colors chars-per-pixel */
+"16 16 4 1",
+"  c #000000000000",
+". c #5d5d5d5d5d5d",
+"X c #ffffffffffff",
+"o c None",
+/* pixels */
+"oooooooooooooooo",
+"oooooooooooooooo",
+"ooooo     oooooo",
+"ooo         oooo",
+"oo           ooo",
+"oo  XX   XX  ooo",
+"o   XXX XXX   oo",
+"o    XXXXX    oo",
+"o     XXX     oo",
+"o    XXXXX    oo",
+"o   XXX XXX   oo",
+"oo  XX   XX  ooo",
+"oo           ooo",
+"ooo         oooo",
+"ooooo     oooooo",
+"oooooooooooooooo",
+};

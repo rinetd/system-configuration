@@ -1,0 +1,19 @@
+# taskbar模块，任务条
+
+DestroyModuleConfig FvwmTaskBar: *
+*FvwmTaskBar: NoDefaultStartButton
+*FvwmTaskBar: AutoStick
+*FvwmTaskBar: Geometry +0+0
+*FvwmTaskBar: Colorset 60
+*FvwmTaskBar: IconColorset 60
+*FvwmTaskBar: FocusColorset 60
+*FvwmTaskBar: UseSkipList
+*FvwmTaskBar: ShowTips
+*FvwmTaskBar: Pad 0
+*FvwmTaskBar: 3DFvwm
+*FvwmTaskBar: ShowTransients
+*FvwmTaskBar: NoIconAction SendToModule FvwmAnimate animate
+*FvwmTaskBar: DeskOnly
+*FvwmTaskBar: PageOnly
+*FvwmTaskBar: Font "StringEncoding=gb2312:xft:microsoft yahei:pixelsize=12:encoding=iso10646-1"*FvwmTaskBar: StatusFont "StringEncoding=gb2312:xft:microsoft yahei:pixelsize=12:encoding=iso10646-1"
+

@@ -1,0 +1,3506 @@
+
+/sysfs # linux-bcm-net: insall module linux-bcm-net version: 0.1.0 ok!
+
+/sysfs # 
+/sysfs # 
+/sysfs # 
+/sysfs # ifconfig -a
+bcmcpu    Link encap:Ethernet  HWaddr 02:10:18:74:62:60  
+          BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge3       Link encap:Ethernet  HWaddr 02:10:18:74:62:60  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge4       Link encap:Ethernet  HWaddr 02:10:18:74:62:60  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge5       Link encap:Ethernet  HWaddr 02:10:18:74:62:60  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge6       Link encap:Ethernet  HWaddr 02:10:18:74:62:60  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge7       Link encap:Ethernet  HWaddr 02:10:18:74:62:60  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge8       Link encap:Ethernet  HWaddr 02:10:18:74:62:60  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge9       Link encap:Ethernet  HWaddr 02:10:18:74:62:60  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge10      Link encap:Ethernet  HWaddr 02:10:18:74:62:60  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge11      Link encap:Ethernet  HWaddr 02:10:18:74:62:60  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge12      Link encap:Ethernet  HWaddr 02:10:18:74:62:60  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge13      Link encap:Ethernet  HWaddr 02:10:18:74:62:60  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge14      Link encap:Ethernet  HWaddr 02:10:18:74:62:60  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge15      Link encap:Ethernet  HWaddr 02:10:18:74:62:60  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge16      Link encap:Ethernet  HWaddr 02:10:18:74:62:60  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge17      Link encap:Ethernet  HWaddr 02:10:18:74:62:60  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge18      Link encap:Ethernet  HWaddr 02:10:18:74:62:60  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge19      Link encap:Ethernet  HWaddr 02:10:18:74:62:60  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge1       Link encap:Ethernet  HWaddr 02:10:18:74:62:60  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge20      Link encap:Ethernet  HWaddr 02:10:18:74:62:60  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge21      Link encap:Ethernet  HWaddr 02:10:18:74:62:60  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge22      Link encap:Ethernet  HWaddr 02:10:18:74:62:60  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge23      Link encap:Ethernet  HWaddr 02:10:18:74:62:60  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge24      Link encap:Ethernet  HWaddr 02:10:18:74:62:60  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge2       Link encap:Ethernet  HWaddr 02:10:18:74:62:60  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:16436  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+loop0     Link encap:Ethernet  HWaddr 00:09:06:10:20:37  
+          BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+loop1     Link encap:Ethernet  HWaddr 00:09:06:10:20:38  
+          BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+loop2     Link encap:Ethernet  HWaddr 00:09:06:10:20:39  
+          BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+loop3     Link encap:Ethernet  HWaddr 00:09:06:10:20:3A  
+          BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+mgmt0     Link encap:Ethernet  HWaddr 00:09:06:10:20:30  
+          inet addr:10.1.0.111  Bcast:10.1.255.255  Mask:255.255.0.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:14777 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:14348 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:8147333 (7.7 Mb)  TX bytes:674184 (658.3 Kb)
+          Interrupt:70 
+
+npi0      Link encap:Ethernet  HWaddr 00:09:06:10:20:33  
+          BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+npi1      Link encap:Ethernet  HWaddr 00:09:06:10:20:34  
+          BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+npi2      Link encap:Ethernet  HWaddr 00:09:06:10:20:35  
+          BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+npi3      Link encap:Ethernet  HWaddr 00:09:06:10:20:36  
+          BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+xaui0     Link encap:Ethernet  HWaddr 00:09:06:10:20:31  
+          BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+xaui1     Link encap:Ethernet  HWaddr 00:09:06:10:20:32  
+          BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+xe25      Link encap:Ethernet  HWaddr 02:10:18:74:62:60  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+xe26      Link encap:Ethernet  HWaddr 02:10:18:74:62:60  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+xe27      Link encap:Ethernet  HWaddr 02:10:18:74:62:60  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+xe28      Link encap:Ethernet  HWaddr 02:10:18:74:62:60  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+/sysfs # cd /us/sysfs # cd /usr/[Jlo[7D/sysfs # cd /usr/local/[Jm[12D/sysfs # cd /usr/local/mstp_26x2_octeon_V1.0.0/[J
+/usr/local/mstp_26x2_octeon_V1.0.0 # ls
+[1;34mexample[0m  [1;34mmstp[0m
+/usr/local/mstp_26x2_octeon_V1.0.0 # cd ms/usr/local/mstp_26x2_octeon_V1.0.0 # cd mstp/[J
+/usr/local/mstp_26x2_octeon_V1.0.0/mstp # ls
+[0;0mReadme[0m            [1;32mdel-cfg.sh[0m        [1;32mmstpd[0m             [1;32mstpconfig[0m
+[1;32mcfg-mst.sh[0m        [0;0mlinux-bcm-net.ko[0m  [1;32msetup.sh[0m          [1;32mun-setup.sh[0m
+/usr/local/mstp_26x2_octeon_V1.0.0/mstp # ./m/usr/local/mstp_26x2_octeon_V1.0.0/mstp # ./mstpd [J-v 2
+2013-03-21 16:01:43 INFO: main: Sanity checks succeededmstp init: origin default stg 1, set to 0(user override)
+
+2013-03-21 16:01:43 INFO: set_br_up: ge1 was down stp was down
+2013-03-21 16:01:43 INFO: set_br_up: Set bridge ge1 up stp up
+Cannot get speed/duplex for xaui0: Operation not supported
+Cannot get speed/duplex for xaui1: Operation not supported
+Cannot get speed/duplex for npi0: Operation not supported
+Cannot get speed/duplex for npi1: Operation not supported
+Cannot get speed/duplex for npi2: Operation not supported
+Cannot get speed/duplex for npi3: Operation not supported
+Cannot get speed/duplex for loop0: Operation not supported
+Cannot get speed/duplex for loop1: Operation not supported
+Cannot get speed/duplex for loop2: Operation not supported
+Cannot get speed/duplex for loop3: Operation not supported
+Cannot get speed/duplex for xaui0: Operation not supported
+Cannot get speed/duplex for xaui1: Operation not supported
+Cannot get speed/duplex for npi0: Operation not supported
+Cannot get speed/duplex for npi1: Operation not supported
+Cannot get speed/duplex for npi2: Operation not supported
+Cannot get speed/duplex for npi3: Operation not supported
+Cannot get speed/duplex for loop0: Operation not supported
+Cannot get speed/duplex for loop1: Operation not supported
+Cannot get speed/duplex for loop2: Operation not supported
+Cannot get speed/duplex for loop3: Operation not supported
+Cannot get speed/duplex for xaui0: Operation not supported
+Cannot get speed/duplex for xaui1: Operation not supported
+Cannot get speed/duplex for npi0: Operation not supported
+Cannot get speed/duplex for npi1: Operation not supported
+Cannot get speed/duplex for npi2: Operation not supported
+Cannot get speed/duplex for npi3: Operation not supported
+Cannot get speed/duplex for loop0: Operation not supported
+Cannot get speed/duplex for loop1: Operation not supported
+Cannot get speed/duplex for loop2: Operation not supported
+Cannot get speed/duplex for loop3: Operation not supported
+Cannot get speed/duplex for xaui0: Operation not supported
+Cannot get speed/duplex for xaui1: Operation not supported
+Cannot get speed/duplex for npi0: Operation not supported
+Cannot get speed/duplex for npi1: Operation not supported
+Cannot get speed/duplex for npi2: Operation not supported
+Cannot get speed/duplex for npi3: Operation not supported
+Cannot get speed/duplex for loop0: Operation not supported
+Cannot get speed/duplex for loop1: Operation not supported
+Cannot get speed/duplex for loop2: Operation not supported
+Cannot get speed/duplex for loop3: Operation not supported
+Cannot get speed/duplex for xaui0: Operation not supported
+Cannot get speed/duplex for xaui1: Operation not supported
+Cannot get speed/duplex for npi0: Operation not supported
+Cannot get speed/duplex for npi1: Operation not supported
+Cannot get speed/duplex for npi2: Operation not supported
+Cannot get speed/duplex for npi3: Operation not supported
+Cannot get speed/duplex for loop0: Operation not supported
+Cannot get speed/duplex for loop1: Operation not supported
+Cannot get speed/duplex for loop2: Operation not supported
+Cannot get speed/duplex for loop3: Operation not supported
+Cannot get speed/duplex for xaui0: Operation not supported
+Cannot get speed/duplex for xaui1: Operation not supported
+Cannot get speed/duplex for npi0: Operation not supported
+Cannot get speed/duplex for npi1: Operation not supported
+Cannot get speed/duplex for npi2: Operation not supported
+Cannot get speed/duplex for npi3: Operation not supported
+Cannot get speed/duplex for loop0: Operation not supported
+Cannot get speed/duplex for loop1: Operation not supported
+Cannot get speed/duplex for loop2: Operation not supported
+Cannot get speed/duplex for loop3: Operation not supported
+Cannot get speed/duplex for xaui0: Operation not supported
+Cannot get speed/duplex for xaui1: Operation not supported
+Cannot get speed/duplex for npi0: Operation not supported
+Cannot get speed/duplex for npi1: Operation not supported
+Cannot get speed/duplex for npi2: Operation not supported
+Cannot get speed/duplex for npi3: Operation not supported
+Cannot get speed/duplex for loop0: Operation not supported
+Cannot get speed/duplex for loop1: Operation not supported
+Cannot get speed/duplex for loop2: Operation not supported
+Cannot get speed/duplex for loop3: Operation not supported
+Cannot get speed/duplex for xaui0: Operation not supported
+Cannot get speed/duplex for xaui1: Operation not supported
+Cannot get speed/duplex for npi0: Operation not supported
+Cannot get speed/duplex for npi1: Operation not supported
+Cannot get speed/duplex for npi2: Operation not supported
+Cannot get speed/duplex for npi3: Operation not supported
+Cannot get speed/duplex for loop0: Operation not supported
+Cannot get speed/duplex for loop1: Operation not supported
+Cannot get speed/duplex for loop2: Operation not supported
+Cannot get speed/duplex for loop3: Operation not supported
+Cannot get speed/duplex for xaui0: Operation not supported
+Cannot get speed/duplex for xaui1: Operation not supported
+Cannot get speed/duplex for npi0: Operation not supported
+Cannot get speed/duplex for npi1: Operation not supported
+Cannot get speed/duplex for npi2: Operation not supported
+Cannot get speed/duplex for npi3: Operation not supported
+Cannot get speed/duplex for loop0: Operation not supported
+Cannot get speed/duplex for loop1: Operation not supported
+Cannot get speed/duplex for loop2: Operation not supported
+Cannot get speed/duplex for loop3: Operation not supported
+Cannot get speed/duplex for xaui0: Operation not supported
+Cannot get speed/duplex for xaui1: Operation not supported
+Cannot get speed/duplex for npi0: Operation not supported
+Cannot get speed/duplex for npi1: Operation not supported
+Cannot get speed/duplex for npi2: Operation not supported
+Cannot get speed/duplex for npi3: Operation not supported
+Cannot get speed/duplex for loop0: Operation not supported
+Cannot get speed/duplex for loop1: Operation not supported
+Cannot get speed/duplex for loop2: Operation not supported
+Cannot get speed/duplex for loop3: Operation not supported
+Cannot get speed/duplex for xaui0: Operation not supported
+Cannot get speed/duplex for xaui1: Operation not supported
+Cannot get speed/duplex for npi0: Operation not supported
+Cannot get speed/duplex for npi1: Operation not supported
+Cannot get speed/duplex for npi2: Operation not supported
+Cannot get speed/duplex for npi3: Operation not supported
+Cannot get speed/duplex for loop0: Operation not supported
+Cannot get speed/duplex for loop1: Operation not supported
+Cannot get speed/duplex for loop2: Operation not supported
+Cannot get speed/duplex for loop3: Operation not supported
+Cannot get speed/duplex for xaui0: Operation not supported
+Cannot get speed/duplex for xaui1: Operation not supported
+Cannot get speed/duplex for npi0: Operation not supported
+Cannot get speed/duplex for npi1: Operation not supported
+Cannot get speed/duplex for npi2: Operation not supported
+Cannot get speed/duplex for npi3: Operation not supported
+Cannot get speed/duplex for loop0: Operation not supported
+Cannot get speed/duplex for loop1: Operation not supported
+Cannot get speed/duplex for loop2: Operation not supported
+Cannot get speed/duplex for loop3: Operation not supported
+Cannot get speed/duplex for xaui0: Operation not supported
+Cannot get speed/duplex for xaui1: Operation not supported
+Cannot get speed/duplex for npi0: Operation not supported
+Cannot get speed/duplex for npi1: Operation not supported
+Cannot get speed/duplex for npi2: Operation not supported
+Cannot get speed/duplex for npi3: Operation not supported
+Cannot get speed/duplex for loop0: Operation not supported
+Cannot get speed/duplex for loop1: Operation not supported
+Cannot get speed/duplex for loop2: Operation not supported
+Cannot get speed/duplex for loop3: Operation not supported
+Cannot get speed/duplex for xaui0: Operation not supported
+Cannot get speed/duplex for xaui1: Operation not supported
+Cannot get speed/duplex for npi0: Operation not supported
+Cannot get speed/duplex for npi1: Operation not supported
+Cannot get speed/duplex for npi2: Operation not supported
+Cannot get speed/duplex for npi3: Operation not supported
+Cannot get speed/duplex for loop0: Operation not supported
+Cannot get speed/duplex for loop1: Operation not supported
+Cannot get speed/duplex for loop2: Operation not supported
+Cannot get speed/duplex for loop3: Operation not supported
+Cannot get speed/duplex for xaui0: Operation not supported
+Cannot get speed/duplex for xaui1: Operation not supported
+Cannot get speed/duplex for npi0: Operation not supported
+Cannot get speed/duplex for npi1: Operation not supported
+Cannot get speed/duplex for npi2: Operation not supported
+Cannot get speed/duplex for npi3: Operation not supported
+Cannot get speed/duplex for loop0: Operation not supported
+Cannot get speed/duplex for loop1: Operation not supported
+Cannot get speed/duplex for loop2: Operation not supported
+Cannot get speed/duplex for loop3: Operation not supported
+Cannot get speed/duplex for xaui0: Operation not supported
+Cannot get speed/duplex for xaui1: Operation not supported
+Cannot get speed/duplex for npi0: Operation not supported
+Cannot get speed/duplex for npi1: Operation not supported
+Cannot get speed/duplex for npi2: Operation not supported
+Cannot get speed/duplex for npi3: Operation not supported
+Cannot get speed/duplex for loop0: Operation not supported
+Cannot get speed/duplex for loop1: Operation not supported
+Cannot get speed/duplex for loop2: Operation not supported
+Cannot get speed/duplex for loop3: Operation not supported
+Cannot get speed/duplex for xaui0: Operation not supported
+Cannot get speed/duplex for xaui1: Operation not supported
+Cannot get speed/duplex for npi0: Operation not supported
+Cannot get speed/duplex for npi1: Operation not supported
+Cannot get speed/duplex for npi2: Operation not supported
+Cannot get speed/duplex for npi3: Operation not supported
+Cannot get speed/duplex for loop0: Operation not supported
+Cannot get speed/duplex for loop1: Operation not supported
+Cannot get speed/duplex for loop2: Operation not supported
+Cannot get speed/duplex for loop3: Operation not supported
+Cannot get speed/duplex for xaui0: Operation not supported
+Cannot get speed/duplex for xaui1: Operation not supported
+Cannot get speed/duplex for npi0: Operation not supported
+Cannot get speed/duplex for npi1: Operation not supported
+Cannot get speed/duplex for npi2: Operation not supported
+Cannot get speed/duplex for npi3: Operation not supported
+Cannot get speed/duplex for loop0: Operation not supported
+Cannot get speed/duplex for loop1: Operation not supported
+Cannot get speed/duplex for loop2: Operation not supported
+Cannot get speed/duplex for loop3: Operation not supported
+Cannot get speed/duplex for xaui0: Operation not supported
+Cannot get speed/duplex for xaui1: Operation not supported
+Cannot get speed/duplex for npi0: Operation not supported
+Cannot get speed/duplex for npi1: Operation not supported
+Cannot get speed/duplex for npi2: Operation not supported
+Cannot get speed/duplex for npi3: Operation not supported
+Cannot get speed/duplex for loop0: Operation not supported
+Cannot get speed/duplex for loop1: Operation not supported
+Cannot get speed/duplex for loop2: Operation not supported
+Cannot get speed/duplex for loop3: Operation not supported
+Cannot get speed/duplex for xaui0: Operation not supported
+Cannot get speed/duplex for xaui1: Operation not supported
+Cannot get speed/duplex for npi0: Operation not supported
+Cannot get speed/duplex for npi1: Operation not supported
+Cannot get speed/duplex for npi2: Operation not supported
+Cannot get speed/duplex for npi3: Operation not supported
+Cannot get speed/duplex for loop0: Operation not supported
+Cannot get speed/duplex for loop1: Operation not supported
+Cannot get speed/duplex for loop2: Operation not supported
+Cannot get speed/duplex for loop3: Operation not supported
+Cannot get speed/duplex for xaui0: Operation not supported
+Cannot get speed/duplex for xaui1: Operation not supported
+Cannot get speed/duplex for npi0: Operation not supported
+Cannot get speed/duplex for npi1: Operation not supported
+Cannot get speed/duplex for npi2: Operation not supported
+Cannot get speed/duplex for npi3: Operation not supported
+Cannot get speed/duplex for loop0: Operation not supported
+Cannot get speed/duplex for loop1: Operation not supported
+Cannot get speed/duplex for loop2: Operation not supported
+Cannot get speed/duplex for loop3: Operation not supported
+Cannot get speed/duplex for xaui0: Operation not supported
+Cannot get speed/duplex for xaui1: Operation not supported
+Cannot get speed/duplex for npi0: Operation not supported
+Cannot get speed/duplex for npi1: Operation not supported
+Cannot get speed/duplex for npi2: Operation not supported
+Cannot get speed/duplex for npi3: Operation not supported
+Cannot get speed/duplex for loop0: Operation not supported
+Cannot get speed/duplex for loop1: Operation not supported
+Cannot get speed/duplex for loop2: Operation not supported
+Cannot get speed/duplex for loop3: Operation not supported
+Cannot get speed/duplex for xaui0: Operation not supported
+Cannot get speed/duplex for xaui1: Operation not supported
+Cannot get speed/duplex for npi0: Operation not supported
+Cannot get speed/duplex for npi1: Operation not supported
+Cannot get speed/duplex for npi2: Operation not supported
+Cannot get speed/duplex for npi3: Operation not supported
+Cannot get speed/duplex for loop0: Operation not supported
+Cannot get speed/duplex for loop1: Operation not supported
+Cannot get speed/duplex for loop2: Operation not supported
+Cannot get speed/duplex for loop3: Operation not supported
+Cannot get speed/duplex for xaui0: Operation not supported
+Cannot get speed/duplex for xaui1: Operation not supported
+Cannot get speed/duplex for npi0: Operation not supported
+Cannot get speed/duplex for npi1: Operation not supported
+Cannot get speed/duplex for npi2: Operation not supported
+Cannot get speed/duplex for npi3: Operation not supported
+Cannot get speed/duplex for loop0: Operation not supported
+Cannot get speed/duplex for loop1: Operation not supported
+Cannot get speed/duplex for loop2: Operation not supported
+Cannot get speed/duplex for loop3: Operation not supported
+Cannot get speed/duplex for xaui0: Operation not supported
+Cannot get speed/duplex for xaui1: Operation not supported
+Cannot get speed/duplex for npi0: Operation not supported
+Cannot get speed/duplex for npi1: Operation not supported
+Cannot get speed/duplex for npi2: Operation not supported
+Cannot get speed/duplex for npi3: Operation not supported
+Cannot get speed/duplex for loop0: Operation not supported
+Cannot get speed/duplex for loop1: Operation not supported
+Cannot get speed/duplex for loop2: Operation not supported
+Cannot get speed/duplex for loop3: Operation not supported
+Cannot get speed/duplex for xaui0: Operation not supported
+Cannot get speed/duplex for xaui1: Operation not supported
+Cannot get speed/duplex for npi0: Operation not supported
+Cannot get speed/duplex for npi1: Operation not supported
+Cannot get speed/duplex for npi2: Operation not supported
+Cannot get speed/duplex for npi3: Operation not supported
+Cannot get speed/duplex for loop0: Operation not supported
+Cannot get speed/duplex for loop1: Operation not supported
+Cannot get speed/duplex for loop2: Operation not supported
+Cannot get speed/duplex for loop3: Operation not supported
+Cannot get speed/duplex for xaui0: Operation not supported
+Cannot get speed/duplex for xaui1: Operation not supported
+Cannot get speed/duplex for npi0: Operation not supported
+Cannot get speed/duplex for npi1: Operation not supported
+Cannot get speed/duplex for npi2: Operation not supported
+Cannot get speed/duplex for npi3: Operation not supported
+Cannot get speed/duplex for loop0: Operation not supported
+Cannot get speed/duplex for loop1: Operation not supported
+Cannot get speed/duplex for loop2: Operation not supported
+Cannot get speed/duplex for loop3: Operation not supported
+Cannot get speed/duplex for xaui0: Operation not supported
+Cannot get speed/duplex for xaui1: Operation not supported
+Cannot get speed/duplex for npi0: Operation not supported
+Cannot get speed/duplex for npi1: Operation not supported
+Cannot get speed/duplex for npi2: Operation not supported
+Cannot get speed/duplex for npi3: Operation not supported
+Cannot get speed/duplex for loop0: Operation not supported
+Cannot get speed/duplex for loop1: Operation not supported
+Cannot get speed/duplex for loop2: Operation not supported
+Cannot get speed/duplex for loop3: Operation not supported
+Cannot get speed/duplex for xaui0: Operation not supported
+Cannot get speed/duplex for xaui1: Operation not supported
+Cannot get speed/duplex for npi0: Operation not supported
+Cannot get speed/duplex for npi1: Operation not supported
+Cannot get speed/duplex for npi2: Operation not supported
+Cannot get speed/duplex for npi3: Operation not supported
+Cannot get speed/duplex for loop0: Operation not supported
+Cannot get speed/duplex for loop1: Operation not supported
+Cannot get speed/duplex for loop2: Operation not supported
+Cannot get speed/duplex for loop3: Operation not supported
+Cannot get speed/duplex for xaui0: Operation not supported
+Cannot get speed/duplex for xaui1: Operation not supported
+Cannot get speed/duplex for npi0: Operation not supported
+Cannot get speed/duplex for npi1: Operation not supported
+Cannot get speed/duplex for npi2: Operation not supported
+Cannot get speed/duplex for npi3: Operation not supported
+Cannot get speed/duplex for loop0: Operation not supported
+Cannot get speed/duplex for loop1: Operation not supported
+Cannot get speed/duplex for loop2: Operation not supported
+Cannot get speed/duplex for loop3: Operation not supported
+Cannot get speed/duplex for xaui0: Operation not supported
+Cannot get speed/duplex for xaui1: Operation not supported
+Cannot get speed/duplex for npi0: Operation not supported
+Cannot get speed/duplex for npi1: Operation not supported
+Cannot get speed/duplex for npi2: Operation not supported
+Cannot get speed/duplex for npi3: Operation not supported
+Cannot get speed/duplex for loop0: Operation not supported
+Cannot get speed/duplex for loop1: Operation not supported
+Cannot get speed/duplex for loop2: Operation not supported
+Cannot get speed/duplex for loop3: Operation not supported
+Cannot get speed/duplex for xaui0: Operation not supported
+Cannot get speed/duplex for xaui1: Operation not supported
+Cannot get speed/duplex for npi0: Operation not supported
+Cannot get speed/duplex for npi1: Operation not supported
+Cannot get speed/duplex for npi2: Operation not supported
+Cannot get speed/duplex for npi3: Operation not supported
+Cannot get speed/duplex for loop0: Operation not supported
+Cannot get speed/duplex for loop1: Operation not supported
+Cannot get speed/duplex for loop2: Operation not supported
+Cannot get speed/duplex for loop3: Operation not supported
+Cannot get speed/duplex for xaui0: Operation not supported
+Cannot get speed/duplex for xaui1: Operation not supported
+Cannot get speed/duplex for npi0: Operation not supported
+Cannot get speed/duplex for npi1: Operation not supported
+Cannot get speed/duplex for npi2: Operation not supported
+Cannot get speed/duplex for npi3: Operation not supported
+Cannot get speed/duplex for loop0: Operation not supported
+Cannot get speed/duplex for loop1: Operation not supported
+Cannot get speed/duplex for loop2: Operation not supported
+Cannot get speed/duplex for loop3: Operation not supported
+Cannot get speed/duplex for xaui0: Operation not supported
+Cannot get speed/duplex for xaui1: Operation not supported
+Cannot get speed/duplex for npi0: Operation not supported
+Cannot get speed/duplex for npi1: Operation not supported
+Cannot get speed/duplex for npi2: Operation not supported
+Cannot get speed/duplex for npi3: Operation not supported
+Cannot get speed/duplex for loop0: Operation not supported
+Cannot get speed/duplex for loop1: Operation not supported
+Cannot get speed/duplex for loop2: Operation not supported
+Cannot get speed/duplex for loop3: Operation not supported
+Cannot get speed/duplex for xaui0: Operation not supported
+Cannot get speed/duplex for xaui1: Operation not supported
+Cannot get speed/duplex for npi0: Operation not supported
+Cannot get speed/duplex for npi1: Operation not supported
+Cannot get speed/duplex for npi2: Operation not supported
+Cannot get speed/duplex for npi3: Operation not supported
+Cannot get speed/duplex for loop0: Operation not supported
+Cannot get speed/duplex for loop1: Operation not supported
+Cannot get speed/duplex for loop2: Operation not supported
+Cannot get speed/duplex for loop3: Operation not supported
+Cannot get speed/duplex for xaui0: Operation not supported
+Cannot get speed/duplex for xaui1: Operation not supported
+Cannot get speed/duplex for npi0: Operation not supported
+Cannot get speed/duplex for npi1: Operation not supported
+Cannot get speed/duplex for npi2: Operation not supported
+Cannot get speed/duplex for npi3: Operation not supported
+Cannot get speed/duplex for loop0: Operation not supported
+Cannot get speed/duplex for loop1: Operation not supported
+Cannot get speed/duplex for loop2: Operation not supported
+Cannot get speed/duplex for loop3: Operation not supported
+Cannot get speed/duplex for xaui0: Operation not supported
+Cannot get speed/duplex for xaui1: Operation not supported
+Cannot get speed/duplex for npi0: Operation not supported
+Cannot get speed/duplex for npi1: Operation not supported
+Cannot get speed/duplex for npi2: Operation not supported
+Cannot get speed/duplex for npi3: Operation not supported
+Cannot get speed/duplex for loop0: Operation not supported
+Cannot get speed/duplex for loop1: Operation not supported
+Cannot get speed/duplex for loop2: Operation not supported
+Cannot get speed/duplex for loop3: Operation not supported
+Cannot get speed/duplex for xaui0: Operation not supported
+Cannot get speed/duplex for xaui1: Operation not supported
+Cannot get speed/duplex for npi0: Operation not supported
+Cannot get speed/duplex for npi1: Operation not supported
+Cannot get speed/duplex for npi2: Operation not supported
+Cannot get speed/duplex for npi3: Operation not supported
+Cannot get speed/duplex for loop0: Operation not supported
+Cannot get speed/duplex for loop1: Operation not supported
+Cannot get speed/duplex for loop2: Operation not supported
+Cannot get speed/duplex for loop3: Operation not supported
+Cannot get speed/duplex for xaui0: Operation not supported
+Cannot get speed/duplex for xaui1: Operation not supported
+Cannot get speed/duplex for npi0: Operation not supported
+Cannot get speed/duplex for npi1: Operation not supported
+Cannot get speed/duplex for npi2: Operation not supported
+Cannot get speed/duplex for npi3: Operation not supported
+Cannot get speed/duplex for loop0: Operation not supported
+Cannot get speed/duplex for loop1: Operation not supported
+Cannot get speed/duplex for loop2: Operation not supported
+Cannot get speed/duplex for loop3: Operation not supported
+Cannot get speed/duplex for xaui0: Operation not supported
+Cannot get speed/duplex for xaui1: Operation not supported
+Cannot get speed/duplex for npi0: Operation not supported
+Cannot get speed/duplex for npi1: Operation not supported
+Cannot get speed/duplex for npi2: Operation not supported
+Cannot get speed/duplex for npi3: Operation not supported
+Cannot get speed/duplex for loop0: Operation not supported
+Cannot get speed/duplex for loop1: Operation not supported
+Cannot get speed/duplex for loop2: Operation not supported
+Cannot get speed/duplex for loop3: Operation not supported
+Cannot get speed/duplex for xaui0: Operation not supported
+Cannot get speed/duplex for xaui1: Operation not supported
+Cannot get speed/duplex for npi0: Operation not supported
+Cannot get speed/duplex for npi1: Operation not supported
+Cannot get speed/duplex for npi2: Operation not supported
+Cannot get speed/duplex for npi3: Operation not supported
+Cannot get speed/duplex for loop0: Operation not supported
+Cannot get speed/duplex for loop1: Operation not supported
+Cannot get speed/duplex for loop2: Operation not supported
+Cannot get speed/duplex for loop3: Operation not supported
+Cannot get speed/duplex for xaui0: Operation not supported
+Cannot get speed/duplex for xaui1: Operation not supported
+Cannot get speed/duplex for npi0: Operation not supported
+Cannot get speed/duplex for npi1: Operation not supported
+Cannot get speed/duplex for npi2: Operation not supported
+Cannot get speed/duplex for npi3: Operation not supported
+Cannot get speed/duplex for loop0: Operation not supported
+Cannot get speed/duplex for loop1: Operation not supported
+Cannot get speed/duplex for loop2: Operation not supported
+Cannot get speed/duplex for loop3: Operation not supported
+Cannot get speed/duplex for xaui0: Operation not supported
+Cannot get speed/duplex for xaui1: Operation not supported
+Cannot get speed/duplex for npi0: Operation not supported
+Cannot get speed/duplex for npi1: Operation not supported
+Cannot get speed/duplex for npi2: Operation not supported
+Cannot get speed/duplex for npi3: Operation not supported
+Cannot get speed/duplex for loop0: Operation not supported
+Cannot get speed/duplex for loop1: Operation not supported
+Cannot get speed/duplex for loop2: Operation not supported
+Cannot get speed/duplex for loop3: Operation not supported
+Cannot get speed/duplex for xaui0: Operation not supported
+Cannot get speed/duplex for xaui1: Operation not supported
+Cannot get speed/duplex for npi0: Operation not supported
+Cannot get speed/duplex for npi1: Operation not supported
+Cannot get speed/duplex for npi2: Operation not supported
+Cannot get speed/duplex for npi3: Operation not supported
+Cannot get speed/duplex for loop0: Operation not supported
+Cannot get speed/duplex for loop1: Operation not supported
+Cannot get speed/duplex for loop2: Operation not supported
+Cannot get speed/duplex for loop3: Operation not supported
+Cannot get speed/duplex for xaui0: Operation not supported
+Cannot get speed/duplex for xaui1: Operation not supported
+Cannot get speed/duplex for npi0: Operation not supported
+Cannot get speed/duplex for npi1: Operation not supported
+Cannot get speed/duplex for npi2: Operation not supported
+Cannot get speed/duplex for npi3: Operation not supported
+Cannot get speed/duplex for loop0: Operation not supported
+Cannot get speed/duplex for loop1: Operation not supported
+Cannot get speed/duplex for loop2: Operation not supported
+Cannot get speed/duplex for loop3: Operation not supported
+Cannot get speed/duplex for xaui0: Operation not supported
+Cannot get speed/duplex for xaui1: Operation not supported
+Cannot get speed/duplex for npi0: Operation not supported
+Cannot get speed/duplex for npi1: Operation not supported
+Cannot get speed/duplex for npi2: Operation not supported
+Cannot get speed/duplex for npi3: Operation not supported
+Cannot get speed/duplex for loop0: Operation not supported
+Cannot get speed/duplex for loop1: Operation not supported
+Cannot get speed/duplex for loop2: Operation not supported
+Cannot get speed/duplex for loop3: Operation not supported
+Cannot get speed/duplex for xaui0: Operation not supported
+Cannot get speed/duplex for xaui1: Operation not supported
+Cannot get speed/duplex for npi0: Operation not supported
+Cannot get speed/duplex for npi1: Operation not supported
+Cannot get speed/duplex for npi2: Operation not supported
+Cannot get speed/duplex for npi3: Operation not supported
+Cannot get speed/duplex for loop0: Operation not supported
+Cannot get speed/duplex for loop1: Operation not supported
+Cannot get speed/duplex for loop2: Operation not supported
+Cannot get speed/duplex for loop3: Operation not supported
+Cannot get speed/duplex for xaui0: Operation not supported
+Cannot get speed/duplex for xaui1: Operation not supported
+Cannot get speed/duplex for npi0: Operation not supported
+Cannot get speed/duplex for npi1: Operation not supported
+Cannot get speed/duplex for npi2: Operation not supported
+Cannot get speed/duplex for npi3: Operation not supported
+Cannot get speed/duplex for loop0: Operation not supported
+Cannot get speed/duplex for loop1: Operation not supported
+Cannot get speed/duplex for loop2: Operation not supported
+Cannot get speed/duplex for loop3: Operation not supported
+Cannot get speed/duplex for xaui0: Operation not supported
+Cannot get speed/duplex for xaui1: Operation not supported
+Cannot get speed/duplex for npi0: Operation not supported
+Cannot get speed/duplex for npi1: Operation not supported
+Cannot get speed/duplex for npi2: Operation not supported
+Cannot get speed/duplex for npi3: Operation not supported
+Cannot get speed/duplex for loop0: Operation not supported
+Cannot get speed/duplex for loop1: Operation not supported
+Cannot get speed/duplex for loop2: Operation not supported
+Cannot get speed/duplex for loop3: Operation not supported
+Cannot get speed/duplex for xaui0: Operation not supported
+Cannot get speed/duplex for xaui1: Operation not supported
+Cannot get speed/duplex for npi0: Operation not supported
+Cannot get speed/duplex for npi1: Operation not supported
+Cannot get speed/duplex for npi2: Operation not supported
+Cannot get speed/duplex for npi3: Operation not supported
+Cannot get speed/duplex for loop0: Operation not supported
+Cannot get speed/duplex for loop1: Operation not supported
+Cannot get speed/duplex for loop2: Operation not supported
+Cannot get speed/duplex for loop3: Operation not supported
+Cannot get speed/duplex for xaui0: Operation not supported
+Cannot get speed/duplex for xaui1: Operation not supported
+Cannot get speed/duplex for npi0: Operation not supported
+Cannot get speed/duplex for npi1: Operation not supported
+Cannot get speed/duplex for npi2: Operation not supported
+Cannot get speed/duplex for npi3: Operation not supported
+Cannot get speed/duplex for loop0: Operation not supported
+Cannot get speed/duplex for loop1: Operation not supported
+Cannot get speed/duplex for loop2: Operation not suppo
+/usr/local/mstp_26x2_octeon_V1.0.0/mstp # ERROR: Assertion failed: (sc->sc_q_cnt > 0) at dma.c:1185
+
+*** NMI Watchdog interrupt on Core 0x0 ***
+	$0	0x0000000000000000	at	0x000000001010cce0
+	v0	0x000000000000003d	v1	0x0000000000000000
+	a0	0xffffffff807ffcf0	a1	0x0000000000000001
+	a2	0x0000000000000001	a3	0xffffffff807ffcf8
+	a4	0xffffffff817f0000	a5	0xffffffff817f0000
+	a6	0xffffffff80800000	a7	0xffffffff817f0000
+	t0	0xffffffff817f0000	t1	0xffffffff817e0000
+	t2	0xffffffff80800000	t3	0xffffffff80800000
+	s0	0xc000000000152640	s1	0xc000000000101028
+	s2	0x0000000000000000	s3	0x0000000000000180
+	s4	0x0000000000000000	s5	0x0000000000000000
+	s6	0x0000000000000000	s7	0x0000000000000000
+	t8	0xffffffff817f0000	t9	0xffffffff817f0000
+	k0	0x0000000000000000	k1	0x000000000121613f
+	gp	0xa80000004983c000	sp	0xa80000004983f950
+	s8	0x0000000000000000	ra	0xc0000000024d70a4
+	epc	0xc0000000021ac3e8
+	status	0x000000001058cce4	cause	0x0000000040008c08
+	sum0	0x4000401000000000	en0	0x4100000700008000
+*** Chip soft reset soon ***
+
+
+U-Boot 1.1.1 (Development build) (Build time: Mar 12 2012 - 14:41:46)
+Octeon_56xx_v0.9.2
+
+CUST_PM1620 board revision major:80, minor:0, serial #: 10250619
+ICORE CN5650-NSP pass 2.1, Core clock: 750 MHz, DDR clock: 399 MHz (798 Mhz data rate)
+DRAM:  4096 MB
+flash 0: 128M single die
+Total: 128 MB
+Clearing DRAM........ done
+BIST check passed.
+Net:   icomgmt0, icoeth0, icoeth1
+ 0 
+Using icomgmt0 device
+TFTP from server 10.1.200.156; our IP address is 10.1.26.78
+Filename 'vmlinux.64.lph.26x2.autorun'.
+Load address: 0x21000000
+Loading: *T #################################################################
+	 #################################################################
+	 ######################################
+done
+Bytes transferred = 24011360 (16e6260 hex), 2264 Kbytes/sec
+argv[2]: coremask=0x1
+argv[3]: mem=1024
+ELF file is 64 bit
+Attempting to allocate memory for ELF segment: addr: 0xffffffff80100000 (adjusted to: 0x0000000000100000), size 0x17681f0
+Allocated memory for ELF segment: addr: 0xffffffff80100000, size 0x17681f0
+Processing PHDR 0
+  Loading 16e1b98 bytes at ffffffff80100000
+  Clearing 86658 bytes at ffffffff817e1b98
+## Loading Linux kernel with entry point: 0xffffffff80842000 ...
+Bootloader: Done loading app on coremask: 0x1
+Linux version 2.6.21.7-Cavium-Octeon (root@lphu-desktop) (gcc version 4.1.2 (Cavium Networks Version: 1_8_1, build 72)) #82 SMP Fri Aug 5 16:05:29 CST 2011
+CVMSEG size: 2 cache lines (256 bytes)
+CPU revision is: 000d0409
+Determined physical RAM map:
+ memory: 0000000006400000 @ 0000000001900000 (usable)
+ memory: 0000000007c00000 @ 0000000008200000 (usable)
+ memory: 0000000032000000 @ 0000000020000000 (usable)
+Wasting 358400 bytes for tracking 6400 unused pages
+Initrd not found or empty - disabling initrd
+Built 1 zonelists.  Total pages: 257552
+Kernel command line:  coremask=0x1 console=ttyS0,115200
+Primary instruction cache 32kB, virtually tagged, 4 way, 64 sets, linesize 128 bytes.
+Primary data cache 16kB, 64-way, 2 sets, linesize 128 bytes.
+Synthesized TLB refill handler (56 instructions).
+Synthesized TLB load handler fastpath (73 instructions).
+Synthesized TLB store handler fastpath (76 instructions).
+Synthesized TLB modify handler fastpath (73 instructions).
+PID hash table entries: 4096 (order: 12, 32768 bytes)
+Using 750.000 MHz high precision timer.
+Console: colour dummy device 80x25
+Dentry cache hash table entries: 131072 (order: 8, 1048576 bytes)
+Inode-cache hash table entries: 65536 (order: 7, 524288 bytes)
+Memory: 1028864k/1048576k available (3992k kernel code, 19580k reserved, 3438k data, 16000k init, 0k highmem)
+Calibrating delay using timer specific routine.. 1500.50 BogoMIPS (lpj=3001013)
+Mount-cache hash table entries: 256
+Checking for the multiply/shift bug... no.
+Checking for the daddi bug... no.
+Checking for the daddiu bug... no.
+Brought up 1 CPUs
+NET: Registered protocol family 16
+PCIe: Initializing port 0
+PCIe: Waiting for port 0 link
+PCIe: Port 0 link active, 1 lanes
+PCIe: Initializing port 1
+PCIe: Waiting for port 1 link
+PCIe: Port 1 link timeout
+PCIe: ERROR: cvmx_pcie_rc_initialize_link() failed
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+PCI: Bridge: 0000:01:00.0
+  IO window: disabled.
+  MEM window: f0000000-f00fffff
+  PREFETCH window: disabled.
+PCI: Enabling device 0000:01:00.0 (0000 -> 0002)
+BCM find, pin setto 1
+NET: Registered protocol family 2
+Time: MIPS clocksource has been installed.
+IP route cache hash table entries: 32768 (order: 6, 262144 bytes)
+TCP established hash table entries: 131072 (order: 9, 3145728 bytes)
+TCP bind hash table entries: 65536 (order: 8, 1048576 bytes)
+TCP: Hash tables configured (established 131072 bind 65536)
+TCP reno registered
+/proc/octeon_perf: Octeon performace counter interface loaded
+Octeon watchdog driver loaded with a timeout of 5726 ms.
+Octeon management port ethernet driver
+OcteonUSB: Detected 1 ports
+OcteonUSB OcteonUSB.0: Octeon Host Controller
+OcteonUSB OcteonUSB.0: new USB bus registered, assigned bus number 1
+OcteonUSB OcteonUSB.0: irq 64, io mem 0x00000000
+usb usb1: Product: Octeon Host Controller
+usb usb1: Manufacturer: Linux 2.6.21.7-Cavium-Octeon Octeon USB
+usb usb1: SerialNumber: OcteonUSB.0
+usb usb1: configuration #1 chosen from 1 choice
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 1 port detected
+OcteonUSB: Registered HCD for port 0 on irq 64
+Embedway SLB driver v0.0.5
+board version: PM1620-All_For_One (0x0321)
+Total HugeTLB memory allocated, 0
+NTFS driver 2.1.28 [Flags: R/W].
+JFFS2 version 2.2. (NAND) (C) 2001-2006 Red Hat, Inc.
+io scheduler noop registered
+io scheduler cfq registered (default)
+Software Watchdog Timer: 0.07 initialized. soft_noboot=0 soft_margin=60 sec (nowayout= 0)
+Serial: 8250/16550 driver $Revision: 1.90 $ 4 ports, IRQ sharing enabled
+RAMDISK driver initialized: 1 RAM disks of 500000K size 1024 blocksize
+loop: loaded (max 8 devices)
+PPP generic driver version 2.4.2
+PPP Deflate Compression module registered
+PPP BSD Compression module registered
+PPP MPPE Compression module registered
+NET: Registered protocol family 24
+Uniform Multi-Platform E-IDE driver Revision: 7.00alpha2
+ide: Assuming 33MHz system bus speed for PIO modes; override with idebus=xx
+physmap-flash.0: failed to claim resource 0
+slram: not enough parameters.
+usbmon: debugfs is not available
+Initializing USB Mass Storage driver...
+usb 1-1: new high speed USB device using OcteonUSB and address 2
+usb 1-1: Product: USB Storage
+usb 1-1: Manufacturer: Generic 
+usb 1-1: configuration #1 chosen from 1 choice
+scsi0 : SCSI emulation for USB Mass Storage devices
+usbcore: registered new interface driver usb-storage
+USB Mass Storage support registered.
+usbcore: registered new interface driver usbhid
+drivers/usb/input/hid-core.c: v2.6:USB HID core driver
+i2c /dev entries driver
+timeout on test expression temp.s.d == 0x40 at line 298, data value 48
+i2c_adapter i2c-0: Client creation failed at 0x32 (-5)
+drivers/i2c/busses/i2c-embedway_ac26x2.c:564 return value 0
+drivers/i2c/busses/i2c-embedway_ac26x2.c:564 return value 17
+rtc-rs5c372 2-0032: assuming rs5c372b
+drivers/i2c/busses/i2c-embedway_ac26x2.c:564 return value 17
+rtc-rs5c372 2-0032: rs5c372b found, 24hr, driver version 0.4
+rtc-rs5c372 2-0032: rtc core: registered rtc-rs5c372 as rtc0
+oprofile: using mips/octeon performance monitoring.
+Netfilter messages via NETLINK v0.30.
+nf_conntrack version 0.5.0 (4096 buckets, 32768 max)
+ctnetlink v0.93: registering with nfnetlink.
+ip_tables: (C) 2000-2006 Netfilter Core Team
+ClusterIP Version 0.8 loaded successfully
+arp_tables: (C) 2002 David S. Miller
+TCP cubic registered
+NET: Registered protocol family 1
+NET: Registered protocol family 17
+Bridge firewalling registered
+Ebtables v2.0 registered
+802.1Q VLAN Support v1.8 Ben Greear <greearb@candelatech.com>
+All bugs added by David S. Miller <davem@redhat.com>
+serial8250: ttyS0 at MMIO 0x1180000000800 (irq = 42) is a 16550A
+boot flash: Found 1 x16 devices at 0x0 in 16-bit bank
+ Intel/Sharp Extended Query Table at 0x010A
+ Intel/Sharp Extended Query Table at 0x010A
+ Intel/Sharp Extended Query Table at 0x010A
+ Intel/Sharp Extended Query Table at 0x010A
+ Intel/Sharp Extended Query Table at 0x010A
+Using buffer write method
+cfi_cmdset_0001: Erase suspend on write enabled
+Bootbus flash: Setting flash for 0x08000000B flash at 0x17c00000
+Creating 3 MTD partitions on "boot flash":
+0x001e0000-0x00200000 : "env"
+0x04000000-0x04200000 : "cvmx"
+0x04200000-0x04300000 : "sysfs"
+drivers/i2c/busses/i2c-embedway_ac26x2.c:564 return value 17
+rtc-rs5c372 2-0032: setting the system clock to 2013-03-21 16:02:31 (1363881751)
+Freeing unused kernel memory: 16000k freed
+/sbin/rc starting
+Updating module dependencies
+Mounting file systems
+Setting up loopback
+Intel(R) PRO/1000 Network Driver - version 7.3.20-k2
+Copyright (c) 1999-2006 Intel Corporation.
+Setting up pci ethernet interface
+Starting syslogd
+Starting internet superserver: inetd.
+Enable ipv4 forwarding
+/sbin/rc complete
+Loading configuration :
+                                                                 [ Pass ]
+Press any key within 3 seconds to invoke the Sysadmin Shell:
+
+U-Boot 1.1.1 (Development build) (Build time: Mar 12 2012 - 14:41:46)
+Octeon_56xx_v0.9.2
+
+CUST_PM1620 board revision major:80, minor:0, serial #: 10250619
+ICORE CN5650-NSP pass 2.1, Core clock: 750 MHz, DDR clock: 399 MHz (798 Mhz data rate)
+DRAM:  4096 MB
+flash 0: 128M single die
+Total: 128 MB
+Clearing DRAM........ done
+BIST check passed.
+Net:   icomgmt0, icoeth0, icoeth1
+ 0 
+Using icomgmt0 device
+TFTP from server 10.1.200.156; our IP address is 10.1.26.78
+Filename 'vmlinux.64.lph.26x2.autorun'.
+Load address: 0x21000000
+Loading: *T #################################################################
+	 ###ä#############################################################
+	 ######################################
+done
+Bytes transferred = 24011360 (16e6260 hex), 1834 Kbytes/sec
+argv[2]: coremask=0x1
+argv[3]: mem=1024
+ELF file is 64 bit
+Attempting to allocate memory for ELF segment: addr: 0xffffffff80100000 (adjusted to: 0x0000000000100000), size 0x17681f0
+Allocated memory for ELF segment: addr: 0xffffffff80100000, size 0x17681f0
+Processing PHDR 0
+  Loading 16e1b98 bytes at ffffffff80100000
+  Clearing 86658 bytes at ffffffff817e1b98
+## Loading Linux kernel with entry point: 0xffffffff80842000 ...
+Bootloader: Done loading app on coremask: 0x1
+Linux version 2.6.21.7-Cavium-Octeon (root@lphu-desktop) (gcc version 4.1.2 (Cavium Networks Version: 1_8_1, build 72)) #82 SMP Fri Aug 5 16:05:29 CST 2011
+CVMSEG size: 2 cache lines (256 bytes)
+CPU revision is: 000d0409
+Determined physical RAM map:
+ memory: 0000000006400000 @ 0000000001900000 (usable)
+ memory: 0000000007c00000 @ 0000000008200000 (usable)
+ memory: 0000000032000000 @ 0000000020000000 (usable)
+Wasting 358400 bytes for tracking 6400 unused pages
+Initrd not found or empty - disabling initrd
+Built 1 zonelists.  Total pages: 257552
+Kernel command line:  coremask=0x1 console=ttyS0,115200
+Primary instruction cache 32kB, virtually tagged, 4 way, 64 sets, linesize 128 bytes.
+Primary data cache 16kB, 64-way, 2 sets, linesize 128 bytes.
+Synthesized TLB refill handler (56 instructions).
+Synthesized TLB load handler fastpath (73 instructions).
+Synthesized TLB store handler fastpath (76 instructions).
+Synthesized TLB modify handler fastpath (73 instructions).
+PID hash table entries: 4096 (order: 12, 32768 bytes)
+Using 750.000 MHz high precision timer.
+Console: colour dummy device 80x25
+Dentry cache hash table entries: 131072 (order: 8, 1048576 bytes)
+Inode-cache hash table entries: 65536 (order: 7, 524288 bytes)
+Memory: 1028864k/1048576k available (3992k kernel code, 19580k reserved, 3438k data, 16000k init, 0k highmem)
+Calibrating delay using timer specific routine.. 1500.50 BogoMIPS (lpj=3001014)
+Mount-cache hash table entries: 256
+Checking for the multiply/shift bug... no.
+Checking for the daddi bug... no.
+Checking for the daddiu bug... no.
+Brought up 1 CPUs
+NET: Registered protocol family 16
+PCIe: Initializing port 0
+PCIe: Waiting for port 0 link
+PCIe: Port 0 link active, 1 lanes
+PCIe: Initializing port 1
+PCIe: Waiting for port 1 link
+PCIe: Port 1 link timeout
+PCIe: ERROR: cvmx_pcie_rc_initialize_link() failed
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+PCI: Bridge: 0000:01:00.0
+  IO window: disabled.
+  MEM window: f0000000-f00fffff
+  PREFETCH window: disabled.
+PCI: Enabling device 0000:01:00.0 (0000 -> 0002)
+BCM find, pin setto 1
+NET: Registered protocol family 2
+Time: MIPS clocksource has been installed.
+IP route cache hash table entries: 32768 (order: 6, 262144 bytes)
+TCP established hash table entries: 131072 (order: 9, 3145728 bytes)
+TCP bind hash table entries: 65536 (order: 8, 1048576 bytes)
+TCP: Hash tables configured (established 131072 bind 65536)
+TCP reno registered
+/proc/octeon_perf: Octeon performace counter interface loaded
+Octeon watchdog driver loaded with a timeout of 5726 ms.
+Octeon management port ethernet driver
+OcteonUSB: Detected 1 ports
+OcteonUSB OcteonUSB.0: Octeon Host Controller
+OcteonUSB OcteonUSB.0: new USB bus registered, assigned bus number 1
+OcteonUSB OcteonUSB.0: irq 64, io mem 0x00000000
+usb usb1: Product: Octeon Host Controller
+usb usb1: Manufacturer: Linux 2.6.21.7-Cavium-Octeon Octeon USB
+usb usb1: SerialNumber: OcteonUSB.0
+usb usb1: configuration #1 chosen from 1 choice
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 1 port detected
+OcteonUSB: Registered HCD for port 0 on irq 64
+Embedway SLB driver v0.0.5
+board version: PM1620-All_For_One (0x0321)
+Total HugeTLB memory allocated, 0
+NTFS driver 2.1.28 [Flags: R/W].
+JFFS2 version 2.2. (NAND) (C) 2001-2006 Red Hat, Inc.
+io scheduler noop registered
+io scheduler cfq registered (default)
+Software Watchdog Timer: 0.07 initialized. soft_noboot=0 soft_margin=60 sec (nowayout= 0)
+Serial: 8250/16550 driver $Revision: 1.90 $ 4 ports, IRQ sharing enabled
+RAMDISK driver initialized: 1 RAM disks of 500000K size 1024 blocksize
+loop: loaded (max 8 devices)
+PPP generic driver version 2.4.2
+PPP Deflate Compression module registered
+PPP BSD Compression module registered
+PPP MPPE Compression module registered
+NET: Registered protocol family 24
+Uniform Multi-Platform E-IDE driver Revision: 7.00alpha2
+ide: Assuming 33MHz system bus speed for PIO modes; override with idebus=xx
+physmap-flash.0: failed to claim resource 0
+slram: not enough parameters.
+usbmon: debugfs is not available
+Initializing USB Mass Storage driver...
+usb 1-1: new high speed USB device using OcteonUSB and address 2
+usb 1-1: Product: USB Storage
+usb 1-1: Manufacturer: Generic 
+usb 1-1: configuration #1 chosen from 1 choice
+scsi0 : SCSI emulation for USB Mass Storage devices
+usbcore: registered new interface driver usb-storage
+USB Mass Storage support registered.
+usbcore: registered new interface driver usbhid
+drivers/usb/input/hid-core.c: v2.6:USB HID core driver
+i2c /dev entries driver
+timeout on test expression temp.s.d == 0x40 at line 298, data value 48
+i2c_adapter i2c-0: Client creation failed at 0x32 (-5)
+drivers/i2c/busses/i2c-embedway_ac26x2.c:564 return value 0
+drivers/i2c/busses/i2c-embedway_ac26x2.c:564 return value 17
+rtc-rs5c372 2-0032: assuming rs5c372b
+drivers/i2c/busses/i2c-embedway_ac26x2.c:564 return value 17
+rtc-rs5c372 2-0032: rs5c372b found, 24hr, driver version 0.4
+rtc-rs5c372 2-0032: rtc core: registered rtc-rs5c372 as rtc0
+oprofile: using mips/octeon performance monitoring.
+Netfilter messages via NETLINK v0.30.
+nf_conntrack version 0.5.0 (4096 buckets, 32768 max)
+ctnetlink v0.93: registering with nfnetlink.
+ip_tables: (C) 2000-2006 Netfilter Core Team
+ClusterIP Version 0.8 loaded successfully
+arp_tables: (C) 2002 David S. Miller
+TCP cubic registered
+NET: Registered protocol family 1
+NET: Registered protocol family 17
+Bridge firewalling registered
+Ebtables v2.0 registered
+802.1Q VLAN Support v1.8 Ben Greear <greearb@candelatech.com>
+All bugs added by David S. Miller <davem@redhat.com>
+serial8250: ttyS0 at MMIO 0x1180000000800 (irq = 42) is a 16550A
+boot flash: Found 1 x16 devices at 0x0 in 16-bit bank
+ Intel/Sharp Extended Query Table at 0x010A
+ Intel/Sharp Extended Query Table at 0x010A
+ Intel/Sharp Extended Query Table at 0x010A
+ Intel/Sharp Extended Query Table at 0x010A
+ Intel/Sharp Extended Query Table at 0x010A
+Using buffer write method
+cfi_cmdset_0001: Erase suspend on write enabled
+Bootbus flash: Setting flash for 0x08000000B flash at 0x17c00000
+Creating 3 MTD partitions on "boot flash":
+0x001e0000-0x00200000 : "env"
+0x04000000-0x04200000 : "cvmx"
+0x04200000-0x04300000 : "sysfs"
+drivers/i2c/busses/i2c-embedway_ac26x2.c:564 return value 17
+rtc-rs5c372 2-0032: setting the system clock to 2013-03-21 16:03:40 (1363881820)
+Freeing unused kernel memory: 16000k freed
+/sbin/rc starting
+Updating module dependencies
+Mounting file systems
+Setting up loopback
+Intel(R) PRO/1000 Network Driver - version 7.3.20-k2
+Copyright (c) 1999-2006 Intel Corporation.
+Setting up pci ethernet interface
+Starting syslogd
+Starting internet superserver: inetd.
+Enable ipv4 forwarding
+/sbin/rc complete
+Loading configuration :
+                                                                 [ Pass ]
+Press any key within 3 seconds to invoke the Sysadmin Shell:
+scsi 0:0:0:0: Direct-Access     Generic  STORAGE DEVICE   9451 PQ: 0 ANSI: 0
+SCSI device sda: 3842048 512-byte hdwr sectors (1967 MB)
+sda: Write Protect is off
+sda: assuming drive cache: write through
+SCSI device sda: 3842048 512-byte hdwr sectors (1967 MB)
+sda: Write Protect is off
+sda: assuming drive cache: write through
+ sda:<7>usb-storage: queuecommand called
+ sda1 sda2 sda3
+sd 0:0:0:0: Attached scsi removable disk sda
+sda1 found .. 
+EXT2-fs warning: mounting unchecked fs, running e2fsck is recommended
+
+
+BusyBox v1.2.1 (2011.02.21-07:24+0000) Built-in shell (ash)
+Enter 'help' for a list of built-in commands.
+
+/ # cd sysf[4D/ # cd sysfs/[J
+/sysfs # ls
+[0;0mac26x2-tools_1.4.2.tar.gz[0m  [0;0mmac_tmp.txt[0m
+[1;32maddip_vinf2.sh[0m             [1;32mrc.post[0m
+[0;0maddsarp.sh[0m                 [0;0mread_sd_id.ko[0m
+[1;32mafter_running.sh[0m           [1;32mrpc_test.sh[0m
+[1;32mauto-z.sh[0m                  [1;32mstart.sh[0m
+[1;32mcheck.sh[0m                   [0;0msysadmin.bak.conf[0m
+[0;0mcreate_vlan.sh[0m             [0;0msysadmin.conf[0m
+[0;0mdev_mac.txt[0m                [0;0mtest_sd_r_w.sh[0m
+[0;0menvclear.bcm[0m               [1;32mtest_sensor.sh[0m
+[1;32menvset.sh[0m                  [1;32mvgwtest.sh[0m
+[0;0menvstart.bcm[0m
+/sysfs # ./au[4D/sysfs # ./auto-z.sh [J
+ipmi control center driver is registered with major:224
+USAGE:
+mknod /dev/ipmi_cc c 224 <minor>
+with different minor numbers.
+
+MT base address: 0x00000000
+self ipmb addr: 0x8a
+linux_kernel_bde: module license 'Proprietary' taints kernel.
+PCI: Enabling device 0000:02:02.0 (0000 -> 0002)
+linux-bcm-core (823): SOC unit 0 attached to PCI device BCM56304_B1
+Broadcom Command Monitor: Copyright (c) 1998-2008 Broadcom Corporation
+Release: sdk-xgs-robo-5.6.6 built 20110830 (Tue Aug 30 16:51:46 2011)
+From root@EVA01-F12:/support/wri/sdk-xgs-robo-5.6.6/systems/linux/kernel/octeon-2_6/../../../..
+Platform: OCT_BCM56504
+OS: Linux Kernel
+OK - already attached
+Boot flags: initialization scripts NOT loaded
+BCM.0> BCM.0> BCM.0> /sysfs # 
+/sysfs # 
+/sysfs # 
+/sysfs # 
+/sysfs # ls
+[0;0mac26x2-tools_1.4.2.tar.gz[0m  [0;0mmac_tmp.txt[0m
+[1;32maddip_vinf2.sh[0m             [1;32mrc.post[0m
+[0;0maddsarp.sh[0m                 [0;0mread_sd_id.ko[0m
+[1;32mafter_running.sh[0m           [1;32mrpc_test.sh[0m
+[1;32mauto-z.sh[0m                  [1;32mstart.sh[0m
+[1;32mcheck.sh[0m                   [0;0msysadmin.bak.conf[0m
+[0;0mcreate_vlan.sh[0m             [0;0msysadmin.conf[0m
+[0;0mdev_mac.txt[0m                [0;0mtest_sd_r_w.sh[0m
+[0;0menvclear.bcm[0m               [1;32mtest_sensor.sh[0m
+[1;32menvset.sh[0m                  [1;32mvgwtest.sh[0m
+[0;0menvstart.bcm[0m
+/sysfs # linux-bcm-net: insall module linux-bcm-net version: 0.1.0 ok!
+linux-bcm-net: insall module linux-bcm-net version: 0.1.0 ok!
+linux-bcm-net: insall module linux-bcm-net version: 0.1.0 ok!
+linux-bcm-net: insall module linux-bcm-net version: 0.1.0 ok!
+
+/sysfs # 
+/sysfs # linux-bcm-net: insall module linux-bcm-net version: 0.1.0 ok!
+linux-bcm-net: insall module linux-bcm-net version: 0.1.0 ok!
+linux-bcm-net: insall module linux-bcm-net version: 0.1.0 ok!
+linux-bcm-net: insall module linux-bcm-net version: 0.1.0 ok!
+modpr[5D/sysfs # modprobe [J-l
+/lib/modules/2.6.21.7-Cavium-Octeon/arch/mips/cavium-octeon/ethernet-pow.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/crypto/aes.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/crypto/blowfish.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/crypto/cbc.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/crypto/crypto_null.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/crypto/des.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/crypto/md5.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/crypto/pcbc.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/drivers/md/md-mod.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/drivers/md/raid0.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/drivers/md/raid1.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/drivers/net/cavium-ethernet/cavium-ethernet.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/drivers/net/e1000/e1000.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/intercept-example.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/net/ipv4/ah4.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/net/ipv4/esp4.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/net/ipv4/netfilter/nf_nat_h323.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/net/ipv4/tunnel4.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/net/key/af_key.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/net/netfilter/nf_conntrack_h323.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/net/netfilter/xt_TCPMSS.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/net/xfrm/xfrm_user.ko
+/sysfs # modp[4D/sysfs # modprobe [J[9D[Jlinux-bcm-net: insall module linux-bcm-net version: 0.1.0 ok!
+
+/sysfs # 
+/sysfs # modpr[5D/sysfs # modprobe [Jcaviem-   um-ethernet. 
+cavium-ethernet: Cavium Networks Octeon SDK version 1.8.1, build 294
+Interface 0 has 1 ports (XAUI)
+Interface 1 has 1 ports (XAUI)
+Interface 2 has 4 ports (NPI)
+Interface 3 has 4 ports (LOOP)
+CONFIG_CAVIUM_RESERVE32=0
+USE_32BIT_SHARED=0
+USE_SKBUFFS_IN_HW=1
+REUSE_SKBUFFS_WITHOUT_FREE=0
+USE_MULTICORE_RECEIVE=1
+/sysfs # xaui0: 10000 Mbps Full duplex, port  0, queue  0
+
+/sysfs # 
+/sysfs # 
+/sysfs # 
+/sysfs # cdxaui1: 10000 Mbps Full duplex, port 16, queue 16
+ /us/sysfs # cd /usr/[Jlo[7D/sysfs # cd /usr/local/[Jm[12D/sysfs # cd /usr/local/mstp_26x2_octeon_V1.0.1/[J
+/usr/local/mstp_26x2_octeon_V1.0.1 # ls
+[1;34mexample[0m  [1;34mmstp[0m
+/usr/local/mstp_26x2_octeon_V1.0.1 # cd ms/usr/local/mstp_26x2_octeon_V1.0.1 # cd mstp/[J
+/usr/local/mstp_26x2_octeon_V1.0.1/mstp # ls
+[0;0mReadme[0m            [1;32mdel-cfg.sh[0m        [1;32mmstpd[0m             [1;32mstpconfig[0m
+[1;32mcfg-mst.sh[0m        [0;0mlinux-bcm-net.ko[0m  [1;32msetup.sh[0m          [1;32mun-setup.sh[0m
+/usr/local/mstp_26x2_octeon_V1.0.1/mstp # ./m/usr/local/mstp_26x2_octeon_V1.0.1/mstp # ./mstpd [Jd v -v 2
+2013-03-21 16:08:08 INFO: main: Sanity checks succeededmstp init: origin default stg 1, set to 0(user override)
+
+2013-03-21 16:08:08 INFO: set_br_up: ge1 was down stp was down
+2013-03-21 16:08:08 INFO: set_br_up: Set bridge ge1 up stp up
+2013-03-21 16:08:10 INFO: rpc_cmd_region_name: ge1 Set region name :abc
+
+2013-03-21 16:08:10 INFO: port_control: Err: ioctl-mstp: ge1, Operation not permitted
+
+2013-03-21 16:08:10 INFO: set_vid2fid_mapping: set vlan to mstid failed!
+
+2013-03-21 16:08:10 INFO: br_set_port_multi_enable: ge1 Port enable, if_start=5, if_end=6, enable=1.
+2013-03-21 16:08:10 INFO: create_if: Add interface ge5 as port#1 to bridge ge1
+2013-03-21 16:08:10 INFO: create_if: Add interface ge6 as port#2 to bridge ge1
+2013-03-21 16:08:11 ERROR: mstp_in_rx_bpdu: ge1:ge6 Port hasn't processed previous BPDU
+2013-03-21 16:08:46 ERROR: mstp_in_rx_bpdu: ge1:ge6 Port hasn't processed previous BPDU
+
+/usr/local/mstp_26x2_octeon_V1.0.1/mstp # /usr/local/mstp_26x2_octeon_V1.0.1/mstp # ./mstpd -v 2[J 0 &
+2013-03-21 16:09:46 INFO: main: Sanity checks succeededmstp init: origin default stg 0, set to 0(user override)
+
+/usr/local/mstp_26x2_octeon_V1.0.1/mstp # 
+/usr/local/mstp_26x2_octeon_V1.0.1/mstp # 
+/usr/local/mstp_26x2_octeon_V1.0.1/mstp # 
+/usr/local/mstp_26x2_octeon_V1.0.1/mstp # 
+/usr/local/mstp_26x2_octeon_V1.0.1/mstp # 
+/usr/local/mstp_26x2_octeon_V1.0.1/mstp # 
+/usr/local/mstp_26x2_octeon_V1.0.1/mstp # 
+/usr/local/mstp_26x2_octeon_V1.0.1/mstp # 
+/usr/local/mstp_26x2_octeon_V1.0.1/mstp # cat /pro[4D/usr/local/mstp_26x2_octeon_V1.0.1/mstp # cat /proc/[Jde[8D/usr/local/mstp_26x2_octeon_V1.0.1/mstp # cat /proc/devices [J        ne[8D/usr/local/mstp_26x2_octeon_V1.0.1/mstp # cat /proc/net/[Jde[12D/usr/local/mstp_26x2_octeon_V1.0.1/mstp # cat /proc/net/dev[J
+Inter-|   Receive                                                |  Transmit
+ face |bytes    packets errs drop fifo frame compressed multicast|bytes    packets errs drop fifo colls carrier compressed
+ mgmt0: 8716248   16851    0    0    0     0          0         0   811079   15150    0    0    0     0       0          0
+    lo:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+bcmcpu:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+  ge24:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+  ge23:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+  ge22:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+  ge21:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+  ge20:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+  ge19:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+  ge18:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+  ge17:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+  ge16:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+  ge15:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+  ge14:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+  ge13:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+  ge12:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+  ge11:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+  ge10:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+   ge9:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+   ge8:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+   ge7:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+   ge6:   19621     123    0    0    0     0          0       123    17360     112    0    0    0     0       0          0
+   ge5:   18969     119    0    0    0     0          0       119    13485      87    0    0    0     0       0          0
+   ge4:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+   ge3:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+   ge2:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+   ge1:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+  xe25:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+  xe26:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+  xe27:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+  xe28:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+ xaui0:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+ xaui1:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+  npi0:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+  npi1:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+  npi2:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+  npi3:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+ loop0:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+ loop1:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+ loop2:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+ loop3:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+/usr/local/mstp_26x2_octeon_V1.0.1/mstp # modpr[5D/usr/local/mstp_26x2_octeon_V1.0.1/mstp # modprobe [J
+Usage: modprobe [-v] [-V] [-C config-file] [-n] [-i] [-q] [-o <modname>] <modname> [parameters...]
+modprobe -r [-n] [-i] [-v] <modulename> ...
+modprobe -l -t <dirname> [ -a <modulename> ...]
+/usr/local/mstp_26x2_octeon_V1.0.1/mstp # /usr/local/mstp_26x2_octeon_V1.0.1/mstp # modprobe [J-l
+/lib/modules/2.6.21.7-Cavium-Octeon/arch/mips/cavium-octeon/ethernet-pow.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/crypto/aes.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/crypto/blowfish.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/crypto/cbc.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/crypto/crypto_null.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/crypto/des.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/crypto/md5.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/crypto/pcbc.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/drivers/md/md-mod.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/drivers/md/raid0.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/drivers/md/raid1.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/drivers/net/cavium-ethernet/cavium-ethernet.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/drivers/net/e1000/e1000.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/intercept-example.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/net/ipv4/ah4.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/net/ipv4/esp4.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/net/ipv4/netfilter/nf_nat_h323.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/net/ipv4/tunnel4.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/net/key/af_key.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/net/netfilter/nf_conntrack_h323.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/net/netfilter/xt_TCPMSS.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/net/xfrm/xfrm_user.ko
+/usr/local/mstp_26x2_octeon_V1.0.1/mstp # 
+/usr/local/mstp_26x2_octeon_V1.0.1/mstp # 
+/usr/local/mstp_26x2_octeon_V1.0.1/mstp # ls
+[0;0mReadme[0m            [1;32mdel-cfg.sh[0m        [1;32mmstpd[0m             [1;32mstpconfig[0m
+[1;32mcfg-mst.sh[0m        [0;0mlinux-bcm-net.ko[0m  [1;32msetup.sh[0m          [1;32mun-setup.sh[0m
+/usr/local/mstp_26x2_octeon_V1.0.1/mstp # rebo[4D/usr/local/mstp_26x2_octeon_V1.0.1/mstp # reboot [J
+The system is going down NOW !!
+Sending SIGTERM to all processes.
+Terminated
+/usr/local/mstp_26x2_octeon_V1.0.1/mstp # SenRequesting system reboot.
+Restarting system.
+
+
+U-Boot 1.1.1 (Development build) (Build time: Mar 12 2012 - 14:41:46)
+Octeon_56xx_v0.9.2
+
+CUST_PM1620 board revision major:80, minor:0, serial #: 10250619
+ICORE CN5650-NSP pass 2.1, Core clock: 750 MHz, DDR clock: 399 MHz (798 Mhz data rate)
+DRAM:  4096 MB
+flash 0: 128M single die
+Total: 128 MB
+Clearing DRAM........ done
+BIST check passed.
+Net:   icomgmt0, icoeth0, icoeth1
+ 0 
+Using icomgmt0 device
+TFTP from server 10.1.200.156; our IP address is 10.1.26.78
+Filename 'vmlinux.64.lph.26x2.autorun'.
+Load address: 0x21000000
+Loading: *T #################################################################
+	 #################################################################
+	 ######################################
+done
+Bytes transferred = 24011360 (16e6260 hex), 1823 Kbytes/sec
+argv[2]: coremask=0x1
+argv[3]: mem=1024
+ELF file is 64 bit
+Attempting to allocate memory for ELF segment: addr: 0xffffffff80100000 (adjusted to: 0x0000000000100000), size 0x17681f0
+Allocated memory for ELF segment: addr: 0xffffffff80100000, size 0x17681f0
+Processing PHDR 0
+  Loading 16e1b98 bytes at ffffffff80100000
+  Clearing 86658 bytes at ffffffff817e1b98
+## Loading Linux kernel with entry point: 0xffffffff80842000 ...
+Bootloader: Done loading app on coremask: 0x1
+Linux version 2.6.21.7-Cavium-Octeon (root@lphu-desktop) (gcc version 4.1.2 (Cavium Networks Version: 1_8_1, build 72)) #82 SMP Fri Aug 5 16:05:29 CST 2011
+CVMSEG size: 2 cache lines (256 bytes)
+CPU revision is: 000d0409
+Determined physical RAM map:
+ memory: 0000000006400000 @ 0000000001900000 (usable)
+ memory: 0000000007c00000 @ 0000000008200000 (usable)
+ memory: 0000000032000000 @ 0000000020000000 (usable)
+Wasting 358400 bytes for tracking 6400 unused pages
+Initrd not found or empty - disabling initrd
+Built 1 zonelists.  Total pages: 257552
+Kernel command line:  coremask=0x1 console=ttyS0,115200
+Primary instruction cache 32kB, virtually tagged, 4 way, 64 sets, linesize 128 bytes.
+Primary data cache 16kB, 64-way, 2 sets, linesize 128 bytes.
+Synthesized TLB refill handler (56 instructions).
+Synthesized TLB load handler fastpath (73 instructions).
+Synthesized TLB store handler fastpath (76 instructions).
+Synthesized TLB modify handler fastpath (73 instructions).
+PID hash table entries: 4096 (order: 12, 32768 bytes)
+Using 750.000 MHz high precision timer.
+Console: colour dummy device 80x25
+Dentry cache hash table entries: 131072 (order: 8, 1048576 bytes)
+Inode-cache hash table entries: 65536 (order: 7, 524288 bytes)
+Memory: 1028864k/1048576k available (3992k kernel code, 19580k reserved, 3438k data, 16000k init, 0k highmem)
+Calibrating delay using timer specific routine.. 1500.49 BogoMIPS (lpj=3000991)
+Mount-cache hash table entries: 256
+Checking for the multiply/shift bug... no.
+Checking for the daddi bug... no.
+Checking for the daddiu bug... no.
+Brought up 1 CPUs
+NET: Registered protocol family 16
+PCIe: Initializing port 0
+PCIe: Waiting for port 0 link
+PCIe: Port 0 link active, 1 lanes
+PCIe: Initializing port 1
+PCIe: Waiting for port 1 link
+PCIe: Port 1 link timeout
+PCIe: ERROR: cvmx_pcie_rc_initialize_link() failed
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+PCI: Bridge: 0000:01:00.0
+  IO window: disabled.
+  MEM window: f0000000-f00fffff
+  PREFETCH window: disabled.
+PCI: Enabling device 0000:01:00.0 (0000 -> 0002)
+BCM find, pin setto 1
+NET: Registered protocol family 2
+Time: MIPS clocksource has been installed.
+IP route cache hash table entries: 32768 (order: 6, 262144 bytes)
+TCP established hash table entries: 131072 (order: 9, 3145728 bytes)
+TCP bind hash table entries: 65536 (order: 8, 1048576 bytes)
+TCP: Hash tables configured (established 131072 bind 65536)
+TCP reno registered
+/proc/octeon_perf: Octeon performace counter interface loaded
+Octeon watchdog driver loaded with a timeout of 5726 ms.
+Octeon management port ethernet driver
+OcteonUSB: Detected 1 ports
+OcteonUSB OcteonUSB.0: Octeon Host Controller
+OcteonUSB OcteonUSB.0: new USB bus registered, assigned bus number 1
+OcteonUSB OcteonUSB.0: irq 64, io mem 0x00000000
+usb usb1: Product: Octeon Host Controller
+usb usb1: Manufacturer: Linux 2.6.21.7-Cavium-Octeon Octeon USB
+usb usb1: SerialNumber: OcteonUSB.0
+usb usb1: configuration #1 chosen from 1 choice
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 1 port detected
+OcteonUSB: Registered HCD for port 0 on irq 64
+Embedway SLB driver v0.0.5
+board version: PM1620-All_For_One (0x0321)
+Total HugeTLB memory allocated, 0
+NTFS driver 2.1.28 [Flags: R/W].
+JFFS2 version 2.2. (NAND) (C) 2001-2006 Red Hat, Inc.
+io scheduler noop registered
+io scheduler cfq registered (default)
+Software Watchdog Timer: 0.07 initialized. soft_noboot=0 soft_margin=60 sec (nowayout= 0)
+Serial: 8250/16550 driver $Revision: 1.90 $ 4 ports, IRQ sharing enabled
+RAMDISK driver initialized: 1 RAM disks of 500000K size 1024 blocksize
+loop: loaded (max 8 devices)
+PPP generic driver version 2.4.2
+PPP Deflate Compression module registered
+PPP BSD Compression module registered
+PPP MPPE Compression module registered
+NET: Registered protocol family 24
+Uniform Multi-Platform E-IDE driver Revision: 7.00alpha2
+ide: Assuming 33MHz system bus speed for PIO modes; override with idebus=xx
+physmap-flash.0: failed to claim resource 0
+slram: not enough parameters.
+usbmon: debugfs is not available
+Initializing USB Mass Storage driver...
+usb 1-1: new high speed USB device using OcteonUSB and address 2
+usb 1-1: Product: USB Storage
+usb 1-1: Manufacturer: Generic 
+usb 1-1: configuration #1 chosen from 1 choice
+scsi0 : SCSI emulation for USB Mass Storage devices
+usbcore: registered new interface driver usb-storage
+USB Mass Storage support registered.
+usbcore: registered new interface driver usbhid
+drivers/usb/input/hid-core.c: v2.6:USB HID core driver
+i2c /dev entries driver
+timeout on test expression temp.s.d == 0x40 at line 298, data value 48
+i2c_adapter i2c-0: Client creation failed at 0x32 (-5)
+drivers/i2c/busses/i2c-embedway_ac26x2.c:564 return value 0
+drivers/i2c/busses/i2c-embedway_ac26x2.c:564 return value 17
+rtc-rs5c372 2-0032: assuming rs5c372b
+drivers/i2c/busses/i2c-embedway_ac26x2.c:564 return value 17
+rtc-rs5c372 2-0032: rs5c372b found, 24hr, driver version 0.4
+rtc-rs5c372 2-0032: rtc core: registered rtc-rs5c372 as rtc0
+oprofile: using mips/octeon performance monitoring.
+Netfilter messages via NETLINK v0.30.
+nf_conntrack version 0.5.0 (4096 buckets, 32768 max)
+ctnetlink v0.93: registering with nfnetlink.
+ip_tables: (C) 2000-2006 Netfilter Core Team
+ClusterIP Version 0.8 loaded successfully
+arp_tables: (C) 2002 David S. Miller
+TCP cubic registered
+NET: Registered protocol family 1
+NET: Registered protocol family 17
+Bridge firewalling registered
+Ebtables v2.0 registered
+802.1Q VLAN Support v1.8 Ben Greear <greearb@candelatech.com>
+All bugs added by David S. Miller <davem@redhat.com>
+serial8250: ttyS0 at MMIO 0x1180000000800 (irq = 42) is a 16550A
+boot flash: Found 1 x16 devices at 0x0 in 16-bit bank
+ Intel/Sharp Extended Query Table at 0x010A
+ Intel/Sharp Extended Query Table at 0x010A
+ Intel/Sharp Extended Query Table at 0x010A
+ Intel/Sharp Extended Query Table at 0x010A
+ Intel/Sharp Extended Query Table at 0x010A
+Using buffer write method
+cfi_cmdset_0001: Erase suspend on write enabled
+Bootbus flash: Setting flash for 0x08000000B flash at 0x17c00000
+Creating 3 MTD partitions on "boot flash":
+0x001e0000-0x00200000 : "env"
+0x04000000-0x04200000 : "cvmx"
+0x04200000-0x04300000 : "sysfs"
+drivers/i2c/busses/i2c-embedway_ac26x2.c:564 return value 17
+rtc-rs5c372 2-0032: setting the system clock to 2013-03-21 16:16:24 (1363882584)
+Freeing unused kernel memory: 16000k freed
+/sbin/rc starting
+Updating module dependencies
+Mounting file systems
+Setting up loopback
+Intel(R) PRO/1000 Network Driver - version 7.3.20-k2
+Copyright (c) 1999-2006 Intel Corporation.
+Setting up pci ethernet interface
+Starting syslogd
+Starting internet superserver: inetd.
+Enable ipv4 forwarding
+/sbin/rc complete
+Loading configuration :
+                                                                 [ Pass ]
+Press any key within 3 seconds to invoke the Sysadmin Shell:
+scsi 0:0:0:0: Direct-Access     Generic  STORAGE DEVICE   9451 PQ: 0 ANSI: 0
+SCSI device sda: 3842048 512-byte hdwr sectors (1967 MB)
+sda: Write Protect is off
+sda: assuming drive cache: write through
+SCSI device sda: 3842048 512-byte hdwr sectors (1967 MB)
+sda: Write Protect is off
+sda: assuming drive cache: write through
+ sda:<7>usb-storage: queuecommand called
+ sda1 sda2 sda3
+sd 0:0:0:0: Attached scsi removable disk sda
+sda1 found .. 
+EXT2-fs warning: mounting unchecked fs, running e2fsck is recommended
+
+
+BusyBox v1.2.1 (2011.02.21-07:24+0000) Built-in shell (ash)
+Enter 'help' for a list of built-in commands.
+
+/ # cd sysfs
+/sysfs # ls
+[0;0mac26x2-tools_1.4.2.tar.gz[0m  [0;0mmac_tmp.txt[0m
+[1;32maddip_vinf2.sh[0m             [1;32mrc.post[0m
+[0;0maddsarp.sh[0m                 [0;0mread_sd_id.ko[0m
+[1;32mafter_running.sh[0m           [1;32mrpc_test.sh[0m
+[1;32mauto-z.sh[0m                  [1;32mstart.sh[0m
+[1;32mcheck.sh[0m                   [0;0msysadmin.bak.conf[0m
+[0;0mcreate_vlan.sh[0m             [0;0msysadmin.conf[0m
+[0;0mdev_mac.txt[0m                [0;0mtest_sd_r_w.sh[0m
+[0;0menvclear.bcm[0m               [1;32mtest_sensor.sh[0m
+[1;32menvset.sh[0m                  [1;32mvgwtest.sh[0m
+[0;0menvstart.bcm[0m
+/sysfs # ./au[4D/sysfs # ./auto-z.sh [J
+ipmi control center driver is registered with major:224
+USAGE:
+mknod /dev/ipmi_cc c 224 <minor>
+with different minor numbers.
+
+MT base address: 0x00000000
+self ipmb addr: 0x8a
+linux_kernel_bde: module license 'Proprietary' taints kernel.
+PCI: Enabling device 0000:02:02.0 (0000 -> 0002)
+linux-bcm-core (824): SOC unit 0 attached to PCI device BCM56304_B1
+Broadcom Command Monitor: Copyright (c) 1998-2008 Broadcom Corporation
+Release: sdk-xgs-robo-5.6.6 built 20110830 (Tue Aug 30 16:51:46 2011)
+From root@EVA01-F12:/support/wri/sdk-xgs-robo-5.6.6/systems/linux/kernel/octeon-2_6/../../../..
+Platform: OCT_BCM56504
+OS: Linux Kernel
+OK - already attached
+Boot flags: initialization scripts NOT loaded
+BCM.0> BCM.0> BCM.0> /sysfs # 
+/sysfs # 
+/sysfs # 
+/sysfs # 
+/sysfs # modp[4D/sysfs # modprobe [J
+Usage: modprobe [-v] [-V] [-C config-file] [-n] [-i] [-q] [-o <modname>] <modname> [parameters...]
+modprobe -r [-n] [-i] [-v] <modulename> ...
+modprobe -l -t <dirname> [ -a <modulename> ...]
+/sysfs # /sysfs # modprobe [J-l
+/lib/modules/2.6.21.7-Cavium-Octeon/arch/mips/cavium-octeon/ethernet-pow.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/crypto/aes.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/crypto/blowfish.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/crypto/cbc.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/crypto/crypto_null.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/crypto/des.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/crypto/md5.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/crypto/pcbc.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/drivers/md/md-mod.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/drivers/md/raid0.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/drivers/md/raid1.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/drivers/net/cavium-ethernet/cavium-ethernet.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/drivers/net/e1000/e1000.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/intercept-example.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/net/ipv4/ah4.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/net/ipv4/esp4.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/net/ipv4/netfilter/nf_nat_h323.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/net/ipv4/tunnel4.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/net/key/af_key.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/net/netfilter/nf_conntrack_h323.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/net/netfilter/xt_TCPMSS.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/net/xfrm/xfrm_user.ko
+/sysfs # ml odpro[6D/sysfs # modprobe [Jcavium-ethernet. 
+cavium-ethernet: Cavium Networks Octeon SDK version 1.8.1, build 294
+Interface 0 has 1 ports (XAUI)
+Interface 1 has 1 ports (XAUI)
+Interface 2 has 4 ports (NPI)
+Interface 3 has 4 ports (LOOP)
+CONFIG_CAVIUM_RESERVE32=0
+USE_32BIT_SHARED=0
+USE_SKBUFFS_IN_HW=1
+REUSE_SKBUFFS_WITHOUT_FREE=0
+USE_MULTICORE_RECEIVE=1
+/sysfs # xaui0: 10000 Mbps Full duplex, port  0, queue  0
+xaui1: 10000 Mbps Full duplex, port 16, queue 16
+linux-bcm-net: insall module linux-bcm-net version: 0.1.0 ok!
+
+/sysfs # 
+/sysfs # 
+/sysfs # cd /us/sysfs # cd /usr/[Jlo[7D/sysfs # cd /usr/local/[Jm[12D/sysfs # cd /usr/local/mstp_26x2_octeon_V1.0.1/[J
+/usr/local/mstp_26x2_octeon_V1.0.1 # cd ms/usr/local/mstp_26x2_octeon_V1.0.1 # cd mstp/[J
+/usr/local/mstp_26x2_octeon_V1.0.1/mstp # ls
+[0;0mReadme[0m            [1;32mdel-cfg.sh[0m        [1;32mmstpd[0m             [1;32mstpconfig[0m
+[1;32mcfg-mst.sh[0m        [0;0mlinux-bcm-net.ko[0m  [1;32msetup.sh[0m          [1;32mun-setup.sh[0m
+/usr/local/mstp_26x2_octeon_V1.0.1/mstp # ./m/usr/local/mstp_26x2_octeon_V1.0.1/mstp # ./mstpd [Jd/usr/local/mstp_26x2_octeon_V1.0.1/mstp # ./mstpd del-cfg.sh [J-            -v 0 &
+2013-03-21 16:19:24 INFO: main: Sanity checks succeededmstp init: origin default stg 1, set to 0(user override)
+
+/usr/local/mstp_26x2_octeon_V1.0.1/mstp # 
+/usr/local/mstp_26x2_octeon_V1.0.1/mstp # 
+/usr/local/mstp_26x2_octeon_V1.0.1/mstp # 
+/usr/local/mstp_26x2_octeon_V1.0.1/mstp # Cannot get speed/duplex for ge24: No such device
+Cannot get speed/duplex for ge24: No such device
+Cannot get speed/duplex for ge23: No such device
+Cannot get speed/duplex for ge24: No such device
+Cannot get speed/duplex for ge23: No such device
+Cannot get speed/duplex for ge22: No such device
+Cannot get speed/duplex for ge24: No such device
+Cannot get speed/duplex for ge23: No such device
+Cannot get speed/duplex for ge22: No such device
+Cannot get speed/duplex for ge21: No such device
+Cannot get speed/duplex for ge24: No such device
+Cannot get speed/duplex for ge23: No such device
+Cannot get speed/duplex for ge22: No such device
+Cannot get speed/duplex for ge21: No such device
+Cannot get speed/duplex for ge20: No such device
+Cannot get speed/duplex for ge24: No such device
+Cannot get speed/duplex for ge23: No such device
+Cannot get speed/duplex for ge22: No such device
+Cannot get speed/duplex for ge21: No such device
+Cannot get speed/duplex for ge20: No such device
+Cannot get speed/duplex for ge19: No such device
+Cannot get speed/duplex for ge24: No such device
+Cannot get speed/duplex for ge23: No such device
+Cannot get speed/duplex for ge22: No such device
+Cannot get speed/duplex for ge21: No such device
+Cannot get speed/duplex for ge20: No such device
+Cannot get speed/duplex for ge19: No such device
+Cannot get speed/duplex for ge18: No such device
+Cannot get speed/duplex for ge24: No such device
+Cannot get speed/duplex for ge23: No such device
+Cannot get speed/duplex for ge22: No such device
+Cannot get speed/duplex for ge21: No such device
+Cannot get speed/duplex for ge20: No such device
+Cannot get speed/duplex for ge19: No such device
+Cannot get speed/duplex for ge18: No such device
+Cannot get speed/duplex for ge17: No such device
+Cannot get speed/duplex for ge24: No such device
+Cannot get speed/duplex for ge23: No such device
+Cannot get speed/duplex for ge22: No such device
+Cannot get speed/duplex for ge21: No such device
+Cannot get speed/duplex for ge20: No such device
+Cannot get speed/duplex for ge19: No such device
+Cannot get speed/duplex for ge18: No such device
+Cannot get speed/duplex for ge17: No such device
+Cannot get speed/duplex for ge16: No such device
+Cannot get speed/duplex for ge24: No such device
+Cannot get speed/duplex for ge23: No such device
+Cannot get speed/duplex for ge22: No such device
+Cannot get speed/duplex for ge21: No such device
+Cannot get speed/duplex for ge20: No such device
+Cannot get speed/duplex for ge19: No such device
+Cannot get speed/duplex for ge18: No such device
+Cannot get speed/duplex for ge17: No such device
+Cannot get speed/duplex for ge16: No such device
+Cannot get speed/duplex for ge15: No such device
+Cannot get speed/duplex for ge24: No such device
+Cannot get speed/duplex for ge23: No such device
+Cannot get speed/duplex for ge22: No such device
+Cannot get speed/duplex for ge21: No such device
+Cannot get speed/duplex for ge20: No such device
+Cannot get speed/duplex for ge19: No such device
+Cannot get speed/duplex for ge18: No such device
+Cannot get speed/duplex for ge17: No such device
+Cannot get speed/duplex for ge16: No such device
+Cannot get speed/duplex for ge15: No such device
+Cannot get speed/duplex for ge14: No such device
+Cannot get speed/duplex for ge24: No such device
+Cannot get speed/duplex for ge23: No such device
+Cannot get speed/duplex for ge22: No such device
+Cannot get speed/duplex for ge21: No such device
+Cannot get speed/duplex for ge20: No such device
+Cannot get speed/duplex for ge19: No such device
+Cannot get speed/duplex for ge18: No such device
+Cannot get speed/duplex for ge17: No such device
+Cannot get speed/duplex for ge16: No such device
+Cannot get speed/duplex for ge15: No such device
+Cannot get speed/duplex for ge14: No such device
+Cannot get speed/duplex for ge13: No such device
+Cannot get speed/duplex for ge24: No such device
+Cannot get speed/duplex for ge23: No such device
+Cannot get speed/duplex for ge22: No such device
+Cannot get speed/duplex for ge21: No such device
+Cannot get speed/duplex for ge20: No such device
+Cannot get speed/duplex for ge19: No such device
+Cannot get speed/duplex for ge18: No such device
+Cannot get speed/duplex for ge17: No such device
+Cannot get speed/duplex for ge16: No such device
+Cannot get speed/duplex for ge15: No such device
+Cannot get speed/duplex for ge14: No such device
+Cannot get speed/duplex for ge13: No such device
+Cannot get speed/duplex for ge12: No such device
+Cannot get speed/duplex for ge24: No such device
+Cannot get speed/duplex for ge23: No such device
+Cannot get speed/duplex for ge22: No such device
+Cannot get speed/duplex for ge21: No such device
+Cannot get speed/duplex for ge20: No such device
+Cannot get speed/duplex for ge19: No such device
+Cannot get speed/duplex for ge18: No such device
+Cannot get speed/duplex for ge17: No such device
+Cannot get speed/duplex for ge16: No such device
+Cannot get speed/duplex for ge15: No such device
+Cannot get speed/duplex for ge14: No such device
+Cannot get speed/duplex for ge13: No such device
+Cannot get speed/duplex for ge12: No such device
+Cannot get speed/duplex for ge11: No such device
+Cannot get speed/duplex for ge24: No such device
+Cannot get speed/duplex for ge23: No such device
+Cannot get speed/duplex for ge22: No such device
+Cannot get speed/duplex for ge21: No such device
+Cannot get speed/duplex for ge20: No such device
+Cannot get speed/duplex for ge19: No such device
+Cannot get speed/duplex for ge18: No such device
+Cannot get speed/duplex for ge17: No such device
+Cannot get speed/duplex for ge16: No such device
+Cannot get speed/duplex for ge15: No such device
+Cannot get speed/duplex for ge14: No such device
+Cannot get speed/duplex for ge13: No such device
+Cannot get speed/duplex for ge12: No such device
+Cannot get speed/duplex for ge11: No such device
+Cannot get speed/duplex for ge10: No such device
+Cannot get speed/duplex for ge24: No such device
+Cannot get speed/duplex for ge23: No such device
+Cannot get speed/duplex for ge22: No such device
+Cannot get speed/duplex for ge21: No such device
+Cannot get speed/duplex for ge20: No such device
+Cannot get speed/duplex for ge19: No such device
+Cannot get speed/duplex for ge18: No such device
+Cannot get speed/duplex for ge17: No such device
+Cannot get speed/duplex for ge16: No such device
+Cannot get speed/duplex for ge15: No such device
+Cannot get speed/duplex for ge14: No such device
+Cannot get speed/duplex for ge13: No such device
+Cannot get speed/duplex for ge12: No such device
+Cannot get speed/duplex for ge11: No such device
+Cannot get speed/duplex for ge10: No such device
+Cannot get speed/duplex for ge9: No such device
+Cannot get speed/duplex for ge24: No such device
+Cannot get speed/duplex for ge23: No such device
+Cannot get speed/duplex for ge22: No such device
+Cannot get speed/duplex for ge21: No such device
+Cannot get speed/duplex for ge20: No such device
+Cannot get speed/duplex for ge19: No such device
+Cannot get speed/duplex for ge18: No such device
+Cannot get speed/duplex for ge17: No such device
+Cannot get speed/duplex for ge16: No such device
+Cannot get speed/duplex for ge15: No such device
+Cannot get speed/duplex for ge14: No such device
+Cannot get speed/duplex for ge13: No such device
+Cannot get speed/duplex for ge12: No such device
+Cannot get speed/duplex for ge11: No such device
+Cannot get speed/duplex for ge10: No such device
+Cannot get speed/duplex for ge9: No such device
+Cannot get speed/duplex for ge8: No such device
+Cannot get speed/duplex for ge24: No such device
+Cannot get speed/duplex for ge23: No such device
+Cannot get speed/duplex for ge22: No such device
+Cannot get speed/duplex for ge21: No such device
+Cannot get speed/duplex for ge20: No such device
+Cannot get speed/duplex for ge19: No such device
+Cannot get speed/duplex for ge18: No such device
+Cannot get speed/duplex for ge17: No such device
+Cannot get speed/duplex for ge16: No such device
+Cannot get speed/duplex for ge15: No such device
+Cannot get speed/duplex for ge14: No such device
+Cannot get speed/duplex for ge13: No such device
+Cannot get speed/duplex for ge12: No such device
+Cannot get speed/duplex for ge11: No such device
+Cannot get speed/duplex for ge10: No such device
+Cannot get speed/duplex for ge9: No such device
+Cannot get speed/duplex for ge8: No such device
+Cannot get speed/duplex for ge7: No such device
+Cannot get speed/duplex for ge24: No such device
+Cannot get speed/duplex for ge23: No such device
+Cannot get speed/duplex for ge22: No such device
+Cannot get speed/duplex for ge21: No such device
+Cannot get speed/duplex for ge20: No such device
+Cannot get speed/duplex for ge19: No such device
+Cannot get speed/duplex for ge18: No such device
+Cannot get speed/duplex for ge17: No such device
+Cannot get speed/duplex for ge16: No such device
+Cannot get speed/duplex for ge15: No such device
+Cannot get speed/duplex for ge14: No such device
+Cannot get speed/duplex for ge13: No such device
+Cannot get speed/duplex for ge12: No such device
+Cannot get speed/duplex for ge11: No such device
+Cannot get speed/duplex for ge10: No such device
+Cannot get speed/duplex for ge9: No such device
+Cannot get speed/duplex for ge8: No such device
+Cannot get speed/duplex for ge7: No such device
+Cannot get speed/duplex for ge6: No such device
+Cannot get speed/duplex for ge24: No such device
+Cannot get speed/duplex for ge23: No such device
+Cannot get speed/duplex for ge22: No such device
+Cannot get speed/duplex for ge21: No such device
+Cannot get speed/duplex for ge20: No such device
+Cannot get speed/duplex for ge19: No such device
+Cannot get speed/duplex for ge18: No such device
+Cannot get speed/duplex for ge17: No such device
+Cannot get speed/duplex for ge16: No such device
+Cannot get speed/duplex for ge15: No such device
+Cannot get speed/duplex for ge14: No such device
+Cannot get speed/duplex for ge13: No such device
+Cannot get speed/duplex for ge12: No such device
+Cannot get speed/duplex for ge11: No such device
+Cannot get speed/duplex for ge10: No such device
+Cannot get speed/duplex for ge9: No such device
+Cannot get speed/duplex for ge8: No such device
+Cannot get speed/duplex for ge7: No such device
+Cannot get speed/duplex for ge6: No such device
+Cannot get speed/duplex for ge5: No such device
+Cannot get speed/duplex for ge4: No such device
+Cannot get speed/duplex for ge3: No such device
+Cannot get speed/duplex for ge2: No such device
+Cannot get speed/duplex for ge1: No such device
+Cannot get speed/duplex for xe25: No such device
+Cannot get speed/duplex for xe26: No such device
+Cannot get speed/duplex for xe27: No such device
+Cannot get speed/duplex for xe28: No such device
+Cannot get speed/duplex for ge24: No such device
+Cannot get speed/duplex for ge23: No such device
+Cannot get speed/duplex for ge22: No such device
+Cannot get speed/duplex for ge21: No such device
+Cannot get speed/duplex for ge20: No such device
+Cannot get speed/duplex for ge19: No such device
+Cannot get speed/duplex for ge18: No such device
+Cannot get speed/duplex for ge17: No such device
+Cannot get speed/duplex for ge16: No such device
+Cannot get speed/duplex for ge15: No such device
+Cannot get speed/duplex for ge14: No such device
+Cannot get speed/duplex for ge13: No such device
+Cannot get speed/duplex for ge12: No such device
+Cannot get speed/duplex for ge11: No such device
+Cannot get speed/duplex for ge10: No such device
+Cannot get speed/duplex for ge9: No such device
+Cannot get speed/duplex for ge8: No such device
+Cannot get speed/duplex for ge7: No such device
+Cannot get speed/duplex for ge6: No such device
+Cannot get speed/duplex for ge5: No such device
+Cannot get speed/duplex for ge4: No such device
+Cannot get speed/duplex for ge3: No such device
+Cannot get speed/duplex for ge2: No such device
+Cannot get speed/duplex for ge1: No such device
+Cannot get speed/duplex for xe25: No such device
+Cannot get speed/duplex for xe26: No such device
+Cannot get speed/duplex for xe27: No such device
+Cannot get speed/duplex for xe28: No such device
+Cannot get speed/duplex for ge24: No such device
+Cannot get speed/duplex for ge23: No such device
+Cannot get speed/duplex for ge22: No such device
+Cannot get speed/duplex for ge21: No such device
+Cannot get speed/duplex for ge20: No such device
+Cannot get speed/duplex for ge19: No such device
+Cannot get speed/duplex for ge18: No such device
+Cannot get speed/duplex for ge17: No such device
+Cannot get speed/duplex for ge16: No such device
+Cannot get speed/duplex for ge15: No such device
+Cannot get speed/duplex for ge14: No such device
+Cannot get speed/duplex for ge13: No such device
+Cannot get speed/duplex for ge12: No such device
+Cannot get speed/duplex for ge11: No such device
+Cannot get speed/duplex for ge10: No such device
+Cannot get speed/duplex for ge9: No such device
+Cannot get speed/duplex for ge8: No such device
+Cannot get speed/duplex for ge7: No such device
+Cannot get speed/duplex for ge6: No such device
+Cannot get speed/duplex for ge5: No such device
+Cannot get speed/duplex for ge4: No such device
+Cannot get speed/duplex for ge3: No such device
+Cannot get speed/duplex for ge2: No such device
+Cannot get speed/duplex for ge1: No such device
+Cannot get speed/duplex for xe25: No such device
+Cannot get speed/duplex for xe26: No such device
+Cannot get speed/duplex for xe27: No such device
+Cannot get speed/duplex for xe28: No such device
+Cannot get speed/duplex for ge24: No such device
+Cannot get speed/duplex for ge23: No such device
+Cannot get speed/duplex for ge22: No such device
+Cannot get speed/duplex for ge21: No such device
+Cannot get speed/duplex for ge20: No such device
+Cannot get speed/duplex for ge19: No such device
+Cannot get speed/duplex for ge18: No such device
+Cannot get speed/duplex for ge17: No such device
+Cannot get speed/duplex for ge16: No such device
+Cannot get speed/duplex for ge15: No such device
+Cannot get speed/duplex for ge14: No such device
+Cannot get speed/duplex for ge13: No such device
+Cannot get speed/duplex for ge12: No such device
+Cannot get speed/duplex for ge11: No such device
+Cannot get speed/duplex for ge10: No such device
+Cannot get speed/duplex for ge9: No such device
+Cannot get speed/duplex for ge8: No such device
+Cannot get speed/duplex for ge7: No such device
+Cannot get speed/duplex for ge6: No such device
+Cannot get speed/duplex for ge5: No such device
+Cannot get speed/duplex for ge4: No such device
+Cannot get speed/duplex for ge3: No such device
+Cannot get speed/duplex for ge2: No such device
+Cannot get speed/duplex for ge1: No such device
+Cannot get speed/duplex for xe25: No such device
+Cannot get speed/duplex for xe26: No such device
+Cannot get speed/duplex for xe27: No such device
+Cannot get speed/duplex for xe28: No such device
+Cannot get speed/duplex for ge24: No such device
+Cannot get speed/duplex for ge23: No such device
+Cannot get speed/duplex for ge22: No such device
+Cannot get speed/duplex for ge21: No such device
+Cannot get speed/duplex for ge20: No such device
+Cannot get speed/duplex for ge19: No such device
+Cannot get speed/duplex for ge18: No such device
+Cannot get speed/duplex for ge17: No such device
+Cannot get speed/duplex for ge16: No such device
+Cannot get speed/duplex for ge15: No such device
+Cannot get speed/duplex for ge14: No such device
+Cannot get speed/duplex for ge13: No such device
+Cannot get speed/duplex for ge12: No such device
+Cannot get speed/duplex for ge11: No such device
+Cannot get speed/duplex for ge10: No such device
+Cannot get speed/duplex for ge9: No such device
+Cannot get speed/duplex for ge8: No such device
+Cannot get speed/duplex for ge7: No such device
+Cannot get speed/duplex for ge6: No such device
+Cannot get speed/duplex for ge5: No such device
+Cannot get speed/duplex for ge4: No such device
+Cannot get speed/duplex for ge3: No such device
+Cannot get speed/duplex for ge2: No such device
+Cannot get speed/duplex for ge1: No such device
+Cannot get speed/duplex for xe25: No such device
+Cannot get speed/duplex for xe26: No such device
+Cannot get speed/duplex for xe27: No such device
+Cannot get speed/duplex for xe28: No such device
+Cannot get speed/duplex for ge24: No such device
+Cannot get speed/duplex for ge23: No such device
+Cannot get speed/duplex for ge22: No such device
+Cannot get speed/duplex for ge21: No such device
+Cannot get speed/duplex for ge20: No such device
+Cannot get speed/duplex for ge19: No such device
+Cannot get speed/duplex for ge18: No such device
+Cannot get speed/duplex for ge17: No such device
+Cannot get speed/duplex for ge16: No such device
+Cannot get speed/duplex for ge15: No such device
+Cannot get speed/duplex for ge14: No such device
+Cannot get speed/duplex for ge13: No such device
+Cannot get speed/duplex for ge12: No such device
+Cannot get speed/duplex for ge11: No such device
+Cannot get speed/duplex for ge10: No such device
+Cannot get speed/duplex for ge9: No such device
+Cannot get speed/duplex for ge8: No such device
+Cannot get speed/duplex for ge7: No such device
+Cannot get speed/duplex for ge6: No such device
+Cannot get speed/duplex for ge5: No such device
+Cannot get speed/duplex for ge4: No such device
+Cannot get speed/duplex for ge3: No such device
+Cannot get speed/duplex for ge2: No such device
+Cannot get speed/duplex for ge1: No such device
+Cannot get speed/duplex for xe25: No such device
+Cannot get speed/duplex for xe26: No such device
+Cannot get speed/duplex for xe27: No such device
+Cannot get speed/duplex for xe28: No such device
+Cannot get speed/duplex for ge24: No such device
+Cannot get speed/duplex for ge23: No such device
+Cannot get speed/duplex for ge22: No such device
+Cannot get speed/duplex for ge21: No such device
+Cannot get speed/duplex for ge20: No such device
+Cannot get speed/duplex for ge19: No such device
+Cannot get speed/duplex for ge18: No such device
+Cannot get speed/duplex for ge17: No such device
+Cannot get speed/duplex for ge16: No such device
+Cannot get speed/duplex for ge15: No such device
+Cannot get speed/duplex for ge14: No such device
+Cannot get speed/duplex for ge13: No such device
+Cannot get speed/duplex for ge12: No such device
+Cannot get speed/duplex for ge11: No such device
+Cannot get speed/duplex for ge10: No such device
+Cannot get speed/duplex for ge9: No such device
+Cannot get speed/duplex for ge8: No such device
+Cannot get speed/duplex for ge7: No such device
+Cannot get speed/duplex for ge6: No such device
+Cannot get speed/duplex for ge5: No such device
+Cannot get speed/duplex for ge4: No such device
+Cannot get speed/duplex for ge3: No such device
+Cannot get speed/duplex for ge2: No such device
+Cannot get speed/duplex for ge1: No such device
+Cannot get speed/duplex for xe25: No such device
+Cannot get speed/duplex for xe26: No such device
+Cannot get speed/duplex for xe27: No such device
+Cannot get speed/duplex for xe28: No such device
+Cannot get speed/duplex for ge24: No such device
+Cannot get speed/duplex for ge23: No such device
+Cannot get speed/duplex for ge22: No such device
+Cannot get speed/duplex for ge21: No such device
+Cannot get speed/duplex for ge20: No such device
+Cannot get speed/duplex for ge19: No such device
+Cannot get speed/duplex for ge18: No such device
+Cannot get speed/duplex for ge17: No such device
+Cannot get speed/duplex for ge16: No such device
+Cannot get speed/duplex for ge15: No such device
+Cannot get speed/duplex for ge14: No such device
+Cannot get speed/duplex for ge13: No such device
+Cannot get speed/duplex for ge12: No such device
+Cannot get speed/duplex for ge11: No such device
+Cannot get speed/duplex for ge10: No such device
+Cannot get speed/duplex for ge9: No such device
+Cannot get speed/duplex for ge8: No such device
+Cannot get speed/duplex for ge7: No such device
+Cannot get speed/duplex for ge6: No such device
+Cannot get speed/duplex for ge5: No such device
+Cannot get speed/duplex for ge4: No such device
+Cannot get speed/duplex for ge3: No such device
+Cannot get speed/duplex for ge2: No such device
+Cannot get speed/duplex for ge1: No such device
+Cannot get speed/duplex for xe25: No such device
+Cannot get speed/duplex for xe26: No such device
+Cannot get speed/duplex for xe27: No such device
+Cannot get speed/duplex for xe28: No such device
+Cannot get speed/duplex for ge24: No such device
+Cannot get speed/duplex for ge23: No such device
+Cannot get speed/duplex for ge22: No such device
+Cannot get speed/duplex for ge21: No such device
+Cannot get speed/duplex for ge20: No such device
+Cannot get speed/duplex for ge19: No such device
+Cannot get speed/duplex for ge18: No such device
+Cannot get speed/duplex for ge17: No such device
+Cannot get speed/duplex for ge16: No such device
+Cannot get speed/duplex for ge15: No such device
+Cannot get speed/duplex for ge14: No such device
+Cannot get speed/duplex for ge13: No such device
+Cannot get speed/duplex for ge12: No such device
+Cannot get speed/duplex for ge11: No such device
+Cannot get speed/duplex for ge10: No such device
+Cannot get speed/duplex for ge9: No such device
+Cannot get speed/duplex for ge8: No such device
+Cannot get speed/duplex for ge7: No such device
+Cannot get speed/duplex for ge6: No such device
+Cannot get speed/duplex for ge5: No such device
+Cannot get speed/duplex for ge4: No such device
+Cannot get speed/duplex for ge3: No such device
+Cannot get speed/duplex for ge2: No such device
+Cannot get speed/duplex for ge1: No such device
+Cannot get speed/duplex for xe25: No such device
+Cannot get speed/duplex for xe26: No such device
+Cannot get speed/duplex for xe27: No such device
+Cannot get speed/duplex for xe28: No such device
+Cannot get speed/duplex for ge24: No such device
+Cannot get speed/duplex for ge23: No such device
+Cannot get speed/duplex for ge22: No such device
+Cannot get speed/duplex for ge21: No such device
+Cannot get speed/duplex for ge20: No such device
+Cannot get speed/duplex for ge19: No such device
+Cannot get speed/duplex for ge18: No such device
+Cannot get speed/duplex for ge17: No such device
+Cannot get speed/duplex for ge16: No such device
+Cannot get speed/duplex for ge15: No such device
+Cannot get speed/duplex for ge14: No such device
+Cannot get speed/duplex for ge13: No such device
+Cannot get speed/duplex for ge12: No such device
+Cannot get speed/duplex for ge11: No such device
+Cannot get speed/duplex for ge10: No such device
+Cannot get speed/duplex for ge9: No such device
+Cannot get speed/duplex for ge8: No such device
+Cannot get speed/duplex for ge7: No such device
+Cannot get speed/duplex for ge6: No such device
+Cannot get speed/duplex for ge5: No such device
+Cannot get speed/duplex for ge4: No such device
+Cannot get speed/duplex for ge3: No such device
+Cannot get speed/duplex for ge2: No such device
+Cannot get speed/duplex for ge1: No such device
+Cannot get speed/duplex for xe25: No such device
+Cannot get speed/duplex for xe26: No such device
+Cannot get speed/duplex for xe27: No such device
+Cannot get speed/duplex for xe28: No such device
+Cannot get speed/duplex for ge24: No such device
+Cannot get speed/duplex for ge23: No such device
+Cannot get speed/duplex for ge22: No such device
+Cannot get speed/duplex for ge21: No such device
+Cannot get speed/duplex for ge20: No such device
+Cannot get speed/duplex for ge19: No such device
+Cannot get speed/duplex for ge18: No such device
+Cannot get speed/duplex for ge17: No such device
+Cannot get speed/duplex for ge16: No such device
+Cannot get speed/duplex for ge15: No such device
+Cannot get speed/duplex for ge14: No such device
+Cannot get speed/duplex for ge13: No such device
+Cannot get speed/duplex for ge12: No such device
+Cannot get speed/duplex for ge11: No such device
+Cannot get speed/duplex for ge10: No such device
+Cannot get speed/duplex for ge9: No such device
+Cannot get speed/duplex for ge8: No such device
+Cannot get speed/duplex for ge7: No such device
+Cannot get speed/duplex for ge6: No such device
+Cannot get speed/duplex for ge5: No such device
+Cannot get speed/duplex for ge4: No such device
+Cannot get speed/duplex for ge3: No such device
+Cannot get speed/duplex for ge2: No such device
+Cannot get speed/duplex for ge1: No such device
+Cannot get speed/duplex for xe25: No such device
+Cannot get speed/duplex for xe26: No such device
+Cannot get speed/duplex for xe27: No such device
+Cannot get speed/duplex for xe28: No such device
+Cannot get speed/duplex for ge24: No such device
+Cannot get speed/duplex for ge23: No such device
+Cannot get speed/duplex for ge22: No such device
+Cannot get speed/duplex for ge21: No such device
+Cannot get speed/duplex for ge20: No such device
+Cannot get speed/duplex for ge19: No such device
+Cannot get speed/duplex for ge18: No such device
+Cannot get speed/duplex for ge17: No such device
+Cannot get speed/duplex for ge16: No such device
+Cannot get speed/duplex for ge15: No such device
+Cannot get speed/duplex for ge14: No such device
+Cannot get speed/duplex for ge13: No such device
+Cannot get speed/duplex for ge12: No such device
+Cannot get speed/duplex for ge11: No such device
+Cannot get speed/duplex for ge10: No such device
+Cannot get speed/duplex for ge9: No such device
+Cannot get speed/duplex for ge8: No such device
+Cannot get speed/duplex for ge7: No such device
+Cannot get speed/duplex for ge6: No such device
+Cannot get speed/duplex for ge5: No such device
+Cannot get speed/duplex for ge4: No such device
+Cannot get speed/duplex for ge3: No such device
+Cannot get speed/duplex for ge2: No such device
+Cannot get speed/duplex for ge1: No such device
+Cannot get speed/duplex for xe25: No such device
+Cannot get speed/duplex for xe26: No such device
+Cannot get speed/duplex for xe27: No such device
+Cannot get speed/duplex for xe28: No such device
+Cannot get speed/duplex for ge24: No such device
+Cannot get speed/duplex for ge23: No such device
+Cannot get speed/duplex for ge22: No such device
+Cannot get speed/duplex for ge21: No such device
+Cannot get speed/duplex for ge20: No such device
+Cannot get speed/duplex for ge19: No such device
+Cannot get speed/duplex for ge18: No such device
+Cannot get speed/duplex for ge17: No such device
+Cannot get speed/duplex for ge16: No such device
+Cannot get speed/duplex for ge15: No such device
+Cannot get speed/duplex for ge14: No such device
+Cannot get speed/duplex for ge13: No such device
+Cannot get speed/duplex for ge12: No such device
+Cannot get speed/duplex for ge11: No such device
+Cannot get speed/duplex for ge10: No such device
+Cannot get speed/duplex for ge9: No such device
+Cannot get speed/duplex for ge8: No such device
+Cannot get speed/duplex for ge7: No such device
+Cannot get speed/duplex for ge6: No such device
+Cannot get speed/duplex for ge5: No such device
+Cannot get speed/duplex for ge4: No such device
+Cannot get speed/duplex for ge3: No such device
+Cannot get speed/duplex for ge2: No such device
+Cannot get speed/duplex for ge1: No such device
+Cannot get speed/duplex for xe25: No such device
+Cannot get speed/duplex for xe26: No such device
+Cannot get speed/duplex for xe27: No such device
+Cannot get speed/duplex for xe28: No such device
+Cannot get speed/duplex for ge24: No such device
+Cannot get speed/duplex for ge23: No such device
+Cannot get speed/duplex for ge22: No such device
+Cannot get speed/duplex for ge21: No such device
+Cannot get speed/duplex for ge20: No such device
+Cannot get speed/duplex for ge19: No such device
+Cannot get speed/duplex for ge18: No such device
+Cannot get speed/duplex for ge17: No such device
+Cannot get speed/duplex for ge16: No such device
+Cannot get speed/duplex for ge15: No such device
+Cannot get speed/duplex for ge14: No such device
+Cannot get speed/duplex for ge13: No such device
+Cannot get speed/duplex for ge12: No such device
+Cannot get speed/duplex for ge11: No such device
+Cannot get speed/duplex for ge10: No such device
+Cannot get speed/duplex for ge9: No such device
+Cannot get speed/duplex for ge8: No such device
+Cannot get speed/duplex for ge7: No such device
+Cannot get speed/duplex for ge6: No such device
+Cannot get speed/duplex for ge5: No such device
+Cannot get speed/duplex for ge4: No such device
+Cannot get speed/duplex for ge3: No such device
+Cannot get speed/duplex for ge2: No such device
+Cannot get speed/duplex for ge1: No such device
+Cannot get speed/duplex for xe25: No such device
+Cannot get speed/duplex for xe26: No such device
+Cannot get speed/duplex for xe27: No such device
+Cannot get speed/duplex for xe28: No such device
+Cannot get speed/duplex for ge24: No such device
+Cannot get speed/duplex for ge23: No such device
+Cannot get speed/duplex for ge22: No such device
+Cannot get speed/duplex for ge21: No such device
+Cannot get speed/duplex for ge20: No such device
+Cannot get speed/duplex for ge19: No such device
+Cannot get speed/duplex for ge18: No such device
+Cannot get speed/duplex for ge17: No such device
+Cannot get speed/duplex for ge16: No such device
+telnet> q
+Connection closed.
+[1m[7m%[27m[1m[0m                                                                                               [0m[27m[24m[J]0;vinurs@localhost:~ | 95x46 | pts/13[1m[36m(0l[1m[34mq(B([1m[32mvinurs[1m[32m@localhost:pts/13[1m[34m)(0q[1m[36mqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq[1m[34mq(B([1m[35m~[1m[34m)(0q[1m[36mk(B
+[1m[36m(0m[1m[34mq(B([1m[33m16:33[34m:[1m[37m%[1m[34m)(0q(B[1m[36m(0q(B(B[m [K[64C [1m[36m(0q[1m[34mq(B([1m[33mThu,Mar21[1m[34m)(0q[1m[36mj(B(B[m[80Dtelnet 10.1.165.20 10005
+Trying 10.1.165.20...
+Connected to 10.1.165.20.
+Escape character is '^]'.
+Connection closed by foreign host.
+[1m[7m%[27m[1m[0m                                                                                               [0m[27m[24m[J]0;vinurs@localhost:~ | 95x46 | pts/13[1m[36m(0l[1m[34mq(B([1m[32mvinurs[1m[32m@localhost:pts/13[1m[34m)(0q[1m[36mqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq[1m[34mq(B([1m[35m~[1m[34m)(0q[1m[36mk(B
+[1m[36m(0m[1m[34mq(B([31m1[1m[34m:[1m[33m16:37[34m:[1m[37m%[1m[34m)(0q(B[1m[36m(0q(B(B[m [K[62C [1m[36m(0q[1m[34mq(B([1m[33mThu,Mar21[1m[34m)(0q[1m[36mj(B(B[m[78Dtelnet 10.1.165.20 10005
+Trying 10.1.165.20...
+Connected to 10.1.165.20.
+Escape character is '^]'.
+
+/sysfs # 
+/sysfs # 
+/sysfs # 
+/sysfs # ls
+[0;0mac26x2-tools_1.4.2.tar.gz[0m  [0;0mmac_tmp.txt[0m
+[1;32maddip_vinf2.sh[0m             [1;32mrc.post[0m
+[0;0maddsarp.sh[0m                 [0;0mread_sd_id.ko[0m
+[1;32mafter_running.sh[0m           [1;32mrpc_test.sh[0m
+[1;32mauto-z.sh[0m                  [1;32mstart.sh[0m
+[1;32mcheck.sh[0m                   [0;0msysadmin.bak.conf[0m
+[0;0mcreate_vlan.sh[0m             [0;0msysadmin.conf[0m
+[0;0mdev_mac.txt[0m                [0;0mtest_sd_r_w.sh[0m
+[0;0menvclear.bcm[0m               [1;32mtest_sensor.sh[0m
+[1;32menvset.sh[0m                  [1;32mvgwtest.sh[0m
+[0;0menvstart.bcm[0m
+/sysfs # ifcon[5D/sysfs # ifconfig [J
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:16436  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+mgmt0     Link encap:Ethernet  HWaddr 00:09:06:10:20:30  
+          inet addr:10.1.0.111  Bcast:10.1.255.255  Mask:255.255.0.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:14251 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:14091 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:7673385 (7.3 Mb)  TX bytes:648240 (633.0 Kb)
+          Interrupt:70 
+
+/sysfs # cd /sys[4D/sysfs # cd /sys[J       linux-bcm-net: insall module linux-bcm-net version: 0.1.0 ok!
+
+/sysfs # 
+/sysfs # 
+/sysfs # 
+/sysfs # modpr[5D/sysfs # modprobe [J-l
+/lib/modules/2.6.21.7-Cavium-Octeon/arch/mips/cavium-octeon/ethernet-pow.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/crypto/aes.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/crypto/blowfish.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/crypto/cbc.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/crypto/crypto_null.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/crypto/des.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/crypto/md5.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/crypto/pcbc.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/drivers/md/md-mod.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/drivers/md/raid0.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/drivers/md/raid1.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/drivers/net/cavium-ethernet/cavium-ethernet.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/drivers/net/e1000/e1000.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/intercept-example.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/net/ipv4/ah4.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/net/ipv4/esp4.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/net/ipv4/netfilter/nf_nat_h323.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/net/ipv4/tunnel4.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/net/key/af_key.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/net/netfilter/nf_conntrack_h323.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/net/netfilter/xt_TCPMSS.ko
+/lib/modules/2.6.21.7-Cavium-Octeon/net/xfrm/xfrm_user.ko
+/sysfs # modpr[5D/sysfs # modprobe [Jcavium-ethernet
+cavium-ethernet: Cavium Networks Octeon SDK version 1.8.1, build 294
+Interface 0 has 1 ports (XAUI)
+Interface 1 has 1 ports (XAUI)
+Interface 2 has 4 ports (NPI)
+Interface 3 has 4 ports (LOOP)
+CONFIG_CAVIUM_RESERVE32=0
+USE_32BIT_SHARED=0
+USE_SKBUFFS_IN_HW=1
+REUSE_SKBUFFS_WITHOUT_FREE=0
+USE_MULTICORE_RECEIVE=1
+/sysfs # xaui0: 10000 Mbps Full duplex, port  0, queue  0
+if  
+/sysfs # 
+/sysfs # 
+/sysfs # xaui1: 10000 Mbps Full duplex, port 16, queue 16
+ifco[4D/sysfs # ifconfig [J-a
+bcmcpu    Link encap:Ethernet  HWaddr 02:10:18:71:BC:BB  
+          BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge3       Link encap:Ethernet  HWaddr 02:10:18:71:BC:BB  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge4       Link encap:Ethernet  HWaddr 02:10:18:71:BC:BB  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge5       Link encap:Ethernet  HWaddr 02:10:18:71:BC:BB  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:41 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:6567 (6.4 Kb)  TX bytes:0 (0.0 b)
+
+ge6       Link encap:Ethernet  HWaddr 02:10:18:71:BC:BB  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:39 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:6233 (6.0 Kb)  TX bytes:0 (0.0 b)
+
+ge7       Link encap:Ethernet  HWaddr 02:10:18:71:BC:BB  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge8       Link encap:Ethernet  HWaddr 02:10:18:71:BC:BB  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge9       Link encap:Ethernet  HWaddr 02:10:18:71:BC:BB  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge10      Link encap:Ethernet  HWaddr 02:10:18:71:BC:BB  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge11      Link encap:Ethernet  HWaddr 02:10:18:71:BC:BB  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge12      Link encap:Ethernet  HWaddr 02:10:18:71:BC:BB  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge13      Link encap:Ethernet  HWaddr 02:10:18:71:BC:BB  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge14      Link encap:Ethernet  HWaddr 02:10:18:71:BC:BB  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge15      Link encap:Ethernet  HWaddr 02:10:18:71:BC:BB  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge16      Link encap:Ethernet  HWaddr 02:10:18:71:BC:BB  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge17      Link encap:Ethernet  HWaddr 02:10:18:71:BC:BB  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge18      Link encap:Ethernet  HWaddr 02:10:18:71:BC:BB  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge19      Link encap:Ethernet  HWaddr 02:10:18:71:BC:BB  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge1       Link encap:Ethernet  HWaddr 02:10:18:71:BC:BB  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge20      Link encap:Ethernet  HWaddr 02:10:18:71:BC:BB  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge21      Link encap:Ethernet  HWaddr 02:10:18:71:BC:BB  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge22      Link encap:Ethernet  HWaddr 02:10:18:71:BC:BB  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge23      Link encap:Ethernet  HWaddr 02:10:18:71:BC:BB  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge24      Link encap:Ethernet  HWaddr 02:10:18:71:BC:BB  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge2       Link encap:Ethernet  HWaddr 02:10:18:71:BC:BB  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:16436  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+loop0     Link encap:Ethernet  HWaddr 00:09:06:10:20:37  
+          BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+loop1     Link encap:Ethernet  HWaddr 00:09:06:10:20:38  
+          BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+loop2     Link encap:Ethernet  HWaddr 00:09:06:10:20:39  
+          BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+loop3     Link encap:Ethernet  HWaddr 00:09:06:10:20:3A  
+          BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+mgmt0     Link encap:Ethernet  HWaddr 00:09:06:10:20:30  
+          inet addr:10.1.0.111  Bcast:10.1.255.255  Mask:255.255.0.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:14843 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:14356 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:8152257 (7.7 Mb)  TX bytes:674672 (658.8 Kb)
+          Interrupt:70 
+
+npi0      Link encap:Ethernet  HWaddr 00:09:06:10:20:33  
+          BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+npi1      Link encap:Ethernet  HWaddr 00:09:06:10:20:34  
+          BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+npi2      Link encap:Ethernet  HWaddr 00:09:06:10:20:35  
+          BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+npi3      Link encap:Ethernet  HWaddr 00:09:06:10:20:36  
+          BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+xaui0     Link encap:Ethernet  HWaddr 00:09:06:10:20:31  
+          BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+xaui1     Link encap:Ethernet  HWaddr 00:09:06:10:20:32  
+          BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+xe25      Link encap:Ethernet  HWaddr 02:10:18:71:BC:BB  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+xe26      Link encap:Ethernet  HWaddr 02:10:18:71:BC:BB  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+xe27      Link encap:Ethernet  HWaddr 02:10:18:71:BC:BB  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+xe28      Link encap:Ethernet  HWaddr 02:10:18:71:BC:BB  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+/sysfs # cd /us/sysfs # cd /usr/[Jlo[7D/sysfs # cd /usr/local/[Jm[12D/sysfs # cd /usr/local/mstp_26x2_octeon_V1.0.1/[J
+/usr/local/mstp_26x2_octeon_V1.0.1 # . cd ms/usr/local/mstp_26x2_octeon_V1.0.1 # cd mstp/[J
+/usr/local/mstp_26x2_octeon_V1.0.1/mstp # ./m/usr/local/mstp_26x2_octeon_V1.0.1/mstp # ./mstpd [J-v 2
+2013-03-21 16:30:37 INFO: main: Sanity checks succeededmstp init: origin default stg 1, set to 0(user override)
+
+2013-03-21 16:30:37 INFO: set_br_up: ge1 was down stp was down
+2013-03-21 16:30:37 INFO: set_br_up: Set bridge ge1 up stp up
+
+/usr/local/mstp_26x2_octeon_V1.0.1/mstp # /usr/local/mstp_26x2_octeon_V1.0.1/mstp # ./mstpd -v 2[J 0 &
+2013-03-21 16:30:41 INFO: main: Sanity checks succeededmstp init: origin default stg 0, set to 0(user override)
+
+/usr/local/mstp_26x2_octeon_V1.0.1/mstp # 
+/usr/local/mstp_26x2_octeon_V1.0.1/mstp # 
+/usr/local/mstp_26x2_octeon_V1.0.1/mstp # 
+/usr/local/mstp_26x2_octeon_V1.0.1/mstp # 
+/usr/local/mstp_26x2_octeon_V1.0.1/mstp # 
+/usr/local/mstp_26x2_octeon_V1.0.1/mstp # ps
+  PID  Uid     VmSize Stat Command
+    1 root        836 S   init  
+    2 root            SW  [migration/0]
+    3 root            SWN [ksoftirqd/0]
+    4 root            SW< [events/0]
+    5 root            SW< [khelper]
+    6 root            SW< [kthread]
+   48 root            SW< [kblockd/0]
+   49 root            SW< [ata/0]
+   50 root            SW< [ata_aux]
+   53 root            SW< [khubd]
+   82 root            SW  [pdflush]
+   83 root            SW  [pdflush]
+   84 root            SW< [kswapd0]
+   85 root            SW< [aio/0]
+  692 root            SW  [mtdblockd]
+  701 root            SW< [scsi_eh_0]
+  702 root            SW< [usb-storage]
+  745 root            SWN [jffs2_gcd_mtd3]
+  753 root        636 S   syslogd 
+  758 root        888 S   /usr/sbin/inetd 
+  785 root       1028 R   /bin/ash 
+  799 root            RW  [ipmi_cc_tsk]
+  831 root            SW< [bcm-shell]
+  835 root            SW< [bcmDPC]
+  865 root            SW< [bcmL2X.0]
+  866 root            SW< [bcmCNTR.0]
+  867 root            SW< [bcmTX]
+  868 root            SW< [bcmXGS3AsyncTX]
+  869 root            SW< [bcmLINK.0]
+  892 root       1188 S   dropbear -i 
+  893 root       1028 S   -sh 
+  936 root            SWN [bcmRX]
+  937 root            SW< [bnetTX]
+  983 root       3068 S   ./mstpd -v 0 
+  995 root        856 R   ps 
+/usr/local/mstp_26x2_octeon_V1.0.1/mstp # killa[5D/usr/local/mstp_26x2_octeon_V1.0.1/mstp # killall [Jms/usr/local/mstp_26x2_octeon_V1.0.1/mstp # killall mstpd [J
+/usr/local/mstp_26x2_octeon_V1.0.1/mstp # 
+[1] + Terminated                 ./mstpd -v 0
+/usr/local/mstp_26x2_octeon_V1.0.1/mstp # 
+/usr/local/mstp_26x2_octeon_V1.0.1/mstp # ./m/usr/local/mstp_26x2_octeon_V1.0.1/mstp # ./mstpd [J        ifcon[5D/usr/local/mstp_26x2_octeon_V1.0.1/mstp # ifconfig [J
+ge3       Link encap:Ethernet  HWaddr 02:10:18:71:BC:BB  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge4       Link encap:Ethernet  HWaddr 02:10:18:71:BC:BB  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge5       Link encap:Ethernet  HWaddr 02:10:18:71:BC:BB  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:316 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:388 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:50420 (49.2 Kb)  TX bytes:60140 (58.7 Kb)
+
+ge6       Link encap:Ethernet  HWaddr 02:10:18:71:BC:BB  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:317 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:386 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:50579 (49.3 Kb)  TX bytes:59830 (58.4 Kb)
+
+ge7       Link encap:Ethernet  HWaddr 02:10:18:71:BC:BB  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge8       Link encap:Ethernet  HWaddr 02:10:18:71:BC:BB  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge9       Link encap:Ethernet  HWaddr 02:10:18:71:BC:BB  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge10      Link encap:Ethernet  HWaddr 02:10:18:71:BC:BB  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge11      Link encap:Ethernet  HWaddr 02:10:18:71:BC:BB  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge12      Link encap:Ethernet  HWaddr 02:10:18:71:BC:BB  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge13      Link encap:Ethernet  HWaddr 02:10:18:71:BC:BB  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge14      Link encap:Ethernet  HWaddr 02:10:18:71:BC:BB  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge15      Link encap:Ethernet  HWaddr 02:10:18:71:BC:BB  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge16      Link encap:Ethernet  HWaddr 02:10:18:71:BC:BB  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge17      Link encap:Ethernet  HWaddr 02:10:18:71:BC:BB  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge18      Link encap:Ethernet  HWaddr 02:10:18:71:BC:BB  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge19      Link encap:Ethernet  HWaddr 02:10:18:71:BC:BB  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge1       Link encap:Ethernet  HWaddr 02:10:18:71:BC:BB  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge20      Link encap:Ethernet  HWaddr 02:10:18:71:BC:BB  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge21      Link encap:Ethernet  HWaddr 02:10:18:71:BC:BB  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge22      Link encap:Ethernet  HWaddr 02:10:18:71:BC:BB  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge23      Link encap:Ethernet  HWaddr 02:10:18:71:BC:BB  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge24      Link encap:Ethernet  HWaddr 02:10:18:71:BC:BB  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+ge2       Link encap:Ethernet  HWaddr 02:10:18:71:BC:BB  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:16436  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+mgmt0     Link encap:Ethernet  HWaddr 00:09:06:10:20:30  
+          inet addr:10.1.0.111  Bcast:10.1.255.255  Mask:255.255.0.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:15979 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:14440 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:8227633 (7.8 Mb)  TX bytes:692072 (675.8 Kb)
+          Interrupt:70 
+
+xe25      Link encap:Ethernet  HWaddr 02:10:18:71:BC:BB  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+xe26      Link encap:Ethernet  HWaddr 02:10:18:71:BC:BB  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+xe27      Link encap:Ethernet  HWaddr 02:10:18:71:BC:BB  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+xe28      Link encap:Ethernet  HWaddr 02:10:18:71:BC:BB  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+
+/usr/local/mstp_26x2_octeon_V1.0.1/mstp # ./m/usr/local/mstp_26x2_octeon_V1.0.1/mstp # ./mstpd [Jd/usr/local/mstp_26x2_octeon_V1.0.1/mstp # ./mstpd del-cfg.sh [J-            -v 2
+2013-03-21 16:39:21 INFO: main: Sanity checks succeededmstp init: origin default stg 0, set to 0(user override)
+
+2013-03-21 16:39:21 INFO: set_br_up: ge1 was down stp was down
+2013-03-21 16:39:21 INFO: set_br_up: Set bridge ge1 up stp up
+2013-03-21 16:39:25 INFO: rpc_cmd_region_name: ge1 Set region name :abc
+
+2013-03-21 16:39:25 INFO: port_control: Err: ioctl-mstp: ge1, Operation not permitted
+
+2013-03-21 16:39:25 INFO: set_vid2fid_mapping: set vlan to mstid failed!
+
+2013-03-21 16:39:25 INFO: br_set_port_multi_enable: ge1 Port enable, if_start=5, if_end=6, enable=1.
+2013-03-21 16:39:25 INFO: create_if: Add interface ge5 as port#1 to bridge ge1
+2013-03-21 16:39:25 INFO: create_if: Add interface ge6 as port#2 to bridge ge1
+
+/usr/local/mstp_26x2_octeon_V1.0.1/mstp # /usr/local/mstp_26x2_octeon_V1.0.1/mstp # ./mstpd -v 2[J
+2013-03-21 16:40:01 INFO: main: Sanity checks succeededmstp init: origin default stg 0, set to 0(user override)
+
+2013-03-21 16:40:01 INFO: set_br_up: ge1 was down stp was down
+2013-03-21 16:40:01 INFO: set_br_up: Set bridge ge1 up stp up
+2013-03-21 16:40:11 INFO: rpc_cmd_region_name: ge1 Set region name :abc
+
+2013-03-21 16:40:11 INFO: port_control: Err: ioctl-mstp: ge1, Operation not permitted
+
+2013-03-21 16:40:11 INFO: set_vid2fid_mapping: set vlan to mstid failed!
+
+2013-03-21 16:40:11 INFO: br_set_port_multi_enable: ge1 Port enable, if_start=5, if_end=6, enable=1.
+2013-03-21 16:40:11 INFO: create_if: Add interface ge5 as port#1 to bridge ge1
+2013-03-21 16:40:11 INFO: create_if: Add interface ge6 as port#2 to bridge ge1
+
+/usr/local/mstp_26x2_octeon_V1.0.1/mstp # reb/usr/local/mstp_26x2_octeon_V1.0.1/mstp # reboot [J
+The system is going down NOW !!
+Sending SIGTERM to all processes.
+/usr/local/mstp_26x2_octeon_V1.0.1/mstp # SenRequesting system reboot.
+Restarting system.
+
+
+U-Boot 1.1.1 (Development build) (Build time: Mar 12 2012 - 14:41:46)
+Octeon_56xx_v0.9.2
+
+CUST_PM1620 board revision major:80, minor:0, serial #: 10250619
+ICORE CN5650-NSP pass 2.1, Core clock: 750 MHz, DDR clock: 399 MHz (798 Mhz data rate)
+DRAM:  4096 MB
+flash 0: 128M single die
+Total: 128 MB
+Clearing DRAM........ done
+BIST check passed.
+Net:   icomgmt0, icoeth0, icoeth1
+ 0 
+Using icomgmt0 device
+TFTP from server 10.1.200.156; our IP address is 10.1.26.78
+Filename 'vmlinux.64.lph.26x2.autorun'.
+Load address: 0x21000000
+Loading: *T #################################################################
+	 #################################################################
+	 ######################################
+done
+Bytes transferred = 24011360 (16e6260 hex), 1840 Kbytes/sec
+argv[2]: coremask=0x1
+argv[3]: mem=1024
+ELF file is 64 bit
+Attempting to allocate memory for ELF segment: addr: 0xffffffff80100000 (adjusted to: 0x0000000000100000), size 0x17681f0
+Allocated memory for ELF segment: addr: 0xffffffff80100000, size 0x17681f0
+Processing PHDR 0
+  Loading 16e1b98 bytes at ffffffff80100000
+  Clearing 86658 bytes at ffffffff817e1b98
+## Loading Linux kernel with entry point: 0xffffffff80842000 ...
+Bootloader: Done loading app on coremask: 0x1
+Linux version 2.6.21.7-Cavium-Octeon (root@lphu-desktop) (gcc version 4.1.2 (Cavium Networks Version: 1_8_1, build 72)) #82 SMP Fri Aug 5 16:05:29 CST 2011
+CVMSEG size: 2 cache lines (256 bytes)
+CPU revision is: 000d0409
+Determined physical RAM map:
+ memory: 0000000006400000 @ 0000000001900000 (usable)
+ memory: 0000000007c00000 @ 0000000008200000 (usable)
+ memory: 0000000032000000 @ 0000000020000000 (usable)
+Wasting 358400 bytes for tracking 6400 unused pages
+Initrd not found or empty - disabling initrd
+Built 1 zonelists.  Total pages: 257552
+Kernel command line:  coremask=0x1 console=ttyS0,115200
+Primary instruction cache 32kB, virtually tagged, 4 way, 64 sets, linesize 128 bytes.
+Primary data cache 16kB, 64-way, 2 sets, linesize 128 bytes.
+Synthesized TLB refill handler (56 instructions).
+Synthesized TLB load handler fastpath (73 instructions).
+Synthesized TLB store handler fastpath (76 instructions).
+Synthesized TLB modify handler fastpath (73 instructions).
+PID hash table entries: 4096 (order: 12, 32768 bytes)
+Using 750.000 MHz high precision timer.
+Console: colour dummy device 80x25
+Dentry cache hash table entries: 131072 (order: 8, 1048576 bytes)
+Inode-cache hash table entries: 65536 (order: 7, 524288 bytes)
+Memory: 1028864k/1048576k available (3992k kernel code, 19580k reserved, 3438k data, 16000k init, 0k highmem)
+Calibrating delay using timer specific routine.. 1500.49 BogoMIPS (lpj=3000991)
+Mount-cache hash table entries: 256
+Checking for the multiply/shift bug... no.
+Checking for the daddi bug... no.
+Checking for the daddiu bug... no.
+Brought up 1 CPUs
+NET: Registered protocol family 16
+PCIe: Initializing port 0
+PCIe: Waiting for port 0 link
+PCIe: Port 0 link active, 1 lanes
+PCIe: Initializing port 1
+PCIe: Waiting for port 1 link
+PCIe: Port 1 link timeout
+PCIe: ERROR: cvmx_pcie_rc_initialize_link() failed
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+PCI: Bridge: 0000:01:00.0
+  IO window: disabled.
+  MEM window: f0000000-f00fffff
+  PREFETCH window: disabled.
+PCI: Enabling device 0000:01:00.0 (0000 -> 0002)
+BCM find, pin setto 1
+NET: Registered protocol family 2
+Time: MIPS clocksource has been installed.
+IP route cache hash table entries: 32768 (order: 6, 262144 bytes)
+TCP established hash table entries: 131072 (order: 9, 3145728 bytes)
+TCP bind hash table entries: 65536 (order: 8, 1048576 bytes)
+TCP: Hash tables configured (established 131072 bind 65536)
+TCP reno registered
+/proc/octeon_perf: Octeon performace counter interface loaded
+Octeon watchdog driver loaded with a timeout of 5726 ms.
+Octeon management port ethernet driver
+OcteonUSB: Detected 1 ports
+OcteonUSB OcteonUSB.0: Octeon Host Controller
+OcteonUSB OcteonUSB.0: new USB bus registered, assigned bus number 1
+OcteonUSB OcteonUSB.0: irq 64, io mem 0x00000000
+usb usb1: Product: Octeon Host Controller
+usb usb1: Manufacturer: Linux 2.6.21.7-Cavium-Octeon Octeon USB
+usb usb1: SerialNumber: OcteonUSB.0
+usb usb1: configuration #1 chosen from 1 choice
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 1 port detected
+OcteonUSB: Registered HCD for port 0 on irq 64
+Embedway SLB driver v0.0.5
+board version: PM1620-All_For_One (0x0321)
+Total HugeTLB memory allocated, 0
+NTFS driver 2.1.28 [Flags: R/W].
+JFFS2 version 2.2. (NAND) (C) 2001-2006 Red Hat, Inc.
+io scheduler noop registered
+io scheduler cfq registered (default)
+Software Watchdog Timer: 0.07 initialized. soft_noboot=0 soft_margin=60 sec (nowayout= 0)
+Serial: 8250/16550 driver $Revision: 1.90 $ 4 ports, IRQ sharing enabled
+RAMDISK driver initialized: 1 RAM disks of 500000K size 1024 blocksize
+loop: loaded (max 8 devices)
+PPP generic driver version 2.4.2
+PPP Deflate Compression module registered
+PPP BSD Compression module registered
+PPP MPPE Compression module registered
+NET: Registered protocol family 24
+Uniform Multi-Platform E-IDE driver Revision: 7.00alpha2
+ide: Assuming 33MHz system bus speed for PIO modes; override with idebus=xx
+physmap-flash.0: failed to claim resource 0
+slram: not enough parameters.
+usbmon: debugfs is not available
+Initializing USB Mass Storage driver...
+usb 1-1: new high speed USB device using OcteonUSB and address 2
+usb 1-1: Product: USB Storage
+usb 1-1: Manufacturer: Generic 
+usb 1-1: configuration #1 chosen from 1 choice
+scsi0 : SCSI emulation for USB Mass Storage devices
+usbcore: registered new interface driver usb-storage
+USB Mass Storage support registered.
+usbcore: registered new interface driver usbhid
+drivers/usb/input/hid-core.c: v2.6:USB HID core driver
+i2c /dev entries driver
+timeout on test expression temp.s.d == 0x40 at line 298, data value 48
+i2c_adapter i2c-0: Client creation failed at 0x32 (-5)
+drivers/i2c/busses/i2c-embedway_ac26x2.c:564 return value 0
+drivers/i2c/busses/i2c-embedway_ac26x2.c:564 return value 17
+rtc-rs5c372 2-0032: assuming rs5c372b
+drivers/i2c/busses/i2c-embedway_ac26x2.c:564 return value 17
+rtc-rs5c372 2-0032: rs5c372b found, 24hr, driver version 0.4
+rtc-rs5c372 2-0032: rtc core: registered rtc-rs5c372 as rtc0
+oprofile: using mips/octeon performance monitoring.
+Netfilter messages via NETLINK v0.30.
+nf_conntrack version 0.5.0 (4096 buckets, 32768 max)
+ctnetlink v0.93: registering with nfnetlink.
+ip_tables: (C) 2000-2006 Netfilter Core Team
+ClusterIP Version 0.8 loaded successfully
+arp_tables: (C) 2002 David S. Miller
+TCP cubic registered
+NET: Registered protocol family 1
+NET: Registered protocol family 17
+Bridge firewalling registered
+Ebtables v2.0 registered
+802.1Q VLAN Support v1.8 Ben Greear <greearb@candelatech.com>
+All bugs added by David S. Miller <davem@redhat.com>
+serial8250: ttyS0 at MMIO 0x1180000000800 (irq = 42) is a 16550A
+boot flash: Found 1 x16 devices at 0x0 in 16-bit bank
+ Intel/Sharp Extended Query Table at 0x010A
+ Intel/Sharp Extended Query Table at 0x010A
+ Intel/Sharp Extended Query Table at 0x010A
+ Intel/Sharp Extended Query Table at 0x010A
+ Intel/Sharp Extended Query Table at 0x010A
+Using buffer write method
+cfi_cmdset_0001: Erase suspend on write enabled
+Bootbus flash: Setting flash for 0x08000000B flash at 0x17c00000
+Creating 3 MTD partitions on "boot flash":
+0x001e0000-0x00200000 : "env"
+0x04000000-0x04200000 : "cvmx"
+0x04200000-0x04300000 : "sysfs"
+drivers/i2c/busses/i2c-embedway_ac26x2.c:564 return value 17
+rtc-rs5c372 2-0032: setting the system clock to 2013-03-21 16:43:43 (1363884223)
+Freeing unused kernel memory: 16000k freed
+/sbin/rc starting
+Updating module dependencies
+Mounting file systems
+Setting up loopback
+Intel(R) PRO/1000 Network Driver - version 7.3.20-k2
+Copyright (c) 1999-2006 Intel Corporation.
+Setting up pci ethernet interface
+Starting syslogd
+Starting internet superserver: inetd.
+Enable ipv4 forwarding
+/sbin/rc complete
+Loading configuration :
+                                                                 [ Pass ]
+Press any key within 3 seconds to invoke the Sysadmin Shell:
+scsi 0:0:0:0: Direct-Access     Generic  STORAGE DEVICE   9451 PQ: 0 ANSI: 0
+SCSI device sda: 3842048 512-byte hdwr sectors (1967 MB)
+sda: Write Protect is off
+sda: assuming drive cache: write through
+SCSI device sda: 3842048 512-byte hdwr sectors (1967 MB)
+sda: Write Protect is off
+sda: assuming drive cache: write through
+ sda:<7>usb-storage: queuecommand called
+ sda1 sda2 sda3
+sd 0:0:0:0: Attached scsi removable disk sda
+sda1 found .. 
+EXT2-fs warning: mounting unchecked fs, running e2fsck is recommended
+
+
+BusyBox v1.2.1 (2011.02.21-07:24+0000) Built-in shell (ash)
+Enter 'help' for a list of built-in commands.
+
+/ # 
+/ # 
+/ # 
+/ # ls
+[1;34mappfs[0m    [1;34metc[0m      [1;34mlib[0m      [1;36mlinuxrc[0m  [1;34mmnth[0m     [1;34msbin[0m     [1;34mtmp[0m      [1;34mvar[0m
+[1;34mbin[0m      [1;34mhome[0m     [1;34mlib32[0m    [1;34mlogfs[0m    [1;34mproc[0m     [1;34msys[0m      [1;34muclibc[0m
+[1;34mdev[0m      [1;36minit[0m     [1;34mlib64[0m    [1;34mmnt[0m      [1;34mroot[0m     [1;34msysfs[0m    [1;34musr[0m
+/ # cd sysf[4D/ # cd sysfs/[J
+/sysfs # ./au[4D/sysfs # ./auto-z.sh [J
+ipmi control center driver is registered with major:224
+USAGE:
+mknod /dev/ipmi_cc c 224 <minor>
+with different minor numbers.
+
+MT base address: 0x00000000
+self ipmb addr: 0x8a
+linux_kernel_bde: module license 'Proprietary' taints kernel.
+PCI: Enabling device 0000:02:02.0 (0000 -> 0002)
+linux-bcm-core (822): SOC unit 0 attached to PCI device BCM56304_B1
+Broadcom Command Monitor: Copyright (c) 1998-2008 Broadcom Corporation
+Release: sdk-xgs-robo-5.6.6 built 20110830 (Tue Aug 30 16:51:46 2011)
+From root@EVA01-F12:/support/wri/sdk-xgs-robo-5.6.6/systems/linux/kernel/octeon-2_6/../../../..
+Platform: OCT_BCM56504
+OS: Linux Kernel
+OK - already attached
+Boot flags: initialization scripts NOT loaded
+BCM.0> BCM.0> BCM.0> /sysfs # modp[4D/sysfs # modprobe [J[9D[Jreb/sysfs # reboot [J
+The system is going down NOW !!
+Sending SIGTERM to all processes.
+/sysfs # SenRequesting system reboot.
+Restarting system.
+
+
+U-Boot 1.1.1 (Development build) (Build time: Mar 12 2012 - 14:41:46)
+Octeon_56xx_v0.9.2
+
+CUST_PM1620 board revision major:80, minor:0, serial #: 10250619
+ICORE CN5650-NSP pass 2.1, Core clock: 750 MHz, DDR clock: 399 MHz (798 Mhz data rate)
+DRAM:  4096 MB
+flash 0: 128M single die
+Total: 128 MB
+Clearing DRAM........ done
+BIST check passed.
+Net:   icomgmt0, icoeth0, icoeth1
+ 0 
+Using icomgmt0 device
+TFTP from server 10.1.200.156; our IP address is 10.1.26.78
+Filename 'vmlinux.64.lph.26x2.autorun'.
+Load address: 0x21000000
+Loading: *T #################################################################
+	 #################################################################
+	 ######################################
+done
+Bytes transferred = 24011360 (16e6260 hex), 1841 Kbytes/sec
+argv[2]: coremask=0x1
+argv[3]: mem=1024
+ELF file is 64 bit
+Attempting to allocate memory for ELF segment: addr: 0xffffffff80100000 (adjusted to: 0x0000000000100000), size 0x17681f0
+Allocated memory for ELF segment: addr: 0xffffffff80100000, size 0x17681f0
+Processing PHDR 0
+  Loading 16e1b98 bytes at ffffffff80100000
+  Clearing 86658 bytes at ffffffff817e1b98
+## Loading Linux kernel with entry point: 0xffffffff80842000 ...
+Bootloader: Done loading app on coremask: 0x1
+Linux version 2.6.21.7-Cavium-Octeon (root@lphu-desktop) (gcc version 4.1.2 (Cavium Networks Version: 1_8_1, build 72)) #82 SMP Fri Aug 5 16:05:29 CST 2011
+CVMSEG size: 2 cache lines (256 bytes)
+CPU revision is: 000d0409
+Determined physical RAM map:
+ memory: 0000000006400000 @ 0000000001900000 (usable)
+ memory: 0000000007c00000 @ 0000000008200000 (usable)
+ memory: 0000000032000000 @ 0000000020000000 (usable)
+Wasting 358400 bytes for tracking 6400 unused pages
+Initrd not found or empty - disabling initrd
+Built 1 zonelists.  Total pages: 257552
+Kernel command line:  coremask=0x1 console=ttyS0,115200
+Primary instruction cache 32kB, virtually tagged, 4 way, 64 sets, linesize 128 bytes.
+Primary data cache 16kB, 64-way, 2 sets, linesize 128 bytes.
+Synthesized TLB refill handler (56 instructions).
+Synthesized TLB load handler fastpath (73 instructions).
+Synthesized TLB store handler fastpath (76 instructions).
+Synthesized TLB modify handler fastpath (73 instructions).
+PID hash table entries: 4096 (order: 12, 32768 bytes)
+Using 750.000 MHz high precision timer.
+Console: colour dummy device 80x25
+Dentry cache hash table entries: 131072 (order: 8, 1048576 bytes)
+Inode-cache hash table entries: 65536 (order: 7, 524288 bytes)
+Memory: 1028864k/1048576k available (3992k kernel code, 19580k reserved, 3438k data, 16000k init, 0k highmem)
+Calibrating delay using timer specific routine.. 1500.49 BogoMIPS (lpj=3000991)
+Mount-cache hash table entries: 256
+Checking for the multiply/shift bug... no.
+Checking for the daddi bug... no.
+Checking for the daddiu bug... no.
+Brought up 1 CPUs
+NET: Registered protocol family 16
+PCIe: Initializing port 0
+PCIe: Waiting for port 0 link
+PCIe: Port 0 link active, 1 lanes
+PCIe: Initializing port 1
+PCIe: Waiting for port 1 link
+PCIe: Port 1 link timeout
+PCIe: ERROR: cvmx_pcie_rc_initialize_link() failed
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+PCI: Bridge: 0000:01:00.0
+  IO window: disabled.
+  MEM window: f0000000-f00fffff
+  PREFETCH window: disabled.
+PCI: Enabling device 0000:01:00.0 (0000 -> 0002)
+BCM find, pin setto 1
+NET: Registered protocol family 2
+Time: MIPS clocksource has been installed.
+IP route cache hash table entries: 32768 (order: 6, 262144 bytes)
+TCP established hash table entries: 131072 (order: 9, 3145728 bytes)
+TCP bind hash table entries: 65536 (order: 8, 1048576 bytes)
+TCP: Hash tables configured (established 131072 bind 65536)
+TCP reno registered
+/proc/octeon_perf: Octeon performace counter interface loaded
+Octeon watchdog driver loaded with a timeout of 5726 ms.
+Octeon management port ethernet driver
+OcteonUSB: Detected 1 ports
+OcteonUSB OcteonUSB.0: Octeon Host Controller
+OcteonUSB OcteonUSB.0: new USB bus registered, assigned bus number 1
+OcteonUSB OcteonUSB.0: irq 64, io mem 0x00000000
+usb usb1: Product: Octeon Host Controller
+usb usb1: Manufacturer: Linux 2.6.21.7-Cavium-Octeon Octeon USB
+usb usb1: SerialNumber: OcteonUSB.0
+usb usb1: configuration #1 chosen from 1 choice
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 1 port detected
+OcteonUSB: Registered HCD for port 0 on irq 64
+Embedway SLB driver v0.0.5
+board version: PM1620-All_For_One (0x0321)
+Total HugeTLB memory allocated, 0
+NTFS driver 2.1.28 [Flags: R/W].
+JFFS2 version 2.2. (NAND) (C) 2001-2006 Red Hat, Inc.
+io scheduler noop registered
+io scheduler cfq registered (default)
+Software Watchdog Timer: 0.07 initialized. soft_noboot=0 soft_margin=60 sec (nowayout= 0)
+Serial: 8250/16550 driver $Revision: 1.90 $ 4 ports, IRQ sharing enabled
+RAMDISK driver initialized: 1 RAM disks of 500000K size 1024 blocksize
+loop: loaded (max 8 devices)
+PPP generic driver version 2.4.2
+PPP Deflate Compression module registered
+PPP BSD Compression module registered
+PPP MPPE Compression module registered
+NET: Registered protocol family 24
+Uniform Multi-Platform E-IDE driver Revision: 7.00alpha2
+ide: Assuming 33MHz system bus speed for PIO modes; override with idebus=xx
+physmap-flash.0: failed to claim resource 0
+slram: not enough parameters.
+usbmon: debugfs is not available
+Initializing USB Mass Storage driver...
+usb 1-1: new high speed USB device using OcteonUSB and address 2
+usb 1-1: Product: USB Storage
+usb 1-1: Manufacturer: Generic 
+usb 1-1: configuration #1 chosen from 1 choice
+scsi0 : SCSI emulation for USB Mass Storage devices
+usbcore: registered new interface driver usb-storage
+USB Mass Storage support registered.
+usbcore: registered new interface driver usbhid
+drivers/usb/input/hid-core.c: v2.6:USB HID core driver
+i2c /dev entries driver
+timeout on test expression temp.s.d == 0x40 at line 298, data value 48
+i2c_adapter i2c-0: Client creation failed at 0x32 (-5)
+drivers/i2c/busses/i2c-embedway_ac26x2.c:564 return value 0
+drivers/i2c/busses/i2c-embedway_ac26x2.c:564 return value 17
+rtc-rs5c372 2-0032: assuming rs5c372b
+drivers/i2c/busses/i2c-embedway_ac26x2.c:564 return value 17
+rtc-rs5c372 2-0032: rs5c372b found, 24hr, driver version 0.4
+rtc-rs5c372 2-0032: rtc core: registered rtc-rs5c372 as rtc0
+oprofile: using mips/octeon performance monitoring.
+Netfilter messages via NETLINK v0.30.
+nf_conntrack version 0.5.0 (4096 buckets, 32768 max)
+ctnetlink v0.93: registering with nfnetlink.
+ip_tables: (C) 2000-2006 Netfilter Core Team
+ClusterIP Version 0.8 loaded successfully
+arp_tables: (C) 2002 David S. Miller
+TCP cubic registered
+NET: Registered protocol family 1
+NET: Registered protocol family 17
+Bridge firewalling registered
+Ebtables v2.0 registered
+802.1Q VLAN Support v1.8 Ben Greear <greearb@candelatech.com>
+All bugs added by David S. Miller <davem@redhat.com>
+serial8250: ttyS0 at MMIO 0x1180000000800 (irq = 42) is a 16550A
+boot flash: Found 1 x16 devices at 0x0 in 16-bit bank
+ Intel/Sharp Extended Query Table at 0x010A
+ Intel/Sharp Extended Query Table at 0x010A
+ Intel/Sharp Extended Query Table at 0x010A
+ Intel/Sharp Extended Query Table at 0x010A
+ Intel/Sharp Extended Query Table at 0x010A
+Using buffer write method
+cfi_cmdset_0001: Erase suspend on write enabled
+Bootbus flash: Setting flash for 0x08000000B flash at 0x17c00000
+Creating 3 MTD partitions on "boot flash":
+0x001e0000-0x00200000 : "env"
+0x04000000-0x04200000 : "cvmx"
+0x04200000-0x04300000 : "sysfs"
+drivers/i2c/busses/i2c-embedway_ac26x2.c:564 return value 17
+rtc-rs5c372 2-0032: setting the system clock to 2013-03-21 16:46:39 (1363884399)
+Freeing unused kernel memory: 16000k freed
+/sbin/rc starting
+Updating module dependencies
+Mounting file systems
+Setting up loopback
+Intel(R) PRO/1000 Network Driver - version 7.3.20-k2
+Copyright (c) 1999-2006 Intel Corporation.
+Setting up pci ethernet interface
+Starting syslogd
+Starting internet superserver: inetd.
+Enable ipv4 forwarding
+/sbin/rc complete
+Loading configuration :
+                                                                 [ Pass ]
+Press any key within 3 seconds to invoke the Sysadmin Shell:
+scsi 0:0:0:0: Direct-Access     Generic  STORAGE DEVICE   9451 PQ: 0 ANSI: 0
+SCSI device sda: 3842048 512-byte hdwr sectors (1967 MB)
+sda: Write Protect is off
+sda: assuming drive cache: write through
+SCSI device sda: 3842048 512-byte hdwr sectors (1967 MB)
+sda: Write Protect is off
+sda: assuming drive cache: write through
+ sda:<7>usb-storage: queuecommand called
+ sda1 sda2 sda3
+sd 0:0:0:0: Attached scsi removable disk sda
+sda1 found .. 
+EXT2-fs warning: mounting unchecked fs, running e2fsck is recommended
+
+
+BusyBox v1.2.1 (2011.02.21-07:24+0000) Built-in shell (ash)
+Enter 'help' for a list of built-in commands.
+
+/ # cd sysf[4D/ # cd sysfs/[J
+/sysfs # ./au[4D/sysfs # ./auto-z.sh [J
+ipmi control center driver is registered with major:224
+USAGE:
+mknod /dev/ipmi_cc c 224 <minor>
+with different minor numbers.
+
+MT base address: 0x00000000
+self ipmb addr: 0x8a
+linux_kernel_bde: module license 'Proprietary' taints kernel.
+PCI: Enabling device 0000:02:02.0 (0000 -> 0002)
+linux-bcm-core (821): SOC unit 0 attached to PCI device BCM56304_B1
+Broadcom Command Monitor: Copyright (c) 1998-2008 Broadcom Corporation
+Release: sdk-xgs-robo-5.6.6 built 20110830 (Tue Aug 30 16:51:46 2011)
+From root@EVA01-F12:/support/wri/sdk-xgs-robo-5.6.6/systems/linux/kernel/octeon-2_6/../../../..
+Platform: OCT_BCM56504
+OS: Linux Kernel
+OK - already attached
+Boot flags: initialization scripts NOT loaded
+BCM.0> BCM.0> BCM.0> cavium-ethernet: Cavium Networks Octeon SDK version 1.8.1, build 294
+Interface 0 has 1 ports (XAUI)
+Interface 1 has 1 ports (XAUI)
+Interface 2 has 4 ports (NPI)
+Interface 3 has 4 ports (LOOP)
+CONFIG_CAVIUM_RESERVE32=0
+USE_32BIT_SHARED=0
+USE_SKBUFFS_IN_HW=1
+REUSE_SKBUFFS_WITHOUT_FREE=0
+USE_MULTICORE_RECEIVE=1
+/sysfs # xaui0: 10000 Mbps Full duplex, port  0, queue  0
+xaui1: 10000 Mbps Full duplex, port 16, queue 16
+
+/sysfs # 
+/sysfs # 
+/sysfs # linux-bcm-net: insall module linux-bcm-net version: 0.1.0 ok!
+linux-bcm-net: insall module linux-bcm-net version: 0.1.0 ok!
+linux-bcm-net: insall module linux-bcm-net version: 0.1.0 ok!
+linux-bcm-net: insall module linux-bcm-net version: 0.1.0 ok!
+linux-bcm-net: insall module linux-bcm-net version: 0.1.0 ok!
+linux-bcm-net: insall module linux-bcm-net version: 0.1.0 ok!
+linux-bcm-net: insall module linux-bcm-net version: 0.1.0 ok!
+linux-bcm-net: insall module linux-bcm-net version: 0.1.0 ok!
+mstp init: origin default stg 1, set to 0(user override)
+linux-bcm-net: insall module linux-bcm-net version: 0.1.0 ok!
+mstp init: origin default stg 0, set to 0(user override)
+
+/sysfs # 
+/sysfs # 
+/sysfs # Connection closed by foreign host.
+[1m[7m%[27m[1m[0m                                                                                               [0m[27m[24m[J]0;vinurs@localhost:~ | 95x46 | pts/13[1m[36m(0l[1m[34mq(B([1m[32mvinurs[1m[32m@localhost:pts/13[1m[34m)(0q[1m[36mqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq[1m[34mq(B([1m[35m~[1m[34m)(0q[1m[36mk(B
+[1m[36m(0m[1m[34mq(B([31m1[1m[34m:[1m[33m19:47[34m:[1m[37m%[1m[34m)(0q(B[1m[36m(0q(B(B[m [K[62C [1m[36m(0q[1m[34mq(B([1m[33mThu,Mar21[1m[34m)(0q[1m[36mj(B(B[m[78D

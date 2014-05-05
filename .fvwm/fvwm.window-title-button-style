@@ -1,0 +1,23 @@
+# 窗口标题栏上面的按钮的样式，最大化、最小化之类的
+ButtonStyle All -- UseTitleStyle
+ButtonStyle All ActiveDown VGradient 8 palevioletred black
+ButtonStyle 6 16 20x20@1 30x20@1 50x40@1 70x20@1 80x20@1 80x30@0 \
+	60x50@0 80x80@0 70x80@0 50x60@0 30x80@0 20x80@0 \
+	20x70@0 40x50@1 20x30@0 20x20@1
+
+#设置标题栏上的按扭
+Style * Button 1, Button 2, Button 4
+
+Mouse 0 2 A Close
+ButtonStyle 2 Vector 4 30x30@3 60x60@3 60x30@4 30x60@3 -- Flat
+ButtonStyle 2 - MWMDecorMenu
+
+Mouse 0 1 A Iconify
+ButtonStyle 1 Vector 5 30x60@3 60x60@3 60x50@3 30x50@3 30x60@3 -- Flat
+ButtonStyle 1 - MWMDecorMin
+
+Mouse 3 4 A Maximize 100 100
+Mouse 1 4 A Maximize 0 100
+ButtonStyle 4 Vector 7 \
+30x30@3 30x60@3 60x60@3 60x30@3 30x30@3 30x35@3 60x35@3 -- Flat
+ButtonStyle 4 - MWMDecorMax

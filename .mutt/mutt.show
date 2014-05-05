@@ -1,0 +1,28 @@
+# -*- muttrc -*-
+#
+# index show settings for mutt.
+#
+
+
+# 默认值：“ +TCFL”
+# 控制标示收件人的字符。第一个字符表示该邮件不是给你的。第二个表示你是该邮件唯一的收件人。第三个表示你的地址出现在“To:”字段中，但你不是邮件唯一的收件人。第四个表示你的地址出现在“Cc:”字段中，但你不是唯一的收件人。第五个表示邮件是由你发出的。第六个字符表示邮件来自你订阅的邮件列表。
+set to_chars= " +TCFL"
+
+
+# 邮件列表中显示的内容调整
+# 比如说希望显示:日期, 时间，发件人，主题，是否有附件，标签，大小
+# 序号 分数 状态 [日期(strftime格式)] [附件数] 发件人 邮件大小 邮件标题
+set index_format="%4C %N %Z [%{%Y-%m-%d %A %H:%M}] [%X] %-25.25n (%4c) %s"
+
+# 设定哪个是属于自己的邮件,正则表达式
+alternates "^haiyuan.*@gmail.com"
+alternates "zhang.haiyuan@server.embedway.com"
+
+
+# 设定哪些是属于邮件列表，这样便于mutt显示
+# 众所周知的邮件列表组
+lists sawfish@lists.tuxfamily.org 	 rxvt-unicode@lists.schmorp.de  tmux-users@lists.sourceforge.net  kernel@vger.linux-kernel.cn
+# 我已经订阅了的邮件列表组
+subscribe sawfish@lists.tuxfamily.org 	 rxvt-unicode@lists.schmorp.de  tmux-users@lists.sourceforge.net  kernel@vger.linux-kernel.cn
+
+

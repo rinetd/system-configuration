@@ -1,0 +1,21 @@
+# -*- muttrc -*-
+#
+# mail box settings for mutt.
+#
+
+#建立信箱
+# 默认邮箱目录
+set folder="~/.Mail"
+# 已读的邮箱
+set mbox="~/.Mail/read"
+# 进入mutt后默认使用的信箱，可以考虑和$HOME/.procmailrc设置的默认信箱相同
+set spoolfile="~/.Mail/inbox/"
+# 这个应该是草稿存放的目录
+set postponed="~/.Mail/postponed"
+#你发出的邮件保存到那个信箱文件？比如可以像我这样每个月发出的信件放在不同的文件里。
+set record="~/.Mail/sent/=sent-mail-`date +%Y-%m`"
+
+
+# 让mutt监视下面几个邮箱，并随时报告新邮件
+#指定你有那些信箱文件。当你按 "c" 切换信箱时，再按 Tab 键，这些信箱就可供你选择
+mailboxes = "inbox" "haiyuan.vinurs.gmail" "haiyuan.victor.gmail" "company"

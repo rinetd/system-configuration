@@ -1,0 +1,384 @@
+##### Menu
+# Author: xiao feng <xiaofeng0807@gmail.com>
+#
+# 
+# Eclipse
+# Slickedit
+# ArgoUML
+# Gvim
+# Mozilla firefox
+# Mozilla Thunderbird
+# XMMS
+# Totem
+# RealPlayer
+# OpenOffice.org
+# GIMP
+# GNOME Games
+#####
+
+ImagePath ${HOME}/.fvwm/images:+
+
+SetEnv browser google-chrome
+SetEnv music_player xmms
+
+
+# start and exit
+Read fvwm.init-functions
+
+# menu
+Read fvwm.menu
+
+
+
+##################################################################
+
+
+
+###################################################################
+### General Settings
+###################################################################
+
+EWMHBaseStruts 1 1 26 34
+
+IgnoreModifiers L25
+Style * SnapAttraction 5
+EdgeScroll 0 0
+EdgeResistance 1000
+Style * EdgeMoveDelay 1000
+Style * EdgeMoveResistance 20
+EdgeThickness 1
+ClickTime 150
+MoveThreshold 3
+OpaqueMoveSize unlimited
+HideGeometryWindow Always
+BugOpts FlickeringMoveWorkaround Off
+Style * SnapGrid 1 1
+ColormapFocus FollowsFocus
+Style * Title, EWMHMiniIconOverride, MiniIcon icons/24x24/application.png
+
+Read fvwm.style
+
+###################################################################
+
+
+Style * Colorset 4, HilightColorset 4
+Style * SmartPlacement, WindowShadeSteps 0, ResizeOpaque
+Style * DecorateTransient, WindowShadeLazy
+Style * IconBox 15 15 -1 1, MouseFocusClickRaises
+Style * NoIcon, NoIconTitle
+Style * HandleWidth 1, BorderWidth 1
+Style * BorderColorset	7, \
+        HilightColorset	9, \
+        HilightBorderColorset	9
+
+Style * Font "StringEncoding=gb2312:xft:microsoft yahei:pixelsize=12:encoding=iso10646-1"
+
+###################################################################
+
+# 
+
+
+###################################################################
+### CursorStyle
+###################################################################
+
+#### Change style to left_ptr and fleur (missing cursors in my cursors theme)
+CursorStyle root left_ptr
+CursorStyle default left_ptr 
+CursorStyle position left_ptr
+CursorStyle sys left_ptr 
+CursorStyle menu left_ptr
+CursorStyle title left_ptr
+CursorStyle resize fleur
+CursorStyle stroke cross
+CursorStyle select draped_box
+
+###################################################################
+
+
+
+
+###################################################################
+### Menu Settings
+###################################################################
+
+MenuStyle * Hilight3DOff, PopupOffset +0 100, PopupDelay 200
+MenuStyle * Font "StringEncoding=gb2312:xft:Verdana:pixelsize=12:encoding=iso10646-1"
+MenuStyle * MenuColorset 0, HilightBack, ActiveColorset 1
+MenuStyle * BorderWidth 1, SeparatorsLong, Animation, TrianglesSolid
+MenuStyle * ItemFormat "%.2|%.5i%.5l%.5i%2.3>%2|"
+#MenuStyle * AutomaticHotKeys 
+
+###################################################################
+
+
+
+
+
+###################################################################
+### Titlebar Decoration
+###################################################################
+
+DestroyFunc FuncFvwmDecorBackground
+AddToFunc   FuncFvwmDecorBackground
++ I ButtonStyle All Simple -- UseTitleStyle
++ I TitleStyle AllInActive TiledPixmap decoration/title-inactive.png
++ I TitleStyle AllActive TiledPixmap decoration/title-active.png
++ I TitleStyle Centered
++ I TitleStyle -- flat
++ I TitleStyle Height 20
+
+
+FuncFvwmDecorBackground
+
++ I FuncFvwmDecorBackground
+AddButtonStyle 1 \
+    ActiveUp   (Pixmap decoration/options-activeup.xpm -- flat) \
+    ActiveDown (Pixmap decoration/options-activedown.xpm -- flat) \
+    Inactive   (Pixmap decoration/inactive.xpm -- flat)
+AddButtonStyle 6 \
+    ActiveUp   (Pixmap decoration/iconify-activeup.xpm -- flat) \
+    ActiveDown (Pixmap decoration/iconify-activedown.xpm -- flat) \
+    Inactive   (Pixmap decoration/inactive.xpm -- flat)
+AddButtonStyle 4 \
+    ActiveUp   (Pixmap decoration/maximize-activeup.xpm -- flat) \
+    ActiveDown (Pixmap decoration/maximize-activedown.xpm -- flat) \
+    Inactive   (Pixmap decoration/inactive.xpm -- flat)
+AddButtonStyle 2 \
+    ActiveUp   (Pixmap decoration/close-activeup.xpm -- flat) \
+    ActiveDown (Pixmap decoration/close-activedown.xpm -- flat) \
+    Inactive   (Pixmap decoration/inactive.xpm -- flat)
+
+Style * Button 1, Button 2, Button 4, Button 6, GrabFocusOff
+Style * FvwmButtons
+Style * HandleWidth 1, BorderWidth 1
+Style * Font "StringEncoding=gb2312:xft:microsoft yahei:pixelsize=14:encoding=iso10646-1"
+Style * Colorset                8, \
+        BorderColorset          8, \
+        HilightColorset         9, \
+        HilightBorderColorset   9
+
+
+AddToFunc   FuncFvwmReloadDecor
++ I BorderStyle Simple -- HiddenHandles NoInset
++ I TitleStyle  -- Flat
++ I ButtonStyle All -- Flat
+FuncFvwmReloadDecor
+
+###################################################################
+
+
+Key A A CM All ("*gvim*|*emacs*|gimp|gedit|gnome-terminal|ROX*|OpenOffice*") \
+                MoveToDesk 0 0 
+
+Key I A CM All ("*Firefox*|*gFTP*|*WebDownloader*|*Thunderbird*") \
+                MoveToDesk 0 1 
+
+Key S A CM All ("xv|Compupic|gqview|Stardict|Kdict|GV|Acroread") \
+                MoveToDesk 0 2
+
+Key U A CM All ("xmms|totem|mixmos|*MPlayer*") \
+                MoveToDesk 0 3
+
+Key 1 A M GotoDesk 0 0
+Key 2 A M GotoDesk 0 1
+Key 3 A M GotoDesk 0 2
+Key 4 A M GotoDesk 0 3
+###################################################################
+### Mouse Bindings
+###################################################################
+
+#### Root Menus
+
+# Left Mouse Key -> Root Menu
+Mouse 3     A   MC  Menu MenuFvwmRoot
+Mouse 1		W	CM	StrokeFunc
+
+# Right Mouse Key -> Exec gnome-terminal
+# Mouse 3		R	A	Exec exec gnome-terminal
+
+# Middle Mouse Key -> Window list
+Mouse 2		R	A	WindowList NoCurrentDeskTitle
+
+#### Titlebar Buttons
+Mouse 1		1	A	Menu MenuFvwmWindowOps2
+Mouse 3		1	A	Menu MenuFvwmwindowOps2
+Mouse 1		4	A	MaximizeOrNot
+Mouse 1		2	A	CloseOrNot
+
+#### Window, Frame, Side, Others
+Mouse 1		FS	A	ResizeFunc
+Mouse 2		W	C	ResizeFunc
+Mouse 1		W	M	MoveFunc
+Mouse 3		W	M	ResizeFunc
+Mouse 3		TSIF	A	RaiseLower
+Mouse 3		T	A	Menu MenuFvwmWindowOps
+
+AddToFunc ResizeFunc "M" Resize
+AddToFunc MoveFunc   "M" Move
+
+#### Icons Binding
+Mouse 1		6	A	IconifyOrNot
+Mouse 2		I	A	Move
+
+#### Wheel Toggle Shade
+Mouse 2		T	A	Pick WindowShade Toggle
+Mouse 4		T	N	WindowShade True
+Mouse 5		T	N	WindowShade False
+Mouse 4		TW	M	WindowShade True
+Mouse 5		TW	M	WindowShade False
+
+#### Mouse Gesture Binding
+# Mouse 3     R   A   Menu MenuFvwmWindowOps
+
+###################################################################
+
+
+
+###################################################################
+### Keyboard Bindings
+###################################################################
+
+Key Tab		A	M	WindowList Root c c NoCurrentDeskTitle
+
+#### Windows Key -> Root Menu
+#Key Super_L	A	A	Menu MenuFvwmRoot
+#Key Super_R	A	A	Menu MenuFvwmRoot
+
+#### Traditional Bindings
+Key Q 		A	M	Pick Close
+Key X 		A	M	Pick Close
+
+# Alt + X -> Destroy
+Key X		A	M	Pick Destroy
+
+# Ctrl + Alt + M  ->   Maximize Window
+KEY M		A	CM	Maximize
+
+#### Fvwm Special Bindings
+
+# Alt + I  -> Window ID
+Key I		A	M	Pick Module FvwmIdent
+
+# Ctrl + Alt + R  -> Restart FVWM
+Key R		A	CM	Restart
+
+# Ctrl + Alt + F4 -> Quit Fvwm
+Key F4		A	CM	Quit
+
+#### Applications Bindings
+
+# Alt + H -> Exec xman
+Key H		A	M	Exec exec xman
+
+#### Pager Bindings
+
+# Ctrl + Alt + Right -> Move to Page+1
+Key Right	A	CM	GoToPage +1p  0p
+Key Left	A	CM	GoToPage -1p  0p
+Key Up		A	CM	GoToPage  0p -1p
+Key Down	A	CM	GoToPage  0p +1p
+
+Key F1      A   M   GoToDeskAndPage 0 0 0
+Key F2      A   M   GoToDeskAndPage 0 1 0
+Key F3      A   M   GoToDeskAndPage 0 0 1
+Key F4      A   M   GoToDeskAndPage 0 1 1
+Key F5      A   M   GoToDeskAndPage 1 0 0
+Key F6      A   M   GoToDeskAndPage 1 1 0
+Key F7      A   M   GoToDeskAndPage 1 0 1
+Key F8      A   M   GoToDeskAndPage 1 1 1
+Key F9      A   M   GoToDeskAndPage 2 0 0
+Key F10     A   M   GoToDeskAndPage 2 1 0
+Key F11     A   M   GoToDeskAndPage 2 0 1
+Key F12     A   M   GoToDeskAndPage 2 1 1
+Key A       A   M   GoToDeskAndPage 3 0 0
+Key S       A   M   GoToDeskAndPage 3 1 0
+Key D       A   M   GoToDeskAndPage 3 0 1
+Key F       A   M   GoToDeskAndPage 3 1 1
+
+# Alt + P -> Raise or Lower Pager
+#Key P       A   M   All (FvwmOtherPager) RaiseLower
+#
+# Print -> Print Screen
+Key Print	A	A	Exec exec gnome-screenshot
+
+###################################################################
+Read fvwm.menuwinops
+Read ./functions
+Read ./bindings
+
+DestroyFunc MoveToDeskAndPage
+AddToFunc   MoveToDeskAndPage
++ I MoveToDesk $0 $1
++ I MoveToPage $2 $3
+
+DestroyMenu MenuFvwmSendTo
+AddToMenu MenuFvwmSendTo
++   "Page Main      1%menu/window-move.xpm%" MoveToDeskAndPage 0 0 0 0
++   "Page Main      2%menu/window-move.xpm%" MoveToDeskAndPage 0 0 1 0
++   "Page Main      3%menu/window-move.xpm%" MoveToDeskAndPage 0 0 0 1
++   "Page Main      4%menu/window-move.xpm%" MoveToDeskAndPage 0 0 1 1
++   "Page Internet  1%menu/window-move.xpm%" MoveToDeskAndPage 0 0 0 0
++   "Page Internet  2%menu/window-move.xpm%" MoveToDeskAndPage 0 0 1 0
++   "Page Internet  3%menu/window-move.xpm%" MoveToDeskAndPage 0 0 0 1
++   "Page Internet  4%menu/window-move.xpm%" MoveToDeskAndPage 0 0 1 1
++   "Page Misc      1%menu/window-move.xpm%" MoveToDeskAndPage 0 0 0 0
++   "Page Misc      2%menu/window-move.xpm%" MoveToDeskAndPage 0 0 1 0
++   "Page Misc      3%menu/window-move.xpm%" MoveToDeskAndPage 0 0 0 1
++   "Page Misc      4%menu/window-move.xpm%" MoveToDeskAndPage 0 0 1 1
++   "Page Amusemnet 1%menu/window-move.xpm%" MoveToDeskAndPage 0 0 0 0
++   "Page Amusement 2%menu/window-move.xpm%" MoveToDeskAndPage 0 0 1 0
++   "Page Amusement 3%menu/window-move.xpm%" MoveToDeskAndPage 0 0 0 1
++   "Page Amusement 4%menu/window-move.xpm%" MoveToDeskAndPage 0 0 1 1
+###################################################################
+DestroyFunc CloseOrNot
+AddToFunc   CloseOrNot
++ C Silent Close
++ M Nop
+
+DestroyFunc MaximizeOrNot
+AddToFunc   MaximizeOrNot
++ C Silent Maximize
++ M Nop
+
+DestroyFunc IconifyOrNot
+AddToFunc   IconifyOrNot
++ C Silent  Iconify
++ M Nop
+
+# dock
+Read fvwm.dock
+
+# pager
+Read fvwm.pager
+
+
+###################################################################
+Style * NoIcon
+
+###################################################################
+
+
+
+###################################################################
+# Date time
+
+# Clock {{{1
+All (FvwmButtons-Clock) Close
+DestroyModuleConfig FvwmButtons-Clock: *
+*FvwmButtons-Clock: Geometry -0+0
+*FvwmButtons-Clock: BoxSize smart
+*FvwmButtons-Clock: ActiveColorset 60
+*FvwmButtons-Clock: Colorset 60
+*FvwmButtons-Clock: Columns 2
+*FvwmButtons-Clock: Padding 2 2
+*FvwmButtons-Clock: Frame 0
+*FvwmButtons-Clock: (2x1, Size 114 24, \
+Swallow (Close, Respawn, FvwmModule) "FvwmScript-Clock" 'FvwmScript ./scripts/FvwmScript-Clock-24h-small_date', \
+
+Module FvwmButtons FvwmButtons-Clock
+
+# taskbar
+Read fvwm.taskbar
+
+Read fvwm.sidebutton

@@ -1,0 +1,275 @@
+# default Styles:
+
+Style * BorderWidth 5, HandleWidth 5, DepressableBorder
+Style * Icon kcmkwm.png
+Style * MWMFunctions, MWMDecor, MWMButtons, HintOverride
+Style * DecorateTransient, NoPPosition
+Style * SloppyFocus, MouseFocusClickRaises
+Style * SmartPlacement
+Style * Font  -*-simsun-medium-r-*-*-14-*-*-*-*-*-*-*
+Style * IconFont  -*-simsun-medium-r-*-*-12-*-*-*-*-*-*-*
+Style * HilightFore black, HilightBack gainsboro
+Style * IconBox 360x200+1-1, IconFill left bottom
+
+Style * WindowShadeShrinks, WindowShadeSteps 100
+
+TitleStyle height 22
+AddTitleStyle ActiveDown VGradient 8 gold black
+
+MenuStyle * MWM
+MenuStyle * PopupDelayed, PopupDelay 160, Animation, TitleWarp
+MenuStyle * Foreground gold, Background gray40
+MenuStyle * ActiveFore White
+MenuStyle * Font  -*-simsun-medium-r-*-*-14-*-*-*-*-*-*-*
+MenuStyle * MenuFace VGradient 64 darkgray MidnightBlue
+#MenuStyle * MenuFace TiledPixmap weird10dark.xpm
+
+ButtonStyle All -- UseTitleStyle
+ButtonStyle All ActiveDown VGradient 8 palevioletred black
+
+ButtonStyle 1 Vector 7 \
+  65x15@0 25x55@1 45x55@0 35x85@1 75x45@0 55x45@1 65x15@0
+ButtonStyle 6 16 20x20@1 30x20@1 50x40@1 70x20@1 80x20@1 80x30@0 60x50@0 80x80@0 70x80@0 50x60@0 30x80@0 20x80@0 20x70@0 40x50@1 20x30@0 20x20@1
+
+CursorStyle ROOT 58
+CursorStyle TITLE 62
+CursorStyle STROKE 86
+
+
+# Styles for various Fvwm modules:
+Style "Fvwm*"       Layer 5,  NoTitle,  Sticky, WindowListSkip
+Style "Fvwm*"       BorderWidth 2, CirculateSkipIcon, CirculateSkip
+Style "FvwmPager"   StaysOnTop
+Style "FvwmBanner"  StaysOnTop
+Style "FvwmButtons" Icon toolbox.xpm, NeverFocus
+Style "FvwmConsole" SloppyFocus
+
+# Styles for your common terminal emulator programs:
+Style "xterm"       Icon /usr/share/icons/Bluecurve/48x48/apps/gnome-term-tiger.png, SloppyFocus
+Style "rxvt"        NoTitle, Icon /usr/share/icons/Bluecurve/48x48/apps/gnome-term-linux.png
+Style "gv"          ClickToFocus
+Style "mozilla"     RandomPlacement, SloppyFocus
+Style "NoResource" NoTitle BorderWidth 0, HandleWidth 0
+Style "xdaliclock" NoTitle, NoHandles, Sticky, WindowListSkip, ClickToFocus, Layer 6
+Style "MPlayer" NoTitle, Layer 7
+Style "RealPlayer" Layer 7
+Style "XSIM"        Layer 7, NoTitle, HandleWidth 1, Sticky, WindowListSkip
+Style "emacs"       Icon gnu-animal.xpm
+Style "gv"          Icon gv.xpm
+Style "Xdvi help"       NoTitle
+Style "AcroRead"        VariablePosition, VariableUSPosition
+Style * RaiseTransient LowerTransient StackTransientParent
+#Style * NoActiveIconOverride
+
+# Styles for various common programs:
+Style "xbiff"       NoTitle, Sticky, WindowListSkip, ClickToFocus
+Style "xcalc"       Icon xcalc.xpm, NoButton 2,RandomPlacement,ClickToFocus
+Style "xmh"         Icon mail1.xpm, NoIconTitle,StickyIcon
+Style "xmh"         RandomPlacement, NoButton 2
+Style "xman"        Icon xman.xpm, RandomPlacement, ClickToFocus
+Style "xmag"        RandomPlacement, ClickToFocus
+Style "FvwmButtons"     BorderWidth 0,NoHandles
+
+
+###########################################################################
+
+###################################################################
+#### Styles
+####################################################################
+#
+##### Fvwm Modules Styles
+Style Fvwm*                     NoTitle,  Sticky, WindowListSkip, CirculateSkipIcon, CirculateSkip, NoHandles, BorderWidth 0, StaysOnBottom
+Style FvwmPager         NoHandles, BorderWidth 0
+Style FvwmDock          Sticky, NoTitle, NoHandles, Borderwidth 0
+Style FvwmDock          WindowListSkip, StaysOnBottom
+Style FvwmOtherPager ClickToFocusRaises,RaiseTransient, LowerTransient, StackTransientParent, StaysPut
+Style FvwmTaskBar   Layer 0
+Style FvwmButtons-Clock Layer 1, BorderWidth 0
+
+#### Applications Styles
+##Read /usr/local/share/fvwm/themes/default/settings/iconstyles/style-icon-miniicon
+Style gnome-terminal            Title, EWMHMiniIconOverride, MiniIcon icons/24x24/xterm.png
+Style "ROX*"                    Title, EWMHMiniIconOverride, MiniIcon icons/24x24/rox.png
+
+Style stellarium                EWMHMiniIconOverride, MiniIcon icons/24x24/stellarium.png
+
+Style "*Eclipse*"               Title, EWMHMiniIconOverride, MiniIcon icons/24x24/eclipse.png
+Style "*SlickEdit*"             EWMHMiniIconOverride, MiniIcon icons/24x24/slickedit.png
+########## ArgoUML
+Style "*Untitled*"              EWMHMiniIconOverride, MiniIcon icons/24x24/argouml.png
+Style "*zargo"          EWMHMiniIconOverride, MiniIcon icons/24x24/argouml.png
+Style "*uml"                    EWMHMiniIconOverride, MiniIcon icons/24x24/argouml.png
+
+Style gvim                      EWMHMiniIconOverride, MiniIcon icons/24x24/gvim.png
+
+Style "pgAdmin III"             EWMHMiniIconOverride, MiniIcon icons/24x24/pgadmin3.png
+Style "MySQL Administrator"     EWMHMiniIconOverride, MiniIcon icons/24x24/mysql_admin.png
+Style "MySQL Query Browser"     EWMHMiniIconOverride, MiniIcon icons/24x24/mysql_query.png
+
+Style "*Mozilla Firefox"        EWMHMiniIconOverride, MiniIcon icons/24x24/firefox.png
+Style "Mozilla Thunderbird"     EWMHMiniIconOverride, MiniIcon icons/24x24/thunderbird.png
+Style "Mozilla"         EWMHMiniIconOverride, MiniIcon icons/24x24/firefox.png
+Style "*WebDownloader*" EWMHMiniIconOverride, MiniIcon icons/24x24/nt.png
+Style "*gFTP*" EWMHMiniIconOverride, MiniIcon icons/24x24/gftp.xpm Style xterm                  EWMHMiniIconOverride, MiniIcon icons/24x24/xterm.png Style gedit                        Title, EwmhMiniIconOverride, MiniIcon icons/24x24/gedit.png
+
+
+
+Style "xmms"                    NoTitle, EWMHMiniIconOverride, MiniIcon icons/24x24/xmms.png
+Style "XMMS Playlist"   WindowListSkip
+Style "XMMS Equalizer"  WindowListSkip
+Style "Totem"                   EWMHMiniIconOverride, MiniIcon icons/24x24/totem.png
+Style "RealPlayer"              EWMHMiniIconOverride, MiniIcon icons/24x24/realplayer.png
+
+Style "MPlayer"         NoTitle, EWMHMiniIconOverride, MiniIcon icons/24x24/mplayer.png
+-
+
+Style "texmaker"                EWMHMiniIconOverride, MiniIcon icons/24x24/texmaker.png
+Style "*OpenOffice*"            EWMHMiniIconOverride, MiniIcon icons/24x24/openoffice.png
+Style "PDF Viewer"              EWMHMiniIconOverride, MiniIcon icons/24x24/xpdf.png
+Style "ChmSee"          EWMHMiniIconOverride, MiniIcon icons/24x24/chmsee.png
+
+Style "GIMP Startup"            NoTitle
+Style "GIMP"                    EWMHMiniIconOverride, MiniIcon icons/24x24/gimp.png
+Style "Layers, Channels*"       EWMHMiniIconOverride, MiniIcon icons/24x24/gimp.png
+Style "Open Image"              EWMHMiniIconOverride, MiniIcon icons/24x24/gimp.png
+Style "Save Image"              EWMHMiniIconOverride, MiniIcon icons/24x24/gimp.png
+
+Style "Compupic"                EWMHMiniIconOverride, MiniIcon icons/24x24/compupic.png
+Style "xv"              EWMHMiniIconOverride, MiniIcon icons/24x24/xv.png
+Style "GQview"          EWMHMiniIconOverride, MiniIcon icons/24x24/gqview.png
+Style "emacs"           EWMHMiniIconOverride, MiniIcon icons/24x24/emacs.png
+Style "*KEdit"          EWMHMiniIconOverride, MiniIcon icons/24x24/kedit.png
+
+Style "XTerm"                   EWMHMiniIconOverride, MiniIcon icons/24x24/xterm.png
+Style "Calculator"              EWMHMiniIconOverride, MiniIcon icons/24x24/calculator.png
+
+Style "Adobe Reader"            EWMHMiniIconOverride, MiniIcon icons/24x24/acroread.png
+Style "gv"              EWMHMiniIconOverride, MiniIcon icons/24x24/gv.png
+Style "stardict"                EWMHMiniIconOverride, MiniIcon icons/24x24/stardict.png
+
+Style "totem"           EWMHMiniIconOverride, MiniIcon icons/24x24/totem.png
+
+Style Kdict         EWMHMiniIconOverride, MiniIcon icons/24x24/kdict.png
+
+Style Mixmos        EWMHMiniIconOverride, MiniIcon icons/24x24/xmixer.png
+
+
+#### Override others icons
+Style *                         EwmhMiniIconOverride
+
+
+###################################################################
+#### Colorsets
+####################################################################
+#
+##### Menu Colorset
+Colorset 0 \
+        Foreground "white", \
+        Background "#777777", \
+        Hilight "#777777", \
+        Shadow "#777777", \
+        Tint "black" 50, \
+        RootTransparent
+
+Colorset 1 \
+        Foreground "#ff6600", \
+        Background "#283e5e", \
+        Hilight "black", \
+        Shadow "gray"
+
+### General Colorset
+Colorset 3 \
+        fg #777777, \
+        bg #ffffff, \
+        fgsh #bbbbbb, \
+        RootTransparent, \
+        Tint #283e5e 70, \
+        IconAlpha 60
+
+Colorset 4 \
+        fg #000000, \
+        bg #ffffff, \
+        fgsh #bbbbbb, \
+        RootTransparent, \
+        Tint #101f36 70, \
+        IconAlpha 10
+
+Colorset 5 \
+        fg #ffffff, \
+        bg #000000
+
+Colorset 6 \
+        fg #ffffff, \
+        bg #000000, \
+        RootTransparent
+
+#### Dock Colorset
+Colorset 30 \
+        fg #ffffff, \
+        bg #ffffff, \
+        hi #dde5ec, \
+        sh #a6bbce, \
+        RootTransparent, \
+        Tint #101F36 65
+
+#### Border Colorset
+Colorset 7 \
+        Background "#777777"
+
+Colorset 8 \
+        Foreground "lightgray", \
+        Background "#777777", \
+        Hilight "gray", \
+        Shadow "gray", \
+        Tint "black" 30, \
+        RootTransparent
+
+Colorset 9 \
+        Foreground "#FF6600", \
+        Background "#777777", \
+        Hilight "black", \
+        Shadow "black", \
+        Tint "black" 60, \
+        RootTransparent
+
+#### Pager Colorset
+Colorset 60 \
+        Foreground "#FFFFFF", \
+        Background "#444444", \
+        Tint "black" 50, \
+        RootTransparent, \
+        fgTint, \
+        IconAlpha, \
+        IconTint
+Colorset 61 \
+        Foreground "darkgray", \
+        Background "darkgray", \
+        Hilight "darkgray", \
+        Shadow "darkgray", \
+        Tint "#000066" 50, \
+        RootTransparent
+Colorset 62 \
+        Foreground "gray", \
+        Background "#777777", \
+        Hilight "#444444", \
+        Shadow "#444444", \
+        Tint "black" 50, \
+        RootTransparent
+Colorset 63 \
+        Foreground "white", \
+        Background "#777777", \
+        Hilight "#666666", \
+        Shadow "#666666", \
+        Tint "blue" 50, \
+        RootTransparent
+Colorset 64 \
+        Foreground "#FF6600", \
+        Background "#444444", \
+        Hilight "blue", \
+        Shadow "darkgray", \
+        Tint "#000066" 50, \
+        RootTransparent
+###################################################################
+
+
+

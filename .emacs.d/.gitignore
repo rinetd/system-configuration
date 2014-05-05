@@ -1,0 +1,6 @@
+el-get
+*elc
+.emacs.desktop.lock
+.emacs-desktop
+.emacs-places
+ac-comphist.dat

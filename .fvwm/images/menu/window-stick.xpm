@@ -1,0 +1,30 @@
+/* XPM */
+static char *window-stick[] = {
+/* width height num_colors chars_per_pixel */
+"    16    16        7            1",
+/* colors */
+"  c None",
+"# c #000000",
+"a c #004040",
+"b c #008080",
+"c c #00c0c0",
+"d c #00ffff",
+"e c #c0ffff",
+/* pixels */
+"                ",
+"                ",
+"                ",
+"    ##          ",
+"    #e#         ",
+"    #de#  ###   ",
+"    #cde##ede#  ",
+" ####ccddddcd#  ",
+" dcb#cccccccc#  ",
+" ####ccbbbbcb#  ",
+"    #cba##aba#  ",
+"    #ba#  ###   ",
+"    #a#         ",
+"    ##          ",
+"                ",
+"                ",
+};

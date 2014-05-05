@@ -1,0 +1,216 @@
+DestroyMenu MenuFvwmWindowMove
+AddToMenu MenuFvwmWindowMove "Move To..." Title 
++   "Desk Main      %menu/window-move.xpm%" PopUp MenuMainDesk
++   "Desk Internet  %menu/window-move.xpm%" PopUp MenuInternetDesk
++   "Desk Misc      %menu/window-move.xpm%" PopUp MenuMiscDesk
++   "Desk Amusement %menu/window-move.xpm%" PopUp MenuAmusementDesk
+
+DestroyMenu MenuMainDesk
+AddToMenu   MenuMainDesk "Main" Title
++   "Page 1%menu/window-move.xpm%" MoveToDeskAndPage 0 0 0 0
++   "Page 2%menu/window-move.xpm%" MoveToDeskAndPage 0 0 1 0
++   "Page 3%menu/window-move.xpm%" MoveToDeskAndPage 0 0 0 1
++   "Page 4%menu/window-move.xpm%" MoveToDeskAndPage 0 0 1 1
+
+DestroyMenu MenuInternetDesk
+AddToMenu   MenuInternetDesk "Internet" Title
++   "Page 1%menu/window-move.xpm%" MoveToDeskAndPage 0 1 0 0
++   "Page 2%menu/window-move.xpm%" MoveToDeskAndPage 0 1 1 0
++   "Page 3%menu/window-move.xpm%" MoveToDeskAndPage 0 1 0 1
++   "Page 4%menu/window-move.xpm%" MoveToDeskAndPage 0 1 1 1
+
+DestroyMenu MenuMiscDesk
+AddToMenu   MenuMiscDesk "Misc" Title
++   "Page 1%menu/window-move.xpm%" MoveToDeskAndPage 0 2 0 0
++   "Page 2%menu/window-move.xpm%" MoveToDeskAndPage 0 2 1 0
++   "Page 3%menu/window-move.xpm%" MoveToDeskAndPage 0 2 0 1
++   "Page 4%menu/window-move.xpm%" MoveToDeskAndPage 0 2 1 1
+
+DestroyMenu MenuAmuseMentDesk
+AddToMenu   MenuAmuseMentDesk "AmuseMent" Title
++   "Page 1%menu/window-move.xpm%" MoveToDeskAndPage 0 3 0 0
++   "Page 2%menu/window-move.xpm%" MoveToDeskAndPage 0 3 1 0
++   "Page 3%menu/window-move.xpm%" MoveToDeskAndPage 0 3 0 1
++   "Page 4%menu/window-move.xpm%" MoveToDeskAndPage 0 3 1 1
+# This defines all window operations
+DestroyMenu MenuFvwmWindowOps
+AddToMenu   MenuFvwmWindowOps "Window Operations" Title
++ "&Move%menu/window-move.xpm%"                 Move
++ "&Resize%menu/window-resize.xpm%"             Resize
++ "(De)&Iconify%menu/window-iconify.xpm%"       Iconify
++ "(Un)Ma&ximize%menu/window-maximize.xpm%"     Maximize
++ "(Un)Shade%menu/window-shade.xpm%"            WindowShade
++ "(Un)Stick%menu/window-stick.xpm%"            Stick
++ "R&aise%menu/window-raise.xpm%"               Raise
++ "&Lower%menu/window-lower.xpm%"               Lower
++ "" Nop
++ "&Delete%menu/window-delete.xpm%"             Delete
++ "&Close%menu/window-close.xpm%"               Close
++ "Destroy%menu/window-destroy.xpm%"            Destroy
++ "" Nop
++ "Move to Page%menu/window-move.xpm%"          Popup MenuFvwmWindowMove
++ "Group Operations%menu/windows.xpm%"          Popup MenuFvwmWindowGroupOps
++ "Window Style%menu/window.xpm%"               Popup MenuFvwmWindowStyle
++ "Maximize Window%menu/window-maximize.xpm%"   Popup MenuFvwmWindowMaximize
++ "Refresh Window%menu/refresh.xpm%"         	Popup MenuFvwmWindowRefresh
++ "Rearrange All%menu/refresh.xpm%"          	Popup MenuFvwmRearrangeWindows
++ "Window Utility%menu/utility.xpm%"            Popup MenuFvwmWindowUtility
++ "" Nop
++ "Identify%menu/window-identify.xpm%"          Module FvwmIdent
++ "Switch to...%menu/windows.xpm%"              WindowList
+
+# A trimmed down version of MenuFvwmWindowOps, good for binding to decorations
+DestroyMenu MenuFvwmWindowOps2
+AddToMenu   MenuFvwmWindowOps2
++ "Restore	Alt-F6%menu/window.xpm%"           FuncFvwmRestore
++ "&Move	Alt-F7%menu/window-move.xpm%"      Move
++ "&Resize	Alt-F8%menu/window-resize.xpm%"    Resize
++ "&Iconify	Alt-F9%menu/window-iconify.xpm%"   Iconify
++ "Ma&ximize	Alt-F10%menu/window-maximize.xpm%" Maximize
++ "R&aise	Alt-F5%menu/window-raise.xpm%"     RaiseLower
++ "" Nop
++ "&Close	Alt-F4%menu/window-close.xpm%"     Close
++ "" Nop
++ "Identify	Alt-F11%menu/window-identify.xpm%" Module FvwmIdent
++ "More&...	Alt-F3%menu/window.xpm%"           Menu MenuFvwmWindowOps This 0 0
+
+# Someone may prefer the version without menu icons, like in mwm
+DestroyMenu MenuFvwmWindowOps3
+AddToMenu   MenuFvwmWindowOps3
++ "Restore	Alt-F6"  FuncFvwmRestore
++ "&Move	Alt-F7"  Move
++ "&Resize	Alt-F8"  Resize
++ "&Iconify	Alt-F9"  Iconify
++ "Ma&ximize	Alt-F10" Maximize
++ "R&aise	Alt-F5"  RaiseLower
++ "" Nop
++ "&Close	Alt-F4"  Close
++ "" Nop
++ "Identify	Alt-F11" Module FvwmIdent
++ "More&...	Alt-F3"  Menu MenuFvwmWindowOps This 0 0
+
+# Resource window group operations for the root menu and buttons
+DestroyMenu  MenuFvwmWindowGroupOps
+AddToMenu    MenuFvwmWindowGroupOps "Resource Group Ops" Title
++ "&Iconify%menu/window-iconify.xpm%"   Pick All ($r) Iconify on
++ "De&Iconify%menu/window-iconify.xpm%" Pick All ($r) Iconify off
++ "&Shade%menu/window-shade.xpm%"       Pick All ($r) WindowShade on
++ "Un&Shade%menu/window-shade.xpm%"     Pick All ($r) WindowShade off
++ "R&aise%menu/window-raise.xpm%"       Pick All ($r) Raise
++ "Lo&wer%menu/window-lower.xpm%"       Pick All ($r) Lower
++ "" Nop
++ "&Delete%menu/window-delete.xpm%"     Pick All ($r) Delete
++ "&Close%menu/window-close.xpm%"       Pick All ($r) Close
++ "Destroy%menu/window-destroy.xpm%"    Pick All ($r) Destroy
++ "" Nop
++ "Quick Move To ...%menu/window-move.xpm%" Popup MenuFvwmWindowGroupQuickMove
+
+DestroyMenu MenuFvwmWindowStyle
+AddToMenu   MenuFvwmWindowStyle "Window Style" Title
++ "%menu/window.xpm%TitleAtTop"    WindowStyle TitleAtTop
++ "%menu/window.xpm%TitleAtBottom" WindowStyle TitleAtBottom
++ "%menu/window.xpm%Title"         WindowStyle Title
++ "%menu/window.xpm%NoTitle"       WindowStyle NoTitle
++ "" Nop
++ "%menu/window.xpm%FvwmBorder"           WindowStyle FvwmBorder
++ "%menu/window.xpm%MWMBorder"            WindowStyle MWMBorder
++ "%menu/window.xpm%DepressableBorder"    WindowStyle DepressableBorder
++ "%menu/window.xpm%FirmBorder"           WindowStyle FirmBorder
++ "%menu/window.xpm%Handles"              WindowStyle Handles
++ "%menu/window.xpm%NoHandles"            WindowStyle NoHandles
++ "%menu/window.xpm%BorderWidth 0"        WindowStyle BorderWidth 0
++ "%menu/window.xpm%BorderWidth 5"        WindowStyle BorderWidth 5
++ "%menu/window.xpm%HandleWidth 0"        WindowStyle HandleWidth 0
++ "%menu/window.xpm%HandleWidth 7"        WindowStyle HandleWidth 7
++ "" Nop
++ "%menu/window-resize.xpm%ResizeOpaque"  WindowStyle ResizeOpaque
++ "%menu/window-resize.xpm%ResizeOutline" WindowStyle ResizeOutline
++ "%menu/mouse.xpm%SloppyFocus"           WindowStyle SloppyFocus
++ "%menu/mouse.xpm%ClickToFocus"          WindowStyle ClickToFocus
++ "%menu/mouse.xpm%MouseFocus"            WindowStyle MouseFocus
++ "%menu/mouse.xpm%NeverFocus"            WindowStyle NeverFocus
+
+DestroyMenu MenuFvwmWindowMaximize
+AddToMenu   MenuFvwmWindowMaximize "Maximize Window" Title
++ "%menu/window-maximize.xpm%Maximize Fully	Alt-F10" Maximize On 100 100
++ "%menu/window-maximize.xpm%Unmaximize 	Alt-F10" Maximize Off
++ "" Nop
++ "%menu/window-maximize.xpm%Maximize Partially" \
+	Pick FuncFvwmSimpleMaximizePartially On
++ "%menu/window-maximize.xpm%Maximize Vertically" \
+	Pick FuncFvwmSimpleMaximizeVertically On
++ "%menu/window-maximize.xpm%Maximize Horizontally" \
+	Pick FuncFvwmSimpleMaximizeHorizontally On
++ "" Nop
+# these bound functions do not seem to work well if used in an incremental way.
++ "%menu/window-maximize.xpm%Maximize Grow"        Maximize On grow grow
++ "%menu/window-maximize.xpm%Maximize Grow Vert."  Maximize On    0 grow
++ "%menu/window-maximize.xpm%Maximize Grow Horiz." Maximize On grow    0
++ "" Nop
++ "%menu/window-maximize.xpm%Maximize Full Screen	Shift-Ctrl-F11" Pick FuncFvwmMaximizeFullScreen
++ "%menu/window-maximize.xpm%Unmaximize Full Screen	Shift-Ctrl-F11" Pick FuncFvwmMaximizeFullScreen
+
+DestroyMenu MenuFvwmWindowRefresh
+AddToMenu   MenuFvwmWindowRefresh "Refresh Window" Title
++ "%menu/refresh.xpm%RefreshWindow"    RefreshWindow
++ "%menu/refresh.xpm%RecaptureWindow"  RecaptureWindow
++ "%menu/refresh.xpm%PlaceAgain"       PlaceAgain anim
++ "" Nop
++ "%menu/window.xpm%Restore"              FuncFvwmRestore
+
+# olicha: maybe we have to define function in "functions-appbind" for the
+#  FvwmRearrange entries of this menu 
+# migo: and maybe move these entries to MenuFvwmWindowUtility menu?
+DestroyMenu MenuFvwmRearrangeWindows
+AddToMenu   MenuFvwmRearrangeWindows "Rearrange Windows" Title
++ "%menu/refresh.xpm%&Cascade" FvwmRearrange -cascade -m 3 3 -incx 2
++ "%menu/refresh.xpm%&PlaceAgain" All (CurrentPage !Sticky) PlaceAgain anim
++ "" Nop
++ "%menu/refresh.xpm%Tile &horizontally" FvwmRearrange -tile -h -m 2 2 98 98
++ "%menu/refresh.xpm%Tile &vertically"   FvwmRearrange -tile    -m 2 2 98 98
++ "" Nop
++ "%menu/refresh.xpm%Arrange Icons" All (CurrentDesk Iconic) RecaptureWindow
+
+DestroyFunc FuncFvwmRaiseAndExec
+AddToFunc   FuncFvwmRaiseAndExec
++ I Raise
++ I Exec $*
+
+DestroyFunc FuncFvwmWindowPrint
+AddToFunc   FuncFvwmWindowPrint
++ I FuncFvwmRaiseAndExec which xdpr >/dev/null 2>&1 && (xdpr -id $[w.id]; true) || (import -window $[w.id] - | lpr)
+
+DestroyFunc FuncFvwmWindowPrintReverse
+AddToFunc   FuncFvwmWindowPrintReverse
++ I FuncFvwmRaiseAndExec which xdpr >/dev/null 2>&1 && (xdpr 1/2 -h -rv -id $[w.id]; true) || (import -window $[w.id] -rotate 90 - | lpr)
+
+DestroyFunc FuncFvwmWindowCreateScreenshot
+AddToFunc   FuncFvwmWindowCreateScreenshot
+# Can't use PipeRead here if we want to use this function from mini-icon button
+#+ I PipeRead `import -frame -window $[w.id] /tmp/$USER-shot-window-$[w.id].png`
++ I FuncFvwmShowMessage "Screenshot Info for window $[w.id]" "You should have 'import' utility from ImageMagick.^nCheck the screenshot in /tmp/$USER-shot-window-$[w.id].png"
++ I Wait "Screenshot Info for window $[w.id]"
++ I FuncFvwmRaiseAndExec import -frame -window $[w.id] /tmp/$USER-shot-window-$[w.id].png
+
+DestroyFunc FuncFvwmDesktopCreateScreenshot
+AddToFunc   FuncFvwmDesktopCreateScreenshot
++ I Pick (CirculateHit) Nop
++ I PipeRead `import -window root /tmp/$USER-shot-desktop.png`
++ I FuncFvwmShowMessage "Screenshot Info for the desktop" "You should have 'import' utility from ImageMagick.^nCheck the screenshot in /tmp/$USER-shot-desktop.png"
+
+DestroyMenu MenuFvwmWindowUtility
+AddToMenu   MenuFvwmWindowUtility "Window Utility" Title
++ "%menu/window.xpm%Create &Screenshot"   Pick (CirculateHit) FuncFvwmWindowCreateScreenshot
++ "%menu/display.xpm%&Desktop Screenshot" Pick (CirculateHit) FuncFvwmDesktopCreateScreenshot
++ "" Nop
++ "%menu/printing.xpm%&Print"             Pick (CirculateHit) FuncFvwmWindowPrint
++ "%menu/printing.xpm%Print &Reverse"     Pick (CirculateHit) FuncFvwmWindowPrintReverse
++ "" Nop
++ "%menu/window-raise.xpm%StaysOnTop"     Pick (CirculateHit) Layer 0 6
++ "%menu/window-raise.xpm%Layer +1"       Pick (CirculateHit) Layer +1
++ "%menu/window.xpm%StaysPut"             Pick (CirculateHit) Layer 0 4
++ "%menu/window-lower.xpm%Layer -1"       Pick (CirculateHit) Layer -1
++ "%menu/window-lower.xpm%StaysOnBottom"  Pick (CirculateHit) Layer 0 2
++ "" Nop
++ "%menu/window-resize.xpm%Scroll&Bar (1/2 app)"  Pick Module FvwmScroll 2 2
++ "%menu/window-resize.xpm%ScrollBar (&75%% scr)" Pick Module FvwmScroll 75p 75p

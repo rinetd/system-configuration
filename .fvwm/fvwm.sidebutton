@@ -1,0 +1,37 @@
+# 右对齐，当鼠标紧贴右边边框的时候弹出该菜单
+Style "sidebutton" NoTitle, !Handles, !Borders, Sticky, WindowListSkip, \
+  CirculateSkip, StaysOnBottom, FixedPosition, FixedSize, !Iconifiable
+
+DestroyModuleConfig sidebutton: *
+*sidebutton: Geometry 120x480-0+30
+*sidebutton: Colorset 0
+*sidebutton: Rows 38
+*sidebutton: Columns 1
+*sidebutton: (Panel(down, indicator, delay 0, steps 1) \
+                PagerPanel "Module FvwmButtons PagerPanel")
+*sidebutton: (Title xload, Action (Mouse 1) \
+    `Exec exec xload -fg $fg -bg $bg -geometry -3000-3000`)
+*sidebutton: (Panel my_first_panel \
+  "Module FvwmButtons -g -30000-30000 my_first_panel")
+*sidebutton: (Panel my_second_panel \
+  "Exec exec xterm -g -30000-30000 -n my_second_panel")
+
+#*sidebutton: Frame 0
+#*sidebutton: Font "Shadow=3:xft:Sans:Bold:pixelsize=14:minspace=True:antialias=True"
+#*sidebutton: (1x2, Frame 0, Title(Center) "FVWM")
+#*sidebutton: (1x5, Frame 0, Icon 48x48/terminal.png, \
+  Action(Mouse 1) "FvwmATerm", \
+  Action(Mouse 3) "FvwmXTerm")
+#*sidebutton: (1x5, Frame 0, Icon 48x48/xmms.png, \
+  Action(Mouse 1) "FvwmXmms")
+#*sidebutton: (1x5, Frame 0, Icon 48x48/vim.png, \
+  Action(Mouse 1) "FvwmGvim")
+#*sidebutton: (1x5, Frame 0, Icon 48x48/gimp.png, \
+  Action(Mouse 1) "FvwmGimp")
+#*sidebutton: (1x5, Frame 0, Icon 48x48/firefox.png, \
+  Action(Mosue 1) "FvwmFireFox")
+#*sidebutton: (1x5, Frame 0, Icon 48x48/irc.png, \
+  Action(Mouse 1) "FvwmIrssi")
+#*sidebutton: (1x5, Frame 0, Icon 48x48/tux.png, \
+  Action(Mouse 1) "FvwmXLock")
+#*sidebutton: (1x1, Frame 0)

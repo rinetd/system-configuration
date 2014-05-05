@@ -1,6 +1,5 @@
 # this is my own zsh configuration files
 
-# set system type:linux or mac
 source ~/bin/system-type.sh
 
 # set default editor

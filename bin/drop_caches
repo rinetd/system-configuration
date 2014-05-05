@@ -1,0 +1,21 @@
+#!/usr/bin/expect
+
+# timeout seconds
+set timeout 30
+
+spawn su
+expect "Password*"
+
+# get root's password
+set password [lindex $argv 0]
+
+send "$password\r"
+expect "*#*"
+send "echo 3 > /proc/sys/vm/drop_caches\r"
+
+
+expect "*#*"
+send "exit\r"
+
+
+exit

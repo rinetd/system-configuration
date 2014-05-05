@@ -1,0 +1,33 @@
+######################## Initialization Functions ############################
+##################################################################
+#### Starting and Exiting
+###################################################################
+DestroyFunc StartFunction
+AddToFunc StartFunction
++ I Module FvwmPager FvwmOtherPager 0 3
++ I Module FvwmButtons -g 1000x32+10-0 FvwmDock
+# sidebar
++ I Module FvwmButtons sidebutton
++ I Module FvwmAuto 500 Raise Nop
++ I Module FvwmAnimate
++ I Module FvwmTaskBar
+#+ I Exec exec xloadimage -onroot -fullscreen ~/.fvwm/images/bg.jpg
+# 打开fcitx输入法
++ I Exec exec fcitx-autostart
+
+
+#### Splashscreen and RootTerminal only at Init
+DestroyFunc InitFunction
+AddToFunc InitFunction
+# 用来设置桌面背景
++ I Exec exec fvwm-root ~/.fvwm/images/backgrounds/bg.png
++ I Exec exec xscreensaver -no-splash
+
+#### Exit Function
+DestroyFunc ExitFunction
+AddToFunc ExitFunction
++ I KillModule FvwmButtons
++ I KillModule FvwmTaskBar
++ I KillModule FvwmPager
++ I All (xscreensaver) Close
+

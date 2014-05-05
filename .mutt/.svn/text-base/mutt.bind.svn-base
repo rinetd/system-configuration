@@ -1,0 +1,156 @@
+# -*- muttrc -*-
+#
+# key bind settings for mutt.
+#
+
+## Command bind :
+## Syntax unto version 0.60: bind <key> <function-name> <menu-name>
+## Syntax From version 0.61: bind <menu-name> <key> <function-name>
+## Values for <menu-name>:
+## attach, folder-menu, alias-menu; index; pager.
+## Special values for <key>:  pageup, pagedown, up, down, left, right
+## Description: MUTT allows you to bind a command to keys.
+## For more info see page
+## http://www.math.fu-berlin.de/~guckes/mutt/mutt.manual.html#bind or
+## http://www.cs.hmc.edu/~me/mutt/bind.html .
+## There are some keystrokes that I am used with other programs:
+
+
+## ========================
+## Bindings for attach menu
+## ========================
+
+bind attach ' ' select-entry
+bind attach \Cg exit
+
+## ========================
+## Bindings for editor
+## ========================
+
+# bind editor \C? backspace
+
+## ==============================
+## Bindings for index *and* pager
+## ==============================
+
+## Jumping to the next mail that is still unread.
+## Even though I use both New and Old mails
+## I usually prefer "jump-unread" to "jump-new".
+## The TAB key (\t) is convenient for this.
+## To allow jumping to the previous unread mail
+## I use the comma as a prefix to this command:
+
+## ======================
+## Bindings for index
+## ======================
+
+# index bindings - vi (editor) style
+#bind index   1        first-entry  #  g  was "group-reply"
+#bind index   g         jump  #  g  was "group-reply"
+bind index   gg        first-entry  #  g  was "group-reply"
+bind index   G         last-entry	# error with mutt-0.89.1
+bind index   \Cr       refresh	# refresh the screen
+bind index   \Cp       previous-undeleted
+bind index   \Cn       next-undeleted	# 
+bind index   p       noop
+bind index   n       noop
+
+# 跳转到未读邮件
+bind index  <tab>          next-unread
+bind index  <backtab>    previous-unread
+
+bind pager   \t          next-unread
+
+bind pager  ,\t      previous-unread
+
+
+bind index  P    recall-message # 'R'ecall-message move to 'P' [0.46]
+# bind index  L    bottom-of-page # overrides 'L'ist-reply
+bind index  R    list-reply     # 'L'ist-reply moved to 'R'
+
+
+# index bindings - obvious stuff
+
+bind index \Cv     next-page
+bind index <esc>v   previous-page
+
+# index bindings - nn (newsreader) style
+
+bind index \Cx sync-mailbox        # \Cx ->"sync-mailbox"
+
+# index bindings - elm (mailer) style
+
+
+macro index V "!mutt -v | less"
+macro index "+so" ":source "
+
+
+
+## ===========================
+## Bindings for pager，显示邮件内容时候的键绑定
+## ===========================
+
+# pager bindings - vi style bindings
+
+bind pager \Cv   next-page
+bind pager <esc>v previous-page       # was "browse-url"
+
+bind pager ^   top
+bind pager $   bottom
+bind pager /   search
+bind pager \Cn next-entry
+bind pager \Cp previous-entry
+
+
+# bind pager ,B  browse-url        # compensate for \Cb
+
+
+
+
+bind pager n   next-undeleted
+# bind pager N
+
+bind pager p   previous-undeleted
+bind pager P   print-message
+
+bind pager R   list-reply
+bind pager L   list-reply
+
+## Adding a prefix to index mail commands
+## NOTE: Using ESC as prefix requires a small pause
+## between ESC and the following key - therefore
+## I use the comma as the prefix key  :-)
+## I once used the backslash key - but \n, \r, and \t
+## are used for newline, return, and tab.  *sigh*
+
+bind pager ,b   bounce-message    
+bind pager ,f   forward-message   
+bind pager ,g   group-reply       
+bind pager ,m   mail              
+bind pager ,L   list-reply        
+
+## jump                commands
+
+bind pager ,j   next-undeleted    
+bind pager ,k   previous-undeleted
+
+# reply mail
+bind pager r   reply             
+
+
+
+## Bind default mail commands to jump commands
+bind pager backspace   previous-line     
+# bind pager delete      previous-line       # yields error!
+bind pager b   previous-page     
+bind pager f   next-page         
+bind pager g   top               
+bind pager j   next-line         
+bind pager k   previous-line     
+bind pager m   noop              
+bind pager L   noop              
+
+                      
+bind pager :  enter-command      
+
+

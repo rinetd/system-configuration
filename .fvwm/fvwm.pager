@@ -1,0 +1,50 @@
+# pager模块，虚拟桌面切换程序
+
+########################### Pager #########################################
+
+#*FvwmPager: Rows 4
+#*FvwmPager: Columns 1
+#*FvwmPagerBack #908090
+#*FvwmPagerFore #484048
+#*FvwmPager:Font  -*-simsun-medium-r-*-*-14-*-*-*-*-*-*-*
+#*FvwmPagerHilight #cab3ca
+#*FvwmPagerLabel 0 Work
+#*FvwmPagerLabel 1 Internet
+#*FvwmPagerLabel 2 Program
+#*FvwmPagerLabel 3 Amusement
+#*FvwmPager:SmallFont  -*-simsun-medium-r-*-*-12-*-*-*-*-*-*-*
+#*FvwmPagerBalloons            All
+#*FvwmPagerBalloonBack         Yellow
+#*FvwmPagerBalloonFore         Black
+#*FvwmPager:BalloonFont         -*-simsun-medium-r-*-*-14-*-*-*-*-*-*-*
+#*FvwmPagerBalloonYOffset      +2
+#*FvwmPagerBalloonBorderWidth  1
+#*FvwmPagerBalloonBorderColor  Black
+
+
+DestroyModuleConfig FvwmOtherPager: *
+*FvwmOtherPager: Geometry 80x320+0+30
+*FvwmOtherPager: Rows 4
+*FvwmOtherPager: Columns 1
+*FvwmOtherPager: Colorset * 60
+*FvwmOtherPager: HilightColorset * 64
+*FvwmOtherPager: WindowColorsets 62 63
+*FvwmOtherPager: BalloonColorset * 63
+*FvwmOtherPager: Font  "StringEncoding=gb2312:xft:Verdana:pixelsize=12:encoding=iso10646-1"
+*FvwmOtherPager: SmallFont  "StringEncoding=gb2312:xft:microsoft yahei:pixelsize=12:encoding=iso10646-1"
+*FvwmOtherPager: BalloonFont  "StringEncoding=gb2312:xft:Verdana:pixelsize=12:encoding=iso10646-1"
+*FvwmOtherPager: BalloonYOffset      +2
+*FvwmOtherPager: BalloonBorderWidth  1
+*FvwmOtherPager: NoShapeLabels
+
+# 目前分了4个desktop
+DeskTopName 0  Main
+DeskTopName 1  Internet
+DeskTopName 2  Misc
+DeskTopName 3  Amusement
+
+#### Set the Desktop Size
+# 每个桌面分成2×2个
+DeskTopSize 2x2
+
+

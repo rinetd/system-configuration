@@ -1,0 +1,175 @@
+# 菜单
+
+###################################################################
+#### Menu
+####################################################################
+DestroyMenu MenuFvwmRoot
+AddToMenu MenuFvwmRoot
++   "ROOT MENUS"            Title
++   "&Urxvt   %icons/32x32/xterm.png%"     Exec exec urxvt
++   "&Chrome  %icons/32x32/google-chrome.png%"       Exec exec google-chrome
++   "&Rox Filer            %icons/32x32/rox.png%"               Exec exec rox
++   "X&Kill                        %icons/32x32/xkill.png%"             Pick Destroy
++   ""                                                          Nop
+#+   "D&evelopment              %icons/32x32/development.png%"          Popup MenuDevelopment
+##+   "&Database                 %icons/32x32/database.png%"             Popup MenuDatabase
++   "&Internet                  %icons/32x32/internet.png%"             Popup MenuInternet
++   "&Graphics                  %icons/32x32/graphics.png%"             Popup MenuGraphics
++   "&Applications              %icons/32x32/application.png%"  Popup MenuApplication
++   "&Office                    %icons/32x32/office.png%"               Popup MenuOffice
++   "&Utilities         %icons/32x32/utilities.png%"    Popup MenuUtilities
++   "&Science                   %icons/32x32/science.png%"              Popup MenuScience
++   "&Multimedia                %icons/32x32/multimedia.png%"   Popup MenuMultimedia
++   "S&ystem                    %icons/32x32/system.png%"               Popup MenuSystem
++   "&FVWM                          %icons/32x32/fvwm.png%"                     Popup MenuFvwm
++   "Window Operations  %icons/32x32/windowops.png%"    Popup MenuFvwmWindowOps
++   ""                                                                                  Nop
++   "&Quit                      %icons/32x32/quit.png%"                     Popup MenuQuit
+
+
+DestroyMenu MenuDevelopment
+AddToMenu MenuDevelopment
++   "&Eclipse                   %icons/32x32/eclipse.png%"              Exec exec eclipse
++   "Visual &slickedit  %icons/32x32/slickedit.png%"    Exec exec /usr/local/slickedit/bin/vs
++   "&Mono doc                  %icons/32x32/monodoc.png%"              Exec exec monodoc
+
+DestroyMenu MenuDatabase
+AddToMenu MenuDatabase
++   "&PgAdmin III               %icons/32x32/pgadmin3.png%"             Exec exec pgadmin3
+
+DestroyMenu MenuScience
+AddToMenu MenuScience
+#+   "&QCAD                     %icons/32x32/qcad.png%"                 Exec exec qcad
+##+   "BrlCAD &Archer            %icons/32x32/brlcad.png%"               Exec exec archer
+##+   "BrlCAD &MGED              %icons/32x32/mged.png%"                 Exec exec mged
+
+DestroyMenu MenuApplication
+AddToMenu MenuApplication "Applications" Title
++   "&Gedit                     %icons/32x32/gedit.png%"                Exec exec gedit
++   "&StarDict                  %icons/32x32/stardict.png%"             Exec exec stardict
++   "&Evince                    %icons/32x32/evince.png%"               Exec exec evince
++   "&ChmSee                    %icons/32x32/chmsee.png%"               Exec exec chmsee
++   "&Qalculate                 %icons/32x32/calc.png%"                 Exec exec qalculate
+
+DestroyMenu MenuInternet
+AddToMenu MenuInternet "Internet" Title
++   "Mozilla &Firefox  %icons/32x32/firefox.png%"               Exec exec firefox
++   "&Konqueror        %icons/32x32/konqueror.png%"     Exec exec konqueror
++   "&Opera            %icons/32x32/opera.png%"        Exec exec opera
++   "Mozilla &Thunderbird       %icons/32x32/thunderbird.png%"          Exec exec thunderbird
++   "G&FTP                      %icons/32x32/gftp.png%"                 Exec exec gftp
++   "&Downloader for X  %icons/32x32/nt.png%"       Exec exec nt
++   "&Gaim                      %icons/32x32/gaim.png%"                 Exec exec gaim
+
+
+DestroyMenu MenuOffice
+AddToMenu MenuOffice "Office" Title
++   "&KDE Office            %icons/32x32/koffice.png%"  PopUp    MenuKoffice
++   "&OpenOffice.org 2.3.1      %icons/32x32/office.png%"       Exec exec openoffice.org-2.3.1
++   "OpenOffice.org &Base   %icons/32x32/ooo-base.png%" Exec exec openoffice.org-2.3.1-sbase
++   "OpenOffice.org &Calc   %icons/32x32/ooo-calc.png%" Exec exec openoffice.org-2.3.1-scalc
++   "OpenOffice.org &Draw   %icons/32x32/ooo-draw.png%" Exec exec openoffice.org-2.3.1-sdraw
++   "OpenOffice.org &Impress   %icons/32x32/ooo-impress.png%" Exec exec openoffice.org-2.3.1-simpress
++   "OpenOffice.org &Math   %icons/32x32/ooo-math.png%" Exec exec openoffice.org-2.3.1-smath
++   "OpenOffice.org &Padmin   %icons/32x32/ooo-padmin.png%"      Exec exec openoffice.org-2.3.1-spadmin
++   "OpenOffice.org &Writer   %icons/32x32/ooo-writer.png%"      Exec exec openoffice.org-2.3.1-swriter
+
+DestroyMenu MenuUtilities
+AddToMenu   MenuUtilities "Utilities" Title
++   "&Edit Utilities        %icons/32x32/editor.png%"       Popup   MenuEditor
++   "&View Utilities        %icons/32x32/viewer.png%"       Popup   MenuViewer
++   ""                  Nop
++   "&StarDict                  %icons/32x32/stardict.png%"             Exec exec stardict
++   "&Qalculate                 %icons/32x32/calc.png%"                 Exec exec qalculate
++   "KDE &Calculator    %icons/32x32/kcalc.png%"        Exec exec kcalc
++   "KDE &Dictionary    %icons/32x32/kdict.png%"        Exec exec kdict
+
+DestroyMenu MenuGraphics
+AddToMenu MenuGraphics "Graphics" Title
++   "&GIMP                      %icons/32x32/gimp.png%"                 Exec exec gimp
++   "&GQview                    %icons/32x32/gqview.png%"               Exec exec gqview
++   "&Picture Viewer    %icons/32x32/compupic.xpm%"     Exec exec compupic
++   "&X Viewer          %icons/32x32/xv.png%"           Exec exec xv
++   "G&rab Picture      %icons/32x32/grab.png%"         Exec exec ksnapshot
+
+DestroyMenu MenuSystem
+AddToMenu MenuSystem "System" Title
++   "Mount &CDROM               %icons/32x32/cdrom.png%"                Exec exec sudo mount /cdrom
++   "UMount &CDROM              %icons/32x32/cdrom.png%"                Exec exec sudo umount /cdrom
++   "Mount USB Hard Disk 1      %icons/32x32/usb_harddisk.png%"         Exec exec sudo mount_msdosfs -L zh_CN.GB2312 /dev/da0s1 /mnt/FreeBSD
++   "Mount USB Hard Disk 2      %icons/32x32/usb_harddisk.png%"         Exec exec sudo mount_msdosfs -L zh_CN.GB2312 /dev/da0s2 /mnt/Win32x86
++   "UMount USB Hard Disk 1     %icons/32x32/usb_harddisk.png%"         Exec exec sudo umount /mnt/FreeBSD
++   "Umount USB Hard Disk 2     %icons/32x32/usb_harddisk.png%"         Exec exec sudo umount /mnt/Win32x86
++   "&Xterm                     %icons/32x32/xterm.png%"                Exec exec xterm
++   "X&Kill                     %icons/32x32/xkill.png%"                Pick Destroy
++   "Refresh                    %icons/32x32/restart.png%"              Refresh
+
+DestroyMenu MenuMultimedia
+AddToMenu MenuMultimedia "Multimedia" Title
++   "&MPlayer                   %icons/32x32/mplayer.png%"              Exec exec gmplayer
++   "&Xmms                      %icons/32x32/xmms.png%"                 Exec exec xmms
++   "&RealPlayer                %icons/32x32/realplayer.png%"           Exec exec realplay
++   "&Totem         %icons/32x32/totem.png%"        Exec exec totem
+
+
+DestroyMenu MenuFvwm
+AddToMenu MenuFvwm "FVWM" Title
++   "FvwmConsole                %icons/32x32/control.png%"                      Module FvwmConsole -terminal xterm
+
+DestroyMenu MenuQuit
+AddToMenu MenuQuit "Quit" Title
++   "Restart Fvwm               %icons/32x32/reboot.png%"               Restart
++   "Quit Fvwm                  %icons/32x32/quit.png%"                 Quit
++   ""                                                                  Nop
++   "Reboot System              %icons/32x32/reboot.png%"               Exec exec sudo reboot
++   "Shutdown System            %icons/32x32/quit.png%"                 Exec exec sudo shutdown -h now
+
+#
+DestroyMenu MenuEditor
+AddToMenu MenuEditor "Editors" Title
++   "&Vi IMproved       %icons/32x32/gvim.png%"     Exec exec gvim
++   "GNU &Emacs         %icons/32x32/emacs.png%"    Exec exec emacs
++   "Gnome &Hex Editor  %icons/32x32/ghex.png%"     Exec exec ghex2
++   "&Kedit             %icons/32x32/kedit.png%"    Exec exec kedit
++   "K&ate              %icons/32x32/kate.png%"     Exec exec kate
++   "&Gedit             %icons/32x32/gedit.png%"    Exec exec gedit
+
+DestroyMenu MenuViewer
+AddToMenu MenuViewer "Viewers" Title
++   "&Evince                    %icons/32x32/evince.png%"               Exec exec evince
++   "&HTML File Viewer  %icons/32x32/chmsee.png%"               Exec exec chmsee
++   "&Adobe Acrobat Reader  %icons/32x32/acroread.png%" Exec exec acroread
++   "&KDE PDF Viewer    %icons/32x32/kpdf.png%"         Exec exec kpdf
++   "KDE &dvi Viewer    %icons/32x32/kdvi.png%"         Exec exec kdvi
++   "&Gnome ghostview   %icons/32x32/ggv.png%"          Exec exec ggv
++   "Ghost&view         %icons/32x32/gv.png%"           Exec exec gv
+
+DestroyMenu MenuKoffice
+AddToMenu   MenuKoffice "KDE Office" Title
++   "Koffice &Word      %icons/32x32/kword.png%"        Exec exec kword
++   "Koffice &Arbon     %icons/32x32/karbon.png%"       Exec exec karbon
++   "Koffice &Chart     %icons/32x32/kchart.png%"       Exec exec kchart
++   "Koffice &Exi       %icons/32x32/kexi.png%"         Exec exec kexi
++   "Koffice &Formula   %icons/32x32/kformula.png%"     Exec exec kformula
++   "Koffice &Ivio      %icons/32x32/kivio.png%"        Exec exec kivio
++   "Koffice &Presenter %icons/32x32/kpresenter.png%"   Exec exec kpresenter
++   "Koffice &Rita      %icons/32x32/krita.png%"        Exec exec krita
++   "Koffice &Spread    %icons/32x32/kspread.png%"      Exec exec kspread
++   "Koffice &Ugar      %icons/32x32/kugar.png%"        Exec exec kugar
+
+
+
+
+
+###################################################
+
+
+# some simple default mouse bindings:
+# 在根窗口右键弹出菜单
+Mouse 3 R       A       Menu MenuFvwmRoot Nop
+# 左边的Super键可以用来弹出根菜单
+key Super_L  A  M       Menu MenuFvwmRoot Nop
+# 去掉mouse 1弹出的默认的menu
+Mouse 1 R A -
+#Mouse 2        R       A       Menu ProgramsMenu Nop
+

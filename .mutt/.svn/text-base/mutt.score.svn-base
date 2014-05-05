@@ -1,0 +1,20 @@
+# -*- muttrc -*-
+#
+# score settings for mutt.
+#
+
+
+
+#打分
+# 新信件+1分
+score "~N !~p" +1
+# 新邮件，并且是直接发送给我的+2
+score "~N ~p" +2
+
+
+# 上次没有读的邮件 +1
+score "~O" +1
+
+
+
+

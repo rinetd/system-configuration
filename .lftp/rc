@@ -1,0 +1,3 @@
+set ftp:charset gbk
+set file:charset utf8
+set ssl:verify-certificate no

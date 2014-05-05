@@ -1,0 +1,23 @@
+#!/bin/bash
+#==============================================================================
+#
+#        Filename:  @(#)clear-mem.sh
+#
+#     Description:  
+# 
+#         Version:  1.0
+#         Created:  2013/05/07 15:22:25
+#         Changed:  <vinurs 05/07/2013 15:23:55>
+#        Revision:  none
+# 
+#          Author:  zhanghaiyuan
+#           Email:  <zhang.haiyuan@server.embedway.com>
+# 
+#==============================================================================
+##
+
+su
+echo 3 > /proc/sys/vm/drop_caches
+
+
+exit 0

@@ -1,0 +1,22 @@
+!
+! ! Swap Caps_Lock and Control_L
+remove Lock = Caps_Lock
+remove Control = Control_L
+keysym Control_L = Caps_Lock
+keysym Caps_Lock = Control_L
+add Lock = Caps_Lock
+add Control = Control_L
+
+remove Control = Control_R
+remove mod4 = Super_R
+remove mod4 = Control_R
+! set Menu the Super_R function
+keycode 135 = Super_R
+!keycode 135 = Hyper_R
+! set Super_R the control function
+keycode 134 = Control_R
+add Control = Control_R
+!clear mod3
+!clear mod4
+! add mod3 = Super_L
+add mod4 = Super_R

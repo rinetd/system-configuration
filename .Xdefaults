@@ -1,0 +1,148 @@
+!! URxvt  设置
+!Rxvt.termName:rxvt-unicode
+!title
+!Rxvt.title:Rxvt-Unicode
+
+Urxvt*termName:screen-256color
+
+! 禁用响铃
+Rxvt.visualBell:False
+Rxvt.depth:0
+
+! window geometry set 
+Rxvt.geometry: 95x40+300+120
+
+Rxvt.buffered: True
+! Rxvt.jumpScroll: False
+Rxvt.jumpScroll: True
+Rxvt.skipScroll: False
+
+! losts focus setting
+Rxvt.fading: 30%
+Rxvt.fadeColor: cyan
+
+! set color 
+Rxvt.color0:black
+Rxvt.color1:#CD0000
+Rxvt.color2:#00CD00
+Rxvt.color3:#CDCD00
+Rxvt.color4:#1E90EF
+Rxvt.color5:#CD00CD
+Rxvt.color6:#00CDCD
+Rxvt.color7:#E5E5E5
+Rxvt.color8:#4C4C4C
+Rxvt.color9:#FF0000
+Rxvt.color10:#00FF00
+Rxvt.color11:#FFFF00
+Rxvt.color12:#4682B4
+Rxvt.color13:#FF00FF
+Rxvt.color14:#00FFFF
+Rxvt.color15:#FFFFFF
+!设置颜色深度,这个好像针对透明效果才有用
+URxvt.depth: 32
+!Rxvt.background:#21385A
+!设置背景色,这个真透明的设置
+! URxvt.background: rgba:0000/0000/0000/cccc
+URxvt.background: [80]black
+!Rxvt.background:black
+Rxvt.foreground:#FFFBDE
+!Rxvt.foreground:green
+Rxvt.colorBD:yellow
+Rxvt.colorIT:yellow
+Rxvt.colorUL:green
+! for the underline itself
+Rxvt.underlineColor:yellow
+Rxvt.cursorColor:green
+Rxvt.cursorColor2:black
+
+! 设置左上角的小图标
+! Rxvt.iconFile:~/.sawfish/pixmap/rxvt-unicode.xpm
+! Rxvt.iconFile:/home/vinurs/.sawfish/pixmap/rxvt-unicode.xpm
+
+
+Rxvt.hold: False
+
+Rxvt.secondaryScreen: False
+!Rxvt.secondaryScreen: True
+Rxvt.secondaryScroll: False
+
+! turn on scrollbar滚动条选默认样式
+Rxvt.scrollstyle:rxvt      
+!Rxvt.scrollBar: True
+Rxvt.scrollBar: False
+! set scrollbar thickness
+URxvt.thickness:16
+! 滚动条在右侧
+Rxvt.scrollBar_right:True     
+! 屏幕缓冲0行，彻底抛弃鼠标滚轮
+Rxvt.saveLines:0
+
+!display an rxvt scrollbar without a trouth
+URxvt.scrollBar_floating: False
+URxvt.scrollBar_align:center
+! scroll to botton when tty receives output
+URxvt.scrollTtyOutput: True
+! scroll with scrollback buffer when tty receives new lines
+URxvt.scrollWithBuffer:True
+URxvt.scrollTtyKeypress:True
+
+URxvt.internalBorder:0
+URxvt.externalBorder:0
+URxvt.borderLess: False
+URxvt.lineSpace:0
+
+!!光标闪烁
+URxvt.cursorBlink:False
+! 光标下划线
+URxvt.cursorUnderline:False
+
+! pointer settings
+URxvt.pointerBlank: True
+!URxvt.pointerColor: black
+!URxvt.pointerColor2: red
+! specify number seconds before blanking the pointer
+URxvt.pointerBlankDelay: 2
+
+URxvt.secondaryScroll: True
+!URxvt.backspacekey:
+!URxvt.deletekey:
+
+
+! false, the mouse wheel scrolls five lines
+URxvt.mouseWheelScrollPage: True
+
+
+
+URxvt.inputMethod: ibus
+
+! 是否当作login shell，暂时当作一个login shell
+! URxvt.loginShell: False
+URxvt.loginShell: True
+
+! 不开启透明功能,而且这个透明功能是伪透明
+URxvt.transparent: False
+!URxvt.transparent: True
+! 这个我不用
+!URxvt.shading:0
+
+! 关闭urxvt的searchable-scrollback
+URxvt.searchable-scrollback:CM-s
+
+! font set
+
+URxvt.font:xft:文泉驿等宽正黑:size=12:style=Regular:antialias=true
+URxvt.boldfont:xft:文泉驿等宽正黑:size=12:style=BOld:antialias=true
+
+
+! 这个主要是为emacs服务的, contrl-enter
+! 不过这样的组合键在emacs里面还是少用为好，可移植性不好
+URxvt.keysym.Control-Return: \033[E
+URxvt.keysym.Control-Shift-Return: \033[F
+! emacs里面的delete-other-windows
+URxvt.keysym.C-semicolon: \033[G
+!URxvt.keysym.Return: \033[H
+
+
+
+!!! the end
+
