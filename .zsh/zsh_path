@@ -1,0 +1,4 @@
+# define all kinds of path for zsh
+
+# autoload functions path
+export FPATH=~/.zsh/autoload-functions/:$FPATH

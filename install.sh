@@ -7,7 +7,7 @@
 # 
 #         Version:  1.0
 #         Created:  2013/09/27 10:02:22
-#         Changed:  <vinurs 05/05/2014 11:24:55>
+#         Changed:  <vinurs 05/05/2014 11:35:02>
 #        Revision:  none
 # 
 #          Author:  zhanghaiyuan
@@ -18,7 +18,7 @@
 
 
 # 获得系统类型:linux or mac
-source system-type.sh
+source bin/system-type.sh
 
 
 # export system type, so in other shell scripts can use it
@@ -33,7 +33,7 @@ case $answer in
         echo "the system type is right, continue"
          ;;
     N|n)
-        echo  "the system type is not right, cancle"
+        echo  "the system type is not right, cancled"
         exit 0
         ;;
     *)
@@ -41,8 +41,24 @@ case $answer in
         exit 0
 esac
 
-export system_type
+# export system_type
 
+# dirs
+# git clone dir
+current_dir=`pwd`
+echo "current is $current_dir"
+# destination dir
+install_dir="~/"
+echo "install dir is $install_dir"
+# backup dir
+suffix=`(date '+%Y-%m%d-%H%M%S')`
+backup_dir="backup-${suffix}"
+mkdir ${backup_dir}
+echo "backup directory is ${backup_dir}"
+
+export current_dir
+export install_dir
+export backup_dir
 
 # common scripts
 

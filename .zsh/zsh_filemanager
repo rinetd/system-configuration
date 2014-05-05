@@ -1,0 +1,117 @@
+# using zsh as file manager
+
+
+# open pdf
+function qo-pdf ()
+{
+    (evince $* >/dev/null 2>&1 &)
+}
+
+# open xls
+function qo-excel()
+{
+    (et $* >/dev/null 2>&1 &)
+}
+
+
+# open doc
+function qo-word()
+{
+    (wps $* >/dev/null 2>&1 &)
+}
+
+
+# get file type
+function get-filetype()
+{
+    local filetype
+    local file_suffix
+    
+    filetype=$(echo `(file --mime-type $1)`)
+    filetype=$(echo ${filetype#*:\ })
+
+    # file_suffix=$(echo ${1#*.})    
+    file_suffix=$(echo ${1##*.})
+    
+    # application/vnd.ms-office
+    # some doc file has the type application/vnd.ms-office, but it is not excel
+    if [ "$filetype"x = "application/vnd.ms-office"x ]; then
+        if [ "$file_suffix"x = "doc"x  ]; then
+            filetype="doc"
+        fi
+    fi
+    
+    echo $filetype
+}
+
+function qo-help()
+{
+    # we only support one argument
+    if [ $# != 1 ]; then
+        echo "usage: qo filename"
+        return 1
+    fi
+
+    return 0
+}
+
+# macro like c
+ERR_ARG_NUM=1
+ERR_FILE_NOT_EXISTS=2
+
+# another file manager----quick open(qo)
+# open file by file --mime-type
+function qo()
+{
+    qo-help $*
+    if [ $? != 0 ]; then
+        return ${ERR_ARG_NUM}
+    fi
+
+    # check if file exists
+    if [ ! -f "$1" ]; then  
+        echo "file $1 not exists"
+        return ${ERR_FILE_NOT_EXISTS}
+    fi  
+
+
+
+    # check arguments counters, we only support
+    filetype=$(get-filetype $1)
+
+    # open
+    qo-by-type ${filetype} $1
+}
+
+
+function qo-by-type()
+{
+    case $1 in
+        # text
+	    text/x-shellscript | \
+            text/plain | \
+            text/x-c)
+            xec $2
+	        ;;
+        # word
+        application/octet-stream | \
+            application/msword | \
+            doc)
+            qo-word $2
+            ;;
+        # excel
+        application/vnd.ms-office | \
+            application/vnd.ms-excel)
+            qo-excel $2
+            ;;
+        # pdf
+        application/pdf)
+            qo-pdf $2
+            ;;
+	    *)
+            echo "there is no appropriate application to open $2: $1"
+            return
+	        ;;
+    esac
+}
+

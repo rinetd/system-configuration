@@ -1,0 +1,32 @@
+# using zsh as file manager
+
+# Suffix Aliases
+# pdf
+alias -s pdf=vinurs-pdf
+# becasuse el, lisp file can open or execute, so we can't distinguish them , so we won't use the suffix aliases for them 
+# alias -s el=xec
+# alias -s lisp=xec
+
+# MIME system
+autoload -U zsh-mime-setup
+zsh-mime-setup
+
+# open pdf
+function vinurs-pdf ()
+{
+    (evince $* >/dev/null 2>&1 &)
+}
+
+# open xls
+function vinurs-xls()
+{
+    (et $* >/dev/null 2>&1 &)
+}
+
+
+# open doc
+function vinurs-doc()
+{
+    (wps $* >/dev/null 2>&1 &)
+}
+
