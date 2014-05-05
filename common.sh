@@ -7,7 +7,7 @@
 # 
 #         Version:  1.0
 #         Created:  2014/05/05 11:03:38
-#         Changed:  <vinurs 05/05/2014 11:50:34>
+#         Changed:  <vinurs 05/05/2014 19:02:23>
 #        Revision:  none
 # 
 #          Author:  zhanghaiyuan
@@ -15,6 +15,8 @@
 # 
 #==============================================================================
 ##
+
+
 
 #  NULL
 files_common=()
@@ -30,44 +32,52 @@ files_common+=(.zshrc .zshenv .zsh .zprofile .zlogin .zlogout)
 files_common+=(.tmux.conf .tmux)
 # vim
 files_common+=(.vimrc)
-# sbcl
-files_common+=(.sbclrc)
 # htop
 files_common+=(.htoprc)
 # indent
 files_common+=(.indent.pro)
 # lftp
 files_common+=(.lftp)
-# mailcap
-files_common+=(.mailcap)
 # emacs
 files_common+=(.emacs .emacs.d)
-# conky
-files_common+=(.conkyrc)
 # crontab
 files_common+=(.cron.d)
-# fetchmail
-files_common+=(.fetchmailrc)
-# fvwm
-files_common+=(.fvwm)
 # global
 files_common+=(.globalrc)
-# smtp
-files_common+=(.msmtprc)
-# mutt
-files_common+=(.mutt .muttrc)
-# procmail
-files_common+=(.procmailrc)
-# proxychains
-files_common+=(.proxychains)
-# sawfish
-files_common+=(.sawfishrc .sawfish)
-# stardict
-files_common+=(.stardict)
-# xmodmap
-files_common+=(.xmodmaprc)
 # git
 files_common+=(.gitconfig)
+
+# echo "*************************"
+# echo $current_dir
+# echo $install_dir
+# echo $backup_dir
+# echo "*************************"
+
+
+# files
+for i in "${files_common[@]}"; do
+    
+    # backup
+    mv ~/$i ${backup_dir}
+    ln -s $current/$i  $install_dir/
+
+done
+
+
+# the config files are in .config/ directory
+dotconfig_common_array=()
+# # fcitx输入法
+# files_array+=(fcitx)
+
+
+# files
+for i in "${dotconfig_files_array[@]}"; do
+
+    # backup
+    mv $install_dir/.config/$i ${backup_dir}
+    ln -s $current_dir/.config/$i  $install_dir/.config/
+
+done
 
 
 
