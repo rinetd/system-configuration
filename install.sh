@@ -7,7 +7,7 @@
 # 
 #         Version:  1.0
 #         Created:  2013/09/27 10:02:22
-#         Changed:  <vinurs 05/05/2014 10:52:39>
+#         Changed:  <vinurs 05/05/2014 11:24:55>
 #        Revision:  none
 # 
 #          Author:  zhanghaiyuan
@@ -18,13 +18,8 @@
 
 
 # 获得系统类型:linux or mac
+source system-type.sh
 
-uname -a | grep 'GNU/Linux' >/dev/null
-if [[ $? != 0 ]]; then
-    system_type=mac
-else
-    system_type=linux
-fi
 
 # export system type, so in other shell scripts can use it
 echo "****************************************************************"
@@ -39,6 +34,7 @@ case $answer in
          ;;
     N|n)
         echo  "the system type is not right, cancle"
+        exit 0
         ;;
     *)
         echo "unknown choice, quit"
@@ -48,6 +44,22 @@ esac
 export system_type
 
 
+# common scripts
+
+sh common.sh
+
+case $system_type in
+    linux)
+        echo "for linux"
+        sh linux.sh
+        ;;
+    mac)
+        sh mac.sh
+        echo "for mac"
+        ;;
+    *)
+        ;;
+esac
 
 exit 0
 
