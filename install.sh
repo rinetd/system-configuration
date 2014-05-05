@@ -7,7 +7,7 @@
 # 
 #         Version:  1.0
 #         Created:  2013/09/27 10:02:22
-#         Changed:  <vinurs 04/28/2014 17:44:57>
+#         Changed:  <vinurs 05/05/2014 10:52:39>
 #        Revision:  none
 # 
 #          Author:  zhanghaiyuan
@@ -27,7 +27,24 @@ else
 fi
 
 # export system type, so in other shell scripts can use it
-echo "system type is $system_type"
+echo "****************************************************************"
+echo "system type is $system_type ?"
+echo "****************************************************************"
+# 确认系统类型，如果系统类型猜测得不对，那么立马进行中断
+echo -n "It's right?[y/n]:"
+read answer
+case $answer in
+    Y|y)
+        echo "the system type is right, continue"
+         ;;
+    N|n)
+        echo  "the system type is not right, cancle"
+        ;;
+    *)
+        echo "unknown choice, quit"
+        exit 0
+esac
+
 export system_type
 
 
