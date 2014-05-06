@@ -17,6 +17,6 @@
 ##
 
 /bin/pwd
-/bin/pwd | xclip -i -sel clipboard
+#/bin/pwd | xclip -i -sel clipboard
 
 
