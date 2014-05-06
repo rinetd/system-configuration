@@ -7,7 +7,7 @@
 # 
 #         Version:  1.0
 #         Created:  2013/02/21 09:00:38
-#         Changed:  <vinurs 02/21/2013 09:01:46>
+#         Changed:  <vinurs 05/06/2014 09:24:06>
 #        Revision:  none
 # 
 #          Author:  zhanghaiyuan
@@ -17,6 +17,16 @@
 ##
 
 /bin/pwd
-#/bin/pwd | xclip -i -sel clipboard
+case $system_type in
+    linux)
+        /bin/pwd | xclip -i -sel clipboard
+        ;;
+    mac)
+        ;;
+    *)
+        ;;
+esac
+
+
 
 
