@@ -120,12 +120,12 @@ hash -d X="/etc/X11"
 hash -d BK="/home/r00t/config_bak"
 
 ##for Emacs在Emacs终端中使用Zsh的一些设置 不推荐在Emacs中使用它
-if [[ "$TERM" == "dumb" ]]; then
-    setopt No_zle
-    PROMPT='%n@%M %/
->>'
-    alias ls='ls -F'
-fi 
+#if [[ "$TERM" == "dumb" ]]; then
+#    setopt No_zle
+#    PROMPT='%n@%M %/
+#>>'
+#    alias ls='ls -F'
+#fi 
 
 
 
@@ -286,6 +286,8 @@ fi
 [ -z "$TMUX" ] && export TERM=xterm-256color
 
 # 设置PATH路径
+#export PATH='/usr/local/bin:$PATH' 
+export PATH=$PATH:~/bin/
 
 # 设置gnu global所要用到的环境变量
 export GTAGSLIBPATH=~/.global

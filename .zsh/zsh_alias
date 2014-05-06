@@ -4,42 +4,40 @@
 alias top='htop'
 alias mv='mv -i'
 alias rm='rm -i'
-alias ls='ls -F --color=auto'
+alias ls='ls -F '
+
+case $system_type in
+    linux)
+        alias ls='ls -F --color=auto'
+        ;;
+    mac)
+        ;;
+    *)
+        ;;
+esac
+
+
 alias ll='ls -l'
 alias grep='grep --color=auto -n'
 alias ee='emacsclient -t'
 alias g-compile='cd ~/.personal/compile'
 alias g-trash='cd ~/.local/share/Trash/files'
 
-#alias mc='mc --xterm'
-
 
 ################### emacs config start ###################
-# check if emacs daemon has started
-function check-emacs-daemon()
+alias emacs='open -a emacs --args'
+function qec()
 {
-    ps -ef |grep 'emacs --daemon' | grep -v 'grep' >/dev/null
-    # emacs has not stated, then start it
+    # check if emacs daemon has started
+    ps -ef |grep 'Emacs.app' | grep -v 'grep' >/dev/null
     if [[ $? != 0 ]]; then
-        (emacs --daemon >/dev/null 2>&1 &)
-        # 启动emacs是需要时间的，这里设置为5s中，一般的话是用不到的，因为系统起来以后emacs就自>动起>来了
-        echo "emacs daemon hasn't started, wait a minute plz, starting..."
-        sleep 5
+        emacs
+	sleep 3
     fi
+    (/Applications/Emacs.app/Contents/MacOS/bin/emacsclient $* 2>&1 >/dev/null &)
 }
-# emacs config
-# using open emacs xwindow
-function xec ()
-{
-    check-emacs-daemon
-    (wmctrl -a emacs@ && emacsclient $* >/dev/null  2>&1 &) || (emacsclient -c $* >/dev/null  2>&1 &)
-}
-# using open emacs in terminal
-function tec()
-{
-    check-emacs-daemon
-    emacsclient -nw $*
-}
+
+
 #################### emacs config end ####################
 
 

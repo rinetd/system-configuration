@@ -17,6 +17,12 @@
 ##
 
 
+brew install zsh
+brew install lftp
+brew install wget
+brew install global
+brew install htop
+brew install indent
 
 
 exit 0
