@@ -48,7 +48,7 @@ esac
 current_dir=`pwd`
 echo "current is $current_dir"
 # destination dir
-install_dir="~/"
+install_dir=$HOME
 echo "install dir is $install_dir"
 # backup dir
 suffix=`(date '+%Y-%m%d-%H%M%S')`
@@ -79,10 +79,10 @@ esac
 # install software
 case $system_type in
     linux)
-        sh linux-software.sh
+        #sh linux-software.sh
         ;;
     mac)
-        sh mac-software.sh
+        #sh mac-software.sh
         ;;
     *)
         ;;

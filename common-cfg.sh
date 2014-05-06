@@ -1,13 +1,13 @@
 #!/bin/bash
 #==============================================================================
 #
-#        Filename:  @(#)common.sh
+#        Filename:  @(#)common-cfg.sh
 #
 #     Description:  common for mac and linux
 # 
 #         Version:  1.0
 #         Created:  2014/05/05 11:03:38
-#         Changed:  <vinurs 05/05/2014 19:02:23>
+#         Changed:  <vinurs 05/06/2014 17:29:13>
 #        Revision:  none
 # 
 #          Author:  zhanghaiyuan
@@ -47,22 +47,14 @@ files_common+=(.globalrc)
 # git
 files_common+=(.gitconfig)
 
-# echo "*************************"
- echo $current_dir
- echo $install_dir
- echo $backup_dir
-# echo "*************************"
 
 
 # files
 for i in "${files_common[@]}"; do
     
     # backup
-    echo "i is $i"
     mv $install_dir/$i ${backup_dir}
-    echo ln -s $current_dir/$i  $install_dir/
-    #ln -s $current_dir/$i $install_dir/
-    ln -s $current_dir/$i ~/
+    ln -s  $current_dir/$i $install_dir/
 
 done
 
