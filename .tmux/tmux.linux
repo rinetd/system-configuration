@@ -1,0 +1,13 @@
+# 在copy-mode copy好了以后就自动copy到系统剪切板
+# Remove the default binding for copy-selection, substitute emacs-copy with vi-copy if you're using vi-mode
+unbind -t emacs-copy M-w
+# Bind a different key to copy-selection
+bind-key -t emacs-copy c copy-selection 
+# Bind prefix-M-w to copy-selection, save selection to buffer, and then pipe it's contents to pbcopy
+bind M-w send-keys c \; \
+	run -b "tmux save-buffer - | xclip -i -sel clipboard"
+
+#直接将系统剪切板的东西copy过来
+bind  ] run -b "tmux set-buffer \"$(xclip -o -sel clipboard)\"; tmux paste-buffer"
+
+

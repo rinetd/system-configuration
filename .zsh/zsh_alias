@@ -6,39 +6,13 @@ alias mv='mv -i'
 alias rm='rm -i'
 alias ls='ls -F '
 
-case $system_type in
-    linux)
-        alias ls='ls -F --color=auto'
-        ;;
-    mac)
-        ;;
-    *)
-        ;;
-esac
-
 
 alias ll='ls -l'
 alias grep='grep --color=auto -n'
-alias ee='emacsclient -t'
 alias g-compile='cd ~/.personal/compile'
 alias g-trash='cd ~/.local/share/Trash/files'
 
 
-################### emacs config start ###################
-alias emacs='open -a emacs --args'
-function qec()
-{
-    # check if emacs daemon has started
-    ps -ef |grep 'Emacs.app' | grep -v 'grep' >/dev/null
-    if [[ $? != 0 ]]; then
-        emacs
-	sleep 3
-    fi
-    (/Applications/Emacs.app/Contents/MacOS/bin/emacsclient $* 2>&1 >/dev/null &)
-}
-
-
-#################### emacs config end ####################
 
 
 # 重新设置一下pwd，这个是我自己写的命令，可以用来直接将当前目录copy到剪贴板

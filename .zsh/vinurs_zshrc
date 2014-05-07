@@ -299,3 +299,15 @@ if [[ -f ~/work/.company ]]; then
     source ~/work/.company
 fi
 
+case $system_type in
+    linux)
+        source ~/.zsh/zsh_linux
+        ;;
+    mac)
+        source ~/.zsh/zsh_mac
+        ;;
+    *)
+        ;;
+esac
+
+

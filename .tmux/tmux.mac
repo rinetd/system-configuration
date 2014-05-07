@@ -1,0 +1,6 @@
+# copy选择
+bind-key -t emacs-copy v begin-selection
+bind-key -t emacs-copy y copy-pipe "reattach-to-user-namespace pbcopy"
+
+bind-key -t emacs-copy 'C-f' page-down
+bind-key -t emacs-copy 'C-v' page-up
