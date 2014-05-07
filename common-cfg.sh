@@ -7,7 +7,7 @@
 # 
 #         Version:  1.0
 #         Created:  2014/05/05 11:03:38
-#         Changed:  <vinurs 05/06/2014 17:29:13>
+#         Changed:  <vinurs 05/07/2014 10:21:45>
 #        Revision:  none
 # 
 #          Author:  zhanghaiyuan
@@ -30,8 +30,10 @@ files_common+=(.bashrc .bash_profile .bash_logout)
 files_common+=(.zshrc .zshenv .zsh .zprofile .zlogin .zlogout)
 # tmux
 files_common+=(.tmux.conf .tmux)
+# filezilla
+files_common+=(.filezilla)
 # vim
-files_common+=(.vimrc)
+files_common+=(.vimrc .vim .viminfo)
 # htop
 files_common+=(.htoprc)
 # indent
@@ -66,7 +68,7 @@ dotconfig_common_array=()
 
 
 # files
-for i in "${dotconfig_files_array[@]}"; do
+for i in "${dotconfig_common_array[@]}"; do
 
     # backup
     mv $install_dir/.config/$i ${backup_dir}
