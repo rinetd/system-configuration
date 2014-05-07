@@ -7,7 +7,7 @@
 # 
 #         Version:  1.0
 #         Created:  2014/05/05 11:03:38
-#         Changed:  <vinurs 05/07/2014 10:21:45>
+#         Changed:  <vinurs 05/07/2014 10:37:21>
 #        Revision:  none
 # 
 #          Author:  zhanghaiyuan
@@ -63,15 +63,20 @@ done
 
 # the config files are in .config/ directory
 dotconfig_common_array=()
-# # fcitx输入法
-# files_array+=(fcitx)
+# fcitx输入法
+dotconfig_common_array+=(fcitx)
+dotconfig_common_array+=(emelfm2)
+dotconfig_common_array+=(fbpanel)
+dotconfig_common_array+=(mc)
 
+
+mkdir ${backup_dir}/.config/
 
 # files
 for i in "${dotconfig_common_array[@]}"; do
 
     # backup
-    mv $install_dir/.config/$i ${backup_dir}
+    mv $install_dir/.config/$i ${backup_dir}/.config/
     ln -s $current_dir/.config/$i  $install_dir/.config/
 
 done
