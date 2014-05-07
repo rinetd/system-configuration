@@ -7,7 +7,7 @@
 # 
 #         Version:  1.0
 #         Created:  2014/05/05 11:03:55
-#         Changed:  <vinurs 05/07/2014 10:23:49>
+#         Changed:  <vinurs 05/07/2014 10:39:55>
 #        Revision:  none
 # 
 #          Author:  zhanghaiyuan
@@ -34,7 +34,7 @@ files_linux+=(.proxychains)
 files_linux+=(.sawfish .sawfishrc)
 files_linux+=(.sbclrc)
 files_linux+=(.stardict)
-# files_linux+=(virtual-share)
+files_linux+=(virtual-share)
 
 files_linux+=(.Xdefaults)
 files_linux+=(.xmodmaprc)
