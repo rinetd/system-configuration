@@ -286,7 +286,7 @@ fi
 [ -z "$TMUX" ] && export TERM=xterm-256color
 
 # 设置PATH路径
-#export PATH='/usr/local/bin:$PATH' 
+#export PATH="/usr/local/bin:$PATH" 
 export PATH=$PATH:~/bin/
 
 # 设置gnu global所要用到的环境变量

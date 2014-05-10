@@ -4,7 +4,7 @@
 ;;
 ;; Author: zhang.haiyuan@server.embedway.com
 ;; Version: $Id: @(#)vinurs-server-client.el,v 0.0 2013/02/18 19:25:17 vinurs Exp $
-;; Changed: <vinurs 08/27/2013 10:10:42>
+;; Changed: <vinurs 05/11/2014 07:38:55>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -69,6 +69,9 @@
 ;;                                     (server-edit)
 ;;                                     ))))
 
+(if (eq system-type 'darwin)
+    (server-start)
+  )
 
 
 ;;; vinurs-server-client.el ends here

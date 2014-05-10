@@ -4,3 +4,4 @@ el-get
 .emacs-desktop
 .emacs-places
 ac-comphist.dat
+.zcache

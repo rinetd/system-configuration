@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.victor@gmail.com
 ;; Version: $Id: @(#)vinurs-dot-emacs.el 0.0 2011/03/22 11:05:27 victor Exp $
-;; Changed: <vinurs 09/02/2013 12:06:08>
+;; Changed: <vinurs 05/07/2014 22:52:23>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -54,6 +54,7 @@
         ;; c
 
         ;; global gtags
+        ;; ggtags
         xgtags                          ;for global
         xgtags-extension                ;for global
 

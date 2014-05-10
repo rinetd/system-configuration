@@ -1,18 +1,19 @@
 ################### mac emacs config start ###################
+alias emacs='open -a emacs --args'
+alias ee='emacsclient -t'
+alias ls='ls -G'
+
+
 function qec()
 {
     # check if emacs daemon has started
     ps -ef |grep 'Emacs.app' | grep -v 'grep' >/dev/null
     if [[ $? != 0 ]]; then
-        emacs
-	    sleep 3
+        emacs 
+	sleep 2
     fi
     (/Applications/Emacs.app/Contents/MacOS/bin/emacsclient $* 2>&1 >/dev/null &)
 }
-
-
-alias emacs='open -a emacs --args'
-alias ee='emacsclient -t'
 
 
 #################### mac emacs config end ####################
