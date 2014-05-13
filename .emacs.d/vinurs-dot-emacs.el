@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.victor@gmail.com
 ;; Version: $Id: @(#)victor-doc-emacs.el,v 0.0 2011/03/22 11:05:27 victor Exp $
-;; Changed: <vinurs 05/12/2014 23:36:18>
+;; Changed: <vinurs 05/13/2014 21:54:50>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -47,8 +47,9 @@
 ;; key bindings
 ;; for emacs
 (when (eq system-type 'darwin) ;; mac specific settings
-  (setq mac-option-modifier 'alt)
-  (setq mac-command-modifier 'meta)
+  (setq mac-right-option-modifier 'control)
+  (setq mac-right-command-modifier 'meta)
+
   (global-set-key [kp-delete] 'delete-char) ;; sets fn-delete to be right-delete
   )
 
