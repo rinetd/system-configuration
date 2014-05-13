@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.victor@gmail.com
 ;; Version: $Id: @(#)victor-doc-emacs.el,v 0.0 2011/03/22 11:05:27 victor Exp $
-;; Changed: <vinurs 05/13/2014 21:54:50>
+;; Changed: <vinurs 05/13/2014 22:08:14>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -44,14 +44,6 @@
 ;;;;  User Options, Variables
 ;;;;##########################################################################
 
-;; key bindings
-;; for emacs
-(when (eq system-type 'darwin) ;; mac specific settings
-  (setq mac-right-option-modifier 'control)
-  (setq mac-right-command-modifier 'meta)
-
-  (global-set-key [kp-delete] 'delete-char) ;; sets fn-delete to be right-delete
-  )
 
 ;;TODO: 在el-get之前要增加一些最基本的函数，例如如何同时增加多个hook之类,这个函数在ahei-misc里面其实已经有了
 ;; 把要加载的文件的路径全部加载进去
@@ -100,6 +92,11 @@
 ;; el-get
 (load "~/.emacs.d/vinurs-el-get.el")
 
+;; for mac or linux
+(if (eq system-type 'darwin) ;; mac specific settings
+    (load "~/.emacs.d/mac/vinurs-mac.el")
+  (load "~/.emacs.d/linux/vinurs-linux.el")
+  )
 
 ;; 
 
