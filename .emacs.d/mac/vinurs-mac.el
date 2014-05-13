@@ -4,7 +4,7 @@
 ;;
 ;; Author: zhang.haiyuan@server.embedway.com
 ;; Version: $Id: @(#)vinurs-mac.el,v 0.0 2014/05/13 22:04:15 vinurs Exp $
-;; Changed: <vinurs 05/13/2014 22:09:57>
+;; Changed: <vinurs 05/13/2014 22:19:37>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
