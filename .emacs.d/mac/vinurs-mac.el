@@ -4,7 +4,7 @@
 ;;
 ;; Author: zhang.haiyuan@server.embedway.com
 ;; Version: $Id: @(#)vinurs-mac.el,v 0.0 2014/05/13 22:04:15 vinurs Exp $
-;; Changed: <vinurs 05/13/2014 22:19:37>
+;; Changed: <vinurs 05/13/2014 23:10:22>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -46,14 +46,13 @@
 
 ;; key bindings
 ;; for emacs
-(when (eq system-type 'darwin) ;; mac specific settings
-  (setq mac-right-option-modifier 'control)
-  (setq mac-right-command-modifier 'meta)
-  (setq mac-left-option-modifier 'alt)
-  (setq mac-left-command-modifier 'meta)
+(setq mac-right-option-modifier 'control)
+(setq mac-left-option-modifier 'alt)
 
-  (global-set-key [kp-delete] 'delete-char) ;; sets fn-delete to be right-delete
-  )
+(setq mac-command-modifier 'meta)
+
+
+(global-set-key [kp-delete] 'delete-char) ;; sets fn-delete to be right-delete
 
 
 
