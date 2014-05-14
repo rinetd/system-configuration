@@ -23,6 +23,10 @@ brew install wget
 brew install global
 brew install htop
 brew install indent
+# for common lisp
+brew install sbcl
+# for git log
+brew install tig
 
 
 exit 0

@@ -41,7 +41,13 @@ sudo dnf install ncurses-devel
 sudo dnf install -y qemu-kvm libvirt virt-install bridge-utils
 
 # basic
-sudo dnf install texinfo
+sudo dnf install -y texinfo
+
+# git log
+sudo dnf install -y tig
+
+# for common lisp
+sudo dnf install -y sbcl
 
 # cscope-indexer
 sudo dnf install -y cscope
