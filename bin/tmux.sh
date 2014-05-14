@@ -7,7 +7,7 @@
 # 
 #         Version:  1.0
 #         Created:  2012/08/05 10:24:48
-#         Changed:  <vinurs 05/13/2014 10:32:06>
+#         Changed:  <vinurs 05/14/2014 14:24:15>
 #        Revision:  none
 # 
 #          Author:  zhanghaiyuan
@@ -72,7 +72,9 @@ else
     # 一次多创建几个window，省得以后再创建
     #tmux attach-session -t $TMUX_SESSION \; new-window
     # emacs
-    tmux attach-session -t $TMUX_SESSION \; new-window \; send-keys 'test "$system_type"x = "mac"x && emacs' C-m \; send-keys 'exit' C-m \; detach-client
+    # tmux attach-session -t $TMUX_SESSION \; new-window \; send-keys 'test "$system_type"x = "mac"x && emacs' C-m \; send-keys 'exit' C-m \; detach-client
+    tmux attach-session -t $TMUX_SESSION \; new-window \; send-keys 'test "$system_type"x = "mac"x && emacs' C-m \; detach-client
+
     tmux attach-session -t $TMUX_SESSION \; new-window 
  
 fi
