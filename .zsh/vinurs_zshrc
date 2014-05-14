@@ -1,6 +1,7 @@
 # this is my own zsh configuration files
 
-source ~/bin/system-type.sh
+#source ~/bin/system-type.sh
+export system_type=$(uname)
 
 # set default editor
 export EDITOR='vinurs-emacs'
