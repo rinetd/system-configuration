@@ -1,5 +1,5 @@
 /* ******************************************************************************
- * Copyright (c) 2013 EmbedWay Information Technologies Co. Ltd.
+ * Copyright (c) (>>>YEAR<<<) EmbedWay Information Technologies Co. Ltd.
  * ALL rights reserved.
  * ******************************************************************************/
 /*!  
