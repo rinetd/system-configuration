@@ -27,6 +27,8 @@ brew install indent
 brew install sbcl
 # for git log
 brew install tig
+# wget
+brew install wget
 
 
 exit 0
