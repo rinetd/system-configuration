@@ -75,10 +75,6 @@
 ;; (require 'victor-paren-settings)
 
 
-;; 所有的自动补全的配置
-(require 'victor-auto-complete-settings)
-;; (require 'victor-all-auto-complete-settings)
-
 
 
 ;;svn的配置
