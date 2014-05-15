@@ -301,10 +301,10 @@ if [[ -f ~/work/.company ]]; then
 fi
 
 case $system_type in
-    linux)
+    Linux)
         source ~/.zsh/zsh_linux
         ;;
-    mac)
+    Darwin)
         source ~/.zsh/zsh_mac
         ;;
     *)
