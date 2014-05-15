@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.victor@gmail.com
 ;; Version: $Id: @(#)vinurs-dot-emacs.el 0.0 2011/03/22 11:05:27 victor Exp $
-;; Changed: <vinurs 05/07/2014 22:52:23>
+;; Changed: <vinurs 05/16/2014 00:28:01>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -37,6 +37,7 @@
 
 
 
+
 ;; 我自己需要的一些软件包
 (setq my-el-get-packages
       '(
@@ -53,6 +54,11 @@
         ascii
         ;; c
 
+        ;; auto-complete
+	;; 所有的自动补全相关的配置
+        auto-complete
+        auto-complete+
+        
         ;; global gtags
         ;; ggtags
         xgtags                          ;for global
