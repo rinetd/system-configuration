@@ -14,3 +14,8 @@ map <C-g> :cs f g <C-R>=expand("<cword>")<CR><CR>
 map <C-c> :cs find c <C-R>=expand("<cword>")<CR><CR> 
 map <C-s> :cs find t <C-R>=expand("<cword>")<CR><CR>
 
+"记录上次文件打开的位置
+autocmd BufReadPost * 
+              \ if line("'\"")>0&&line("'\"")<=line("$") | 
+              \	exe "normal g'\"" | 
+              \ endif
