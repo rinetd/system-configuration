@@ -81,6 +81,8 @@ for i in "${dotconfig_common_array[@]}"; do
 
 done
 
+# common
+git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 
 
 exit 0
