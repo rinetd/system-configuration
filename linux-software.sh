@@ -46,6 +46,11 @@ sudo dnf install -y texinfo
 # git log
 sudo dnf install -y tig
 
+# clang, 用来给emacs进行自动补全的：emacs auto-complete clang
+sudo dnf install -y clang
+# bzr,用来给emacs的增加cedet的时候用的
+sudo dnf install -y bzr
+
 # for common lisp
 sudo dnf install -y sbcl
 

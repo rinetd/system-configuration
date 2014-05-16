@@ -18,8 +18,7 @@
 
 
 # 获得系统类型:linux or mac
-source bin/system-type.sh
-
+export system_type=$(uname)
 
 # export system type, so in other shell scripts can use it
 echo "****************************************************************"
@@ -66,10 +65,10 @@ sh common-cfg.sh
 
 # specific config files
 case $system_type in
-    linux)
+    Linux)
         sh linux-cfg.sh
         ;;
-    mac)
+    Darwin)
         sh mac-cfg.sh
         ;;
     *)
@@ -78,10 +77,10 @@ esac
 
 # install software
 case $system_type in
-    linux)
+    Linux)
         #sh linux-software.sh
         ;;
-    mac)
+    Darwin)
         #sh mac-software.sh
         ;;
     *)
