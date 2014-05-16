@@ -58,6 +58,8 @@
 	;; 所有的自动补全相关的配置
         auto-complete
         auto-complete+
+	cedet
+	ecb
         
         ;; global gtags
         ;; ggtags
