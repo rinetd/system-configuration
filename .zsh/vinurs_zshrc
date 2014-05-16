@@ -1,6 +1,6 @@
 # this is my own zsh configuration files
 
-#source ~/bin/system-type.sh
+
 export system_type=$(uname)
 
 # set default editor
@@ -279,7 +279,7 @@ if [[ /proc/$PPID/exe -ef /usr/bin/mc ]]; then
     # mc, I will write it later
     :
 else
-    setprompt
+    # setprompt
 fi
 
 
