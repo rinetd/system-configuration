@@ -48,7 +48,7 @@
 (setq-default indent-tabs-mode nil)
 
 ;;cscope
-(require 'victor_cscope)
+;; (require 'victor_cscope)
 
 (require 'zjl-hl)
 ;;(c-default-style (quote ((c-mode . "") (c++-mode . ""))))
