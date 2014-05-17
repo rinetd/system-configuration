@@ -55,6 +55,11 @@
 
 
 
+;; 统计一下每个常用的按键频率
+(require 'keyfreq)
+(keyfreq-mode 1)
+(keyfreq-autosave-mode 1)
+
 ;; 编码设置
 (require 'victor-coding-settings)
 
