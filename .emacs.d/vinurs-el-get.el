@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.victor@gmail.com
 ;; Version: $Id: @(#)vinurs-dot-emacs.el 0.0 2011/03/22 11:05:27 victor Exp $
-;; Changed: <vinurs 05/16/2014 00:28:01>
+;; Changed: <vinurs 05/18/2014 01:40:21>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -55,11 +55,15 @@
         ;; c
 
         ;; auto-complete
-	;; 所有的自动补全相关的配置
+        ;; 所有的自动补全相关的配置
         auto-complete
         auto-complete+
-	cedet
-	ecb
+        cedet
+        ecb
+        
+        ;; markdown,用github写博客
+        markdown-mode
+
         
         ;; global gtags
         ;; ggtags
