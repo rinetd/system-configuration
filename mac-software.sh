@@ -29,6 +29,8 @@ brew install sbcl
 brew install tig
 # wget
 brew install wget
+# bzr
+brew install bzr
 
 
 exit 0
