@@ -1,10 +1,10 @@
-;;; vinurs-org-mode.el --- 
+;;; init-org-mode.el --- 
 
-;; Copyright 2012 zhanghaiyuan
+;; Copyright 2014 vinurs
 ;;
-;; Author: zhang.haiyuan@server.embedway.com
-;; Version: $Id: @(#)vinurs-org-mode.el,v 0.0 2012/08/01 11:45:18 vinurs Exp $
-;; Changed: <vinurs 08/01/2012 13:19:41>
+;; Author: vinurs@localhost.localdomain
+;; Version: $Id: @(#)init-org-mode.el,v 0.0 2014/05/18 12:19:43 vinurs Exp $
+;; Changed: <vinurs 05/18/2014 12:20:22>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -27,14 +27,14 @@
 ;; 
 
 ;; Put this file into your load-path and the following into your ~/.emacs:
-;;   (require 'vinurs-org-mode)
+;;   (require 'init-org-mode)
 
 
 
 
 ;;; Code:
 
-(provide 'vinurs-org-mode)
+(provide 'init-org-mode)
 (eval-when-compile
   (require 'cl))
 
@@ -43,6 +43,8 @@
 ;;;;##########################################################################
 ;;;;  User Options, Variables
 ;;;;##########################################################################
+
+
 
 ;; org很不多的软件，好好积累配置文件
 ;; 设置org的默认路径，因为我所有的东西都放到dropbox里面去了，这样我就可以实时同步
@@ -84,4 +86,4 @@
 (require 'org-publish)
 
 
-;;; vinurs-org-mode.el ends here
+;;; init-org-mode.el ends here

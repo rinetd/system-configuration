@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.victor@gmail.com
 ;; Version: $Id: @(#)vinurs-dot-emacs.el 0.0 2011/03/22 11:05:27 victor Exp $
-;; Changed: <vinurs 05/18/2014 01:40:21>
+;; Changed: <vinurs 05/18/2014 12:19:18>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -70,6 +70,8 @@
         xgtags                          ;for global
         xgtags-extension                ;for global
 
+        ;; org mode
+        org-mode
         ;; common lisp
         slime
 
