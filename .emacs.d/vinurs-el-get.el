@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.victor@gmail.com
 ;; Version: $Id: @(#)vinurs-dot-emacs.el 0.0 2011/03/22 11:05:27 victor Exp $
-;; Changed: <vinurs 05/18/2014 12:19:18>
+;; Changed: <vinurs 05/18/2014 12:32:16>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -45,7 +45,10 @@
         
         ;; base
         highlight-parentheses           ; 高亮对应的标点
- 
+
+        ;; hightlight symbol
+        highlight-symbol
+        
         linum+                          ;;显示行号
         hl-line+                        ;
         yasnippet                       ;
@@ -71,7 +74,7 @@
         xgtags-extension                ;for global
 
         ;; org mode
-        org-mode
+        ;; org-mode
         ;; common lisp
         slime
 
