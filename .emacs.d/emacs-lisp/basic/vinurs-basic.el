@@ -68,8 +68,6 @@
 ;; ;; 这个目前就用来高亮当前行，好像还没有发现别的作用
 ;; (require 'victor-codepilot)
 
-;; highlight symbol
-(require 'victor-hl)
 
 ;; ;; max frame
 ;; ;;(require 'victor-maxframe)
@@ -90,8 +88,6 @@
 ;; ;; emacs sawfish mode
 (require 'victor-sawfish)
 
-;; org mode settings
-(require 'vinurs-org-mode)
 
 ;; 用org写wordpress博客
 (require 'vinurs-org2blog)

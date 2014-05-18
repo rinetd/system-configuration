@@ -1,10 +1,10 @@
-;;; victor-hl.el --- 
+;;; init-highlight-symbol.el --- 
 
-;; Copyright 2011 victor
+;; Copyright 2014 vinurs
 ;;
-;; Author: haiyuan.victor@gmail.com
-;; Version: $Id: @(#)victor-hl.el,v 0.0 2011/04/26 10:14:31 victor Exp $
-;; Changed: <victor 09/06/2011 16:40:13>
+;; Author: vinurs@localhost.localdomain
+;; Version: $Id: @(#)init-highlight-symbol.el,v 0.0 2014/05/18 12:32:07 vinurs Exp $
+;; Changed: <vinurs 05/18/2014 12:32:33>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -27,14 +27,14 @@
 ;; 
 
 ;; Put this file into your load-path and the following into your ~/.emacs:
-;;   (require 'victor-hl)
+;;   (require 'init-highlight-symbol)
 
 
 
 
 ;;; Code:
 
-(provide 'victor-hl)
+(provide 'init-highlight-symbol)
 (eval-when-compile
   (require 'cl))
 
@@ -45,8 +45,7 @@
 ;;;;##########################################################################
 
 
-;; config highlight symbol
-(require 'highlight-symbol)
+
 (add-hook 'find-file-hooks 'highlight-hooks)
 (defun highlight-hooks()  
   (setq highlight-symbol-idle-delay 0.5)  
@@ -62,6 +61,4 @@
 (global-set-key (kbd "C-c l n") 'highlight-symbol-next)
 
 
-;;(global-set-key (kbd "S-<SPC>") 'set-mark-command)
-
-;;; victor-hl.el ends here
+;;; init-highlight-symbol.el ends here
