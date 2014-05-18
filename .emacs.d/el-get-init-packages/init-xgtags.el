@@ -4,7 +4,7 @@
 ;;
 ;; Author: zhang.haiyuan@server.embedway.com
 ;; Version: $Id: @(#)init-xgtags.el,v 0.0 2013/08/14 13:05:34 vinurs Exp $
-;; Changed: <vinurs 08/14/2013 19:28:36>
+;; Changed: <vinurs 05/18/2014 11:11:54>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -52,6 +52,46 @@
           (lambda ()
             (xgtags-mode 1)))
 
+(defun xgtags-root-dir ()
+  "Returns GTAGS root directory or nil if doesn't exist."
+  (with-temp-buffer
+    (if (zerop (call-process "global" nil t nil "-pr"))
+        (buffer-substring (point-min) (1- (point-max)))
+      nil)))
 
+
+(defun xgtags-update ()
+  "Make GTAGS incremental update"
+  (call-process "global" nil nil nil "-u"))
+
+
+(defun xgtags-update-hook ()
+  (when (xgtags-root-dir)
+    (xgtags-update)))
+
+
+(add-hook 'after-save-hook #'xgtags-update-hook)
+
+;; (defun xgtags-update-single(filename)  
+;;   "Update Gtags database for changes in a single file"
+;;   (interactive)
+;;   (start-process "update-gtags" "update-gtags" "bash" "-c" (concat "cd " (gtags-root-dir) " ; gtags --single-update " filename )))
+
+
+;; (defun xgtags-update-current-file()
+;;   (interactive)
+;;   (defvar filename)
+;;   (setq filename (replace-regexp-in-string (gtags-root-dir) "." (buffer-file-name (current-buffer))))
+;;   (xgtags-update-single filename)
+;;   (message "Gtags updated for %s" filename))
+
+
+;; (defun xgtags-update-hook()
+;;   "Update GTAGS file incrementally upon saving a file"
+;;   (when xtags-mode
+;;     (when (xgtags-root-dir)
+;;       (xgtags-update-current-file))))
+
+;; (add-hook 'after-save-hook 'xgtags-update-hook)
 
 ;;; init-xgtags.el ends here
