@@ -73,6 +73,8 @@ sudo dnf install -y tmux
 # glances 用python写的一个好用的工具
 sudo dnf install -y  htop glances
 
+sudo dnf install -y pidgin
+
 # proxychains
 sudo dnf install -y proxychains libproxychains.so.3
 
