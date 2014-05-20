@@ -106,6 +106,8 @@ sudo dnf install -y xsel
 cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
 
 sudo dnf install -y wireshark
+# for rxvt-unicode
+sudo dnf install -y perl-ExtUtils-Embed
 
 
 

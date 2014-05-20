@@ -88,5 +88,7 @@ git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 # my github page
 git clone git@github.com:vinurs/vinurs.github.io.git ~/
 
+# dpdk
+git clone git://dpdk.org/dpdk ~/
 
 exit 0
