@@ -100,6 +100,7 @@ sudo dnf install -y 'fcitx*'
 sudo dnf install -y filezilla
 
 sudo dnf install -y wmctrl
+sudo dnf install -y xsel
 
 
 
