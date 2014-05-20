@@ -48,6 +48,7 @@ sudo dnf install -y tig
 
 # clang, 用来给emacs进行自动补全的：emacs auto-complete clang
 sudo dnf install -y clang
+sudo dnf install -y emacs
 # bzr,用来给emacs的增加cedet的时候用的
 sudo dnf install -y bzr
 
@@ -66,10 +67,14 @@ sudo dnf install -y expect
 sudo dnf install -y wget
 # git 相关
 sudo dnf install -y git git-svn subversion-perl perl-Git-SVN
+sudo dnf install -y libserf-devel
 # zsh 很好用的shell
 sudo dnf install -y zsh
 # tmux
 sudo dnf install -y tmux
+sudo dnf install -y xclip
+# rxvt-unicode
+sudo dnf install -y rxvt-unicode
 # glances 用python写的一个好用的工具
 sudo dnf install -y  htop glances
 
@@ -84,6 +89,11 @@ sudo dnf install -y proxychains libproxychains.so.3
 # XWindows advanced install
 
 sudo dnf install -y sawfish
+# using for changing background pic
+sudo dnf install -y feh
+sudo dnf install -y fbpanel
+# for google-chrome
+sudo dnf install -y lsb
 
 
 exit 0
