@@ -30,12 +30,12 @@ sudo dnf install -y yum-fastestmirror
 sudo dnf install -y alex
 
 # 先安装priority这个yum的插件，这个插件用来设定安装软件时候软件仓库的优先级，一般是默认先从官方base或者镜像安装，然后从社区用户contribute的软件中安装，再从第三方软件仓库中安装
-dnf install -y yum-priorities 
+sudo dnf install -y yum-priorities 
 
 # 安装net-tools,这里面包含了ifconfig之类的命令，因为最小化安装的时候并没有安装
 sudo dnf install -y net-tools
 # ncureses
-sudo dnf install ncurses-devel
+sudo dnf install -y ncurses-devel
 
 # kvm
 sudo dnf install -y qemu-kvm libvirt virt-install bridge-utils
@@ -67,7 +67,7 @@ sudo dnf install -y wget
 # git 相关
 sudo dnf install -y git git-svn subversion-perl perl-Git-SVN
 # zsh 很好用的shell
-sudo dnf intall -y zsh
+sudo dnf install -y zsh
 # tmux
 sudo dnf install -y tmux
 # glances 用python写的一个好用的工具
@@ -81,8 +81,9 @@ sudo dnf install -y proxychains libproxychains.so.3
 
 # exit 0
 
-# advanced install
+# XWindows advanced install
 
+sudo dnf install -y sawfish
 
 
 exit 0
