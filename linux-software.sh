@@ -95,5 +95,13 @@ sudo dnf install -y fbpanel
 # for google-chrome
 sudo dnf install -y lsb
 
+sudo dnf install -y 'fcitx*'
+
+sudo dnf install -y filezilla
+
+sudo dnf install -y wmctrl
+
+
+
 
 exit 0
