@@ -289,6 +289,17 @@ fi
 # 设置PATH路径
 #export PATH="/usr/local/bin:$PATH" 
 export PATH=$PATH:~/bin/
+case $system_type in
+    Linux)
+        export PATH=$PATH:~/bin/linux
+        ;;
+    Darwin)
+        export PATH=$PATH:~/bin/mac
+        ;;
+    *)
+        ;;
+esac
+
 
 # 设置gnu global所要用到的环境变量
 export GTAGSLIBPATH=~/.global
