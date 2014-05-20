@@ -86,7 +86,7 @@ done
 git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 
 # my github page
-git clone git@github.com:vinurs/vinurs.github.io.git
+git clone git@github.com:vinurs/vinurs.github.io.git ~/
 
 
 exit 0

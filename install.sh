@@ -78,10 +78,10 @@ esac
 # install software
 case $system_type in
     Linux)
-        #sh linux-software.sh
+        sh linux-software.sh
         ;;
     Darwin)
-        #sh mac-software.sh
+        sh mac-software.sh
         ;;
     *)
         ;;
