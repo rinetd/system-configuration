@@ -7,7 +7,7 @@
 # 
 #         Version:  1.0
 #         Created:  2012/08/05 10:24:48
-#         Changed:  <vinurs 05/14/2014 14:24:15>
+#         Changed:  <vinurs 05/22/2014 21:28:39>
 #        Revision:  none
 # 
 #          Author:  zhanghaiyuan
@@ -37,6 +37,8 @@ else
     # 开头的几个window，公用的
     # 默认打开叫sys-monitor的窗口，专门用来监控系统当前的性能的
     tmux -2 new-session -s $TMUX_SESSION -n sys-monitor \; detach-client
+    # dpdk
+    tmux -2 new-session -s $TMUX_SESSION -n dpdk \; detach-client
     # 打开文件管理器mc，我最喜欢的文件管理器了
     # tmux attach-session -t $TMUX_SESSION \; new-window -n mc \; send-keys 'mc' C-m \; detach-client
 
@@ -61,12 +63,6 @@ else
     # 打开一个专门的terminal用来练习lisp
     # tmux attach-session -t $TMUX_SESSION \; new-window -n lisp \; split-window -h \; detach-client
 
-    # 公司跟家里有时候需要打开的不同的windows 
-    if [[ $COMPUTER_ADDR = "company" ]]; then
-        :
-    else
-        :
-    fi
 
     # 结尾的一部分window，公用的
     # 一次多创建几个window，省得以后再创建
