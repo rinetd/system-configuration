@@ -39,6 +39,8 @@ sudo dnf install -y ncurses-devel
 
 # for dpdk
 sudo dnf install -y libpcap-devel
+sudo dnf install -y hwloc
+
 # kvm
 sudo dnf install -y qemu-kvm libvirt virt-install bridge-utils
 
