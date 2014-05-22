@@ -18,7 +18,7 @@
 
 /bin/pwd
 case $system_type in
-    linux)
+    Linux)
         /bin/pwd | xclip -i -sel clipboard
         ;;
     mac)
