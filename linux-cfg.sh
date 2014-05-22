@@ -68,5 +68,6 @@ for i in "${dotconfig_linux_array[@]}"; do
 
 done
 
+mkdir ~/.Trash
 
 exit 0
