@@ -52,15 +52,18 @@ done
 
 # the config files are in .config/ directory
 dotconfig_linux_array=()
-# # fcitx输入法
-# files_array+=(fcitx)
+# fcitx输入法
+dotconfig_linux_array+=(fcitx)
+dotconfig_linux_array+=(emelfm2)
+dotconfig_linux_array+=(fbpanel)
+dotconfig_linux_array+=(mc)
 
 
 # files
 for i in "${dotconfig_linux_array[@]}"; do
 
     # backup
-    mv $install_dir/.config/$i ${backup_dir}
+    mv $install_dir/.config/$i ${backup_dir}/.config/
     ln -s $current_dir/.config/$i  $install_dir/.config/
 
 done

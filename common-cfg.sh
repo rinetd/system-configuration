@@ -63,11 +63,6 @@ done
 
 # the config files are in .config/ directory
 dotconfig_common_array=()
-# fcitx输入法
-dotconfig_common_array+=(fcitx)
-dotconfig_common_array+=(emelfm2)
-dotconfig_common_array+=(fbpanel)
-dotconfig_common_array+=(mc)
 
 
 mkdir ${backup_dir}/.config/
