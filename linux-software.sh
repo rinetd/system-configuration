@@ -68,6 +68,9 @@ sudo dnf install -y wget
 # git 相关
 sudo dnf install -y git git-svn subversion-perl perl-Git-SVN
 sudo dnf install -y libserf-devel
+# svn
+sudo dnf install -y 'svn*'
+sudo dnf install -y 'sqlite*'
 # zsh 很好用的shell
 sudo dnf install -y zsh
 # tmux
