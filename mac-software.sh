@@ -16,6 +16,9 @@
 #==============================================================================
 ##
 
+brew install tmux
+# for tmux copy
+brew install reattach-to-user-namespace
 
 brew install zsh
 brew install lftp
