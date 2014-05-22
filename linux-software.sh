@@ -107,8 +107,6 @@ sudo dnf install -y filezilla
 sudo dnf install -y wmctrl
 sudo dnf install -y xsel
 
-# dropbox
-cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
 
 sudo dnf install -y wireshark
 # for rxvt-unicode
