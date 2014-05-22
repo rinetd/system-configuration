@@ -82,10 +82,5 @@ done
 # oh-my-zsh
 git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 
-# my github page
-git clone git@github.com:vinurs/vinurs.github.io.git ~/vinurs.github.io
-
-# dpdk
-git clone git://dpdk.org/dpdk ~/dpdk
 
 exit 0
