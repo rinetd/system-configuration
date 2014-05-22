@@ -23,7 +23,7 @@ export PATH
 
 
 # 执行我的crontab吧，让我有更多的时间做更有趣的事情
-crontab ~/.cron.d/crontab
+#crontab ~/.cron.d/crontab
 
 
 
