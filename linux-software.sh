@@ -82,6 +82,8 @@ sudo dnf install -y rxvt-unicode
 sudo dnf install -y  htop glances
 
 sudo dnf install -y pidgin
+# mpstat
+sudo dnf install -y sysstat
 
 # proxychains
 sudo dnf install -y proxychains libproxychains.so.3
