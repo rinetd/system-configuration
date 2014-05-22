@@ -65,7 +65,7 @@ pidgin &
 xcompmgr >/dev/null &
 
 # crontab
-crontab ~/.cron.d/crontab
+crontab ~/.cron.d/crontab.common
 
 # shutter截图工具 
 shutter &
