@@ -1,4 +1,4 @@
 system-configuration
 ====================
 
-system configuration for my mac and linux
+system configuration for mac and linux
