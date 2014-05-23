@@ -5,3 +5,4 @@ el-get
 .emacs-places
 ac-comphist.dat
 .zcache
+srecode-map.el

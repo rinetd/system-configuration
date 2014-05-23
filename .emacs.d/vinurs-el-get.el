@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.victor@gmail.com
 ;; Version: $Id: @(#)vinurs-dot-emacs.el 0.0 2011/03/22 11:05:27 victor Exp $
-;; Changed: <vinurs 05/18/2014 12:32:16>
+;; Changed: <vinurs 05/23/2014 17:30:09>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -67,6 +67,10 @@
         ;; markdown,用github写博客
         markdown-mode
 
+        ;; doxymacs
+        doxymacs
+        xml-parse
+
         
         ;; global gtags
         ;; ggtags
@@ -74,7 +78,7 @@
         xgtags-extension                ;for global
 
         ;; org mode
-         org-mode
+        ;; org-mode
         ;; common lisp
         slime
 
