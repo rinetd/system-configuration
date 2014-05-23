@@ -58,8 +58,6 @@
 ;; 用来显示当前光标在哪个函数
 (require 'which-func-settings)
 
-;;标准的注释
-(load "victor_doxymacs")
 
 ;; c语言的配置
 (require 'victor-c-settings)

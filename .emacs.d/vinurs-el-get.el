@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.victor@gmail.com
 ;; Version: $Id: @(#)vinurs-dot-emacs.el 0.0 2011/03/22 11:05:27 victor Exp $
-;; Changed: <vinurs 05/23/2014 17:30:09>
+;; Changed: <vinurs 05/23/2014 17:59:39>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -68,6 +68,7 @@
         markdown-mode
 
         ;; doxymacs
+        ;; 标准的注释
         doxymacs
         xml-parse
 
