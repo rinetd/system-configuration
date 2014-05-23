@@ -34,6 +34,8 @@ brew install tig
 brew install wget
 # bzr
 brew install bzr
+brew install autoconf
+brew install automake autoconf libtool libxml2 
 
 
 exit 0

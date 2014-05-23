@@ -72,7 +72,8 @@
 ;; 所有关于括号的配置
 ;; (require 'victor-paren-settings)
 
-
+;;
+(load "vinurs_doxymacs")
 
 
 ;;svn的配置
