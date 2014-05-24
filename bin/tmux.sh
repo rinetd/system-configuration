@@ -69,7 +69,7 @@ else
     #tmux attach-session -t $TMUX_SESSION \; new-window
     # emacs
     # tmux attach-session -t $TMUX_SESSION \; new-window \; send-keys 'test "$system_type"x = "mac"x && emacs' C-m \; send-keys 'exit' C-m \; detach-client
-    tmux attach-session -t $TMUX_SESSION \; new-window \; send-keys 'test "$system_type"x = "mac"x && emacs' C-m \; detach-client
+    tmux attach-session -t $TMUX_SESSION \; new-window \; send-keys 'test "$system_type"x = "Darwin"x && emacs' C-m \; detach-client
 
     tmux attach-session -t $TMUX_SESSION \; new-window 
  
