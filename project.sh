@@ -26,4 +26,6 @@ git clone git://dpdk.org/dpdk ~/program/dpdk
 # dpdk illustration
 git clone git@github.com:vinurs/dpdk-src-illustration.git ~/program/dpdk-src-illustration
 
+# linux kernel illustration
+git clone git@github.com:vinurs/linux-kernel-illustration.git
 exit 0
