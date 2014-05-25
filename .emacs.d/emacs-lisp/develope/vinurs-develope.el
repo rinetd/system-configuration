@@ -79,8 +79,6 @@
 ;;svn的配置
 (load "vinurs-svn")
 
-;;fvwm的配置
-;; (load "victor-fvwm")
 
 ;; 回车后indent
 (eal-define-keys
