@@ -57,22 +57,23 @@
         ascii
         ;; c
 
-        ;; auto-complete
-        ;; 所有的自动补全相关的配置
-        auto-complete
-        auto-complete+
-        cedet
-        ecb
-        
-        ;; markdown,用github写博客
-        markdown-mode
-
-        ;; doxymacs
+	;; doxymacs
         ;; 标准的注释
         xml-parse
         ;; doxymacs
 
+
+        ;; auto-complete
+        ;; 所有的自动补全相关的配置
+        auto-complete
+        auto-complete+
+        ;; cedet
+        ;; ecb
         
+        ;; markdown,用github写博客
+        markdown-mode
+
+                
         ;; global gtags
         ;; ggtags
         xgtags                          ;for global
