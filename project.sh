@@ -28,4 +28,7 @@ git clone git@github.com:vinurs/dpdk-src-illustration.git ~/program/dpdk-src-ill
 
 # linux kernel illustration
 git clone git@github.com:vinurs/linux-kernel-illustration.git
+
+# my c library
+git clone git@github.com:vinurs/c-lib.git
 exit 0
