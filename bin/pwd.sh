@@ -21,7 +21,8 @@ case $system_type in
     Linux)
         /bin/pwd | xclip -i -sel clipboard
         ;;
-    mac)
+    Darwin)
+        /bin/pwd | reattach-to-user-namespace pbcopy
         ;;
     *)
         ;;
