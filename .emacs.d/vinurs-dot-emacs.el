@@ -75,10 +75,6 @@
 (setq scheme-program-name "guile")
 
 
-;; for Developement
-(load "vinurs-develope")
-
-
 ;; custom
 (load-file "~/.emacs.d/custom.el")
 
@@ -91,6 +87,11 @@
 
 ;; el-get
 (load "~/.emacs.d/vinurs-el-get.el")
+
+;; for Developement
+(load "vinurs-develope")
+
+
 
 ;; for mac or linux
 (if (eq system-type 'darwin) ;; mac specific settings
