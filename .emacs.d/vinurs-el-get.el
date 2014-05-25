@@ -69,8 +69,8 @@
 
         ;; doxymacs
         ;; 标准的注释
-        ;;doxymacs
-        ;;xml-parse
+        xml-parse
+        ;; doxymacs
 
         
         ;; global gtags
