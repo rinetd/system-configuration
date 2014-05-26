@@ -1,4 +1,4 @@
-;;; victor_doxymacs.el --- 
+;;; vinurs_doxymacs.el --- 
 
 ;; Copyright 2010 victor
 ;;
@@ -121,32 +121,6 @@
  "Default C++-style template for function documentation.")
 
 
-;; custom my file comment
-;; (defconst doxymacs-C++-file-comment-template
-;;  '("/*" > n
-;;    " * ==============================================================================" > n
-;;    " *" > n
-;;    " *       Filename:  @(#)"
-;;    (if (buffer-file-name)
-;;        (file-name-nondirectory (buffer-file-name))
-;;      "") > n
-;;    " *" > n
-;;    " *    Description:  " p > n
-;;    " *" > n
-;;    " *        Version:  1.0" > n
-;;    " *        Created:  "  (current-time-string) > n
-;;    " *        Changed:  < >" > n
-;;    " *       Revision:  none" > n
-;;    " *       Compiler:  gcc" > n
-;;    " *" > n
-;;    " *         Author:  " (user-full-name) > n
-;;    " *          Email: " (doxymacs-user-mail-address) > n
-;;    " *" > n
-;;    " * ==============================================================================" > n
-;;    " */" > n
-;;    > n
-;;    )
-;;  "Default C++-style template for file documentation.")
 
 (defconst doxymacs-C++-file-comment-template
  '("/* ******************************************************************************" > n
