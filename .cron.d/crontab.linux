@@ -25,5 +25,4 @@ PATH=/sbin:/bin:/usr/sbin:/usr/bin:~/bin
 # 8:30关闭dropbox
 30 8 * * * killall dropbox
 
-
 # 12点开始进行下载
