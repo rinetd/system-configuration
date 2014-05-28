@@ -105,6 +105,8 @@ sudo dnf install -y feh
 sudo dnf install -y fbpanel
 # for google-chrome
 sudo dnf install -y lsb
+# sdcv词典
+sudo dnf install -y sdcv
 
 sudo dnf install -y 'fcitx*'
 
