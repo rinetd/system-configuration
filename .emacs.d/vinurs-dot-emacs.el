@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.victor@gmail.com
 ;; Version: $Id: @(#)victor-doc-emacs.el,v 0.0 2011/03/22 11:05:27 victor Exp $
-;; Changed: <vinurs 05/30/2014 03:20:35>
+;; Changed: <vinurs 05/30/2014 03:48:26>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -51,12 +51,13 @@
 
 (add-to-list 'load-path "~/.emacs.d/plugin")
 
+
+
+
 ;; 下面的这几个文件以后我要进行缩减的
 
 ;; 一些基本的小函数,抄自ahei的配置文件
 (require 'ahei-misc)
-
-
 
 
 
@@ -86,6 +87,7 @@
 
 
 ;; el-get
+(load "~/.emacs.d/vinurs-pre-el-get.el")
 (load "~/.emacs.d/vinurs-el-get.el")
 
 ;; for Developement
