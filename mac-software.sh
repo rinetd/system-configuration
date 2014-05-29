@@ -38,6 +38,6 @@ brew install autoconf
 brew install automake autoconf libtool libxml2 
 
 brew install minicom
-
+brew install socat
 
 exit 0
