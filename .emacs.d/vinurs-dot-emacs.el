@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.victor@gmail.com
 ;; Version: $Id: @(#)victor-doc-emacs.el,v 0.0 2011/03/22 11:05:27 victor Exp $
-;; Changed: <vinurs 05/13/2014 22:08:14>
+;; Changed: <vinurs 05/30/2014 03:20:35>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -96,7 +96,7 @@
 ;; for mac or linux
 (if (eq system-type 'darwin) ;; mac specific settings
     (load "~/.emacs.d/mac/vinurs-mac.el")
-  (load "~/.emacs.d/linux/vinurs-linux.el")
+  (load "~/.emacs.d/linux/vinurs-linux.el") ; else linux
   )
 
 ;; 
