@@ -37,5 +37,7 @@ brew install bzr
 brew install autoconf
 brew install automake autoconf libtool libxml2 
 
+brew install minicom
+
 
 exit 0
