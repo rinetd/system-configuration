@@ -57,10 +57,9 @@
         ascii
         ;; c
 
-        ;; doxymacs
         ;; 标准的注释
         xml-parse
-        ;; doxymacs
+        doxymacs
 
 
         ;; auto-complete

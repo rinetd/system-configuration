@@ -73,7 +73,7 @@
 ;; (require 'victor-paren-settings)
 
 ;;
-(load "vinurs_doxymacs")
+;;(load "vinurs_doxymacs")
 
 
 ;;svn的配置
