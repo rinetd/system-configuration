@@ -4,7 +4,7 @@
 ;;
 ;; Author: zhang.haiyuan@server.embedway.com
 ;; Version: $Id: @(#)init-doxymacs.el,v 0.0 2014/05/31 22:56:25 vinurs Exp $
-;; Changed: <vinurs 06/01/2014 00:00:06>
+;; Changed: <vinurs 06/01/2014 00:15:24>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -85,13 +85,12 @@
 	 nil))))
  "Default C++-style template for function documentation.")
 
-(current-time-string)
-(format-time-string "%Y")
-
 ;; (defconst doxymacs-C++-file-comment-template
 (defconst doxymacs-JavaDoc-file-comment-template
  '("/* ******************************************************************************" > n
-   " * Copyright (c) " (format-time-string "%Y") " EmbedWay Information Technologies Co. Ltd." > n
+   " * Copyright (c) "
+   (format-time-string "%Y")
+   " EmbedWay Information Technologies Co. Ltd." > n
       ;; " * Copyright (c) " "(format-time-string "%Y")" " EmbedWay Information Technologies Co. Ltd." > n
    " * ALL rights reserved." > n
    " * ******************************************************************************/" > n
