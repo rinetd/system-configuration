@@ -84,6 +84,9 @@
         ;; org-mode
         ;; common lisp
         slime
+	
+	;; flymake
+	flymake
 
         ;;color-theme                     ;;主题
         )
