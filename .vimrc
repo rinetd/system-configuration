@@ -19,3 +19,7 @@ autocmd BufReadPost *
               \ if line("'\"")>0&&line("'\"")<=line("$") | 
               \	exe "normal g'\"" | 
               \ endif
+
+"高亮搜索
+set hlsearch
+set incsearch
