@@ -1,10 +1,10 @@
-;;; victor-hs-minor-mode-settings.el --- 
+;;; init-hide-region.el --- 
 
-;; Copyright 2011 victor
+;; Copyright 2014 zhanghaiyuan
 ;;
-;; Author: haiyuan.victor@gmail.com
-;; Version: $Id: @(#)victor-hs-minor-mode-settings.el,v 0.0 2011/06/19 13:16:21 victor Exp $
-;; Changed: <vinurs 03/25/2013 10:41:24>
+;; Author: zhang.haiyuan@server.embedway.com
+;; Version: $Id: @(#)init-hide-region.el,v 0.0 2014/06/01 10:42:01 vinurs Exp $
+;; Changed: <vinurs 06/01/2014 17:50:22>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -27,14 +27,14 @@
 ;; 
 
 ;; Put this file into your load-path and the following into your ~/.emacs:
-;;   (require 'victor-hs-minor-mode-settings)
+;;   (require 'init-hide-region)
 
 
 
 
 ;;; Code:
 
-(provide 'victor-hs-minor-mode-settings)
+(provide 'init-hide-region)
 (eval-when-compile
   (require 'cl))
 
@@ -44,7 +44,8 @@
 ;;;;  User Options, Variables
 ;;;;##########################################################################
 
-(load-library "hideshow")
+
+;; hs-minor-mode settings
 (add-hook 'c-mode-common-hook 'hs-minor-mode)
 (add-hook 'emacs-lisp-mode-hook 'hs-minor-mode)
 (add-hook 'java-mode-hook       'hs-minor-mode)
@@ -53,9 +54,7 @@
 (add-hook 'sh-mode-hook         'hs-minor-mode)
 
 ;;全部折叠/展开
-
 (global-set-key (kbd "C-c f a") 'hs-toggle-hiding-all)
-
 
 (defvar hs-hide-all nil "Current state of hideshow for toggling all.")
 
@@ -70,23 +69,39 @@
 	(hs-show-all)))
 
 
-
-;; 这里貌似会自动关闭hl-line-mode
-(defun vinurs-hs-toggle-hiding ()
-  (interactive)
-  "if hl-line-mode is off, then on it"
-  (hs-toggle-hiding)
-  ;; (hl-line-mode 1)
-  ;; (if (not (hl-line-mode))
-  ;;     (hl-line-mode))
-  )
-
-;;折叠块
 (global-set-key (kbd "C-c f b") 'hs-toggle-hiding)
-;; (global-set-key (kbd "C-c f b") 'vinurs-hs-toggle-hiding)
-
-;; 开启高亮当前行功能
-;; (global-hl-line-mode 1)
 
 
-;;; victor-hs-minor-mode-settings.el ends here
+
+;; hide ifdef
+
+;; hide all ifdefs
+(global-set-key (kbd "C-c f e") 'hide-ifdefs)
+;; show all ifdefs
+(global-set-key (kbd "C-c f E") 'show-ifdefs)
+;; 编辑Ｃ文件的时候自动激活hide-ifdef-mode
+(setq hide-ifdef-initially nil)
+(add-hook 'c-mode-common-hook
+          (lambda ()
+            (hide-ifdef-mode 1)
+            ))
+
+
+;; hide region
+(eal-define-keys-commonly
+ global-map
+ `(("C-c f r" hide-region-hide)
+   ("C-c f R" hide-region-unhide)
+   ("C-p" hide-region-previous-line)
+   ("C-n" hide-region-next-line)))
+
+(defun hide-region-settings ()
+  "Settings for `hide-region'."
+  (setq hide-region-before-string "[======================该区域已")
+  (setq hide-region-after-string "被折叠======================]\n"))
+
+(eval-after-load "hide-region"
+  `(hide-region-settings))
+
+
+;;; init-hide-region.el ends here

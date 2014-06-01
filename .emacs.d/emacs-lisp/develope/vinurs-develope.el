@@ -64,7 +64,7 @@
 
 
 ;; 所有代码折叠的配置
-(load "victor-code-folding")
+;; (load "victor-code-folding")
 
 ;; 动态检查语法错误
 ;;(require 'victor-flymake-settings)

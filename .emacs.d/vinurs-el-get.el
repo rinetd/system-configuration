@@ -90,6 +90,8 @@
 	
 	;; 代码折叠相关
 	;; hs-mode
+	hideif
+	hide-region  ;; 这个放在最后面吧，所有的配置都在这个init里面
 
         ;;color-theme                     ;;主题
         )
