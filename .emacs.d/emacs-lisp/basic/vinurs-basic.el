@@ -86,8 +86,6 @@
 (require 'victor-sawfish)
 
 
-;; 用org写wordpress博客
-(require 'vinurs-org2blog)
 
 ;; ;; Emacs才是世界上最强大的IDE － 智能的改变光标形状
 ;; ;; http://emacser.com/cursor-change.htm
