@@ -228,8 +228,6 @@
 ;设置 .emacs-places 文件的存储路径
 (setq save-place-file "~/.emacs.d/.emacs-places")
 
-;; dired的相关配置
-(require 'vinurs-dired)
 
 ;; mew
 (require 'vinurs-mew)

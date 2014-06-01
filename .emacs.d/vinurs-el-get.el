@@ -61,6 +61,8 @@
         xml-parse
         doxymacs
 
+	;; dired不过这个一般默认就集成在emacs里了，我这里增加的是一些有用的扩展
+
 
         ;; auto-complete
         ;; 所有的自动补全相关的配置
