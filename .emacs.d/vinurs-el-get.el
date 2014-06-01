@@ -87,6 +87,9 @@
 	
 	;; flymake
 	flymake
+	
+	;; 代码折叠相关
+	;; hs-mode
 
         ;;color-theme                     ;;主题
         )
