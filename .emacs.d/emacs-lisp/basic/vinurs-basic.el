@@ -49,9 +49,6 @@
 (require 'victor-basic-misc)
 
 
-;; the tabbar version 2.0
-;; 暂时不启动这个，没多大用途
-;; (require 'vinurs-tabbar)
 
 
 
