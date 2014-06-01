@@ -81,7 +81,7 @@
         xgtags-extension                ;for global
 
         ;; org mode
-        ;; org-mode
+        org-mode
         ;; common lisp
         slime
 	
