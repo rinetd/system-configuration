@@ -92,8 +92,7 @@
  global-map
  `(("C-c f r" hide-region-hide)
    ("C-c f R" hide-region-unhide)
-   ("C-p" hide-region-previous-line)
-   ("C-n" hide-region-next-line)))
+   ))
 
 (defun hide-region-settings ()
   "Settings for `hide-region'."

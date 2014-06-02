@@ -74,6 +74,9 @@
         ;; markdown,用github写博客
         markdown-mode
 
+	;; 括号补全
+	;; parenthesis
+
                 
         ;; global gtags
         ;; ggtags
