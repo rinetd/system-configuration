@@ -4,7 +4,7 @@
 ;;
 ;; Author: zhang.haiyuan@server.embedway.com
 ;; Version: $Id: @(#)init-doxymacs.el,v 0.0 2014/05/31 22:56:25 vinurs Exp $
-;; Changed: <vinurs 06/01/2014 00:15:24>
+;; Changed: <vinurs 06/03/2014 18:43:39>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -57,7 +57,7 @@
 
 ;; my custom c++ multiline and single comment
 (defconst doxymacs-JavaDoc-blank-multiline-comment-template
- '("/**" > n " * @brief " p > n " *" > n  > "*/")
+ '("/**" > n " * " p > n " *" > n  > "*/")
  "Default JavaDoc-style template for a blank multiline doxygen comment.")
 
 

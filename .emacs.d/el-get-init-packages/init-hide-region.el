@@ -4,7 +4,7 @@
 ;;
 ;; Author: zhang.haiyuan@server.embedway.com
 ;; Version: $Id: @(#)init-hide-region.el,v 0.0 2014/06/01 10:42:01 vinurs Exp $
-;; Changed: <vinurs 06/01/2014 17:50:22>
+;; Changed: <vinurs 06/03/2014 15:25:02>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -101,6 +101,17 @@
 
 (eval-after-load "hide-region"
   `(hide-region-settings))
+
+
+(defun my-hide-if-0()
+  "hide #if 0 blocks, inspired by internet. --lgfang"
+  (interactive)
+  (require 'hideif)
+  (save-excursion
+    (goto-char (point-min))
+    (while (re-search-forward "^[ \t]*#if[ \t]*0" nil t) (hide-ifdef-block)) )
+  )
+(add-hook 'c-mode-hook 'my-hide-if-0)
 
 
 ;;; init-hide-region.el ends here
