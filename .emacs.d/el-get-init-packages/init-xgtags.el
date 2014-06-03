@@ -4,7 +4,7 @@
 ;;
 ;; Author: zhang.haiyuan@server.embedway.com
 ;; Version: $Id: @(#)init-xgtags.el,v 0.0 2013/08/14 13:05:34 vinurs Exp $
-;; Changed: <vinurs 05/18/2014 11:11:54>
+;; Changed: <vinurs 06/03/2014 11:16:32>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -72,26 +72,7 @@
 
 (add-hook 'after-save-hook #'xgtags-update-hook)
 
-;; (defun xgtags-update-single(filename)  
-;;   "Update Gtags database for changes in a single file"
-;;   (interactive)
-;;   (start-process "update-gtags" "update-gtags" "bash" "-c" (concat "cd " (gtags-root-dir) " ; gtags --single-update " filename )))
 
 
-;; (defun xgtags-update-current-file()
-;;   (interactive)
-;;   (defvar filename)
-;;   (setq filename (replace-regexp-in-string (gtags-root-dir) "." (buffer-file-name (current-buffer))))
-;;   (xgtags-update-single filename)
-;;   (message "Gtags updated for %s" filename))
-
-
-;; (defun xgtags-update-hook()
-;;   "Update GTAGS file incrementally upon saving a file"
-;;   (when xtags-mode
-;;     (when (xgtags-root-dir)
-;;       (xgtags-update-current-file))))
-
-;; (add-hook 'after-save-hook 'xgtags-update-hook)
 
 ;;; init-xgtags.el ends here
