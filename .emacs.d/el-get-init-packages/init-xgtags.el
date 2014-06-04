@@ -4,7 +4,7 @@
 ;;
 ;; Author: zhang.haiyuan@server.embedway.com
 ;; Version: $Id: @(#)init-xgtags.el,v 0.0 2013/08/14 13:05:34 vinurs Exp $
-;; Changed: <vinurs 06/03/2014 11:28:12>
+;; Changed: <vinurs 06/05/2014 00:18:31>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -74,77 +74,39 @@
 
 
 
-(defface xgtags-match-face
-  '((((class color) (background red))
-     (:foreground "cyan"))
-    (((class color) (background light))
-     (:foreground "magenta"))
-    (t (:bold t)))
-  "Face used to highlight function name in the *xgtags* buffer."
-  :group 'xgtags)
 
-(defface xgtags-match-selected-face
-  '((((class color) (background red))
-     (:foreground "cyan" :bold t))
-    (((class color) (background light))
-     (:foreground "magenta" :bold t))
-    (t (:bold t)))
-  "Face used to highlight selected function name in the *xgtags* buffer."
-  :group 'xgtags)
-
-(defface xgtags-file-face
-  '((((class color) (background red))
-     (:foreground "yellow"))
-    (((class color) (background light))
-     (:foreground "blue"))
-    (t (:bold t)))
-  "Face used to highlight file name in the *xgtags* buffer."
-  :group 'xgtags)
-
-(defface xgtags-file-selected-face
-  '((((class color) (background red))
-     (:foreground "yellow" :bold t))
-    (((class color) (background light))
-     (:foreground "blue" :bold t))
-    (t (:bold t)))
-  "Face used to highlight selected file name in the *xgtags* buffer."
-  :group 'xgtags)
-
-(defface xgtags-line-number-face
-  '((((class color) (background red))
-     (:foreground "red"))
-    (((class color) (background light))
-     (:foreground "red"))
-    (t (:bold t)))
-  "Face used to highlight line number in the *xgtags* buffer."
-  :group 'xgtags)
-
-(defface xgtags-line-number-selected-face
-  '((((class color) (background red))
-     (:foreground "red" :bold t))
-    (((class color) (background light))
-     (:foreground "red" :bold t))
-    (t (:bold t)))
-  "Face used to highlight selected line number in the *xgtags* buffer."
-  :group 'xgtags)
-
-(defface xgtags-line-face
-  '((((class color) (background red))
-     (:foreground "green"))
-    (((class color) (background light))
-     (:foreground "black"))
-    (t (:bold nil)))
-  "Face used to highlight the rest of line in the *xgtags* buffer."
-  :group 'xgtags)
-
-(defface xgtags-line-selected-face
+(defface vinurs-xgtags-line-selected-face
   '((((class color) (background red))
      (:foreground "green" :bold t))
     (((class color) (background light))
-     (:foreground "black" :bold t))
+     (:foreground "red" :bold t))
     (t (:bold nil)))
   "Face used to highlight the rest of line in the *xgtags* buffer."
   :group 'xgtags)
+
+
+(defun xgtags--insert-tag (tag)
+  "Insert a single tag TAG at point in the current buffer"
+  (let ((start (point))
+        (query (xgtags--tag-query tag))
+        (line (xgtags--tag-line tag))
+        (match (xgtags--tag-match tag))
+        (selected-p (eq tag xgtags--selected-tag)))
+    (xgtags--insert-with-face query
+                              (if selected-p
+                                  'xgtags-match-selected-face
+                                'xgtags-match-face))
+    (insert "[")
+    (xgtags--insert-with-face (number-to-string line)
+                              (if selected-p
+                                  'xgtags-line-number-selected-face
+                                'xgtags-line-number-face))
+    (when match
+      (insert "]\t\t")
+      (xgtags--insert-with-face match (if selected-p
+                                          'vinurs-xgtags-line-selected-face
+                                        'xgtags-line-face)))
+    (put-text-property start (point) 'xgtags-tag tag)))
 
 
 ;;; init-xgtags.el ends here
