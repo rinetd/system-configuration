@@ -39,4 +39,7 @@ git clone git@github.com:vinurs/UNPv1.git
 # UNPv2
 git clone git@github.com:vinurs/UNPv2.git
 
+# libev
+git clone git@github.com:vinurs/libev-src.git
+
 exit 0
