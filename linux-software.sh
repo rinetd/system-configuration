@@ -59,6 +59,10 @@ sudo dnf install -y bzr
 # for common lisp
 sudo dnf install -y sbcl
 
+# cmake
+sudo dnf install -y cmake
+sudo dnf install -y libstdc++.so.6
+
 # cscope-indexer
 sudo dnf install -y cscope
 # global 
