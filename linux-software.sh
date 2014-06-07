@@ -88,6 +88,9 @@ sudo dnf install -y xclip
 sudo dnf install -y rxvt-unicode
 # glances 用python写的一个好用的工具
 sudo dnf install -y  htop glances
+# collectl，比htop更好的系统监控工具
+sudo dnf install -y collectl
+
 # for emacs doxymacs
 sudo dnf install -y libxml2-devel
 
