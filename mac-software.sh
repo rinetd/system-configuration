@@ -40,4 +40,7 @@ brew install automake autoconf libtool libxml2
 brew install minicom
 brew install socat
 
+# cmeake
+brew install cmake
+
 exit 0
