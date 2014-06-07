@@ -2,8 +2,6 @@
 
 
 
-# set default editor
-export EDITOR='vinurs-emacs'
 
 # 设置mc的配置文件路径
 
@@ -291,9 +289,13 @@ export PATH=$PATH:~/bin/
 case $system_type in
     Linux)
         export PATH=$PATH:~/bin/linux
+        # set default editor
+        export EDITOR='vinurs-emacs'
         ;;
     Darwin)
         export PATH=$PATH:~/bin/mac
+        # set default editor
+        export EDITOR='qec'
         ;;
     *)
         ;;
