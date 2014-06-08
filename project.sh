@@ -30,9 +30,6 @@ git clone git@github.com:vinurs/dpdk-src-illustration.git
 # linux kernel illustration
 git clone git@github.com:vinurs/linux-kernel-illustration.git
 
-# my c library
-git clone git@github.com:vinurs/c-lib.git
-
 # UNPv1
 git clone git@github.com:vinurs/UNPv1.git
 
@@ -41,5 +38,8 @@ git clone git@github.com:vinurs/UNPv2.git
 
 # libev
 git clone git@github.com:vinurs/libev-src.git
+
+# my lib
+git clone git@github.com:vinurs/vinurs-libs.git
 
 exit 0
