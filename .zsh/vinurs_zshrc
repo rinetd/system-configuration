@@ -324,3 +324,4 @@ case $system_type in
 esac
 
 
+source ~/.zsh/zsh_svn
