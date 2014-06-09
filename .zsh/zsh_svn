@@ -1,4 +1,4 @@
 function mk-svndir()
 {
-    mkdir trunk branches tags version
+    mkdir -vp branches tags version trunk/{doc/,lib,patch,source}
 }
