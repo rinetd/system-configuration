@@ -15,7 +15,7 @@ function check-emacs-daemon()
 
 # emacs config
 # using open emacs xwindow
-function xec ()
+function qec ()
 {
      check-emacs-daemon
      (wmctrl -a emacs@ && emacsclient $* >/dev/null  2>&1 &) || (emacsclient -c $* >/dev/null  2>&1 &)
