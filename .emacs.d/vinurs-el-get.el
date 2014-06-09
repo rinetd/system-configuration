@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.victor@gmail.com
 ;; Version: $Id: @(#)vinurs-dot-emacs.el 0.0 2011/03/22 11:05:27 victor Exp $
-;; Changed: <vinurs 05/30/2014 03:23:10>
+;; Changed: <vinurs 06/10/2014 07:10:44>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -60,9 +60,11 @@
         ;; 标准的注释
         xml-parse
         doxymacs
+        
+        ;; dired不过这个一般默认就集成在emacs里了，我这里增加的是一些有用的扩展
 
-	;; dired不过这个一般默认就集成在emacs里了，我这里增加的是一些有用的扩展
-
+        ;; multi-term
+        multi-term
 
         ;; auto-complete
         ;; 所有的自动补全相关的配置
@@ -74,8 +76,8 @@
         ;; markdown,用github写博客
         markdown-mode
 
-	;; 括号补全
-	;; parenthesis
+        ;; 括号补全
+        ;; parenthesis
 
                 
         ;; global gtags
@@ -88,13 +90,13 @@
         ;; common lisp
         slime
 	
-	;; flymake
-	flymake
-	
-	;; 代码折叠相关
-	;; hs-mode
-	hideif
-	hide-region  ;; 这个放在最后面吧，所有的配置都在这个init里面
+        ;; flymake
+        flymake
+        
+        ;; 代码折叠相关
+        ;; hs-mode
+        hideif
+        hide-region  ;; 这个放在最后面吧，所有的配置都在这个init里面
 
         ;;color-theme                     ;;主题
         )
