@@ -79,6 +79,9 @@
 ;;svn的配置
 (load "vinurs-svn")
 
+;; shell-script-mode
+(load "vinurs-shell")
+
 
 ;; 回车后indent
 (eal-define-keys
