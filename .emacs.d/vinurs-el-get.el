@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.victor@gmail.com
 ;; Version: $Id: @(#)vinurs-dot-emacs.el 0.0 2011/03/22 11:05:27 victor Exp $
-;; Changed: <vinurs 06/10/2014 07:10:44>
+;; Changed: <vinurs 06/10/2014 07:41:41>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -89,7 +89,10 @@
         org-mode
         ;; common lisp
         slime
-	
+
+        ;; 缩进提示线
+        ;; highlight-indentation
+        
         ;; flymake
         flymake
         

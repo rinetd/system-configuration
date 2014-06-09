@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.victor@gmail.com
 ;; Version: $Id: @(#)victor-doc-emacs.el,v 0.0 2011/03/22 11:05:27 victor Exp $
-;; Changed: <vinurs 05/30/2014 03:48:26>
+;; Changed: <vinurs 06/10/2014 07:51:23>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -92,7 +92,6 @@
 
 ;; for Developement
 (load "vinurs-develope")
-
 
 
 ;; for mac or linux
