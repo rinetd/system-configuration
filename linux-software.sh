@@ -127,6 +127,7 @@ sudo dnf install -y wireshark
 # for rxvt-unicode
 sudo dnf install -y perl-ExtUtils-Embed
 
+sudo dnf install -y gitg
 
 
 
