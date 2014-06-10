@@ -7,7 +7,7 @@
 # 
 #         Version:  1.0
 #         Created:  2014/05/22 16:31:28
-#         Changed:  <vinurs 05/22/2014 16:36:24>
+#         Changed:  <vinurs 06/11/2014 07:54:16>
 #        Revision:  none
 # 
 #          Author:  zhanghaiyuan
@@ -24,11 +24,15 @@ git clone git@github.com:vinurs/vinurs.github.io.git
 # dpdk
 git clone git://dpdk.org/dpdk 
 
+
 # dpdk illustration
 git clone git@github.com:vinurs/dpdk-src-illustration.git 
+git clone git@github.com:vinurs/dpdk-src-illustration.wiki.git
 
 # linux kernel illustration
 git clone git@github.com:vinurs/linux-kernel-illustration.git
+git clone git@github.com:vinurs/linux-kernel-illustration.wiki.git
+
 
 # UNPv1
 git clone git@github.com:vinurs/UNPv1.git
