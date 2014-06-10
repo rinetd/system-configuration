@@ -105,7 +105,7 @@ source ~/.zsh/zsh_alias
 source ~/.zsh/zsh_filemanager
 
 # version control相关:git, svn
-source ~/.zsh/vc
+source ~/.zsh/zsh_vc
 
 #路径别名 进入相应的路径时只要 cd ~xxx
 hash -d WWW="/home/lighttpd/html"
@@ -324,4 +324,3 @@ case $system_type in
 esac
 
 
-source ~/.zsh/zsh_svn

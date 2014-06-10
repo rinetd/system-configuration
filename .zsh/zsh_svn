@@ -1,4 +1,0 @@
-function mk-svndir()
-{
-    mkdir -vp branches tags version trunk/{doc/,lib,patch,source}
-}

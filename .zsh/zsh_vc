@@ -1,0 +1,18 @@
+function mk-svndir()
+{
+    mkdir -vp branches tags version trunk/{doc/,lib,patch,source}
+}
+
+
+function gen-gtags()
+{
+    if [[ $# == 0 ]]; then
+        find ./ -name '*.[ch]' > gtags.files
+    else
+        find $*  -name '*.[ch]' > gtags.files
+    fi
+
+}
+
+
+
