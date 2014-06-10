@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@localhost.localdomain
 ;; Version: $Id: @(#)init-org-mode.el,v 0.0 2014/05/18 12:19:43 vinurs Exp $
-;; Changed: <vinurs 05/18/2014 12:20:22>
+;; Changed: <vinurs 06/11/2014 07:50:01>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -46,44 +46,44 @@
 
 
 
-;; org很不多的软件，好好积累配置文件
-;; 设置org的默认路径，因为我所有的东西都放到dropbox里面去了，这样我就可以实时同步
-;; (setq orgmode-default-dir "~/Dropbox/private/org/")
-(setq orgdd "~/Dropbox/private/org/")
+;; ;; org很不多的软件，好好积累配置文件
+;; ;; 设置org的默认路径，因为我所有的东西都放到dropbox里面去了，这样我就可以实时同步
+;; ;; (setq orgmode-default-dir "~/Dropbox/private/org/")
+;; (setq orgdd "~/Dropbox/private/org/")
 
-(require 'org-install)
-
-
-;; 让 .org的文件打开后默认进入 org mode
-(add-to-list 'auto-mode-alist '("\.\(org\|org_archive\|txt\)$" . org-mode))
-(setq org-log-done t)
+;; (require 'org-install)
 
 
-;; todo list
-;; todo list 默认只有两种状态： TODO 和 DONE。我们可以再增加一些其他状态。
-(setq org-todo-keywords
-      '((sequence "TODO" "DOING" "HANGUP" "|" "DONE" "CANCEL")))
-;; 可以将 todo list 的状态增加为五种：TODO，DOING，HANGUP，DONE，CANCEL。
-;; 注意，在 HANGUP 和 DONE 之间有一条竖线 “|”，在竖线之前的状态和之后的状态使用的是不同的face。
-
-;; 进一步的，我们还可以记录切换到某一种状态时的时间：
-(setq org-todo-keywords
-      '((sequence "TODO(t)" "DOING(i!)" "HANGUP(h!)" "|" "DONE(d!)" "CANCEL(c!)")))
+;; ;; 让 .org的文件打开后默认进入 org mode
+;; (add-to-list 'auto-mode-alist '("\.\(org\|org_archive\|txt\)$" . org-mode))
+;; (setq org-log-done t)
 
 
-;; 为了使用Org-mode的日程表功能，首先需要把todo.org加入到日程表文件中
-; 将~/org/todo.org替换为todo.org实际路径
-(setq org-agenda-files (list (concat orgdd "todo.org")))
-;; (setq emelfm2 (concat "emelfm2 --config=" (getenv "HOME") "/.emelfm2"))
+;; ;; todo list
+;; ;; todo list 默认只有两种状态： TODO 和 DONE。我们可以再增加一些其他状态。
+;; (setq org-todo-keywords
+;;       '((sequence "TODO" "DOING" "HANGUP" "|" "DONE" "CANCEL")))
+;; ;; 可以将 todo list 的状态增加为五种：TODO，DOING，HANGUP，DONE，CANCEL。
+;; ;; 注意，在 HANGUP 和 DONE 之间有一条竖线 “|”，在竖线之前的状态和之后的状态使用的是不同的face。
+
+;; ;; 进一步的，我们还可以记录切换到某一种状态时的时间：
+;; (setq org-todo-keywords
+;;       '((sequence "TODO(t)" "DOING(i!)" "HANGUP(h!)" "|" "DONE(d!)" "CANCEL(c!)")))
 
 
-;; 再绑定Org-mode日程表的快捷键。
-;; C-c o a (agenda)
-(global-set-key "\C-coa" 'org-agenda)
+;; ;; 为了使用Org-mode的日程表功能，首先需要把todo.org加入到日程表文件中
+;; ; 将~/org/todo.org替换为todo.org实际路径
+;; (setq org-agenda-files (list (concat orgdd "todo.org")))
+;; ;; (setq emelfm2 (concat "emelfm2 --config=" (getenv "HOME") "/.emelfm2"))
 
 
-;; Org-Mode发布设置
-(require 'org-publish)
+;; ;; 再绑定Org-mode日程表的快捷键。
+;; ;; C-c o a (agenda)
+;; (global-set-key "\C-coa" 'org-agenda)
+
+
+;; ;; Org-Mode发布设置
+;; (require 'org-publish)
 
 
 ;;; init-org-mode.el ends here
