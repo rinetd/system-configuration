@@ -229,6 +229,9 @@
 (setq save-place-file "~/.emacs.d/.emacs-places")
 
 
+;; dired
+(require 'vinurs-dired)
+
 ;; mew
 (require 'vinurs-mew)
 
