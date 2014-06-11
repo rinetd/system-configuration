@@ -129,6 +129,9 @@ sudo dnf install -y perl-ExtUtils-Embed
 
 sudo dnf install -y gitg
 
+# 锁屏软件
+sudo dnf install -y xscreensaver
+
 
 
 exit 0
