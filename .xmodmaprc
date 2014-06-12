@@ -20,3 +20,6 @@ add Control = Control_R
 !clear mod4
 ! add mod3 = Super_L
 add mod4 = Super_R
+
+
+pointer = 1 2 3 5 4 6 7 8 9 10 11 12
