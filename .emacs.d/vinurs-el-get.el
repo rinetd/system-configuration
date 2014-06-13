@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.victor@gmail.com
 ;; Version: $Id: @(#)vinurs-dot-emacs.el 0.0 2011/03/22 11:05:27 victor Exp $
-;; Changed: <vinurs 06/10/2014 07:41:41>
+;; Changed: <vinurs 06/13/2014 09:51:46>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -51,7 +51,7 @@
         
         linum+                          ;;显示行号
         hl-line+                        ;
-        yasnippet                       ;
+
         hexrgb                          ;palette依赖这个
         palette                         ;颜色选择插件，很强大
         ascii
@@ -70,6 +70,7 @@
         ;; 所有的自动补全相关的配置
         auto-complete
         auto-complete+
+        yasnippet                       ;
         ;; cedet
         ;; ecb
         
@@ -100,6 +101,7 @@
         ;; hs-mode
         hideif
         hide-region  ;; 这个放在最后面吧，所有的配置都在这个init里面
+        
 
         ;;color-theme                     ;;主题
         )
