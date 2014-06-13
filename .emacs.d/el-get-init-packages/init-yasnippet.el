@@ -4,7 +4,7 @@
 ;;
 ;; Author: zhang.haiyuan@server.embedway.com
 ;; Version: $Id: @(#)init-yasnippet.el,v 0.0 2013/08/14 12:02:55 vinurs Exp $
-;; Changed: <vinurs 06/13/2014 08:13:16>
+;; Changed: <vinurs 06/13/2014 10:34:48>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -46,18 +46,18 @@
 
 
 
-(yas/global-mode 1)
+;; (yas/global-mode 1)
 
 
 ;; 定义多个root-directory
-(setq yas/root-directory '("~/.emacs.d/el-get/yasnippet/snippets"
-                           "~/.emacs.d/el-get-init-packages/yasnippet/snippets"
-                           ))
+;;(setq yas/root-directory '("~/.emacs.d/el-get/yasnippet/snippets"
+ ;;                          "~/.emacs.d/el-get-init-packages/yasnippet/snippets"
+  ;;                         ))
 ;; Map `yas/load-directory' to every element
-(mapc 'yas/load-directory yas/root-directory)
+;;(mapc 'yas/load-directory yas/root-directory)
 
 
 ;; 将yas/expand绑定到其他快捷键上
-(global-set-key (kbd "C-;") 'yas/expand)
+;;(global-set-key (kbd "C-;") 'yas/expand)
 
 ;;; init-yasnippet.el ends here
