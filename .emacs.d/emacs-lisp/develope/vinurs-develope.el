@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.victor@gmail.com
 ;; Version: $Id: @(#)victor_develope.el 0.0 2010/12/07 02:41:20 victor Exp $
-;; Changed: <vinurs 08/15/2013 18:52:35>
+;; Changed: <vinurs 06/14/2014 11:10:13>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -72,12 +72,7 @@
 ;; 所有关于括号的配置
 ;; (require 'victor-paren-settings)
 
-;;
-;;(load "vinurs_doxymacs")
 
-
-;;svn的配置
-(load "vinurs-svn")
 
 ;; shell-script-mode
 (load "vinurs-shell")
