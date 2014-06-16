@@ -11,6 +11,8 @@ export QT_IM_MODULE="fcitx"
 export XMODIFIERS="@im=fcitx"
 
 
+export EDITOR='qec'
+
 # 设置环境变量路径
 export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig
 
@@ -289,13 +291,9 @@ export PATH=$PATH:~/bin/
 case $system_type in
     Linux)
         export PATH=$PATH:~/bin/linux
-        # set default editor
-        export EDITOR='vinurs-emacs'
         ;;
     Darwin)
         export PATH=$PATH:~/bin/mac
-        # set default editor
-        export EDITOR='qec'
         ;;
     *)
         ;;
