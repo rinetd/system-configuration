@@ -132,6 +132,24 @@ sudo dnf install -y gitg
 # 锁屏软件
 sudo dnf install -y xscreensaver
 
+# for wps
+sudo dnf install -y bICE.so.6 
+sudo dnf install -y libSM.so.6 
+sudo dnf install -y libX11.so.6 
+sudo dnf install -y libXext.so.6
+sudo dnf install -y libXrender.so.1
+sudo dnf install -y libfontconfig.so.1 
+sudo dnf install -y libfreetype.so.6
+sudo dnf install -y libglib-2.0.so.0
+sudo dnf install -y libgobject-2.0.so.0
+sudo dnf install -y libgthread-2.0.so.0
+sudo dnf install -y libmng.so.1
+sudo dnf install -y libz.so.1
+sudo dnf install -y libcups.so.2
+sudo dnf install -y libpng12.so.0 
+sudo dnf install -y libGLU.so.1
 
 
-exit 0
+
+
+exit
