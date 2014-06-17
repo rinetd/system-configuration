@@ -293,7 +293,9 @@ case $system_type in
         export PATH=$PATH:~/bin/linux
         ;;
     Darwin)
-        export PATH=$PATH:~/bin/mac
+        export PATH=~/bin/mac:$PATH
+	# 这么设置主要原来mac下面有emacs，跟我自己用brew安装的冲突，所以自己安装的优先
+        export PATH=/Applications/Emacs.app/Contents/MacOS/bin/:$PATH
         ;;
     *)
         ;;
