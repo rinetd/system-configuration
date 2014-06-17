@@ -50,6 +50,8 @@ files_common+=(.cron.d)
 files_common+=(.globalrc)
 # git
 files_common+=(.gitconfig)
+# stardict
+files_common+=(.stardict)
 
 
 

@@ -42,5 +42,8 @@ brew install socat
 
 # cmeake
 brew install cmake
+# sdcv for stardict
+brew install sdcv
+
 
 exit 0
