@@ -11,5 +11,6 @@
 	default = simple
 [color]
 	status = true
+	ui = true
 [core]
 	quotepath = false
