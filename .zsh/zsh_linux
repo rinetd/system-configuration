@@ -1,25 +1,7 @@
 alias ls='ls -F --color=auto'
 
 ################### linux emacs config start ###################
-# function check-emacs-daemon()
-# {
-#     ps -ef |grep 'emacs --daemon' | grep -v 'grep' >/dev/null
-#     # emacs has not stated, then start it
-#     if [[ $? != 0 ]]; then
-#         (emacs --daemon >/dev/null 2>&1 &)
-#         # 启动emacs是需要时间的，这里设置为5s中，一般的话是用不到的，因为系统起来以后emacs就自>动起>来了
-#         echo "emacs daemon hasn't started, wait a minute plz, starting..."
-#         sleep 5
-#     fi
-# }
 
-# emacs config
-# using open emacs xwindow
-# function qec ()
-# {
-#      check-emacs-daemon
-#      (wmctrl -a emacs@ && emacsclient $* >/dev/null  2>&1 &) || (emacsclient -c $* >/dev/null  2>&1 &)
-# }
 # using open emacs in terminal
 function tec()
 {
