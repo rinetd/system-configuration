@@ -33,7 +33,12 @@ function check-emacs-daemon()
 function qec-linux ()
 {
      check-emacs-daemon
-     (wmctrl -a emacs@ && emacsclient $* >/dev/null  2>&1 &) || (emacsclient -c $* >/dev/null  2>&1 &)
+    # check argument number
+    if [[ $# != 0 ]]; then
+        ((wmctrl -a emacs@) &&  (emacsclient $* >/dev/null 2>&1 &)) || (emacsclient -c $* >/dev/null 2>&1 &)
+    else
+        (wmctrl -a emacs@) || (emacsclient -c >/dev/null 2>&1 &)
+    fi
 }
 
 function qec()
