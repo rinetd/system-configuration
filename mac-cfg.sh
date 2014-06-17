@@ -1,13 +1,13 @@
 #!/bin/bash
 #==============================================================================
 #
-#        Filename:  @(#)mac.sh
+#        Filename:  @(#)mac-cfg.sh
 #
 #     Description:  for mac only
 # 
 #         Version:  1.0
 #         Created:  2014/05/05 11:04:01
-#         Changed:  <vinurs 05/05/2014 11:08:34>
+#         Changed:  <vinurs 06/18/2014 06:45:57>
 #        Revision:  none
 # 
 #          Author:  zhanghaiyuan
