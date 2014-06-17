@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.victor@gmail.com
 ;; Version: $Id: @(#)custom.el,v 0.0 2011/04/26 05:35:58 victor Exp $
-;; Changed: <vinurs 08/16/2013 18:09:22>
+;; Changed: <vinurs 06/17/2014 20:40:10>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -46,3 +46,4 @@
 ;;;;##########################################################################
 ;;由菜单修改配置的东西将会保存在custom-file里
 (setq custom-file "~/.emacs.d/custom.el")
+(custom-set-variables '(vc-follow-symlinks nil))

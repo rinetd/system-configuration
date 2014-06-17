@@ -18,7 +18,7 @@ alias g-trash='cd ~/.local/share/Trash/files'
 # 重新设置一下pwd，这个是我自己写的命令，可以用来直接将当前目录copy到剪贴板
 alias pwd='pwd.sh'
 # 将zsh设置成我的主目录下面的zsh，防止以后我要自己重新编译zsh
-alias zsh='~/bin/zsh'
+#alias zsh='~/bin/zsh'
 
 
 

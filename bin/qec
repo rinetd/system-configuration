@@ -1,3 +1,5 @@
+#!/usr/local/bin/zsh
+
 #!/bin/bash
 
 function qec-mac()
@@ -5,7 +7,7 @@ function qec-mac()
     # check if emacs daemon has started
     ps -ef |grep 'Emacs.app' | grep -v 'grep' >/dev/null
     if [[ $? != 0 ]]; then
-        emacs 
+	    open -a emacs --args
 	    sleep 2
     fi
 
