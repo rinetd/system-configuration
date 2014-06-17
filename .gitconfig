@@ -14,3 +14,4 @@
 	ui = true
 [core]
 	quotepath = false
+	editor = emacsclient 
