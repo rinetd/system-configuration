@@ -4,20 +4,20 @@ alias ee='emacsclient -t'
 alias ls='ls -G'
 
 
-function qec()
-{
-    # check if emacs daemon has started
-    ps -ef |grep 'Emacs.app' | grep -v 'grep' >/dev/null
-    if [[ $? != 0 ]]; then
-        emacs 
-	    sleep 2
-    fi
+# function qec()
+# {
+#     # check if emacs daemon has started
+#     ps -ef |grep 'Emacs.app' | grep -v 'grep' >/dev/null
+#     if [[ $? != 0 ]]; then
+#         emacs 
+# 	    sleep 2
+#     fi
 
-    # check argument number
-    if [[ $# != 0 ]]; then
-        (/Applications/Emacs.app/Contents/MacOS/bin/emacsclient $* 2>&1 >/dev/null &)
-    fi
-}
+#     # check argument number
+#     if [[ $# != 0 ]]; then
+#         (/Applications/Emacs.app/Contents/MacOS/bin/emacsclient $* 2>&1 >/dev/null &)
+#     fi
+# }
 
 
 #################### mac emacs config end ####################
