@@ -25,6 +25,11 @@ sudo yum -y install dnf
 # 自动选择源
 sudo dnf install -y yum-fastestmirror 
 
+# gcc
+sudo dnf install -y gcc
+# kernel header
+sudo dnf install "kernel-devel-uname-r == $(uname -r)"
+
 #安装axelget插件 
 # axelget是一个多线程下载工具，yum本身是单线程下载，难怪速度不快呢，
 sudo dnf install -y alex
