@@ -7,7 +7,7 @@
 # 
 #         Version:  1.0
 #         Created:  2012/08/05 10:24:48
-#         Changed:  <vinurs 05/22/2014 21:28:39>
+#         Changed:  <vinurs 06/18/2014 09:07:56>
 #        Revision:  none
 # 
 #          Author:  zhanghaiyuan
@@ -37,8 +37,11 @@ else
     # 开头的几个window，公用的
     # 默认打开叫sys-monitor的窗口，专门用来监控系统当前的性能的
     tmux -2 new-session -s $TMUX_SESSION -n sys-monitor \; detach-client
-    # dpdk
-    tmux -2 new-session -s $TMUX_SESSION -n dpdk \; detach-client
+    # emacs
+    tmux attach-session -t $TMUX_SESSION \; new-window -n emacs \; split-window -h \; detach-client
+    # git
+    tmux attach-session -t $TMUX_SESSION \; new-window -n git \; split-window -h \; detach-client
+
     # 打开文件管理器mc，我最喜欢的文件管理器了
     # tmux attach-session -t $TMUX_SESSION \; new-window -n mc \; send-keys 'mc' C-m \; detach-client
 
