@@ -61,29 +61,6 @@ alias g-emacs='cd ~/.emacs.d'
 alias g-algorithms='cd ~/programmes/c/algorithms'
 
 
-# tmux
-# if tmux urxvt has been on, do nothing, else execute tmux urxvt
-# 如果没有urxvt的session，那么建立这个session，如果存在，但是没有人attach
-# 那么attach，如果已经有人attach了这个session，那么什么也不干 
-if
-    tmux has-session -t urxvt 1>/dev/null 2>&1
-then
-    if
-        tmux list-sessions | grep "urxvt" | grep -v "attached" &> /dev/null
-    then
-        tmux attach-session -t urxvt 
-    fi
-else
-# 新建session的时候开启下面几个窗口的应用程序
-# 0: mc窗口，专门用来文件管理
-    tmux -2 new-session -s urxvt -n "mutt" mutt \; \
-        new-window -n "mc" mc \; \
-        new-window -n "embedway" \; \
-        new-window -n "tftp" \; \
-        new-window -n "compile" \; \
-        new-window -n "openwrt"
-fi
-
 
 # company's setup
 if [ -f ~/.company ]; then
