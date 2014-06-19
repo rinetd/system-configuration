@@ -37,8 +37,6 @@ export LC_ALL="en_US.UTF-8"
 export LD_LIBRARY_PATH=/usr/local/lib
 
 # export PATH
-# my emacs
-export PATH=$PATH:/home/vinurs/usr/local/emacs/bin
 
 
 
