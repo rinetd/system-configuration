@@ -112,6 +112,7 @@ sudo dnf install -y proxychains libproxychains.so.3
 
 # XWindows advanced install
 
+sudo dnf install -y shutter
 sudo dnf install -y sawfish
 # using for changing background pic
 sudo dnf install -y feh
