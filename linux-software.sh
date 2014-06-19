@@ -131,6 +131,7 @@ sudo dnf install -y xsel
 
 
 sudo dnf install -y wireshark
+sudo dnf install -y tcpdump
 # for rxvt-unicode
 sudo dnf install -y perl-ExtUtils-Embed
 
