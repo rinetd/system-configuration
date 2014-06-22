@@ -87,6 +87,9 @@ sudo dnf install -y 'svn*'
 sudo dnf install -y 'sqlite*'
 # zsh 很好用的shell
 sudo dnf install -y zsh
+# sshfs
+sudo dnf install -y sshfs
+
 # tmux
 sudo dnf install -y tmux
 sudo dnf install -y xclip

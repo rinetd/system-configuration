@@ -45,5 +45,9 @@ brew install cmake
 # sdcv for stardict
 brew install sdcv
 
+# sshfs
+brew install sshfs
+
+
 
 exit 0
