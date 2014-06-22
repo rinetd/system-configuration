@@ -52,6 +52,8 @@ files_common+=(.globalrc)
 files_common+=(.gitconfig)
 # stardict
 files_common+=(.stardict)
+# sshfs
+files_common+=(sshfs)
 
 
 
