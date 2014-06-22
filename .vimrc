@@ -23,3 +23,5 @@ autocmd BufReadPost *
 "高亮搜索
 set hlsearch
 set incsearch
+" 在右下角显示文件行数以及百分比
+set ruler
