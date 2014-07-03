@@ -165,6 +165,24 @@ current point."
     > n
     > n
     > n
+    "#ifdef __cplusplus"
+    > n
+    "extern \"C\" {"
+    > n
+    "#endif /* __cplusplus */"
+    > n
+    > n
+    > n
+    > n
+    "#ifdef __cplusplus"
+    > n
+    "}"
+    > n
+    "#endif /* __cplusplus */"
+    > n
+    > n
+    > n
+    > n
     "#endif /* _"
     (upcase
      (file-name-sans-extension
