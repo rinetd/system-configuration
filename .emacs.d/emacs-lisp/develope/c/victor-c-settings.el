@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.victor@gmail.com
 ;; Version: $Id: @(#)victor-c-settings.el,v 0.0 2011/02/20 01:55:58 victor Exp $
-;; Changed: <vinurs 09/29/2013 17:55:09>
+;; Changed: <vinurs 07/05/2014 17:24:44>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -147,5 +147,7 @@
 (eval-after-load "cc-mode"
   `(cc-mode-settings))
 
-
+(add-hook 'c-mode-common-hook
+	  (lambda()
+	    (c-set-offset 'inextern-lang 0)))
 ;;; victor-c-settings.el ends here
