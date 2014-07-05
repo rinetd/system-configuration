@@ -54,7 +54,8 @@ files_common+=(.gitconfig)
 files_common+=(.stardict)
 # sshfs
 files_common+=(sshfs)
-
+# ssh
+files_common+=(.ssh)
 
 
 # files
