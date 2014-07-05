@@ -26,16 +26,22 @@
 #define _(>>>FILE_UPCASE<<<)_H_(>>>YEAR<<<)(>>>MONTH<<<)(>>>DAY<<<)(>>>HOUR<<<)(>>>MINUTE<<<)(>>>SECOND<<<)
 
 
-#ifdef __cplusplus 
-extern "C" {  
-#endif /* __cplusplus */
+#ifdef __cplusplus
+#define EXTERN_C_BEGIN  extern "C" {
+#define EXTERN_C_END    }
+#else
+#define EXTERN_C_BEGIN
+#define EXTERN_C_END
+#endif
+
+EXTERN_C_BEGIN;
 
 
 
 
-#ifdef __cplusplus 
-}  
-#endif /* __cplusplus */ 
+
+
+EXTERN_C_END;
 
 
 #endif /* _(>>>FILE_UPCASE<<<)_H_(>>>YEAR<<<)(>>>MONTH<<<)(>>>DAY<<<)(>>>HOUR<<<)(>>>MINUTE<<<)(>>>SECOND<<<) */

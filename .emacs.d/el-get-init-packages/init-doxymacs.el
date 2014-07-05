@@ -4,7 +4,7 @@
 ;;
 ;; Author: zhang.haiyuan@server.embedway.com
 ;; Version: $Id: @(#)init-doxymacs.el,v 0.0 2014/05/31 22:56:25 vinurs Exp $
-;; Changed: <vinurs 06/03/2014 18:43:39>
+;; Changed: <vinurs 07/05/2014 17:49:24>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -165,22 +165,27 @@ current point."
     > n
     > n
     > n
-    "#ifdef __cplusplus"
+    "#ifdef __cplusplus" > n
+    "#define EXTERN_C_BEGIN  extern \"C\" {" > n
+    "#define EXTERN_C_END    } /* __cplusplus */" > n
+    "#else" > n
+    "#define EXTERN_C_BEGIN" > n
+    "#define EXTERN_C_END" > n
+    "#endif" > n
     > n
-    "extern \"C\" {"
-    > n
-    "#endif /* __cplusplus */"
-    > n
-    > n
-    > n
-    > n
-    "#ifdef __cplusplus"
-    > n
-    "}"
-    > n
-    "#endif /* __cplusplus */"
+    "EXTERN_C_BEGIN;" > n
     > n
     > n
+    > n
+    > n
+    > n
+    > n
+    > n
+    > n
+    > n
+    > n
+    > n
+    "EXTERN_C_END;" > n
     > n
     > n
     "#endif /* _"
