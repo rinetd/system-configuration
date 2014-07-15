@@ -136,6 +136,8 @@ sudo dnf install -y xsel
 sudo dnf install -y wireshark
 sudo dnf install -y tcpdump
 sudo dnf install -y tcpreplay
+sudo dnf install -y libpcap
+sudo dnf install -y libpcap-devel
 # for rxvt-unicode
 sudo dnf install -y perl-ExtUtils-Embed
 
