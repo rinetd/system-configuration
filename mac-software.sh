@@ -48,6 +48,9 @@ brew install sdcv
 # sshfs
 brew install sshfs
 
+# tcpreplay
+brew install tcpreplay
+
 
 
 exit 0
