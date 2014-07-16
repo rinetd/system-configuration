@@ -43,6 +43,9 @@ git clone git@github.com:vinurs/UNPv2.git
 # libev
 git clone git@github.com:vinurs/libev-src.git
 
+# Makefile test
+git clone git@github.com:vinurs/Makefile.git
+
 # my lib
 git clone git@github.com:vinurs/vinurs-libs.git
 
