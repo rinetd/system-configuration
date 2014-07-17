@@ -9,6 +9,12 @@ function tec()
     emacsclient -nw $*
 }
 
+# ctrl voice
+function voice-ctrl()
+{
+    alsamixer       
+}
+
 
 #################### linux emacs config end ####################
 
