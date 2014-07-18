@@ -34,6 +34,9 @@ git clone git@github.com:vinurs/linux-kernel-illustration.git
 git clone git@github.com:vinurs/linux-kernel-illustration.wiki.git
 
 
+# datastruct
+git clone git@github.com:vinurs/datastruct.git
+
 # UNPv1
 git clone git@github.com:vinurs/UNPv1.git
 
