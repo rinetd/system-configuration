@@ -43,6 +43,9 @@ sudo dnf install -y net-tools
 # ncureses
 sudo dnf install -y ncurses-devel
 
+# ftp server
+sudo dnf install -y vsftpd
+
 # for dpdk
 sudo dnf install -y libpcap-devel
 sudo dnf install -y hwloc
