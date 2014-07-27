@@ -52,4 +52,6 @@ git clone git@github.com:vinurs/Makefile.git
 # my lib
 git clone git@github.com:vinurs/vinurs-libs.git
 
+# jemalloc
+git clone git@github.com:vinurs/jemalloc-illustrate.git
 exit 0
