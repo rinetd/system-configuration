@@ -56,6 +56,8 @@ sudo dnf install -y qemu-kvm libvirt virt-install bridge-utils
 # basic
 sudo dnf install -y texinfo
 
+# ruby
+sudo dnf install -y ruby
 # git log
 sudo dnf install -y tig
 
