@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@localhost.localdomain
 ;; Version: $Id: @(#)init-org-mode.el,v 0.0 2014/05/18 12:19:43 vinurs Exp $
-;; Changed: <vinurs 06/11/2014 07:50:01>
+;; Changed: <vinurs 07/29/2014 00:43:15>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -44,6 +44,36 @@
 ;;;;  User Options, Variables
 ;;;;##########################################################################
 
+
+;; 主要配置就是用来写blog，配合github
+(require 'org-publish)
+(defadvice org-html-paragraph (before org-html-paragraph-advice
+                                      (paragraph contents info) activate)
+  "Join consecutive Chinese lines into a single long line without
+unwanted space when exporting org-mode to html."
+  (let* ((origin-contents (ad-get-arg 1))
+         (fix-regexp "[[:multibyte:]]")
+         (fixed-contents
+          (replace-regexp-in-string
+           (concat
+            "\\(" fix-regexp "\\) *\n *\\(" fix-regexp "\\)") "\\1\\2" origin-contents)))
+
+    (ad-set-arg 1 fixed-contents)))
+
+(setq org-publish-project-alist
+      '(
+      ("org-blog"
+       :base-extension "org"
+       :base-directory "~/program/vinurs.github.io/org/"
+       :recursive t
+       :publishing-function org-html-publish-to-html
+       :auto-preamble t
+       :headline-levels 4 
+       :html-extension "html"
+       :publishing-directory "~/program/vinurs.github.io/_posts/"
+       :body-only t ;; Only export section between <body> </body>
+
+)))
 
 
 ;; ;; org很不多的软件，好好积累配置文件

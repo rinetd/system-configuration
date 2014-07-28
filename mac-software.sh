@@ -51,6 +51,9 @@ brew install sshfs
 # tcpreplay
 brew install tcpreplay
 
+# ruby
+brew install ruby
+
 
 
 exit 0
