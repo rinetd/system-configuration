@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.victor@gmail.com
 ;; Version: $Id: @(#)vinurs-dot-emacs.el 0.0 2011/03/22 11:05:27 victor Exp $
-;; Changed: <vinurs 07/31/2014 22:45:08>
+;; Changed: <vinurs 07/31/2014 23:03:40>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -34,8 +34,6 @@
 (setq el-get-user-package-directory "~/.emacs.d/el-get-init-packages")
 
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
-
-
 
 
 ;; 我自己需要的一些软件包
