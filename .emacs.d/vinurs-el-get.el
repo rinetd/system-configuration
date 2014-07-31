@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.victor@gmail.com
 ;; Version: $Id: @(#)vinurs-dot-emacs.el 0.0 2011/03/22 11:05:27 victor Exp $
-;; Changed: <vinurs 07/31/2014 23:03:40>
+;; Changed: <vinurs 08/01/2014 05:21:47>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -120,6 +120,7 @@
     (goto-char (point-max))
     (eval-print-last-sexp)))
 
+;; 用户自己定义的一些插件地址
 (add-to-list 'el-get-recipe-path "~/.emacs.d/el-get-user/recipes")
 
 
