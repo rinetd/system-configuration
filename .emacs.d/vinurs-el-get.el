@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.victor@gmail.com
 ;; Version: $Id: @(#)vinurs-dot-emacs.el 0.0 2011/03/22 11:05:27 victor Exp $
-;; Changed: <vinurs 06/13/2014 09:51:46>
+;; Changed: <vinurs 07/31/2014 22:45:08>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -70,6 +70,11 @@
         ;; 所有的自动补全相关的配置
         auto-complete
         auto-complete+
+        ;; 用clang来给c自动补全
+        auto-complete-clang
+        auto-complete-clang-extension
+
+        
         yasnippet                       ;
         ;; cedet
         ;; ecb

@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@localhost.localdomain
 ;; Version: $Id: @(#)init-org-mode.el,v 0.0 2014/05/18 12:19:43 vinurs Exp $
-;; Changed: <vinurs 07/29/2014 22:43:59>
+;; Changed: <vinurs 07/29/2014 22:50:47>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -86,6 +86,8 @@ unwanted space when exporting org-mode to html."
 (add-to-list 'auto-mode-alist '("\.\(org\|org_archive\|txt\)$" . org-mode))
 (setq org-log-done t)
 
+(add-hook 'org-mode-hook
+      (lambda () (setq truncate-lines nil)))
 
 ;; ;; todo list
 ;; ;; todo list 默认只有两种状态： TODO 和 DONE。我们可以再增加一些其他状态。
