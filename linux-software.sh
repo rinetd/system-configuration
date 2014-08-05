@@ -43,6 +43,9 @@ sudo dnf install -y net-tools
 # ncureses
 sudo dnf install -y ncurses-devel
 
+sudo dnf install -y uuid-devel
+sudo dnf install -y libuuid-devel
+
 # ftp server
 sudo dnf install -y vsftpd
 
