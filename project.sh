@@ -54,4 +54,8 @@ git clone git@github.com:vinurs/vinurs-libs.git
 
 # jemalloc
 git clone git@github.com:vinurs/jemalloc-illustrate.git
+
+# lisp
+git clone git@github.com:vinurs/lisp.git
+
 exit 0
