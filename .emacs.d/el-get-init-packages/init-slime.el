@@ -4,7 +4,7 @@
 ;;
 ;; Author: zhang.haiyuan@server.embedway.com
 ;; Version: $Id: @(#)init-slime.el,v 0.0 2013/08/15 20:23:39 vinurs Exp $
-;; Changed: <vinurs 08/15/2013 20:27:23>
+;; Changed: <vinurs 08/11/2014 07:38:28>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -44,9 +44,13 @@
 ;;;;  User Options, Variables
 ;;;;##########################################################################
 
+(if (eq system-type 'darwin)
+    (setq inferior-lisp-program "/usr/local/bin/sbcl") ; your Lisp system
+  (setq inferior-lisp-program "/usr/bin/sbcl") ; your Lisp system
+    )
 
 
-(setq inferior-lisp-program "/usr/bin/sbcl") ; your Lisp system
+(setq inferior-lisp-program "/usr/local/bin/sbcl") ; your Lisp system
 ;; (add-to-list 'load-path "~/hacking/lisp/slime/")  ; your SLIME directory
 
 ;; (slime-setup)
