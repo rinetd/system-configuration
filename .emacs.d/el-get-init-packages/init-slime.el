@@ -50,7 +50,7 @@
     )
 
 
-(setq inferior-lisp-program "/usr/local/bin/sbcl") ; your Lisp system
+;;(setq inferior-lisp-program "/usr/local/bin/sbcl") ; your Lisp system
 ;; (add-to-list 'load-path "~/hacking/lisp/slime/")  ; your SLIME directory
 
 ;; (slime-setup)
