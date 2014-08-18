@@ -1,5 +1,6 @@
 clipboard/history.dat
 dbus/*
+log/*
 libpinyin/data/culture.dbin
 libpinyin/data/gb_char.dbin
 libpinyin/data/geology.dbin
