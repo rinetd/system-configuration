@@ -9,4 +9,4 @@ switch (${1:ch}) {
        default:
        ${4:action};
        break;
-}
+} /* end of switch case */
