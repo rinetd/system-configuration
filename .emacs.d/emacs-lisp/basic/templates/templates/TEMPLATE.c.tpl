@@ -37,6 +37,13 @@
 
 
 /* ******************************* Macros *********************************** */
+/* function argument qualifier */
+/* the argument is only for input */
+#define IN
+/* the argument is only for output */
+#define OUT
+/* the argument's value will be modified */
+#define MOD
 
 
 /* ******************** structs, enums, unions, typedefs ******************** */
