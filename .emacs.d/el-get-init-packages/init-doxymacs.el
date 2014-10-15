@@ -4,7 +4,7 @@
 ;;
 ;; Author: zhang.haiyuan@server.embedway.com
 ;; Version: $Id: @(#)init-doxymacs.el,v 0.0 2014/05/31 22:56:25 vinurs Exp $
-;; Changed: <vinurs 07/05/2014 17:49:24>
+;; Changed: <vinurs 10/15/2014 10:49:21>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -175,11 +175,39 @@ current point."
     > n
     "EXTERN_C_BEGIN;" > n
     > n
+    "/* ********************************* ABBREVIATIONS ******************************" > n
+    " *" > n
+    " *" > n
+    " *" > n
+    "* *****************************************************************************/" > n
+    > n
+    > n
+    "/* ************************** system headerfiles **************************** */" > n
+    > n
+    > n
+    > n
+    "/* *********************** user-defined headerfiles ************************* */" > n
+    > n
+    > n
+    "/* ******************************* Macros *********************************** */" > n
+    "/* function argument qualifier */" > n
+    "/* the argument is only for input */" > n
+    "#define IN" > n
+    "/* the argument is only for output */" > n
+    "#define OUT" > n
+    "/* the argument's value will be modified */" > n
+    "#define MOD" > n
     > n
     > n
     > n
     > n
+    "/* ******************** structs, enums, unions, typedefs ******************** */" > n
     > n
+    > n
+    "/* *********************** extern global variables ************************** */" > n
+    > n
+    > n
+    "/* ************************ extern functions prototypes ********************* */" > n
     > n
     > n
     > n
