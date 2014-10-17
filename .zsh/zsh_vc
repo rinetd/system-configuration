@@ -4,12 +4,12 @@ function mk-svndir()
 }
 
 
-function gen-gtags()
+function gtags-gen()
 {
     if [[ $# == 0 ]]; then
-        find ./ -name '*.[ch]' > gtags.files
+        find ./ -name '*.[chy]' > gtags.files
     else
-        find $*  -name '*.[ch]' > gtags.files
+        find $*  -name '*.[chy]' > gtags.files
     fi
 
 }
