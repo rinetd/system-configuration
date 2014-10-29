@@ -76,6 +76,8 @@
         yasnippet                       ;
         ;; cedet
         ;; ecb
+
+	;; sr-speedbar
         
         ;; markdown,用github写博客
         markdown-mode
