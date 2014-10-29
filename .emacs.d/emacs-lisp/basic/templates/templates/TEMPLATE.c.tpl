@@ -49,6 +49,9 @@
 /* ******************** structs, enums, unions, typedefs ******************** */
 
 
+/* ************************ global functions prototypes ********************* */
+
+
 /* ************************ static functions prototypes ********************* */
 
 
