@@ -78,6 +78,9 @@
         ;; ecb
 
 	;; sr-speedbar
+	
+	;; 当窗口分割变多的时候，快速切换窗口
+	switch-window
         
         ;; markdown,用github写博客
         markdown-mode
