@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.victor@gmail.com
 ;; Version: $Id: @(#)vinurs-dot-emacs.el 0.0 2011/03/22 11:05:27 victor Exp $
-;; Changed: <vinurs 08/01/2014 05:21:47>
+;; Changed: <vinurs 10/30/2014 09:27:54>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -77,10 +77,22 @@
         ;; cedet
         ;; ecb
 
-	;; sr-speedbar
+        ;; icicles related
+        icicles
+        icicles-mac
+        icicles-face
+        icicles-opt
+        icicles-var
+        icicles-fn
+        icicles-mcmd
+        icicles-cmd1
+        icicles-cmd2
+        icicles-mode
+        
+        sr-speedbar
 	
-	;; 当窗口分割变多的时候，快速切换窗口
-	switch-window
+        ;; 当窗口分割变多的时候，快速切换窗口
+        switch-window
         
         ;; markdown,用github写博客
         markdown-mode

@@ -1,10 +1,10 @@
-;;; init-sr-speedbar.el --- 
+;;; init-icicles-mode.el --- 
 
 ;; Copyright 2014 zhanghaiyuan
 ;;
 ;; Author: zhang.haiyuan@server.embedway.com
-;; Version: $Id: @(#)init-sr-speedbar.el,v 0.0 2014/10/29 19:58:17 vinurs Exp $
-;; Changed: <vinurs 10/30/2014 09:25:56>
+;; Version: $Id: @(#)init-icicles-mode.el,v 0.0 2014/10/30 09:28:19 vinurs Exp $
+;; Changed: <vinurs 10/30/2014 09:28:21>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -27,14 +27,14 @@
 ;; 
 
 ;; Put this file into your load-path and the following into your ~/.emacs:
-;;   (require 'init-sr-speedbar)
+;;   (require 'init-icicles-mode)
 
 
 
 
 ;;; Code:
 
-(provide 'init-sr-speedbar)
+(provide 'init-icicles-mode)
 (eval-when-compile
   (require 'cl))
 
@@ -47,7 +47,4 @@
 
 
 
-(require 'sr-speedbar)
-;; (global-set-key (kbd "s-s") 'sr-speedbar-toggle)
-
-;;; init-sr-speedbar.el ends here
+;;; init-icicles-mode.el ends here
