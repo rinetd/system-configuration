@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@localhost.localdomain
 ;; Version: $Id: @(#)ini-ecb.el,v 0.0 2014/05/16 15:14:15 vinurs Exp $
-;; Changed: <vinurs 10/30/2014 21:59:06>
+;; Changed: <vinurs 10/30/2014 23:38:18>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -12,15 +12,10 @@
 ;; it under the terms of the GNU General Public License as published by
 ;; the Free Software Foundation; either version 2, or (at your option)
 ;; any later version.
-;;ecb启动的时候会弹出一个提示窗口,如果不想看到它，可以在emacs配置文件(~/.emacs)里加这一句:
-(setq ecb-tip-of-the-day nil)
-(ecb-activate);;ecb启动的时候会弹出一个提示窗口,如果不想看到它，可以在emacs配置文件(~/.emacs)里加这一句:
-(setq ecb-tip-of-the-day nil)
-(ecb-activate);;ecb启动的时候会弹出一个提示窗口,如果不想看到它，可以在emacs配置文件(~/.emacs)里加这一句:
-(setq ecb-tip-of-the-day nil)
-(ecb-activate);;ecb启动的时候会弹出一个提示窗口,如果不想看到它，可以在emacs配置文件(~/.emacs)里加这一句:
-(setq ecb-tip-of-the-day nil)
-(ecb-activate);;
+
+
+
+
 ;; This program is distributed in the hope that it will be useful,
 ;; but WITHOUT ANY WARRANTY; without even the implied warranty of
 ;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
@@ -52,6 +47,15 @@
 ;;;;  User Options, Variables
 ;;;;##########################################################################
 
+;; cedet
+
+(load-file "~/.emacs.d/el-get/cedet/lisp/cedet/cedet.el")
+(semantic-mode 1)
+
+
+
+
+
 ;; -------------------------------------------------------
 ;; |             |                         |             |
 ;; | Directories |                         |  taglist    |
@@ -75,6 +79,18 @@
 ;; -------------------------------------------------------
 
 (require 'ecb)
+
+
+
+;; (defecb-window-dedicator-to-ecb-buffer
+;;     ecb-set-taglist-buffer
+;;     "*xgtags*" nil "taglist" 
+;;     (switch-to-buffer "*xgtags*")
+;;     (set-window-dedicated-p (selected-window) nil))
+
+;; (defecb-window-dedicator-to-ecb-buffer ecb-set-taglist-buffer "taglist"
+;;   (switch-to-buffer (get-buffer-create "*xgtags*")))
+
 (ecb-layout-define "vinurs-layout" left-right
   nil
   ;; here we have an edit-window and left and right two windows each
@@ -82,18 +98,16 @@
   ;; `ecb-compile-window-height' we have also a compile-window at the
   ;; bottom.
 
-  (ecb-set-directories-buffer)
-  (ecb-split-ver 0.5 t)
-  (select-window (next-window))
-  (ecb-set-history-buffer)
+  (ecb-set-methods-buffer)
   (select-window (next-window))
   (select-window (next-window))
-  
-  (ecb-set-sources-buffer)
+  (ecb-set-sources-buffer)  
 
+  ;; (select-window (previous-window (previous-window (selected-window) 0) 0)))
   ;; select the edit-window.
-
+  (select-window (previous-window))
 )
+
 
 
 ;; 默认用我自己定义的layout
@@ -104,8 +118,8 @@
 ;; Your init file should contain only one such instance.
 ;; If there is more than one, they won't work right.
 
-  '(ecb-layout-window-sizes (quote (("vinurs-layout" (ecb-directories-buffer-name 0.21468926553672316 . 0.4883720930232558) (ecb-history-buffer-name 0.21468926553672316 . 0.4883720930232558) (ecb-sources-buffer-name 0.2542372881355932 . 0.9767441860465116)))))
- '(ecb-options-version "2.40"))
+ '(ecb-options-version "2.40")
+ )
 
 
 ;;ecb启动的时候会弹出一个提示窗口,如果不想看到它，可以在emacs配置文件(~/.emacs)里加这一句:

@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@localhost.localdomain
 ;; Version: $Id: @(#)init-cedet.el,v 0.0 2014/05/16 15:14:06 vinurs Exp $
-;; Changed: <vinurs 05/16/2014 15:14:08>
+;; Changed: <vinurs 10/30/2014 22:59:11>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -43,7 +43,6 @@
 ;;;;##########################################################################
 ;;;;  User Options, Variables
 ;;;;##########################################################################
-
 
 
 
