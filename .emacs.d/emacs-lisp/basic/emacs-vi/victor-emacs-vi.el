@@ -48,4 +48,6 @@
 
 (add-hook 'find-file-hook 'emaci-exist-file)
 
+(global-set-key (kbd "C-c v") 'emaci-mode-on)
+
 ;;; victor-emacs-vi.el ends here

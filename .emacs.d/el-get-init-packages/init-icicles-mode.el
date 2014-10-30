@@ -4,7 +4,7 @@
 ;;
 ;; Author: zhang.haiyuan@server.embedway.com
 ;; Version: $Id: @(#)init-icicles-mode.el,v 0.0 2014/10/30 09:28:19 vinurs Exp $
-;; Changed: <vinurs 10/30/2014 09:28:21>
+;; Changed: <vinurs 10/30/2014 10:24:54>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -43,6 +43,7 @@
 ;;;;##########################################################################
 ;;;;  User Options, Variables
 ;;;;##########################################################################
+
 
 
 

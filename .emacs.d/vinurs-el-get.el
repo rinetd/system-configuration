@@ -74,8 +74,10 @@
 
         
         yasnippet                       ;
-        ;; cedet
-        ;; ecb
+
+	;; emacs ide
+        ecb
+        cedet
 
         ;; icicles related
         icicles
