@@ -125,6 +125,8 @@
 
         ;; 当窗口分割变多的时候，快速切换窗口
         switch-window
+	;; 有了上面的，这个可以不用
+	;; win-switch
         
 
         ;;color-theme                     ;;主题
