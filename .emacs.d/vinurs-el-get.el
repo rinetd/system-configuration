@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.victor@gmail.com
 ;; Version: $Id: @(#)vinurs-dot-emacs.el 0.0 2011/03/22 11:05:27 victor Exp $
-;; Changed: <vinurs 10/30/2014 09:27:54>
+;; Changed: <vinurs 10/31/2014 09:06:56>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -75,26 +75,30 @@
         
         yasnippet                       ;
 
+        ;; global gtags
+        ;; ggtags
+        xgtags                          ;for global
+        xgtags-extension                ;for global
+
+
 	;; emacs ide
         ecb
         cedet
 
         ;; icicles related
-        icicles
-        icicles-mac
-        icicles-face
-        icicles-opt
-        icicles-var
-        icicles-fn
-        icicles-mcmd
-        icicles-cmd1
-        icicles-cmd2
-        icicles-mode
+        ;; icicles
+        ;; icicles-mac
+        ;; icicles-face
+        ;; icicles-opt
+        ;; icicles-var
+        ;; icicles-fn
+        ;; icicles-mcmd
+        ;; icicles-cmd1
+        ;; icicles-cmd2
+        ;; icicles-mode
         
         sr-speedbar
 	
-        ;; 当窗口分割变多的时候，快速切换窗口
-        switch-window
         
         ;; markdown,用github写博客
         markdown-mode
@@ -103,11 +107,6 @@
         ;; parenthesis
 
                 
-        ;; global gtags
-        ;; ggtags
-        xgtags                          ;for global
-        xgtags-extension                ;for global
-
         ;; org mode
         org-mode
         ;; common lisp
@@ -123,6 +122,9 @@
         ;; hs-mode
         hideif
         hide-region  ;; 这个放在最后面吧，所有的配置都在这个init里面
+
+        ;; 当窗口分割变多的时候，快速切换窗口
+        switch-window
         
 
         ;;color-theme                     ;;主题

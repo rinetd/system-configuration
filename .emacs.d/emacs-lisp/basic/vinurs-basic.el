@@ -242,3 +242,6 @@
 (setq desktop-path '("~/.emacs.d/"))
 (setq desktop-base-file-name ".emacs-desktop")
 
+
+;; ido模式
+(ido-mode t)

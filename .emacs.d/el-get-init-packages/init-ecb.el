@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@localhost.localdomain
 ;; Version: $Id: @(#)ini-ecb.el,v 0.0 2014/05/16 15:14:15 vinurs Exp $
-;; Changed: <vinurs 10/30/2014 23:38:18>
+;; Changed: <vinurs 10/31/2014 11:30:24>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -117,9 +117,16 @@
 ;; If you edit it by hand, you could mess it up, so be careful.
 ;; Your init file should contain only one such instance.
 ;; If there is more than one, they won't work right.
-
+ '(ecb-layout-window-sizes
+   (quote (("vinurs-layout"
+            (ecb-methods-buffer-name 0.20 . 0.98) ;宽百分比 高百分比
+            (ecb-sources-buffer-name 0.20 . 0.98)))))
  '(ecb-options-version "2.40")
  )
+
+;; 跟switch-window冲突，这里加个hook
+(add-hook 'ecb-activate-hook (global-set-key (kbd "C-o") 'switch-window))
+
 
 
 ;;ecb启动的时候会弹出一个提示窗口,如果不想看到它，可以在emacs配置文件(~/.emacs)里加这一句:
