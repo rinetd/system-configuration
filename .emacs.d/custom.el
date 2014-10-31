@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.victor@gmail.com
 ;; Version: $Id: @(#)custom.el,v 0.0 2011/04/26 05:35:58 victor Exp $
-;; Changed: <vinurs 10/31/2014 11:31:31>
+;; Changed: <vinurs 10/31/2014 11:49:30>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -52,6 +52,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(ecb-auto-update-methods-after-save t)
+ '(ecb-layout-window-sizes (quote (("vinurs-layout" (ecb-methods-buffer-name 0.2 . 0.98) (ecb-sources-buffer-name 0.2 . 0.98)))))
+ '(ecb-options-version "2.40")
  '(term-default-bg-color "#000000")
  '(term-default-fg-color "#dddd00")
  '(vc-follow-symlinks nil))

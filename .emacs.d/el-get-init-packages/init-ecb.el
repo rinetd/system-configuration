@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@localhost.localdomain
 ;; Version: $Id: @(#)ini-ecb.el,v 0.0 2014/05/16 15:14:15 vinurs Exp $
-;; Changed: <vinurs 10/31/2014 11:30:24>
+;; Changed: <vinurs 10/31/2014 11:50:25>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -122,6 +122,7 @@
             (ecb-methods-buffer-name 0.20 . 0.98) ;宽百分比 高百分比
             (ecb-sources-buffer-name 0.20 . 0.98)))))
  '(ecb-options-version "2.40")
+ '(ecb-auto-update-methods-after-save t)
  )
 
 ;; 跟switch-window冲突，这里加个hook
