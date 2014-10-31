@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@localhost.localdomain
 ;; Version: $Id: @(#)ini-ecb.el,v 0.0 2014/05/16 15:14:15 vinurs Exp $
-;; Changed: <vinurs 10/31/2014 11:50:25>
+;; Changed: <vinurs 10/31/2014 14:36:25>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -49,8 +49,8 @@
 
 ;; cedet
 
-(load-file "~/.emacs.d/el-get/cedet/lisp/cedet/cedet.el")
-(semantic-mode 1)
+;; (load-file "~/.emacs.d/el-get/cedet/lisp/cedet/cedet.el")
+;; (semantic-mode 1)
 
 
 
@@ -78,61 +78,61 @@
 ;; |                                                     |
 ;; -------------------------------------------------------
 
-(require 'ecb)
+;; (require 'ecb)
 
 
 
-;; (defecb-window-dedicator-to-ecb-buffer
-;;     ecb-set-taglist-buffer
-;;     "*xgtags*" nil "taglist" 
-;;     (switch-to-buffer "*xgtags*")
-;;     (set-window-dedicated-p (selected-window) nil))
+;; ;; (defecb-window-dedicator-to-ecb-buffer
+;; ;;     ecb-set-taglist-buffer
+;; ;;     "*xgtags*" nil "taglist" 
+;; ;;     (switch-to-buffer "*xgtags*")
+;; ;;     (set-window-dedicated-p (selected-window) nil))
 
-;; (defecb-window-dedicator-to-ecb-buffer ecb-set-taglist-buffer "taglist"
-;;   (switch-to-buffer (get-buffer-create "*xgtags*")))
+;; ;; (defecb-window-dedicator-to-ecb-buffer ecb-set-taglist-buffer "taglist"
+;; ;;   (switch-to-buffer (get-buffer-create "*xgtags*")))
 
-(ecb-layout-define "vinurs-layout" left-right
-  nil
-  ;; here we have an edit-window and left and right two windows each
-  ;; with width `ecb-windows-width'. Dependent to the value of
-  ;; `ecb-compile-window-height' we have also a compile-window at the
-  ;; bottom.
+;; (ecb-layout-define "vinurs-layout" left-right
+;;   nil
+;;   ;; here we have an edit-window and left and right two windows each
+;;   ;; with width `ecb-windows-width'. Dependent to the value of
+;;   ;; `ecb-compile-window-height' we have also a compile-window at the
+;;   ;; bottom.
 
-  (ecb-set-methods-buffer)
-  (select-window (next-window))
-  (select-window (next-window))
-  (ecb-set-sources-buffer)  
+;;   (ecb-set-methods-buffer)
+;;   (select-window (next-window))
+;;   (select-window (next-window))
+;;   (ecb-set-sources-buffer)  
 
-  ;; (select-window (previous-window (previous-window (selected-window) 0) 0)))
-  ;; select the edit-window.
-  (select-window (previous-window))
-)
-
-
-
-;; 默认用我自己定义的layout
-(setq ecb-layout-name "vinurs-layout")
-(custom-set-variables
-;; custom-set-variables was added by Custom.
-;; If you edit it by hand, you could mess it up, so be careful.
-;; Your init file should contain only one such instance.
-;; If there is more than one, they won't work right.
- '(ecb-layout-window-sizes
-   (quote (("vinurs-layout"
-            (ecb-methods-buffer-name 0.20 . 0.98) ;宽百分比 高百分比
-            (ecb-sources-buffer-name 0.20 . 0.98)))))
- '(ecb-options-version "2.40")
- '(ecb-auto-update-methods-after-save t)
- )
-
-;; 跟switch-window冲突，这里加个hook
-(add-hook 'ecb-activate-hook (global-set-key (kbd "C-o") 'switch-window))
+;;   ;; (select-window (previous-window (previous-window (selected-window) 0) 0)))
+;;   ;; select the edit-window.
+;;   (select-window (previous-window))
+;; )
 
 
 
-;;ecb启动的时候会弹出一个提示窗口,如果不想看到它，可以在emacs配置文件(~/.emacs)里加这一句:
-(setq ecb-tip-of-the-day nil)
-(ecb-activate)
+;; ;; 默认用我自己定义的layout
+;; (setq ecb-layout-name "vinurs-layout")
+;; (custom-set-variables
+;; ;; custom-set-variables was added by Custom.
+;; ;; If you edit it by hand, you could mess it up, so be careful.
+;; ;; Your init file should contain only one such instance.
+;; ;; If there is more than one, they won't work right.
+;;  '(ecb-layout-window-sizes
+;;    (quote (("vinurs-layout"
+;;             (ecb-methods-buffer-name 0.20 . 0.98) ;宽百分比 高百分比
+;;             (ecb-sources-buffer-name 0.20 . 0.98)))))
+;;  '(ecb-options-version "2.40")
+;;  '(ecb-auto-update-methods-after-save t)
+;;  )
+
+;; ;; 跟switch-window冲突，这里加个hook
+;; (add-hook 'ecb-activate-hook (global-set-key (kbd "C-o") 'switch-window))
+
+
+
+;; ;;ecb启动的时候会弹出一个提示窗口,如果不想看到它，可以在emacs配置文件(~/.emacs)里加这一句:
+;; (setq ecb-tip-of-the-day nil)
+;; (ecb-activate)
 
 
 

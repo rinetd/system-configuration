@@ -82,8 +82,8 @@
 
 
 	;; emacs ide
-        ecb
-        cedet
+        ;; ecb
+        ;; cedet
 
         ;; icicles related
         ;; icicles

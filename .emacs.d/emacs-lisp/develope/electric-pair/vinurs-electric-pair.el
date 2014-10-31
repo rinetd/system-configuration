@@ -4,7 +4,7 @@
 ;;
 ;; Author: zhang.haiyuan@server.embedway.com
 ;; Version: $Id: @(#)vinurs-electric-pair.el,v 0.0 2013/08/15 19:10:46 vinurs Exp $
-;; Changed: <vinurs 08/15/2013 20:19:27>
+;; Changed: <vinurs 10/31/2014 14:32:35>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -46,6 +46,7 @@
 
 
 (electric-pair-mode 1)
+
 ;; make electric-pair-mode work on more brackets
 (setq electric-pair-pairs '(
                             (?\" . ?\")
