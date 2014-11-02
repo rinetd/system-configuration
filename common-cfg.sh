@@ -24,6 +24,8 @@ files_common=()
 files_common+=(bin)
 # program
 files_common+=(program)
+# work
+files_common+=(work)
 
 # bash
 # 虽然我不用bash，但是还是保留着相关的配置

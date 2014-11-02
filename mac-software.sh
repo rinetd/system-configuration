@@ -36,6 +36,7 @@ brew install wget
 brew install bzr
 brew install autoconf
 brew install automake autoconf libtool libxml2 
+brew link --force libxml2
 
 brew install minicom
 brew install socat
