@@ -100,7 +100,7 @@
 
 
 ;; support multi terminal
-(require 'victor-multi-term)
+;; (require 'victor-multi-term)
 
 ;; ;; basic misc
 (require 'victor-basic-misc)
@@ -244,4 +244,4 @@
 
 
 ;; ido模式
-(ido-mode t)
+;; (ido-mode t)

@@ -56,5 +56,8 @@ brew install tcpreplay
 brew install ruby
 
 
+# texinfo
+brew install texinfo
+
 
 exit 0

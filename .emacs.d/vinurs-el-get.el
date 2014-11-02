@@ -101,14 +101,14 @@
 	
         
         ;; markdown,用github写博客
-        markdown-mode
+        ;; markdown-mode
 
         ;; 括号补全
         ;; parenthesis
 
                 
         ;; org mode
-        org-mode
+        ;; org-mode
         ;; common lisp
         slime
 
