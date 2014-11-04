@@ -24,7 +24,12 @@ brew install zsh
 brew install lftp
 brew install wget
 brew install global
+
+# htop
 brew install htop
+sudo chown root:wheel /usr/local/bin/htop
+sudo chmod u+s /usr/local/bin/htop 
+
 brew install indent
 # for common lisp
 brew install sbcl

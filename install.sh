@@ -41,6 +41,9 @@ esac
 
 # export system_type
 
+# sudo begin
+sudo touch /tmp/tmp
+
 # dirs
 # git clone dir
 current_dir=`pwd`
