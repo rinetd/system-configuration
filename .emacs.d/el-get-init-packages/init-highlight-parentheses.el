@@ -1,7 +1,8 @@
 ;; for highlight-parentheses
 
 
-(setq hl-paren-colors '("cyan" "purple" "magenta" "green" "blue" "brown"))
+(setq hl-paren-colors '("cyan" "purple" "magenta" "green" "blue" 
+			"brown" "orange2" "salmon2" "wheat4"))
 
 
 (am-add-hooks
