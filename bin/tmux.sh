@@ -17,6 +17,9 @@
 ##
 
 
+# open emacs
+qec
+
 # tmux
 # 如果没有urxvt的session，那么建立这个session，如果存在，但是没有人attach
 # 那么attach，如果已经有人attach了这个session，那么什么也不干
@@ -72,7 +75,7 @@ else
     #tmux attach-session -t $TMUX_SESSION \; new-window
     # emacs
     # tmux attach-session -t $TMUX_SESSION \; new-window \; send-keys 'test "$system_type"x = "mac"x && emacs' C-m \; send-keys 'exit' C-m \; detach-client
-    tmux attach-session -t $TMUX_SESSION \; new-window \; send-keys 'test "$system_type"x = "Darwin"x && emacs' C-m \; detach-client
+    # tmux attach-session -t $TMUX_SESSION \; new-window \; send-keys 'test "$system_type"x = "Darwin"x && emacs' C-m \; detach-client
 
     tmux attach-session -t $TMUX_SESSION \; new-window 
  
