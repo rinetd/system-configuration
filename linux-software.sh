@@ -7,7 +7,7 @@
 # 
 #         Version:  1.0
 #         Created:  2014/05/05 19:27:14
-#         Changed:  <vinurs 05/05/2014 19:39:17>
+#         Changed:  <vinurs 11/06/2014 18:05:43>
 #        Revision:  none
 # 
 #          Author:  zhanghaiyuan
@@ -177,4 +177,4 @@ sudo dnf install -y libGLU.so.1
 
 
 
-exit
+

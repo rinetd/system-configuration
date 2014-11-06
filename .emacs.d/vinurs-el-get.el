@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.victor@gmail.com
 ;; Version: $Id: @(#)vinurs-dot-emacs.el 0.0 2011/03/22 11:05:27 victor Exp $
-;; Changed: <vinurs 10/31/2014 09:06:56>
+;; Changed: <vinurs 11/06/2014 13:15:54>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -40,8 +40,9 @@
 (setq my-el-get-packages
       '(
         ;; local sources
-        
-        ;; base
+
+        ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+        ;; basic
         highlight-parentheses           ; 高亮对应的标点
 
         ;; hightlight symbol
@@ -53,8 +54,12 @@
         hexrgb                          ;palette依赖这个
         palette                         ;颜色选择插件，很强大
         ascii
+
+        ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
         ;; c
 
+        ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+        ;; develope
         ;; 标准的注释
         xml-parse
         doxymacs
@@ -81,7 +86,7 @@
         xgtags-extension                ;for global
 
 
-	;; emacs ide
+        ;; emacs ide
         ;; ecb
         ;; cedet
 
@@ -125,9 +130,9 @@
 
         ;; 当窗口分割变多的时候，快速切换窗口
         switch-window
-	;; 有了上面的，这个可以不用
-	;; win-switch
-        
+        ;; 有了上面的，这个可以不用
+        ;; win-switch
+        ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
         ;;color-theme                     ;;主题
         )

@@ -7,7 +7,7 @@
 # 
 #         Version:  1.0
 #         Created:  2013/09/27 10:02:22
-#         Changed:  <vinurs 05/05/2014 19:26:51>
+#         Changed:  <vinurs 11/06/2014 18:12:48>
 #        Revision:  none
 # 
 #          Author:  zhanghaiyuan
@@ -89,7 +89,10 @@ case $system_type in
         ;;
 esac
 
-
+# restore .ssh files
+if [ -d ${backup_dir}/.ssh ]; then
+    cp -rf ${backup_dir}/.ssh/*  ~/.ssh/
+fi
 
 
 exit 0

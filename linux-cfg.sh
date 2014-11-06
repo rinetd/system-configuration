@@ -7,7 +7,7 @@
 # 
 #         Version:  1.0
 #         Created:  2014/05/05 11:03:55
-#         Changed:  <vinurs 05/07/2014 10:39:55>
+#         Changed:  <vinurs 11/06/2014 18:05:25>
 #        Revision:  none
 # 
 #          Author:  zhanghaiyuan
@@ -70,4 +70,4 @@ done
 
 mkdir ~/.Trash
 
-exit 0
+
