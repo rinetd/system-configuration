@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@localhost.localdomain
 ;; Version: $Id: @(#)init-org-mode.el,v 0.0 2014/05/18 12:19:43 vinurs Exp $
-;; Changed: <vinurs 07/29/2014 22:50:47>
+;; Changed: <vinurs 11/06/2014 20:43:26>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -47,47 +47,47 @@
 
 ;; 主要配置就是用来写blog，配合github
 ;; ;; Org-Mode发布设置
-(require 'org-publish)
+;; (require 'org-publish)
 
-(defadvice org-html-paragraph (before org-html-paragraph-advice
-                                      (paragraph contents info) activate)
-  "Join consecutive Chinese lines into a single long line without
-unwanted space when exporting org-mode to html."
-  (let* ((origin-contents (ad-get-arg 1))
-         (fix-regexp "[[:multibyte:]]")
-         (fixed-contents
-          (replace-regexp-in-string
-           (concat
-            "\\(" fix-regexp "\\) *\n *\\(" fix-regexp "\\)") "\\1\\2" origin-contents)))
+;; (defadvice org-html-paragraph (before org-html-paragraph-advice
+;;                                       (paragraph contents info) activate)
+;;   "Join consecutive Chinese lines into a single long line without
+;; unwanted space when exporting org-mode to html."
+;;   (let* ((origin-contents (ad-get-arg 1))
+;;          (fix-regexp "[[:multibyte:]]")
+;;          (fixed-contents
+;;           (replace-regexp-in-string
+;;            (concat
+;;             "\\(" fix-regexp "\\) *\n *\\(" fix-regexp "\\)") "\\1\\2" origin-contents)))
 
-    (ad-set-arg 1 fixed-contents)))
+;;     (ad-set-arg 1 fixed-contents)))
 
-(setq org-publish-project-alist
-      '(
-      ("org-blog"
-       :base-extension "org"
-       :base-directory "~/program/vinurs.github.io/org/"
-       :recursive t
-       :publishing-function org-html-publish-to-html
-       :auto-preamble t
-       :headline-levels 4 
-       :html-extension "html"
-       :publishing-directory "~/program/vinurs.github.io/_posts/"
-       :body-only t ;; Only export section between <body> </body>
+;; (setq org-publish-project-alist
+;;       '(
+;;       ("org-blog"
+;;        :base-extension "org"
+;;        :base-directory "~/program/vinurs.github.io/org/"
+;;        :recursive t
+;;        :publishing-function org-html-publish-to-html
+;;        :auto-preamble t
+;;        :headline-levels 4 
+;;        :html-extension "html"
+;;        :publishing-directory "~/program/vinurs.github.io/_posts/"
+;;        :body-only t ;; Only export section between <body> </body>
 
-)))
-
-
-
-;; (require 'org-install)
+;; )))
 
 
-;; ;; 让 .org的文件打开后默认进入 org mode
-(add-to-list 'auto-mode-alist '("\.\(org\|org_archive\|txt\)$" . org-mode))
-(setq org-log-done t)
 
-(add-hook 'org-mode-hook
-      (lambda () (setq truncate-lines nil)))
+;; ;; (require 'org-install)
+
+
+;; ;; ;; 让 .org的文件打开后默认进入 org mode
+;; (add-to-list 'auto-mode-alist '("\.\(org\|org_archive\|txt\)$" . org-mode))
+;; (setq org-log-done t)
+
+;; (add-hook 'org-mode-hook
+;;       (lambda () (setq truncate-lines nil)))
 
 ;; ;; todo list
 ;; ;; todo list 默认只有两种状态： TODO 和 DONE。我们可以再增加一些其他状态。
