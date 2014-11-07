@@ -4,7 +4,7 @@
 ;;
 ;; Author: zhang.haiyuan@server.embedway.com
 ;; Version: $Id: @(#)vinurs-gkeybind.el,v 0.0 2012/06/28 19:36:17 vinurs Exp $
-;; Changed: <vinurs 06/28/2012 19:36:31>
+;; Changed: <vinurs 11/07/2014 08:45:34>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -64,6 +64,10 @@
 ;; C-o 跳转到另外一个窗口
 (global-set-key (kbd "C-o") 'other-window)
 
+;; 重新映射c-h前缀
+(global-set-key (kbd "C-?") 'help-for-help)
 
+;; c-h该为向前删除
+(global-set-key [(control h)] 'delete-backward-char)
 
 ;;; vinurs-gkeybind.el ends here
