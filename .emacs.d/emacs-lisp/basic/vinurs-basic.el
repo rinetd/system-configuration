@@ -108,6 +108,10 @@
 ;; ;; load toolbar
 ;; (load "victor-toolbar")
 
+;; 一行太长的时候自动换行
+(setq truncate-lines t)
+;; 不显示工具栏，碍眼
+(tool-bar-mode -1)
 
 ;; ;; 支持emacs和外部程序的粘贴
 (setq x-select-enable-clipboard t)
@@ -233,7 +237,7 @@
 (require 'vinurs-dired)
 
 ;; mew
-(require 'vinurs-mew)
+;; (require 'vinurs-mew)
 
 ;; ;;邮件客户端mutt设置
 ;; (load "victor-mail-client.el")
