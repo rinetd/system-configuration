@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@localhost.localdomain
 ;; Version: $Id: @(#)init-org-mode.el,v 0.0 2014/05/18 12:19:43 vinurs Exp $
-;; Changed: <vinurs 11/06/2014 20:43:26>
+;; Changed: <vinurs 11/08/2014 11:45:41>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -43,6 +43,21 @@
 ;;;;##########################################################################
 ;;;;  User Options, Variables
 ;;;;##########################################################################
+
+
+;; basic
+(setq org-directory "~/Dropbox/home/org/")
+
+
+;; GTD
+;; 最好的GTD，没有之一
+(load "~/.emacs.d/el-get-init-packages/gtd.el")
+
+
+
+
+
+
 
 
 ;; 主要配置就是用来写blog，配合github
@@ -88,17 +103,6 @@
 
 ;; (add-hook 'org-mode-hook
 ;;       (lambda () (setq truncate-lines nil)))
-
-;; ;; todo list
-;; ;; todo list 默认只有两种状态： TODO 和 DONE。我们可以再增加一些其他状态。
-;; (setq org-todo-keywords
-;;       '((sequence "TODO" "DOING" "HANGUP" "|" "DONE" "CANCEL")))
-;; ;; 可以将 todo list 的状态增加为五种：TODO，DOING，HANGUP，DONE，CANCEL。
-;; ;; 注意，在 HANGUP 和 DONE 之间有一条竖线 “|”，在竖线之前的状态和之后的状态使用的是不同的face。
-
-;; ;; 进一步的，我们还可以记录切换到某一种状态时的时间：
-;; (setq org-todo-keywords
-;;       '((sequence "TODO(t)" "DOING(i!)" "HANGUP(h!)" "|" "DONE(d!)" "CANCEL(c!)")))
 
 
 ;; ;; 为了使用Org-mode的日程表功能，首先需要把todo.org加入到日程表文件中
