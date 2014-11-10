@@ -4,7 +4,7 @@
 ;;
 ;; Author: zhang.haiyuan@server.embedway.com
 ;; Version: $Id: @(#)gtd.el,v 0.0 2014/11/08 11:09:06 vinurs Exp $
-;; Changed: <vinurs 11/10/2014 08:32:15>
+;; Changed: <vinurs 11/10/2014 08:49:57>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -70,25 +70,24 @@
 (setq org-todo-keywords
     '((sequence "TODO(t!)" "NEXT(n)" "WAITTING(w)" "SOMEDAY(s)" "|" "DONE(d@/!)" "ABORT(a@/!)")
       ))
-(setq org-tag-alist '((:startgroup . nil)
-                      ("@work" . ?w) ("@home" . ?h)
-                      ("@tennisclub" . ?t)
-                      (:endgroup . nil)
-                      ("laptop" . ?l) ("pc" . ?p)))
-;; (setq org-todo-keywords
-;;       '((type "工作(w!)" "学习(s!)" "生活(l!)" "|")
-;;         (sequence "TODO(t)" "DOING(i)" "HANGUP(h@!)" "|" "DONE(d!)" "CANCELED(c@!)")))
 
-;; ;; Faces for TODO keywords
-;; (setq org-todo-keyword-faces
-;;   '(("工作" .      (:background "red" :foreground "white" :weight bold))
-;;     ("学习" .      (:background "white" :foreground "red" :weight bold))
-;;     ("休闲" .      (:foreground "MediumBlue" :weight bold)) 
-;;     ("PENDING" .   (:background "LightGreen" :foreground "gray" :weight bold))
-;;     ("TODO" .      (:background "DarkOrange" :foreground "black" :weight bold))
-;;     ("DONE" .      (:background "azure" :foreground "Darkgreen" :weight bold)) 
-;;     ("ABORT" .     (:background "gray" :foreground "black"))
-;;     ))
+;; tags
+(setq org-tag-alist '((:startgroup . nil)
+                           ("@work" . ?w) ("@home" . ?h)
+                           ("@tennisclub" . ?t)
+                           (:endgroup . nil)
+                           ("laptop" . ?l) ("pc" . ?p)))
+
+;; Faces for TODO keywords
+(setq org-todo-keyword-faces
+  '(("工作" .      (:background "red" :foreground "white" :weight bold))
+    ("学习" .      (:background "white" :foreground "red" :weight bold))
+    ("休闲" .      (:foreground "MediumBlue" :weight bold)) 
+    ("PENDING" .   (:background "LightGreen" :foreground "gray" :weight bold))
+    ("TODO" .      (:background "DarkOrange" :foreground "black" :weight bold))
+    ("DONE" .      (:background "azure" :foreground "Darkgreen" :weight bold)) 
+    ("ABORT" .     (:background "gray" :foreground "black"))
+    ))
 
 
 ;; 优先级范围和默认任务的优先级 A-D足够了，越多的优先级越不好控制

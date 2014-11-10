@@ -19,10 +19,9 @@ PATH=/sbin:/bin:/usr/sbin:/usr/bin:~/bin
 #*/1 * * * * env DISPLAY=:0.0 notify-send “Bizago” 
 
 # 22:30开始自动上传dropbox的内容
-# 30 22 * * * proxychains ~/.dropbox-dist/dropboxd & 
-30 22 * * * ~/.dropbox-dist/dropboxd & 
+# 30 22 * * * ~/.dropbox-dist/dropboxd & 
 
 # 8:30关闭dropbox
-30 8 * * * killall dropbox
+# 30 8 * * * killall dropbox
 
 # 12点开始进行下载
