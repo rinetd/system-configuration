@@ -64,5 +64,7 @@ brew install ruby
 # texinfo
 brew install texinfo
 
+# gpg
+bew install gpg
 
 
