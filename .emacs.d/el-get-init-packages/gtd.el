@@ -4,7 +4,7 @@
 ;;
 ;; Author: zhang.haiyuan@server.embedway.com
 ;; Version: $Id: @(#)gtd.el,v 0.0 2014/11/08 11:09:06 vinurs Exp $
-;; Changed: <vinurs 11/09/2014 09:42:43>
+;; Changed: <vinurs 11/10/2014 08:32:15>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -57,7 +57,7 @@
         ;; todo list
         ("t" "Todo entry" entry
          (file+headline "~/Dropbox/home/org/gtd/inbox.org" "Tasks")
-         "* TODO [#D] %?\n  %i\n  %T")
+         "* TODO [#C] %?\n  %i\n  %T")
         ;; note
         ))
 
