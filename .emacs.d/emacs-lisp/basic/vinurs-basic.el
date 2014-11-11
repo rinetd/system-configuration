@@ -164,8 +164,6 @@
    '("emacs@没有我做不到,只有你想不到^-^--PATH:%S" (buffer-file-name "%f"  
     (dired-directory dired-directory "%b"))))
 
-;; ;;关闭工具栏.
-(tool-bar-mode nil)
 
 ;;关闭菜单栏.
 ;; (menu-bar-mode nil) 
