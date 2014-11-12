@@ -7,7 +7,7 @@
 # 
 #         Version:  1.0
 #         Created:  2014/05/05 11:03:38
-#         Changed:  <vinurs 05/07/2014 10:37:21>
+#         Changed:  <vinurs 11/12/2014 11:16:44>
 #        Revision:  none
 # 
 #          Author:  zhanghaiyuan
@@ -58,6 +58,8 @@ files_common+=(.stardict)
 files_common+=(sshfs)
 # ssh
 files_common+=(.ssh)
+# gpg
+files_common+=(.gnupg)
 
 
 # files

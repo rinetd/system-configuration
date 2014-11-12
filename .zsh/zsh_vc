@@ -7,9 +7,9 @@ function mk-svndir()
 function gtags-gen()
 {
     if [[ $# == 0 ]]; then
-        find ./ -name '*.[chy]' > gtags.files
+        find -L ./ -name '*.[chy]' > gtags.files
     else
-        find $*  -name '*.[chy]' > gtags.files
+        find -L $*  -name '*.[chy]' > gtags.files
     fi
 
 }
