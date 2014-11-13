@@ -5,7 +5,6 @@ alias top='htop'
 alias mv='mv -i'
 alias rm='rm -i'
 alias ls='ls -F '
-alias vi='vim'
 
 
 alias ll='ls -l'
@@ -13,6 +12,7 @@ alias grep='grep --color=auto -n'
 alias g-compile='cd ~/.personal/compile'
 alias g-trash='cd ~/.local/share/Trash/files'
 
+alias vi='vim'
 
 
 

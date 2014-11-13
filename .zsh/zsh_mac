@@ -5,6 +5,10 @@ alias emacsclient='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient'
 alias ee='emacsclient -t'
 alias ls='ls -G'
 
+alias vim='emacsclient '
+#alias vim='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -c'
+alias vi='vim'
+
 
 
 
