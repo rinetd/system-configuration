@@ -7,7 +7,7 @@
 # 
 #         Version:  1.0
 #         Created:  2014/05/05 19:27:22
-#         Changed:  <vinurs 11/06/2014 18:05:49>
+#         Changed:  <vinurs 11/17/2014 19:54:07>
 #        Revision:  none
 # 
 #          Author:  zhanghaiyuan
@@ -65,6 +65,7 @@ brew install ruby
 brew install texinfo
 
 # gpg
-bew install gpg
+brew install gpg
 
-
+# github blog
+brew install npm
