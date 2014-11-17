@@ -174,6 +174,9 @@ sudo dnf install -y libcups.so.2
 sudo dnf install -y libpng12.so.0 
 sudo dnf install -y libGLU.so.1
 
+# for github blog
+sudo dnf install -y npm
+sudo npm install -g hexo 
 
 
 
