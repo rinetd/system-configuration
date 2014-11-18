@@ -70,4 +70,9 @@ brew install gpg
 # github blog
 brew install npm
 npm install -g hexo
+
+# nvm 
 brew install nvm
+# set nvm env
+source $(brew --prefix nvm)/nvm.sh
+nvm install 0.10
