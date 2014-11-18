@@ -9,6 +9,9 @@ alias ls='ls -G'
 #alias vim='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -c'
 alias vi='vim'
 
+# nvm
+source $(brew --prefix nvm)/nvm.sh 
+
 
 
 
