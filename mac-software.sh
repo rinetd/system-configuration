@@ -70,3 +70,4 @@ brew install gpg
 # github blog
 brew install npm
 npm install -g hexo
+brew install nvm
