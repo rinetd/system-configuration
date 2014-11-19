@@ -178,6 +178,13 @@ sudo dnf install -y libGLU.so.1
 sudo dnf install -y npm
 sudo npm install -g hexo 
 
+# nvm
+sudo dnf install -y tcsh scons gcc-c++ glibc-devel openssl-devel git python
+git clone git://github.com/creationix/nvm.git ~/.nvm
+NVM_DIR=~/.nvm
+source ~/.nvm/nvm.sh
+nvm install 0.10
+
 
 
 
