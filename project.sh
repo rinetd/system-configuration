@@ -20,6 +20,8 @@
 cd ~/program
 # my github page
 git clone git@github.com:vinurs/vinurs.github.io.git 
+# website
+git clone git@github.com:vinurs/website.git
 
 # dpdk
 git clone git://dpdk.org/dpdk 
