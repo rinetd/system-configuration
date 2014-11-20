@@ -31,8 +31,11 @@ sudo chown root:wheel /usr/local/bin/htop
 sudo chmod u+s /usr/local/bin/htop 
 
 brew install indent
+
 # for common lisp
-brew install sbcl
+# 这里不安装sbcl，因为我使用Clozure CL
+# brew install sbcl
+
 # for git log
 brew install tig
 # wget
