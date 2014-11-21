@@ -45,16 +45,14 @@
 ;;;;##########################################################################
 
 (if (eq system-type 'darwin)
-    (setq inferior-lisp-program "/usr/local/bin/sbcl") ; your Lisp system
+    (setq inferior-lisp-program "/usr/local/bin/ccl64 -K utf-8") ; your lisp system
   (setq inferior-lisp-program "/usr/bin/sbcl") ; your Lisp system
     )
 
 
-;;(setq inferior-lisp-program "/usr/local/bin/sbcl") ; your Lisp system
-;; (add-to-list 'load-path "~/hacking/lisp/slime/")  ; your SLIME directory
-
 ;; (slime-setup)
 (slime-setup '(slime-repl))
+(setq slime-net-coding-system 'utf-8-unix)
 
 
 (defun lisp-indent-or-complete (&optional arg)
