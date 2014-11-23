@@ -17,6 +17,8 @@
 ##
 
 
+chflags nohidden ~/Library/
+
 
 
 
