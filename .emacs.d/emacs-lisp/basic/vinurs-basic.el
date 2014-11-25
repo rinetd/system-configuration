@@ -58,7 +58,7 @@
 (keyfreq-autosave-mode 1)
 
 ;; 编码设置
-(require 'vinurs-coding-settings)
+(load "vinurs-coding-settings.el")
 
 
 ;; ;; code pilot
