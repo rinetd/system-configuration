@@ -1,10 +1,10 @@
-;;; victor-coding-settings.el --- 
+;;; vinurs-coding-settings.el --- 
 
 ;; Copyright 2011 victor
 ;;
 ;; Author: haiyuan.victor@gmail.com
 ;; Version: $Id: @(#)victor-coding-settings.el,v 0.0 2011/02/18 15:05:04 victor Exp $
-;; Changed: <victor 08/31/2011 07:38:36>
+;; Changed: <vinurs 11/25/2014 16:59:07>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -53,6 +53,7 @@
 
 ;;设置默认读入文件编码
 (prefer-coding-system 'utf-8)
+(prefer-coding-system 'gb2312)
 ;;设置写入文件编码
 (setq default-buffer-file-coding-system 'utf-8)
 
