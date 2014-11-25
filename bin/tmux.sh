@@ -42,6 +42,7 @@ else
     tmux -2 new-session -s $TMUX_SESSION -n sys-monitor \; detach-client
     # emacs
     tmux attach-session -t $TMUX_SESSION \; new-window -n emacs \; split-window -h \; detach-client
+    tmux attach-session -t $TMUX_SESSION \; new-window -n sys-cfg\; split-window -h \; detach-client
     # git
     tmux attach-session -t $TMUX_SESSION \; new-window -n git \; split-window -h \; detach-client
 
