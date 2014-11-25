@@ -58,7 +58,7 @@
 (keyfreq-autosave-mode 1)
 
 ;; 编码设置
-(require 'victor-coding-settings)
+(require 'vinurs-coding-settings)
 
 
 ;; ;; code pilot
