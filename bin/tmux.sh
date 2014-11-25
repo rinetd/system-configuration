@@ -40,11 +40,14 @@ else
     # 开头的几个window，公用的
     # 默认打开叫sys-monitor的窗口，专门用来监控系统当前的性能的
     tmux -2 new-session -s $TMUX_SESSION -n sys-monitor \; detach-client
+    # system configuration
+    tmux attach-session -t $TMUX_SESSION \; new-window -n sys-cfg\; split-window -h \; detach-client
     # emacs
     tmux attach-session -t $TMUX_SESSION \; new-window -n emacs \; split-window -h \; detach-client
-    tmux attach-session -t $TMUX_SESSION \; new-window -n sys-cfg\; split-window -h \; detach-client
     # git
     tmux attach-session -t $TMUX_SESSION \; new-window -n git \; split-window -h \; detach-client
+    # blog
+    tmux attach-session -t $TMUX_SESSION \; new-window -n blog \; split-window -h \; detach-client
 
     # 打开文件管理器mc，我最喜欢的文件管理器了
     # tmux attach-session -t $TMUX_SESSION \; new-window -n mc \; send-keys 'mc' C-m \; detach-client
