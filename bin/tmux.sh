@@ -48,6 +48,8 @@ else
     tmux attach-session -t $TMUX_SESSION \; new-window -n git \; split-window -h \; detach-client
     # blog
     tmux attach-session -t $TMUX_SESSION \; new-window -n blog \; split-window -h \; detach-client
+    # lisp
+    tmux attach-session -t $TMUX_SESSION \; new-window -n lisp \; split-window -h \; detach-client
 
     # 打开文件管理器mc，我最喜欢的文件管理器了
     # tmux attach-session -t $TMUX_SESSION \; new-window -n mc \; send-keys 'mc' C-m \; detach-client
