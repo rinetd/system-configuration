@@ -80,4 +80,6 @@ nvm install 0.10
 brew install npm
 npm install -g hexo
 
+# markdown
+brew install markdown
 
