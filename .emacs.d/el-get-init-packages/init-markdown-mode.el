@@ -4,7 +4,7 @@
 ;;
 ;; Author: zhang.haiyuan@server.embedway.com
 ;; Version: $Id: @(#)init-markdown-mode.el,v 0.0 2014/05/18 01:41:14 vinurs Exp $
-;; Changed: <vinurs 05/18/2014 01:41:16>
+;; Changed: <vinurs 01/03/2015 05:46:46>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -45,7 +45,10 @@
 ;;;;##########################################################################
 
 
-
+(autoload 'markdown-mode "markdown-mode"
+	"Major mode for editing Markdown files" t)
+(add-to-list 'auto-mode-alist '("\\.markdown\\'". markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.md\\'". markdown-mode))
 
 
 ;;; init-markdown-mode.el ends here
