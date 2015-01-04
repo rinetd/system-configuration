@@ -18,7 +18,7 @@
 
 
 # open emacs
-qec
+# qec
 
 # tmux
 # 如果没有urxvt的session，那么建立这个session，如果存在，但是没有人attach
