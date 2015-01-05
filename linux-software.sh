@@ -183,6 +183,9 @@ sudo dnf install -y net-snmp-utils
 sudo dnf install -y npm
 sudo npm install -g hexo 
 
+# pandoc
+sudo dnf install -y pandoc
+
 # nvm
 sudo dnf install -y tcsh scons gcc-c++ glibc-devel openssl-devel git python
 git clone git://github.com/creationix/nvm.git ~/.nvm
