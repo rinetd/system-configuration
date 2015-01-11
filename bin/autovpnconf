@@ -1,0 +1,39 @@
+#!/usr/bin/env python
+import sys
+import urllib
+import base64
+import os
+
+# embedway ip 
+domains = '''
+10.0.1.7
+10.6.0.23
+'''
+VPNIF='ppp0'
+
+
+if not os.access('/etc/hosts', os.W_OK):
+    print >> sys.stderr,'you need sudo ...' 
+    exit(1)
+
+url = 'http://bluehua.org/demo/getip.php?&name[]=' + '&name[]='.join([base64.encodestring(d.strip()).strip() for d in domains.split('\n') if d])
+print url
+iptable = urllib.urlopen(url).read().split('\n')
+print iptable
+ips = [rule.split(' ')[0] for rule in iptable if rule]
+print ips
+
+print 'update route table'
+for ip in ips:
+    if sys.platform == 'darwin':
+        os.system('route add -net %s -interface %s' % (ip, VPNIF))
+    else:
+        os.system('route add -net %s netmask 255.255.255.255 dev %s' % (ip, VPNIF))
+
+
+print 'update hosts'
+os.system('sed -i -e "/FKGFW_START/,/FKGFW_END/d" /etc/hosts')
+hosts = open('/etc/hosts', 'a')
+hosts.write('#FKGFW_START\n')
+hosts.write('\n'.join(iptable))
+hosts.write('\n#FKGFW_END')
