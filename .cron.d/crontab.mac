@@ -10,7 +10,7 @@ PATH=/sbin:/bin:/usr/sbin:/usr/bin:~/bin
 
  
 # 每隔一分钟改变一下桌面背景
-* * * * * DISPLAY=:0.0 chgbg.sh
+# * * * * * DISPLAY=:0.0 chgbg.sh
 
 
 # 每隔3分钟用getmail去取一下邮件
