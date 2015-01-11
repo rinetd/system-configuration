@@ -7,7 +7,6 @@ import os
 # embedway ip 
 domains = '''
 10.0.1.7
-10.6.0.23
 '''
 VPNIF='ppp0'
 
