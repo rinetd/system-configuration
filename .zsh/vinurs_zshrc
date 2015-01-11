@@ -144,6 +144,9 @@ function precmd {
     PR_PWDLEN=""
     
     local promptsize=${#${(%):---(%n@%m:%l)---()--}}
+    # 这里因为增加了操作系统类型‘@darwin’
+    promptsize=$promptsize+${#system_type}
+    promptsize=$promptsize+1
     local pwdsize=${#${(%):-%~}}
     
     if [[ "$promptsize + $pwdsize" -gt $TERMWIDTH ]]; then
