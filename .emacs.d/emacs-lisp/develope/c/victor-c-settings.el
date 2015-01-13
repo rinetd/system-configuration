@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.victor@gmail.com
 ;; Version: $Id: @(#)victor-c-settings.el,v 0.0 2011/02/20 01:55:58 victor Exp $
-;; Changed: <vinurs 01/14/2015 00:10:10>
+;; Changed: <vinurs 01/14/2015 00:28:57>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -153,5 +153,5 @@
 
 
 ;; astyle
-(load "astyle-hooks")
+(load "astyle-hooks.el")
 ;;; victor-c-settings.el ends here

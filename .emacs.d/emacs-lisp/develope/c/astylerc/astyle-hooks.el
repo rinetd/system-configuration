@@ -5,6 +5,7 @@
 ;; set style for testing
 ;; use  "bsd"  "java"  "k&r"  "stroustrup"  "whitesmith"  "banner"  "gnu"  "linux"   "horstmann"
 (setq c-default-style "horstmann")
+(setq c-default-style "stroustrup")
 
 ;; set these options to "yes" or "no"
 (setq indent-namespaces "no")
@@ -69,7 +70,7 @@
 	;; set basic offset to AStyle default indent
 	(setq c-basic-offset 4)
 	(if (string-match c-default-style "stroustrup")
-		(setq c-basic-offset 5))
+		(setq c-basic-offset 4))
 	(if (string-match c-default-style "gnu")
 		(setq c-basic-offset 2))
 	(if (string-match c-default-style "linux")
