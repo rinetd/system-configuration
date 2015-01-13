@@ -60,6 +60,8 @@ files_common+=(sshfs)
 files_common+=(.ssh)
 # gpg
 files_common+=(.gnupg)
+# astyle
+files_common+=(.astylerc)
 
 
 # files

@@ -70,6 +70,9 @@ brew install texinfo
 # gpg
 brew install gpg
 
+# astyle
+brew install astyle
+
 # nvm 
 brew install nvm
 # set nvm env

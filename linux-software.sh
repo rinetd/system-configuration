@@ -174,6 +174,7 @@ sudo dnf install -y libcups.so.2
 sudo dnf install -y libpng12.so.0 
 sudo dnf install -y libGLU.so.1
 
+
 # snmp
 sudo dnf install -y net-snmp
 sudo dnf install -y net-snmp-perl 
@@ -185,6 +186,9 @@ sudo npm install -g hexo
 
 # pandoc
 sudo dnf install -y pandoc
+
+# astyle
+sudo dnf install -y astyle
 
 # nvm
 sudo dnf install -y tcsh scons gcc-c++ glibc-devel openssl-devel git python
