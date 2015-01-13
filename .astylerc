@@ -1,0 +1,37 @@
+--style=stroustrup
+-A4
+
+# 缩进的时候用4个空格，不用tab
+indent=spaces=4
+
+# 在操作符两边加空格
+--pad-oper
+
+# 当if, for, while 后面只有单行语句的时候自动加上{} 
+--add-brackets
+
+# 将tab转换成空格
+--convert-tabs
+
+# 
+--max-code-length=90
+--break-after-logical
+
+#
+--break-elseifs
+
+--break-closing-brackets
+
+# 对预处理指令块进行缩进
+--indent-preproc-block
+
+# 对于goto语句的标签进行缩进
+--indent-labels
+
+# 对于case下面的大括号不缩进，跟case对齐
+#--indent-cases
+
+# 对于switch下面的case不缩进，跟switch对齐
+# --indent-switches
+
+
