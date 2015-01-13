@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.victor@gmail.com
 ;; Version: $Id: @(#)victor-c-settings.el,v 0.0 2011/02/20 01:55:58 victor Exp $
-;; Changed: <vinurs 07/05/2014 17:24:44>
+;; Changed: <vinurs 01/14/2015 00:10:10>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -150,4 +150,8 @@
 (add-hook 'c-mode-common-hook
 	  (lambda()
 	    (c-set-offset 'inextern-lang 0)))
+
+
+;; astyle
+(load "astyle-hooks")
 ;;; victor-c-settings.el ends here
