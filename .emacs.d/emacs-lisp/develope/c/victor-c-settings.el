@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.victor@gmail.com
 ;; Version: $Id: @(#)victor-c-settings.el,v 0.0 2011/02/20 01:55:58 victor Exp $
-;; Changed: <vinurs 01/14/2015 08:33:43>
+;; Changed: <vinurs 01/14/2015 20:20:39>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -153,6 +153,6 @@
 
 
 ;; astyle
-(load "vinurs-astyle.el")
+(load "vinurs-indent.el")
 
 ;;; victor-c-settings.el ends here
