@@ -72,6 +72,8 @@ brew install gpg
 
 # astyle
 brew install astyle
+# indent
+brew install gnu-indent
 
 # nvm 
 brew install nvm
