@@ -4,7 +4,7 @@
 ;;
 ;; Author: zhang.haiyuan@server.embedway.com
 ;; Version: $Id: @(#)vinurs-astyle.el,v 0.0 2015/01/14 08:33:05 vinurs Exp $
-;; Changed: <vinurs 01/14/2015 19:38:56>
+;; Changed: <vinurs 01/14/2015 19:59:05>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -50,13 +50,14 @@
 
 
 
-(defvar astyle-command "astyle")
+;; (defvar astyle-command "astyle")
+
 
 (defun astyle-region (start end) 
   "Run astyle on region, formatting it in a pleasant way." 
   (interactive "r")
   (progn
-
+    (defvar astyle-command "indent")
     (save-excursion 
       (shell-command-on-region start end
                                astyle-command
