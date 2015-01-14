@@ -4,7 +4,7 @@
 ;;
 ;; Author: zhang.haiyuan@server.embedway.com
 ;; Version: $Id: @(#)vinurs-astyle.el,v 0.0 2015/01/14 08:33:05 vinurs Exp $
-;; Changed: <vinurs 01/14/2015 08:45:07>
+;; Changed: <vinurs 01/14/2015 08:57:17>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -55,13 +55,16 @@
                            (current-buffer) t 
                            (get-buffer-create "*Astyle Errors*") t))
 
-(defvar astyle-command "astyle --style=ansi --mode=c") 
+;; (defvar astyle-command "astyle --style=ansi --mode=c")
+(defvar astyle-command "astyle")
 
 (defun astyle-region (start end) 
   "Run astyle on region, formatting it in a pleasant way." 
   (interactive "r") 
   (save-excursion 
-    (shell-command-on-region start end astyle-command nil t) 
+    (shell-command-on-region start end
+                             astyle-command
+                             nil t) 
     ) 
   ) 
 

@@ -2,6 +2,7 @@
 --style=stroustrup
 -A4
 
+haha
 # 缩进的时候用4个空格，不用tab
 indent=spaces=4
 
