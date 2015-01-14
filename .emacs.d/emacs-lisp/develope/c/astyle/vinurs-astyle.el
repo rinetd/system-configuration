@@ -4,7 +4,7 @@
 ;;
 ;; Author: zhang.haiyuan@server.embedway.com
 ;; Version: $Id: @(#)vinurs-astyle.el,v 0.0 2015/01/14 08:33:05 vinurs Exp $
-;; Changed: <vinurs 01/14/2015 08:57:17>
+;; Changed: <vinurs 01/14/2015 11:37:08>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -48,12 +48,6 @@
 ;; astyle
 (load "astyle-hooks.el")
 
-(defun astyle-this-buffer (pmin pmax)
-  (interactive "r")
-  (shell-command-on-region pmin pmax
-                           "astyle " ;; add options here...
-                           (current-buffer) t 
-                           (get-buffer-create "*Astyle Errors*") t))
 
 ;; (defvar astyle-command "astyle --style=ansi --mode=c")
 (defvar astyle-command "astyle")
@@ -64,7 +58,9 @@
   (save-excursion 
     (shell-command-on-region start end
                              astyle-command
-                             nil t) 
+                             nil t
+                             ;; 错误信息显示buffer
+                             (get-buffer-create "*Astyle Errors*") t) 
     ) 
   ) 
 
