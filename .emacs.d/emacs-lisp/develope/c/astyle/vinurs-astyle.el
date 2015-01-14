@@ -4,7 +4,7 @@
 ;;
 ;; Author: zhang.haiyuan@server.embedway.com
 ;; Version: $Id: @(#)vinurs-astyle.el,v 0.0 2015/01/14 08:33:05 vinurs Exp $
-;; Changed: <vinurs 01/14/2015 11:37:08>
+;; Changed: <vinurs 01/14/2015 19:38:56>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -49,20 +49,27 @@
 (load "astyle-hooks.el")
 
 
-;; (defvar astyle-command "astyle --style=ansi --mode=c")
+
 (defvar astyle-command "astyle")
 
 (defun astyle-region (start end) 
   "Run astyle on region, formatting it in a pleasant way." 
-  (interactive "r") 
-  (save-excursion 
-    (shell-command-on-region start end
-                             astyle-command
-                             nil t
-                             ;; 错误信息显示buffer
-                             (get-buffer-create "*Astyle Errors*") t) 
-    ) 
-  ) 
+  (interactive "r")
+  (progn
+
+    (save-excursion 
+      (shell-command-on-region start end
+                               astyle-command
+                               nil t
+                               ;; 错误信息显示buffer
+                               (get-buffer-create "*Astyle Errors*") t) 
+      )
+    (if (string= "c-mode" major-mode)
+        (progn
+          (c-mode)
+          (emaci-mode-on))
+      ))
+  )
 
 (defun astyle-buffer () 
   "Run astyle on whole buffer, formatting it in a pleasant way." 

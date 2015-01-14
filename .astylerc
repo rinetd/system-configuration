@@ -1,13 +1,20 @@
+# 下面两个配置是等价的 
 # --style=stroustrup
---style=stroustrup
--A4
+# -A4
+# --style=linux
 
-haha
+
+
 # 缩进的时候用4个空格，不用tab
 indent=spaces=4
 
 # 在操作符两边加空格
 --pad-oper
+
+--pad-paren
+--pad-paren-out
+--pad-first-paren-out
+--pad-header
 
 # 当if, for, while 后面只有单行语句的时候自动加上{} 
 --add-brackets
@@ -15,25 +22,45 @@ indent=spaces=4
 # 将tab转换成空格
 --convert-tabs
 
-# 
---max-code-length=90
+# 最大长度就86个字符，并且在逻辑操作符后面断开
+--max-code-length=86
 --break-after-logical
 
-#
---break-elseifs
+# 将else if中断,很丑，不开启
+# --break-elseifs
 
+# else跟if后面的大括号分两行
 --break-closing-brackets
 
-# 对预处理指令块进行缩进
---indent-preproc-block
+
+
+# 对预处理指令块进行缩进, linux暂不支持
+#--indent-preproc-block
+
+ --indent-preproc-define
+
+# 对于注释进行缩进
+--indent-col1-comments
+
 
 # 对于goto语句的标签进行缩进
 --indent-labels
 
-# 对于case下面的大括号不缩进，跟case对齐
-#--indent-cases
-
 # 对于switch下面的case不缩进，跟switch对齐
 # --indent-switches
 
+# 对于case下面的大括号不缩进，跟case对齐
+# --indent-cases
 
+
+# add empty lines befor if, for, while, switch
+--break-blocks
+
+# 条件语句进行缩进
+--min-conditional-indent=0
+
+# linux暂不支持
+# --max-instatement-indent
+
+#
+--indent-namespaces
