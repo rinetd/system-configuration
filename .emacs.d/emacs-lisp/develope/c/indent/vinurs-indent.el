@@ -1,10 +1,10 @@
-;;; vinurs-astyle.el --- 
+;;; vinurs-indent.el --- 
 
 ;; Copyright 2015 zhanghaiyuan
 ;;
 ;; Author: zhang.haiyuan@server.embedway.com
 ;; Version: $Id: @(#)vinurs-astyle.el,v 0.0 2015/01/14 08:33:05 vinurs Exp $
-;; Changed: <vinurs 01/14/2015 19:59:05>
+;; Changed: <vinurs 01/14/2015 21:38:33>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -57,6 +57,11 @@
   "Run astyle on region, formatting it in a pleasant way." 
   (interactive "r")
   (progn
+    (if (eq system-type 'darwin) ;; mac specific settings
+        (defvar astyle-command "/usr/local/Cellar/gnu-indent/2.2.10/bin/gindent")
+      (defvar astyle-command "indent")
+      )
+
     (defvar astyle-command "indent")
     (save-excursion 
       (shell-command-on-region start end
