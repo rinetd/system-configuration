@@ -4,7 +4,7 @@
 
 ;; set style for testing
 ;; use  "bsd"  "java"  "k&r"  "stroustrup"  "whitesmith"  "banner"  "gnu"  "linux"   "horstmann"
-(setq c-default-style "horstmann")
+;; (setq c-default-style "horstmann")
 (setq c-default-style "stroustrup")
 
 ;; set these options to "yes" or "no"
