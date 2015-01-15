@@ -55,6 +55,7 @@ brew install cmake
 brew install sdcv
 
 # sshfs
+brew install Caskroom/cask/osxfuse
 brew install sshfs
 
 # tcpreplay
