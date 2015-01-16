@@ -45,7 +45,7 @@
 ;;;;##########################################################################
 
 
-(require 'vinurs-basic-functions)
+;; (require 'vinurs-basic-functions)
 
 ;; 设置info目录路径 
 (add-to-list 'Info-default-directory-list "/usr/share/info")

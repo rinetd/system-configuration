@@ -34,7 +34,7 @@
 
 ;;; Code:
 
-(provide 'victor-basic-functions)
+(provide 'vinurs-basic-functions)
 (eval-when-compile
   (require 'cl))
 

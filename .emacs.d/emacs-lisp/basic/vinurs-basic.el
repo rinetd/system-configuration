@@ -46,7 +46,8 @@
 
 ;; basic misc functions
 ;; 各种小功能的配置
-(require 'vinurs-basic-misc)
+;;(require 'vinurs-basic-misc)
+(load "vinurs-basic-misc.el")
 
 
 
@@ -102,8 +103,6 @@
 ;; support multi terminal
 ;; (require 'victor-multi-term)
 
-;; ;; basic misc
-(require 'victor-basic-misc)
 
 ;; ;; load toolbar
 ;; (load "victor-toolbar")
