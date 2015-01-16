@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.victor@gmail.com
 ;; Version: $Id: @(#)victor-basic-misc.el,v 0.0 2011/04/28 07:56:19 victor Exp $
-;; Changed: <victor 02/16/2012 16:35:59>
+;; Changed: <vinurs 01/16/2015 23:41:39>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -49,6 +49,11 @@
 
 ;; 设置info目录路径 
 (add-to-list 'Info-default-directory-list "/usr/share/info")
+
+;; 配置path环境变量
+(setenv "PATH" (concat "/usr/local/bin;" (getenv "PATH")))
+(setq exec-path (append exec-path '("/usr/local/bin")))
+
 
 ;; 高亮当前行
 (am-add-hooks

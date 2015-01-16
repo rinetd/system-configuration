@@ -4,7 +4,7 @@
 ;;
 ;; Author: zhang.haiyuan@server.embedway.com
 ;; Version: $Id: @(#)vinurs-astyle.el,v 0.0 2015/01/14 08:33:05 vinurs Exp $
-;; Changed: <vinurs 01/16/2015 22:50:00>
+;; Changed: <vinurs 01/16/2015 23:34:29>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -89,5 +89,6 @@
              (define-key c-mode-map "\C-cib" 'astyle-buffer) 
              (define-key c++-mode-map "\C-cir" 'astyle-region) 
              (define-key c++-mode-map "\C-cib" 'astyle-buffer)))
+
 
 ;;; vinurs-astyle.el ends here
