@@ -46,7 +46,7 @@
 
 ;; basic misc functions
 ;; 各种小功能的配置
-(require 'victor-basic-misc)
+(require 'vinurs-basic-misc)
 
 
 
