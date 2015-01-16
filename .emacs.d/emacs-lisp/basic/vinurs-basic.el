@@ -46,8 +46,7 @@
 
 ;; basic misc functions
 ;; 各种小功能的配置
-;;(require 'vinurs-basic-misc)
-(load "vinurs-basic-misc.el")
+(require 'vinurs-basic-misc)
 
 
 

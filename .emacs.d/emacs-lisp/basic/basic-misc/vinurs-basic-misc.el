@@ -34,7 +34,7 @@
 
 ;;; Code:
 
-(provide 'victor-basic-misc)
+(provide 'vinurs-basic-misc)
 (eval-when-compile
   (require 'cl))
 
