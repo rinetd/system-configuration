@@ -4,7 +4,7 @@
 ;;
 ;; Author: zhang.haiyuan@server.embedway.com
 ;; Version: $Id: @(#)vinurs-astyle.el,v 0.0 2015/01/14 08:33:05 vinurs Exp $
-;; Changed: <vinurs 01/14/2015 21:38:33>
+;; Changed: <vinurs 01/16/2015 22:50:00>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -85,9 +85,9 @@
 
 (add-hook 'c-mode-common-hook 
           '(lambda () 
-             (define-key c-mode-map "\C-cr" 'astyle-region) 
-             (define-key c-mode-map "\C-cb" 'astyle-buffer) 
-             (define-key c++-mode-map "\C-cr" 'astyle-region) 
-             (define-key c++-mode-map "\C-cb" 'astyle-buffer))) 
+             (define-key c-mode-map "\C-cir" 'astyle-region) 
+             (define-key c-mode-map "\C-cib" 'astyle-buffer) 
+             (define-key c++-mode-map "\C-cir" 'astyle-region) 
+             (define-key c++-mode-map "\C-cib" 'astyle-buffer)))
 
 ;;; vinurs-astyle.el ends here
