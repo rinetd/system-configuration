@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.victor@gmail.com
 ;; Version: $Id: @(#)victor-doc-emacs.el,v 0.0 2011/03/22 11:05:27 victor Exp $
-;; Changed: <vinurs 10/31/2014 11:28:56>
+;; Changed: <vinurs 01/17/2015 01:23:00>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -43,6 +43,10 @@
 ;;;;##########################################################################
 ;;;;  User Options, Variables
 ;;;;##########################################################################
+
+
+;; pre basic functions
+(load "~/.emacs.d/vinurs-pre-basic.el")
 
 
 ;;TODO: 在el-get之前要增加一些最基本的函数，例如如何同时增加多个hook之类,这个函数在ahei-misc里面其实已经有了

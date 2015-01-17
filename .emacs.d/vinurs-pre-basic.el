@@ -1,10 +1,10 @@
-;;; vinurs-load-path.el --- 
+;;; vinurs-pre-basic.el --- 
 
-;; Copyright 2011 victor
+;; Copyright 2015 zhanghaiyuan
 ;;
-;; Author: haiyuan.victor@gmail.com
-;; Version: $Id: @(#)victor-load-path.el,v 0.0 2011/06/06 21:59:38 victor Exp $
-;; Changed: <vinurs 01/17/2015 00:56:42>
+;; Author: zhang.haiyuan@server.embedway.com
+;; Version: $Id: @(#)vinurs-pre-basic.el,v 0.0 2015/01/17 00:56:05 vinurs Exp $
+;; Changed: <vinurs 01/17/2015 01:26:37>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -27,14 +27,14 @@
 ;; 
 
 ;; Put this file into your load-path and the following into your ~/.emacs:
-;;   (require 'victor-load-path)
+;;   (require 'vinurs-pre-basic)
 
 
 
 
 ;;; Code:
 
-(provide 'victor-load-path)
+(provide 'vinurs-pre-basic)
 (eval-when-compile
   (require 'cl))
 
@@ -45,6 +45,7 @@
 ;;;;##########################################################################
 
 
+;; functions that shoud define before basic files loaded
 
 
 
@@ -53,21 +54,6 @@
 
 
 
-(load "~/.emacs.d/emacs-lisp/my-lisps/add-subdirs.el")
-
-;; 定义路径前缀，后面用起来才方便
-(defconst my-emacs-path-prefix           "~/.emacs.d/" "我的emacs相关配置文件的路径")
-
-;;(defconst my-emacs-my-lisps-path  (concat my-emacs-path-prefix "emacs-lisp/my-lisps/") "我自己写的emacs lisp包的路径")
-(defconst my-emacs-lisps-path     (concat my-emacs-path-prefix "emacs-lisp/") "我下载的emacs lisp包的路径")
 
 
-;; 把`my-emacs-lisps-path'的所有子目录都加到`load-path'里面
-(my-add-subdirs-to-load-path my-emacs-lisps-path)
-;;(my-add-subdirs-to-load-path my-emacs-my-lisps-path)
-
-
-
- 
-
-;;; victor-load-path.el ends here
+;;; vinurs-pre-basic.el ends here
