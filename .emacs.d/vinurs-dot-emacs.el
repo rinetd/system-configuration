@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.victor@gmail.com
 ;; Version: $Id: @(#)victor-doc-emacs.el,v 0.0 2011/03/22 11:05:27 victor Exp $
-;; Changed: <vinurs 01/17/2015 10:14:18>
+;; Changed: <vinurs 01/17/2015 10:34:56>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -82,8 +82,7 @@
 ;; vinurs's macro
 (load-file "~/.emacs.d/vinurs-macro.el")
 
-;;global keybind
-(load-file "~/.emacs.d/vinurs-gkeybind.el")
+
 
 
 ;; el-get

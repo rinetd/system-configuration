@@ -250,3 +250,6 @@
 
 ;; ido模式
 ;; (ido-mode t)
+
+;; basic global keybinds
+(require 'vinurs-basic-global-keybind)
