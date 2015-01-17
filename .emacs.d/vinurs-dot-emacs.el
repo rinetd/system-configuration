@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.victor@gmail.com
 ;; Version: $Id: @(#)victor-doc-emacs.el,v 0.0 2011/03/22 11:05:27 victor Exp $
-;; Changed: <vinurs 01/17/2015 01:23:00>
+;; Changed: <vinurs 01/17/2015 10:14:18>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -51,10 +51,6 @@
 
 ;;TODO: 在el-get之前要增加一些最基本的函数，例如如何同时增加多个hook之类,这个函数在ahei-misc里面其实已经有了
 ;; 把要加载的文件的路径全部加载进去
-(load "~/.emacs.d/emacs-lisp/my-lisps/vinurs-load-path.el")
-
-(add-to-list 'load-path "~/.emacs.d/plugin")
-
 
 
 

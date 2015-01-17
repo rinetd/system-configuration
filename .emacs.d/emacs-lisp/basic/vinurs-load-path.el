@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.victor@gmail.com
 ;; Version: $Id: @(#)victor-load-path.el,v 0.0 2011/06/06 21:59:38 victor Exp $
-;; Changed: <vinurs 01/17/2015 00:56:42>
+;; Changed: <vinurs 01/17/2015 10:03:41>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -34,7 +34,7 @@
 
 ;;; Code:
 
-(provide 'victor-load-path)
+(provide 'vinurs-load-path)
 (eval-when-compile
   (require 'cl))
 
@@ -48,12 +48,6 @@
 
 
 
-
-
-
-
-
-(load "~/.emacs.d/emacs-lisp/my-lisps/add-subdirs.el")
 
 ;; 定义路径前缀，后面用起来才方便
 (defconst my-emacs-path-prefix           "~/.emacs.d/" "我的emacs相关配置文件的路径")
@@ -70,4 +64,4 @@
 
  
 
-;;; victor-load-path.el ends here
+;;; vinurs-load-path.el ends here

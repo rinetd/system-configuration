@@ -4,7 +4,7 @@
 ;;
 ;; Author: zhang.haiyuan@server.embedway.com
 ;; Version: $Id: @(#)vinurs-pre-basic.el,v 0.0 2015/01/17 00:56:05 vinurs Exp $
-;; Changed: <vinurs 01/17/2015 01:26:37>
+;; Changed: <vinurs 01/17/2015 10:06:59>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -48,6 +48,12 @@
 ;; functions that shoud define before basic files loaded
 
 
+;; 加载一个目录下面的所有目录到load-path里面的函数
+;; 该函数摘抄自网络
+(load "~/.emacs.d/emacs-lisp/basic/add-subdirs.el")
+
+;; 把要加载的文件的路径全部加载进去
+(load "~/.emacs.d/emacs-lisp/basic/vinurs-load-path.el")
 
 
 
