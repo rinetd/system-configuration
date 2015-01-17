@@ -4,7 +4,7 @@
 ;;
 ;; Author: zhang.haiyuan@server.embedway.com
 ;; Version: $Id: @(#)vinurs-basic-global-keybind.el,v 0.0 2015/01/17 10:33:09 vinurs Exp $
-;; Changed: <vinurs 01/17/2015 10:34:37>
+;; Changed: <vinurs 01/17/2015 12:21:33>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -50,12 +50,17 @@
 ;; for all gkeybind
 ;; load the end
 
+;; 将帮助命令bind到help-commnd
+(global-set-key "\M-?" 'help-command) ; almost right!
+
 ;;goto line
 (global-set-key (kbd "C-j") 'goto-line)
 
 
 ;; 定义C-c m 打开man文档
 (global-set-key (kbd "C-c m") 'manual-entry)
+;TODO: 这里最好加上manual的一些路径
+
 
 ;; C-;就显示一个窗口
 ;; 这个是在X下面使用的
@@ -71,6 +76,7 @@
 
 ;; c-h该为向前删除
 (global-set-key [(control h)] 'delete-backward-char)
+
 
 
 

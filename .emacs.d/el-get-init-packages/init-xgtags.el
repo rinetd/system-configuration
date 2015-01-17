@@ -46,7 +46,7 @@
 
 (require 'xgtags)
 
-
+;;
 
 (add-hook 'c-mode-common-hook
           (lambda ()

@@ -34,6 +34,13 @@
 (eval-when-compile
   (require 'cl))
 
+;; 
+;; auto compile this file when loaded
+;; (if (string=
+;;       (file-name-extension load-file-name)
+;;       "el")
+;;     (byte-compile-file load-file-name))
+
 
 
 ;; 编码设置,utf-8之类，所有的文件全部以utf8保存
@@ -81,7 +88,6 @@
 ;; (auto-compression-mode 1)
 
 
-
 ;; ;; emacs vi mode
 (require 'victor-emacs-vi)
 
@@ -100,7 +106,7 @@
 
 ;; templates for create a new file
 (require 'victor-template)
-
+;;(byte-compile-file "victor-template.el")
 
 ;; support multi terminal
 ;; (require 'victor-multi-term)
@@ -148,7 +154,8 @@
 (setq scroll-margin 6
       scroll-conservatively 10000)
 
-;; ;; 没有提示音,也不闪屏
+
+;; 没有提示音,也不闪屏
 (setq ring-bell-function 'ignore)
 
 ;; ;; 光标靠近鼠标指针时，让鼠标指针自动让开，别挡住视线。
