@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.victor@gmail.com
 ;; Version: $Id: @(#)victor-coding-settings.el,v 0.0 2011/02/18 15:05:04 victor Exp $
-;; Changed: <vinurs 11/25/2014 16:59:07>
+;; Changed: <vinurs 01/17/2015 10:29:56>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -34,9 +34,10 @@
 
 ;;; Code:
 
-(provide 'victor-coding-settings)
+(provide 'vinurs-coding-settings)
 (eval-when-compile
   (require 'cl))
+
 
 
 
@@ -64,23 +65,23 @@
 (prefer-coding-system 'utf-8-unix)
 
 
-(defun revert-buffer-no-confirm ()
-  "执行`revert-buffer'时不需要确认"
-  (interactive)
-  (when (buffer-file-name)
-	(revert-buffer buffer-file-name t)
-    ))
+;; (defun revert-buffer-no-confirm ()
+;;   "执行`revert-buffer'时不需要确认"
+;;   (interactive)
+;;   (when (buffer-file-name)
+;; 	(revert-buffer buffer-file-name t)
+;;     ))
 
-(defun revert-buffer-with-coding-system-no-confirm (coding-system)
-  "Call `revert-buffer-with-coding-system', but when `revert-buffer' do not need confirm."
-  (interactive "zCoding system for visited file (default nil): ")
-  (let ((coding-system-for-read coding-system))
-    (revert-buffer-no-confirm)))
+;; (defun revert-buffer-with-coding-system-no-confirm (coding-system)
+;;   "Call `revert-buffer-with-coding-system', but when `revert-buffer' do not need confirm."
+;;   (interactive "zCoding system for visited file (default nil): ")
+;;   (let ((coding-system-for-read coding-system))
+;;     (revert-buffer-no-confirm)))
 
-(defun revert-buffer-with-gbk ()
-  "Call `revert-buffer-with-coding-system-no-confirm' with gbk."
-  (interactive)
-  (revert-buffer-with-coding-system-no-confirm 'gbk))
+;; (defun revert-buffer-with-gbk ()
+;;   "Call `revert-buffer-with-coding-system-no-confirm' with gbk."
+;;   (interactive)
+;;   (revert-buffer-with-coding-system-no-confirm 'gbk))
 
 ;; (eal-define-keys-commonly
 ;;  global-map

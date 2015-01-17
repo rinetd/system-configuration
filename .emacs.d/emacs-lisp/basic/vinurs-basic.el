@@ -36,6 +36,11 @@
 
 
 
+;; 编码设置,utf-8之类，所有的文件全部以utf8保存
+(require 'vinurs-coding-settings)
+
+
+
 ;; 个人的一些配置
 ;; 名字设置，邮件地址设置之类
 (require 'personality)
@@ -57,8 +62,6 @@
 (keyfreq-mode 1)
 (keyfreq-autosave-mode 1)
 
-;; 编码设置
-(load "vinurs-coding-settings.el")
 
 
 ;; ;; code pilot
