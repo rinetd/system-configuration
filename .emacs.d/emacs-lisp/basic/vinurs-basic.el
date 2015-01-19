@@ -169,7 +169,7 @@
 
 ;; ;;;设置标题栏显示文件的完整路径名  
 (setq frame-title-format  
-   '("emacs@没有我做不到,只有你想不到^-^--PATH:%S" (buffer-file-name "%f"  
+   '("emacs@知行合一^-^--PATH:%S" (buffer-file-name "%f"  
     (dired-directory dired-directory "%b"))))
 
 
