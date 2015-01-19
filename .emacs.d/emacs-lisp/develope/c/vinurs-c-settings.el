@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.victor@gmail.com
 ;; Version: $Id: @(#)victor-c-settings.el,v 0.0 2011/02/20 01:55:58 victor Exp $
-;; Changed: <vinurs 01/19/2015 22:09:54>
+;; Changed: <vinurs 01/19/2015 22:25:49>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -44,8 +44,12 @@
 ;;;;  User Options, Variables
 ;;;;##########################################################################
 
+;; c语言相关的所有配置
 
-(setq-default indent-tabs-mode nil)
+;; 缩进相关
+(require 'vinurs-indent)
+
+
 
 ;;cscope
 ;; (require 'victor_cscope)
@@ -54,8 +58,6 @@
 ;;(c-default-style (quote ((c-mode . "") (c++-mode . ""))))
 ;; (c-mode-hook (quote (semantic-default-c-setup zjl-hl-enable-global-all-modes)))
 
-;; c的缩进为４个空格
-(setq c-basic-offset 4)
 
 ;; ;; Xrefactory
 ;; (require 'xref-settings)
@@ -152,7 +154,7 @@
 	    (c-set-offset 'inextern-lang 0)))
 
 
-;; astyle
-(load "vinurs-indent.el")
+
+
 
 ;;; victor-c-settings.el ends here

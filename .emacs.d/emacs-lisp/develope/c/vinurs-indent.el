@@ -4,7 +4,7 @@
 ;;
 ;; Author: zhang.haiyuan@server.embedway.com
 ;; Version: $Id: @(#)vinurs-astyle.el,v 0.0 2015/01/14 08:33:05 vinurs Exp $
-;; Changed: <vinurs 01/16/2015 23:34:29>
+;; Changed: <vinurs 01/19/2015 22:35:19>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -34,7 +34,7 @@
 
 ;;; Code:
 
-(provide 'vinurs-astyle)
+(provide 'vinurs-indent)
 (eval-when-compile
   (require 'cl))
 
@@ -43,6 +43,15 @@
 ;;;;##########################################################################
 ;;;;  User Options, Variables
 ;;;;##########################################################################
+
+
+;; c的缩进为４个空格
+(setq c-basic-offset 4)
+
+(setq-default indent-tabs-mode nil)
+
+
+;; 创建自己的C style: vinurs-c-style
 
 
 ;; astyle
