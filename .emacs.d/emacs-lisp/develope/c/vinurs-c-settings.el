@@ -1,10 +1,10 @@
-;;; victor-c-settings.el --- 
+;;; vinurs-c-settings.el --- 
 
 ;; Copyright 2011 victor
 ;;
 ;; Author: haiyuan.victor@gmail.com
 ;; Version: $Id: @(#)victor-c-settings.el,v 0.0 2011/02/20 01:55:58 victor Exp $
-;; Changed: <vinurs 01/14/2015 20:20:39>
+;; Changed: <vinurs 01/19/2015 22:09:54>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -34,7 +34,7 @@
 
 ;;; Code:
 
-(provide 'victor-c-settings)
+(provide 'vinurs-c-settings)
 (eval-when-compile
   (require 'cl))
 

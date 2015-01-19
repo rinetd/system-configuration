@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.victor@gmail.com
 ;; Version: $Id: @(#)victor_develope.el 0.0 2010/12/07 02:41:20 victor Exp $
-;; Changed: <vinurs 06/14/2014 11:10:13>
+;; Changed: <vinurs 01/19/2015 22:10:34>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -34,7 +34,7 @@
 
 ;;; Code:
 
-(provide 'victor_develope)
+(provide 'vinurs_develope)
 (eval-when-compile
   (require 'cl))
 
@@ -60,7 +60,7 @@
 
 
 ;; c语言的配置
-(require 'victor-c-settings)
+(require 'vinurs-c-settings)
 
 
 ;; 所有代码折叠的配置
