@@ -35,17 +35,17 @@ source ~/.mutt/mutt.misc
 
 # set up the sidebar, default not visible
 
-set sidebar_width=36
+#set sidebar_width=36
 
-set sidebar_visible=yes
+#set sidebar_visible=yes
 
-set sidebar_delim='|'
+#set sidebar_delim='|'
 
-set sidebar_sort=yes
-color sidebar_new yellow default
-bind index \CP sidebar-prev
-bind index \CN sidebar-next
-bind index \CO sidebar-open
-bind pager \CP sidebar-prev
-bind pager CN sidebar-next
-bind pager CO sidebar-open
+#set sidebar_sort=yes
+#color sidebar_new yellow default
+#bind index \CP sidebar-prev
+#bind index \CN sidebar-next
+#bind index \CO sidebar-open
+#bind pager \CP sidebar-prev
+#bind pager CN sidebar-next
+#bind pager CO sidebar-open

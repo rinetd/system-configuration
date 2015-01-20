@@ -85,7 +85,8 @@
         xgtags                          ;for global
         xgtags-extension                ;for global
 
-
+        ;; mew
+        mew 
         ;; emacs ide
         ;; ecb
         ;; cedet

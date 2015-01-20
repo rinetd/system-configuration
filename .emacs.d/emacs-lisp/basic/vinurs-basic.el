@@ -245,7 +245,7 @@
 (require 'vinurs-dired)
 
 ;; mew
-;; (require 'vinurs-mew)
+;;(require 'vinurs-mew)
 
 ;; ;;邮件客户端mutt设置
 ;; (load "victor-mail-client.el")
