@@ -4,7 +4,7 @@
 ;;
 ;; Author: zhang.haiyuan@server.embedway.com
 ;; Version: $Id: @(#)vinurs-astyle.el,v 0.0 2015/01/14 08:33:05 vinurs Exp $
-;; Changed: <vinurs 01/19/2015 22:35:19>
+;; Changed: <vinurs 01/20/2015 08:29:19>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -57,6 +57,7 @@
 ;; astyle
 (load "astyle-hooks.el")
 
+(setq c-syntactic-indentation-in-macros t)
 
 
 ;; (defvar astyle-command "astyle")
