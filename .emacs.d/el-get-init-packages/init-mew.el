@@ -4,7 +4,7 @@
 ;;
 ;; Author: zhang.haiyuan@server.embedway.com
 ;; Version: $Id: @(#)init-mew.el,v 0.0 2015/01/20 11:12:09 vinurs Exp $
-;; Changed: <vinurs 01/20/2015 19:59:20>
+;; Changed: <vinurs 01/20/2015 20:37:38>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -64,6 +64,12 @@
       'mew-draft-kill
       'mew-send-hook))
 
+;;设定将密码保存一段时间，默认20分钟 
+(setq mew-use-cached-passwd t)
+(setq mew-passwd-timer-unit 999)
+(setq mew-passwd-lifetime 999)
+
+
 (setq mew-config-alist
       '(
         (default
@@ -72,15 +78,36 @@
           ;; 邮件登陆帐号
           ("user"         .  "zhang.haiyuan")
           ("mail-domain"  .  "embedway.com")
-          ("pop-server"   .  "pop3.embedway.com")
-          ("pop-port"     .  "110")
-          ("pop-user"     .  "zhang.haiyuan@embedway.com") 
-          ("pop-auth"     .  pass)
+          ;; (mailbox-type  imap)
+          ;; 使用imap协议来收邮件
+          (proto  "%") 
+          (imap-server           "imap.embedway.com")
+          (imap-user             "zhang.haiyuan@embedway.com")
+          ;; 使用pop3协议来收邮件
+          ;; ("pop-server"   .  "pop3.embedway.com")
+          ;; ("pop-port"     .  "110")
+          ;; ("pop-user"     .  "zhang.haiyuan@embedway.com") 
+          ;; ("pop-auth"     .  pass)
           ("smtp-server"  .  "smtp.embedway.com")
           ("smtp-port"    .  "25")
           ("smtp-user"    .  "zhang.haiyuan@embedway.com")
-          ("smtp-auth-list"  .  ("PLAIN" "LOGIN" "CRAM-MD5"))))
-      
+          ("smtp-auth-list"  .  ("PLAIN" "LOGIN" "CRAM-MD5"))
+          )
+        ;TODO: 配置好gmail收发邮件
+        ;; (gmail
+        ;;  (proto                 "%")
+        ;;  (imap-server           "imap.gmail.com")
+        ;;  (imap-user             "haiyuan.vinurs@gmail.com")
+        ;;  ;; vinurs <zhang.haiyuan@embedway.com>, name就是前面的显示
+        ;;  ("name"         .  "vinurs")
+        ;;  ;; 邮件登陆帐号
+        ;;  ("user"         .  "haiyuan.vinurs")
+        ;;  ("mail-domain"  .  "gmail.com")
+        ;;  ("smtp-server"  .  "smtp.gmail.com")
+        ;;  ("smtp-port"    .  "25")
+        ;;  ("smtp-user"    .  "haiyuan.vinurs@gmail.com")
+        ;;  ("smtp-auth-list"  .  ("PLAIN" "LOGIN" "CRAM-MD5")))
+        )
       )
 
 ;; (setq mew-config-alist
