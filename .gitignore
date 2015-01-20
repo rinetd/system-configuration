@@ -2,3 +2,4 @@
 .config/emelfm2/cache
 .*.swp
 .vim/.netrwhist
+.DS_Store
