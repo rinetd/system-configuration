@@ -4,7 +4,7 @@
 ;;
 ;; Author: zhang.haiyuan@server.embedway.com
 ;; Version: $Id: @(#)vinurs-astyle.el,v 0.0 2015/01/14 08:33:05 vinurs Exp $
-;; Changed: <vinurs 01/20/2015 16:10:13>
+;; Changed: <vinurs 01/20/2015 22:29:49>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -93,10 +93,17 @@
   (save-excursion 
     (astyle-region (point-min) (point-max)))) 
 
+
 (add-hook 'c-mode-common-hook 
-          '(lambda () 
-             (define-key c-mode-map "\C-cir" 'astyle-region) 
-             (define-key c-mode-map "\C-cib" 'astyle-buffer) 
+          '(lambda ()
+             ;; indent region
+             (define-key c-mode-map "\C-cir" 'astyle-region)
+             ;; (define-key c-mode-map "\C-cir" 'indent-region)
+             ;; indent buffer
+             (define-key c-mode-map "\C-cib" 'astyle-buffer)
+              ;indent function
+             (define-key c-mode-map "\C-cif" 'c-indent-defun)
+             
              (define-key c++-mode-map "\C-cir" 'astyle-region) 
              (define-key c++-mode-map "\C-cib" 'astyle-buffer)))
 
