@@ -69,6 +69,8 @@ sudo dnf install -y clang
 sudo dnf install -y emacs
 # bzr,用来给emacs的增加cedet的时候用的
 sudo dnf install -y bzr
+# linux读邮件需要
+sudo dnf install -y emacs-w3m
 
 # for common lisp
 sudo dnf install -y sbcl
