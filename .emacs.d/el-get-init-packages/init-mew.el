@@ -4,7 +4,7 @@
 ;;
 ;; Author: zhang.haiyuan@server.embedway.com
 ;; Version: $Id: @(#)init-mew.el,v 0.0 2015/01/20 11:12:09 vinurs Exp $
-;; Changed: <vinurs 01/22/2015 07:04:30>
+;; Changed: <vinurs 01/22/2015 07:19:04>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -99,9 +99,6 @@
 (setq mew-use-highlight-cursor-line t)
 (setq mew-highlight-cursor-line-face 'underline)
 (setq mew-use-cursor-mark t)
-;; La forme originale du sommaire ne me plait pas
-;;(setq mew-summary-form
-;;            '(type (5 date) " " (-4 size) " " (24 from) " " t (40 subj)))
 
 ;; 设置邮件显示栏目
 (setq mew-summary-form
@@ -133,12 +130,6 @@
 (ad-activate 'mew-biff-bark)
 
 
-;; (set-face-foreground   'mew-face-mark-delete    "red") 
-;; (set-face-bold-p       'mew-face-mark-delete  t)
-;; (set-face-foreground   'mew-face-mark-refile    "darkgreen") 
-;; (set-face-bold-p       'mew-face-mark-refile  t)
-;; (set-face-bold-p       'mew-face-mark-review  t)
-;; (set-face-bold-p       'mew-face-mark-unread  t)
 
 ;; html邮件相关设置
 (setq mew-prog-text/html         'mew-mime-text/html-w3m) ;; See w3m.el
@@ -179,7 +170,7 @@
           ;; imap设置成0时，imap邮件大小没有限制
           (imap-size . 0)
           ;; 不删除服务器上面的邮件
-          (imap-delete t)
+          (imap-delete nil)
           (imap-server           "imap.embedway.com")
           (imap-user             "zhang.haiyuan@embedway.com")
           ;; 使用pop3协议来收邮件
