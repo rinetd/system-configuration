@@ -4,7 +4,7 @@
 ;;
 ;; Author: zhang.haiyuan@server.embedway.com
 ;; Version: $Id: @(#)init-mew.el,v 0.0 2015/01/20 11:12:09 vinurs Exp $
-;; Changed: <vinurs 01/20/2015 20:37:38>
+;; Changed: <vinurs 01/21/2015 08:45:16>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -70,17 +70,24 @@
 (setq mew-passwd-lifetime 999)
 
 
+;; mew启动时自动获取邮件
+(setq mew-auto-get t)
+
 (setq mew-config-alist
       '(
         (default
           ;; vinurs <zhang.haiyuan@embedway.com>, name就是前面的显示
-          ("name"         .  "vinurs")
+          (name         .  "vinurs")
           ;; 邮件登陆帐号
-          ("user"         .  "zhang.haiyuan")
-          ("mail-domain"  .  "embedway.com")
+          (user         .  "zhang.haiyuan")
+          (mail-domain  .  "embedway.com")
           ;; (mailbox-type  imap)
           ;; 使用imap协议来收邮件
-          (proto  "%") 
+          (proto  "%")
+          ;; imap设置成0时，imap邮件大小没有限制
+          (imap-size . 0)
+          ;; 不删除服务器上面的邮件
+          (imap-delete t)
           (imap-server           "imap.embedway.com")
           (imap-user             "zhang.haiyuan@embedway.com")
           ;; 使用pop3协议来收邮件
@@ -88,10 +95,10 @@
           ;; ("pop-port"     .  "110")
           ;; ("pop-user"     .  "zhang.haiyuan@embedway.com") 
           ;; ("pop-auth"     .  pass)
-          ("smtp-server"  .  "smtp.embedway.com")
-          ("smtp-port"    .  "25")
-          ("smtp-user"    .  "zhang.haiyuan@embedway.com")
-          ("smtp-auth-list"  .  ("PLAIN" "LOGIN" "CRAM-MD5"))
+          (smtp-server  .  "smtp.embedway.com")
+          (smtp-port    .  "25")
+          (smtp-user    .  "zhang.haiyuan@embedway.com")
+          (smtp-auth-list  .  ("PLAIN" "LOGIN" "CRAM-MD5"))
           )
         ;TODO: 配置好gmail收发邮件
         ;; (gmail
