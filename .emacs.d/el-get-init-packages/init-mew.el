@@ -4,7 +4,7 @@
 ;;
 ;; Author: zhang.haiyuan@server.embedway.com
 ;; Version: $Id: @(#)init-mew.el,v 0.0 2015/01/20 11:12:09 vinurs Exp $
-;; Changed: <vinurs 01/21/2015 08:45:16>
+;; Changed: <vinurs 01/21/2015 08:55:14>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -66,7 +66,10 @@
 
 ;;设定将密码保存一段时间，默认20分钟 
 (setq mew-use-cached-passwd t)
+;; 单位为分钟，多少分钟之后cached的密码失效
 (setq mew-passwd-timer-unit 999)
+;; *Minutes of timer unit to cancel the cached passwords.
+;; 多少个mew-passwd-timer-unit之后停止cache密码
 (setq mew-passwd-lifetime 999)
 
 
