@@ -62,6 +62,10 @@ files_common+=(.ssh)
 files_common+=(.gnupg)
 # astyle
 files_common+=(.astylerc)
+# mew mail
+files_common+=(.Mail-Mew)
+
+
 
 
 # files

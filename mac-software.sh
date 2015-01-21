@@ -58,8 +58,11 @@ brew install sdcv
 brew install Caskroom/cask/osxfuse
 brew install sshfs
 
-# for w3m
+# for w3m for emacs
 brew install libatomic_ops
+brew install w3m
+# stunnel
+brew install stunnel
 
 # tcpreplay
 brew install tcpreplay
