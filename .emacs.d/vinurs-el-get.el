@@ -87,6 +87,7 @@
 
         ;; mew
         mew 
+	emacs-w3m
         ;; emacs ide
         ;; ecb
         ;; cedet

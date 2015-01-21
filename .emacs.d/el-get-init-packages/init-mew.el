@@ -4,7 +4,7 @@
 ;;
 ;; Author: zhang.haiyuan@server.embedway.com
 ;; Version: $Id: @(#)init-mew.el,v 0.0 2015/01/20 11:12:09 vinurs Exp $
-;; Changed: <vinurs 01/21/2015 08:55:14>
+;; Changed: <vinurs 01/21/2015 22:53:33>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -71,6 +71,49 @@
 ;; *Minutes of timer unit to cancel the cached passwords.
 ;; 多少个mew-passwd-timer-unit之后停止cache密码
 (setq mew-passwd-lifetime 999)
+
+;; 用utf8来发送邮件
+(setq mew-charset-m17n "utf-8")
+(setq mew-internal-utf-8p t)
+
+;; ----------------------------------------------- ;;
+;; Default paths
+(setq mew-mail-path "~/.Mail-Mew")
+(setq mew-conf-path mew-mail-path)
+
+;; addrbook
+;; (setq mew-addrbook-file "~/live/dotfiles/.Addressbook")
+
+;; ----------------------------------------------- ;;
+;; look and feel
+(setq mew-window-use-full t)
+(setq mew-underline-lines-use t)
+(setq mew-use-fancy-thread t)
+(setq mew-use-fancy-highlight-body t)
+(setq mew-fancy-highlight-body-prefix-width 10)
+(setq mew-highlight-body-regex-comment "^[;#?%]+.*")
+(setq mew-prog-imls-arg-list '("--thread=yes" "--indent=2"))
+;;(setq mew-use-highlight-mouse-line t)
+;; ceci pour remplacer le curseur par une barre
+;; colorée, c'est selon les goûts
+(setq mew-use-highlight-cursor-line t)
+(setq mew-highlight-cursor-line-face 'underline)
+(setq mew-use-cursor-mark t)
+;; La forme originale du sommaire ne me plait pas
+;;(setq mew-summary-form
+;;            '(type (5 date) " " (-4 size) " " (24 from) " " t (40 subj)))
+
+;; 设置邮件显示栏目
+(setq mew-summary-form
+      '(type (5 date) " " (14 from) " " t (30 subj) "|" (0 body)))
+(setq mew-sort-default-key "x-date-count")
+
+;; (set-face-foreground   'mew-face-mark-delete    "red") 
+;; (set-face-bold-p       'mew-face-mark-delete  t)
+;; (set-face-foreground   'mew-face-mark-refile    "darkgreen") 
+;; (set-face-bold-p       'mew-face-mark-refile  t)
+;; (set-face-bold-p       'mew-face-mark-review  t)
+;; (set-face-bold-p       'mew-face-mark-unread  t)
 
 
 ;; mew启动时自动获取邮件

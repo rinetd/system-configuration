@@ -61,6 +61,9 @@ brew install sshfs
 # for w3m for emacs
 brew install libatomic_ops
 brew install w3m
+brew install cvs
+
+
 # stunnel
 brew install stunnel
 
