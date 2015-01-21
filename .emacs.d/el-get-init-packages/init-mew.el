@@ -4,7 +4,7 @@
 ;;
 ;; Author: zhang.haiyuan@server.embedway.com
 ;; Version: $Id: @(#)init-mew.el,v 0.0 2015/01/20 11:12:09 vinurs Exp $
-;; Changed: <vinurs 01/22/2015 00:03:10>
+;; Changed: <vinurs 01/22/2015 07:04:30>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -115,8 +115,22 @@
 (setq mew-use-biff-bell t)
 ;;这个值一定要小于下面的timer-unit和lifetime值，这个可以使用describe-variable查看一下
 ;; 这里设置每隔5分钟检查一次
-(setq mew-biff-interval 5)
-;; 这里还需要增加一下
+(setq mew-biff-interval 1)
+;; 有新邮件了通过声音提醒
+;TODO: 这里还需要增加linux上面的命令行音乐播放器
+(setq mew-arrivedmail-pending 0)
+(defadvice mew-biff-bark (before mew-biff-sound (arg))
+  "Play a sound, if new Mail arrives"
+  (cond ((and (> arg 0) (> arg mew-arrivedmail-pending))
+     (setq mew-arrivedmail-pending arg)
+     (start-process-shell-command    "mail-sound"   "*Messages*"
+                                      "afplay ~/system-configuration/tones/get-mail.wav"))
+                  ;; replace sndplay with your favorite command to
+                  ;; play a sound-file
+    ((= arg 0)
+     (if (> mew-arrivedmail-pending 0)
+         (setq mew-arrivedmail-pending 0)))))
+(ad-activate 'mew-biff-bark)
 
 
 ;; (set-face-foreground   'mew-face-mark-delete    "red") 
