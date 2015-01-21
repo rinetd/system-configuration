@@ -4,7 +4,7 @@
 ;;
 ;; Author: zhang.haiyuan@server.embedway.com
 ;; Version: $Id: @(#)init-mew.el,v 0.0 2015/01/20 11:12:09 vinurs Exp $
-;; Changed: <vinurs 01/21/2015 22:53:33>
+;; Changed: <vinurs 01/22/2015 00:03:10>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -108,12 +108,44 @@
       '(type (5 date) " " (14 from) " " t (30 subj) "|" (0 body)))
 (setq mew-sort-default-key "x-date-count")
 
+;; biff
+;; 邮件通知提醒
+(load "biff")
+(setq mew-use-biff t)
+(setq mew-use-biff-bell t)
+;;这个值一定要小于下面的timer-unit和lifetime值，这个可以使用describe-variable查看一下
+;; 这里设置每隔5分钟检查一次
+(setq mew-biff-interval 5)
+;; 这里还需要增加一下
+
+
 ;; (set-face-foreground   'mew-face-mark-delete    "red") 
 ;; (set-face-bold-p       'mew-face-mark-delete  t)
 ;; (set-face-foreground   'mew-face-mark-refile    "darkgreen") 
 ;; (set-face-bold-p       'mew-face-mark-refile  t)
 ;; (set-face-bold-p       'mew-face-mark-review  t)
 ;; (set-face-bold-p       'mew-face-mark-unread  t)
+
+;; html邮件相关设置
+(setq mew-prog-text/html         'mew-mime-text/html-w3m) ;; See w3m.el
+(setq mew-prog-text/html-ext     "/usr/bin/firefox")
+
+(setq mew-prog-text/xml         'mew-mime-text/html-w3m) ;; See w3m.el
+(setq mew-prog-text/xml-ext     "/usr/bin/firefox")
+
+(setq mew-prog-application/xml         'mew-mime-text/html-w3m)
+(setq mew-prog-application/xml-ext     "/usr/bin/firefox")
+
+(setq mew-prog-application/X-Dvi         "/usr/bin/xdvi")
+
+;; ;;使用w3m 
+(setq mew-mime-multipart-alternative-list '("text/html" "text/plain" "*."))
+(condition-case nil
+    (require 'mew-w3m)
+  (file-error nil))
+(setq mew-use-w3m-minor-mode t)
+(setq mew-w3m-auto-insert-image t)
+
 
 
 ;; mew启动时自动获取邮件
