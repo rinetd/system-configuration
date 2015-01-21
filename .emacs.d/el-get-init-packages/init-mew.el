@@ -4,7 +4,7 @@
 ;;
 ;; Author: zhang.haiyuan@server.embedway.com
 ;; Version: $Id: @(#)init-mew.el,v 0.0 2015/01/20 11:12:09 vinurs Exp $
-;; Changed: <vinurs 01/22/2015 07:19:04>
+;; Changed: <vinurs 01/22/2015 07:23:35>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
