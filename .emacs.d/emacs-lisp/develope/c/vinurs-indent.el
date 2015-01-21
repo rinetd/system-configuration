@@ -4,7 +4,7 @@
 ;;
 ;; Author: zhang.haiyuan@server.embedway.com
 ;; Version: $Id: @(#)vinurs-astyle.el,v 0.0 2015/01/14 08:33:05 vinurs Exp $
-;; Changed: <vinurs 01/20/2015 22:29:49>
+;; Changed: <vinurs 01/21/2015 23:01:23>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -98,6 +98,8 @@
           '(lambda ()
              ;; indent region
              (define-key c-mode-map "\C-cir" 'astyle-region)
+             ;; 注释在变量后面的33列，这个跟indent.pro里面的--declaration-comment-columnn类似
+             (setq comment-column 33)
              ;; (define-key c-mode-map "\C-cir" 'indent-region)
              ;; indent buffer
              (define-key c-mode-map "\C-cib" 'astyle-buffer)
