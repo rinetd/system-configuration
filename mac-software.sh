@@ -63,6 +63,9 @@ brew install libatomic_ops
 brew install w3m
 brew install cvs
 
+# for music
+brew install mpg123
+
 
 # stunnel
 brew install stunnel
@@ -84,6 +87,9 @@ brew install gpg
 brew install astyle
 # indent
 brew install gnu-indent
+
+# python
+brew install python
 
 # nvm 
 brew install nvm
