@@ -4,7 +4,7 @@
 ;;
 ;; Author: zhang.haiyuan@server.embedway.com
 ;; Version: $Id: @(#)init-mew.el,v 0.0 2015/01/20 11:12:09 vinurs Exp $
-;; Changed: <vinurs 01/22/2015 08:17:22>
+;; Changed: <vinurs 01/22/2015 12:46:54>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -153,16 +153,22 @@
 
 
 ;; html邮件相关设置
-(setq mew-prog-text/html         'mew-mime-text/html-w3m) ;; See w3m.el
-(setq mew-prog-text/html-ext     "/usr/bin/firefox")
-
-(setq mew-prog-text/xml         'mew-mime-text/html-w3m) ;; See w3m.el
-(setq mew-prog-text/xml-ext     "/usr/bin/firefox")
-
-(setq mew-prog-application/xml         'mew-mime-text/html-w3m)
-(setq mew-prog-application/xml-ext     "/usr/bin/firefox")
-
-(setq mew-prog-application/X-Dvi         "/usr/bin/xdvi")
+(if (eq system-type 'darwin)
+    (progn                              ;mac
+      (setq mew-prog-text/html-ext     "/usr/bin/google-chrome")
+      (setq mew-prog-text/xml-ext     "/usr/bin/google-chrome")
+      (setq mew-prog-application/xml-ext     "/usr/bin/google-chrome")
+      (setq mew-prog-application/X-Dvi         "/usr/bin/xdvi")
+      0
+      )
+  (progn                                ;linux
+    (setq mew-prog-text/html-ext     "/usr/bin/google-chrome")
+    (setq mew-prog-text/xml-ext     "/usr/bin/google-chrome")
+    (setq mew-prog-application/xml-ext     "/usr/bin/google-chrome")
+    (setq mew-prog-application/X-Dvi         "/usr/bin/xdvi")
+    1
+    )
+  )
 
 ;; ;;使用w3m 
 (setq mew-mime-multipart-alternative-list '("text/html" "text/plain" "*."))
@@ -171,6 +177,11 @@
   (file-error nil))
 (setq mew-use-w3m-minor-mode t)
 (setq mew-w3m-auto-insert-image t)
+
+(setq mew-prog-text/html         'mew-mime-text/html-w3m) ;; See w3m.el
+(setq mew-prog-text/xml         'mew-mime-text/html-w3m) ;; See w3m.el
+(setq mew-prog-application/xml         'mew-mime-text/html-w3m)
+
 
 
 
