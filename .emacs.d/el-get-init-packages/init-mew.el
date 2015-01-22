@@ -4,7 +4,7 @@
 ;;
 ;; Author: zhang.haiyuan@server.embedway.com
 ;; Version: $Id: @(#)init-mew.el,v 0.0 2015/01/20 11:12:09 vinurs Exp $
-;; Changed: <vinurs 01/22/2015 07:23:35>
+;; Changed: <vinurs 01/22/2015 08:17:22>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -105,23 +105,41 @@
       '(type (5 date) " " (14 from) " " t (30 subj) "|" (0 body)))
 (setq mew-sort-default-key "x-date-count")
 
-;; biff
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; 
+;; biff start
 ;; 邮件通知提醒
 (load "biff")
 (setq mew-use-biff t)
 (setq mew-use-biff-bell t)
+(setq mew-arrivedmail-pending 0)
+
+
 ;;这个值一定要小于下面的timer-unit和lifetime值，这个可以使用describe-variable查看一下
 ;; 这里设置每隔5分钟检查一次
 (setq mew-biff-interval 1)
 ;; 有新邮件了通过声音提醒
-;TODO: 这里还需要增加linux上面的命令行音乐播放器
-(setq mew-arrivedmail-pending 0)
+
+;; 命令行播放程序
+(defvar vinurs-mew-biff-notice-cmd ""
+  "this is used for play biff voice when a new mail come")
+(setq vinurs-mew-biff-notice-cmd
+      (if (eq system-type 'darwin)
+          "afplay" ;; mac music cmd
+        "linux" ; else linux cmd
+        )
+      )
+
+;; 提示声
+(setq vinurs-mew-biff-notice-voice "~/system-configuration/tones/get-mail.wav")
+
+
 (defadvice mew-biff-bark (before mew-biff-sound (arg))
   "Play a sound, if new Mail arrives"
   (cond ((and (> arg 0) (> arg mew-arrivedmail-pending))
      (setq mew-arrivedmail-pending arg)
      (start-process-shell-command    "mail-sound"   "*Messages*"
-                                      "afplay ~/system-configuration/tones/get-mail.wav"))
+                                     (concat vinurs-mew-biff-notice-cmd " " vinurs-mew-biff-notice-voice)
+                                      ))
                   ;; replace sndplay with your favorite command to
                   ;; play a sound-file
     ((= arg 0)
@@ -129,6 +147,9 @@
          (setq mew-arrivedmail-pending 0)))))
 (ad-activate 'mew-biff-bark)
 
+
+;; biff end
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; 
 
 
 ;; html邮件相关设置
