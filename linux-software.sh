@@ -71,9 +71,11 @@ sudo dnf install -y emacs
 sudo dnf install -y bzr
 # linux读邮件需要
 sudo dnf install -y emacs-w3m
+sudo dnf install -y xdvi
 
 # for common lisp
 sudo dnf install -y sbcl
+
 
 # cmake
 sudo dnf install -y cmake
