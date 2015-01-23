@@ -70,6 +70,7 @@ sudo dnf install -y emacs
 # bzr,用来给emacs的增加cedet的时候用的
 sudo dnf install -y bzr
 # linux读邮件需要
+sudo dnf install -y w3m
 sudo dnf install -y emacs-w3m
 sudo dnf install -y xdvi
 
