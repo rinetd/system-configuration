@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.victor@gmail.com
 ;; Version: $Id: @(#)victor_develope.el 0.0 2010/12/07 02:41:20 victor Exp $
-;; Changed: <vinurs 01/19/2015 22:10:34>
+;; Changed: <vinurs 01/24/2015 22:37:43>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -49,8 +49,6 @@
 (global-font-lock-mode t)
 
 
-;; 自动给你加上括号,包括大括号
-(require 'vinurs-electric-pair)
 
 ;; 自动给你加上括号,包括大括号
 ;;(require 'autopair-settings)

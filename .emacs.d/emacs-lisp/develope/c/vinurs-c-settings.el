@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.victor@gmail.com
 ;; Version: $Id: @(#)victor-c-settings.el,v 0.0 2011/02/20 01:55:58 victor Exp $
-;; Changed: <vinurs 01/19/2015 22:25:49>
+;; Changed: <vinurs 01/24/2015 22:38:04>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -49,6 +49,8 @@
 ;; 缩进相关
 (require 'vinurs-indent)
 
+;; 自动给你加上括号,包括大括号
+(require 'vinurs-electric-pair)
 
 
 ;;cscope

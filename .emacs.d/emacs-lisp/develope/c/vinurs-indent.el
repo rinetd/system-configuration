@@ -4,7 +4,7 @@
 ;;
 ;; Author: zhang.haiyuan@server.embedway.com
 ;; Version: $Id: @(#)vinurs-astyle.el,v 0.0 2015/01/14 08:33:05 vinurs Exp $
-;; Changed: <vinurs 01/21/2015 23:01:23>
+;; Changed: <vinurs 01/24/2015 22:52:02>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -57,8 +57,16 @@
 ;; astyle
 ;; (load "astyle-hooks.el")
 
+;; 宏设置相关
+;; 在c语言中，对宏进行语法分析，这样便于缩进
 (setq c-syntactic-indentation-in-macros t)
+;; 这个是专属于cc-mode的，对宏定义最后一行的反斜杠的位置的定义
+(setq c-backslash-column 33)
+;; 对于反斜杠进行连接的代码，自动对齐最后的反斜杠
+(setq c-auto-align-backslashes t)
 
+;; (add-to-list 'c-cleanup-list 'space-before-funcall)
+;; (add-to-list 'c-cleanup-list 'brace-else-brace)
 
 ;; (defvar astyle-command "astyle")
 
@@ -94,6 +102,14 @@
     (astyle-region (point-min) (point-max)))) 
 
 
+(defun refine-c-file ()
+  "refine the c file"
+  (interactive)
+  (save-excursion
+    (astyle-buffer)
+    (indent-region (point-min) (point-max)))
+  )
+
 (add-hook 'c-mode-common-hook 
           '(lambda ()
              ;; indent region
@@ -102,12 +118,36 @@
              (setq comment-column 33)
              ;; (define-key c-mode-map "\C-cir" 'indent-region)
              ;; indent buffer
-             (define-key c-mode-map "\C-cib" 'astyle-buffer)
+             ;; (define-key c-mode-map "\C-cib" 'astyle-buffer)
+             (define-key c-mode-map "\C-cib" 'refine-c-file)
               ;indent function
              (define-key c-mode-map "\C-cif" 'c-indent-defun)
              
              (define-key c++-mode-map "\C-cir" 'astyle-region) 
              (define-key c++-mode-map "\C-cib" 'astyle-buffer)))
 
+;; define my own c style
+;; (defconst vinurs-c-style
+;;   '((c-tab-always-indent        . t)
+;;     (c-comment-only-line-offset . 4)
+
+;;     (c-hanging-braces-alist     . ((substatement-open after)
+;;                                    (brace-list-open)))
+;;     (c-hanging-colons-alist     . ((member-init-intro before)
+;;                                    (inher-intro)
+;;                                    (case-label after)
+;;                                    (label after)
+;;                                    (access-label after)))
+;;     (c-cleanup-list             . (scope-operator
+;;                                    empty-defun-braces
+;;                                    defun-close-semi))
+;;     (c-offsets-alist            . ((arglist-close . c-lineup-arglist)
+;;                                    (substatement-open . 0)
+;;                                    (case-label        . 4)
+;;                                    (block-open        . 0)
+;;                                    (knr-argdecl-intro . -)))
+;;     (c-echo-syntactic-information-p . t))
+;;   "vinurs C Programming Style")
+;; (c-add-style "vinurs c style" vinurs-c-style)
 
 ;;; vinurs-astyle.el ends here
