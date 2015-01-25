@@ -4,7 +4,7 @@
 ;;
 ;; Author: zhang.haiyuan@server.embedway.com
 ;; Version: $Id: @(#)vinurs-astyle.el,v 0.0 2015/01/14 08:33:05 vinurs Exp $
-;; Changed: <vinurs 01/25/2015 12:38:07>
+;; Changed: <vinurs 01/25/2015 14:07:59>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -45,10 +45,10 @@
 ;;;;##########################################################################
 
 
-;; c的缩进为４个空格
-(setq c-basic-offset 4)
+;; ;; c的缩进为４个空格
+;; (setq c-basic-offset 4)
 
-(setq-default indent-tabs-mode nil)
+;; (setq-default indent-tabs-mode nil)
 
 
 ;; 创建自己的C style: vinurs-c-style
@@ -57,18 +57,94 @@
 ;; astyle
 ;; (load "astyle-hooks.el")
 
-;; 宏设置相关
-;; 在c语言中，对宏进行语法分析，这样便于缩进
-(setq c-syntactic-indentation-in-macros t)
-;; 这个是专属于cc-mode的，对宏定义最后一行的反斜杠的位置的定义
-(setq c-backslash-column 33)
-;; 对于反斜杠进行连接的代码，自动对齐最后的反斜杠
-(setq c-auto-align-backslashes t)
 
 ;; (add-to-list 'c-cleanup-list 'space-before-funcall)
 ;; (add-to-list 'c-cleanup-list 'brace-else-brace)
 
+;; Create my personal style.
+(defconst vinurs-c-style
+  '(
+    ;; c的缩进为４个空格
+    (c-basic-offset . 4)
+    (indent-tabs-mode . nil)
+	;; 按tab键之后缩进
+    (c-tab-always-indent  . t)
 
+	;; 宏相关设置
+	;; 宏设置相关 *********************************
+	;; 在c语言中，对宏进行语法分析，这样便于缩进
+	(c-syntactic-indentation-in-macros . t)
+	;; 这个是专属于cc-mode的，对宏定义最后一行的反斜杠的位置的定义
+	(c-backslash-column . 33)
+	;; 对于反斜杠进行连接的代码，自动对齐最后的反斜杠
+	(c-auto-align-backslashes . t)
+	;; 宏设置相关结束 *****************************
+
+	
+	;; 这个不知道有什么用
+    ;; (c-comment-only-line-offset . 8)
+	
+    ;; ;; (c-hanging-braces-alist     . ((substatement-open after)
+    ;; ;;                                (brace-list-open)))
+    ;; (c-hanging-colons-alist     . ((member-init-intro before)
+    ;;                                (inher-intro)
+    ;;                                ;; (case-label after)
+    ;;                                (label after)
+    ;;                                (access-label after)))
+    ;; (c-cleanup-list             . (
+    ;;                                ;; scope-operator
+    ;;                                ;; 如果函数体为空的时候直接将{}连起来
+    ;;                                empty-defun-braces
+    ;;                                ;; } else {变紧凑
+    ;;                                ;; brace-else-brace
+    ;;                                ;; brace-elseif-brace
+    ;;                                ;; compact-empty-funcall
+    ;;                                ;; defun-close-semi
+    ;;                                )
+    ;;                             )
+    ;; (c-offsets-alist            . ((arglist-close . c-lineup-arglist)
+    ;;                                (substatement-open . 0)
+    ;;                                ;; case语句跟switch同列
+    ;;                                (case-label        . 0)
+    ;;                                (block-open        . 4)
+    ;;                                (knr-argdecl-intro . -)))
+    ;; (c-echo-syntactic-information-p . t)
+
+    )
+  "vinurs' C Programming Style")
+(c-add-style "vinurs" vinurs-c-style)
+
+;; Customizations for all modes in CC Mode.
+(defun vinurs-c-mode-hook ()
+  ;; set my personal style for the current buffer
+  (c-set-style "vinurs")
+  ;; other customizations
+  ;; we like auto-newline, but not hungry-delete
+  ;; (c-toggle-auto-newline 1)
+  )
+(add-hook 'c-mode-hook 'vinurs-c-mode-hook)
+
+;; (defconst my-c-style
+;;   '((c-tab-always-indent        . t)
+;;     (c-comment-only-line-offset . 4)
+;;     (c-hanging-braces-alist     . ((substatement-open after)
+;;                                    (brace-list-open)))
+;;     (c-hanging-colons-alist     . ((member-init-intro before)
+;;                                    (inher-intro)
+;;                                    (case-label after)
+;;                                    (label after)
+;;                                    (access-label after)))
+;;     (c-cleanup-list             . (scope-operator
+;;                                    empty-defun-braces
+;;                                    defun-close-semi))
+;;     (c-offsets-alist            . ((arglist-close . c-lineup-arglist)
+;;                                    (substatement-open . 0)
+;;                                    (case-label        . 4)
+;;                                    (block-open        . 0)
+;;                                    (knr-argdecl-intro . -)))
+;;     (c-echo-syntactic-information-p . t))
+;;   "My C Programming Style")
+;; (c-add-style "PERSONAL" my-c-style)
 
 (defun format-c-region (start end) 
   "Run astyle on region, formatting it in a pleasant way." 
