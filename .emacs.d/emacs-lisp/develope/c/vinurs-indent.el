@@ -4,7 +4,7 @@
 ;;
 ;; Author: zhang.haiyuan@server.embedway.com
 ;; Version: $Id: @(#)vinurs-astyle.el,v 0.0 2015/01/14 08:33:05 vinurs Exp $
-;; Changed: <vinurs 01/24/2015 22:52:02>
+;; Changed: <vinurs 01/25/2015 10:28:29>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -102,13 +102,46 @@
     (astyle-region (point-min) (point-max)))) 
 
 
-(defun refine-c-file ()
-  "refine the c file"
+;; format current c buffer
+(defun refine-current-c-buffer ()
+  "refine current c buffer using indent and cc-mode"
   (interactive)
   (save-excursion
     (astyle-buffer)
     (indent-region (point-min) (point-max)))
   )
+
+
+;; TODO: 增加保存未格式化的文件的功能
+;; 增加文件是只读文件的判断
+;; format a file or a dir's all c files
+(defun refine-dir-c-files (file-or-dir)
+  "refine a file or a dir's all c files"
+  (interactive "fRefine-files:\n")
+  (save-excursion
+    (let ((refine-filename nil)
+          (refine-dirname nil)
+          (refine-buffername nil)
+          (original-buffername (current-buffer))
+          )
+      
+      (if (string= "" file-or-dir)      ;argument is null
+          (setq refine-filename (buffer-file-name))
+        (setq refine-dirname (file-name-directory file-or-dir))
+        )
+
+      ;; do refine
+      (setq refine-buffername (find-file "~/a.c"))
+      (refine-current-c-buffer)
+      (save-buffer refine-buffername)
+      (kill-buffer refine-buffername)
+      (switch-to-buffer original-buffername)
+      (message "all refine is done: %s" refine-dirname)
+      )
+    )
+  )
+
+
 
 (add-hook 'c-mode-common-hook 
           '(lambda ()
@@ -119,12 +152,12 @@
              ;; (define-key c-mode-map "\C-cir" 'indent-region)
              ;; indent buffer
              ;; (define-key c-mode-map "\C-cib" 'astyle-buffer)
-             (define-key c-mode-map "\C-cib" 'refine-c-file)
+             (define-key c-mode-map "\C-cib" 'refine-current-c-buffer)
               ;indent function
              (define-key c-mode-map "\C-cif" 'c-indent-defun)
              
              (define-key c++-mode-map "\C-cir" 'astyle-region) 
-             (define-key c++-mode-map "\C-cib" 'astyle-buffer)))
+             (define-key c++-mode-map "\C-cib" 'refine-current-c-buffer)))
 
 ;; define my own c style
 ;; (defconst vinurs-c-style
