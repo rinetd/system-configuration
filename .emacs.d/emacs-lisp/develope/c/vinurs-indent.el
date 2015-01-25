@@ -4,7 +4,7 @@
 ;;
 ;; Author: zhang.haiyuan@server.embedway.com
 ;; Version: $Id: @(#)vinurs-astyle.el,v 0.0 2015/01/14 08:33:05 vinurs Exp $
-;; Changed: <vinurs 01/25/2015 10:28:29>
+;; Changed: <vinurs 01/25/2015 11:36:00>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -71,19 +71,19 @@
 ;; (defvar astyle-command "astyle")
 
 
-(defun astyle-region (start end) 
+(defun format-c-region (start end) 
   "Run astyle on region, formatting it in a pleasant way." 
   (interactive "r")
   (progn
     (if (eq system-type 'darwin) ;; mac specific settings
-        (defvar astyle-command "/usr/local/Cellar/gnu-indent/2.2.10/bin/gindent")
-      (defvar astyle-command "indent")
+        (defvar format-c-command "/usr/local/Cellar/gnu-indent/2.2.10/bin/gindent")
+      (defvar format-c-command "indent")
       )
 
-    (defvar astyle-command "indent")
+    (defvar format-c-command "indent")
     (save-excursion 
       (shell-command-on-region start end
-                               astyle-command
+                               format-c-command
                                nil t
                                ;; 错误信息显示buffer
                                (get-buffer-create "*Astyle Errors*") t) 
@@ -95,11 +95,11 @@
       ))
   )
 
-(defun astyle-buffer () 
-  "Run astyle on whole buffer, formatting it in a pleasant way." 
-  (interactive) 
-  (save-excursion 
-    (astyle-region (point-min) (point-max)))) 
+;; (defun astyle-buffer () 
+;;   "Run astyle on whole buffer, formatting it in a pleasant way." 
+;;   (interactive) 
+;;   (save-excursion 
+;;     (format-c-region (point-min) (point-max)))) 
 
 
 ;; format current c buffer
@@ -107,15 +107,35 @@
   "refine current c buffer using indent and cc-mode"
   (interactive)
   (save-excursion
-    (astyle-buffer)
+    (format-c-region (point-min) (point-max))
     (indent-region (point-min) (point-max)))
   )
 
+;; (directory-files "~/test")
+
+;; (defun folder-dirs (folder)
+;;   (delete-if-not 'file-directory-p
+;;     (mapcar (lambda(arg) (file-name-as-directory (concat (file-name-as-directory folder) arg)))
+;;       (delete-if (lambda (arg) (or (string= ".." arg) (string= "." arg)))
+;;         (directory-files folder)))))
+
+;; (defun recursively-run-on-every-dir (fn folder)
+;; "FN - function, taking one argument; 
+;; FOLDER - initial forder"
+;;   (funcall fn folder)
+;;   (mapc (lambda(arg) (recursively-run-on-every-dir fn arg))
+;;     (folder-dirs folder))
+;;   nil)
+
+;; ;; use your function instead of print
+;; (recursively-run-on-every-dir 'print "~/test")
+;; (recursively-run-on-every-dir 'directory-files "~/test")
+s
 
 ;; TODO: 增加保存未格式化的文件的功能
 ;; 增加文件是只读文件的判断
 ;; format a file or a dir's all c files
-(defun refine-dir-c-files (file-or-dir)
+(defun refine-c-files (file-or-dir)
   "refine a file or a dir's all c files"
   (interactive "fRefine-files:\n")
   (save-excursion
@@ -131,7 +151,7 @@
         )
 
       ;; do refine
-      (setq refine-buffername (find-file "~/a.c"))
+      (setq refine-buffername (find-file "~/test/a.c"))
       (refine-current-c-buffer)
       (save-buffer refine-buffername)
       (kill-buffer refine-buffername)
@@ -146,7 +166,7 @@
 (add-hook 'c-mode-common-hook 
           '(lambda ()
              ;; indent region
-             (define-key c-mode-map "\C-cir" 'astyle-region)
+             (define-key c-mode-map "\C-cir" 'format-c-region)
              ;; 注释在变量后面的33列，这个跟indent.pro里面的--declaration-comment-columnn类似
              (setq comment-column 33)
              ;; (define-key c-mode-map "\C-cir" 'indent-region)
@@ -156,7 +176,7 @@
               ;indent function
              (define-key c-mode-map "\C-cif" 'c-indent-defun)
              
-             (define-key c++-mode-map "\C-cir" 'astyle-region) 
+             (define-key c++-mode-map "\C-cir" 'format-c-region) 
              (define-key c++-mode-map "\C-cib" 'refine-current-c-buffer)))
 
 ;; define my own c style
