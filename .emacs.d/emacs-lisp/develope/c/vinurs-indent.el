@@ -4,7 +4,7 @@
 ;;
 ;; Author: zhang.haiyuan@server.embedway.com
 ;; Version: $Id: @(#)vinurs-astyle.el,v 0.0 2015/01/14 08:33:05 vinurs Exp $
-;; Changed: <vinurs 01/25/2015 11:36:00>
+;; Changed: <vinurs 01/25/2015 12:38:07>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -68,7 +68,6 @@
 ;; (add-to-list 'c-cleanup-list 'space-before-funcall)
 ;; (add-to-list 'c-cleanup-list 'brace-else-brace)
 
-;; (defvar astyle-command "astyle")
 
 
 (defun format-c-region (start end) 
@@ -95,11 +94,6 @@
       ))
   )
 
-;; (defun astyle-buffer () 
-;;   "Run astyle on whole buffer, formatting it in a pleasant way." 
-;;   (interactive) 
-;;   (save-excursion 
-;;     (format-c-region (point-min) (point-max)))) 
 
 
 ;; format current c buffer
@@ -130,7 +124,7 @@
 ;; ;; use your function instead of print
 ;; (recursively-run-on-every-dir 'print "~/test")
 ;; (recursively-run-on-every-dir 'directory-files "~/test")
-s
+
 
 ;; TODO: 增加保存未格式化的文件的功能
 ;; 增加文件是只读文件的判断
