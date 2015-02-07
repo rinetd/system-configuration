@@ -19,4 +19,6 @@
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
 [i18n]
-	logOutputEncoding = gbk
+[i18n]
+	logOutputEncoding = UTF-8 UTF8 gbk
+	commitencoding = utf-8
