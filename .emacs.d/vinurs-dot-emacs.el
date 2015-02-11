@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.victor@gmail.com
 ;; Version: $Id: @(#)victor-doc-emacs.el,v 0.0 2011/03/22 11:05:27 victor Exp $
-;; Changed: <vinurs 01/17/2015 10:34:56>
+;; Changed: <vinurs 02/11/2015 19:28:54>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -44,6 +44,8 @@
 ;;;;  User Options, Variables
 ;;;;##########################################################################
 
+;; turn on server
+(server-start)
 
 ;; pre basic functions
 (load "~/.emacs.d/vinurs-pre-basic.el")
