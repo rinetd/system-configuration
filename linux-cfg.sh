@@ -1,6 +1,6 @@
 #!/bin/bash
 #==============================================================================
-#
+# 
 #        Filename:  @(#)linux-cfg.sh
 #
 #     Description:  for linux only
