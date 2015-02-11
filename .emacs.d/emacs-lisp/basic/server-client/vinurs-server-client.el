@@ -69,9 +69,9 @@
 ;;                                     (server-edit)
 ;;                                     ))))
 
-(if (eq system-type 'darwin)
+;; (if (eq system-type 'darwin)
     (server-start)
-  )
+ ;; )
 
 
 ;;; vinurs-server-client.el ends here
