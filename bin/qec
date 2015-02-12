@@ -25,6 +25,7 @@ function check-emacs()
     if [[ $? != 0 ]]; then
         # (emacs --daemon >/dev/null 2>&1 &)
         (emacs  >/dev/null 2>&1 &)
+	sleep 1
         # 启动emacs是需要时间的，这里设置为5s中，一般的话是用不到的，因为系统起来以后emacs就自>动起>来了
     fi
 }
