@@ -59,9 +59,9 @@ brew install Caskroom/cask/osxfuse
 brew install sshfs
 
 # for wmctrl
-brew unlink brew-cask
-brew install Caskroom/cask/xquartz
-brew install homebrew/x11/wmctrl
+# brew unlink brew-cask
+# brew install Caskroom/cask/xquartz
+# brew install homebrew/x11/wmctrl
 
 # for w3m for emacs
 brew install libatomic_ops
