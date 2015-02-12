@@ -36,6 +36,7 @@ function qec-linux ()
 {
     check-emacs
     (emacsclient $* >/dev/null 2>&1 &) 
+    (wmctrl -a emacs@)
 #    ((wmctrl -a emacs@) &&  (emacsclient  $* >/dev/null 2>&1 &)) || (emacsclient -c $* >/dev/null 2>&1 &)
 #    ((wmctrl -a emacs@) &&  (emacsclient $* >/dev/null 2>&1 &)) || (emacsclient -c $* >/dev/null 2>&1 &)
     # check argument number
