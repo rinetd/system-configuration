@@ -1,6 +1,0 @@
-tree 37b90530f80ff4b14069122726b1644a84d89191
-parent 00fd21fde57a782b3841261c698bb4c9f6e8863e
-author zhanghaiyuan <haiyuan.vinurs@gmail.com> 1424115249 +0800
-committer zhanghaiyuan <haiyuan.vinurs@gmail.com> 1424115249 +0800
-
-test git object
