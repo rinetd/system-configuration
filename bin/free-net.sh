@@ -7,7 +7,7 @@
 # 
 #         Version:  1.0
 #         Created:  2012/03/07 17:49:28
-#   	  Changed:  <vinurs 07/07/2013 12:38:43>
+#   	  Changed:  <vinurs 03/02/2015 08:28:56>
 #        Revision:  none
 # 
 #          Author:  victor
@@ -99,6 +99,7 @@ read choice
 
 
 #cmd="/usr/local/newssh/bin/ssh -Nfx -C -z -Z usassh -D 127.0.0.1:7070 -p 443 $user@s$choice.123ssh.net"
-cmd="ssh -Nfx -C -z -Z usassh -D 127.0.0.1:7070 -p 443 $user@s$choice.123ssh.net"
+cmd="ssh -Nfx -C -z -Z usassh -D 127.0.0.1:7070 -p 443 $user@s$choice.ezlink.hk"
 $cmd
 
+# s1.ezlink.hk
