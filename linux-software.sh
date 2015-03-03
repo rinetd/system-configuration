@@ -65,6 +65,8 @@ sudo dnf install -y ruby
 sudo dnf install -y tig
 # kdiff3,用来比较文件
 sudo dnf install -y kdiff3
+# meld,用来比较文件
+sudo dnf install -y meld
 
 # clang, 用来给emacs进行自动补全的：emacs auto-complete clang
 sudo dnf install -y clang
