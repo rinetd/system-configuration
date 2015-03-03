@@ -22,3 +22,14 @@
 [i18n]
 	logOutputEncoding = UTF-8 UTF8 gbk
 	commitencoding = utf-8
+[diff]
+	tool = meld
+# 每次比较的时候不弹出提示
+[difftool]
+    prompt = false
+
+[merge]
+	tool = meld
+# 每次merge的时候不弹出提示
+[mergetool]
+    prompt = false
