@@ -7,7 +7,7 @@
 # 
 #         Version:  1.0
 #         Created:  2012/08/05 10:24:48
-#         Changed:  <vinurs 03/10/2015 10:22:49>
+#         Changed:  <vinurs 03/19/2015 11:45:03>
 #        Revision:  none
 # 
 #          Author:  zhanghaiyuan
@@ -41,7 +41,7 @@ else
     # 默认打开叫sys-monitor的窗口，专门用来监控系统当前的性能的
     tmux -2 new-session -s $TMUX_SESSION -n sys-monitor \; detach-client
     # system configuration
-    tmux attach-session -t $TMUX_SESSION \; new-window -n sys-cfg\; split-window -h \; detach-client
+    tmux attach-session -t $TMUX_SESSION \; new-window -n sys-cfg\; send-keys 'cd ~/system-configuration' C-m \; split-window -h \; send-keys 'cd ~/system-configuration' C-m \; detach-client
     # emacs
     tmux attach-session -t $TMUX_SESSION \; new-window -n emacs \; split-window -h \; detach-client
     # git
