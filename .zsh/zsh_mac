@@ -5,6 +5,7 @@ alias emacsclient='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient'
 alias ee='emacsclient -t'
 alias ls='ls -G'
 alias indent='/usr/local/Cellar/gnu-indent/2.2.10/bin/gindent'
+alias md5sum='md5'
 
 #alias vim='emacsclient '
 #alias vim='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -c'
