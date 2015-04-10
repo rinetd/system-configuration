@@ -7,7 +7,7 @@
 # 
 #         Version:  1.0
 #         Created:  2012/08/05 10:24:48
-#         Changed:  <vinurs 03/19/2015 11:45:03>
+#         Changed:  <vinurs 04/11/2015 07:56:35>
 #        Revision:  none
 # 
 #          Author:  zhanghaiyuan
@@ -52,6 +52,16 @@ else
     tmux attach-session -t $TMUX_SESSION \; new-window -n blog \; split-window -h \; detach-client
     # lisp
     tmux attach-session -t $TMUX_SESSION \; new-window -n lisp \; split-window -h \; detach-client
+    # other
+    tmux attach-session -t $TMUX_SESSION \; new-window
+	tmux attach-session -t $TMUX_SESSION \; new-window
+	tmux attach-session -t $TMUX_SESSION \; new-window
+    tmux attach-session -t $TMUX_SESSION \; new-window
+	tmux attach-session -t $TMUX_SESSION \; new-window
+	tmux attach-session -t $TMUX_SESSION \; new-window
+    tmux attach-session -t $TMUX_SESSION \; new-window
+	tmux attach-session -t $TMUX_SESSION \; new-window
+
 
     # 打开文件管理器mc，我最喜欢的文件管理器了
     # tmux attach-session -t $TMUX_SESSION \; new-window -n mc \; send-keys 'mc' C-m \; detach-client
