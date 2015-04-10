@@ -7,7 +7,7 @@
 # 
 #         Version:  1.0
 #         Created:  2014/05/05 19:27:22
-#         Changed:  <vinurs 11/17/2014 20:02:36>
+#         Changed:  <vinurs 04/10/2015 08:29:53>
 #        Revision:  none
 # 
 #          Author:  zhanghaiyuan
@@ -106,6 +106,10 @@ nvm install 0.10
 brew install npm
 npm install -g hexo
 gem install bundler
+
+source hexo.sh
+
+
 
 # markdown
 brew install markdown
