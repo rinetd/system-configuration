@@ -7,7 +7,7 @@
 # 
 #         Version:  1.0
 #         Created:  2012/08/05 10:24:48
-#         Changed:  <vinurs 04/11/2015 07:56:35>
+#         Changed:  <vinurs 04/11/2015 08:01:16>
 #        Revision:  none
 # 
 #          Author:  zhanghaiyuan
@@ -53,10 +53,10 @@ else
     # lisp
     tmux attach-session -t $TMUX_SESSION \; new-window -n lisp \; split-window -h \; detach-client
     # other
-    tmux attach-session -t $TMUX_SESSION \; new-window
-	tmux attach-session -t $TMUX_SESSION \; new-window
-	tmux attach-session -t $TMUX_SESSION \; new-window
-    tmux attach-session -t $TMUX_SESSION \; new-window
+	tmux attach-session -t $TMUX_SESSION \; new-window -n minicom
+	tmux attach-session -t $TMUX_SESSION \; new-window -n minicom
+	tmux attach-session -t $TMUX_SESSION \; new-window -n compile
+	tmux attach-session -t $TMUX_SESSION \; new-window -n src
 	tmux attach-session -t $TMUX_SESSION \; new-window
 	tmux attach-session -t $TMUX_SESSION \; new-window
     tmux attach-session -t $TMUX_SESSION \; new-window
