@@ -1,10 +1,10 @@
-;;; victor-basic-misc.el --- 
+;;; vinurs-basic-misc.el --- 
 
 ;; Copyright 2011 victor
 ;;
 ;; Author: haiyuan.victor@gmail.com
 ;; Version: $Id: @(#)victor-basic-misc.el,v 0.0 2011/04/28 07:56:19 victor Exp $
-;; Changed: <vinurs 01/16/2015 23:41:39>
+;; Changed: <vinurs 04/12/2015 22:22:04>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -51,8 +51,12 @@
 (add-to-list 'Info-default-directory-list "/usr/share/info")
 
 ;; 配置path环境变量
-(setenv "PATH" (concat "/usr/local/bin;" (getenv "PATH")))
-(setq exec-path (append exec-path '("/usr/local/bin")))
+(setenv "PATH" (concat "/usr/local/bin/:" (getenv "PATH")))
+(setq exec-path (append exec-path '("/usr/local/bin/")))
+
+
+
+
 
 
 ;; 高亮当前行
