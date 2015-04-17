@@ -93,6 +93,9 @@ brew install astyle
 # indent
 brew install gnu-indent
 
+# eroxychains
+brew install proxychains-ng
+
 # python
 brew install python
 
