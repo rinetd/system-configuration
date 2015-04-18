@@ -16,9 +16,27 @@ source $(brew --prefix nvm)/nvm.sh
 
 
 # start tftpd
-function start_tftpd ()
+function start-tftpd ()
 {
     (launchctl load /System/Library/LaunchDaemons/tftp.plist >/dev/null 2>&1 &)
+}
+
+function stop-tftpd ()
+{
+    sudo launchctl unload /System/Library/LaunchDaemons/tftp.plist
+}
+
+
+# start tftpd
+function start-ftpd ()
+{
+    (launchctl load /System/Library/LaunchDaemons/ftp.plist >/dev/null 2>&1 &)
+}
+
+# start tftpd
+function stop-ftpd ()
+{
+    sudo launchctl unload /System/Library/LaunchDaemons/ftp.plist
 }
 
 
