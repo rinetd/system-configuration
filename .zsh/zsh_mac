@@ -15,6 +15,13 @@ alias vi='vim'
 source $(brew --prefix nvm)/nvm.sh 
 
 
+# start tftpd
+function start_tftpd ()
+{
+    (launchctl load /System/Library/LaunchDaemons/tftp.plist >/dev/null 2>&1 &)
+}
+
+
 
 
 

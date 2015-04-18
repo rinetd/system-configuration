@@ -7,7 +7,7 @@
 # 
 #         Version:  1.0
 #         Created:  2014/05/05 11:04:01
-#         Changed:  <vinurs 11/06/2014 18:05:33>
+#         Changed:  <vinurs 04/18/2015 16:17:06>
 #        Revision:  none
 # 
 #          Author:  zhanghaiyuan
@@ -19,6 +19,7 @@
 
 chflags nohidden ~/Library/
 
-
+cp /System/Library/LaunchDaemons/tftp.plist backup_dir
+sudo cp -f current_dir/tftp.plist /System/Library/LaunchDaemons/tftp.plist
 
 
