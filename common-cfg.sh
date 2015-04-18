@@ -44,6 +44,8 @@ files_common+=(.htoprc)
 files_common+=(.indent.pro)
 # lftp
 files_common+=(.lftp)
+# ftpd
+files_common+=(.ftproot)
 # emacs
 files_common+=(.emacs .emacs.d)
 # crontab

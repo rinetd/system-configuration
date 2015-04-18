@@ -21,5 +21,5 @@ chflags nohidden ~/Library/
 
 cp /System/Library/LaunchDaemons/tftp.plist backup_dir
 sudo cp -f current_dir/tftp.plist /System/Library/LaunchDaemons/tftp.plist
-
+sudo cp -f current_dir/ftpd.conf /etc/
 
