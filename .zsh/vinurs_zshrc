@@ -290,7 +290,7 @@ fi
 
 # 设置PATH路径
 #export PATH="/usr/local/bin:$PATH" 
-export PATH=$PATH:~/bin/
+export PATH=$PATH:~/bin:/usr/local/sbin
 case $system_type in
     Linux)
         export PATH=$PATH:~/bin/linux

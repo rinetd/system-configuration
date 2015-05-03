@@ -17,8 +17,33 @@
 ##
 
 brew install tmux
+brew tap sanemat/font
+# for tmux logging
+brew install ansifilter
 # for tmux copy
 brew install reattach-to-user-namespace
+# powerline
+brew install mercurial
+brew install coreutils
+brew tap homebrew/dupes
+brew install homebrew/dupes/grep
+
+
+brew install --upgrade openssl
+brew unlink openssl && brew link openssl --force
+
+# python libs
+easy_install psutil
+easy_install mercurial
+brew install libgit2
+easy_install pygit2
+easy_install bzr
+easy_install pyuv
+pip install i3-py
+# pip install powerline-status
+mkdir ~/tmp/
+cd ~/tmp/; git clone git@github.com:powerline/fonts.git; ./install.sh; cd -;
+
 
 brew install zsh
 brew install lftp
@@ -99,6 +124,9 @@ brew install proxychains-ng
 # python
 brew install python
 
+brew install macvim --env-std --override-system-vim
+
+
 # nvm 
 brew install nvm
 # set nvm env
@@ -111,6 +139,7 @@ npm install -g hexo
 gem install bundler
 
 source hexo.sh
+
 
 
 
