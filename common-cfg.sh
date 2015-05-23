@@ -7,7 +7,7 @@
 # 
 #         Version:  1.0
 #         Created:  2014/05/05 11:03:38
-#         Changed:  <vinurs 04/18/2015 16:15:56>
+#         Changed:  <vinurs 05/23/2015 19:47:17>
 #        Revision:  none
 # 
 #          Author:  zhanghaiyuan
@@ -100,4 +100,6 @@ done
 git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 
 
+# tmux plugin managet
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
