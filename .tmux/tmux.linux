@@ -10,4 +10,5 @@ bind M-w send-keys c \; \
 #直接将系统剪切板的东西copy过来
 bind  ] run -b "tmux set-buffer \"$(xclip -o -sel clipboard)\"; tmux paste-buffer"
 
-
+set -g @online_icon "ok"
+set -g @offline_icon "offline!"
