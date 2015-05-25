@@ -112,9 +112,9 @@
 ;; 自动执行tmux，并且新开几个默认的窗口
 (defun jump-or-exec-urxvt-tmux ()
   (interactive)
-  (jump-or-exec "urxvt-tmux"
+  (jump-or-exec "vinurs-tmux"
                 (lambda()
-                  (run-safely "urxvt -title 'urxvt-tmux' -e tmux.sh"))))
+                  (run-safely "urxvt -title 'vinurs-tmux' -e tmux.sh"))))
 (bind-keys global-keymap
           "Super-u" 'jump-or-exec-urxvt-tmux)
 
