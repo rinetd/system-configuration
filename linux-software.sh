@@ -91,7 +91,7 @@ sudo dnf install -y cscope
 # global 
 sudo dnf install -y global
 # vim
-sudo dnf erase -y vim-minimal 
+# sudo dnf erase -y vim-minimal 
 sudo dnf install -y vim 
 # expect 模拟用户自动输入
 sudo dnf install -y expect
