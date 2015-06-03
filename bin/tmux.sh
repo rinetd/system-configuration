@@ -7,7 +7,7 @@
 # 
 #         Version:  1.0
 #         Created:  2012/08/05 10:24:48
-#         Changed:  <vinurs 04/11/2015 09:12:11>
+#         Changed:  <vinurs 05/25/2015 10:57:25>
 #        Revision:  none
 # 
 #          Author:  zhanghaiyuan
@@ -25,7 +25,7 @@
 # 那么attach，如果已经有人attach了这个session，那么什么也不干
 # 并且在公司跟在家里的时候要打开的窗口是不一样的
 
-TMUX_SESSION=urxvt
+TMUX_SESSION=vinurs-tmux
 
 if
     tmux has-session -t $TMUX_SESSION
