@@ -34,7 +34,7 @@ for i in "${dotconfig_mac_array[@]}"; do
 
     # backup
     mv $install_dir/.config/$i ${backup_dir}/.config/
-    ln -s $current_dir/.config/$i  $install_dir/.config/
+    ln -sf $current_dir/.config/$i  $install_dir/.config/
 
 done
 

@@ -20,8 +20,8 @@
 # minimal install
 
 # 安装dnf
-sudo yum -y install deltarpm
-sudo yum -y install dnf
+# sudo yum -y install deltarpm
+# sudo yum -y install dnf
 # 安装fastestmirror/downloadonly插件
 # 自动选择源
 sudo dnf install -y yum-fastestmirror 
