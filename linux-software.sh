@@ -192,7 +192,7 @@ sudo dnf install -y net-snmp-utils
 
 # for github blog
 sudo dnf install -y npm
-sudo npm install -g hexo 
+# sudo npm install -g hexo 
 
 # pandoc
 sudo dnf install -y pandoc
