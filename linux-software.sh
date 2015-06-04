@@ -192,7 +192,7 @@ sudo dnf install -y net-snmp-utils
 
 # for github blog
 sudo dnf install -y npm
-sudo npm install -g hexo 
+# sudo npm install -g hexo 
 
 # pandoc
 sudo dnf install -y pandoc
@@ -202,10 +202,10 @@ sudo dnf install -y astyle
 
 # nvm
 sudo dnf install -y tcsh scons gcc-c++ glibc-devel openssl-devel git python
-git clone git://github.com/creationix/nvm.git ~/.nvm
-NVM_DIR=~/.nvm
-source ~/.nvm/nvm.sh
-nvm install 0.10
+#git clone git://github.com/creationix/nvm.git ~/.nvm
+#NVM_DIR=~/.nvm
+#source ~/.nvm/nvm.sh
+#nvm install 0.10
 
 
 
