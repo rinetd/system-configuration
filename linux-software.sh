@@ -200,6 +200,14 @@ sudo dnf install -y pandoc
 # astyle
 sudo dnf install -y astyle
 
+# for notes
+sudo dnf install -y libXt.so.6
+sudo dnf install -y libgdk-x11-2.0.so.0
+sudo dnf install -y libgdk_pixbuf-2.0.so.0 
+sudo dnf install -y libxkbfile.so.1
+sudo dnf install -y libstdc++.so.5
+sudo dnf install -y xterm
+
 # nvm
 sudo dnf install -y tcsh scons gcc-c++ glibc-devel openssl-devel git python
 git clone git://github.com/creationix/nvm.git ~/.nvm
