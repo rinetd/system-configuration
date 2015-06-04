@@ -75,7 +75,7 @@ for i in "${files_common[@]}"; do
     
     # backup
     mv $install_dir/$i ${backup_dir}
-    ln -s  $current_dir/$i $install_dir/
+    ln -sf  $current_dir/$i $install_dir/
 
 done
 
@@ -91,7 +91,7 @@ for i in "${dotconfig_common_array[@]}"; do
 
     # backup
     mv $install_dir/.config/$i ${backup_dir}/.config/
-    ln -s $current_dir/.config/$i  $install_dir/.config/
+    ln -sf $current_dir/.config/$i  $install_dir/.config/
 
 done
 

@@ -20,8 +20,8 @@
 # minimal install
 
 # 安装dnf
-sudo yum -y install deltarpm
-sudo yum -y install dnf
+# sudo yum -y install deltarpm
+# sudo yum -y install dnf
 # 安装fastestmirror/downloadonly插件
 # 自动选择源
 sudo dnf install -y yum-fastestmirror 
@@ -91,7 +91,7 @@ sudo dnf install -y cscope
 # global 
 sudo dnf install -y global
 # vim
-sudo dnf erase -y vim-minimal 
+# sudo dnf erase -y vim-minimal 
 sudo dnf install -y vim 
 # expect 模拟用户自动输入
 sudo dnf install -y expect
@@ -192,7 +192,7 @@ sudo dnf install -y net-snmp-utils
 
 # for github blog
 sudo dnf install -y npm
-sudo npm install -g hexo 
+# sudo npm install -g hexo 
 
 # pandoc
 sudo dnf install -y pandoc
@@ -210,10 +210,10 @@ sudo dnf install -y xterm
 
 # nvm
 sudo dnf install -y tcsh scons gcc-c++ glibc-devel openssl-devel git python
-git clone git://github.com/creationix/nvm.git ~/.nvm
-NVM_DIR=~/.nvm
-source ~/.nvm/nvm.sh
-nvm install 0.10
+#git clone git://github.com/creationix/nvm.git ~/.nvm
+#NVM_DIR=~/.nvm
+#source ~/.nvm/nvm.sh
+#nvm install 0.10
 
 
 

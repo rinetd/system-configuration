@@ -45,7 +45,7 @@ for i in "${files_linux[@]}"; do
     
     # backup
     mv $install_dir/$i ${backup_dir}
-    ln -s  $current_dir/$i $install_dir/
+    ln -sf  $current_dir/$i $install_dir/
 
 done
 
