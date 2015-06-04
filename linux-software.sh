@@ -202,10 +202,10 @@ sudo dnf install -y astyle
 
 # nvm
 sudo dnf install -y tcsh scons gcc-c++ glibc-devel openssl-devel git python
-git clone git://github.com/creationix/nvm.git ~/.nvm
-NVM_DIR=~/.nvm
-source ~/.nvm/nvm.sh
-nvm install 0.10
+#git clone git://github.com/creationix/nvm.git ~/.nvm
+#NVM_DIR=~/.nvm
+#source ~/.nvm/nvm.sh
+#nvm install 0.10
 
 
 
