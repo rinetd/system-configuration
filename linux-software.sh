@@ -201,6 +201,13 @@ sudo dnf install -y pandoc
 sudo dnf install -y astyle
 
 sudo dnf install -y bison flex unzip
+# for notes
+sudo dnf install -y libXt.so.6
+sudo dnf install -y libgdk-x11-2.0.so.0
+sudo dnf install -y libgdk_pixbuf-2.0.so.0 
+sudo dnf install -y libxkbfile.so.1
+sudo dnf install -y libstdc++.so.5
+sudo dnf install -y xterm
 
 # nvm
 sudo dnf install -y tcsh scons gcc-c++ glibc-devel openssl-devel git python
