@@ -200,6 +200,8 @@ sudo dnf install -y pandoc
 # astyle
 sudo dnf install -y astyle
 
+sudo dnf install -y bison flex unzip
+
 # nvm
 sudo dnf install -y tcsh scons gcc-c++ glibc-devel openssl-devel git python
 #git clone git://github.com/creationix/nvm.git ~/.nvm
