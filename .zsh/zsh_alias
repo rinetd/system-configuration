@@ -1,7 +1,7 @@
 # 命令别名
 # alias cp='cp -i'
 # using htop instead of top
-alias top='htop'
+#alias top='htop'
 alias mv='mv -i'
 alias rm='rm -i'
 alias ls='ls -F '
