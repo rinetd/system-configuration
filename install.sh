@@ -1,6 +1,6 @@
 #!/bin/bash
 #==============================================================================
-#
+# 
 #        Filename:  @(#)install.sh
 #
 #     Description:  install vinurs in your ~/ 
