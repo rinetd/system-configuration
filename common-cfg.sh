@@ -7,7 +7,7 @@
 # 
 #         Version:  1.0
 #         Created:  2014/05/05 11:03:38
-#         Changed:  <vinurs 05/23/2015 19:47:17>
+#         Changed:  <vinurs 09/24/2015 00:14:07>
 #        Revision:  none
 # 
 #          Author:  zhanghaiyuan
@@ -26,6 +26,8 @@ files_common+=(bin)
 files_common+=(program)
 # work
 files_common+=(work)
+# baiduyun
+files_common+=(baiduyun)
 
 # bash
 # 虽然我不用bash，但是还是保留着相关的配置
