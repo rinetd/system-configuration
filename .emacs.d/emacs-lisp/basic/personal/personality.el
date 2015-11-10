@@ -48,8 +48,8 @@
 
 ;;set my fullname and my email,they can be used when mailing
 (setq user-full-name "zhanghaiyuan")
-;; (setq user-mail-address "haiyuan.vinurs@gmail.com") 
-(setq user-mail-address "zhang.haiyuan@server.embedway.com") 
+(setq user-mail-address "haiyuan.vinurs@gmail.com") 
+;; (setq user-mail-address "zhang.haiyuan@server.embedway.com") 
 
 (setq-default default-directory "~")
 
