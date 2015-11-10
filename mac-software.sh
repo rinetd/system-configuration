@@ -126,6 +126,9 @@ brew install python
 
 brew install macvim --env-std --override-system-vim
 
+# m4
+brew install m4
+
 # xcode
 brew cask install wwdc
 
