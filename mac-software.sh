@@ -59,7 +59,9 @@ brew install indent
 
 # for common lisp
 # 这里不安装sbcl，因为我使用Clozure CL
-# brew install sbcl
+brew install sbcl
+brew install ecl
+# brew install buildapp
 
 # for git log
 brew install tig
