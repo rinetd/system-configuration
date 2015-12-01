@@ -33,10 +33,13 @@
 
 ;;; Code:
 
-(provide '(>>>FILE_SANS<<<))
 
 
 
 (>>>POINT<<<)
+
+
+
+(provide '(>>>FILE_SANS<<<))
 
 ;;; (>>>FILE<<<) ends here
