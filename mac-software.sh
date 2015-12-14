@@ -60,6 +60,7 @@ brew install indent
 # for common lisp
 # 这里不安装sbcl，因为我使用Clozure CL
 brew install sbcl
+# lisp结合c来写代码
 brew install ecl
 # brew install buildapp
 
