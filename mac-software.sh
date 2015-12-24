@@ -123,6 +123,7 @@ brew install gnu-indent
 
 # eroxychains
 brew install proxychains-ng
+brew install libuv
 
 # python
 brew install python

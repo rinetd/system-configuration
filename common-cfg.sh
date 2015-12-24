@@ -68,6 +68,8 @@ files_common+=(.gnupg)
 files_common+=(.astylerc)
 # mew mail
 files_common+=(.Mail-Mew)
+# proximac
+files_common+=(.proximac)
 
 
 
