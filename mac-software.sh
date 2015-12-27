@@ -144,7 +144,7 @@ nvm install 0.10
 
 # github blog
 brew install npm
-npm install -g hexo
+npm install hexo-cli -g
 gem install bundler
 
 source hexo.sh
