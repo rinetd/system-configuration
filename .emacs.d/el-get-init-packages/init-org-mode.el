@@ -51,7 +51,7 @@
 
 ;; GTD
 ;; 最好的GTD，没有之一
-(load "~/.emacs.d/el-get-init-packages/gtd.el")
+(load "~/.emacs.d/el-get-init-packages/org-gtd.el")
 
 
 

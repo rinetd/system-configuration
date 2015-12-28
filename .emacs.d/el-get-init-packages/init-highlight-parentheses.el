@@ -2,7 +2,7 @@
 
 
 (setq hl-paren-colors '("blue" "purple" "cyan" "magenta" "green" "blue" 
-			"brown"  "salmon2" "wheat4"))
+						"brown"  "salmon2" "wheat4"))
 
 
 (am-add-hooks
@@ -15,6 +15,13 @@
 
 
 ;; TODO: 增加加粗当前括号的功能
+;; 不过目前的这种效果也有用
+(show-paren-mode 1)
+;; (setq show-paren-style 'parenthesis) ; highlight brackets
+
+(setq show-paren-style 'expression) ; highlight entire expression
+
+;; (setq show-paren-style 'mixed) ; highlight brackets if visible, else entire expression
 
 
 (provide 'init-highlight-parentheses)
