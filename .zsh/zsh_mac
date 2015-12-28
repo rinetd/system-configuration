@@ -40,6 +40,22 @@ function stop-ftpd ()
 }
 
 
+# airmail
+function airmail-net()
+{
+        sudo proximac start -c ~/.proximac -d
+}
+
+# 同步我的博客的主题源
+function merge-website()
+{
+        cd ~/program/website/themes/yelee/
+        git remote add upstream git@github.com:MOxFIVE/hexo-theme-yelee.git
+        git fetch upstream
+        git merge upstream/master
+        cd -
+}
+
 
 
 
