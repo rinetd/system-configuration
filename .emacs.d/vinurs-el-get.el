@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.victor@gmail.com
 ;; Version: $Id: @(#)vinurs-dot-emacs.el 0.0 2011/03/22 11:05:27 victor Exp $
-;; Changed: <vinurs 11/06/2014 13:15:54>
+;; Changed: <vinurs 01/13/2016 16:02:04>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -32,7 +32,6 @@
 
 ;; 设置el-get的init-packages路径
 (setq el-get-user-package-directory "~/.emacs.d/el-get-init-packages")
-
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 
 
@@ -45,6 +44,10 @@
         ;; basic
         highlight-parentheses           ; 高亮对应的标点
 
+		;; 更加平滑一点的滑动
+		smooth-scroll
+		smooth-scrolling
+		
         ;; hightlight symbol
         highlight-symbol
         
