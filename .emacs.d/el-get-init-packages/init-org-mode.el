@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@localhost.localdomain
 ;; Version: $Id: @(#)init-org-mode.el,v 0.0 2014/05/18 12:19:43 vinurs Exp $
-;; Changed: <vinurs 11/08/2014 11:45:41>
+;; Changed: <vinurs 01/01/2016 14:23:38>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -47,6 +47,12 @@
 
 ;; basic
 (setq org-directory "~/Dropbox/home/org/")
+
+
+;; 对于什么样的文件用org模式
+(add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
+;; org-mode里面没有自动换行，这样导致一行太长的话就会被拖到最后，移动起来很麻烦，有了下面这段话就能自动换行显示，但是并不是会认为换行，原来的文字还是作为单独的一行
+(add-hook 'org-mode-hook (lambda () (setq truncate-lines nil)))
 
 
 ;; GTD
