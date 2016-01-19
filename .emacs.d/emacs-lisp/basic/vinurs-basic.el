@@ -161,6 +161,8 @@
 ;; ;; 光标靠近鼠标指针时，让鼠标指针自动让开，别挡住视线。
 (mouse-avoidance-mode 'animate)
 
+;; 增量搜索的时候不能使用c-h来删除，只能使用del来删除，增加这个以后就可以使用c-h来删除了
+(define-key isearch-mode-map [(control h)] 'isearch-delete-char)
 
 (customize-set-variable 'scroll-bar-mode 'right)
 
