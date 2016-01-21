@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)init-powerline.el,v 0.0 2016/01/21 10:18:39 vinurs Exp $
-;; Changed: <vinurs 01/21/2016 10:19:57>
+;; Changed: <vinurs 01/21/2016 10:26:49>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -44,7 +44,10 @@
 ;;;;##########################################################################
 
 
-(powerline-default-theme)
+;; (powerline-default-theme)
+
+;; 恢复到之前的modeline配置
+(powerline-revert)
 
 
 (provide 'init-powerline)
