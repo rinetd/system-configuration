@@ -1,10 +1,10 @@
-;;; init-smart-mode-line.el --- 
+;;; init-powerline.el --- 
 
 ;; Copyright 2016 zhanghaiyuan
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
-;; Version: $Id: @(#)init-smart-mode-line.el,v 0.0 2016/01/21 09:48:05 vinurs Exp $
-;; Changed: <vinurs 01/21/2016 09:51:12>
+;; Version: $Id: @(#)init-powerline.el,v 0.0 2016/01/21 10:18:39 vinurs Exp $
+;; Changed: <vinurs 01/21/2016 10:19:57>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -27,7 +27,7 @@
 ;; 
 
 ;; Put this file into your load-path and the following into your ~/.emacs:
-;;   (require 'init-smart-mode-line)
+;;   (require 'init-powerline)
 
 
 
@@ -44,10 +44,9 @@
 ;;;;##########################################################################
 
 
-(sml/setup)
+(powerline-default-theme)
 
 
+(provide 'init-powerline)
 
-(provide 'init-smart-mode-line)
-
-;;; init-smart-mode-line.el ends here
+;;; init-powerline.el ends here
