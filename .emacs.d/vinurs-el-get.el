@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.victor@gmail.com
 ;; Version: $Id: @(#)vinurs-dot-emacs.el 0.0 2011/03/22 11:05:27 victor Exp $
-;; Changed: <vinurs 01/21/2016 10:21:26>
+;; Changed: <vinurs 01/21/2016 12:10:03>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -149,8 +149,7 @@
 
         ;; 当窗口分割变多的时候，快速切换窗口
         switch-window
-        ;; 有了上面的，这个可以不用
-        ;; win-switch
+
         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
         ;;color-theme                     ;;主题

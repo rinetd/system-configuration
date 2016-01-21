@@ -4,7 +4,7 @@
 ;;
 ;; Author: zhang.haiyuan@server.embedway.com
 ;; Version: $Id: @(#)init-hide-region.el,v 0.0 2014/06/01 10:42:01 vinurs Exp $
-;; Changed: <vinurs 06/03/2014 15:25:02>
+;; Changed: <vinurs 01/21/2016 14:12:53>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -44,8 +44,37 @@
 ;;;;  User Options, Variables
 ;;;;##########################################################################
 
+;; hideif配置
+(add-hook 'c-mode-common-hook
+          (lambda ()
+			;; 初始化
+			(setq hide-ifdef-initially t)
 
-;; hs-minor-mode settings
+			;; 下面这两行配置是比较好的,不仅仅能不显示无效的宏配置，连if 0也能正确处理
+			;; 这样就不需要别的另外的设置了
+			;; 无效代码变为灰色
+			(setq hide-ifdef-shadow t)
+			;; 无效代码被折叠隐藏变为...
+			(setq hide-ifdef-shadow nil)
+
+			;; 开启ifdef mode
+            (setq hide-ifdef-mode t)
+            (hide-ifdefs)
+			(hide-ifdef-mode)
+
+			;; 这里可以对hideif的键作一些重新绑定
+			;; hideif键绑定都在hide-ifdef-mode-submap里面,
+			;; prefix在hide-ifdef-mode-prefix-key里面"\C-c@"
+			(define-key hide-ifdef-mode-submap "\C-e" 'show-ifdef-block)
+            ))
+
+
+
+
+;; hide/show setting
+
+
+;; ;; hs-minor-mode settings
 (add-hook 'c-mode-common-hook 'hs-minor-mode)
 (add-hook 'emacs-lisp-mode-hook 'hs-minor-mode)
 (add-hook 'java-mode-hook       'hs-minor-mode)
@@ -73,20 +102,6 @@
 
 
 
-;; hide ifdef
-
-;; hide all ifdefs
-(global-set-key (kbd "C-c f e") 'hide-ifdefs)
-;; show all ifdefs
-(global-set-key (kbd "C-c f E") 'show-ifdefs)
-;; 编辑Ｃ文件的时候自动激活hide-ifdef-mode
-(setq hide-ifdef-initially nil)
-(add-hook 'c-mode-common-hook
-          (lambda ()
-            (hide-ifdef-mode 1)
-            ))
-
-
 ;; hide region
 (eal-define-keys-commonly
  global-map
@@ -103,15 +118,8 @@
   `(hide-region-settings))
 
 
-(defun my-hide-if-0()
-  "hide #if 0 blocks, inspired by internet. --lgfang"
-  (interactive)
-  (require 'hideif)
-  (save-excursion
-    (goto-char (point-min))
-    (while (re-search-forward "^[ \t]*#if[ \t]*0" nil t) (hide-ifdef-block)) )
-  )
-(add-hook 'c-mode-hook 'my-hide-if-0)
+
+
 
 
 ;;; init-hide-region.el ends here
