@@ -1,10 +1,10 @@
-;;; init-powerline.el --- 
+;;; init-emacs-powerline.el --- 
 
 ;; Copyright 2016 zhanghaiyuan
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
-;; Version: $Id: @(#)init-powerline.el,v 0.0 2016/01/21 10:18:39 vinurs Exp $
-;; Changed: <vinurs 01/21/2016 19:38:51>
+;; Version: $Id: @(#)init-emacs-powerline.el,v 0.0 2016/01/21 19:38:11 vinurs Exp $
+;; Changed: <vinurs 01/21/2016 19:38:12>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -27,7 +27,7 @@
 ;; 
 
 ;; Put this file into your load-path and the following into your ~/.emacs:
-;;   (require 'init-powerline)
+;;   (require 'init-emacs-powerline)
 
 
 
@@ -44,11 +44,9 @@
 ;;;;##########################################################################
 
 
-;; (powerline-default-theme)
-;; 恢复到之前的modeline配置
-;; (powerline-revert)
 
 
-(provide 'init-powerline)
 
-;;; init-powerline.el ends here
+(provide 'init-emacs-powerline)
+
+;;; init-emacs-powerline.el ends here

@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.victor@gmail.com
 ;; Version: $Id: @(#)vinurs-dot-emacs.el 0.0 2011/03/22 11:05:27 victor Exp $
-;; Changed: <vinurs 01/21/2016 12:10:03>
+;; Changed: <vinurs 01/21/2016 19:39:05>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -50,7 +50,8 @@
 
 		;; powerline
 		;; mode-line更加好看，比较喜欢这个
-		powerline
+		;; powerline
+		emacs-powerline
 		
 		;; 更加平滑一点的滑动
 		smooth-scroll
