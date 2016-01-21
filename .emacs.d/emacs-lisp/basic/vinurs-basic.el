@@ -257,6 +257,9 @@
 (setq desktop-base-file-name ".emacs-desktop")
 
 
+;; 版本控制
+(require 'vinurs-version-control)
+
 ;; ido模式
 ;; (ido-mode t)
 

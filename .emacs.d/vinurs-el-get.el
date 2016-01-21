@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.victor@gmail.com
 ;; Version: $Id: @(#)vinurs-dot-emacs.el 0.0 2011/03/22 11:05:27 victor Exp $
-;; Changed: <vinurs 01/13/2016 16:02:04>
+;; Changed: <vinurs 01/21/2016 09:50:08>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -44,6 +44,12 @@
         ;; basic
         highlight-parentheses           ; 高亮对应的标点
 
+		;; which-key是不是觉得有时候一个按键下去突然忘记了下面该按什么？
+		;; 有了这个插件以后停顿一秒就可以提示你接下来一共有哪些按键可用
+		which-key
+
+		;; mode-line美化
+		smart-mode-line
 		;; 更加平滑一点的滑动
 		smooth-scroll
 		smooth-scrolling
@@ -58,6 +64,12 @@
         palette                         ;颜色选择插件，很强大
         ascii
 
+		;; 版本控制
+		;; git
+		magit
+
+		;; 版本控制end
+		
         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
         ;; c
 
@@ -90,7 +102,7 @@
 
         ;; mew
         mew 
-	emacs-w3m
+		emacs-w3m
         ;; emacs ide
         ;; ecb
         ;; cedet
