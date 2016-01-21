@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.victor@gmail.com
 ;; Version: $Id: @(#)vinurs-dot-emacs.el 0.0 2011/03/22 11:05:27 victor Exp $
-;; Changed: <vinurs 01/21/2016 19:39:05>
+;; Changed: <vinurs 01/21/2016 20:23:45>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -47,7 +47,10 @@
 		;; which-key是不是觉得有时候一个按键下去突然忘记了下面该按什么？
 		;; 有了这个插件以后停顿一秒就可以提示你接下来一共有哪些按键可用
 		which-key
+		;; 列出所有的键绑定
+		helm-descbinds
 
+		
 		;; powerline
 		;; mode-line更加好看，比较喜欢这个
 		;; powerline
@@ -70,7 +73,6 @@
 		;; 版本控制
 		;; git
 		magit
-
 		;; 版本控制end
 		
         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
