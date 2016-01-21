@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.victor@gmail.com
 ;; Version: $Id: @(#)vinurs-dot-emacs.el 0.0 2011/03/22 11:05:27 victor Exp $
-;; Changed: <vinurs 01/21/2016 09:50:08>
+;; Changed: <vinurs 01/21/2016 10:21:26>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -48,8 +48,10 @@
 		;; 有了这个插件以后停顿一秒就可以提示你接下来一共有哪些按键可用
 		which-key
 
-		;; mode-line美化
-		smart-mode-line
+		;; powerline
+		;; mode-line更加好看，比较喜欢这个
+		powerline
+		
 		;; 更加平滑一点的滑动
 		smooth-scroll
 		smooth-scrolling
