@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.victor@gmail.com
 ;; Version: $Id: @(#)vinurs-dot-emacs.el 0.0 2011/03/22 11:05:27 victor Exp $
-;; Changed: <vinurs 01/21/2016 20:23:45>
+;; Changed: <vinurs 01/22/2016 18:47:13>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -50,11 +50,14 @@
 		;; 列出所有的键绑定
 		helm-descbinds
 
+		;; search
+		;; 很好的搜索的插件
+		swiper
 		
 		;; powerline
 		;; mode-line更加好看，比较喜欢这个
-		;; powerline
-		emacs-powerline
+		powerline
+		;; emacs-powerline
 		
 		;; 更加平滑一点的滑动
 		smooth-scroll
@@ -96,9 +99,6 @@
         ;; 用clang来给c自动补全
         auto-complete-clang
         auto-complete-clang-extension
-
-        
-        yasnippet                       ;
 
         ;; global gtags
         ;; ggtags
@@ -152,7 +152,7 @@
 
         ;; 当窗口分割变多的时候，快速切换窗口
         switch-window
-
+		
         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
         ;;color-theme                     ;;主题

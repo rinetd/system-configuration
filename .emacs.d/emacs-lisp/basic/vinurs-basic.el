@@ -76,10 +76,6 @@
 ;; (require 'victor-codepilot)
 
 
-;; ;; max frame
-;; ;;(require 'victor-maxframe)
-
-
 ;; 启动stardict辞典
 (require 'victor-stardict)
 
@@ -90,9 +86,6 @@
 
 ;; ;; emacs vi mode
 (require 'victor-emacs-vi)
-
-;; ;; emacs sawfish mode
-(require 'victor-sawfish)
 
 
 
@@ -154,6 +147,8 @@
 (setq scroll-margin 6
       scroll-conservatively 10000)
 
+;; 不显示右侧滚动条
+(scroll-bar-mode 0)  
 
 ;; 没有提示音,也不闪屏
 (setq ring-bell-function 'ignore)
