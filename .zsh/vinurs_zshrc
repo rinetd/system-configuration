@@ -109,6 +109,7 @@ source ~/.zsh/zsh_filemanager
 # version control相关:git, svn
 source ~/.zsh/zsh_vc
 
+
 #路径别名 进入相应的路径时只要 cd ~xxx
 hash -d WWW="/home/lighttpd/html"
 hash -d ARCH="/mnt/arch"
@@ -322,5 +323,10 @@ case $system_type in
     *)
         ;;
 esac
+
+
+# 工作相关的配置
+source ~/.zsh/zsh_work
+
 
 
