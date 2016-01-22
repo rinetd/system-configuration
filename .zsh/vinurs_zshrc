@@ -309,6 +309,7 @@ export GTAGSLIBPATH=~/.global
 
 source ~/.zshenv
 
+# 工作相关配置
 if [[ -f ~/work/.company ]]; then
     source ~/work/.company
 fi
@@ -324,9 +325,6 @@ case $system_type in
         ;;
 esac
 
-
-# 工作相关的配置
-source ~/.zsh/zsh_work
 
 
 
