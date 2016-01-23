@@ -4,7 +4,7 @@
 ;;
 ;; Author: zhang.haiyuan@server.embedway.com
 ;; Version: $Id: @(#)init-xgtags-extension.el,v 0.0 2013/08/14 13:10:40 vinurs Exp $
-;; Changed: <vinurs 09/10/2013 09:48:10>
+;; Changed: <vinurs 01/23/2016 11:59:14>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -50,27 +50,6 @@
             (xgtags-mode 1)
             ))
 
-
-;; remap the key
-
-
-;; using gtags update the file when save
-;; (add-hook 'after-save-hook 'update-single-file)
-
-;; (call-process "gtags" nil t)
-
-;; (call-process "pwd" nil t)/home/vinurs/.emacs.d/el-get-init-packages
-
-
-;; --single-update file
-;;        Update tag files for single file.  It is considered that file was updated, and other files were not updated.  The file must be relative path name from  the  current  direc‐
-;;        tory.  This option implies the -i option.  If the file is new then --single-update is ignored, and the processing is automatically switched to normal incremental updating.
-
-;; (defun update-single-file ()
-;;   "update single file using "
-;;   (if (call-process "gtags" nil)
-;;       (message "hello"))
-;;   )
 
 
 

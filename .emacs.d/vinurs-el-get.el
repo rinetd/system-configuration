@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.victor@gmail.com
 ;; Version: $Id: @(#)vinurs-dot-emacs.el 0.0 2011/03/22 11:05:27 victor Exp $
-;; Changed: <vinurs 01/22/2016 18:47:13>
+;; Changed: <vinurs 01/23/2016 21:43:42>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -40,19 +40,26 @@
       '(
         ;; local sources
 
-        ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+        ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
         ;; basic
         highlight-parentheses           ; 高亮对应的标点
 
 		;; which-key是不是觉得有时候一个按键下去突然忘记了下面该按什么？
 		;; 有了这个插件以后停顿一秒就可以提示你接下来一共有哪些按键可用
 		which-key
+		;; helm相关
+		helm
 		;; 列出所有的键绑定
 		helm-descbinds
 
-		;; search
+
+		;; search相关
 		;; 很好的搜索的插件
-		swiper
+		;; swiper
+		helm-swoop
+		avy
+		ace-isearch
+
 		
 		;; powerline
 		;; mode-line更加好看，比较喜欢这个
@@ -65,7 +72,7 @@
 		
         ;; hightlight symbol
         highlight-symbol
-        
+
         linum+                          ;;显示行号
         hl-line+                        ;
 
@@ -89,8 +96,6 @@
         
         ;; dired不过这个一般默认就集成在emacs里了，我这里增加的是一些有用的扩展
 
-        ;; multi-term
-        multi-term
 
         ;; auto-complete
         ;; 所有的自动补全相关的配置
@@ -104,29 +109,11 @@
         ;; ggtags
         xgtags                          ;for global
         xgtags-extension                ;for global
+		helm-gtags
 
         ;; mew
-        mew 
 		emacs-w3m
-        ;; emacs ide
-        ;; ecb
-        ;; cedet
 
-        ;; icicles related
-        ;; icicles
-        ;; icicles-mac
-        ;; icicles-face
-        ;; icicles-opt
-        ;; icicles-var
-        ;; icicles-fn
-        ;; icicles-mcmd
-        ;; icicles-cmd1
-        ;; icicles-cmd2
-        ;; icicles-mode
-        
-        sr-speedbar
-	
-        
         ;; markdown,用github写博客
         ;; markdown-mode
 
@@ -137,13 +124,14 @@
         ;; org mode
         org-mode
         ;; common lisp
-        slime
+        ;; slime
 
         ;; 缩进提示线
+		;; 这个目前用得不爽，暂时先不用
         ;; highlight-indentation
-        
-        ;; flymake
-        flymake
+
+		;; flycheck
+		;; flycheck
         
         ;; 代码折叠相关
         ;; hs-mode
@@ -151,14 +139,11 @@
         hide-region  ;; 这个放在最后面吧，所有的配置都在这个init里面
 
         ;; 当窗口分割变多的时候，快速切换窗口
-        switch-window
-		
+		ace-window
         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-        ;;color-theme                     ;;主题
         )
       )
-
 
 
 ;; 每次启动el-get的时候检测el-get是否已经安装，如果没有安装就自动安装
