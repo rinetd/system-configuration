@@ -4,7 +4,7 @@
 ;;
 ;; Author: zhang.haiyuan@server.embedway.com
 ;; Version: $Id: @(#)init-switch-window.el,v 0.0 2014/10/29 20:19:30 vinurs Exp $
-;; Changed: <vinurs 10/29/2014 20:21:04>
+;; Changed: <vinurs 01/23/2016 21:41:13>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -45,7 +45,7 @@
 ;;;;##########################################################################
 
 
-(require 'switch-window)
-(global-set-key (kbd "C-o") 'switch-window)
+;; (require 'switch-window)
+;; (global-set-key (kbd "C-o") 'switch-window)
 
 ;;; init-switch-window.el ends here
