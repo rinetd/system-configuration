@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)init-ace-window.el,v 0.0 2016/01/23 21:40:53 vinurs Exp $
-;; Changed: <vinurs 01/23/2016 21:46:59>
+;; Changed: <vinurs 01/23/2016 22:45:44>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -45,8 +45,29 @@
 
 
 (global-set-key (kbd "C-o") 'ace-window)
+;; 不希望切换窗口的时候全部变成灰色，希望保持原来的颜色
+(setq aw-background nil)
+;; 这个不明白什么意思
+(setq ace-window-display-mode t)
+;; (defface aw-background-face
+;;   '((t (:foreground "blue")
+;; 	   ))
+;;   "Face for whole window background during selection.")
 
+;; (defface aw-leading-char-face
+;;   '((((class color)) (:foreground "red"
+;; 								  ;; :background "blue"
+;; 								  ;; :height 500
+;; 								  ))
+;; 	(((background dark)) (:foreground "gray100"))
+;; 	(((background light)) (:foreground "gray0"))
+;; 	(t (:foreground "gray100" :underline nil)))
+;;   "Face for each window's leading char.")
 
+;; (:background "red" :foreground "black")
+;; (set-face-attribute 'aw-leading-char-face nil :height 400)
+
+;; (setq aw-background nil)
 (provide 'init-ace-window)
 
 ;;; init-ace-window.el ends here
