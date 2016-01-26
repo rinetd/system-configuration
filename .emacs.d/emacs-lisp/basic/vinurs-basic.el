@@ -142,13 +142,14 @@
 
 ;; ;; 不要闪烁光标, 烦不烦啊
 (blink-cursor-mode -1)
+;; 不显示右侧滚动条
+(scroll-bar-mode 0)
+
 
 ;; ;; 防止页面滚动时跳动,scroll-margin 3可以在靠近屏幕边沿3行时就开始滚动,可以很好的看到上下文
 (setq scroll-margin 6
       scroll-conservatively 10000)
 
-;; 不显示右侧滚动条
-(scroll-bar-mode 0)  
 
 ;; 没有提示音,也不闪屏
 (setq ring-bell-function 'ignore)
@@ -260,3 +261,4 @@
 
 ;; basic global keybinds
 (require 'vinurs-basic-global-keybind)
+
