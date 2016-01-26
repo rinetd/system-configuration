@@ -8,7 +8,7 @@
 ;; X-URL: not distributed yet
 
 ;; This program is free software; you can redistribute it and/or modify
-;; it under the terms of the GNU General Public License as published by
+;; it under the tems of the GNU General Public License as published by
 ;; the Free Software Foundation; either version 2, or (at your option)
 ;; any later version.
 ;;
@@ -62,20 +62,6 @@
 
 
 
-
-
-;; 统计一下每个常用的按键频率
-(require 'keyfreq)
-(keyfreq-mode 1)
-(keyfreq-autosave-mode 1)
-
-
-
-;; ;; code pilot
-;; ;; 这个目前就用来高亮当前行，好像还没有发现别的作用
-;; (require 'victor-codepilot)
-
-
 ;; 启动stardict辞典
 (require 'victor-stardict)
 
@@ -89,64 +75,54 @@
 
 
 
-;; ;; Emacs才是世界上最强大的IDE － 智能的改变光标形状
-;; ;; http://emacser.com/cursor-change.htm
-;; (require 'victor-cursor)
-
-
 ;; 所有跟buffer相关的设定,例如关闭buffer
 ;;(require 'victor-allbuffers-setting)
 
 ;; templates for create a new file
 (require 'victor-template)
-;;(byte-compile-file "victor-template.el")
-
-;; support multi terminal
-;; (require 'victor-multi-term)
 
 
-;; ;; load toolbar
-;; (load "victor-toolbar")
 
 ;; 一行太长的时候自动换行
 (setq truncate-lines t)
 ;; 不显示工具栏，碍眼
 (tool-bar-mode -1)
 
-;; ;; 支持emacs和外部程序的粘贴
+;; 支持emacs和外部程序的粘贴
 (setq x-select-enable-clipboard t)
 
 ;; 支持终端下面跟外部粘帖，这个需要xsel的支持
 ;; use xsel to copy/paste in emacs-nox
 (unless window-system
-  (when (getenv "DISPLAY")
-    (defun xsel-cut-function (text &optional push)
-      (with-temp-buffer
-        (insert text)
-        (call-process-region (point-min) (point-max) "xsel" nil 0 nil "--clipboard" "--input")))
-    (defun xsel-paste-function()
-      (let ((xsel-output (shell-command-to-string "xsel --clipboard --output")))
-        (unless (string= (car kill-ring) xsel-output)
-          xsel-output )))
-    (setq interprogram-cut-function 'xsel-cut-function)
-    (setq interprogram-paste-function 'xsel-paste-function)
-    ))
+   (when (getenv "DISPLAY")
+     (defun xsel-cut-function (text &optional push)
+       (with-temp-buffer
+         (insert text)
+         (call-process-region (point-min) (point-max) "xsel" nil 0 nil "--clipboard" "--input")))
+     (defun xsel-paste-function()
+       (let ((xsel-output (shell-command-to-string "xsel --clipboard --output")))
+         (unless (string= (car kill-ring) xsel-output)
+           xsel-output )))
+     (setq interprogram-cut-function 'xsel-cut-function)
+     (setq interprogram-paste-function 'xsel-paste-function)
+     ))
 
 
-;; ;; 不显示Emacs的开始画面
+;; 不显示Emacs的开始画面
 (setq inhibit-startup-message t)
 (setq initial-scratch-message "")
 
 ;; 不要总是没完没了的问yes or no, 为什么不能用y/n
 (fset 'yes-or-no-p 'y-or-n-p)
 
-;; ;; 不要闪烁光标, 烦不烦啊
+;; 不要闪烁光标, 烦不烦啊
 (blink-cursor-mode -1)
 ;; 不显示右侧滚动条
 (scroll-bar-mode 0)
+;; 这个不要删，为了不显示右侧滚动条所以这个右侧显示就先注释掉了
+;; (customize-set-variable 'scroll-bar-mode 'right)
 
-
-;; ;; 防止页面滚动时跳动,scroll-margin 3可以在靠近屏幕边沿3行时就开始滚动,可以很好的看到上下文
+;; 防止页面滚动时跳动,scroll-margin 3可以在靠近屏幕边沿3行时就开始滚动,可以很好的看到上下文
 (setq scroll-margin 6
       scroll-conservatively 10000)
 
@@ -154,21 +130,20 @@
 ;; 没有提示音,也不闪屏
 (setq ring-bell-function 'ignore)
 
-;; ;; 光标靠近鼠标指针时，让鼠标指针自动让开，别挡住视线。
+;; 光标靠近鼠标指针时，让鼠标指针自动让开，别挡住视线。
 (mouse-avoidance-mode 'animate)
 
 ;; 增量搜索的时候不能使用c-h来删除，只能使用del来删除，增加这个以后就可以使用c-h来删除了
 (define-key isearch-mode-map [(control h)] 'isearch-delete-char)
 
-(customize-set-variable 'scroll-bar-mode 'right)
 
 (setq system-time-locale "C")
 
 
-;; ;;;设置标题栏显示文件的完整路径名  
-(setq frame-title-format  
-   '("vinurs@知行合一^-^--PATH:%S" (buffer-file-name "%f"  
-    (dired-directory dired-directory "%b"))))
+;;;设置标题栏显示文件的完整路径名  
+ (setq frame-title-format  
+    '("vinurs@知行合一^-^--PATH:%S" (buffer-file-name "%f"  
+     (dired-directory dired-directory "%b"))))
 
 
 ;;关闭菜单栏.
@@ -177,23 +152,18 @@
 
 (setq visible-bell t)
 
-;; ;; 把缺省到major mode设置为text-mode,而不是几乎什么功能也没有
+;; 把缺省到major mode设置为text-mode,而不是几乎什么功能也没有
 (setq default-major-mode 'text-mode)
-
-
-
-;; ;; ;;highlighted Regions
-;; ;; (transient-mark-mode t)
 
 
 ;;设置emacs自动保存
 (require 'victor-backup)
 (setq auto-save-mode t)
-;击键100次自动保存
+;;击键100次自动保存
 (setq auto-save-interval 300)
 (setq auto-save-timeout 300)
 
-;; ;;show the time
+;;show the time
 (display-time-mode 1)
 (setq display-time-24hr-format t)
 (setq display-time-day-and-date t)
@@ -217,23 +187,17 @@
 (add-hook 'write-file-hooks 'time-stamp)
 
 
-;; ;;允许自动打开图片，比如在wiki里面
-;; (auto-image-file-mode t)
-
-;; ;;在minibuff上面可以显示列号，行号
+;;在minibuff上面可以显示列号，行号
 (column-number-mode t)
 
-;; ;;tab键长度设置成4
+;;tab键长度设置成4
 (setq default-tab-width 4)
 
-
-;; ;;日历设置
-;; (load "victor-calendar")
 
 ;; 退出的时候保存上次的光标位置
 (require 'saveplace)
 (setq-default save-place t)
-;设置 .emacs-places 文件的存储路径
+;;设置 .emacs-places 文件的存储路径
 (setq save-place-file "~/.emacs.d/.emacs-places")
 
 ;; gpg
@@ -242,16 +206,15 @@
 ;; dired
 (require 'vinurs-dired)
 
-;; mew
-;;(require 'vinurs-mew)
-
-;; ;;邮件客户端mutt设置
-;; (load "victor-mail-client.el")
 
 (desktop-save-mode 1)
-(setq desktop-path '("~/.emacs.d/"))
-(setq desktop-base-file-name ".emacs-desktop")
+;; (setq desktop-path '("~/.emacs.d/"))
+;; (setq desktop-base-file-name ".emacs-desktop")
 
+;; use only one desktop
+(setq desktop-path '("~/.emacs.d/"))
+(setq desktop-dirname "~/.emacs.d/")
+(setq desktop-base-file-name ".emacs-desktop")
 
 ;; 版本控制
 (require 'vinurs-version-control)

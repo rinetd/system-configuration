@@ -4,7 +4,7 @@
 ;;
 ;; Author: zhang.haiyuan@server.embedway.com
 ;; Version: $Id: @(#)init-ggtags.el,v 0.0 2014/05/07 22:53:45 vinurs Exp $
-;; Changed: <vinurs 01/26/2016 08:47:26>
+;; Changed: <vinurs 01/26/2016 13:17:40>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -74,19 +74,19 @@
 			))
 		  
 
-(defun gtags-root-dir ()
-  "Returns GTAGS root directory or nil if doesn't exist."
-  (with-temp-buffer
-    (if (zerop (call-process "global" nil t nil "-pr"))
-        (buffer-substring (point-min) (1- (point-max)))
-      nil)))
-(defun gtags-update ()
-  "Make GTAGS incremental update"
-  (call-process "global" nil nil nil "-u"))
-(defun gtags-update-hook ()
-  (when (gtags-root-dir)
-    (gtags-update)))
-(add-hook 'after-save-hook #'gtags-update-hook)
+;; (defun gtags-root-dir ()
+;;   "Returns GTAGS root directory or nil if doesn't exist."
+;;   (with-temp-buffer
+;;     (if (zerop (call-process "global" nil t nil "-pr"))
+;;         (buffer-substring (point-min) (1- (point-max)))
+;;       nil)))
+;; (defun gtags-update ()
+;;   "Make GTAGS incremental update"
+;;   (call-process "global" nil nil nil "-u"))
+;; (defun gtags-update-hook ()
+;;   (when (gtags-root-dir)
+;;     (gtags-update)))
+;; (add-hook 'after-save-hook #'gtags-update-hook)
 
 
 ;;; init-ggtags.el ends here
