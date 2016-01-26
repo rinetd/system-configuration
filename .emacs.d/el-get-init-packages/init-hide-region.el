@@ -4,7 +4,7 @@
 ;;
 ;; Author: zhang.haiyuan@server.embedway.com
 ;; Version: $Id: @(#)init-hide-region.el,v 0.0 2014/06/01 10:42:01 vinurs Exp $
-;; Changed: <vinurs 01/21/2016 14:12:53>
+;; Changed: <vinurs 01/26/2016 08:28:38>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -59,7 +59,7 @@
 
 			;; 开启ifdef mode
             (setq hide-ifdef-mode t)
-            (hide-ifdefs)
+            ;; (hide-ifdefs)
 			(hide-ifdef-mode)
 
 			;; 这里可以对hideif的键作一些重新绑定

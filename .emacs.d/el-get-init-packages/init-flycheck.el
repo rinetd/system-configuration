@@ -1,10 +1,10 @@
-;;; init-ace-window.el --- 
+;;; init-flycheck.el --- 
 
 ;; Copyright 2016 zhanghaiyuan
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
-;; Version: $Id: @(#)init-ace-window.el,v 0.0 2016/01/23 21:40:53 vinurs Exp $
-;; Changed: <vinurs 01/26/2016 07:54:19>
+;; Version: $Id: @(#)init-flycheck.el,v 0.0 2016/01/23 10:06:04 vinurs Exp $
+;; Changed: <vinurs 01/23/2016 10:06:05>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -27,7 +27,7 @@
 ;; 
 
 ;; Put this file into your load-path and the following into your ~/.emacs:
-;;   (require 'init-ace-window)
+;;   (require 'init-flycheck)
 
 
 
@@ -44,32 +44,9 @@
 ;;;;##########################################################################
 
 
-(global-set-key (kbd "C-o") 'ace-window)
-;; 不希望切换窗口的时候全部变成灰色，希望保持原来的颜色
-(setq aw-background nil)
-;; 这个不明白什么意思
-(setq ace-window-display-mode t)
-;; (defface aw-background-face
-;;   '((t (:foreground "blue")
-;; 	   ))
-;;   "Face for whole window background during selection.")
 
-;; (defface aw-leading-char-face
-;;   '((((class color)) (:foreground "red"
-;; 								  :background "white"
-;; 								  ;; :height 3.0
-;; 								  :bold-italic
-;; 								  :bold
-;; 								  ))
-;; 	(((background dark)) (:foreground "gray100"))
-;; 	(((background light)) (:foreground "gray0"))
-;; 	(t (:foreground "gray100" :underline nil)))
-;;   "Face for each window's leading char.")
 
-;; (:background "red" :foreground "black")
-;; (set-face-attribute 'aw-leading-char-face nil :height 400)
 
-;; (setq aw-background nil)
-(provide 'init-ace-window)
+(provide 'init-flycheck)
 
-;;; init-ace-window.el ends here
+;;; init-flycheck.el ends here

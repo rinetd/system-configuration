@@ -1,10 +1,10 @@
-;;; init-ace-window.el --- 
+;;; init-ace-isearch.el --- 
 
 ;; Copyright 2016 zhanghaiyuan
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
-;; Version: $Id: @(#)init-ace-window.el,v 0.0 2016/01/23 21:40:53 vinurs Exp $
-;; Changed: <vinurs 01/26/2016 07:54:19>
+;; Version: $Id: @(#)init-ace-isearch.el,v 0.0 2016/01/23 11:18:38 vinurs Exp $
+;; Changed: <vinurs 01/23/2016 11:52:21>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -27,7 +27,7 @@
 ;; 
 
 ;; Put this file into your load-path and the following into your ~/.emacs:
-;;   (require 'init-ace-window)
+;;   (require 'init-ace-isearch)
 
 
 
@@ -44,32 +44,33 @@
 ;;;;##########################################################################
 
 
-(global-set-key (kbd "C-o") 'ace-window)
-;; 不希望切换窗口的时候全部变成灰色，希望保持原来的颜色
-(setq aw-background nil)
-;; 这个不明白什么意思
-(setq ace-window-display-mode t)
-;; (defface aw-background-face
-;;   '((t (:foreground "blue")
-;; 	   ))
-;;   "Face for whole window background during selection.")
+;; (ace-isearch-mode +1)
+;; (global-ace-isearch-mode +1)
 
-;; (defface aw-leading-char-face
-;;   '((((class color)) (:foreground "red"
-;; 								  :background "white"
-;; 								  ;; :height 3.0
-;; 								  :bold-italic
-;; 								  :bold
-;; 								  ))
-;; 	(((background dark)) (:foreground "gray100"))
-;; 	(((background light)) (:foreground "gray0"))
-;; 	(t (:foreground "gray100" :underline nil)))
-;;   "Face for each window's leading char.")
+;; (global-ace-isearch-mode +1)
 
-;; (:background "red" :foreground "black")
-;; (set-face-attribute 'aw-leading-char-face nil :height 400)
+;; (custom-set-variables
+;;  '(ace-isearch-input-length 7)
+;;  '(ace-isearch-jump-delay 0.25)
+;;  '(ace-isearch-function 'avy-goto-char)
+;;  '(ace-isearch-use-jump 'printing-char))
 
-;; (setq aw-background nil)
-(provide 'init-ace-window)
+;; (define-key isearch-mode-map (kbd "C-'") 'ace-isearch-jump-during-isearch)
 
-;;; init-ace-window.el ends here
+
+;; (setq ace-isearch-funtion-from-isearch 'swoop-from-isearch)
+;; (define-key swoop-map (kbd "C-s") 'swoop-action-goto-line-next)
+;; (define-key swoop-map (kbd "C-r") 'swoop-action-goto-line-prev)
+;; (setq ace-isearch-funtion-from-isearch 'helm-occur-from-isearch)
+
+;; (defun my-fallback-function ()
+;;   (message "Your isearch string is %s", isearch-string))
+
+;; (setq ace-isearch-use-function-from-isearch t)
+;; (setq ace-isearch-fallback-function 'my-fallback-function)
+
+
+
+(provide 'init-ace-isearch)
+
+;;; init-ace-isearch.el ends here

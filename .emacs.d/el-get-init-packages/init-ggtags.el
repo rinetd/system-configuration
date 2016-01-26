@@ -4,7 +4,7 @@
 ;;
 ;; Author: zhang.haiyuan@server.embedway.com
 ;; Version: $Id: @(#)init-ggtags.el,v 0.0 2014/05/07 22:53:45 vinurs Exp $
-;; Changed: <vinurs 05/07/2014 22:56:15>
+;; Changed: <vinurs 01/26/2016 08:47:26>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -45,6 +45,35 @@
 ;;;;##########################################################################
 
 
+(add-hook 'c-mode-common-hook
+		  (lambda ()
+			(when (derived-mode-p 'c-mode 'c++-mode 'java-mode 'asm-mode)
+			  (ggtags-mode 1))))
+
+(add-hook 'c-mode-common-hook
+		  (lambda ()
+			(progn
+			  (ggtags-mode 1)
+			  (global-set-key (kbd "C-c g p") 'pop-tag-mark)
+			  (global-set-key (kbd "C-c g u") 'ggtags-update-tags)
+			  (global-set-key (kbd "C-c g r") 'ggtags-find-reference)
+			  (global-set-key (kbd "C-c g g") 'ggtags-grep)
+			  (global-set-key (kbd "C-c g d") 'ggtags-show-definition)
+			  (global-set-key (kbd "C-c g h") 'ggtags-view-search-history)
+			  (define-key ggtags-mode-map (kbd "C-c g a") 'ggtags-navigation-mode-abort)
+			  ;; (define-key ggtags-mode-map (kbd "C-c g s") 'ggtags-find-other-symbol)
+			  ;; (define-key ggtags-mode-map (kbd "C-c g h") 'ggtags-view-tag-history)
+
+			  ;; (define-key ggtags-mode-map (kbd "C-c g f") 'ggtags-find-file)
+			  ;; (define-key ggtags-mode-map (kbd "C-c g c") 'ggtags-create-tags)
+			  ;; (define-key ggtags-mode-map (kbd "C-c g u") 'ggtags-update-tags)
+
+			  (global-set-key (kbd "C-c g p") 'pop-tag-mark)
+
+			  )
+			))
+		  
+
 (defun gtags-root-dir ()
   "Returns GTAGS root directory or nil if doesn't exist."
   (with-temp-buffer
@@ -58,7 +87,6 @@
   (when (gtags-root-dir)
     (gtags-update)))
 (add-hook 'after-save-hook #'gtags-update-hook)
-
 
 
 ;;; init-ggtags.el ends here
