@@ -207,11 +207,9 @@
 (require 'vinurs-dired)
 
 
-(desktop-save-mode 1)
-;; (setq desktop-path '("~/.emacs.d/"))
-;; (setq desktop-base-file-name ".emacs-desktop")
 
 ;; use only one desktop
+(desktop-save-mode 1)
 (setq desktop-path '("~/.emacs.d/"))
 (setq desktop-dirname "~/.emacs.d/")
 (setq desktop-base-file-name ".emacs-desktop")
