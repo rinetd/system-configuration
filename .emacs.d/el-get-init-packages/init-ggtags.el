@@ -4,7 +4,7 @@
 ;;
 ;; Author: zhang.haiyuan@server.embedway.com
 ;; Version: $Id: @(#)init-ggtags.el,v 0.0 2014/05/07 22:53:45 vinurs Exp $
-;; Changed: <vinurs 01/26/2016 13:17:40>
+;; Changed: <vinurs 01/27/2016 11:19:30>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -61,6 +61,7 @@
 			  (global-set-key (kbd "C-c g d") 'ggtags-show-definition)
 			  (global-set-key (kbd "C-c g h") 'ggtags-view-search-history)
 			  (define-key ggtags-mode-map (kbd "C-c g a") 'ggtags-navigation-mode-abort)
+			  ;; (define-key ggtags-mode-map (kbd "C-g") 'ggtags-navigation-mode-abort)
 			  ;; (define-key ggtags-mode-map (kbd "C-c g s") 'ggtags-find-other-symbol)
 			  ;; (define-key ggtags-mode-map (kbd "C-c g h") 'ggtags-view-tag-history)
 

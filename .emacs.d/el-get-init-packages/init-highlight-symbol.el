@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@localhost.localdomain
 ;; Version: $Id: @(#)init-highlight-symbol.el,v 0.0 2014/05/18 12:32:07 vinurs Exp $
-;; Changed: <vinurs 05/18/2014 12:32:33>
+;; Changed: <vinurs 01/27/2016 23:09:33>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -48,11 +48,11 @@
 
 (add-hook 'find-file-hooks 'highlight-hooks)
 (defun highlight-hooks()  
-  (setq highlight-symbol-idle-delay 0.5)  
-  (highlight-symbol-mode 1))  
+  ;; (highlight-symbol-mode 1)
+  )  
 
-(global-set-key (kbd "C-c l s") 'highlight-symbol-at-point)
-(global-set-key [double-mouse-1] 'highlight-symbol-at-point)
+(global-set-key (kbd "C-c l s") 'highlight-symbol)
+(global-set-key [double-mouse-1] 'highlight-symbol)
 
 ;; remove all highlight
 (global-set-key (kbd "C-c l r") 'highlight-symbol-remove-all)

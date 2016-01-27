@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.victor@gmail.com
 ;; Version: $Id: @(#)vinurs-dot-emacs.el 0.0 2011/03/22 11:05:27 victor Exp $
-;; Changed: <vinurs 01/26/2016 18:47:25>
+;; Changed: <vinurs 01/27/2016 23:21:03>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -38,111 +38,111 @@
 ;; 我自己需要的一些软件包
 (setq my-el-get-packages
       '(
-      ;;   ;; local sources
+		;; local sources
 
-      ;;   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-      ;;   ;; basic
-   highlight-parentheses           ; 高亮对应的标点
+		;; ;;;;;;;;;;;;;;;;;;;;;;
+		;; basic
+		highlight-parentheses           ; 高亮对应的括号
 
-   ;; 统计一下每个常用的按键频率
-   keyfreq
+		;; 统计一下每个常用的按键频率
+		keyfreq
 
-	  ;; 	;; which-key是不是觉得有时候一个按键下去突然忘记了下面该按什么？
-	  ;; 	;; 有了这个插件以后停顿一秒就可以提示你接下来一共有哪些按键可用
- 	which-key
-	  ;; 	;; helm相关
-	  ;; 	;; helm
-	  ;; 	;; 列出所有的键绑定
-	  ;; 	;; helm-descbinds
+		;; which-key是不是觉得有时候一个按键下去突然忘记了下面该按什么？
+		;; 有了这个插件以后停顿一秒就可以提示你接下来一共有哪些按键可用
+		which-key
+		;; helm相关
+		;; helm
+		;; 列出所有的键绑定
+		;; helm-descbinds
 
 
-	  ;; 	;; search相关
-	  ;; 	;; 很好的搜索的插件
-	  ;; 	;; swiper
-	  ;; 	;; helm-swoop
-	  ;; 	;; avy
-	  ;; 	;; ace-isearch
+			;; search相关
+			;; 很好的搜索的插件
+			;; swiper
+			;; helm-swoop
+			;; avy
+			;; ace-isearch
 
 		
-	  ;; 	;; powerline
-	  ;; 	;; mode-line更加好看，比较喜欢这个
-	  powerline
-	  ;; 	;; emacs-powerline
+			;; powerline
+			;; mode-line更加好看，比较喜欢这个
+		powerline
+		;; 	;; emacs-powerline
 		
-	  ;; 	;; 更加平滑一点的滑动
+			;; 更加平滑一点的滑动
 	   	smooth-scroll
 	   	smooth-scrolling
 		
-      ;;   ;; hightlight symbol
-         highlight-symbol
+		;; hightlight symbol
+		highlight-symbol
 
-         linum+                          ;;显示行号
-         hl-line+                        ;
+		linum+                          ;;显示行号
+		;; hl-line+                        ;
 
-         hexrgb                          ;palette依赖这个
-         palette                         ;颜色选择插件，很强大
-         ascii
+		hexrgb                          ;palette依赖这个
+		palette                         ;颜色选择插件，很强大
+		ascii
 
-	  ;; 	;; 版本控制
-	  ;; 	;; git
+		;; 	;; 版本控制
+		;; 	;; git
 	   	magit
-	  ;; 	;; 版本控制end
+		;; 	;; 版本控制end
 		
-      ;;   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-      ;;   ;; c
+		;;   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+		;;   ;; c
 
-      ;;   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-      ;;   ;; develope
-      ;;   ;; 标准的注释
-         xml-parse
-         doxymacs
+		;;   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+		  ;; develope
+		  ;; 标准的注释
+		xml-parse
+		doxymacs
         
-      ;;   ;; dired不过这个一般默认就集成在emacs里了，我这里增加的是一些有用的扩展
+		;;   ;; dired不过这个一般默认就集成在emacs里了，我这里增加的是一些有用的扩展
 
 
-      ;;   ;; auto-complete
-      ;;   ;; 所有的自动补全相关的配置
-         auto-complete
-         auto-complete+
-      ;;   ;; 用clang来给c自动补全
-         auto-complete-clang
-         auto-complete-clang-extension
+		  ;; auto-complete
+		  ;; 所有的自动补全相关的配置
+		auto-complete
+		auto-complete+
+		;;   ;; 用clang来给c自动补全
+		auto-complete-clang
+		auto-complete-clang-extension
 
-      ;;   ;; global gtags
-	  ;; 	;; ggtags一直在更新维护，xgtags已经不更新了
-         ggtags
-	  ;; 	;; helm-gtags
+		;;   ;; global gtags
+		;; 	;; ggtags一直在更新维护，xgtags已经不更新了
+		ggtags
+		;; 	;; helm-gtags
 
-      ;;   ;; mew
+		;;   ;; mew
 	   	emacs-w3m
 
-      ;;   ;; markdown,用github写博客
-      ;;   ;; markdown-mode
+		  ;; markdown,用github写博客
+		  ;; markdown-mode
 
-      ;;   ;; 括号补全
-      ;;   ;; parenthesis
+		  ;; 括号补全
+		  ;; parenthesis
 
-                
-      ;;   ;; org mode
-      ;;   ;; org-mode
-      ;;   ;; common lisp
-      ;;   ;; slime
+		
+		  ;; org mode
+		  ;; org-mode
+		  ;; common lisp
+		  ;; slime
 
-      ;;   ;; 缩进提示线
-	  ;; 	;; 这个目前用得不爽，暂时先不用
-      ;;   ;; highlight-indentation
+		  ;; 缩进提示线
+			;; 这个目前用得不爽，暂时先不用
+		  ;; highlight-indentation
 
-	  ;; 	;; flycheck
-	  ;; 	;; flycheck
+			;; flycheck
+			;; flycheck
         
-      ;;   ;; 代码折叠相关
-      ;;   ;; hs-mode
-         hideif
-         hide-region  ;; 这个放在最后面吧，所有的配置都在这个init里面
+		  ;; 代码折叠相关
+		  ;; hs-mode
+		hideif
+		hide-region  ;; 这个放在最后面吧，所有的配置都在这个init里面
 
-      ;;   ;; 当窗口分割变多的时候，快速切换窗口
+		  ;; 当窗口分割变多的时候，快速切换窗口
 	   	ace-window
-      ;;   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+		;;   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
         )
 	  
