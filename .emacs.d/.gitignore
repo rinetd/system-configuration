@@ -9,3 +9,4 @@ srecode-map.el
 abbrev_defs
 semanticdb
 .emacs.desktop
+elpa/
