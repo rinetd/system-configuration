@@ -4,7 +4,7 @@
 ;;
 ;; Author: zhang.haiyuan@server.embedway.com
 ;; Version: $Id: @(#)init-hl-line+.el,v 0.0 2013/08/14 20:30:58 vinurs Exp $
-;; Changed: <vinurs 08/20/2013 08:54:31>
+;; Changed: <vinurs 01/27/2016 23:28:09>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
