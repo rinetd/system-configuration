@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.victor@gmail.com
 ;; Version: $Id: @(#)vinurs-dot-emacs.el 0.0 2011/03/22 11:05:27 victor Exp $
-;; Changed: <vinurs 01/27/2016 23:53:16>
+;; Changed: <vinurs 01/28/2016 21:39:54>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -56,20 +56,20 @@
 		;; helm-descbinds
 
 
-			;; search相关
-			;; 很好的搜索的插件
-			;; swiper
-			;; helm-swoop
-			;; avy
-			;; ace-isearch
+		;; search相关
+		;; 很好的搜索的插件
+		;; swiper
+		;; helm-swoop
+		;; avy
+		;; ace-isearch
 
 		
-			;; powerline
-			;; mode-line更加好看，比较喜欢这个
+		;; powerline
+		;; mode-line更加好看，比较喜欢这个
 		powerline
 		;; 	;; emacs-powerline
 		
-			;; 更加平滑一点的滑动
+		;; 更加平滑一点的滑动
 	   	smooth-scroll
 	   	smooth-scrolling
 		
@@ -93,16 +93,16 @@
 		;;   ;; c
 
 		;;   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-		  ;; develope
-		  ;; 标准的注释
+		;; develope
+		;; 标准的注释
 		xml-parse
 		doxymacs
         
 		;;   ;; dired不过这个一般默认就集成在emacs里了，我这里增加的是一些有用的扩展
 
 
-		  ;; auto-complete
-		  ;; 所有的自动补全相关的配置
+		;; auto-complete
+		;; 所有的自动补全相关的配置
 		auto-complete
 		auto-complete+
 		;;   ;; 用clang来给c自动补全
@@ -117,31 +117,31 @@
 		;;   ;; mew
 	   	emacs-w3m
 
-		  ;; markdown,用github写博客
-		  ;; markdown-mode
+		;; markdown,用github写博客
+		;; markdown-mode
 
-		  ;; 括号补全
-		  ;; parenthesis
+		;; 括号补全
+		;; parenthesis
 
 		
-		  ;; org mode
-		  ;; org-mode
-		  ;; common lisp
-		  ;; slime
+		;; org mode
+		;; org-mode
+		;; common lisp
+		;; slime
 
-		  ;; 缩进提示线
-			;; 这个目前用得不爽，暂时先不用
-		  ;; highlight-indentation
+		;; 缩进提示线
+		;; 这个目前用得不爽，暂时先不用
+		;; highlight-indentation
 
 		;; flycheck
 		;; flycheck
         
-		  ;; 代码折叠相关
-		  ;; hs-mode
+		;; 代码折叠相关
+		;; hs-mode
 		hideif
 		hide-region  ;; 这个放在最后面吧，所有的配置都在这个init里面
 
-		  ;; 当窗口分割变多的时候，快速切换窗口
+		;; 当窗口分割变多的时候，快速切换窗口
 	   	ace-window
 		;;   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
