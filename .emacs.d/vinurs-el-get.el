@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.victor@gmail.com
 ;; Version: $Id: @(#)vinurs-dot-emacs.el 0.0 2011/03/22 11:05:27 victor Exp $
-;; Changed: <vinurs 01/27/2016 23:21:03>
+;; Changed: <vinurs 01/27/2016 23:53:16>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -77,7 +77,8 @@
 		highlight-symbol
 
 		linum+                          ;;显示行号
-		;; hl-line+                        ;
+		;; 高亮当前行
+		hl-line+                        ;
 
 		hexrgb                          ;palette依赖这个
 		palette                         ;颜色选择插件，很强大
@@ -132,8 +133,8 @@
 			;; 这个目前用得不爽，暂时先不用
 		  ;; highlight-indentation
 
-			;; flycheck
-			;; flycheck
+		;; flycheck
+		;; flycheck
         
 		  ;; 代码折叠相关
 		  ;; hs-mode
