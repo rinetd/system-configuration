@@ -12,6 +12,8 @@ PATH=/sbin:/bin:/usr/sbin:/usr/bin:~/bin
 # 每隔一分钟改变一下桌面背景
 # * * * * * DISPLAY=:0.0 chgbg.sh
 
+# 每天下午两点半执行一次 brew update
+30 14 * * * /usr/local/bin/brew update
 
 # 每隔3分钟用getmail去取一下邮件
 #*/3 * * * * getmail.sh 1>/dev/null 2>&1
