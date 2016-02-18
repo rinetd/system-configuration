@@ -32,6 +32,7 @@ brew install homebrew/dupes/grep
 brew install --upgrade openssl
 brew unlink openssl && brew link openssl --force
 
+
 # python libs
 easy_install psutil
 easy_install mercurial
@@ -63,6 +64,9 @@ brew install sbcl
 # lisp结合c来写代码
 brew install ecl
 # brew install buildapp
+
+# ssh-copy-id
+brew install ssh-copy-id 
 
 # for git log
 brew install tig
