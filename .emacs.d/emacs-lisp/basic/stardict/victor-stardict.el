@@ -59,7 +59,6 @@
     (setq word (read-string (format "Search the dictionary for (default %s): " word)
                             nil nil word))
     (set-buffer (get-buffer-create "*sdcv*"))
-	(emaci-mode-on)
     (prefer-coding-system 'utf-8)
     (buffer-disable-undo)
     (erase-buffer)
