@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)init-helm-descbinds.el,v 0.0 2016/01/21 20:03:34 vinurs Exp $
-;; Changed: <vinurs 01/21/2016 20:03:35>
+;; Changed: <vinurs 02/20/2016 23:10:41>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -43,6 +43,7 @@
 ;;;;  User Options, Variables
 ;;;;##########################################################################
 
+(helm-descbinds-mode)
 
 
 

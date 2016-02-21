@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.victor@gmail.com
 ;; Version: $Id: @(#)victor-doc-emacs.el,v 0.0 2011/03/22 11:05:27 victor Exp $
-;; Changed: <vinurs 01/26/2016 23:49:38>
+;; Changed: <vinurs 02/20/2016 12:27:13>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -75,7 +75,7 @@
 ;; 我自己的配置文件
 ;; 最基本的一些配置
 (require 'vinurs-basic)
-(setq scheme-program-name "guile")
+
 
 
 ;; custom

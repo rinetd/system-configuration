@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.victor@gmail.com
 ;; Version: $Id: @(#)vinurs-dot-emacs.el 0.0 2011/03/22 11:05:27 victor Exp $
-;; Changed: <vinurs 01/28/2016 21:39:54>
+;; Changed: <vinurs 02/21/2016 17:14:48>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -51,15 +51,14 @@
 		;; 有了这个插件以后停顿一秒就可以提示你接下来一共有哪些按键可用
 		which-key
 		;; helm相关
-		;; helm
+		helm
 		;; 列出所有的键绑定
-		;; helm-descbinds
+		helm-descbinds
 
 
 		;; search相关
 		;; 很好的搜索的插件
-		;; swiper
-		;; helm-swoop
+		helm-swoop
 		;; avy
 		;; ace-isearch
 
@@ -88,11 +87,17 @@
 		;; 	;; git
 	   	magit
 		;; 	;; 版本控制end
+
 		
 		;;   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-		;;   ;; c
-
+		;;   ;; c语言开发相关配置
 		;;   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+		;; 项目管理
+		;; 这个会自动安装projectile
+		projectile
+		helm-projectile
+
+		
 		;; develope
 		;; 标准的注释
 		xml-parse
@@ -101,18 +106,32 @@
 		;;   ;; dired不过这个一般默认就集成在emacs里了，我这里增加的是一些有用的扩展
 
 
+		
+		;; ;; auto-complete
+		;; ;; 所有的自动补全相关的配置
 		;; auto-complete
-		;; 所有的自动补全相关的配置
-		auto-complete
-		auto-complete+
-		;;   ;; 用clang来给c自动补全
-		auto-complete-clang
-		auto-complete-clang-extension
+		;; auto-complete+
+		;; ;;   ;; 用clang来给c自动补全
+		;; auto-complete-clang
+		;; auto-complete-clang-extension
+
 
 		;;   ;; global gtags
 		;; 	;; ggtags一直在更新维护，xgtags已经不更新了
 		ggtags
-		;; 	;; helm-gtags
+		;; 这个会在buffer的最上面一行现实函数名字
+		;; semantic-stickyfunc-enhance
+		;; 这个目前看起来用的感觉并不好
+		;; helm-gtags
+
+		;; 自动补全
+		;; cedet就用到里面的semantic
+		;; cedet
+		;; company mode
+		company-c-headers
+		company-mode
+		
+		
 
 		;;   ;; mew
 	   	emacs-w3m

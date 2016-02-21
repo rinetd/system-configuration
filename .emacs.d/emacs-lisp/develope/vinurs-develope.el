@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.victor@gmail.com
 ;; Version: $Id: @(#)victor_develope.el 0.0 2010/12/07 02:41:20 victor Exp $
-;; Changed: <vinurs 01/24/2015 22:37:43>
+;; Changed: <vinurs 02/20/2016 12:27:17>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -75,6 +75,8 @@
 ;; shell-script-mode
 (load "vinurs-shell")
 
+;; lisp
+(setq scheme-program-name "guile")
 
 ;; 回车后indent
 (eal-define-keys
