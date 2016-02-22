@@ -16,6 +16,10 @@
 #==============================================================================
 ##
 
+# 安装brew cask
+brew tap caskroom/cask
+brew install brew-cask
+
 brew install tmux
 brew tap sanemat/font
 # for tmux logging
@@ -28,10 +32,11 @@ brew install coreutils
 brew tap homebrew/dupes
 brew install homebrew/dupes/grep
 
-
 brew install --upgrade openssl
 brew unlink openssl && brew link openssl --force
 
+# Node.js
+brew install node
 
 # python libs
 easy_install psutil
@@ -46,7 +51,7 @@ mkdir ~/tmp/
 cd ~/tmp/; git clone git@github.com:powerline/fonts.git; ./install.sh; cd -;
 
 
-brew install zsh
+brew install zsh zsh-completions
 brew install lftp
 brew install wget
 brew install global
@@ -158,4 +163,44 @@ source hexo.sh
 
 # markdown
 brew install markdown
+
+# 通过brew cask安装的软件
+# 安装 Google 浏览器
+brew cask install google-chrome  
+brew cask install alfred
+brew cask install appcleaner
+brew cask install dropbox
+brew cask install totalfinder
+brew cask install launchrocket
+# mac下很不错的中端
+brew cask install iterm2
+
+# emacs
+# 删除系统自带的emacs
+sudo rm /usr/bin/emacs
+sudo rm -rf /usr/share/emacs
+brew cask install emacs
+
+brew cask install lastpass
+
+# qq
+brew cask install qq
+brew cask install evernote
+# java开发环境
+brew cask install java
+# mac屏保
+brew cask install fliqlo
+# wireshark
+brew cask install wireshark
+brew cask install mplayerx
+# sogou
+# brew cask install sogouinput
+# compare
+brew cask install beyond-compare 
+
+
+
+
+
+
 
