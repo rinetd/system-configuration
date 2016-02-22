@@ -1,14 +1,13 @@
 ################### mac emacs config start ###################
-# alias emacs='open -a emacs --args'
-alias emacs='(/Applications/Emacs.app/Contents/MacOS/Emacs &)'
-alias emacsclient='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient'
-alias ee='emacsclient -t'
+alias emacs='(open -a emacs --args &)'
+#alias emacs='(/Applications/Emacs.app/Contents/MacOS/Emacs &)'
+# alias emacsclient='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient'
+alias emacsclient='/opt/homebrew-cask/Caskroom/emacs/24.5-1/Emacs.app/Contents/MacOS/bin-x86_64-10_9/emacsclient'
+# alias ee='emacsclient -t'
 alias ls='ls -G'
 alias indent='/usr/local/Cellar/gnu-indent/2.2.10/bin/gindent'
 alias md5sum='md5'
 
-#alias vim='emacsclient '
-#alias vim='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -c'
 alias vi='vim'
 
 # nvm
@@ -57,6 +56,31 @@ function merge-website()
 }
 
 
+# toggle iTerm Dock icon
+# add this to your .bash_profile or .zshrc
+function toggleiTerm() {
+	pb='/usr/libexec/PlistBuddy'
+	iTerm='/Applications/iTerm.app/Contents/Info.plist'
+	
+	echo "Do you wish to hide iTerm in Dock?"
+	select ync in "Hide" "Show" "Cancel"; do
+	    case $ync in
+	        'Hide' )
+	        	$pb -c "Add :LSUIElement bool true" $iTerm
+	        	echo "relaunch iTerm to take effectives"
+	        	break
+	        	;;
+	        'Show' )
+	        	$pb -c "Delete :LSUIElement" $iTerm
+	        	echo "run killall 'iTerm' to exit, and then relaunch it"
+	        	break
+	        	;;
+		'Cancel' )
+			break
+			;;
+	    esac
+	done
+}
 
 
 #################### mac emacs config end ####################

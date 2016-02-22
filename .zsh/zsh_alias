@@ -5,6 +5,7 @@
 alias mv='mv -i'
 alias rm='rm -i'
 alias ls='ls -F '
+alias cls='reset '
 
 
 alias ll='ls -l'
