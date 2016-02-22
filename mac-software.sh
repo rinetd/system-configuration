@@ -197,7 +197,8 @@ brew cask install mplayerx
 # brew cask install sogouinput
 # compare
 brew cask install beyond-compare 
-
+# dot画图工具
+#brew cask install graphviz
 
 
 
