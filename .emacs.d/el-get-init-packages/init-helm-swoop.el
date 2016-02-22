@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)init-helm-swoop.el,v 0.0 2016/02/20 23:41:37 vinurs Exp $
-;; Changed: <vinurs 02/21/2016 09:52:34>
+;; Changed: <vinurs 02/22/2016 14:15:52>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -50,7 +50,8 @@
 (setq helm-swoop-speed-or-color t)
 
 ;; 替换掉系统的C-s，这个用起来更加方便
-(global-set-key (kbd "C-s") 'helm-swoop)
+;; (global-set-key (kbd "C-s") 'helm-swoop)
+(global-set-key (kbd "C-s") 'helm-swoop-without-pre-input)
 
 
 ;; (setq helm-swoop-use-line-number-face t)

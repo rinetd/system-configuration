@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.victor@gmail.com
 ;; Version: $Id: @(#)vinurs-dot-emacs.el 0.0 2011/03/22 11:05:27 victor Exp $
-;; Changed: <vinurs 02/21/2016 17:14:48>
+;; Changed: <vinurs 02/22/2016 16:16:18>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -102,7 +102,8 @@
 		;; 标准的注释
 		xml-parse
 		doxymacs
-        
+
+		graphviz-dot-mode
 		;;   ;; dired不过这个一般默认就集成在emacs里了，我这里增加的是一些有用的扩展
 
 

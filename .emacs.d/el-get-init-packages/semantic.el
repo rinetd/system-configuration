@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)semantic.el,v 0.0 2016/02/21 14:34:34 vinurs Exp $
-;; Changed: <vinurs 02/21/2016 17:14:08>
+;; Changed: <vinurs 02/21/2016 17:33:39>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -55,7 +55,8 @@
                                   global-semanticdb-minor-mode
                                   global-semantic-idle-summary-mode
 								  global-semantic-idle-completions-mode
-								  global-semantic-highlight-func-mode
+								  ;; 高亮当前的函数名
+								  ;; global-semantic-highlight-func-mode
 								  ;; (see Tag Decoration Mode).
 								  ;; global-semantic-decoration-mode
 								  ;; (see Sticky Func Mode).
@@ -71,6 +72,11 @@
 
 ;; 避免semantic占用CPU过多,单位second 
 (setq-default semantic-idle-scheduler-idle-time 600) 
+
+;; 设置被高亮的函数的颜色
+(set-face-attribute 'semantic-highlight-func-current-tag-face nil
+					:background "cyan1" :foreground "gray0")
+
 
 ;; (global-semantic-idle-summary-mode 0)
 ;; (semantic-load-enable-code-helpers)
