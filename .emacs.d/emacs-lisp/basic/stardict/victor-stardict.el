@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.victor@gmail.com
 ;; Version: $Id: @(#)victor-stardict.el,v 0.0 2011/05/13 07:57:31 victor Exp $
-;; Changed: <victor 08/20/2011 14:30:06>
+;; Changed: <vinurs 02/24/2016 23:09:57>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -71,11 +71,15 @@
              (setq kid-sdcv-window-configuration (current-window-configuration))
              (switch-to-buffer-other-window "*sdcv*")
              (local-set-key (kbd "d") 'kid-sdcv-to-buffer)
-             (local-set-key (kbd "q") (lambda ()
-                                        (interactive)
-                                        (bury-buffer)
-                                        (unless (null (cdr (window-list))) ; only one window
-                                          (delete-window)))))
+             (local-set-key (kbd "q")
+							(lambda ()
+							  (interactive)
+							  (bury-buffer)
+							  ;; (unless (null (cdr (window-list))) ; only one window
+							  ;; 	;; (delete-window)
+							  ;; 	(switch-to-prev-buffer)
+							  ;; 	)
+							  )))
            (goto-char (point-min))))))))
 
 (global-set-key (kbd "C-c s d") 'kid-sdcv-to-buffer)
