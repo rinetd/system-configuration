@@ -1,8 +1,8 @@
 ################### mac emacs config start ###################
 alias emacs='(open -a emacs --args &)'
+alias emacs='($HOME/Applications/Emacs.app/Contents/MacOS/Emacs &)'
 #alias emacs='(/Applications/Emacs.app/Contents/MacOS/Emacs &)'
-# alias emacsclient='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient'
-alias emacsclient='/opt/homebrew-cask/Caskroom/emacs/24.5-1/Emacs.app/Contents/MacOS/bin-x86_64-10_9/emacsclient'
+alias emacsclient='$HOME/Applications/Emacs.app/Contents/MacOS/bin/emacsclient'
 # alias ee='emacsclient -t'
 alias ls='ls -G'
 alias indent='/usr/local/Cellar/gnu-indent/2.2.10/bin/gindent'
