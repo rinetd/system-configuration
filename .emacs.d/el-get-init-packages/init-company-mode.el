@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)init-company-mode.el,v 0.0 2016/02/20 12:35:10 vinurs Exp $
-;; Changed: <vinurs 02/21/2016 14:37:24>
+;; Changed: <vinurs 02/23/2016 20:48:16>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -60,29 +60,33 @@
 		 company-abbrev
 		 company-dabbrev
          company-keywords       ; keywords
-         ;; company-capf
+         company-capf
+		 company-ispell
          ;; company-yasnippet
-		 company-gtags
 		 ;; company-eclim
-		 company-semantic
-		 company-c-headers
          )
-        ))
+		 )
+	  )
 
-
-;; 根据不同的模式设置不同的补全
-;; (defun company-c-common-setup ()
-;;    (setq-local company-backends
-;;                (append '(company-semantic) company-backends)))
-;; (add-hook 'c-common-mode 'company-c-common-setup)
-
-;; (define-key c-mode-map  [(tab)] 'company-indent-or-complete-common)
+(add-hook 'c-mode-common-hook
+		  (lambda ()
+			(add-to-list (make-local-variable 'company-backends)
+				 '(
+				   company-semantic
+				   company-c-headers
+				   company-gtags				   
+				   ))))
 
 
 
 (setq company-idle-delay 0)    ; decrease delay before autocompletion popup shows
 (setq company-minimum-prefix-length 1)
 (setq company-selection-wrap-around t)
+;; 可以根据数字来选择
+(setq company-show-numbers t)
+;; (setq company-dabbrev-downcase nil)
+(setq company-dabbrev-ignore-case t)
+
 
 
 

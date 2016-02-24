@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.victor@gmail.com
 ;; Version: $Id: @(#)vinurs-dot-emacs.el 0.0 2011/03/22 11:05:27 victor Exp $
-;; Changed: <vinurs 02/22/2016 16:16:18>
+;; Changed: <vinurs 02/22/2016 19:02:45>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -132,7 +132,8 @@
 		company-c-headers
 		company-mode
 		
-		
+
+		;; python
 
 		;;   ;; mew
 	   	emacs-w3m
