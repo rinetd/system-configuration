@@ -139,6 +139,10 @@ brew install python
 
 brew install macvim --env-std --override-system-vim
 
+brew install doxygen
+# 代码静态分析工具
+brew install cflow
+
 # m4
 brew install m4
 
