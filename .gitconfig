@@ -24,13 +24,13 @@
 	logOutputEncoding = UTF-8 UTF8 gbk
 	commitencoding = utf-8
 [diff]
-	tool = meld
+	tool = Kaleidoscope
 # 每次比较的时候不弹出提示
 [difftool]
     prompt = false
 
 [merge]
-	tool = meld
+	tool = Kaleidoscope
 # 每次merge的时候不弹出提示
 [mergetool]
     prompt = false
@@ -38,3 +38,8 @@
 	clean = git lfs clean %f
 	smudge = git lfs smudge %f
 	required = true
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustexitcode = true
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
