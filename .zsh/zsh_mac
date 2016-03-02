@@ -16,6 +16,17 @@ export HOMEBREW_GITHUB_API_TOKEN=791e154df902ed4fe9ca205ad5c49d4263bebc19
 # nvm
 source $(brew --prefix nvm)/nvm.sh 
 
+# index splotlight
+function index-splotlight ()
+{
+	sudo mdutil -i off /
+	# 该命令用来关闭索引
+	sudo mdutil -E /
+	# 该命令用来删除索引
+	sudo mdutil -i on /
+	# 该命令用来重建索引
+
+}
 
 # start tftpd
 function start-tftpd ()

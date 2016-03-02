@@ -25,3 +25,13 @@ set hlsearch
 set incsearch
 " 在右下角显示文件行数以及百分比
 set ruler
+
+if exists('$ITERM_PROFILE')
+  if exists('$TMUX') 
+    let t_SI = "<Esc>[3 q"
+    let t_EI = "<Esc>[0 q"
+  else
+    let t_SI = "<Esc>]50;CursorShape=1x7"
+    let t_EI = "<Esc>]50;CursorShape=0x7"
+  endif
+end
