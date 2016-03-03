@@ -199,10 +199,18 @@ brew cask install wireshark
 brew cask install mplayerx
 # sogou
 # brew cask install sogouinput
-# compare
-brew cask install beyond-compare 
 # dot画图工具
 #brew cask install graphviz
+# 工具栏简化工具
+brew cask install bartender
+# 类似beyondcompare的比较工具,这个我是通过appstore安装的
+# brew cask install kaleidoscope
+# 用来让kaleidoscope跟git配合使用
+brew cask install ksdiff
+
+
+
+
 
 
 
