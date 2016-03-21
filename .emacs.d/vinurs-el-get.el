@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.victor@gmail.com
 ;; Version: $Id: @(#)vinurs-dot-emacs.el 0.0 2011/03/22 11:05:27 victor Exp $
-;; Changed: <vinurs 02/22/2016 19:02:45>
+;; Changed: <vinurs 02/26/2016 19:42:50>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -41,17 +41,19 @@
 		;; local sources
 
 		;; ;;;;;;;;;;;;;;;;;;;;;;
-		;; basic
-		highlight-parentheses           ; 高亮对应的括号
-
 		;; 统计一下每个常用的按键频率
 		keyfreq
+
+		;; basic
+		highlight-parentheses           ; 高亮对应的括号
 
 		;; which-key是不是觉得有时候一个按键下去突然忘记了下面该按什么？
 		;; 有了这个插件以后停顿一秒就可以提示你接下来一共有哪些按键可用
 		which-key
+
 		;; helm相关
 		helm
+		
 		;; 列出所有的键绑定
 		helm-descbinds
 
