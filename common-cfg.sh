@@ -55,7 +55,7 @@ files_common+=(.cron.d)
 # global
 files_common+=(.globalrc)
 # git
-files_common+=(.gitconfig)
+files_common+=(.gitconfig .git-ci-msg)
 # stardict
 files_common+=(.stardict)
 # sshfs
