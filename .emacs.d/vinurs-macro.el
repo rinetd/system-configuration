@@ -4,7 +4,7 @@
 ;;
 ;; Author: zhang.haiyuan@server.embedway.com
 ;; Version: $Id: @(#)vinurs-macro.el,v 0.0 2012/06/28 19:39:01 vinurs Exp $
-;; Changed: <vinurs 06/28/2012 19:39:06>
+;; Changed: <vinurs 02/26/2016 19:47:41>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -43,6 +43,8 @@
 ;;;;##########################################################################
 ;;;;  User Options, Variables
 ;;;;##########################################################################
+
+
 
 
 ;; for macros

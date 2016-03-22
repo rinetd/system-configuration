@@ -34,16 +34,9 @@
 (eval-when-compile
   (require 'cl))
 
-;; 
-;; auto compile this file when loaded
-;; (if (string=
-;;       (file-name-extension load-file-name)
-;;       "el")
-;;     (byte-compile-file load-file-name))
 
 
-
-;; 编码设置,utf-8之类，所有的文件全部以utf8保存
+;; 编码设置:utf-8之类，所有的文件全部以utf8保存
 (require 'vinurs-coding-settings)
 
 
@@ -55,6 +48,7 @@
 
 ;; emacs的服务端客户端模式配置
 (require 'vinurs-server-client)
+
 
 ;; basic misc functions
 ;; 各种小功能的配置

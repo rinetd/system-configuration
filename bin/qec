@@ -5,14 +5,15 @@ function qec-mac()
     # check if emacs daemon has started
     ps -ef |grep 'Emacs.app' | grep -v 'grep' >/dev/null
     if [[ $? != 0 ]]; then
-	    #open -a emacs --args
-            (/Applications/Emacs.app/Contents/MacOS/Emacs &)
+	    open -a emacs --args
+            #(/Applications/Emacs.app/Contents/MacOS/Emacs &)
 	    sleep 2
     fi
 
     # check argument number
     if [[ $# != 0 ]]; then
-        (/Applications/Emacs.app/Contents/MacOS/bin/emacsclient $* 2>&1 >/dev/null &)
+	(/opt/homebrew-cask/Caskroom/emacs/24.5-1/Emacs.app/Contents/MacOS/bin-x86_64-10_9/emacsclient $* 2>&1 >/dev/null &)
+        #(/Applications/Emacs.app/Contents/MacOS/bin/emacsclient $* 2>&1 >/dev/null &)
     fi
 }
 

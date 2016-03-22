@@ -208,6 +208,7 @@ brew cask install bartender
 # 用来让kaleidoscope跟git配合使用
 brew cask install ksdiff
 
+brew cask install zoc
 
 
 
