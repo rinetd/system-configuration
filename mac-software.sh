@@ -39,6 +39,7 @@ brew unlink openssl && brew link openssl --force
 brew install node
 
 # python libs
+# for powerline
 easy_install psutil
 easy_install mercurial
 brew install libgit2
@@ -46,7 +47,7 @@ easy_install pygit2
 easy_install bzr
 easy_install pyuv
 pip install i3-py
-# pip install powerline-status
+pip install powerline-status
 mkdir ~/tmp/
 cd ~/tmp/; git clone git@github.com:powerline/fonts.git; ./install.sh; cd -;
 
@@ -210,9 +211,12 @@ brew cask install ksdiff
 
 brew cask install zoc
 
+# 用来替代ssh
+brew install mobile-shell 
 
-
-
+# for tmux urlview
+brew install urlview
+brew install extract_url
 
 
 
