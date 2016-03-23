@@ -218,6 +218,10 @@ brew install mobile-shell
 brew install urlview
 brew install extract_url
 
+# tmux plugin manager
+#curl -Ls ellipsis.sh | PACKAGES='ellipsis-tpm' sh
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
 
 
 
