@@ -216,7 +216,8 @@ setprompt () {
     
     case $TERM in
         xterm*)
-            PR_TITLEBAR=$'%{\e]0;%(!.-=*[ROOT]*=- | .)%n@%m:%~ | ${COLUMNS}x${LINES} | %y\a%}'
+        PR_TITLEBAR=$'%{\e]0;%(!.-=*[ROOT]*=- | .)%n@%m:%~ | ${COLUMNS}x${LINES} | %y\a%}'
+			:
             ;;
         screen)
             PR_TITLEBAR=$'%{\e_screen \005 (\005t) | %(!.-=[ROOT]=- | .)%n@%m:%~ | ${COLUMNS}x${LINES} | %y\e\\%}'
@@ -279,7 +280,7 @@ if [[ /proc/$PPID/exe -ef /usr/bin/mc ]]; then
     # mc, I will write it later
     :
 else
-    # setprompt
+    setprompt
 	:
 fi
 
@@ -307,6 +308,8 @@ esac
 # 设置gnu global所要用到的环境变量
 export GTAGSLIBPATH=~/.global
 
+# 最上面的标题栏显示路径
+precmd () { print -Pn "\e]2;%n@%M | %~\a" } 
 
 source ~/.zshenv
 
@@ -314,6 +317,8 @@ source ~/.zshenv
 if [[ -f ~/work/.company ]]; then
     source ~/work/.company
 fi
+# zsh跟powerline配合
+. /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 
 case $system_type in
     Linux)
@@ -326,8 +331,6 @@ case $system_type in
         ;;
 esac
 
-# zsh跟powerline配合
-. /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 
 source ~/.zsh/misc
 
