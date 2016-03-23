@@ -279,7 +279,8 @@ if [[ /proc/$PPID/exe -ef /usr/bin/mc ]]; then
     # mc, I will write it later
     :
 else
-    setprompt
+    # setprompt
+	:
 fi
 
 
@@ -325,6 +326,8 @@ case $system_type in
         ;;
 esac
 
+# zsh跟powerline配合
+. /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 
 source ~/.zsh/misc
 

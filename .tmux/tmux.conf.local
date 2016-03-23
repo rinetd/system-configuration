@@ -45,36 +45,36 @@ tmux_conf_battery_status=enabled
 # display the time in the status line, possible values are:
 #   - enabled
 #   - disabled
-tmux_conf_theme_time=enabled
-#tmux_conf_theme_time=disabled
+#tmux_conf_theme_time=enabled
+tmux_conf_theme_time=disabled
 
 # display the date in the status line, possible values are:
 #   - enabled
 #   - disabled
-tmux_conf_theme_date=enabled
+# tmux_conf_theme_date=enabled
 #tmux_conf_theme_date=disabled
 
 # display the username in the status line, possible values are:
 #   - enabled
 #   - disabled
 #   - ssh
-tmux_conf_theme_username=enabled
-#tmux_conf_theme_username=disabled
+#tmux_conf_theme_username=enabled
+tmux_conf_theme_username=disabled
 #tmux_conf_theme_username=ssh
 
 # display the hostname in the status line, possible values are:
 #   - enabled
 #   - disabled
 #   - ssh
-tmux_conf_theme_hostname=enabled
-#tmux_conf_theme_hostname=disabled
+#tmux_conf_theme_hostname=enabled
+tmux_conf_theme_hostname=disabled
 #tmux_conf_theme_hostname=ssh
 
 # highlight focuse pane, possible values are:
 #   - enabled
 #   - disabled
-#tmux_conf_theme_highlight_focused_pane=disabled
-tmux_conf_theme_highlight_focused_pane=enabled
+tmux_conf_theme_highlight_focused_pane=disabled
+#tmux_conf_theme_highlight_focused_pane=enabled
 
 # should new windows retain current path, possible values are:
 #   - true
