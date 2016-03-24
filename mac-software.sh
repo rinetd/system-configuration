@@ -222,6 +222,9 @@ brew install extract_url
 #curl -Ls ellipsis.sh | PACKAGES='ellipsis-tpm' sh
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
+# 快捷键提示 
+brew cask install cheatsheet
+
 
 
 
