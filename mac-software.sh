@@ -225,7 +225,11 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 # 快捷键提示 
 brew cask install cheatsheet
 
-
+# tor翻墙系列
+brew install tor
+brew install arm
+brew install torsocks
+brew cask install torbrowser
 
 
 
