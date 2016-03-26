@@ -25,13 +25,13 @@ if [[ $terminfo[colors] -ge 256 ]]; then
     orange="%F{166}"
     purple="%F{135}"
     hotpink="%F{161}"
-    limegreen="%F{118}"
+    limegreen="%F{180}"
 else
     turquoise="%F{cyan}"
     orange="%F{yellow}"
     purple="%F{magenta}"
     hotpink="%F{red}"
-    limegreen="%F{green}"
+    limegreen="%F{blue}"
 fi
 
 # enable VCS systems you use
@@ -48,7 +48,8 @@ zstyle ':vcs_info:*:prompt:*' check-for-changes true
 # %a - action (e.g. rebase-i)
 # %R - repository path
 # %S - path in the repository
-PR_RST="%f"
+PR_RST=""
+#PR_RST="%f"
 FMT_BRANCH="(%{$turquoise%}%b%u%c${PR_RST})"
 FMT_ACTION="(%{$limegreen%}%a${PR_RST})"
 FMT_UNSTAGED="%{$orange%}●"
