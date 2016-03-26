@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
+export ZSH=$HOME/system-configuration/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -8,11 +8,10 @@ export ZSH=$HOME/.oh-my-zsh
 case $system_type in
     Linux)
 	ZSH_THEME="robbyrussell"
-	#ZSH_THEME="miloshadzic"
-	#ZSH_THEME="ys"
         ;;
     Darwin)
 	ZSH_THEME="muse"
+	ZSH_THEME="juanghurtado"
         ;;
     *)
         ;;
