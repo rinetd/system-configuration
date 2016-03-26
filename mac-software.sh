@@ -51,11 +51,13 @@ pip install powerline-status
 mkdir ~/tmp/
 cd ~/tmp/; git clone git@github.com:powerline/fonts.git; ./install.sh; cd -;
 
-
-brew install zsh zsh-completions
 brew install lftp
 brew install wget
 brew install global
+# 下载oh-my-zsh
+brew install zsh zsh-completions
+git clone git://github.com/robbyrussell/oh-my-zsh.git  $HOME/system-configuration/.oh-my-zsh
+
 
 # htop
 brew install htop
@@ -230,6 +232,10 @@ brew install tor
 brew install arm
 brew install torsocks
 brew cask install torbrowser
+
+# 防止dns污染
+brew cask install dnscrypt
+
 
 
 
