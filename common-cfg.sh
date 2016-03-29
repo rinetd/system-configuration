@@ -7,7 +7,7 @@
 # 
 #         Version:  1.0
 #         Created:  2014/05/05 11:03:38
-#         Changed:  <vinurs 09/24/2015 00:14:07>
+#         Changed:  <vinurs 03/29/2016 23:05:41>
 #        Revision:  none
 # 
 #          Author:  zhanghaiyuan
@@ -17,20 +17,20 @@
 ##
 
 
+# common configuration files
 
 #  NULL
 files_common=()
 # bin
 files_common+=(bin)
-# program
-files_common+=(program)
+# programs
+files_common+=(programs)
 # work
 files_common+=(work)
 # baiduyun
 files_common+=(baiduyun)
 
-# bash
-# 虽然我不用bash，但是还是保留着相关的配置
+# bash: although i don't use bash, but retain it
 files_common+=(.bashrc .bash_profile .bash_logout)
 # zsh
 files_common+=(.zshrc .zshenv .zsh .zprofile .zlogin .zlogout)

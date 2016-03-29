@@ -7,11 +7,11 @@
 # 
 #         Version:  1.0
 #         Created:  2013/09/27 10:02:22
-#         Changed:  <vinurs 11/06/2014 18:12:48>
+#         Changed:  <vinurs 03/29/2016 23:05:06>
 #        Revision:  none
 # 
 #          Author:  zhanghaiyuan
-#           Email:  <zhang.haiyuan@server.embedway.com>
+#           Email:  <zhang.haiyuan@gmail.com>
 # 
 #==============================================================================
 ##
@@ -19,9 +19,22 @@
 # 获得系统类型:linux or mac
 export system_type=$(uname)
 
+# 获得系统主系列:Linux/Mac
+export system_major=$(uname)
+# 系统次系列:rpm/deb
+system_minor=$(uname -a)
+[[ $system_minor =~ "Ubuntu" ]] && system_minor="deb"
+[[ $system_minor =~ "Fedora" ]] && system_minor="rpm"
+export system_minor
+
+echo $system_minor
+
+
+
+
 # export system type, so in other shell scripts can use it
 echo "****************************************************************"
-echo "system type is $system_type ?"
+echo "system type is $system_type:$system_minor ?"
 echo "****************************************************************"
 # 确认系统类型，如果系统类型猜测得不对，那么立马进行中断
 echo -n "It's right?[y/n]:"
@@ -32,19 +45,20 @@ case $answer in
          ;;
     N|n)
         echo  "the system type is not right, cancled"
-        exit 0
+        exit 1
         ;;
     *)
         echo "unknown choice, quit"
-        exit 0
+        exit 1
 esac
 
-# export system_type
 
-# sudo begin
+
+# sudo begin:这里为了全程只输入一次sudo密码
 sudo touch /tmp/tmp
+sudo rm -f /tmp/tmp
 
-# dirs
+# dirs for backup and install
 # git clone dir
 current_dir=`pwd`
 echo "current is $current_dir"
@@ -62,7 +76,6 @@ export install_dir
 export backup_dir
 
 # common config files
-
 sh common-cfg.sh
 
 # specific config files
