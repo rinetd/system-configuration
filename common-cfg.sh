@@ -7,7 +7,7 @@
 # 
 #         Version:  1.0
 #         Created:  2014/05/05 11:03:38
-#         Changed:  <vinurs 03/29/2016 23:05:41>
+#         Changed:  <vinurs 03/29/2016 23:06:12>
 #        Revision:  none
 # 
 #          Author:  zhanghaiyuan
@@ -29,6 +29,7 @@ files_common+=(programs)
 files_common+=(work)
 # baiduyun
 files_common+=(baiduyun)
+
 
 # bash: although i don't use bash, but retain it
 files_common+=(.bashrc .bash_profile .bash_logout)
