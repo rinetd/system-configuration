@@ -32,6 +32,8 @@ brew install coreutils
 brew tap homebrew/dupes
 brew install homebrew/dupes/grep
 
+brew install tree
+
 brew install --upgrade openssl
 brew unlink openssl && brew link openssl --force
 
