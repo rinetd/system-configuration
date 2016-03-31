@@ -7,7 +7,7 @@
 # 
 #         Version:  1.0
 #         Created:  2014/05/05 19:27:22
-#         Changed:  <vinurs 04/10/2015 08:29:53>
+#         Changed:  <vinurs 03/31/2016 20:08:47>
 #        Revision:  none
 # 
 #          Author:  zhanghaiyuan
@@ -20,28 +20,52 @@
 brew tap caskroom/cask
 brew install brew-cask
 
+
+# tmu
 brew install tmux
 brew tap sanemat/font
 # for tmux logging
 brew install ansifilter
 # for tmux copy
 brew install reattach-to-user-namespace
-# powerline
 brew install mercurial
 brew install coreutils
 brew tap homebrew/dupes
 brew install homebrew/dupes/grep
 
+# common cmd
+brew install lftp
+brew install wget
+brew install global
 brew install tree
+brew install indent
+brew install tig
+brew install wget
+brew install sdcv
+brew install cmake
+
+
+# for common lisp
+# 这里不安装sbcl，因为我使用Clozure CL
+brew install sbcl
+# lisp结合c来写代码
+brew install ecl
+brew install buildapp
+
+# ssh-copy-id
+brew install ssh-copy-id 
+
 
 brew install --upgrade openssl
 brew unlink openssl && brew link openssl --force
 
+
 # Node.js
 brew install node
 
-# python libs
-# for powerline
+
+# python, python libs
+brew install python
 easy_install psutil
 easy_install mercurial
 brew install libgit2
@@ -53,9 +77,6 @@ pip install powerline-status
 mkdir ~/tmp/
 cd ~/tmp/; git clone git@github.com:powerline/fonts.git; ./install.sh; cd -;
 
-brew install lftp
-brew install wget
-brew install global
 # 下载oh-my-zsh
 brew install zsh zsh-completions
 git clone git://github.com/robbyrussell/oh-my-zsh.git  $HOME/system-configuration/.oh-my-zsh
@@ -66,22 +87,6 @@ brew install htop
 sudo chown root:wheel /usr/local/bin/htop
 sudo chmod u+s /usr/local/bin/htop 
 
-brew install indent
-
-# for common lisp
-# 这里不安装sbcl，因为我使用Clozure CL
-brew install sbcl
-# lisp结合c来写代码
-brew install ecl
-# brew install buildapp
-
-# ssh-copy-id
-brew install ssh-copy-id 
-
-# for git log
-brew install tig
-# wget
-brew install wget
 # bzr
 brew install bzr
 brew install autoconf
@@ -91,10 +96,6 @@ brew link --force libxml2
 brew install minicom
 brew install socat
 
-# cmeake
-brew install cmake
-# sdcv for stardict
-brew install sdcv
 
 # sshfs
 brew install Caskroom/cask/osxfuse
@@ -113,12 +114,13 @@ brew install cvs
 # for music
 brew install mpg123
 
-
 # stunnel
 brew install stunnel
 
+
 # tcpreplay
 brew install tcpreplay
+
 
 # ruby
 brew install ruby
@@ -139,8 +141,6 @@ brew install gnu-indent
 brew install proxychains-ng
 brew install libuv
 
-# python
-brew install python
 
 brew install macvim --env-std --override-system-vim
 
