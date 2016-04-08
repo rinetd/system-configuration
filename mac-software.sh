@@ -34,6 +34,7 @@ brew tap homebrew/dupes
 brew install homebrew/dupes/grep
 
 # common cmd
+brew install gdb
 brew install lftp
 brew install wget
 brew install global
