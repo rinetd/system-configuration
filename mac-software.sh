@@ -99,13 +99,11 @@ brew install socat
 
 
 # sshfs
-brew install Caskroom/cask/osxfuse
+brew cask install osxfuse
 brew install sshfs
 
-# for wmctrl
-# brew unlink brew-cask
-# brew install Caskroom/cask/xquartz
-# brew install homebrew/x11/wmctrl
+# gimp gnu画图工具
+brew cask install gimp
 
 # for w3m for emacs
 brew install libatomic_ops
@@ -145,7 +143,10 @@ brew install libuv
 
 brew install macvim --env-std --override-system-vim
 
-brew install doxygen
+# dot画图工具
+brew cask install graphviz
+#配合graphviz可以生成函数调用图
+brew install doxygen --with-dot --with-doxywizard --with-libclang
 # 代码静态分析工具
 brew install cflow
 
@@ -201,12 +202,11 @@ brew cask install java
 # mac屏保
 brew cask install fliqlo
 # wireshark
+brew cask install xquartz
 brew cask install wireshark
 brew cask install mplayerx
 # sogou
 # brew cask install sogouinput
-# dot画图工具
-#brew cask install graphviz
 # 工具栏简化工具
 brew cask install bartender
 # 类似beyondcompare的比较工具,这个我是通过appstore安装的
@@ -239,6 +239,8 @@ brew cask install torbrowser
 # 防止dns污染
 brew cask install dnscrypt
 
+# 用iphone解锁mac
+brew cask install macid
 
 
 
