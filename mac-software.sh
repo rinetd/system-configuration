@@ -56,6 +56,8 @@ brew install buildapp
 # ssh-copy-id
 brew install ssh-copy-id 
 
+# kindle
+brew cask install kindle
 
 brew install --upgrade openssl
 brew unlink openssl && brew link openssl --force
