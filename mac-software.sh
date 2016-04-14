@@ -143,7 +143,8 @@ brew install proxychains-ng
 brew install libuv
 
 
-brew install macvim --env-std --override-system-vim
+# vim
+brew cask install macvim --override-system-vim
 
 # dot画图工具
 brew cask install graphviz
