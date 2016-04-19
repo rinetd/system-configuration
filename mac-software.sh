@@ -180,8 +180,8 @@ source hexo.sh
 brew install markdown
 
 # 通过brew cask安装的软件
-# 安装 Google 浏览器
-brew cask install google-chrome  
+# 安装 Google 浏览器，这个不能通过这个安装，1password跟这个安装的不兼容
+# brew cask install google-chrome  
 brew cask install alfred
 brew cask install appcleaner
 brew cask install dropbox
