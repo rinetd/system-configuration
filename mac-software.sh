@@ -66,6 +66,7 @@ brew unlink openssl && brew link openssl --force
 
 # Node.js
 brew install node
+brew install nodejs
 
 
 # python, python libs

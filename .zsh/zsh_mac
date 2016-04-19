@@ -12,7 +12,7 @@ alias md5sum='md5'
 alias vi='vim'
 
 # for homebrew
-export HOMEBREW_GITHUB_API_TOKEN=807d6806c8a7b5dfc26883aaa0ea763ccbbf497d
+export HOMEBREW_GITHUB_API_TOKEN=cddd88966c493484e1551e6bb84dc29a80bd6fe4
 
 # nvm
 source $(brew --prefix nvm)/nvm.sh 
