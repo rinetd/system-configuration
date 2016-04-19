@@ -39,6 +39,8 @@ files_common+=(.zshrc .zshenv .zsh .zprofile .zlogin .zlogout)
 files_common+=(.tmux.conf .tmux)
 # filezilla
 files_common+=(.filezilla)
+# gdb
+files_common+=(.gdbinit)
 # vim
 files_common+=(.vimrc .vim .viminfo)
 # htop
