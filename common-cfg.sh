@@ -53,6 +53,8 @@ files_common+=(.lftp)
 files_common+=(.ftproot)
 # emacs
 files_common+=(.emacs .emacs.d)
+# spacemacs
+files_common+=(.spacemacs .spacemacs.d)
 # crontab
 files_common+=(.cron.d)
 # global
