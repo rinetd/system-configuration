@@ -52,7 +52,9 @@ files_common+=(.lftp)
 # ftpd
 files_common+=(.ftproot)
 # emacs
-files_common+=(.emacs .emacs.d)
+files_common+=(.emacs)
+# 这里不会新建一个链接了,开始使用另外一套配置:spacemacs
+files_common+=(.emacs.d)
 # spacemacs
 files_common+=(.spacemacs .spacemacs.d)
 # crontab
