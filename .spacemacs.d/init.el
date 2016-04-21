@@ -26,9 +26,9 @@ values."
      ;; auto-completion
      ;; better-defaults
      emacs-lisp
-     ;; git
+     git
      ;; markdown
-     ;; org
+     org
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
@@ -249,6 +249,20 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place you code here."
+;; 显示行号
+(global-linum-mode)
+(setq column-number-mode t)
+ 
+;; 高亮括号配对
+(electric-pair-mode)
+ 
+;; 高亮括号配对
+(show-paren-mode t)
+(setq show-paren-style 'parenthesis)
+ 
+;; 美化显示符号（elisp），比如lambda会显示为λ
+(prettify-symbols-mode)
+(global-prettify-symbols-mode 1)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will

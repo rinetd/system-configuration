@@ -195,9 +195,14 @@ brew cask install iterm2
 # 删除系统自带的emacs
 sudo rm /usr/bin/emacs
 sudo rm -rf /usr/share/emacs
-brew cask install emacs
+brew tap d12frosted/emacs-plus
+brew install emacs-plus --with-cocoa --with-gnutls --with-librsvg --with-imagemagick --with-spacemacs-icon
+brew linkapps
 
-brew cask install lastpass
+#brew cask install emacs
+
+# 这个不用了，改用1password
+#brew cask install lastpass
 
 # qq
 brew cask install qq
