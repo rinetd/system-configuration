@@ -196,7 +196,7 @@ brew cask install iterm2
 sudo rm /usr/bin/emacs
 sudo rm -rf /usr/share/emacs
 brew tap d12frosted/emacs-plus
-brew install emacs-plus --with-cocoa --with-gnutls --with-librsvg --with-imagemagick --with-spacemacs-icon
+brew install emacs-plus --HEAD --with-cocoa --with-gnutls --with-librsvg --with-imagemagick --with-spacemacs-icon
 brew linkapps
 
 #brew cask install emacs
