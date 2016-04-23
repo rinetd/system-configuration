@@ -21,7 +21,7 @@ brew tap caskroom/cask
 brew install brew-cask
 
 
-# tmu
+# tmux
 brew install tmux
 brew tap sanemat/font
 # for tmux logging
@@ -32,6 +32,11 @@ brew install mercurial
 brew install coreutils
 brew tap homebrew/dupes
 brew install homebrew/dupes/grep
+
+# aria2，下载神器
+brew install aria2
+# 配合aria2使用的web页面
+git clone https://github.com/ziahamza/webui-aria2.git ~/system-configuration/
 
 # common cmd
 brew install gdb
