@@ -36,7 +36,7 @@ brew install homebrew/dupes/grep
 # aria2，下载神器
 brew install aria2
 # 配合aria2使用的web页面
-git clone https://github.com/ziahamza/webui-aria2.git ~/system-configuration/webui-aria2.git
+git clone https://github.com/ziahamza/webui-aria2.git ~/system-configuration/webui-aria2
 
 # common cmd
 brew install gdb

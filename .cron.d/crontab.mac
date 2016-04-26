@@ -6,7 +6,7 @@
 # set var
 # HOME=/home/victor
 SHELL=/bin/bash
-PATH=/sbin:/bin:/usr/sbin:/usr/bin:~/bin
+PATH=/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:~/bin
 
  
 # 每隔一分钟改变一下桌面背景
@@ -18,7 +18,7 @@ PATH=/sbin:/bin:/usr/sbin:/usr/bin:~/bin
 # 更新brew cask
 30 15 * * * /usr/local/bin/brew cask update
 # 每30分钟去检测一下aria是否在运行
-*/30 * * * * aria.sh
+*/1 * * * * aria.sh
 
 
 # 每隔3分钟用getmail去取一下邮件
