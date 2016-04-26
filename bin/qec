@@ -12,7 +12,8 @@ function qec-mac()
 
     # check argument number
     if [[ $# != 0 ]]; then
-	(/opt/homebrew-cask/Caskroom/emacs/24.5-1/Emacs.app/Contents/MacOS/bin-x86_64-10_9/emacsclient $* 2>&1 >/dev/null &)
+	#(/opt/homebrew-cask/Caskroom/emacs/24.5-1/Emacs.app/Contents/MacOS/bin-x86_64-10_9/emacsclient $* 2>&1 >/dev/null &)
+	(/usr/local/bin/emacsclient  $* 2>&1 >/dev/null &)
         #(/Applications/Emacs.app/Contents/MacOS/bin/emacsclient $* 2>&1 >/dev/null &)
     fi
 }
