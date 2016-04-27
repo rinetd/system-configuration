@@ -13,7 +13,7 @@
 
 * Description
 This layer does wonderful things:
-  - thing01
+  - this is vinurs basic setup
 
 * Install
 To use this contribution add it to your =~/.spacemacs=
