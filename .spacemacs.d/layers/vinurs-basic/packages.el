@@ -75,10 +75,14 @@ Each entry is either:
       (setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
 
       (setq scroll-step 2) ;; keyboard scroll one line at a time
-     ;; evil-insert模式下面c-h该为向前删除
+      ;; evil-insert模式下面c-h该为向前删除
       (define-key evil-insert-state-map (kbd "C-h") 'delete-backward-char)
       ;;(global-set-key [(control h)] 'delete-backward-char)
 
+      ;;;设置标题栏显示文件的完整路径名
+      (setq frame-title-format  
+            '("vinurs@知行合一^-^--PATH:%S" (buffer-file-name "%f"  
+                                                              (dired-directory dired-directory "%b"))))
 
       ;; 保存上次打开的文件的位置
       (save-place-mode 1)

@@ -22,23 +22,23 @@
   "Define key bindings for the specific MODE."
   (when (fboundp mode)
     (let ((hook (intern (concat (symbol-name mode) "-hook"))))
-      (add-hook hook 'helm-gtags-mode))
+      (add-hook hook 'helm-gtags-mode)
+	(ggtags-mode 1))
     (spacemacs/set-leader-keys-for-major-mode mode
-      "gc" 'helm-gtags-create-tags
-      "gd" 'helm-gtags-find-tag
-      "gf" 'helm-gtags-select-path
-      "gg" 'helm-gtags-dwim
-      "gG" 'helm-gtags-dwim-other-window
-      "gi" 'helm-gtags-tags-in-this-function
+      "gc" 'ggtags-create-tags 
+      "gd" 'ggtags-find-definition
+      ;;"gf" 'helm-gtags-select-path
+      "gg" 'ggtags-find-tag-dwim
+      ;; "gG" 'helm-gtags-dwim-other-window
+      ;; "gi" 'helm-gtags-tags-in-this-function
       "gl" 'helm-gtags-parse-file
       "gn" 'helm-gtags-next-history
-      "gp" 'helm-gtags-pop-stack
-      ;;"gp" 'helm-gtags-previous-history
-      "gr" 'helm-gtags-find-rtag
-      "gR" 'helm-gtags-resume
-      "gs" 'helm-gtags-select
-      "gS" 'helm-gtags-show-stack
-      "gu" 'helm-gtags-update-tags)))
+      "gp" 'pop-tag-mark
+      "gr" 'ggtags-find-reference
+      ;; "gR" 'helm-gtags-resume
+      ;; "gs" 'helm-gtags-select
+      ;; "gS" 'helm-gtags-show-stack
+      "gu" 'ggtags-update-tags)))
 
 (defun spacemacs/ggtags-enable-eldoc (mode)
   (add-hook (intern (concat (symbol-name mode) "-hook"))
