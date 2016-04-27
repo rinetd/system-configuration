@@ -30,7 +30,11 @@
 ;;; Code:
 
 (defconst vinurs-basic-packages
-  '()
+  '(
+    ;; 更够用鼠标更加平滑地移动
+    smooth-scrolling
+    ;; 保存上次打开的文件
+    )
   "The list of Lisp packages required by the vinurs-basic layer.
 
 Each entry is either:
@@ -57,6 +61,51 @@ Each entry is either:
 
       - A list beginning with the symbol `recipe' is a melpa
         recipe.  See: https://github.com/milkypostman/melpa#recipe-format")
+
+
+(defun vinurs-basic/init-smooth-scrolling ()
+  (use-package smooth-scrolling
+    :defer t
+    :init
+    (progn
+      (setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ;; one line at a time
+
+      (setq mouse-wheel-progressive-speed nil) ;; don't accelerate scrolling
+
+      (setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
+
+      (setq scroll-step 2) ;; keyboard scroll one line at a time
+      ;; 保存上次打开的文件的位置
+      (save-place-mode 1)
+      ;; 保存上次打开了哪些文档
+      (desktop-save-mode 1)
+      ;; evil-insert模式下面c-h该为向前删除
+      (define-key evil-insert-state-map (kbd "C-h") 'delete-backward-char)
+      ;;(global-set-key [(control h)] 'delete-backward-char)
+
+;; 退出的时候保存上次的光标位置
+;;(require 'saveplace)
+(setq-default save-place t)
+;;设置 .emacs-places 文件的存储路径
+(setq save-place-file "~/.emacs.d/.emacs-places")
+
+
+;; use only one desktop
+(setq desktop-save t)
+(setq desktop-load-locked-desktop t)
+(setq *desktop-dir* (list (expand-file-name "~/.emacs.d/desktop")))
+(setq desktop-base-file-name ".emacs.desktop")
+(setq desktop-path *desktop-dir*)
+(setq desktop-dir *desktop-dir*)
+(desktop-save-mode 1)
+(desktop-read)
+
+(setq desktop-path '("~/.emacs.d/"))
+(setq desktop-dirname "~/.emacs.d/")
+(setq desktop-base-file-name ".emacs-desktop")
+(server-start)
+      )))
+
 
 
 ;;; packages.el ends here

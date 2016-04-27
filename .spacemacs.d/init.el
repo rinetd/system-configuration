@@ -39,6 +39,7 @@ values."
      ;; syntax-checking
      ;; version-control
 	themes-megapack
+	vinurs-basic
 	;; 开发环境的搭建
 	vinurs-dev-env
      )
