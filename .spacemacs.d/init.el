@@ -13,7 +13,8 @@ values."
    dotspacemacs-distribution 'spacemacs
    ;; List of additional paths where to look for configuration layers.
    ;; Paths must have a trailing slash (i.e. `~/.mycontribs/')
-   dotspacemacs-configuration-layer-path '("~/.spacemacs.d/layers")
+   ;; dotspacemacs-configuration-layer-path '("~/.spacemacs.d/layers")
+    dotspacemacs-configuration-layer-path '()
    ;; List of configuration layers to load. If it is the symbol `all' instead
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
@@ -26,7 +27,7 @@ values."
      ;; auto-completion
      ;; better-defaults
 	osx
-	gtags
+;;	gtags
      emacs-lisp
      ;; git
      ;; markdown
@@ -38,6 +39,8 @@ values."
      ;; syntax-checking
      ;; version-control
 	themes-megapack
+	;; 开发环境的搭建
+	vinurs-dev-env
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -270,7 +273,7 @@ you should place you code here."
 ;; 美化显示符号（elisp），比如lambda会显示为λ
 (prettify-symbols-mode)
 (global-prettify-symbols-mode 1)
-  (spacemacs/helm-gtags-define-keys-for-mode 'c-mode)
+;;  (spacemacs/helm-gtags-define-keys-for-mode 'c-mode)
 
   )
 
