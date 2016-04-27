@@ -38,7 +38,7 @@ values."
      ;; spell-checking
      ;; syntax-checking
      ;; version-control
-	themes-megapack
+	;;themes-megapack
 	vinurs-basic
 	;; 开发环境的搭建
 	vinurs-dev-env
@@ -103,15 +103,15 @@ values."
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(tsdh-light material-light
-hemisu-light 
-			espresso
-			 spacemacs-dark
-                         spacemacs-light
-                         solarized-light
-                         solarized-dark
-                         leuven
-                         monokai
-                         zenburn)
+                                    hemisu-light 
+                                    espresso
+                                    spacemacs-dark
+                                    spacemacs-light
+                                    solarized-light
+                                    solarized-dark
+                                    leuven
+                                    monokai
+                                    zenburn)
    ;; If non nil the cursor color matches the state color in GUI Emacs.
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
@@ -216,7 +216,7 @@ hemisu-light
    ;; If non nil line numbers are turned on in all `prog-mode' and `text-mode'
    ;; derivatives. If set to `relative', also turns on relative line numbers.
    ;; (default nil)
-   dotspacemacs-line-numbers nil
+   dotspacemacs-line-numbers t
    ;; If non-nil smartparens-strict-mode will be enabled in programming modes.
    ;; (default nil)
    dotspacemacs-smartparens-strict-mode nil
@@ -263,6 +263,7 @@ you should place you code here."
 ;; 显示行号
 (global-linum-mode)
 (setq column-number-mode t)
+(setq powerline-default-separator 'arrow)
  
 ;; 高亮括号配对
 (electric-pair-mode)

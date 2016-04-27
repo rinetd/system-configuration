@@ -75,35 +75,29 @@ Each entry is either:
       (setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
 
       (setq scroll-step 2) ;; keyboard scroll one line at a time
+     ;; evil-insert模式下面c-h该为向前删除
+      (define-key evil-insert-state-map (kbd "C-h") 'delete-backward-char)
+      ;;(global-set-key [(control h)] 'delete-backward-char)
+
+
       ;; 保存上次打开的文件的位置
       (save-place-mode 1)
       ;; 保存上次打开了哪些文档
       (desktop-save-mode 1)
-      ;; evil-insert模式下面c-h该为向前删除
-      (define-key evil-insert-state-map (kbd "C-h") 'delete-backward-char)
-      ;;(global-set-key [(control h)] 'delete-backward-char)
+      ;; 退出的时候保存上次的光标位置
+      (setq-default save-place t)
+      ;;设置 .emacs-places 文件的存储路径
+      (setq save-place-file "~/.spacemacs.d/.emacs-places")
 
-;; 退出的时候保存上次的光标位置
-;;(require 'saveplace)
-(setq-default save-place t)
-;;设置 .emacs-places 文件的存储路径
-(setq save-place-file "~/.emacs.d/.emacs-places")
+      ;; use only one desktop
+      (desktop-save-mode 1)
+      (setq desktop-save t)
+      (setq desktop-load-locked-desktop t)
+      (setq *desktop-dir* (list (expand-file-name "~/.spacemacs.d/desktop/")))
+      (setq desktop-path *desktop-dir*)
+      (setq desktop-dir *desktop-dir*)
+      (setq desktop-base-file-name ".emacs.desktop")
 
-
-;; use only one desktop
-(setq desktop-save t)
-(setq desktop-load-locked-desktop t)
-(setq *desktop-dir* (list (expand-file-name "~/.emacs.d/desktop")))
-(setq desktop-base-file-name ".emacs.desktop")
-(setq desktop-path *desktop-dir*)
-(setq desktop-dir *desktop-dir*)
-(desktop-save-mode 1)
-(desktop-read)
-
-(setq desktop-path '("~/.emacs.d/"))
-(setq desktop-dirname "~/.emacs.d/")
-(setq desktop-base-file-name ".emacs-desktop")
-(server-start)
       )))
 
 
