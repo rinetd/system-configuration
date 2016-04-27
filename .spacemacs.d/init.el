@@ -264,7 +264,9 @@ you should place you code here."
 (global-linum-mode)
 (setq column-number-mode t)
 (setq powerline-default-separator 'arrow)
- 
+;; 不显示结尾的空格
+(setq spacemacs-show-trailing-whitespace nil) 
+
 ;; 高亮括号配对
 (electric-pair-mode)
  
