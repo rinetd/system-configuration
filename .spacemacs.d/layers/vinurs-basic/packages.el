@@ -31,6 +31,7 @@
 
 (defconst vinurs-basic-packages
   '(
+    (general :location local)
     ;; 更够用鼠标更加平滑地移动
     smooth-scrolling
     ;; 保存上次打开的文件
@@ -61,7 +62,6 @@ Each entry is either:
 
       - A list beginning with the symbol `recipe' is a melpa
         recipe.  See: https://github.com/milkypostman/melpa#recipe-format")
-
 
 (defun vinurs-basic/init-smooth-scrolling ()
   (use-package smooth-scrolling
