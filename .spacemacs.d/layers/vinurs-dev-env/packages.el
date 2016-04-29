@@ -92,7 +92,7 @@ Each entry is either:
     :config
     (progn
       ;; if anyone uses helm-gtags, they would want to use these key bindings
-      (define-key helm-gtags-mode-map (kbd "M-.") 'helm-gtags-dwim)
+      (define-key helm-gtags-mode-map (kbd "M-.") 'ggtags-find-tag-dwim)
       (define-key helm-gtags-mode-map (kbd "C-x 4 .") 'helm-gtags-find-tag-other-window)
       (define-key helm-gtags-mode-map (kbd "M-,") 'helm-gtags-pop-stack)
       (define-key helm-gtags-mode-map (kbd "M-*") 'helm-gtags-pop-stack))))

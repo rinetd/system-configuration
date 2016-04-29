@@ -14,7 +14,7 @@ values."
    ;; List of additional paths where to look for configuration layers.
    ;; Paths must have a trailing slash (i.e. `~/.mycontribs/')
    ;; dotspacemacs-configuration-layer-path '("~/.spacemacs.d/layers")
-    dotspacemacs-configuration-layer-path '()
+   dotspacemacs-configuration-layer-path '()
    ;; List of configuration layers to load. If it is the symbol `all' instead
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
@@ -26,8 +26,8 @@ values."
      ;; ----------------------------------------------------------------
      ;; auto-completion
      ;; better-defaults
-	osx
-;;	gtags
+     osx
+     ;;	gtags
      emacs-lisp
      ;; git
      ;; markdown
@@ -38,11 +38,10 @@ values."
      ;; spell-checking
      ;; syntax-checking
      ;; version-control
-	;;themes-megapack
-	vinurs
-	vinurs-basic
-	;; 开发环境的搭建
-	vinurs-dev-env
+     ;;themes-megapack
+     vinurs-basic
+     ;; 开发环境的搭建
+     vinurs-dev-env
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -251,7 +250,7 @@ executes.
  This function is mostly useful for variables that need to be set
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
-(setq exec-path-from-shell-arguments '("-l"))
+  (setq exec-path-from-shell-arguments '("-l"))
   )
 
 (defun dotspacemacs/user-config ()
@@ -261,24 +260,28 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place you code here."
-;; 显示行号
-(global-linum-mode)
-(setq column-number-mode t)
-(setq powerline-default-separator 'arrow)
-;; 不显示结尾的空格
-(setq spacemacs-show-trailing-whitespace nil) 
+  ;; 屏幕滚动更加平滑
+  (setq mouse-wheel-scroll-amount '(2 ((shift) . 1))) ;; two lines at a time
+  (setq mouse-wheel-progressive-speed nil) ;; don't accelerate scrolling
+  (setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
+  ;; 显示行号
+  (global-linum-mode)
+  (setq column-number-mode t)
+  (setq powerline-default-separator 'arrow)
+  ;; 不显示结尾的空格
+  (setq spacemacs-show-trailing-whitespace nil) 
 
-;; 高亮括号配对
-(electric-pair-mode)
- 
-;; 高亮括号配对
-(show-paren-mode t)
-(setq show-paren-style 'parenthesis)
- 
-;; 美化显示符号（elisp），比如lambda会显示为λ
-(prettify-symbols-mode)
-(global-prettify-symbols-mode 1)
-;;  (spacemacs/helm-gtags-define-keys-for-mode 'c-mode)
+  ;; 高亮括号配对
+  (electric-pair-mode)
+  
+  ;; 高亮括号配对
+  (show-paren-mode t)
+  (setq show-paren-style 'parenthesis)
+  
+  ;; 美化显示符号（elisp），比如lambda会显示为λ
+  (prettify-symbols-mode)
+  (global-prettify-symbols-mode 1)
+  ;;  (spacemacs/helm-gtags-define-keys-for-mode 'c-mode)
 
   )
 
