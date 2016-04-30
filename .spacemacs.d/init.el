@@ -271,6 +271,7 @@ you should place you code here."
   ;; 不显示结尾的空格
   (setq spacemacs-show-trailing-whitespace nil) 
 
+
   ;; 高亮括号配对
   (electric-pair-mode)
   
