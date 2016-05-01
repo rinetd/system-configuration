@@ -36,6 +36,8 @@
     ;;    (general :location local)
     (parent-mode)
     ;; 保存上次打开的文件
+    ;; yasnippet,强大的文本模板系统
+    (yasnippet :location elpa)
     )
   "The list of Lisp packages required by the vinurs-basic layer.
 
@@ -96,6 +98,14 @@ Each entry is either:
 
 
 )
+
+(defun vinurs-basic/init-yasnippet() 
+  (use-package yasnippet
+    )
+(push "/Users/vinurs/system-configuration/.spacemacs.d/layers/vinurs-basic/" load-path)
+
+  (require 'yasnippet-setting)
+  )
 
 
 ;;; packages.el ends here
