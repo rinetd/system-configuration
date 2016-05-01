@@ -31,7 +31,9 @@
 
 (defconst vinurs-basic-packages
   '(
-;;    (general :location local)
+    ;; 新建文件的时候自动根据后缀补全一些文件的基本信息
+    (template :location local)
+    ;;    (general :location local)
     (parent-mode)
     ;; 保存上次打开的文件
     )
@@ -84,7 +86,16 @@ Each entry is either:
 
   )
 
+(defun vinurs-basic/init-template () 
+  (use-package template
+    )
+  (setq template-default-directories 
+        '("~/.spacemacs.d/layers/vinurs-basic/local/template/templates"
+          ))
+  (template-initialize)
 
+
+)
 
 
 ;;; packages.el ends here
