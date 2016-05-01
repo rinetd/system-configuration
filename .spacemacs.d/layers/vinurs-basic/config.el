@@ -3,8 +3,10 @@
 ;; 不显示工具栏，碍眼
 (tool-bar-mode -1)
 
-;; 映射c-h为delete
-;;(define-key helm-map (kbd "C-h") 'delete-backward-char)
+;; 屏幕滚动更加平滑
+(setq mouse-wheel-scroll-amount '(3 ((shift) . 1))) ;; two lines at a time
+(setq mouse-wheel-progressive-speed nil) ;; don't accelerate scrolling
+(setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
 
 ;; 行号相关
 (global-linum-mode t)

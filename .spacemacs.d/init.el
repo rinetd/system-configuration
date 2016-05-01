@@ -260,17 +260,15 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place you code here."
-  ;; 屏幕滚动更加平滑
-  (setq mouse-wheel-scroll-amount '(2 ((shift) . 1))) ;; two lines at a time
-  (setq mouse-wheel-progressive-speed nil) ;; don't accelerate scrolling
-  (setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
-
-  ;;(setq column-number-mode t)
   (setq powerline-default-separator 'arrow)
   ;; 不显示结尾的空格
   (setq spacemacs-show-trailing-whitespace nil) 
   ;; 在编辑模式下面c-h用来删除前面一个字符
   (define-key evil-insert-state-map (kbd "C-h") 'delete-backward-char)
+  ;; 在helm模式下面映射c-h为删除前一个字符
+  (with-eval-after-load 'helm
+    (define-key helm-map (kbd "C-h") 'delete-backward-char) 
+   )
 
 
  
