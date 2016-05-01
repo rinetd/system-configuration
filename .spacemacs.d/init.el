@@ -264,8 +264,7 @@ you should place you code here."
   (setq mouse-wheel-scroll-amount '(2 ((shift) . 1))) ;; two lines at a time
   (setq mouse-wheel-progressive-speed nil) ;; don't accelerate scrolling
   (setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
-  ;; 显示行号
-  ;;(global-linum-mode)
+
   ;;(setq column-number-mode t)
   (setq powerline-default-separator 'arrow)
   ;; 不显示结尾的空格
