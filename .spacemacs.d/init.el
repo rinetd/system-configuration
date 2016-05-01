@@ -271,13 +271,7 @@ you should place you code here."
   (setq spacemacs-show-trailing-whitespace nil) 
 
 
-  ;; 高亮括号配对
-  (electric-pair-mode)
-  
-  ;; 高亮括号配对
-  (show-paren-mode t)
-  (setq show-paren-style 'parenthesis)
-  
+ 
   ;; 美化显示符号（elisp），比如lambda会显示为λ
   (prettify-symbols-mode)
   (global-prettify-symbols-mode 1)

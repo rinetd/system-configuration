@@ -31,7 +31,8 @@
 
 (defconst vinurs-basic-packages
   '(
-    (general :location local)
+;;    (general :location local)
+    (parent-mode)
     ;; 保存上次打开的文件
     )
   "The list of Lisp packages required by the vinurs-basic layer.
@@ -61,8 +62,28 @@ Each entry is either:
       - A list beginning with the symbol `recipe' is a melpa
         recipe.  See: https://github.com/milkypostman/melpa#recipe-format")
 
-(defun vinurs-basic/init-general () 
-)
+(defun vinurs-basic/init-parent-mode () 
+  (use-package parent-mode
+    :defer t)
+  ;; TODO: 增加加粗当前括号的功能
+  ;; 不过目前的这种效果也有用
+  (show-paren-mode 1)
+  (setq show-paren-delay 0)
+  ;; (setq show-paren-style 'parenthesis) ; highlight brackets
+
+  (setq show-paren-style 'expression) ; highlight entire expression
+
+  ;; (setq show-paren-style 'mixed) ; highlight brackets if visible, else entire expression
+
+  (require 'paren)
+  ;; (set-face-background 'show-paren-match (face-background 'default))
+  ;; (set-face-foreground 'show-paren-match "#def")
+  ;; 匹配的地方字体加粗，这个比较好，一直是我想要的
+  (set-face-attribute 'show-paren-match nil :weight 'extra-bold)
+
+
+  )
+
 
 
 

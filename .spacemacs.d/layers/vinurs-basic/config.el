@@ -5,12 +5,10 @@
 
 ;; 映射c-h为delete
 ;;(define-key helm-map (kbd "C-h") 'delete-backward-char)
-;; 显示行号
-;;(global-linum-mode)
+
+;; 行号相关
 (global-linum-mode t)
 ;; TODO 增加一些定制行号的字体的配置    
-;; 不过这个好象有点问题，当一行过长的时候分行显示的时候下面一行就没有颜色了
-;; 得先想好了我到底需要什么样的显示
 (custom-set-faces
  '(linum
    (   
@@ -31,8 +29,16 @@
                     )))
    ))
 
-;;括号 
 
-(setq hl-paren-colors '("blue" "purple" "cyan" "magenta" "green" "blue"
-                        "brown"  "salmon2" "wheat4"))
+;; 括号匹配相关
+;; 高亮括号配对
+(electric-pair-mode)
+
+;; 高亮括号配对
+(show-paren-mode t)
+(setq show-paren-style 'parenthesis)
+(setq hl-paren-colors
+      '("blue" "purple" "cyan" "magenta" "green" "blue"
+        "brown"  "salmon2" "wheat4"))
+
 
