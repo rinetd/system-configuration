@@ -44,9 +44,8 @@
 ;;;;  User Options, Variables
 ;;;;##########################################################################
 
-(setq yas-snippet-dirs
-      '("~/.spacemacs.d/snippets"                 ;; personal snippets
-        ))
+(setq yas-snippet-dirs (append yas-snippet-dirs
+                               '("~/.spacemacs.d/snippets/")))
 
 (yas-global-mode 1)
 
