@@ -49,6 +49,8 @@
                           #'ggtags-eldoc-function))))
 
 ;; c-settings
+ (push "/Users/vinurs/system-configuration/.spacemacs.d/layers/vinurs-dev-env/" load-path)
+
 (require 'c-settings)
 
 

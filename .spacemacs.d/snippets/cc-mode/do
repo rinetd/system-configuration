@@ -1,0 +1,7 @@
+#name : do { ... } while (...)
+# key: do
+# --
+do
+{222
+    $0
+} while (${1:condition});

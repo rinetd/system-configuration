@@ -34,7 +34,7 @@
 
 ;;; Code:
 
-(provide 'yasnippet-setting)
+(provide 'yasnippet-settings)
 (eval-when-compile
   (require 'cl))
 
