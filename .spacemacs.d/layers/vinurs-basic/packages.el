@@ -104,7 +104,7 @@ Each entry is either:
     )
 (push "/Users/vinurs/system-configuration/.spacemacs.d/layers/vinurs-basic/" load-path)
 
-  (require 'yasnippet-setting)
+  (require 'yasnippet-settings)
   )
 
 
