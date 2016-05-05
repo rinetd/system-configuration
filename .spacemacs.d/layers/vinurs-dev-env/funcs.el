@@ -28,7 +28,9 @@
       "gc" 'ggtags-create-tags 
       "gd" 'ggtags-find-definition
       ;;"gf" 'helm-gtags-select-path
-      "gg" 'ggtags-find-tag-dwim
+      "g." 'ggtags-find-tag-dwim
+      "gg" 'ggtags-grep
+      ;;"gg" 'ggtags-find-tag-dwim
       ;; "gG" 'helm-gtags-dwim-other-window
       ;; "gi" 'helm-gtags-tags-in-this-function
       "gl" 'helm-gtags-parse-file
