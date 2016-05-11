@@ -34,7 +34,7 @@
     ;; 记录每个键的按键次数
     (keyfreq)
     ;; 替换掉自带的搜索
-    ;;(swiper)
+    (helm-swoop)
     ;; 新建文件的时候自动根据后缀补全一些文件的基本信息
     (template :location local)
     ;;    (general :location local)
@@ -92,10 +92,16 @@ Each entry is either:
 
   )
 
-;(defun vinurs-basic/init-swiper ()
-;  (use-package swiper
-;    :defer t
-;    :init))
+(defun vinurs-basic/init-helm-swoop ()
+ (use-package helm-swoop
+   :defer t
+   :init
+(progn
+ (require 'helm-swoop-settings)
+)
+ ))
+
+
 
 (defun vinurs-basic/init-keyfreq ()
   (use-package keyfreq

@@ -9,6 +9,7 @@
 (setq mouse-wheel-progressive-speed nil) ;; don't accelerate scrolling
 (setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
 
+;;(require 'helm-swoop-settings)
 ;; 行号相关
 (global-linum-mode t)
 ;; TODO 增加一些定制行号的字体的配置    
