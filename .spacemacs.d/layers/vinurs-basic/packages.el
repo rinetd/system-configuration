@@ -93,13 +93,13 @@ Each entry is either:
   )
 
 (defun vinurs-basic/init-helm-swoop ()
- (use-package helm-swoop
-   :defer t
-   :init
-(progn
- (require 'helm-swoop-settings)
-)
- ))
+  (use-package helm-swoop
+    :defer t
+    :init
+    (progn
+      (require 'helm-swoop-settings)
+      )
+    ))
 
 
 
