@@ -100,8 +100,9 @@ Each entry is either:
 
 (defun vinurs-dev-env/init-graphviz-dot-mode ()
 	(use-package graphviz-dot-mode
-:defer t
-:init)
-)
+    :mode "\\.dot$"
+    :defer t
+    :init)
+  )
 
 ;;; packages.el ends here
