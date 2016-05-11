@@ -31,8 +31,10 @@
 
 (defconst vinurs-basic-packages
   '(
-;; 记录每个键的按键次数
-(keyfreq)
+    ;; 记录每个键的按键次数
+    (keyfreq)
+    ;; 替换掉自带的搜索
+    ;;(swiper)
     ;; 新建文件的时候自动根据后缀补全一些文件的基本信息
     (template :location local)
     ;;    (general :location local)
@@ -90,6 +92,11 @@ Each entry is either:
 
   )
 
+;(defun vinurs-basic/init-swiper ()
+;  (use-package swiper
+;    :defer t
+;    :init))
+
 (defun vinurs-basic/init-keyfreq ()
   (use-package keyfreq
     :defer t
@@ -97,7 +104,7 @@ Each entry is either:
     (progn
       (require 'keyfreq-settings)
 
-     ))
+      ))
   )
 
 
