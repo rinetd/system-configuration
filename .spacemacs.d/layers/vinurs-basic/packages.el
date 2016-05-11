@@ -31,6 +31,8 @@
 
 (defconst vinurs-basic-packages
   '(
+;; 记录每个键的按键次数
+(keyfreq)
     ;; 新建文件的时候自动根据后缀补全一些文件的基本信息
     (template :location local)
     ;;    (general :location local)
@@ -88,6 +90,24 @@ Each entry is either:
 
   )
 
+(defun vinurs-basic/init-keyfreq ()
+  (use-package keyfreq
+    :defer t
+    :init
+    (progn
+      (setq keyfreq-excluded-commands
+            '(self-insert-command
+              abort-recursive-edit
+              forward-char
+              backward-char
+              previous-line
+              next-line))
+      (keyfreq-mode 1)
+      (keyfreq-autosave-mode 1)
+      ))
+  )
+
+
 (defun vinurs-basic/init-template () 
   (use-package template
     )
@@ -97,12 +117,12 @@ Each entry is either:
   (template-initialize)
 
 
-)
+  )
 
 (defun vinurs-basic/init-yasnippet() 
   (use-package yasnippet
     )
-(push "/Users/vinurs/system-configuration/.spacemacs.d/layers/vinurs-basic/" load-path)
+  (push "/Users/vinurs/system-configuration/.spacemacs.d/layers/vinurs-basic/" load-path)
 
   (require 'yasnippet-settings)
   )
