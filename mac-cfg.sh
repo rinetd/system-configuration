@@ -38,5 +38,7 @@ for i in "${dotconfig_mac_array[@]}"; do
 
 done
 
-
+if [ -d "/Volumes/Transcend/" ]; then 
+   ln -s /Volumes/Transcend/home/Music/网易云音乐 ~/Music
+fi
 
