@@ -33,6 +33,7 @@
   '(
     helm-gtags
     ggtags
+	graphviz-dot-mode
     )
   "The list of Lisp packages required by the vinurs-dev-env layer.
 
@@ -97,5 +98,10 @@ Each entry is either:
       (define-key helm-gtags-mode-map (kbd "M-,") 'helm-gtags-pop-stack)
       (define-key helm-gtags-mode-map (kbd "M-*") 'helm-gtags-pop-stack))))
 
+(defun vinurs-dev-env/init-graphviz-dot-mode ()
+	(use-package graphviz-dot-mode
+:defer t
+:init)
+)
 
 ;;; packages.el ends here
