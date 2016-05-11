@@ -33,7 +33,6 @@
   '(
     helm-gtags
     ggtags
-	graphviz-dot-mode
     )
   "The list of Lisp packages required by the vinurs-dev-env layer.
 

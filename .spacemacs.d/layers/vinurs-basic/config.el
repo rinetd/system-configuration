@@ -1,3 +1,13 @@
+
+;; Prefixes
+(setq spacemacs/key-binding-prefixes '(("o"   "user-defineds")
+                                       ("oa"  "applications")
+))
+(mapc (lambda (x) (apply #'spacemacs/declare-prefix x))
+      spacemacs/key-binding-prefixes)
+
+
+
 (push "/Users/vinurs/system-configuration/.spacemacs.d/layers/vinurs-basic/" load-path)
 ;; 一行太长的时候自动换行
 (setq truncate-lines t)
