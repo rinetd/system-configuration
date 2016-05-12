@@ -94,8 +94,6 @@ git clone git://github.com/robbyrussell/oh-my-zsh.git  $HOME/system-configuratio
 
 # htop
 brew install htop
-sudo chown root:wheel /usr/local/bin/htop
-sudo chmod u+s /usr/local/bin/htop 
 
 # bzr
 brew install bzr
