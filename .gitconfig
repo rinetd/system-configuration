@@ -45,3 +45,5 @@
 	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 [commit]
 	template = ~/.git-ci-msg
+[log]
+	date = local
