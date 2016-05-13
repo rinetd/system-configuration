@@ -282,6 +282,7 @@ you should place you code here."
     (define-key helm-map (kbd "C-h") 'delete-backward-char) 
    )
 
+(setq tab-width 4)
 ;;(global-company-mode)
 (global-auto-complete-mode)
  
