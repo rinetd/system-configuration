@@ -28,3 +28,4 @@ To use this contribution add it to your =~/.spacemacs=
 | Key Binding    | Description            |
 |----------------+------------------------|
 | ~<SPC> m g d ~ | ggtags-find-definition |
+

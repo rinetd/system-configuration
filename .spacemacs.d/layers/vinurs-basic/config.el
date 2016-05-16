@@ -7,7 +7,6 @@
       spacemacs/key-binding-prefixes)
 
 
-
 (push "/Users/vinurs/system-configuration/.spacemacs.d/layers/vinurs-basic/" load-path)
 ;; 一行太长的时候自动换行
 (setq truncate-lines t)
