@@ -13,7 +13,9 @@
 
 * Description
 This layer does wonderful things:
-  - this is vinurs basic setup
+  - keyfreq 记录了每个键的按键次数，以便将来对定义的快捷键进行优化
+  - template 新建文件的时候会根据后缀名自动补填一些基本信息，例如.c/.h文件的头部信息 
+  - graphviz-dot-mode 经常需要画图，我都是用dot语言来画图，那么怎么少得了这个呢
 
 * Install
 To use this contribution add it to your =~/.spacemacs=
@@ -24,6 +26,8 @@ To use this contribution add it to your =~/.spacemacs=
 
 * Key bindings
 
-| Key Binding     | Description    |
-|-----------------+----------------|
-| ~<SPC> x x x~   | Does thing01   |
+| Key Binding      | Description          |
+|------------------+----------------------|
+| ~<SPC> o a d c ~ | compile(dot file)    |
+| ~<SPC> o a d p ~ | graphviz-dot-view    |
+| ~<SPC> o a d p ~ | graphviz-dot-preview |

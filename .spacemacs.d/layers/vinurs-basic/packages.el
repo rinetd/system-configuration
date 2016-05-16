@@ -42,8 +42,8 @@
     ;; 保存上次打开的文件
     ;; yasnippet,强大的文本模板系统
     (yasnippet :location elpa)
-;; dot画图语言
-	(graphviz-dot-mode)
+    ;; dot画图语言
+    (graphviz-dot-mode)
     )
   "The list of Lisp packages required by the vinurs-basic layer.
 
@@ -136,13 +136,13 @@ Each entry is either:
   )
 
 (defun vinurs-basic/init-graphviz-dot-mode ()
-        (use-package graphviz-dot-mode
+  (use-package graphviz-dot-mode
     :mode "\\.dot$"
     :defer t
     :init
     (progn
-     (require 'graphviz-dot-mode-settings)
-)
+      (require 'graphviz-dot-mode-settings)
+      )
     )
   )
 
