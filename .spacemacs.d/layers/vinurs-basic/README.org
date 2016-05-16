@@ -12,7 +12,8 @@
  - [[Key bindings][Key bindings]]
 
 * Description
-This layer does wonderful things:
+  这是我的basic layer，主要是为了更好地使用emacs来进行操作而设定的一些基本配置。
+  This layer does wonderful things:
   - keyfreq 记录了每个键的按键次数，以便将来对定义的快捷键进行优化
   - template 新建文件的时候会根据后缀名自动补填一些基本信息，例如.c/.h文件的头部信息 
   - graphviz-dot-mode 经常需要画图，我都是用dot语言来画图，那么怎么少得了这个呢

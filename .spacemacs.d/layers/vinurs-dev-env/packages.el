@@ -98,7 +98,7 @@ Each entry is either:
       (define-key helm-gtags-mode-map (kbd "M-*") 'helm-gtags-pop-stack))))
 
 (defun vinurs-dev-env/init-graphviz-dot-mode ()
-	(use-package graphviz-dot-mode
+  (use-package graphviz-dot-mode
     :mode "\\.dot$"
     :defer t
     :init)

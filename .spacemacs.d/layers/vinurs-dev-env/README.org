@@ -12,6 +12,7 @@
  - [[Key bindings][Key bindings]]
 
 * Description
+  作为一名程序员，下面配置了平时开发中需要用到的一些插件，让开发更easy更happy。
 This layer does wonderful things:
   - thing01
 
