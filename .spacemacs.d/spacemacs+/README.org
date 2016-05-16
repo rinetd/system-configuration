@@ -1,0 +1,30 @@
+#+TITLE: spacemacs-append layer
+#+HTML_HEAD_EXTRA: <link rel="stylesheet" type="text/css" href="../css/readtheorg.css" />
+
+#+CAPTION: logo
+
+# The maximum height of the logo should be 200 pixels.
+[[img/spacemacs-append.png]]
+
+* Table of Contents                                        :TOC_4_org:noexport:
+ - [[Decsription][Description]]
+ - [[Install][Install]]
+ - [[Key bindings][Key bindings]]
+
+* Description
+  默认的spacemacs的配置不一定全部符合我们的习惯，但是又不想所有的配置全部放在init.el里面，感觉这样乱糟糟的，因此创建了这个目录来对默认的spacemacs的一些配置做一些修改。
+This layer does wonderful things:
+  - thing01
+
+* Install
+To use this contribution add it to your =~/.spacemacs=
+
+#+begin_src emacs-lisp
+  (setq-default dotspacemacs-configuration-layers '(spacemacs-append))
+#+end_src
+
+* Key bindings
+
+| Key Binding     | Description    |
+|-----------------+----------------|
+| ~<SPC> x x x~   | Does thing01   |
