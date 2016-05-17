@@ -36,7 +36,7 @@
     ;; 新建文件的时候自动根据后缀补全一些文件的基本信息
     (template :location local)
     ;;    (general :location local)
-    (parent-mode)
+    ;; (parent-mode)
     ;; 保存上次打开的文件
     ;; yasnippet,强大的文本模板系统
     (yasnippet :location elpa)
