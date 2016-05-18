@@ -24,8 +24,6 @@ values."
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
-;; 对默认的spacemacs的所作的补充
-	spacemacs-append
      ;; auto-completion
      ;; better-defaults
      osx
