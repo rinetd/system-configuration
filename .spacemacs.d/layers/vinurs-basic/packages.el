@@ -33,6 +33,8 @@
   '(
     ;; 记录每个键的按键次数
     (keyfreq)
+	;; highlight tail性感的小尾巴标识最近修改
+	(highlight-tail)
     ;; 新建文件的时候自动根据后缀补全一些文件的基本信息
     (template :location local)
     ;;    (general :location local)
@@ -90,6 +92,25 @@ Each entry is either:
   (set-face-attribute 'show-paren-match nil :weight 'extra-bold)
 
 
+  )
+
+(defun vinurs-basic/init-highlight-tail ()
+  (use-package keyfreq
+    :defer t
+    :init
+    (progn
+	  ;; 全局开启highlight-tail mode
+	  (highlight-tail-mode t)
+	  (setq highlight-tail-steps 8
+			highlight-tail-timer 1)
+	  ;; 不用const以后隔一段时间以后高亮的小尾巴就会取消
+	  ;;(setq highlight-tail-posterior-type 'const)
+	  ;; 设置高亮的颜色
+	  (setq highlight-tail-colors
+			'(("#c1e156" . 0)
+			  ("#b8ff07" . 25)
+			  ("#00c377" . 60)))
+      ))
   )
 
 
