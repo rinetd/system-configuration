@@ -42,6 +42,12 @@
                     )))
    ))
 
+;; 保存session, use only one desktop
+(setq-default save-place t) 
+(desktop-save-mode 1)
+(setq desktop-path '("~/.spacemacs.d/"))
+(setq desktop-dirname "~/.spacemacs.d/")
+(setq desktop-base-file-name ".emacs-desktop")
 
 ;; 括号匹配相关
 ;; 高亮括号配对
@@ -55,3 +61,10 @@
         "brown"  "salmon2" "wheat4"))
 
 
+;; 对于用client打开的文件，也用C-x k关闭
+(add-hook 'server-switch-hook
+		  (lambda ()
+			(when (current-local-map)
+			  (use-local-map (copy-keymap (current-local-map))))
+			(when server-buffer-clients
+			  (local-set-key (kbd "C-x k") 'server-edit))))  
