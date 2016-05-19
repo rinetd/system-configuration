@@ -106,7 +106,7 @@ Each entry is either:
 	  ;; const则渐变固定长度的修 改，而这个长度则是由highlight-tail-const-width来控制的
 	  (setq highlight-tail-posterior-type 'const)
 	  (setq highlight-tail-steps 80
-	  		highlight-tail-timer 0.02
+	  		highlight-tail-timer 0.1
 			highlight-tail-const-width 30
 			) 
 	  ;; 设置高亮的颜色
