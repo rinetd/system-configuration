@@ -120,6 +120,7 @@ Each entry is either:
     :defer t
     :init
     (progn
+(hl-highlight-mode t)
 	  ;; 定义高亮快捷键, h表示highlight
 	  (setq vinurs/hl-anything-key-binding-prefixes "h")
 	  (spacemacs/set-leader-keys
