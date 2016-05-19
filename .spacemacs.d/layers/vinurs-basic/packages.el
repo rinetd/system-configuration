@@ -97,21 +97,23 @@ Each entry is either:
   )
 
 (defun vinurs-basic/init-highlight-tail ()
-  (use-package highlight
+  (use-package highlight-tail
     :defer t
     :init
     (progn
 	  ;; 全局开启highlight-tail mode
 	  (highlight-tail-mode t)
-	  (setq highlight-tail-steps 8
-			highlight-tail-timer 1)
-	  ;; 不用const以后隔一段时间以后高亮的小尾巴就会取消
-	  ;;(setq highlight-tail-posterior-type 'const)
+	  ;; const则渐变固定长度的修 改，而这个长度则是由highlight-tail-const-width来控制的
+	  (setq highlight-tail-posterior-type 'const)
+	  (setq highlight-tail-steps 80
+	  		highlight-tail-timer 0.02
+			highlight-tail-const-width 30
+			) 
 	  ;; 设置高亮的颜色
 	  (setq highlight-tail-colors
 			'(("#c1e156" . 0)
 			  ("#b8ff07" . 25)
-			  ("#00c377" . 60)))
+			  ("#00c377" . 60))) 
       ))
   )
 
