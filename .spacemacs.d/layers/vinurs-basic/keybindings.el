@@ -17,6 +17,10 @@
 
 
 
+
+
+
+
 ;; highlight相关快捷键定义
 (spacemacs/set-leader-keys "hs" 'hlt-highlight-symbol) 
 (spacemacs/set-leader-keys "hr" 'hlt-unhighlight-symbol) 
