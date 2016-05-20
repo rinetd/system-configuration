@@ -33,6 +33,9 @@
   '(
     helm-gtags
     ggtags
+
+	;; git相关
+	;; magit
     )
   "The list of Lisp packages required by the vinurs-dev-env layer.
 
@@ -103,5 +106,16 @@ Each entry is either:
     :defer t
     :init)
   )
+
+;; (defun vinurs-dev-env/init-magit ()
+;;   (use-package magit
+;;     :defer t
+;;     :init
+;; 	(progn
+;; 	  (require 'git-settings))
+;; 	)
+;;   )
+
+
 
 ;;; packages.el ends here

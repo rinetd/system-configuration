@@ -36,12 +36,12 @@ values."
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
      ;; spell-checking
-     ;; syntax-checking
-     ;; version-control
      ;;themes-megapack
      vinurs-basic
      ;; 开发环境的搭建
      vinurs-dev-env
+	 ;; 这个关于git的layer还是不错的
+	 git
 	(auto-completion
 	:variables
 	auto-completion-return-key-behavior 'complete
