@@ -27,8 +27,11 @@ To use this contribution add it to your =~/.spacemacs=
 
 * Key bindings
 
-| Key Binding      | Description          |
-|------------------+----------------------|
-| ~<SPC> o a d c ~ | compile(dot file)    |
-| ~<SPC> o a d p ~ | graphviz-dot-view    |
-| ~<SPC> o a d p ~ | graphviz-dot-preview |
+| Key Binding      | Description            |
+|------------------+------------------------|
+| ~<SPC> o a d c ~ | compile(dot file)      |
+| ~<SPC> o a d p ~ | graphviz-dot-view      |
+| ~<SPC> o a d p ~ | graphviz-dot-preview   |
+| ~<SPC> h s ~     | hlt-highlight-symbol   |
+| ~<SPC> h r ~     | hlt-unhighlight-symbol |
+|                  |                        |

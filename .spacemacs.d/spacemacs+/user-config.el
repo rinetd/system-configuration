@@ -1,11 +1,11 @@
-;;; user-config.el --- 
+;;; user-config.el ---
 
 ;; Copyright 2016 vinurs
 ;;
 ;; Author: vinurs@vinurs-mac.local
 ;; Version: $Id: @(#)user-config.el,v 0.0 2016/05/17 07:28:04 vinurs Exp $
 ;; Changed: <victor 02/20/2011 11:29:30>
-;; Keywords: 
+;; Keywords:
 ;; X-URL: not distributed yet
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -24,7 +24,7 @@
 
 ;;; Commentary:
 
-;; 
+;;
 
 ;; Put this file into your load-path and the following into your ~/.emacs:
 ;;   (require 'user-config)
@@ -44,16 +44,16 @@
 ;;;;##########################################################################
 
 
-
 (setq powerline-default-separator 'arrow)
 ;; 不显示结尾的空格
-(setq spacemacs-show-trailing-whitespace nil) 
-;; 在编辑模式下面c-h用来删除前面一个字符
+(setq-default spacemacs-show-trailing-whitespace nil) 
+
+; 在编辑模式下面c-h用来删除前面一个字符
 (define-key evil-insert-state-map (kbd "C-h") 'delete-backward-char)
 ;; 在helm模式下面映射c-h为删除前一个字符
 (with-eval-after-load 'helm
-  (define-key helm-map (kbd "C-h") 'delete-backward-char) 
-  (define-key helm-map (kbd "C-k") 'kill-line) 
+  (define-key helm-map (kbd "C-h") 'delete-backward-char)
+  (define-key helm-map (kbd "C-k") 'kill-line)  
   )
 ;; 这里总觉得这样放乱糟糟的
 (with-eval-after-load 'helm-swoop
@@ -63,6 +63,13 @@
   (define-key helm-multi-swoop-map (kbd "C-s") 'helm-next-line)
   )
 
+(defun off-whitespace ()
+  ;; 不显示结尾的空格
+  (setq-default spacemacs-show-trailing-whitespace nil) 
+  (message "this is off-whitespace")
+  )
+(add-hook 'whitespace-mode-hook 'off-whitespace) 
+(add-hook 'c-mode-common-hook 'off-whitespace) 
 
 (setq tab-width 4)
 ;;(global-company-mode)

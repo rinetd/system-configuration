@@ -35,9 +35,7 @@
     (keyfreq)
 	;; highlight tail性感的小尾巴标识最近修改
 	(highlight-tail)
-	;; hl-anything高亮各种symbol之类的
-	(hl-anything)
-    ;; 新建文件的时候自动根据后缀补全一些文件的基本信息
+	;; 新建文件的时候自动根据后缀补全一些文件的基本信息
     (template :location local)
     ;;    (general :location local)
     ;; (parent-mode)
@@ -114,25 +112,6 @@ Each entry is either:
 			'(("#c1e156" . 0)
 			  ("#b8ff07" . 25)
 			  ("#00c377" . 60))) 
-      ))
-  )
-
-(defun vinurs-basic/init-hl-anything ()
-  (use-package hl-anything
-    :defer t
-    :init
-    (progn
-(hl-highlight-mode t)
-	  ;; 定义高亮快捷键, h表示highlight
-	  (setq vinurs/hl-anything-key-binding-prefixes "h")
-	  (spacemacs/set-leader-keys
-		(concat vinurs/hl-anything-key-binding-prefixes "s")
-		'hl-highlight-thingatpt-local
-
-		(concat vinurs/hl-anything-key-binding-prefixes "S")
-		'hl-unhighlight-all-local
-
-		)
       ))
   )
 
