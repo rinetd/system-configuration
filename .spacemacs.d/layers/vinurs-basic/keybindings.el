@@ -8,9 +8,7 @@
   (setq mac-command-modifier 'meta)
   (global-set-key [kp-delete] 'delete-char) ;; sets fn-delete to be right-delete
 
-  ;; 一些emacs的快捷键我还是喜欢的
-  (define-key evil-motion-state-map (kbd "C-e") 'end-of-line) 
-  )
+ )
 
 ;; 代码折叠相关快捷键设定
 (spacemacs/set-leader-keys "ha" 'hs-hide-all) 

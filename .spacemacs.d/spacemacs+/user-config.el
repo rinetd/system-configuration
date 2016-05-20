@@ -55,6 +55,10 @@
   (define-key helm-map (kbd "C-h") 'delete-backward-char)
   (define-key helm-map (kbd "C-k") 'kill-line)  
   )
+
+;; 一些emacs的快捷键我还是喜欢的
+(define-key evil-motion-state-map (kbd "C-e") 'end-of-line) 
+ 
 ;; 这里总觉得这样放乱糟糟的
 (with-eval-after-load 'helm-swoop
   (define-key helm-swoop-map (kbd "C-r") 'helm-previous-line)
@@ -63,13 +67,7 @@
   (define-key helm-multi-swoop-map (kbd "C-s") 'helm-next-line)
   )
 
-(defun off-whitespace ()
-  ;; 不显示结尾的空格
-  (setq-default spacemacs-show-trailing-whitespace nil) 
-  (message "this is off-whitespace")
-  )
-(add-hook 'whitespace-mode-hook 'off-whitespace) 
-(add-hook 'c-mode-common-hook 'off-whitespace) 
+
 
 (setq tab-width 4)
 ;;(global-company-mode)

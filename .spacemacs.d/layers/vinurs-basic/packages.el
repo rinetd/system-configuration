@@ -142,7 +142,7 @@ Each entry is either:
 (defun vinurs-basic/init-yasnippet() 
   (use-package yasnippet
     )
-  (push "/Users/vinurs/system-configuration/.spacemacs.d/layers/vinurs-basic/" load-path)
+;;  (push "/Users/vinurs/system-configuration/.spacemacs.d/layers/vinurs-basic/" load-path)
 
   (require 'yasnippet-settings)
   )

@@ -1,4 +1,4 @@
-
+(push "/Users/vinurs/system-configuration/.spacemacs.d/layers/vinurs-basic/" load-path)
 ;; Prefixes
 (setq spacemacs/key-binding-prefixes '(("o"   "user-defineds")
                                        ("oa"  "applications")
