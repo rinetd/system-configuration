@@ -1,6 +1,6 @@
 ################### mac emacs config start ###################
 alias emacs='(open -a emacs --args &)'
-alias emacs="($HOME/Applications/Emacs.app/Contents/MacOS/Emacs &)"
+#alias emacs="(/Applications/Emacs.app/Contents/MacOS/Emacs &)"
 #alias emacs='(/Applications/Emacs.app/Contents/MacOS/Emacs &)'
 #alias emacsclient="$HOME/Applications/Emacs.app/Contents/MacOS/bin/emacsclient "
 #ln -sF $HOME/Applications/Emacs.app/Contents/MacOS/bin/emacsclient $HOME/bin/
