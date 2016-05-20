@@ -57,6 +57,7 @@
   )
 
 ;; 一些emacs的快捷键我还是喜欢的
+(define-key evil-motion-state-map (kbd "e") 'end-of-line) 
 (define-key evil-motion-state-map (kbd "C-e") 'end-of-line) 
  
 ;; 这里总觉得这样放乱糟糟的
