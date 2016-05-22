@@ -40,8 +40,6 @@
     ;;    (general :location local)
     ;; (parent-mode)
     ;; 保存上次打开的文件
-    ;; yasnippet,强大的文本模板系统
-    (yasnippet :location elpa)
     ;; dot画图语言
     (graphviz-dot-mode)
     )
@@ -137,14 +135,6 @@ Each entry is either:
   (template-initialize)
 
 
-  )
-
-(defun vinurs-basic/init-yasnippet() 
-  (use-package yasnippet
-    )
-;;  (push "/Users/vinurs/system-configuration/.spacemacs.d/layers/vinurs-basic/" load-path)
-
-  (require 'yasnippet-settings)
   )
 
 (defun vinurs-basic/init-graphviz-dot-mode ()

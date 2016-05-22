@@ -69,14 +69,17 @@
   )
 
 
-
 (setq tab-width 4)
-;;(global-company-mode)
-(global-auto-complete-mode)
+
+
+;; 自动补全的重新设置
+(define-key ac-completing-map (kbd "C-n") 'ac-next) 
+(define-key ac-completing-map (kbd "C-p") 'ac-previous) 
+(global-company-mode)
 
 ;; 美化显示符号（elisp），比如lambda会显示为λ
-(prettify-symbols-mode)
-(global-prettify-symbols-mode 1)
+;; (prettify-symbols-mode)
+;; (global-prettify-symbols-mode 1)
 ;;  (spacemacs/helm-gtags-define-keys-for-mode 'c-mode)
 
 

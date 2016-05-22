@@ -42,19 +42,27 @@ values."
      vinurs-dev-env
 	 ;; 这个关于git的layer还是不错的
 	 git
-	(auto-completion
-	:variables
-	auto-completion-return-key-behavior 'complete
-	auto-completion-tab-key-behavior 'cycle
-	auto-completion-complete-with-key-sequence nil
-	auto-completion-complete-with-key-sequence-delay 0.1
-	auto-completion-private-snippets-directory nil
-	auto-completion-enable-snippets-in-popup t
-	auto-completion-enable-help-tooltip t
-	auto-completion-enable-sort-by-usage t
-	auto-completion-private-snippets-directory  (concat (car dotspacemacs-configuration-layer-path) "snippets/")
-	)
-	)
+	 ;; 自动补全的layer
+	 (auto-completion :variables
+					  ;; return键表示确认当前的选择
+					  auto-completion-return-key-behavior 'complete
+					  ;; 自动补全中tab是一直循环着可选项
+					  auto-completion-tab-key-behavior 'cycle
+					  auto-completion-complete-with-key-sequence nil
+					  auto-completion-complete-with-key-sequence-delay 0.1
+					  auto-completion-private-snippets-directory nil
+					  ;; 弹出式的自动补全
+					  auto-completion-enable-snippets-in-popup t
+					  ;; 自动补全出的时候还带对应的帮助信息
+					  auto-completion-enable-help-tooltip t
+					  ;; 私有snippets目录
+					  auto-completion-private-snippets-directory (concat (car dotspacemacs-configuration-layer-path)
+					  		  "snippets/")
+
+					  auto-completion-enable-sort-by-usage t
+
+					  )
+	 )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
@@ -272,6 +280,7 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place you code here."
+  (desktop-save-mode 1)
   (load-file "~/.spacemacs.d/spacemacs+/user-config.el") 
   )
 
@@ -284,7 +293,7 @@ you should place you code here."
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-	(s powerline keyfreq avy iedit smartparens projectile dash helm-core hydra package-build bind-map evil helm-company helm-c-yasnippet company-statistics company-quickhelp company auto-yasnippet ac-ispell auto-complete yasnippet helm async mmm-mode markdown-toc markdown-mode helm-flyspell git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter gh-md flycheck-pos-tip pos-tip flycheck diff-hl auto-dictionary helm-gtags ggtags request gitignore-mode magit magit-popup git-commit with-editor reveal-in-osx-finder pbcopy osx-trash orgit org-present org-pomodoro alert log4e gntp launchctl zenburn-theme zen-and-art-theme ws-butler window-numbering which-key volatile-highlights vi-tilde-fringe use-package underwater-theme ujelly-theme twilight-theme twilight-bright-theme twilight-anti-bright-theme tronesque-theme toxi-theme toc-org tangotango-theme tango-plus-theme tango-2-theme sunny-day-theme subatomic256-theme subatomic-theme spacemacs-theme spaceline spacegray-theme soothe-theme soft-stone-theme soft-morning-theme soft-charcoal-theme smyx-theme smooth-scrolling smeargle seti-theme reverse-theme restart-emacs rainbow-delimiters railscasts-theme quelpa purple-haze-theme professional-theme popwin planet-theme phoenix-dark-pink-theme phoenix-dark-mono-theme persp-mode pcre2el pastels-on-dark-theme paradox page-break-lines organic-green-theme org-repo-todo org-plus-contrib org-bullets open-junk-file oldlace-theme occidental-theme obsidian-theme niflheim-theme neotree naquadah-theme mustang-theme move-text monokai-theme molokai-theme magit-gitflow macrostep lush-theme lorem-ipsum linum-relative light-soap-theme leuven-theme jbeans-theme jazz-theme ir-black-theme inkpot-theme info+ indent-guide ido-vertical-mode hungry-delete htmlize hl-todo highlight-parentheses highlight-numbers highlight-indentation heroku-theme help-fns+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-gitignore helm-flx helm-descbinds helm-ag hc-zenburn-theme gruvbox-theme gruber-darker-theme gotham-theme google-translate golden-ratio gnuplot gitconfig-mode gitattributes-mode git-timemachine git-messenger gandalf-theme flx-ido flatui-theme flatland-theme firebelly-theme fill-column-indicator fancy-battery expand-region exec-path-from-shell evil-visualstar evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-args evil-anzu eval-sexp-fu espresso-theme elisp-slime-nav dracula-theme django-theme define-word darktooth-theme darkmine-theme darkburn-theme dakrone-theme cyberpunk-theme clues-theme clean-aindent-mode cherry-blossom-theme busybee-theme buffer-move bubbleberry-theme bracketed-paste birds-of-paradise-plus-theme badwolf-theme auto-highlight-symbol auto-compile anti-zenburn-theme ample-zen-theme aggressive-indent afternoon-theme adaptive-wrap ace-window ace-link ace-jump-helm-line))))
+	(spinner highlight-tail parent-mode pkg-info epl graphviz-dot-mode flx anzu highlight packed popup bind-key s powerline keyfreq avy iedit smartparens projectile dash helm-core hydra package-build bind-map evil helm-company helm-c-yasnippet company-statistics company-quickhelp company auto-yasnippet ac-ispell auto-complete yasnippet helm async mmm-mode markdown-toc markdown-mode helm-flyspell git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter gh-md flycheck-pos-tip pos-tip flycheck diff-hl auto-dictionary helm-gtags ggtags request gitignore-mode magit magit-popup git-commit with-editor reveal-in-osx-finder pbcopy osx-trash orgit org-present org-pomodoro alert log4e gntp launchctl zenburn-theme zen-and-art-theme ws-butler window-numbering which-key volatile-highlights vi-tilde-fringe use-package underwater-theme ujelly-theme twilight-theme twilight-bright-theme twilight-anti-bright-theme tronesque-theme toxi-theme toc-org tangotango-theme tango-plus-theme tango-2-theme sunny-day-theme subatomic256-theme subatomic-theme spacemacs-theme spaceline spacegray-theme soothe-theme soft-stone-theme soft-morning-theme soft-charcoal-theme smyx-theme smooth-scrolling smeargle seti-theme reverse-theme restart-emacs rainbow-delimiters railscasts-theme quelpa purple-haze-theme professional-theme popwin planet-theme phoenix-dark-pink-theme phoenix-dark-mono-theme persp-mode pcre2el pastels-on-dark-theme paradox page-break-lines organic-green-theme org-repo-todo org-plus-contrib org-bullets open-junk-file oldlace-theme occidental-theme obsidian-theme niflheim-theme neotree naquadah-theme mustang-theme move-text monokai-theme molokai-theme magit-gitflow macrostep lush-theme lorem-ipsum linum-relative light-soap-theme leuven-theme jbeans-theme jazz-theme ir-black-theme inkpot-theme info+ indent-guide ido-vertical-mode hungry-delete htmlize hl-todo highlight-parentheses highlight-numbers highlight-indentation heroku-theme help-fns+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-gitignore helm-flx helm-descbinds helm-ag hc-zenburn-theme gruvbox-theme gruber-darker-theme gotham-theme google-translate golden-ratio gnuplot gitconfig-mode gitattributes-mode git-timemachine git-messenger gandalf-theme flx-ido flatui-theme flatland-theme firebelly-theme fill-column-indicator fancy-battery expand-region exec-path-from-shell evil-visualstar evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-args evil-anzu eval-sexp-fu espresso-theme elisp-slime-nav dracula-theme django-theme define-word darktooth-theme darkmine-theme darkburn-theme dakrone-theme cyberpunk-theme clues-theme clean-aindent-mode cherry-blossom-theme busybee-theme buffer-move bubbleberry-theme bracketed-paste birds-of-paradise-plus-theme badwolf-theme auto-highlight-symbol auto-compile anti-zenburn-theme ample-zen-theme aggressive-indent afternoon-theme adaptive-wrap ace-window ace-link ace-jump-helm-line))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
