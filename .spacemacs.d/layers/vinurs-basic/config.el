@@ -12,13 +12,6 @@
 (tool-bar-mode -1)
 
 
-;; 高亮当前行，重新设置一下颜色
-(global-hl-line-mode t)
-(set-face-attribute 'hl-line nil
-					:background "light green"
-					:bold t
-					;; :height 140
-					) 
 ;; 屏幕滚动更加平滑
 (setq mouse-wheel-scroll-amount '(3 ((shift) . 1))) ;; two lines at a time
 (setq mouse-wheel-progressive-speed nil) ;; don't accelerate scrolling

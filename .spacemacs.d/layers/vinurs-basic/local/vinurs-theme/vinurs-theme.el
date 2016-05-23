@@ -72,6 +72,12 @@ Semantic, and Ansi-Color faces are included.")
    'vinurs
    `(default                        ((,class (:foreground ,black :background ,white))))
    `(cursor                         ((,class (:inverse-video t))))
+	;;;;; hl-line-mode高亮当前行
+   `(hl-line-face ((,class (:background "light blue" :bold t))
+                   (t :weight bold)))
+   `(hl-line ((,class (:background ,"light blue" :bold t)) ; old emacsen
+              (t :weight bold)))
+
    ;; Highlighting faces
    `(fringe                         ((,class (:foreground ,alum-2 :background ,white))))
    `(highlight                      ((,class (:background ,alum-1))))
@@ -87,10 +93,11 @@ Semantic, and Ansi-Color faces are included.")
    `(helm-swoop-target-line-face    ((,class (:background ,alum-1))))
    `(helm-swoop-target-line-block-face ((,class (:background ,alum-1))))
    `(trailing-whitespace            ((,class (:background ,red-1))))
-   ;; Mode line faces
-   `(mode-line                      ((,class (:background ,red-1 :foreground ,alum-1))))
+   ;; Mode line faces,状态栏
+   `(mode-line                      ((,class (:background ,blue-1 :foreground ,alum-1))))
    ;;`(mode-line                      ((,class (:background ,alum-5 :foreground ,alum-1))))
-   `(mode-line-inactive             ((,class (:background ,alum-4 :foreground ,alum-3))))
+   `(mode-line-inactive             ((,class (:background ,alum-1 :foreground ,alum-3))))
+   ;;`(mode-line-inactive             ((,class (:background ,alum-4 :foreground ,alum-3))))
    ;; Window border face
    `(vertical-border                ((,class (:foreground ,alum-3))))
    ;; Escape and prompt faces
