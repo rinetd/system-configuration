@@ -1,4 +1,4 @@
-;;; tango-plus-theme.el --- A color theme based on the tango palette
+;;; vinurs-theme.el --- A color theme based on the tango palette
 
 ;; Copyright (C) 2013 Titus von der Malsburg <malsburg@posteo.de>
 
@@ -47,7 +47,7 @@
 
 ;;; Code:
 
-(deftheme tango-plus
+(deftheme vinurs
   "Face colors using the Tango palette (light background).
 Basic, Font Lock, Isearch, Gnus, Message, Ediff, Flyspell,
 Semantic, and Ansi-Color faces are included.")
@@ -69,7 +69,7 @@ Semantic, and Ansi-Color faces are included.")
       (blue-0 "#8cc4ff") (orange-4 "#b35000"))
 
   (custom-theme-set-faces
-   'tango-plus
+   'vinurs
    `(default                        ((,class (:foreground ,black :background ,white))))
    `(cursor                         ((,class (:inverse-video t))))
    ;; Highlighting faces
@@ -88,7 +88,8 @@ Semantic, and Ansi-Color faces are included.")
    `(helm-swoop-target-line-block-face ((,class (:background ,alum-1))))
    `(trailing-whitespace            ((,class (:background ,red-1))))
    ;; Mode line faces
-   `(mode-line                      ((,class (:background ,alum-5 :foreground ,alum-1))))
+   `(mode-line                      ((,class (:background ,red-1 :foreground ,alum-1))))
+   ;;`(mode-line                      ((,class (:background ,alum-5 :foreground ,alum-1))))
    `(mode-line-inactive             ((,class (:background ,alum-4 :foreground ,alum-3))))
    ;; Window border face
    `(vertical-border                ((,class (:foreground ,alum-3))))
@@ -224,7 +225,7 @@ Semantic, and Ansi-Color faces are included.")
                                     ((,class (:underline  ,red-1)))))
 
   (custom-theme-set-variables
-   'tango-plus
+   'vinurs
    `(ansi-color-names-vector [,alum-6 ,red-3 ,cham-3 ,butter-3
 				      ,blue-3 ,plum-3 ,blue-1 ,alum-1])))
 
@@ -233,10 +234,10 @@ Semantic, and Ansi-Color faces are included.")
   (add-to-list 'custom-theme-load-path
                (file-name-as-directory (file-name-directory load-file-name))))
 
-(provide-theme 'tango-plus)
+(provide-theme 'vinurs)
 
 ;; Local Variables:
 ;; no-byte-compile: t
 ;; End:
 
-;;; tango-plus-theme.el ends here
+;;; vinurs-theme.el ends here

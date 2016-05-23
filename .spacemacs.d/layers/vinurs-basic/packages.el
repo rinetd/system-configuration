@@ -42,6 +42,8 @@
     ;; 保存上次打开的文件
     ;; dot画图语言
     (graphviz-dot-mode)
+	;; vinurs-theme，自己改造的主题
+	(vinurs-theme :location local)
     )
   "The list of Lisp packages required by the vinurs-basic layer.
 
@@ -147,5 +149,13 @@ Each entry is either:
       )
     )
   )
+
+
+(defun vinurs-basic/init-vinurs-theme ()
+ (use-package vinurs-theme
+	)
+  
+  )
+
 
 ;;; packages.el ends here
