@@ -47,14 +47,29 @@
 
 ;;; Code:
 
+(defun true-color-p ()
+  (or
+   (display-graphic-p)
+   (= (tty-display-color-cells) 16777216)))
+
+
 (deftheme vinurs
   "Face colors using the Tango palette (light background).
 Basic, Font Lock, Isearch, Gnus, Message, Ediff, Flyspell,
 Semantic, and Ansi-Color faces are included.")
 
 (let ((class '((class color) (min-colors 89)))
-      ;; Tango palette colors.
-      (butter-1 "#fce94f") (butter-2 "#edd400") (butter-3 "#c4a000")
+      ;; vinurs palette colors.
+      ;;                              GUI       TER  
+      ;; generic
+      (butter-1 (if (true-color-p) "#fce94f" "#fce94f"))
+      (yellow   (if (true-color-p) "#b1951d" "#b1951d"))
+      (war      (if (true-color-p) "#dc752f" "#dc752f"))
+      (comp     (if (true-color-p) "#6c4173" "#6c4173"))
+      (act2     (if (true-color-p) "#d3d3e7" "#d3d3e7"))
+      (err      (if (true-color-p) "#e0211d" "#e0211d"))
+ (butter-2 "#edd400") 
+(butter-3 "#c4a000")
       (orange-1 "#fcaf3e") (orange-2 "#f57900") (orange-3 "#ce5c00")
       (choc-1 "#e9b96e") (choc-2 "#c17d11") (choc-3 "#8f5902")
       (cham-1 "#8ae234") (cham-2 "#73d216") (cham-3 "#4e9a06")
@@ -63,7 +78,7 @@ Semantic, and Ansi-Color faces are included.")
       (red-1 "#ef2929")  (red-2 "#cc0000")  (red-3 "#a40000")
       (alum-1 "#eeeeec") (alum-2 "#d3d7cf") (alum-3 "#babdb6")
       (alum-4 "#888a85") (alum-5 "#5f615c") (alum-6 "#2e3436")
-      ;; Not in Tango palette; used for better contrast.
+      ;; Not in vinurs palette; used for better contrast.
       (white "#ffffff") (black "#000000") (plum-0 "#edc4e2")
       (red-0 "#ffe6e6") (cham-0 "#e6ffc2") (cham-4 "#346604")
       (blue-0 "#8cc4ff") (orange-4 "#b35000")
@@ -82,6 +97,15 @@ Semantic, and Ansi-Color faces are included.")
               (t :weight bold)))
    ;; 行号
    `(linum ((,class (:background ,default-bg-color :foreground ,default-fg-color))))
+    ;;;;; auto-complete,自动补全
+   `(ac-completion-face ((,class (:background ,"red" :foreground ,"green"))))
+   `(ac-candidate-face ((,class (:inherit nil :background "light green"))))
+`(ac-gtags-selection-face ((,class (:inherit ac-selection-face :background "dark cyan"))))
+   `(company-tooltip-common ((,class (:inherit company-tooltip :weight bold :underline nil))))
+   `(company-tooltip-common-selection ((,class (:inherit company-tooltip-selection :weight bold :underline nil))))
+
+	;; 缩进提示线
+`(indent-guide-face ((,class (:foreground ,"#535353"))))
 
    ;; Highlighting faces
    `(fringe                         ((,class (:foreground ,alum-2 :background ,white))))
@@ -90,7 +114,6 @@ Semantic, and Ansi-Color faces are included.")
    `(show-paren-match               ((,class (:background ,alum-1))))
    `(region                         ((,class (:background ,butter-1))))
    `(secondary-selection            ((,class (:background ,blue-0))))
-   ;;`(isearch                        ((,class (:foreground ,white :background ,cham-1))))
    ;; C-s的时候显示的颜色
    `(isearch                        ((,class (:foreground ,"black" :background ,"red"))))
    `(lazy-highlight                 ((,class (:background ,cham-0))))
@@ -100,8 +123,20 @@ Semantic, and Ansi-Color faces are included.")
    `(helm-swoop-target-word-face    ((,class (:background ,"red"))))
    `(helm-swoop-target-line-face    ((,class (:background ,alum-1))))
    `(helm-swoop-target-line-block-face ((,class (:background ,alum-1))))
+
    ;; 这个暂时是一个绕过去的方式，因为这个颜色我暂时去不掉，所以这个跟背景色一样
+;;;;; whitespace-mode
+     `(whitespace-empty ((,class (:background nil :foreground ,yellow))))
+     `(whitespace-indentation ((,class (:background nil :foreground ,war))))
+     `(whitespace-line ((,class (:background nil :foreground ,comp))))
+     `(whitespace-newline ((,class (:background ,default-bg-color :foreground ,comp))))
+     `(whitespace-space ((,class (:background nil :foreground ,act2))))
+     `(whitespace-space-after-tab ((,class (:background nil :foreground ,yellow))))
+     `(whitespace-space-before-tab ((,class (:background nil :foreground ,yellow))))
+     `(whitespace-tab ((,class (:background nil))))
+     `(whitespace-trailing ((,class (:background ,"red" :foreground ,war))))
    `(trailing-whitespace            ((,class (:background ,default-bg-color))))
+
    ;; Mode line faces,状态栏
    `(mode-line                      ((,class (:background ,blue-1 :foreground ,alum-1))))
    `(mode-line-inactive             ((,class (:background ,alum-1 :foreground ,alum-3))))
