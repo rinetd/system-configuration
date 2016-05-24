@@ -24,7 +24,7 @@
 (spacemacs/set-leader-keys "hr" 'hlt-unhighlight-symbol) 
 ;; 其实highlight区域基本不常用，所以这里这个快捷键去掉
 ;; (spacemacs/set-leader-keys "hr" 'hlt-highlight-region) 
-;; (spacemacs/set-leader-keys "hR" 'hlt-unhighlight-region) 
+(spacemacs/set-leader-keys "hR" 'hlt-unhighlight-region) 
 ;; 设置highlight字体以及颜色
 
 
