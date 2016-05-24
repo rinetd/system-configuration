@@ -11,7 +11,10 @@
 ;; 不显示工具栏，碍眼
 (tool-bar-mode -1)
 
+;; Insert multiple spaces for indentation:
+(setq indent-tabs-mode nil) 
 
+;; Insert TAB for indentation:
 ;; 屏幕滚动更加平滑
 (setq mouse-wheel-scroll-amount '(3 ((shift) . 1))) ;; two lines at a time
 (setq mouse-wheel-progressive-speed nil) ;; don't accelerate scrolling

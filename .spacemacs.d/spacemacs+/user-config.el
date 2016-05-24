@@ -71,6 +71,15 @@
 
 (setq tab-width 4)
 
+;; 缩进提示线的配置，竖线
+(setq indent-tabs-mode nil) 
+(setq indent-guide-delay 0.1) 
+(setq indent-guide-recursive t) 
+;;(setq indent-guide-char ":") 
+;;(set-face-background 'indent-guide-face "dimgray") 
+
+
+(indent-guide-global-mode) 
 
 ;; 自动补全的重新设置
 (define-key ac-completing-map (kbd "C-n") 'ac-next) 
