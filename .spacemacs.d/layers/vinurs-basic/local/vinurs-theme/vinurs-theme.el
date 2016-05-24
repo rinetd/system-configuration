@@ -66,17 +66,24 @@ Semantic, and Ansi-Color faces are included.")
       ;; Not in Tango palette; used for better contrast.
       (white "#ffffff") (black "#000000") (plum-0 "#edc4e2")
       (red-0 "#ffe6e6") (cham-0 "#e6ffc2") (cham-4 "#346604")
-      (blue-0 "#8cc4ff") (orange-4 "#b35000"))
+      (blue-0 "#8cc4ff") (orange-4 "#b35000")
+	  (default-bg-color "white")
+	  (default-fg-color "black"))
 
   (custom-theme-set-faces
    'vinurs
-   `(default                        ((,class (:foreground ,black :background ,white))))
+   `(default                        ((,class (:foreground ,default-fg-color :background ,default-bg-color))))
    `(cursor                         ((,class (:inverse-video t))))
 	;;;;; hl-line-mode高亮当前行
    `(hl-line-face ((,class (:background "light blue" :bold t))
                    (t :weight bold)))
    `(hl-line ((,class (:background ,"light blue" :bold t)) ; old emacsen
               (t :weight bold)))
+   ;; 行号
+   `(linum ((,class (:background ,default-bg-color :foreground ,default-fg-color))))
+   ;; (custom-set-faces
+   ;; 	'(linum ((t (:inherit (shadow default) :background "#073642" :foreground "#586e75"))))) 
+
 
    ;; Highlighting faces
    `(fringe                         ((,class (:foreground ,alum-2 :background ,white))))
