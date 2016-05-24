@@ -73,7 +73,8 @@ Semantic, and Ansi-Color faces are included.")
   (custom-theme-set-faces
    'vinurs
    `(default                        ((,class (:foreground ,default-fg-color :background ,default-bg-color))))
-   `(cursor                         ((,class (:inverse-video t))))
+   ;; 光标
+   `(cursor                         ((,class (:background ,"red")))) 
 	;;;;; hl-line-mode高亮当前行
    `(hl-line-face ((,class (:background "light blue" :bold t))
                    (t :weight bold)))
@@ -81,9 +82,6 @@ Semantic, and Ansi-Color faces are included.")
               (t :weight bold)))
    ;; 行号
    `(linum ((,class (:background ,default-bg-color :foreground ,default-fg-color))))
-   ;; (custom-set-faces
-   ;; 	'(linum ((t (:inherit (shadow default) :background "#073642" :foreground "#586e75"))))) 
-
 
    ;; Highlighting faces
    `(fringe                         ((,class (:foreground ,alum-2 :background ,white))))
@@ -93,14 +91,17 @@ Semantic, and Ansi-Color faces are included.")
    `(region                         ((,class (:background ,butter-1))))
    `(secondary-selection            ((,class (:background ,blue-0))))
    ;;`(isearch                        ((,class (:foreground ,white :background ,cham-1))))
+   ;; C-s的时候显示的颜色
    `(isearch                        ((,class (:foreground ,"black" :background ,"red"))))
    `(lazy-highlight                 ((,class (:background ,cham-0))))
    `(evil-ex-substitute-matches     ((,class (:background ,red-0 :strike-through ,red-1))))
    `(evil-ex-substitute-replacement ((,class (:background ,cham-0))))
-   `(helm-swoop-target-word-face    ((,class (:background ,cham-1))))
+   ;;`(helm-swoop-target-word-face    ((,class (:background ,cham-1))))
+   `(helm-swoop-target-word-face    ((,class (:background ,"red"))))
    `(helm-swoop-target-line-face    ((,class (:background ,alum-1))))
    `(helm-swoop-target-line-block-face ((,class (:background ,alum-1))))
-   `(trailing-whitespace            ((,class (:background ,red-1))))
+   ;; 这个暂时是一个绕过去的方式，因为这个颜色我暂时去不掉，所以这个跟背景色一样
+   `(trailing-whitespace            ((,class (:background ,default-bg-color))))
    ;; Mode line faces,状态栏
    `(mode-line                      ((,class (:background ,blue-1 :foreground ,alum-1))))
    `(mode-line-inactive             ((,class (:background ,alum-1 :foreground ,alum-3))))
