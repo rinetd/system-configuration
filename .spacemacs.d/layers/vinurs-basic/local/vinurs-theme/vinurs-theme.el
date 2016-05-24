@@ -92,7 +92,8 @@ Semantic, and Ansi-Color faces are included.")
    `(show-paren-match               ((,class (:background ,alum-1))))
    `(region                         ((,class (:background ,butter-1))))
    `(secondary-selection            ((,class (:background ,blue-0))))
-   `(isearch                        ((,class (:foreground ,white :background ,cham-1))))
+   ;;`(isearch                        ((,class (:foreground ,white :background ,cham-1))))
+   `(isearch                        ((,class (:foreground ,"black" :background ,"red"))))
    `(lazy-highlight                 ((,class (:background ,cham-0))))
    `(evil-ex-substitute-matches     ((,class (:background ,red-0 :strike-through ,red-1))))
    `(evil-ex-substitute-replacement ((,class (:background ,cham-0))))
@@ -102,9 +103,7 @@ Semantic, and Ansi-Color faces are included.")
    `(trailing-whitespace            ((,class (:background ,red-1))))
    ;; Mode line faces,状态栏
    `(mode-line                      ((,class (:background ,blue-1 :foreground ,alum-1))))
-   ;;`(mode-line                      ((,class (:background ,alum-5 :foreground ,alum-1))))
    `(mode-line-inactive             ((,class (:background ,alum-1 :foreground ,alum-3))))
-   ;;`(mode-line-inactive             ((,class (:background ,alum-4 :foreground ,alum-3))))
    ;; Window border face
    `(vertical-border                ((,class (:foreground ,alum-3))))
    ;; Escape and prompt faces
@@ -127,6 +126,7 @@ Semantic, and Ansi-Color faces are included.")
    ;; Button and link faces
    `(link                           ((,class (:underline t :foreground ,blue-3))))
    `(link-visited                   ((,class (:underline t :foreground ,blue-2))))
+
    ;; Gnus faces
    `(gnus-group-news-1              ((,class (:weight bold :foreground ,plum-3))))
    `(gnus-group-news-1-low          ((,class (:foreground ,plum-3))))
@@ -193,14 +193,20 @@ Semantic, and Ansi-Color faces are included.")
    `(mu4e-unread-face               ((,class (:foreground ,blue-3 :weight bold))))
    `(mu4e-replied-face              ((,class (:foreground ,alum-4))))
    `(mu4e-header-highlight-face     ((,class (:background ,alum-1))))
+
    ;; Helm
+   ;; 用helm-swoop的时候出来的第一行的颜色设置
    `(helm-source-header             ((,class (:background ,butter-2 :foreground ,alum-5
                                               :weight bold :height 1.3
                                               :family "Sans Serif"))))
-   `(helm-selection                 ((,class (:background ,alum-1))))
-   `(helm-action                    ((,class ())))
-   `(helm-candidate-number          ((,class (:background ,alum-5
-                                              :foreground ,butter-1))))
+   `(helm-selection                 ((,class (:background ,"light blue"))))
+   ;;`(helm-selection                 ((,class (:background ,alum-1))))
+   `(helm-action                    ((,class (:background ,"red"))))
+;;   `(helm-candidate-number          ((,class (:background ,alum-5
+   `(helm-candidate-number          ((,class (:background ,"red"
+                                              :foreground ,"black"))))
+;;   :foreground ,butter-1))))
+
    ;; Markdown mode
    `(markdown-italic-face           ((,class (:slant italic))))
    `(markdown-bold-face             ((,class (:weight bold))))
