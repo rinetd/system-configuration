@@ -74,17 +74,14 @@
 ;; 缩进提示线的配置，竖线
 (setq indent-tabs-mode nil) 
 (setq indent-guide-delay 0.1) 
-(setq indent-guide-recursive t) 
-;;(setq indent-guide-char ":") 
-;;(set-face-background 'indent-guide-face "dimgray") 
-
-
+;; 这个跟自动补全下拉菜单配合得不好，所以暂时不启用
+;;(setq indent-guide-recursive t) 
 (indent-guide-global-mode) 
 
 ;; 自动补全的重新设置
+(global-company-mode)
 (define-key ac-completing-map (kbd "C-n") 'ac-next) 
 (define-key ac-completing-map (kbd "C-p") 'ac-previous) 
-(global-company-mode)
 
 ;; 美化显示符号（elisp），比如lambda会显示为λ
 ;; (prettify-symbols-mode)
