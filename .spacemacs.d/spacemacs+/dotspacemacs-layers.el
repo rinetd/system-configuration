@@ -79,35 +79,37 @@
    ;;        shell-default-height 30
    ;;        shell-default-position 'bottom)
    ;; spell-checking
-   themes-megapack
+   ;; themes-megapack
    ;;(c-c++ :variables c-c++-enable-clang-support nil)
-   (c-c++ )
+   (c-c++)
    vinurs-basic
    ;; 开发环境的搭建
    vinurs-dev-env
    ;; 这个关于git的layer还是不错的
    git
    ;; 自动补全的layer
-   (auto-completion :variables
-					;; return键表示确认当前的选择
-					auto-completion-return-key-behavior 'complete
-					;; 自动补全中tab是一直循环着可选项
-					auto-completion-tab-key-behavior 'cycle
-					auto-completion-complete-with-key-sequence nil
-					auto-completion-complete-with-key-sequence-delay 0.0
-					auto-completion-private-snippets-directory nil
-					;; 弹出式的自动补全
-					auto-completion-enable-snippets-in-popup t
-					;; 自动补全出的时候还带对应的帮助信息
-					auto-completion-enable-help-tooltip t
-					;; 私有snippets目录
-					auto-completion-private-snippets-directory (concat (car dotspacemacs-configuration-layer-path)
-																	   "snippets/")
-
-					auto-completion-enable-sort-by-usage t
-
-					)
+   (auto-completion
+	:variables
+	;; return键表示确认当前的选择
+	auto-completion-return-key-behavior 'complete
+	;; 自动补全中tab是一直循环着可选项
+	auto-completion-tab-key-behavior 'cycle
+	auto-completion-complete-with-key-sequence nil
+	auto-completion-complete-with-key-sequence-delay 0.0
+	auto-completion-private-snippets-directory nil
+	;; 弹出式的自动补全
+	auto-completion-enable-snippets-in-popup t
+	;; 自动补全出的时候还带对应的帮助信息
+	auto-completion-enable-help-tooltip t
+	;; 私有snippets目录
+	auto-completion-private-snippets-directory (concat (car dotspacemacs-configuration-layer-path)
+													   "snippets/")
+	
+	auto-completion-enable-sort-by-usage t
+	
+	)
    ;; end 自动补全
+   vinurs-themes
    )
  ;; List of additional packages that will be installed without being
  ;; wrapped in a layer. If you need some configuration for these

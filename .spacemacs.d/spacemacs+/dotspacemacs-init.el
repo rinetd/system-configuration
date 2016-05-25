@@ -102,7 +102,7 @@
                                :width normal
                                :powerline-scale 1.1)
    dotspacemacs-themes '(tsdh-light 
-   						 )
+    						 )
 
    ;; The leader key
    dotspacemacs-leader-key "SPC"

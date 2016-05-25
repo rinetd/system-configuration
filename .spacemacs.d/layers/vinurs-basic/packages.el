@@ -151,11 +151,5 @@ Each entry is either:
   )
 
 
-(defun vinurs-basic/init-vinurs-theme ()
- (use-package vinurs-theme
-	)
-  
- )
-
 
 ;;; packages.el ends here
