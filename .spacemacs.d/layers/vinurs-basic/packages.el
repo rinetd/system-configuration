@@ -100,7 +100,7 @@ Each entry is either:
     :init
     (progn
 	  ;; 全局开启highlight-tail mode
-	  (highlight-tail-mode t)
+	  ;;(highlight-tail-mode t)
 	  ;; const则渐变固定长度的修 改，而这个长度则是由highlight-tail-const-width来控制的
 	  (setq highlight-tail-posterior-type 'const)
 	  (setq highlight-tail-steps 80
@@ -151,11 +151,11 @@ Each entry is either:
   )
 
 
-(defun vinurs-basic/init-vinurs-theme ()
-  (use-package vinurs-theme
-	)
+;;(defun vinurs-basic/init-vinurs-theme ()
+;;  (use-package vinurs-theme
+;;	)
   
-  )
+ ;; )
 
 
 ;;; packages.el ends here

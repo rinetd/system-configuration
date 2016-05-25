@@ -97,12 +97,13 @@ Semantic, and Ansi-Color faces are included.")
               (t :weight bold)))
    ;; 行号
    `(linum ((,class (:background ,default-bg-color :foreground ,default-fg-color))))
+
     ;;;;; auto-complete,自动补全
-   `(ac-completion-face ((,class (:background ,"red" :foreground ,"green"))))
-   `(ac-candidate-face ((,class (:inherit nil :background "light green"))))
-`(ac-gtags-selection-face ((,class (:inherit ac-selection-face :background "dark cyan"))))
-   `(company-tooltip-common ((,class (:inherit company-tooltip :weight bold :underline nil))))
-   `(company-tooltip-common-selection ((,class (:inherit company-tooltip-selection :weight bold :underline nil))))
+;;   `(ac-completion-face ((,class (:background ,"red" :foreground ,"green"))))
+ ;;  `(ac-candidate-face ((,class (:inherit nil :background "light green"))))
+  ;; `(ac-gtags-selection-face ((,class (:inherit ac-selection-face :background "dark cyan"))))
+   ;;`(company-tooltip-common ((,class (:inherit company-tooltip :weight bold :underline nil))))
+  ;; `(company-tooltip-common-selection ((,class (:inherit company-tooltip-selection :weight bold :underline nil))))
 
 	;; 缩进提示线
 `(indent-guide-face ((,class (:foreground ,"#535353"))))

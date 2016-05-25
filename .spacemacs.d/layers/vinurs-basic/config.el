@@ -6,6 +6,10 @@
 (mapc (lambda (x) (apply #'spacemacs/declare-prefix x))
       spacemacs/key-binding-prefixes)
 
+;;由菜单修改配置的东西将会保存在custom-file里
+(setq custom-file "~/.spacemacs.d/custom.el")
+
+
 ;; 一行太长的时候自动换行
 (setq truncate-lines t)
 ;; 不显示工具栏，碍眼
