@@ -1,4 +1,4 @@
-;;; basic-theme.el --- A color theme based on the tango palette
+;;; vinurs-love-theme.el --- A color theme based on the tango palette
 
 ;; Copyright (C) 2013 Titus von der Malsburg <malsburg@posteo.de>
 
@@ -66,7 +66,14 @@ Semantic, and Ansi-Color faces are included.")
       (yellow   (if (true-color-p) "#b1951d" "#b1951d"))
       (war      (if (true-color-p) "#dc752f" "#dc752f"))
       (comp     (if (true-color-p) "#6c4173" "#6c4173"))
+	  ;; One of mode-line's active colors. 
+      (act1     (if (true-color-p) "#d3d3e7" "#d3d3e7"))
+	  ;; The other active color of mode-line.
       (act2     (if (true-color-p) "#d3d3e7" "#d3d3e7"))
+	  ;; The basic color of normal text.
+      (base     (if (true-color-p) "#d3d3e7" "#d3d3e7"))
+	  ;; A dimmer version of the normal text color.
+      (base-dim (if (true-color-p) "#d3d3e7" "#d3d3e7"))
       (err      (if (true-color-p) "#e0211d" "#e0211d"))
 	  (butter-2 "#edd400") 
 	  (butter-3 "#c4a000")
@@ -86,7 +93,7 @@ Semantic, and Ansi-Color faces are included.")
 	  (default-fg-color "black"))
 
   (custom-theme-set-faces
-   'vinurs-love
+   `vinurs-love
    `(default                        ((,class (:foreground ,default-fg-color :background ,default-bg-color))))
    ;; 光标
    `(cursor                         ((t (:background ,"red")))) 
@@ -98,25 +105,34 @@ Semantic, and Ansi-Color faces are included.")
    ;; 行号
    `(linum ((,class (:background ,default-bg-color :foreground ,default-fg-color))))
 
-    ;;;;; auto-complete,自动补全
-   ;;   `(ac-completion-face ((,class (:background ,"red" :foreground ,"green"))))
-   ;;  `(ac-candidate-face ((,class (:inherit nil :background "light green"))))
+    ;; auto-complete,自动补全
+   '(company-scrollbar-bg ((t (:background "aquamarine2"))))
+   '(company-scrollbar-fg ((t (:background "dark cyan"))))
+   '(company-tooltip ((t (:background "light blue" :foreground "black"))))
+   '(company-tooltip-common ((t (:inherit company-tooltip :weight bold :underline nil))))
+   '(company-tooltip-common-selection ((t (:inherit company-tooltip-selection :weight bold :underline nil))))
+   '(company-tooltip-selection ((t (:background "purple3"))))
+
+   ;; `(ac-completion-face ((,class (:background ,"red" :foreground ,"green"))))
+   ;; `(ac-candidate-face ((,class (:inherit nil :background "light green"))))
    ;; `(ac-gtags-selection-face ((,class (:inherit ac-selection-face :background "dark cyan"))))
-   ;;`(company-tooltip-common ((,class (:inherit company-tooltip :weight bold :underline nil))))
+   ;; `(company-tooltip-common ((,class (:inherit company-tooltip :weight bold :underline nil))))
    ;; `(company-tooltip-common-selection ((,class (:inherit company-tooltip-selection :weight bold :underline nil))))
 
    ;; 缩进提示线
-   `(indent-guide-face ((,class (:foreground ,"#535353"))))
+   `(indent-guide-face ((,class (:foreground ,"red"))))
+   ;; 原来的缩进提示线的颜色
+   ;;`(indent-guide-face ((,class (:foreground ,"#535353"))))
 
    ;; Highlighting faces
-;;    `(fringe                         ((,class (:foreground ,alum-2 :background ,white))))
-;;    `(highlight                      ((,class (:background ,alum-1))))
-;;    `(sentence-highlight-face        ((,class (:background ,alum-1))))
-;;    `(show-paren-match               ((,class (:background ,alum-1))))
-;;    `(region                         ((,class (:background ,butter-1))))
-;;    `(secondary-selection            ((,class (:background ,blue-0))))
-;;    ;; C-s的时候显示的颜色
-;;    `(isearch                        ((,class (:foreground ,"black" :background ,"red"))))
+   `(fringe                         ((,class (:foreground ,alum-2 :background ,white))))
+   `(highlight                      ((,class (:background ,alum-1))))
+   `(sentence-highlight-face        ((,class (:background ,alum-1))))
+   `(show-paren-match               ((,class (:background ,alum-1))))
+   `(region                         ((,class (:background ,butter-1))))
+   `(secondary-selection            ((,class (:background ,blue-0))))
+   ;; C-s的时候显示的颜色
+   `(isearch                        ((,class (:foreground ,"black" :background ,"red"))))
 ;;    `(lazy-highlight                 ((,class (:background ,cham-0))))
 ;;    `(evil-ex-substitute-matches     ((,class (:background ,red-0 :strike-through ,red-1))))
 ;;    `(evil-ex-substitute-replacement ((,class (:background ,cham-0))))
@@ -151,18 +167,18 @@ Semantic, and Ansi-Color faces are included.")
 ;;    `(success                        ((,class (:foreground ,cham-3))))
 ;;    ;; Font lock faces
 ;;    `(font-lock-builtin-face         ((,class (:foreground ,plum-2))))
-;;    ;; 注释的设置
-;;    `(font-lock-comment-face         ((,class (:slant italic :foreground ,alum-4 :background ,white))))
-;;    ;;`(font-lock-comment-face         ((,class (:slant italic :foreground ,alum-4))))
-;;    `(font-lock-constant-face        ((,class (:weight light :foreground ,blue-3))))
-;;    `(font-lock-function-name-face   ((,class (:foreground ,red-3))))
-;;    `(font-lock-keyword-face         ((,class (:foreground ,blue-3 :weight light))))
-;;    `(font-lock-string-face          ((,class (:foreground ,choc-3 :slant italic))))
-;;    `(font-lock-type-face            ((,class (:foreground ,blue-3))))
-;;    `(font-lock-variable-name-face   ((,class (:foreground ,red-3))))
-;;    ;; Button and link faces
-;;    `(link                           ((,class (:underline t :foreground ,blue-3))))
-;;    `(link-visited                   ((,class (:underline t :foreground ,blue-2))))
+   ;; 注释的设置
+   `(font-lock-comment-face         ((,class (:slant italic :foreground ,alum-4 :background ,white))))
+   ;;`(font-lock-comment-face         ((,class (:slant italic :foreground ,alum-4))))
+   `(font-lock-constant-face        ((,class (:weight light :foreground ,blue-3))))
+   `(font-lock-function-name-face   ((,class (:foreground ,red-3))))
+   `(font-lock-keyword-face         ((,class (:foreground ,blue-3 :weight light))))
+   `(font-lock-string-face          ((,class (:foreground ,choc-3 :slant italic))))
+   `(font-lock-type-face            ((,class (:foreground ,blue-3))))
+   `(font-lock-variable-name-face   ((,class (:foreground ,red-3))))
+   ;; Button and link faces
+   `(link                           ((,class (:underline t :foreground ,blue-3))))
+   `(link-visited                   ((,class (:underline t :foreground ,blue-2))))
 
 ;;    ;; Gnus faces
 ;;    `(gnus-group-news-1              ((,class (:weight bold :foreground ,plum-3))))
@@ -230,8 +246,8 @@ Semantic, and Ansi-Color faces are included.")
 ;;    `(mu4e-unread-face               ((,class (:foreground ,blue-3 :weight bold))))
 ;;    `(mu4e-replied-face              ((,class (:foreground ,alum-4))))
 ;;    `(mu4e-header-highlight-face     ((,class (:background ,alum-1))))
-'(window-number-face ((t (:background "red" :weight bold))))
-;;    ;; Helm
+   `(window-numbering-face ((t (:background ,"red" :weight bold))) t)
+   ;;    ;; Helm
 ;;    ;; 用helm-swoop的时候出来的第一行的颜色设置
 ;;    `(helm-source-header             ((,class (:background ,butter-2 :foreground ,alum-5
 ;; 														  :weight bold :height 1.3
@@ -287,7 +303,8 @@ Semantic, and Ansi-Color faces are included.")
   (custom-theme-set-variables
    'vinurs-love
    `(ansi-color-names-vector [,alum-6 ,red-3 ,cham-3 ,butter-3
-									  ,blue-3 ,plum-3 ,blue-1 ,alum-1])))
+									  ,blue-3 ,plum-3 ,blue-1 ,alum-1]))
+  )
 
 ;;;###autoload
 (when (and (boundp 'custom-theme-load-path) load-file-name)
