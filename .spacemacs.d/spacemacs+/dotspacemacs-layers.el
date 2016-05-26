@@ -80,8 +80,8 @@
    ;;        shell-default-position 'bottom)
    ;; spell-checking
    themes-megapack
-   ;;(c-c++ :variables c-c++-enable-clang-support nil)
    (c-c++)
+   ;;(python)
    vinurs-basic
    ;; 开发环境的搭建
    vinurs-dev-env
