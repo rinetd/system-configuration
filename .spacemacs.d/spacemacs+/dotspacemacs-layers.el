@@ -79,7 +79,7 @@
    ;;        shell-default-height 30
    ;;        shell-default-position 'bottom)
    ;; spell-checking
-   ;; themes-megapack
+   themes-megapack
    ;;(c-c++ :variables c-c++-enable-clang-support nil)
    (c-c++)
    vinurs-basic

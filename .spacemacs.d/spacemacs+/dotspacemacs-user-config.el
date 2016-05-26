@@ -86,11 +86,6 @@
 ;;(setq indent-guide-recursive t) 
 (indent-guide-global-mode) 
 
-;; 自动补全的重新设置
-(global-company-mode)
-;;(define-key ac-completing-map (kbd "C-n") 'ac-next) 
-;;(define-key ac-completing-map (kbd "C-p") 'ac-previous) 
-
 ;; 美化显示符号（elisp），比如lambda会显示为λ
 ;; (prettify-symbols-mode)
 ;; (global-prettify-symbols-mode 1)
