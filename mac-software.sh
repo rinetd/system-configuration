@@ -257,6 +257,7 @@ brew cask install dnscrypt
 
 # 用iphone解锁mac
 brew cask install macid
-
+# 挺好的翻墙软件
+brew cask install lantern
 
 
