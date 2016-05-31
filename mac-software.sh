@@ -87,6 +87,9 @@ pip install powerline-status
 mkdir ~/tmp/
 cd ~/tmp/; git clone git@github.com:powerline/fonts.git; ./install.sh; cd -;
 
+# python3
+brew install python3
+
 # 下载oh-my-zsh
 brew install zsh zsh-completions
 git clone git://github.com/robbyrussell/oh-my-zsh.git  $HOME/system-configuration/.oh-my-zsh
