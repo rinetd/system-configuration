@@ -18,5 +18,7 @@
 
 
 
+# 设置开机自动启动服务的程序
+sudo apt-get install rcconf
+sudo apt-get install sysv-rc-conf
 
-exit 0
