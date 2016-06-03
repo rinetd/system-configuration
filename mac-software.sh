@@ -89,6 +89,8 @@ cd ~/tmp/; git clone git@github.com:powerline/fonts.git; ./install.sh; cd -;
 
 # python3
 brew install python3
+# librcu
+brew install userspace-rcu
 
 # 下载oh-my-zsh
 brew install zsh zsh-completions
@@ -109,8 +111,9 @@ brew install socat
 
 
 # sshfs
-brew cask install osxfuse
+brew install Caskroom/cask/osxfuse
 brew install sshfs
+brew install homebrew/fuse/sshfs
 
 # gimp gnu画图工具
 brew cask install gimp
