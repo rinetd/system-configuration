@@ -50,7 +50,11 @@
 ;; explicitly specified that a variable should be set before a package is loaded,
 ;; you should place you code here."
  
-(desktop-save-mode 1)
+;; 保存打开的文件
+(desktop-save-mode)
+(desktop-read)
+(setq-default save-place t) 
+
 
 (setq powerline-default-separator 'arrow)
 ;; 不显示结尾的空格

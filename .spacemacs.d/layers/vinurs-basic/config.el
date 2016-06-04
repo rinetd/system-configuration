@@ -9,6 +9,9 @@
 ;;由菜单修改配置的东西将会保存在custom-file里
 (setq custom-file "~/.spacemacs.d/custom.el")
 
+;;自动换行
+(add-hook 'org-mode-hook
+    (lambda () (setq truncate-lines nil)))
 
 ;; 一行太长的时候自动换行
 (setq truncate-lines t)
@@ -49,11 +52,13 @@
    ))
 
 ;; 保存session, use only one desktop
-(setq-default save-place t) 
-(desktop-save-mode 1)
-(setq desktop-path '("~/.spacemacs.d/"))
-(setq desktop-dirname "~/.spacemacs.d/")
-(setq desktop-base-file-name ".emacs-desktop")
+;; (desktop-save-mode)
+;; (desktop-read)
+
+;;(desktop-save-mode 1)
+;;(setq desktop-path '("~/.spacemacs.d/"))
+;;(setq desktop-dirname "~/.spacemacs.d/")
+;;(setq desktop-base-file-name ".emacs-desktop")
 
 ;; 括号匹配相关
 ;; 高亮括号配对
