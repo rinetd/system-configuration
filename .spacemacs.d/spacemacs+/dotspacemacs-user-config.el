@@ -50,6 +50,7 @@
 ;; explicitly specified that a variable should be set before a package is loaded,
 ;; you should place you code here."
  
+
 ;; 保存打开的文件
 (desktop-save-mode)
 (desktop-read)

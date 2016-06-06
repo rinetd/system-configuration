@@ -66,22 +66,23 @@
    ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
    ;; <M-m f e R> (Emacs style) to install them.
    ;; ----------------------------------------------------------------
-   ;; better-defaults
+   better-defaults
    ranger
    osx
    ;;	gtags
+   semantic
    emacs-lisp
    ;;(syntax-checking :variables syntax-checking-enable-by-default t)
-   ;; git
-   ;; markdown
-   ;; org
+   markdown
+   org
    ;; (shell :variables
    ;;        shell-default-height 30
    ;;        shell-default-position 'bottom)
    ;; spell-checking
    themes-megapack
    (c-c++)
-   ;;(python)
+   (python)
+   (colors)
    vinurs-basic
    ;; 开发环境的搭建
    vinurs-dev-env
