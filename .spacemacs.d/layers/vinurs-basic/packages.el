@@ -139,16 +139,31 @@ Each entry is either:
 
   )
 
+
+(spacemacs|use-package-add-hook graphviz-dot-mode
+  :pre-init
+  ;; Code
+  :post-init
+  (progn
+	(require 'graphviz-dot-mode-settings)
+	)
+  ;; Code
+  :pre-config
+  ;; Code
+  :post-config
+  ;; Code
+  )
+
 (defun vinurs-basic/init-graphviz-dot-mode ()
   (use-package graphviz-dot-mode
     :mode "\\.dot$"
     :defer t
     :init
     (progn
-      (require 'graphviz-dot-mode-settings)
+      ;; (require 'graphviz-dot-mode-settings)
       )
     )
-  )
+  ) 
 
 
 
