@@ -99,12 +99,6 @@ loaded in GNU Emacs, and `image-formats-alist' for XEmacs."
 		  (message "No image found.")))))) 
 
 
-;; ;; all buffers, try to reuse windows across all frames
-;; (add-to-list 'display-buffer-alist
-;; 			 '("*preview11*". (display-buffer-reuse-window .
-;; 												  ((reusable-frames . t))))) 
-;; (get-buffer-window "*preview11*") 
-
 (defun new1-graphviz-dot-preview ()
   "Shows an example of the current dot file in an emacs buffer.
 This assumes that we are running GNU Emacs or XEmacs under a windowing system.
@@ -165,7 +159,7 @@ loaded in GNU Emacs, and `image-formats-alist' for XEmacs."
   (concat vinurs/graphviz-key-binding-prefixes "c") 'compile
   (concat vinurs/graphviz-key-binding-prefixes "v") 'graphviz-dot-view
   (concat vinurs/graphviz-key-binding-prefixes "p") 'new1-graphviz-dot-preview
-  (concat vinurs/graphviz-key-binding-prefixes "P") 'graphviz-dot-preview
+  (concat vinurs/graphviz-key-binding-prefixes "P") 'new-graphviz-dot-preview
   ) 
 
 
