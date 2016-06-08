@@ -117,6 +117,8 @@ brew install homebrew/fuse/sshfs
 
 # gimp gnu画图工具
 brew cask install gimp
+# sourcetree
+brew install Caskroom/cask/sourcetree
 
 # for w3m for emacs
 brew install libatomic_ops
