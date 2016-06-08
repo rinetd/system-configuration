@@ -21,15 +21,16 @@ export system_type=$(uname)
 
 # 获得系统主系列:Linux/Mac
 export system_major=$(uname)
-# 系统次系列:rpm/deb
+# Linux系统次系列:rpm/deb，mac不需要这个
 system_minor=$(uname -a)
 [[ $system_minor =~ "Ubuntu" ]] && system_minor="deb"
 [[ $system_minor =~ "Fedora" ]] && system_minor="rpm"
 export system_minor
 
-echo $system_minor
+# echo $system_minor
 
 
+exit 0
 
 
 # export system type, so in other shell scripts can use it
