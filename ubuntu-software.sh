@@ -22,3 +22,4 @@
 sudo apt-get install rcconf
 sudo apt-get install sysv-rc-conf
 
+sudo apt-get install tig

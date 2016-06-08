@@ -81,7 +81,7 @@ sh common-cfg.sh
 # specific config files
 case $system_type in
     Linux)
-        sh linux-cfg.sh
+        sh fedora-cfg.sh
         ;;
     Darwin)
         sh mac-cfg.sh
@@ -93,7 +93,7 @@ esac
 # install software
 case $system_type in
     Linux)
-        sh linux-software.sh
+        sh fedora-software.sh
         ;;
     Darwin)
         sh mac-software.sh
