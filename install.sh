@@ -3,7 +3,7 @@
 # 
 #        Filename:  @(#)install.sh
 #
-#     Description:  install vinurs in your ~/ 
+#     Description:  install vinurs in your ~/    
 # 
 #         Version:  1.0
 #         Created:  2013/09/27 10:02:22
