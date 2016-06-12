@@ -31,19 +31,10 @@
 # 每次比较的时候不弹出提示
 [difftool]
     prompt = false
-
-[merge]
-	tool = Kaleidoscope
-# 每次merge的时候不弹出提示
-[mergetool]
-    prompt = false
 [filter "lfs"]
 	clean = git lfs clean %f
 	smudge = git lfs smudge %f
 	required = true
-[mergetool "Kaleidoscope"]
-	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-	trustexitcode = true
 [difftool "Kaleidoscope"]
 	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 [commit]
