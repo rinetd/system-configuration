@@ -27,6 +27,6 @@ fi
 
 # add route for internal ip
 ppp0ip=`ifconfig ppp0|grep inet|awk '{print $2}'`
-sudo route add 192.168.100.0/24 ppp0ip
+sudo route add 192.168.100.0/24 $ppp0ip
 
 exit 0
