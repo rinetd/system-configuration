@@ -51,6 +51,10 @@
                     )))
    ))
 
+;;set my fullname and my email,they can be used when mailing
+(setq user-full-name "haiyuan.zhang")
+(setq user-mail-address "haiyuan.vinurs@gmail.com")
+
 ;; 保存session, use only one desktop
 ;; (desktop-save-mode)
 ;; (desktop-read)
