@@ -1,7 +1,7 @@
 #!/bin/bash
 #==============================================================================
 #
-#        Filename:  @(#)company-route-add.sh
+#        Filename:  @(#)company-vpn-route-add.sh
 #
 #     Description:   add route for company vpn
 # 
@@ -19,7 +19,6 @@
 
 
 #  get ppp0's ip
-
 # add route for internal ip
 # route add 192.168.100.0/24 192.168.100.12
 
