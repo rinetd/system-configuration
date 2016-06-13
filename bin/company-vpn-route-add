@@ -21,6 +21,10 @@
 #  get ppp0's ip
 # add route for internal ip
 # route add 192.168.100.0/24 192.168.100.12
+ifconfig ppp0 > /dev/null 2>&1
+if [ $? -ne 0 ]; then
+	echo "ppp0 doesn't exist"
+fi
 
 
 exit 0
