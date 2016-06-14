@@ -145,6 +145,7 @@ brew install texinfo
 
 # gpg
 brew install gpg
+brew install gpg2
 
 # astyle
 brew install astyle

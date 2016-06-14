@@ -1,6 +1,7 @@
 [user]
 	name = haiyuan.zhang
 	email = haiyuan.vinurs@gmail.com
+	signingkey = 966E44FD
 [alias]
 	st = status
 	ci = commit
