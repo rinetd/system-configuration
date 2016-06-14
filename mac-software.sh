@@ -186,7 +186,8 @@ gem install bundler
 source hexo.sh
 
 
-
+# gpg tools,用来管理gpg，很漂亮
+brew install Caskroom/cask/gpgtools
 
 # markdown
 brew install markdown
