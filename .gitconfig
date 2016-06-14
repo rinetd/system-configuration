@@ -10,7 +10,10 @@
 	dt = difftool 
 	dt-cached = difftool --cached
 	dt-responsity = difftool HEAD
+	# log
+	la = log --abbrev-commit 
 	pl = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+
 	unstage = reset HEAD --
 	visual = !open -a Tower
 [push]
