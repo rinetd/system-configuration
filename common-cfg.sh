@@ -62,7 +62,7 @@ files_common+=(.cron.d)
 # global
 files_common+=(.globalrc)
 # git
-files_common+=(.gitconfig .git-ci-msg)
+files_common+=(.gitconfig .git-ci-msg .gitignore_global)
 # stardict
 files_common+=(.stardict)
 # sshfs

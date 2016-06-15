@@ -1,6 +1,7 @@
 [user]
 	name = haiyuan.zhang
 	email = haiyuan.vinurs@gmail.com
+	# 用gpg-key签名提交
 	signingkey = 966E44FD
 [alias]
 	st = status
@@ -19,13 +20,14 @@
 	visual = !open -a Tower
 [push]
 	default = simple
+# 颜色相关设置，不过我都是调用的外部命令，所以这个配置意义不是很大
 [color]
 	status = true
 	ui = true
 [core]
 	quotepath = false
 	editor = "emacsclient"
-	excludesfile = /Users/vinurs/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [filter "media"]
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
@@ -37,6 +39,7 @@
 	clean = git lfs clean %f
 	smudge = git lfs smudge %f
 	required = true
+# 提交信息的时候模板
 [commit]
 	template = ~/.gitmessage
 [log]
