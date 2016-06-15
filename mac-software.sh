@@ -239,6 +239,8 @@ brew cask install bartender
 # brew cask install kaleidoscope
 # 用来让kaleidoscope跟git配合使用
 brew cask install ksdiff
+# 功能最强的比较merge工具，不过就是收费的
+brew install Caskroom/cask/araxis-merge
 
 brew cask install zoc
 
@@ -269,5 +271,6 @@ brew cask install dnscrypt
 brew cask install macid
 # 挺好的翻墙软件
 brew cask install lantern
+
 
 
