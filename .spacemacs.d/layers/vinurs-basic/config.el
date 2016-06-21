@@ -1,10 +1,20 @@
 (push "/Users/vinurs/system-configuration/.spacemacs.d/layers/vinurs-basic/" load-path)
+
 ;; Prefixes
+;; 除了spacemac自定义的前缀键，我自己另外定义了oa表示我自己的应用程序
 (setq spacemacs/key-binding-prefixes '(("o"   "user-defineds")
                                        ("oa"  "applications")
 									   ))
 (mapc (lambda (x) (apply #'spacemacs/declare-prefix x))
       spacemacs/key-binding-prefixes)
+
+
+;; 个人信息的相关定义:邮件，全名
+(require 'personality)
+
+;; 编码设置:utf-8之类，所有的文件全部以utf8保存
+(require 'vinurs-coding-settings)
+
 
 ;;由菜单修改配置的东西将会保存在custom-file里
 (setq custom-file "~/.spacemacs.d/custom.el")
