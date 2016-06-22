@@ -15,11 +15,58 @@
 ;; 编码设置:utf-8之类，所有的文件全部以utf8保存
 (require 'vinurs-coding-settings)
 
+;; emacs server相关
+;; 对于用client打开的文件，也用C-x k关闭
+(add-hook 'server-switch-hook
+		  (lambda ()
+			(when (current-local-map)
+			  (use-local-map (copy-keymap (current-local-map))))
+			(when server-buffer-clients
+			  (local-set-key (kbd "C-x k") 'server-edit))))  
+
+;; 设置info目录路径 
+(add-to-list 'Info-default-directory-list "/usr/share/info")
+
+;; 配置path环境变量
+(setenv "PATH" (concat "/usr/local/bin/:" (getenv "PATH")))
+(setq exec-path (append exec-path '("/usr/local/bin/")))
+
+;;;###autoload
+(defun am-add-hooks (hooks function &optional append local)
+  "Call `add-hook' on hook list HOOKS use arguments FUNCTION, APPEND, LOCAL.
+HOOKS can be one list or just a hook."
+  (if (listp hooks)
+      (mapc
+       `(lambda (hook)
+          (add-hook hook ',function append local))
+       hooks)
+    (add-hook hooks function append local)))
+
+;; 当major-mode是image-mode的时候关于高亮当前行以及关闭行号显示
+;; (am-add-hooks
+;;  `(find-file-hook help-mode-hook Man-mode-hook log-view-mode-hook chart-mode-hook
+;;                   compilation-mode-hook gdb-mode-hook lisp-interaction-mode-hook
+;;                   browse-kill-ring-mode-hook completion-list-mode-hook hs-hide-hook
+;;                   inferior-ruby-mode-hook custom-mode-hook Info-mode-hook svn-log-edit-mode-hook
+;;                   package-menu-mode-hook dired-mode-hook apropos-mode-hook svn-log-view-mode-hook
+;;                   diff-mode-hook emacs-lisp-mode-hook ibuffer-mode-hook html-mode-hook
+;;                   w3m-mode-hook data-debug-hook debugger-mode-hook text-mode-hook color-theme-mode-hook
+;;                   semantic-symref-results-mode-hook sh-mode-hook groovy-mode-hook)
+;;  (lambda()
+;;    (if (not (memq major-mode '(image-mode)))
+;; 	   (progn
+;; 		 (message "hello,this is image-mode")
+;; 		 (hl-line-mode 0)
+;; 		 (linum-mode -1) 
+;; 		 )
+;; 	 ))) 
+
+
 
 ;;由菜单修改配置的东西将会保存在custom-file里
 (setq custom-file "~/.spacemacs.d/custom.el")
 
-;;自动换行
+;; org-mode, 自动换行
 (add-hook 'org-mode-hook
     (lambda () (setq truncate-lines nil)))
 
@@ -110,10 +157,3 @@
         "brown"  "salmon2" "wheat4"))
 
 
-;; 对于用client打开的文件，也用C-x k关闭
-(add-hook 'server-switch-hook
-		  (lambda ()
-			(when (current-local-map)
-			  (use-local-map (copy-keymap (current-local-map))))
-			(when server-buffer-clients
-			  (local-set-key (kbd "C-x k") 'server-edit))))  
