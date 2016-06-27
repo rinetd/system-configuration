@@ -70,7 +70,7 @@
    ranger
    osx
    ;;	gtags
-   semantic
+   ;; semantic
    emacs-lisp
    ;;(syntax-checking :variables syntax-checking-enable-by-default t)
    markdown

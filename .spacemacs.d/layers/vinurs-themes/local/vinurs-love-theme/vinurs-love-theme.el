@@ -169,7 +169,7 @@ Semantic, and Ansi-Color faces are included.")
 ;;    `(font-lock-builtin-face         ((,class (:foreground ,plum-2))))
    ;; 注释的设置
    `(font-lock-comment-face         ((,class (:slant italic :foreground ,alum-4 :background ,white))))
-   ;;`(font-lock-comment-face         ((,class (:slant italic :foreground ,alum-4))))
+   `(font-lock-comment-face         ((,class (:slant italic :foreground ,alum-4))))
    `(font-lock-constant-face        ((,class (:weight light :foreground ,blue-3))))
    `(font-lock-function-name-face   ((,class (:foreground ,red-3))))
    `(font-lock-keyword-face         ((,class (:foreground ,blue-3 :weight light))))
@@ -179,6 +179,11 @@ Semantic, and Ansi-Color faces are included.")
    ;; Button and link faces
    `(link                           ((,class (:underline t :foreground ,blue-3))))
    `(link-visited                   ((,class (:underline t :foreground ,blue-2))))
+   ;; headerae
+   ;;
+   ;; header line,开启semantic模式以后，在头部会显示函数名称，原来的太丑了，所以这里换一下 
+   `(header-line                    ((,class (:underline t :foreground "gray40" :inverse-video t))))
+
 
 ;;    ;; Gnus faces
 ;;    `(gnus-group-news-1              ((,class (:weight bold :foreground ,plum-3))))
