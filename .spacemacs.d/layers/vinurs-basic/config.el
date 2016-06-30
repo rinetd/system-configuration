@@ -1,4 +1,4 @@
-(push "/Users/vinurs/system-configuration/.spacemacs.d/layers/vinurs-basic/" load-path)
+(push "~/.spacemacs.d/layers/vinurs-basic/" load-path)
 
 ;; Prefixes
 ;; 除了spacemac自定义的前缀键，我自己另外定义了oa表示我自己的应用程序

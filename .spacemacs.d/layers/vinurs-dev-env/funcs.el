@@ -11,49 +11,44 @@
 
 
 (defun helm-gtags-dwim-other-window ()
-  "helm-gtags-dwim in the other window"
-  (interactive)
-  (let ((helm-gtags--use-otherwin t)
-        (split-height-threshold nil)
-        (split-width-threshold 140))
-    (helm-gtags-dwim)))
+	"helm-gtags-dwim in the other window"
+	(interactive)
+	(let ((helm-gtags--use-otherwin t)
+			 (split-height-threshold nil)
+			 (split-width-threshold 140))
+		(helm-gtags-dwim)))
 
 (defun spacemacs/helm-gtags-define-keys-for-mode (mode)
-  "Define key bindings for the specific MODE."
-  (when (fboundp mode)
-    (let ((hook (intern (concat (symbol-name mode) "-hook"))))
-      (add-hook hook 'helm-gtags-mode)
-	(ggtags-mode 1))
-    (spacemacs/set-leader-keys-for-major-mode mode
-      "gc" 'ggtags-create-tags 
-      "gd" 'ggtags-find-definition
-      ;;"gf" 'helm-gtags-select-path
-      "g." 'ggtags-find-tag-dwim
-      "gg" 'ggtags-grep
-      ;;"gg" 'ggtags-find-tag-dwim
-      ;; "gG" 'helm-gtags-dwim-other-window
-      ;; "gi" 'helm-gtags-tags-in-this-function
-      "gl" 'helm-gtags-parse-file
-      "gn" 'helm-gtags-next-history
-      "gp" 'pop-tag-mark
-      "gr" 'ggtags-find-reference
-      ;; "gR" 'helm-gtags-resume
-      ;; "gs" 'helm-gtags-select
-      ;; "gS" 'helm-gtags-show-stack
-      "gu" 'ggtags-update-tags)))
+	"Define key bindings for the specific MODE."
+	(when (fboundp mode)
+		(let ((hook (intern (concat (symbol-name mode) "-hook"))))
+			(add-hook hook 'helm-gtags-mode)
+			(ggtags-mode 1))
+		(spacemacs/set-leader-keys-for-major-mode mode
+			"gc" 'ggtags-create-tags 
+			"gd" 'ggtags-find-definition
+			;;"gf" 'helm-gtags-select-path
+			"g." 'ggtags-find-tag-dwim
+			"gg" 'ggtags-grep
+			;;"gg" 'ggtags-find-tag-dwim
+			;; "gG" 'helm-gtags-dwim-other-window
+			;; "gi" 'helm-gtags-tags-in-this-function
+			"gl" 'helm-gtags-parse-file
+			"gn" 'helm-gtags-next-history
+			"gp" 'pop-tag-mark
+			"gr" 'ggtags-find-reference
+			;; "gR" 'helm-gtags-resume
+			;; "gs" 'helm-gtags-select
+			;; "gS" 'helm-gtags-show-stack
+			"gu" 'ggtags-update-tags)))
 
 (defun spacemacs/ggtags-enable-eldoc (mode)
-  (add-hook (intern (concat (symbol-name mode) "-hook"))
-            (lambda ()
-              (ggtags-mode 1)
-              (eldoc-mode 1)
-              (setq-local eldoc-documentation-function
-                          #'ggtags-eldoc-function))))
-
-;; c-settings
- (push "/Users/vinurs/system-configuration/.spacemacs.d/layers/vinurs-dev-env/" load-path)
-
-(require 'c-settings)
+	(add-hook (intern (concat (symbol-name mode) "-hook"))
+		(lambda ()
+			(ggtags-mode 1)
+			(eldoc-mode 1)
+			(setq-local eldoc-documentation-function
+				#'ggtags-eldoc-function))))
 
 
 

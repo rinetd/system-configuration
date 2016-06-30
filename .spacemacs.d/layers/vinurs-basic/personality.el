@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.victor@gmail.com
 ;; Version: $Id: @(#)personality.el,v 0.0 2011/02/18 12:08:13 victor Exp $
-;; Changed: <vinurs 06/23/2016 09:19:01>
+;; Changed: <vinurs 06/30/2016 08:39:44>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -36,7 +36,7 @@
 
 (provide 'personality)
 (eval-when-compile
-  (require 'cl))
+	(require 'cl))
 
 
 
@@ -59,44 +59,43 @@
 (defconst company-user-mail-address "haiyuan.zhang@kaixiangtech.com")
 
 (defconst vinurs-info-list '(("^/Users/vinurs/work" "haiyuan.zhang"  "haiyuan.zhang@kaixiangtech.com")
-							 ;; this must be the last
-							 (nil "vinurs" "haiyuan.vinurs@gmail.com")
-							 )) 
+								;; this must be the last, this is albe default
+								(nil "vinurs" "haiyuan.vinurs@gmail.com")
+								)) 
 
 ;; user-full-name and user-mail-address will set to different when in different directory
 (defun __change-user-info (dir infolist)
-  "change the user info by dir"
-  (message "change user info")
-  (while infolist
-	(let ((tmpdir (car (car infolist)))
-		  (tmpfullname (second (car infolist)))
-		  (tmpmail (third (car infolist)))
-		  )
-	  (if (null tmpdir)
-		  (progn
-			(setq user-full-name tmpfullname)
-			(setq user-mail-address tmpmail) 
-			(setq time-stamp-format (concat user-full-name " %02m/%02d/%04y %02H:%02M:%02S"))
+	"change the user info by dir"
+	(while infolist
+		(let ((tmpdir (car (car infolist)))
+				 (tmpfullname (second (car infolist)))
+				 (tmpmail (third (car infolist)))
+				 )
+			(if (null tmpdir)
+				(progn
+					(setq user-full-name tmpfullname)
+					(setq user-mail-address tmpmail) 
+					(setq time-stamp-format (concat user-full-name " %02m/%02d/%04y %02H:%02M:%02S"))
+					)
+				(if (string-match tmpdir dir)
+					;; match
+					(progn
+						(setq user-full-name tmpfullname)
+						(setq user-mail-address tmpmail) 
+						(setq infolist nil)
+						(setq time-stamp-format (concat user-full-name " %02m/%02d/%04y %02H:%02M:%02S"))
+						)
+					;; do not match
+					)
+				)
 			)
-		(if (string-match tmpdir dir)
-			;; match
-			(progn
-			  (setq user-full-name tmpfullname)
-			  (setq user-mail-address tmpmail) 
-			  (setq infolist nil)
-			  (setq time-stamp-format (concat user-full-name " %02m/%02d/%04y %02H:%02M:%02S"))
-			  )
-		  ;; do not match
-		  )
+		(setq infolist (cdr infolist))
 		)
-	  )
-	(setq infolist (cdr infolist))
-	)
-  ) 
+	) 
 
 
 (defun change-user-info ()
-  (__change-user-info buffer-file-name vinurs-info-list)) 
+	(__change-user-info buffer-file-name vinurs-info-list)) 
 (add-hook 'find-file-hook 'change-user-info) 
 
 
