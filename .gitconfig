@@ -12,6 +12,7 @@
 	dt = difftool 
 	dt-cached = difftool --cached
 	dt-responsity = difftool HEAD
+	ls-remote-local-br = remote show origin 
 	# log
 	la = log --abbrev-commit 
 	pl = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --

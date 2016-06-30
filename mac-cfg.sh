@@ -7,7 +7,7 @@
 # 
 #         Version:  1.0
 #         Created:  2014/05/05 11:04:01
-#         Changed:  <vinurs 04/21/2015 22:05:59>
+#         Changed:  <haiyuan.zhang 06/30/2016 21:00:39>
 #        Revision:  none
 # 
 #          Author:  zhanghaiyuan
@@ -38,7 +38,7 @@ for i in "${dotconfig_mac_array[@]}"; do
 
 done
 
-if [ -d "/Volumes/Transcend/" ]; then 
-   ln -s /Volumes/Transcend/home/Music/网易云音乐 ~/Music/
+if [ -d "/Volumes/vinurs-sdcard/" ]; then 
+	ln -s /Volumes/vinurs-sdcard ~/ 
 fi
 
