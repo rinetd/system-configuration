@@ -3,6 +3,10 @@ function mk-svndir()
     mkdir -vp branches tags version trunk/{doc/,lib,patch,source}
 }
 
+function git-ssh()
+{
+	echo "Usage: git clone ssh://你的用户名@你的IP/home/～/testgit/.git"
+}
 
 function gtags-gen()
 {
