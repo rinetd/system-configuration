@@ -31,20 +31,21 @@
 
 (defconst vinurs-basic-packages
   '(
-    ;; 记录每个键的按键次数
-    (keyfreq)
-	;; highlight tail性感的小尾巴标识最近修改
-	(highlight-tail)
-	;; 新建文件的时候自动根据后缀补全一些文件的基本信息
-    (template :location local)
-    ;;    (general :location local)
-    ;; (parent-mode)
-    ;; 保存上次打开的文件
-    ;; dot画图语言
-    (graphviz-dot-mode)
-	;; vinurs-theme，自己改造的主题
-	(vinurs-theme :location local)
-    )
+	 ;; 记录每个键的按键次数
+	 (keyfreq)
+	 ;; highlight tail性感的小尾巴标识最近修改
+	 (highlight-tail)
+	 ;; 新建文件的时候自动根据后缀补全一些文件的基本信息
+	 (template :location local)
+	 ;;    (general :location local)
+	 ;; (parent-mode)
+	 ;; 保存上次打开的文件
+	 ;; dot画图语言
+	 (graphviz-dot-mode)
+	 ;; 
+	 ;; vinurs-theme，自己改造的主题
+	 (vinurs-theme :location local)
+	 )
   "The list of Lisp packages required by the vinurs-basic layer.
 
 Each entry is either:
@@ -74,7 +75,7 @@ Each entry is either:
 
 (defun vinurs-basic/init-parent-mode () 
   (use-package parent-mode
-    :defer t)
+	:defer t)
   ;; TODO: 增加加粗当前括号的功能
   ;; 不过目前的这种效果也有用
   (show-paren-mode 1)
@@ -96,44 +97,44 @@ Each entry is either:
 
 (defun vinurs-basic/init-highlight-tail ()
   (use-package highlight-tail
-    :defer t
-    :init
-    (progn
+	:defer t
+	:init
+	(progn
 	  ;; 全局开启highlight-tail mode
 	  ;;(highlight-tail-mode t)
 	  ;; const则渐变固定长度的修 改，而这个长度则是由highlight-tail-const-width来控制的
 	  (setq highlight-tail-posterior-type 'const)
 	  (setq highlight-tail-steps 80
-	  		highlight-tail-timer 0.1
-			highlight-tail-const-width 30
-			) 
+		highlight-tail-timer 0.1
+		highlight-tail-const-width 30
+		) 
 	  ;; 设置高亮的颜色
 	  (setq highlight-tail-colors
-			'(("#c1e156" . 0)
-			  ("#b8ff07" . 25)
-			  ("#00c377" . 60))) 
-      ))
+		'(("#c1e156" . 0)
+		   ("#b8ff07" . 25)
+		   ("#00c377" . 60))) 
+	  ))
   )
 
 
 
 (defun vinurs-basic/init-keyfreq ()
   (use-package keyfreq
-    :defer t
-    :init
-    (progn
-      (require 'keyfreq-settings)
+	:defer t
+	:init
+	(progn
+	  (require 'keyfreq-settings)
 
-      ))
+	  ))
   )
 
 
 (defun vinurs-basic/init-template () 
   (use-package template
-    )
+	)
   (setq template-default-directories 
-        '("~/.spacemacs.d/layers/vinurs-basic/local/template/templates"
-          ))
+	'("~/.spacemacs.d/layers/vinurs-basic/local/template/templates"
+	   ))
   (template-initialize)
 
 
@@ -156,13 +157,13 @@ Each entry is either:
 
 (defun vinurs-basic/init-graphviz-dot-mode ()
   (use-package graphviz-dot-mode
-    :mode "\\.dot$"
-    :defer t
-    :init
-    (progn
-      ;; (require 'graphviz-dot-mode-settings)
-      )
-    )
+	:mode "\\.dot$"
+	:defer t
+	:init
+	(progn
+	  ;; (require 'graphviz-dot-mode-settings)
+	  )
+	)
   ) 
 
 
