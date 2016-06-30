@@ -1,6 +1,6 @@
 
 # 如何用sshfs映射远程目录
-function sshfs-example()
+function sshfs-usage()
 {
 	echo 'sshfs -o reconnect,sshfs_sync,no_readahead,sync_readdir vinurs@xxx.xxx.xxx.xxx:/home/vinurs/dir dir'
 }
