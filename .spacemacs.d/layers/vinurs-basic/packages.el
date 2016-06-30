@@ -42,7 +42,8 @@
 	 ;; 保存上次打开的文件
 	 ;; dot画图语言
 	 (graphviz-dot-mode)
-	 ;; 
+	 ;; mode-line用图标来显示
+	 (mode-icons)
 	 ;; vinurs-theme，自己改造的主题
 	 (vinurs-theme :location local)
 	 )
@@ -117,6 +118,17 @@ Each entry is either:
   )
 
 
+(defun vinurs-basic/init-mode-icons ()
+  (use-package mode-icons
+	:defer t
+	:init
+	(progn
+	  (setq mode-icons-change-mode-name nil)
+	  (mode-icons-mode)
+	  ;; (setq mode-icons-desaturate-active t)
+
+	  ))
+  )
 
 (defun vinurs-basic/init-keyfreq ()
   (use-package keyfreq
