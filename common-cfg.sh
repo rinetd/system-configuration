@@ -79,6 +79,8 @@ files_common+=(.Mail-Mew)
 files_common+=(.mutt .muttrc .Mail)
 # getmail配合mutt收邮件
 files_common+=(.getmail)
+# .procmailrc对getmail邮件进行分类过滤
+files_common+=(.procmailrc)
 # proximac
 files_common+=(.proximac)
 # icons

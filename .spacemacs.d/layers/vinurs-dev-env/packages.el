@@ -31,12 +31,14 @@
 
 (defconst vinurs-dev-env-packages
   '(
-    helm-gtags
-    ggtags
+	 helm-gtags
+	 ggtags
 
-	;; git相关
-	;; magit
-    )
+	 ;; git相关
+	 ;; magit
+	 ;; muttrc 
+	 muttrc-mode
+	 )
   "The list of Lisp packages required by the vinurs-dev-env layer.
 
 Each entry is either:
@@ -74,9 +76,9 @@ Each entry is either:
     :init
     (progn
       (setq helm-gtags-ignore-case t
-            helm-gtags-auto-update t
-            helm-gtags-use-input-at-cursor t
-            helm-gtags-pulse-at-cursor t)
+		helm-gtags-auto-update t
+		helm-gtags-use-input-at-cursor t
+		helm-gtags-pulse-at-cursor t)
       ;; modes that do not have a layer, define here
       (spacemacs/helm-gtags-define-keys-for-mode 'tcl-mode)
       (spacemacs/helm-gtags-define-keys-for-mode 'c-mode)
@@ -107,6 +109,13 @@ Each entry is either:
     :init)
   )
 
+(defun vinurs-dev-env/init-muttrc-mode ()
+  (use-package muttrc-mode
+	:defer t
+	:init
+	(progn
+	  ))
+  )
 ;; (defun vinurs-dev-env/init-magit ()
 ;;   (use-package magit
 ;;     :defer t

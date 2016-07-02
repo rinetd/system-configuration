@@ -79,6 +79,8 @@ brew install urlview
 brew install w3m
 # 配置mutt，使用getmail来下载邮件
 brew install getmail
+# 用来过滤getmail收到的邮件
+brew install procmail
 
 
 # Node.js
