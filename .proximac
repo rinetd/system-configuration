@@ -1,6 +1,6 @@
 {
     "process_name":
-    ["Airmail 2"], 
+    ["getmail"], 
     "local_port":7070,
     "local_address":"127.0.0.1",
     "proximac_port":8558

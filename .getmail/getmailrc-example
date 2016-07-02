@@ -1,0 +1,21 @@
+[retriever]
+# 通过imap来获取邮件
+type = SimpleIMAPSSLRetriever
+server = imap.gmail.com
+username = username
+password = password
+port = 993
+
+
+[destination]
+# 以Maildir格式储存
+type = Maildir
+path = ~/.Mail/inbox/
+
+[option]
+# 默认为True, 每次执行getmail收取全部邮件, False表示只收取未收取过的邮件
+read_all = False
+# 本地删除服务器是否也删除邮件
+delete = False
+verbose = 2
+message_log = ~/.getmail/getmail.log

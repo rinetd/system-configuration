@@ -75,6 +75,10 @@ files_common+=(.gnupg)
 files_common+=(.astylerc)
 # mew mail
 files_common+=(.Mail-Mew)
+# mutt
+files_common+=(.mutt .muttrc .Mail)
+# getmail配合mutt收邮件
+files_common+=(.getmail)
 # proximac
 files_common+=(.proximac)
 # icons

@@ -68,6 +68,18 @@ brew cask install kindle
 brew install --upgrade openssl
 brew unlink openssl && brew link openssl --force
 
+# mutt
+brew tap sgeb/mutt
+brew install sgeb/mutt/mutt  --with-confirm-attachment-patch --with-gmail-labels-patch --with-sidebar-patch --with-gmail-server-search-patch
+brew install offlineimap
+brew install msmtp
+brew install notmuch
+brew install readline
+brew install urlview
+brew install w3m
+# 配置mutt，使用getmail来下载邮件
+brew install getmail
+
 
 # Node.js
 brew install node

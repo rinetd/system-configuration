@@ -3,7 +3,7 @@ set editor="vim"
 #set editor="emacsclient -nw %s"
 
 #设置邮件发送程序
-set sendmail="/usr/bin/msmtp"
+# set sendmail="/usr/bin/msmtp"
 
 # 邮箱相关的设置
 source ~/.mutt/mutt.box
@@ -34,12 +34,9 @@ set mailcap_path="${HOME}/.mutt/mutt.mailcap:/etc/mailcap"
 source ~/.mutt/mutt.misc
 
 # set up the sidebar, default not visible
-
-#set sidebar_width=36
-
-#set sidebar_visible=yes
-
-#set sidebar_delim='|'
+set sidebar_visible=yes
+set sidebar_width=36
+set sidebar_delim='|'
 
 #set sidebar_sort=yes
 #color sidebar_new yellow default
