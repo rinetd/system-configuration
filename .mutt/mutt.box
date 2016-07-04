@@ -9,7 +9,7 @@ set folder="~/.Mail"
 # 已读的邮箱
 set mbox="~/.Mail/read"
 # 进入mutt后默认使用的信箱，可以考虑和$HOME/.procmailrc设置的默认信箱相同
-set spoolfile="~/.Mail/inbox/"
+set spoolfile="~/.Mail/Inbox/"
 # 这个应该是草稿存放的目录
 set postponed="~/.Mail/postponed"
 #你发出的邮件保存到那个信箱文件？比如可以像我这样每个月发出的信件放在不同的文件里。

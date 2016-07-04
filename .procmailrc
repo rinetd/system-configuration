@@ -1,37 +1,37 @@
 # -*- Conf -*-
-PATH=/bin:/sbin:/usr/bin:/usr/sbin
-SHELL=/bin/bash
-MAILDIR=$HOME/.Mail
-DEFAULT=$MAILDIR/inbox
+PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin
+SHELL=/usr/local/bin/zsh
+# all mailbox in MAILDIR 
+MAILDIR=$HOME/.Mail/
+DEFAULT=$MAILDIR/Inbox/
 ORGMAIL=/var/mail/$USER
-LOGFILE=$MAILDIR/.maillog
-SHELL=/bin/bash
+LOGFILE=$HOME/.getmail/.procmail.log
 LOCKFILE=$MAILDIR/.lockmail
 VERBOSE=no
 
-
-# 来自embedway或者收件人是embedway的邮件直接转往company邮箱
-# 这个是公司的邮箱，只要有embedway的就全部发送到company邮箱
+# 对收到的邮件进行整理
+# 凯翔邮箱
 :0:
-* (^From:|^To:|^CC:).*embedway.com.*
-company/
+* (^From:|^To:|^CC:).*kaixiangtech.com.*
+kaixiang/
 
+
+# 思华邮箱
+:0:
+* (^From:|^To:|^CC:).*sihuatech.com.*
+sihua/
 
 # 来自haiyuan.vinur@gmail.com的邮件存放到haiyuan.vinurs.gmail目录里面
 :0:
 * ^To:.*haiyuan.vinurs@gmail.com.*
-haiyuan.vinurs.gmail/
+vinurs.gmail/
 
-
-# 来自haiyuan.victor@gmail.com的邮件存放到haiyuan.victor.gmail目录里面
-:0:
-* ^To:.*haiyuan.victor@gmail.com.*
-haiyuan.victor.gmail/
 
 
 
 # 最后所有的邮件都存放到inbox目录下面
 :0:
-inbox/
+* .* 
+Inbox/
 
 
