@@ -5,7 +5,17 @@ function sshfs-usage()
 	echo 'sshfs -o reconnect,sshfs_sync,no_readahead,sync_readdir vinurs@xxx.xxx.xxx.xxx:/home/vinurs/dir dir'
 }
 
-
+# 创建maildir类型的目录
+function mk-maildir()
+{
+	if [ $# -eq 0 ]; then
+		:
+		# do nothing
+	else
+		mkdir -p $1/{cur,new,tmp}
+		#	mkdir -p ~/.mail/{cur,new,tmp}
+	fi
+}
 
 
 
