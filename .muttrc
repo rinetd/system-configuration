@@ -5,7 +5,7 @@ set editor="vim"
 #设置邮件发送程序
 # set sendmail="/usr/bin/msmtp"
 
-# 邮箱相关的设置
+# 邮箱目录相关的设置
 source ~/.mutt/mutt.box
 
 # 自定义界面颜色
