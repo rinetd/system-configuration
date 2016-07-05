@@ -2,8 +2,9 @@
 set editor="vim"
 #set editor="emacsclient -nw %s"
 
-#设置邮件发送程序
-# set sendmail="/usr/bin/msmtp"
+# 设置邮件发送程序，这里使用msmtp
+set sendmail="/usr/local/bin/msmtp"
+set envelope_from=yes
 
 # 邮箱目录相关的设置
 source ~/.mutt/mutt.box
@@ -37,12 +38,16 @@ source ~/.mutt/mutt.misc
 set sidebar_visible=yes
 set sidebar_width=36
 set sidebar_delim='|'
+# Set up the sidebar
+# (Comment out if you don't want the sidebar (mutt-patched))
+set sidebar_sort=yes
+# ctrl-p类似的配置
+bind index \CP sidebar-prev
+bind index \CN sidebar-next
+bind index \CO sidebar-open
+bind pager \CP sidebar-prev
+bind pager \CN sidebar-next
+bind pager \CO sidebar-open
+set sort_browser=alpha
+color sidebar_new green default
 
-#set sidebar_sort=yes
-#color sidebar_new yellow default
-#bind index \CP sidebar-prev
-#bind index \CN sidebar-next
-#bind index \CO sidebar-open
-#bind pager \CP sidebar-prev
-#bind pager CN sidebar-next
-#bind pager CO sidebar-open

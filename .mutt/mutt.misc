@@ -100,7 +100,8 @@ set use_from=yes
 # 此选项确保从真正的邮送域发送信件
 set envelope_from=yes
 # 默认使用的的邮送域
-set from='vinurs <haiyuan.vinurs@gmail.com>'
+set from='vinurs <haiyuan.zhang@kaixiangtech.com>'
+#set from='vinurs <haiyuan.vinurs@gmail.com>'
 macro generic "<esc>1" ":set from='zhang.haiyuan@server.embedway.com'"
 macro generic "<esc>2" ":set from='haiyuan.vinurs@gmail.com'"
 macro generic "<esc>3" ":set from='haiyuan.victor@gmail.com'"

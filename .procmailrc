@@ -5,7 +5,7 @@ SHELL=/usr/local/bin/zsh
 MAILDIR=$HOME/.Mail/
 DEFAULT=$MAILDIR/Inbox/
 ORGMAIL=/var/mail/$USER
-LOGFILE=$HOME/.getmail/.procmail.log
+LOGFILE=$HOME/.log/procmail.log
 LOCKFILE=$MAILDIR/.lockmail
 VERBOSE=no
 
