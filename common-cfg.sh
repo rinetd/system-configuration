@@ -81,11 +81,14 @@ files_common+=(.mutt .muttrc .Mail)
 files_common+=(.getmail)
 # .procmailrc对getmail邮件进行分类过滤
 files_common+=(.procmailrc)
+# 用msmtp来发送邮件
+files_common+=(.msmtprc)
 # proximac
 files_common+=(.proximac)
 # icons
 files_common+=(.icons)
-
+# log用来存放一些应用的log目录，这样方便删除
+files_common+=(.log)
 
 
 # files

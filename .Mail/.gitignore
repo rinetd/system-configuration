@@ -3,3 +3,5 @@ postponed
 sihua
 kaixiang
 trash
+# 发送邮件的日志
+.msmtp.log

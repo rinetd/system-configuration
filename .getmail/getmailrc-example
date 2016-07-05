@@ -6,6 +6,7 @@ username = username
 password = password
 port = 993
 
+#
 
 [destination]
 # 以Maildir格式储存
