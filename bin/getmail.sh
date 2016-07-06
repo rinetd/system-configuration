@@ -17,7 +17,7 @@
 ##
 
 # 防止多次重复调用这个
-num=$(ps -ef | grep -e '/usr/bin/getmail --rcfile' | grep -v grep | wc -l | grep -o -e '\b[0-9]\b')
+num=$(ps -ef | grep -e 'getmail ' | grep -v grep | wc -l | grep -o -e '\b[0-9]\b')
 if [[ $num -ge 1 ]]; then
     exit
 fi
