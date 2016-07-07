@@ -7,7 +7,7 @@
 # 
 #         Version:  1.0
 #         Created:  2012/04/11 00:11:02
-#         Changed:  <vinurs 05/04/2012 09:51:20>
+#         Changed:  <vinurs 07/07/2016 22:44:23>
 #        Revision:  none
 # 
 #          Author:  victor
@@ -16,18 +16,38 @@
 #==============================================================================
 ##
 
-# 防止多次重复调用这个
-num=$(ps -ef | grep -e 'getmail ' | grep -v grep | wc -l | grep -o -e '\b[0-9]\b')
-if [[ $num -ge 1 ]]; then
-    exit
-fi
+
+
+function check_new_mail()
+{
+	file=$1
+	account=${file##*getmail\.}
+	# echo "$file, $account"
+	# 防止同时重复调用这个
+	num=$(ps -ef | grep -e 'getmail ' | grep "$file" | wc -l | grep -o -e '\b[0-9]\b')
+	if [[ $num -ge 1 ]]; then
+		:
+	else
+		# -n 表示只收新邮件
+		result=$(getmail --rcfile $file -n | tail -n 1)
+		result=${result%%messages*}
+		newmail=$(echo "$result" | sed -e 's/^[ \t]*//')
+		if [ $newmail -ne 0 ]; then
+			terminal-notifier -title "Account: $account" -message "You Got $newmail Mails"  -sound default -sender com.apple.Mail
+			say "you got new $newmail mails"
+		fi
+	fi
+}
 
 
 set -e
 cd ~/.getmail
 rcfiles=""
 for file in getmail.* ; do
-  rcfiles="$rcfiles --rcfile $file"
+	check_new_mail $file &
 done
-# -n 表示只收新邮件
-exec getmail $rcfiles $@ -n
+
+
+
+
+
