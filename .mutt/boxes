@@ -3,7 +3,6 @@
 # mail box settings for mutt.
 #
 
-
 # Maildir格式
 set mbox_type=Maildir           
 #建立信箱

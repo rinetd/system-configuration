@@ -7,47 +7,36 @@ set sendmail="/usr/local/bin/msmtp"
 set envelope_from=yes
 
 # 邮箱目录相关的设置
-source ~/.mutt/mutt.box
+source ~/.mutt/boxes
 
 # 自定义界面颜色
-source ~/.mutt/mutt.color
+# source ~/.mutt/color
+# source ~/.mutt/mutt-colors-solarized/mutt-colors-solarized-light-16.muttrc
+#mutt-colors-solarized
+
 
 # index界面的显示设置,包括邮件列表的添加
-source ~/.mutt/mutt.show
+source ~/.mutt/show
 
 #地址簿
-source ~/.mutt/mutt.address
+source ~/.mutt/address
 
 
 # 给邮件进行打分
-source ~/.mutt/mutt.score
+source ~/.mutt/score
 
 # 键绑定
-source ~/.mutt/mutt.bind
+source ~/.mutt/binds
 
 # 字符编码设置
-source ~/.mutt/mutt.charset
+source ~/.mutt/charsets
 
 # Check my mutt-specific mailcap before consulting the system-wide one.
-set mailcap_path="${HOME}/.mutt/mutt.mailcap:/etc/mailcap"
+set mailcap_path="${HOME}/.mutt/mailcap:/etc/mailcap"
 
 # 其他设置
-source ~/.mutt/mutt.misc
+source ~/.mutt/misc
 
 # set up the sidebar, default not visible
-set sidebar_visible=yes
-set sidebar_width=36
-set sidebar_delim='|'
-# Set up the sidebar
-# (Comment out if you don't want the sidebar (mutt-patched))
-set sidebar_sort=yes
-# ctrl-p类似的配置
-bind index \CP sidebar-prev
-bind index \CN sidebar-next
-bind index \CO sidebar-open
-bind pager \CP sidebar-prev
-bind pager \CN sidebar-next
-bind pager \CO sidebar-open
-set sort_browser=alpha
-color sidebar_new green default
+source ~/.mutt/sidebar
 

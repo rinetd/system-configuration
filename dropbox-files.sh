@@ -28,8 +28,8 @@ if [ -f $HOME/"Dropbox/home/.msmtprc"]; then
 fi
 
 # mutt通讯录
-if [ -f $HOME/"Dropbox/home/.mutt/mutt.alias"]; then
-	ln -s ~/Dropbox/home/mutt.alias  ~/.mutt/
+if [ -f $HOME/"Dropbox/home/.mutt/alias"]; then
+	ln -s ~/Dropbox/home/alias  ~/.mutt/
 fi
 
 

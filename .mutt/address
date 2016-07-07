@@ -4,11 +4,11 @@
 #
 
 #当你在 index 里按 "a" 为来信者取别名时，使用哪一个别名文件保存这个别名。
-set alias_file=~/.mutt/mutt.alias
+set alias_file=~/.mutt/alias
 # set query_command="~/bin/mutt-ldap.pl '%s'"
 # bind editor "\t" complete-query
 
 # 加载已经存在的地址簿
-source ~/.mutt/mutt.alias
+source ~/.mutt/alias
 
 
