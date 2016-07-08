@@ -80,7 +80,7 @@ files_common+=(.mutt .muttrc .Mail)
 # getmail配合mutt收邮件
 files_common+=(.getmail)
 # .procmailrc对getmail邮件进行分类过滤
-files_common+=(.procmailrc)
+files_common+=(.procmailrc .procmail)
 # 用msmtp来发送邮件
 files_common+=(.msmtprc)
 # proximac

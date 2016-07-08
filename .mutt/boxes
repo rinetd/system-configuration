@@ -1,10 +1,14 @@
 # -*- muttrc -*-
 #
 # mail box settings for mutt.
+# List of folders that are considered to be "mailboxes" (folders that
+# receive incoming mail).
 #
 
 # Maildir格式
 set mbox_type=Maildir           
+#mailboxes ! 
+
 #建立信箱
 # 默认邮箱目录,本地的收件箱，如果不设置发送邮件的时候会提示
 # set folder="~/.Mail"
@@ -19,27 +23,30 @@ set record="~/.Mail/sent/=sent-mail-`date +%Y-%m`"
 
 # 目前有下面三个邮箱
 mailboxes = "~/.Mail/Inbox"
-mailboxes = "~/.Mail/kaixiang"
+
+mailboxes = "------------------" \
+		"~/.Mail/kaixiang"
+
 mailboxes = "~/.Mail/sihua"
 
 
-mailboxes "+-----------------" \
-      imaps://$my_server/INBOX \
-      "imaps://$my_server/INBOX.Sent Items" \
-      "imaps://$my_server/INBOX.Drafts" \
-      "+-- folders ------------" \
-      "imaps://$my_server/INBOX.folder1" \
-      imaps://$my_server/INBOX.folder2 \
-      imaps://$my_server/INBOX.folder3.subfolder \
-      "imaps://$my_server/INBOX.folder4" \
-      "imaps://$my_server/INBOX.folder5" \
-      "imaps://$my_server/INBOX.folder6" \
-      "imaps://$my_server/INBOX.folder7" \
-      "imaps://$my_server/INBOX.folder8" \ 
+# mailboxes "+-----------------" \
+#       imaps://$my_server/INBOX \
+#       "imaps://$my_server/INBOX.Sent Items" \
+#       "imaps://$my_server/INBOX.Drafts" \
+#       "+-- folders ------------" \
+#       "imaps://$my_server/INBOX.folder1" \
+#       imaps://$my_server/INBOX.folder2 \
+#       imaps://$my_server/INBOX.folder3.subfolder \
+#       "imaps://$my_server/INBOX.folder4" \
+#       "imaps://$my_server/INBOX.folder5" \
+#       "imaps://$my_server/INBOX.folder6" \
+#       "imaps://$my_server/INBOX.folder7" \
+#       "imaps://$my_server/INBOX.folder8" \ 
 
 # 本地缓存目录
-set header_cache = ~/.mutt/cache/headers
-set message_cachedir = ~/.mutt/cache/bodies
+set header_cache = ~/.Mail/cache/headers
+set message_cachedir = ~/.Mail/cache/bodies
 
 
 # 让mutt监视下面几个邮箱，并随时报告新邮件
