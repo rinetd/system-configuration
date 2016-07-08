@@ -1,11 +1,14 @@
 # -*- Conf -*-
 PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin
 SHELL=/usr/local/bin/zsh
+#DATE=`date +%Y-%m`
 # all mailbox in MAILDIR 
 MAILDIR=$HOME/.Mail/
 DEFAULT=$MAILDIR/Inbox/
 ORGMAIL=/var/mail/$USER
 LOGFILE=$HOME/.log/procmail.log
+# LOGFILE=$MAILDIR/procmail.`date +%Y.%m`.log
+
 LOCKFILE=$MAILDIR/.lockmail
 VERBOSE=no
 
@@ -13,13 +16,13 @@ VERBOSE=no
 # 凯翔邮箱
 :0:
 * (^From:|^To:|^CC:).*kaixiangtech.com.*
-kaixiang/
+凯翔/
 
 
 # 思华邮箱
 :0:
 * (^From:|^To:|^CC:).*sihuatech.com.*
-sihua/
+思华/
 
 # 来自haiyuan.vinur@gmail.com的邮件存放到haiyuan.vinurs.gmail目录里面
 :0:

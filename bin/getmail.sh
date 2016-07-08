@@ -7,7 +7,7 @@
 # 
 #         Version:  1.0
 #         Created:  2012/04/11 00:11:02
-#         Changed:  <vinurs 07/07/2016 22:44:23>
+#         Changed:  <vinurs 07/07/2016 23:34:09>
 #        Revision:  none
 # 
 #          Author:  victor
@@ -29,12 +29,13 @@ function check_new_mail()
 		:
 	else
 		# -n 表示只收新邮件
-		result=$(getmail --rcfile $file -n | tail -n 1)
+		result=$(getmail --rcfile $file -n 2>/dev/null | tail -n 1)
 		result=${result%%messages*}
 		newmail=$(echo "$result" | sed -e 's/^[ \t]*//')
 		if [ $newmail -ne 0 ]; then
-			terminal-notifier -title "Account: $account" -message "You Got $newmail Mails"  -sound default -sender com.apple.Mail
-			say "you got new $newmail mails"
+			terminal-notifier -title "Account: $account" -message "You Got ($newmail) Mails"  -sound default -sender com.apple.Mail
+			#say "you got new $newmail mails"
+			say "you got new mail"
 		fi
 	fi
 }
