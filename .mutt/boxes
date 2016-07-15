@@ -7,34 +7,116 @@
 
 # Maildir格式
 set mbox_type=Maildir           
+# 本地缓存目录，加速mutt的打开
+set header_cache = ~/.Mail/cache/headers
+set message_cachedir = ~/.Mail/cache/bodies
+
+
 #mailboxes ! 
 
 #建立信箱
-# 默认邮箱目录,本地的收件箱，如果不设置发送邮件的时候会提示
-# set folder="~/.Mail"
-# 已读的邮箱
-set mbox="~/.Mail/read"
+# 邮件目录,本地的收件箱，如果不设置发送邮件的时候会提示
+set folder="~/.Mail/"
+# set mask="!^\\.[^.]"
+# set mbox=+Inbox
+# set mbox="~/.Mail/Inbox/"
+# set record="+.Sent"
+# set postponed="+.Drafts"
+# set spoolfile = +Inbox
+
+# 默认的信箱
+mailboxes = +Inbox
+# set spoolfile="~/.Mail/Inbox/"
+# set mbox=+Inbox                           # Default mailbox.
+mailboxes =INBOX \
+		  =Sent \
+		  =Drafts \
+		  =Junk \
+		  =Trash \
+		  =Lastfolder
 # 进入mutt后默认使用的信箱，可以考虑和$HOME/.procmailrc设置的默认信箱相同
-set spoolfile="~/.Mail/Inbox/"
-# 这个是草稿存放的目录
-set postponed="~/.Mail/postponed"
-#你发出的邮件保存到那个信箱文件？比如可以像我这样每个月发出的信件放在不同的文件里。
-set record="~/.Mail/sent/=sent-mail-`date +%Y-%m`"
+# default location of new mail
+# set spoolfile=~/.Mail/Inbox
+# set spoolfile=~/.mutt/Inbox		  # set spoolfile="~/.Mail/Inbox/"
 
-# 目前有下面三个邮箱
-mailboxes = "~/.Mail/Inbox"
+# -*- muttrc -*-
+#
+# List of folders that are considered to be "mailboxes" (folders that
+# receive incoming mail).
+#
+# $Id: mailboxes 17 2007-03-11 04:17:12Z vdanen $
+# mailboxes `find ~/mail/ -type d -name cur -printf '%h '`
 
-mailboxes = "------------------" \
-		"~/.Mail/kaixiang"
-
-mailboxes = "~/.Mail/sihua"
-
-
-# mailboxes "+-----------------" \
-#       imaps://$my_server/INBOX \
+#mailboxes ! 
+# mailboxes "+----Default ------------" \
+# 		   Inbox
+#       INBOX \
 #       "imaps://$my_server/INBOX.Sent Items" \
 #       "imaps://$my_server/INBOX.Drafts" \
-#       "+-- folders ------------" \
+#       "+-- mailist------------" \
+
+# 所有邮件列表的目录
+mailboxes `echo ~/.Mail/maillist/*`
+
+
+# mailboxes = +Inbox-annvix
+# mailboxes =Inbox-mandriva
+# mailboxes =sysmsgs
+
+# mailboxes =avx-announce
+# mailboxes =avx-cvs
+# mailboxes =avx-dev
+# mailboxes =avx-users
+# mailboxes =avx-ports
+
+# mailboxes =mdv-all
+# mailboxes =mdv-security-announce
+# mailboxes =mdv-security-discuss
+# mailboxes =mdv-cooker
+# mailboxes =mdv-expert
+# mailboxes =mdv-maintainers
+# mailboxes =mdv-webtrans
+# mailboxes =mdv-kernel
+# mailboxes =mdv-changelog
+
+# mailboxes =owl-announce
+# mailboxes =owl-users
+# mailboxes =owl-devel
+# mailboxes =owl-cvs
+
+# mailboxes =advisories
+# mailboxes =bugtraq
+# mailboxes =fulldisclosure
+# mailboxes =vendorsec
+# mailboxes =mac_ministry
+# mailboxes =emacx
+# mailboxes =apparmor
+# mailboxes =daylite
+# mailboxes =exim
+# mailboxes =komodo_beta
+# mailboxes =supervision
+# mailboxes =rsbac
+# mailboxes =apt-rpm
+# mailboxes =openssh
+# mailboxes =websecurity
+# mailboxes =securesoftware
+# mailboxes =Spam
+# mailboxes =2delete
+# mailboxes =Saved/annvix
+# mailboxes =Saved/confirmations
+# mailboxes =Saved/mandriva
+# mailboxes =Saved/personal
+# mailboxes =Saved/receipts
+# mailboxes =Saved/techinfo
+mailboxes = +凯翔
+mailboxes = +思华
+
+
+# mailboxes "+----Default ------------" \
+#       INBOX \
+#       "imaps://$my_server/INBOX.Sent Items" \
+#       "imaps://$my_server/INBOX.Drafts" \
+#       "+-- mailist------------" \
 #       "imaps://$my_server/INBOX.folder1" \
 #       imaps://$my_server/INBOX.folder2 \
 #       imaps://$my_server/INBOX.folder3.subfolder \
@@ -44,11 +126,7 @@ mailboxes = "~/.Mail/sihua"
 #       "imaps://$my_server/INBOX.folder7" \
 #       "imaps://$my_server/INBOX.folder8" \ 
 
-# 本地缓存目录
-set header_cache = ~/.Mail/cache/headers
-set message_cachedir = ~/.Mail/cache/bodies
 
-
-# 让mutt监视下面几个邮箱，并随时报告新邮件
-#指定你有那些信箱文件。当你按 "c" 切换信箱时，再按 Tab 键，这些信箱就可供你选择
-# mailboxes = "inbox" "haiyuan.vinurs.gmail" "haiyuan.victor.gmail" "company"
+# # 让mutt监视下面几个邮箱，并随时报告新邮件
+# #指定你有那些信箱文件。当你按 "c" 切换信箱时，再按 Tab 键，这些信箱就可供你选择
+# # mailboxes = "inbox" "haiyuan.vinurs.gmail" "haiyuan.victor.gmail" "company"

@@ -9,33 +9,34 @@ set envelope_from=yes
 # 邮箱目录相关的设置
 source ~/.mutt/boxes
 
-# 自定义界面颜色
-# source ~/.mutt/color
-# source ~/.mutt/mutt-colors-solarized/mutt-colors-solarized-light-16.muttrc
-#mutt-colors-solarized
+# # 自定义界面颜色
+#source ~/.mutt/color
+source ~/.mutt/colors
+#source ~/.mutt/mutt-colors-solarized/mutt-colors-solarized-light-16.muttrc
+# #mutt-colors-solarized
 
 
-# index界面的显示设置,包括邮件列表的添加
-source ~/.mutt/show
+# # index界面的显示设置,包括邮件列表的添加
+# source ~/.mutt/show
 
-#地址簿
-source ~/.mutt/address
+# #地址簿
+# source ~/.mutt/address
 
 
-# 给邮件进行打分
-source ~/.mutt/score
+# # 给邮件进行打分
+# source ~/.mutt/score
 
-# 键绑定
-source ~/.mutt/binds
+# # 键绑定
+# source ~/.mutt/binds
 
-# 字符编码设置
-source ~/.mutt/charsets
+# # 字符编码设置
+# source ~/.mutt/charsets
 
-# Check my mutt-specific mailcap before consulting the system-wide one.
-set mailcap_path="${HOME}/.mutt/mailcap:/etc/mailcap"
+# # Check my mutt-specific mailcap before consulting the system-wide one.
+# set mailcap_path="${HOME}/.mutt/mailcap:/etc/mailcap"
 
-# 其他设置
-source ~/.mutt/misc
+# # 其他设置
+# source ~/.mutt/misc
 
 # set up the sidebar, default not visible
 source ~/.mutt/sidebar

@@ -3,8 +3,6 @@
 # misc settings for mutt.
 #
 
-
-
 # 切换邮箱时，没有暂停延时
 set sleep_time  = 0
 
