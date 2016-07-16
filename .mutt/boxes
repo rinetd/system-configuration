@@ -5,35 +5,58 @@
 # receive incoming mail).
 #
 
+#mailboxes ! 
+#Visible at first, then change its value to yes
+set sidebar_visible=no
+#建立信箱
+# 邮件目录,本地的收件箱，如果不设置发送邮件的时候会提示
+# there are the mailboxes (+ / = are shortcuts for it now)
+set folder = "$HOME/.Mail"
 # Maildir格式
-set mbox_type=Maildir           
+set mbox_type = Maildir           
+
+# 默认收件箱incoming mails (~/.Mail/Inbox)
+set spoolfile=+Inbox
+# 归档目录
+set mbox = +Archive
+# Other special folders.
+# 草稿箱
+set postponed = "+steve-stevelosh.com/drafts"
+# Mailboxes to show in the sidebar.
+mailboxes +Inbox 
+
+		  # # Other special folders.
+# set mbox      = "+steve-stevelosh.com/archive"
+# set postponed = "+steve-stevelosh.com/drafts"
+
+# mailboxes = +Inbox
+# set move=yes            # yes (move read mails automatically to $mbox)
+# set keep_flagged=yes    # esc-f to mark message in spool, and it won't move to $mbox)
+# set mbox=+read_inbox           # ~/.mail/read_inbox
+# set postponed=+postponed       # an 'internal' box for mutt basically
+# set record="+Sent-`date +%Y`"  # sent messages goes there (e.g. $folder/Sent-2006)
+
+# set header_cache=~/.mail/mutt_cache/ # a much faster opening of mailboxes...
+
+# 默认的信箱
+# set spoolfile="~/.Mail/Inbox"
+# set mbox=+Inbox                           # Default mailbox.
+ # set record="+sent"; set mbox="+mbox"; set postponed="+postponed"
+ # set record="+sent"; set mbox="+mbox"; set postponed="+postponed"
 # 本地缓存目录，加速mutt的打开
 set header_cache = ~/.Mail/cache/headers
 set message_cachedir = ~/.Mail/cache/bodies
 
 
-#mailboxes ! 
 
-#建立信箱
-# 邮件目录,本地的收件箱，如果不设置发送邮件的时候会提示
-set folder="~/.Mail/"
-# set mask="!^\\.[^.]"
-# set mbox=+Inbox
-# set mbox="~/.Mail/Inbox/"
-# set record="+.Sent"
-# set postponed="+.Drafts"
 # set spoolfile = +Inbox
 
-# 默认的信箱
-mailboxes = +Inbox
-# set spoolfile="~/.Mail/Inbox/"
-# set mbox=+Inbox                           # Default mailbox.
-mailboxes =INBOX \
-		  =Sent \
-		  =Drafts \
-		  =Junk \
-		  =Trash \
-		  =Lastfolder
+# mailboxes = +Inbox
+
+# Default receive mailbox.
+# set mbox = "+Inbox"
+# set spoolfile="+Inbox"
+
 # 进入mutt后默认使用的信箱，可以考虑和$HOME/.procmailrc设置的默认信箱相同
 # default location of new mail
 # set spoolfile=~/.Mail/Inbox
@@ -56,75 +79,15 @@ mailboxes =INBOX \
 #       "+-- mailist------------" \
 
 # 所有邮件列表的目录
-mailboxes `echo ~/.Mail/maillist/*`
+# mailboxes `echo ~/.Mail/maillist/*`
 
 
-# mailboxes = +Inbox-annvix
-# mailboxes =Inbox-mandriva
-# mailboxes =sysmsgs
+mailboxes  +凯翔
+mailboxes  +思华
 
-# mailboxes =avx-announce
-# mailboxes =avx-cvs
-# mailboxes =avx-dev
-# mailboxes =avx-users
-# mailboxes =avx-ports
+mailboxes +Sent \
+		  +Drafts
 
-# mailboxes =mdv-all
-# mailboxes =mdv-security-announce
-# mailboxes =mdv-security-discuss
-# mailboxes =mdv-cooker
-# mailboxes =mdv-expert
-# mailboxes =mdv-maintainers
-# mailboxes =mdv-webtrans
-# mailboxes =mdv-kernel
-# mailboxes =mdv-changelog
-
-# mailboxes =owl-announce
-# mailboxes =owl-users
-# mailboxes =owl-devel
-# mailboxes =owl-cvs
-
-# mailboxes =advisories
-# mailboxes =bugtraq
-# mailboxes =fulldisclosure
-# mailboxes =vendorsec
-# mailboxes =mac_ministry
-# mailboxes =emacx
-# mailboxes =apparmor
-# mailboxes =daylite
-# mailboxes =exim
-# mailboxes =komodo_beta
-# mailboxes =supervision
-# mailboxes =rsbac
-# mailboxes =apt-rpm
-# mailboxes =openssh
-# mailboxes =websecurity
-# mailboxes =securesoftware
-# mailboxes =Spam
-# mailboxes =2delete
-# mailboxes =Saved/annvix
-# mailboxes =Saved/confirmations
-# mailboxes =Saved/mandriva
-# mailboxes =Saved/personal
-# mailboxes =Saved/receipts
-# mailboxes =Saved/techinfo
-mailboxes = +凯翔
-mailboxes = +思华
-
-
-# mailboxes "+----Default ------------" \
-#       INBOX \
-#       "imaps://$my_server/INBOX.Sent Items" \
-#       "imaps://$my_server/INBOX.Drafts" \
-#       "+-- mailist------------" \
-#       "imaps://$my_server/INBOX.folder1" \
-#       imaps://$my_server/INBOX.folder2 \
-#       imaps://$my_server/INBOX.folder3.subfolder \
-#       "imaps://$my_server/INBOX.folder4" \
-#       "imaps://$my_server/INBOX.folder5" \
-#       "imaps://$my_server/INBOX.folder6" \
-#       "imaps://$my_server/INBOX.folder7" \
-#       "imaps://$my_server/INBOX.folder8" \ 
 
 
 # # 让mutt监视下面几个邮箱，并随时报告新邮件

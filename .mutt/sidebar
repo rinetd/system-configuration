@@ -1,11 +1,12 @@
 # sidebar配置
 
-set sidebar_visible=yes
+# set sidebar_visible=yes
+
 set sidebar_width=36
 set sidebar_delim='|'
 # Set up the sidebar
 # (Comment out if you don't want the sidebar (mutt-patched))
-set sidebar_sort=yes
+# set sidebar_sort=yes
 # ctrl-p类似的配置
 bind index \CP sidebar-prev
 bind index \CN sidebar-next
@@ -16,4 +17,7 @@ bind pager \CO sidebar-open
 set sort_browser=alpha
 color sidebar_new green default
 
+# b = toggle sidebar
+macro index b '<enter-command>toggle sidebar_visible<enter>'
+macro pager b '<enter-command>toggle sidebar_visible<enter>'
 
