@@ -36,6 +36,10 @@ color header		red		default	'^Subject:'
 color header		yellow		default	'^(To|CC):.*vdanen'
 
 # Colours for items in the index
+
+# unread messages
+color index     brightyellow       default     ~U 
+
 color index		cyan		default	~N
 color index		green		default	"~N (~x annvix\.org | ~h \"^In-[Rr]eply-[Tt]o: .*annvix\.org\")"
 color index		green		default	"~N (~x linsec\.ca | ~h \"^In-[Rr]eply-[Tt]o: .*linsec\.ca\")"
@@ -43,6 +47,9 @@ color index		green		default	"~N (~x mandriva\.com | ~h \"^In-[Rr]eply-[Tt]o: .*m
 color index		red		default	~F
 color index		green		default	~T
 color index		brightwhite	default	~D
+
+
+
 mono  index		bold			~N
 mono  index		bold			~F
 mono  index		bold			~T

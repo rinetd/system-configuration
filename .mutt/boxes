@@ -23,60 +23,14 @@ set mbox = +Archive
 # 草稿箱
 set postponed = "+steve-stevelosh.com/drafts"
 # Mailboxes to show in the sidebar.
-mailboxes +Inbox 
+mailboxes +Inbox
 
-		  # # Other special folders.
-# set mbox      = "+steve-stevelosh.com/archive"
-# set postponed = "+steve-stevelosh.com/drafts"
-
-# mailboxes = +Inbox
-# set move=yes            # yes (move read mails automatically to $mbox)
-# set keep_flagged=yes    # esc-f to mark message in spool, and it won't move to $mbox)
-# set mbox=+read_inbox           # ~/.mail/read_inbox
-# set postponed=+postponed       # an 'internal' box for mutt basically
-# set record="+Sent-`date +%Y`"  # sent messages goes there (e.g. $folder/Sent-2006)
-
-# set header_cache=~/.mail/mutt_cache/ # a much faster opening of mailboxes...
-
-# 默认的信箱
-# set spoolfile="~/.Mail/Inbox"
-# set mbox=+Inbox                           # Default mailbox.
- # set record="+sent"; set mbox="+mbox"; set postponed="+postponed"
- # set record="+sent"; set mbox="+mbox"; set postponed="+postponed"
 # 本地缓存目录，加速mutt的打开
 set header_cache = ~/.Mail/cache/headers
 set message_cachedir = ~/.Mail/cache/bodies
 
 
 
-# set spoolfile = +Inbox
-
-# mailboxes = +Inbox
-
-# Default receive mailbox.
-# set mbox = "+Inbox"
-# set spoolfile="+Inbox"
-
-# 进入mutt后默认使用的信箱，可以考虑和$HOME/.procmailrc设置的默认信箱相同
-# default location of new mail
-# set spoolfile=~/.Mail/Inbox
-# set spoolfile=~/.mutt/Inbox		  # set spoolfile="~/.Mail/Inbox/"
-
-# -*- muttrc -*-
-#
-# List of folders that are considered to be "mailboxes" (folders that
-# receive incoming mail).
-#
-# $Id: mailboxes 17 2007-03-11 04:17:12Z vdanen $
-# mailboxes `find ~/mail/ -type d -name cur -printf '%h '`
-
-#mailboxes ! 
-# mailboxes "+----Default ------------" \
-# 		   Inbox
-#       INBOX \
-#       "imaps://$my_server/INBOX.Sent Items" \
-#       "imaps://$my_server/INBOX.Drafts" \
-#       "+-- mailist------------" \
 
 # 所有邮件列表的目录
 # mailboxes `echo ~/.Mail/maillist/*`
@@ -84,12 +38,9 @@ set message_cachedir = ~/.Mail/cache/bodies
 
 mailboxes  +凯翔
 mailboxes  +思华
+mailboxes  "+--------- Maillist ----------" 
+# 发件箱/草稿箱
+mailboxes +Drafts \
+		  +Sent
 
-mailboxes +Sent \
-		  +Drafts
 
-
-
-# # 让mutt监视下面几个邮箱，并随时报告新邮件
-# #指定你有那些信箱文件。当你按 "c" 切换信箱时，再按 Tab 键，这些信箱就可供你选择
-# # mailboxes = "inbox" "haiyuan.vinurs.gmail" "haiyuan.victor.gmail" "company"

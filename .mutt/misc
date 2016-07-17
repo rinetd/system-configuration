@@ -31,8 +31,6 @@ set header=no
 set quit=ask-yes
 
 
-
-
 #这也是一个提示性变量。它是确定当你退出时，是否提示你把信件从 spool 移动到的 mbox 文件。
 set move=no
 #当 Mutt 用 thread 方式显示时，是否用纯 ascii 表示树状列表。
@@ -85,8 +83,8 @@ set sendmail_wait=-1
 folder-hook . 'macro index d "s~/.Mail/trash\r"'
 folder-hook ~/.Mail/trash 'bind index d delete-message'
 
-macro index \cb |urlview\n
-macro pager \cb |urlview\n
+# macro index \cb |urlview\n
+# macro pager \cb |urlview\n
 
 
 #　wait_key当外部程序退出时，是否要求用户按一个键才返回。这在察看某些shell命令输出时是比要的，否则它们一下就消失了。set wait_key=yes 

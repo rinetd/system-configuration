@@ -8,14 +8,13 @@ set sidebar_delim='|'
 # (Comment out if you don't want the sidebar (mutt-patched))
 # set sidebar_sort=yes
 # ctrl-p类似的配置
-bind index \CP sidebar-prev
-bind index \CN sidebar-next
-bind index \CO sidebar-open
-bind pager \CP sidebar-prev
-bind pager \CN sidebar-next
-bind pager \CO sidebar-open
-set sort_browser=alpha
-color sidebar_new green default
+# Sidebar Navigation ---------------------------------
+bind index,pager \CN   sidebar-next
+bind index,pager \CP     sidebar-prev
+bind index,pager \CO  sidebar-open
+
+# set sort_browser=alpha
+color sidebar_new cyan default
 
 # b = toggle sidebar
 macro index b '<enter-command>toggle sidebar_visible<enter>'

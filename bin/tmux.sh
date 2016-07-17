@@ -7,7 +7,7 @@
 # 
 #         Version:  1.0
 #         Created:  2012/08/05 10:24:48
-#         Changed:  <vinurs 05/25/2015 10:57:25>
+#         Changed:  <vinurs 07/17/2016 10:08:14>
 #        Revision:  none
 # 
 #          Author:  zhanghaiyuan
@@ -38,6 +38,9 @@ then
 else
     # 下面就开始创建新的session
     # 开头的几个window，公用的
+	# mutt邮件客户端
+	tmux -2 new-session -s $TMUX_SESSION -n mutt\; send-keys 'mutt' C-m \; detach-client
+
     # 默认打开叫sys-monitor的窗口，专门用来监控系统当前的性能的
     tmux -2 new-session -s $TMUX_SESSION -n sys-monitor \; detach-client
     # system configuration

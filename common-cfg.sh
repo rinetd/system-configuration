@@ -118,7 +118,9 @@ for i in "${dotconfig_common_array[@]}"; do
 
 done
 
-# common
+# github common
+# system-configuration.wiki
+git clone https://github.com/vinurs/system-configuration.wiki.git ~/system-configuration/github/
 # oh-my-zsh
 git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 
