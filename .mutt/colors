@@ -12,7 +12,6 @@
 # Default colour definitions
 # 默认颜色，前景色/背景色
 color normal		default		default
-# color normal		white		default
 color quoted		yellow		default
 color quoted1		green		default
 color quoted2		white		default
@@ -22,26 +21,34 @@ color quoted5		white		default
 
 color indicator		black		cyan
 color message		yellow		black
-color status		yellow		blue
+
+# 邮件空白处的颜色
+color tilde		white default
+# 状态栏的颜色status line
+color status        brightblack     green
+
+
 color error		yellow		red
 color attachment	magenta		default
 color signature		red		default
 color markers		red		yellow
-color tilde		yellow		black
 color search		white		red
 color tree		green		default
 color bold		brightyellow	default
 
-color hdrdefault	cyan		default
-color header		green		default	'^From:'
-color header		red		default	'^Subject:'
-color header		yellow		default	'^(To|CC):.*vdanen'
+# 邮件内容页面邮件头部分高亮 ------------------------------------------
+# color header        brightcyan      default         "^"
+# 头部整体的颜色
+color hdrdefault    brightblue      yellow
+color header        brightred       yellow			"^(From)"
+color header        brightblack     yellow      	"^(Subject)"
+color header		brightblue		yellow			'^(CC|TO)'
 
 # Colours for items in the index
 # 未读消息的颜色
 color index     brightyellow       default     ~U 
 # 已读消息的颜色
-color index     green        default "~R"
+color index     white			default		"~R"
 
 
 color index		cyan		default	~N
@@ -60,7 +67,6 @@ mono  index		bold			~T
 mono  index		bold			~D
 
 # Highlights inside the body of a message.
-
 # URLs
 # color body		brightgreen	default	"(http|https|ftp|news|telnet|finger)://[^ \">\t\r\n]*"
 # color body		brightgreen	default	"mailto:[-a-z_0-9.]+@[-a-z_0-9.]+"
@@ -83,4 +89,44 @@ mono  index		bold			~D
 # mono underline		underline
 # mono indicator		reverse
 # mono header		bold		"^(From|Subject|X-Junked-Because|X-Virus-hagbard):"
+
+# --------------------------------------------------------------------------------------
+# Patch高亮支持
+# 经常邮件列表里面会有各种patch
+# 自定义的patch补丁高亮, 方便查看patch
+color   body     red            black    "^-.*"
+color   body     green          black    "^[+].*"
+color   body     brightwhite    black    "^diff --git.*"
+color   body     brightwhite    black    "^index [a-f0-9].*"
+color   body     brightwhite    black    "^\-\-\- a.*"
+color   body     brightwhite    black    "^[\+]{3} b.*"
+color   body     brightyellow   black    "^@@.*"
+color   body     brightmagenta  black    "^(Signed-off-by).*"
+color   body     brightmagenta  black    "^(Reported-by).*"
+color   body     brightmagenta  black    "^(Suggested-by).*"
+color   body     brightmagenta  black    "^(Acked-by).*"
+color   body     brightmagenta  black    "^(Reviewed-by).*"
+color   body     brightmagenta  black    "^\-\-\-$"
+# color   body     brightmagenta  black    "^(Cc).*"
+# color   body     brightmagenta  black    "^(CC).*"
+color   body     white          black    "^( \#define).*"
+color   body     white          black    "^( \#include).*"
+color   body     white          black    "^( \#if).*"
+color   body     white          black    "^( \#el).*"
+color   body     white          black    "^( \#endif).*"
+
+# optional highlightling
+color   body    green           black    "LGTM"
+color   body    brightmagenta   black    "-- Commit Summary --"
+color   body    brightmagenta   black    "-- File Changes --"
+color   body    brightmagenta   black    "-- Patch Links --"
+color   body    green           black    "^Merged #.*"
+color   body    red             black    "^Closed #.*"
+color   body    brightblue      black    "^Reply to this email.*"
+# --------------------------------------------------------------------------------------
+
+
+
+
+
 
