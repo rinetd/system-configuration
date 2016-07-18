@@ -10,7 +10,9 @@
 # $Id: colours 6 2007-03-02 17:36:39Z vdanen $
 
 # Default colour definitions
-color normal		white		default
+# 默认颜色，前景色/背景色
+color normal		default		default
+# color normal		white		default
 color quoted		yellow		default
 color quoted1		green		default
 color quoted2		white		default
@@ -36,9 +38,11 @@ color header		red		default	'^Subject:'
 color header		yellow		default	'^(To|CC):.*vdanen'
 
 # Colours for items in the index
-
-# unread messages
+# 未读消息的颜色
 color index     brightyellow       default     ~U 
+# 已读消息的颜色
+color index     green        default "~R"
+
 
 color index		cyan		default	~N
 color index		green		default	"~N (~x annvix\.org | ~h \"^In-[Rr]eply-[Tt]o: .*annvix\.org\")"
@@ -58,25 +62,25 @@ mono  index		bold			~D
 # Highlights inside the body of a message.
 
 # URLs
-color body		brightgreen	default	"(http|https|ftp|news|telnet|finger)://[^ \">\t\r\n]*"
-color body		brightgreen	default	"mailto:[-a-z_0-9.]+@[-a-z_0-9.]+"
-color body		brightgreen	default	"news:[^ \">\t\r\n]*"
-mono  body 		bold			"(http|https|ftp|news|telnet|finger)://[^ \">\t\r\n]*"
-mono  body		bold			"mailto:[-a-z_0-9.]+@[-a-z_0-9.]+"
-mono  body		bold			"news:[^ \">\t\r\n]*"
+# color body		brightgreen	default	"(http|https|ftp|news|telnet|finger)://[^ \">\t\r\n]*"
+# color body		brightgreen	default	"mailto:[-a-z_0-9.]+@[-a-z_0-9.]+"
+# color body		brightgreen	default	"news:[^ \">\t\r\n]*"
+# mono  body 		bold			"(http|https|ftp|news|telnet|finger)://[^ \">\t\r\n]*"
+# mono  body		bold			"mailto:[-a-z_0-9.]+@[-a-z_0-9.]+"
+# mono  body		bold			"news:[^ \">\t\r\n]*"
 
-# email addresses
-color body		brightcyan	default	"[-a-z_0-9.%$]+@[-a-z_0-9.]+\\.[-a-z][-a-z]+"
-mono  body 		bold			"[-a-z_0-9.%$]+@[-a-z_0-9.]+\\.[-a-z][-a-z]+"
+# # email addresses
+# color body		brightcyan	default	"[-a-z_0-9.%$]+@[-a-z_0-9.]+\\.[-a-z][-a-z]+"
+# mono  body 		bold			"[-a-z_0-9.%$]+@[-a-z_0-9.]+\\.[-a-z][-a-z]+"
 
-# Various smilies and the like
-color body		yellow		default	"(^|[[:space:]])\\*[^[:space:]]+\\*([[:space:]]|$)" # *Bold* text.
-color body		yellow		default	"(^|[[:space:]])_[^[:space:]]+_([[:space:]]|$)"     # _Underlined_ text.
-color body		yellow		default	"(^|[[:space:]])/[^[:space:]]+/([[:space:]]|$)"     # /Italic/ text.
+# # Various smilies and the like
+# color body		yellow		default	"(^|[[:space:]])\\*[^[:space:]]+\\*([[:space:]]|$)" # *Bold* text.
+# color body		yellow		default	"(^|[[:space:]])_[^[:space:]]+_([[:space:]]|$)"     # _Underlined_ text.
+# color body		yellow		default	"(^|[[:space:]])/[^[:space:]]+/([[:space:]]|$)"     # /Italic/ text.
 
-# Colour definitions when on a mono screen
-mono bold		bold
-mono underline		underline
-mono indicator		reverse
-mono header		bold		"^(From|Subject|X-Junked-Because|X-Virus-hagbard):"
+# # Colour definitions when on a mono screen
+# mono bold		bold
+# mono underline		underline
+# mono indicator		reverse
+# mono header		bold		"^(From|Subject|X-Junked-Because|X-Virus-hagbard):"
 
