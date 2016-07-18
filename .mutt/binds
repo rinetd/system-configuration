@@ -52,27 +52,27 @@ macro pager \e2 ":set display_filter='t-prot -cmektl --bigq --pgp-short --pgp-mo
 
 #--------------------------------------------------------------------------
 # generic bindings
+# generic表示在index跟pager下面都通用的
 #--------------------------------------------------------------------------
+bind generic 1    "jump"              # jump to an index number
+bind generic 2    "jump"              # jump to an index number
+bind generic 3    "jump"              # jump to an index number
+bind generic 4    "jump"              # jump to an index number
+bind generic 5    "jump"              # jump to an index number
+bind generic 6    "jump"              # jump to an index number
+bind generic 7    "jump"              # jump to an index number
+bind generic 8    "jump"              # jump to an index number
+bind generic 9    "jump"              # jump to an index number
+
  bind generic L    "bottom-page"       # move to the bottom of the page
 #bind generic      "current-bottom"    # move current entry to bottom of page
 #bind generic      "current-middle"    # move current entry to middle of page
 #bind generic      "current-top"       # move current entry to top of page
  bind generic :    "enter-command"     # enter a muttrc command
  bind generic q    "exit"              # exit this menu
- bind generic =    "first-entry"       # move to the first entry
  bind generic ]    "half-down"         # scroll down 1/2 page
  bind generic [    "half-up"           # scroll up 1/2 page
  bind generic ?    "help"              # this screen
- bind generic 1    "jump"              # jump to an index number
- bind generic 2    "jump"              # jump to an index number
- bind generic 3    "jump"              # jump to an index number
- bind generic 4    "jump"              # jump to an index number
- bind generic 5    "jump"              # jump to an index number
- bind generic 6    "jump"              # jump to an index number
- bind generic 7    "jump"              # jump to an index number
- bind generic 8    "jump"              # jump to an index number
- bind generic 9    "jump"              # jump to an index number
- bind generic *    "last-entry"        # move to the last entry
  bind generic M    "middle-page"       # move to the middle of the page
  bind generic j    "next-entry"        # move to the next entry
  bind generic >    "next-line"         # scroll down one line
@@ -95,6 +95,10 @@ macro pager \e2 ":set display_filter='t-prot -cmektl --bigq --pgp-short --pgp-mo
 #--------------------------------------------------------------------------
 # index bindings
 #--------------------------------------------------------------------------
+bind index gg   "first-entry"         # jump to the first entry
+bind index G    "last-entry"           # retrieve mail from POP server
+bind index <enter>  "display-message"  # display a message
+
  bind index b    "bounce-message"       # remail a message to another user
  bind index c    "change-folder"        # open a different folder
  bind index \ec  "change-folder-readonly"  # open a different folder in read only mode
@@ -110,7 +114,6 @@ macro pager \e2 ":set display_filter='t-prot -cmektl --bigq --pgp-short --pgp-mo
  bind index \cD  "delete-thread"        # delete all messages in thread
  bind index @    "display-address"      # display full address of sender
  bind index h    "display-toggle-weed"  # display message and toggle header weeding
- bind index <enter>  "display-message"  # display a message
  bind index e    "edit"                 # edit the current message
  bind index \cE  "edit-type"            # edit the current message's Content-Type
  bind index x    "exit"                 # exit without saving changes
@@ -118,10 +121,7 @@ macro pager \e2 ":set display_filter='t-prot -cmektl --bigq --pgp-short --pgp-mo
  bind index F    "flag-message"         # toggle a message's 'important' flag
  bind index \cF  "forget-passphrase"    # wipe PGP passphrase from memory
  bind index f    "forward-message"      # forward a message with comments
- bind index gg    "first-entry"         # jump to the first entry
- bind index G    "last-entry"           # retrieve mail from POP server
- # bind index g    "group-reply"          # reply to all recipients
- bind index l    "limit"                # show only messages matching a pattern
+  bind index l    "limit"                # show only messages matching a pattern
  bind index L    "list-reply"           # reply to specified mailing list
  bind index m    "mail"                 # compose a new mail message
  bind index \ek  "mail-key"             # mail a PGP public key
@@ -168,7 +168,9 @@ macro pager \e2 ":set display_filter='t-prot -cmektl --bigq --pgp-short --pgp-mo
 #--------------------------------------------------------------------------
 # pager bindings
 #--------------------------------------------------------------------------
-#bind pager      "bottom"                  # jump to the bottom of the message
+bind pager gg    "top"                     # jump to the top of the message
+bind pager G     "bottom"                  # jump to the bottom of the message
+
  bind pager b    "bounce-message"          # remail a message to another user
  bind pager c    "change-folder"           # open a different folder
  bind pager \ec  "change-folder-readonly"  # open a different folder in read only mode
@@ -190,7 +192,6 @@ macro pager \e2 ":set display_filter='t-prot -cmektl --bigq --pgp-short --pgp-mo
  bind pager F    "flag-message"            # toggle a message's 'important' flag
  bind pager \cF  "forget-passphrase"       # wipe PGP passphrase from memory
  bind pager f    "forward-message"         # forward a message with comments
- bind pager g    "group-reply"             # reply to all recipients
 #bind pager      "half-up"                 # move up one-half page
 #bind pager      "half-down"               # move down one-half page
  bind pager ?    "help"                    # this screen
@@ -235,7 +236,6 @@ macro pager \e2 ":set display_filter='t-prot -cmektl --bigq --pgp-short --pgp-mo
  bind pager $    "sync-mailbox"            # save changes to mailbox
  bind pager t    "tag-message"             # tag a message
  bind pager T    "toggle-quoted"           # toggle display of quoted text
- bind pager gg    "top"                     # jump to the top of the message
  bind pager u    "undelete-message"        # undelete the current entry
  bind pager \eu  "undelete-subthread"      # undelete all messages in subthread
  bind pager \cU  "undelete-thread"         # undelete all messages in thread
