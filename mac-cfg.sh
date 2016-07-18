@@ -23,6 +23,21 @@ cp /System/Library/LaunchDaemons/tftp.plist backup_dir
 sudo cp -f current_dir/tftp.plist /System/Library/LaunchDaemons/tftp.plist
 sudo cp -f current_dir/ftpd.conf /etc/
 
+#  NULL
+files_mac=()
+
+files_mac+=(.iterm2)
+
+# files
+for i in "${files_mac[@]}"; do
+
+    # backup
+    mv $install_dir/$i ${backup_dir}
+    ln -sf  $current_dir/$i $install_dir/
+
+done
+
+
 
 # the config files are in .config/ directory
 dotconfig_mac_array=()

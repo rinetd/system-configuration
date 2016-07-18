@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@vinurs-mac.local
 ;; Version: $Id: @(#)dotspacemacs-layers.el,v 0.0 2016/05/25 15:13:53 vinurs Exp $
-;; Changed: <victor 02/20/2011 11:29:30>
+;; Changed: <vinurs 07/18/2016 10:31:17>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -81,7 +81,7 @@
    ;; spell-checking
    themes-megapack
    (c-c++)
-   (python)
+   ;; (python)
    (colors)
    vinurs-basic
    ;; 开发环境的搭建
