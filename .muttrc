@@ -1,6 +1,5 @@
-#编辑器 直接在 Mutt 的终端里使用非图形界面的 Emacs (emacs -nw)
-set editor="vim"
-#set editor="emacsclient -nw %s"
+#编辑器 直接在 Mutt 里面使用emacs图形化界面
+set editor="emacsclient  %s"
 
 # 设置邮件发送程序，这里使用msmtp
 set sendmail="/usr/local/bin/msmtp"
@@ -12,7 +11,7 @@ source ~/.mutt/boxes
 # # 自定义界面颜色
 #source ~/.mutt/color
 source ~/.mutt/colors
-#source ~/.mutt/mutt-colors-solarized/mutt-colors-solarized-light-16.muttrc
+# source ~/.mutt/mutt-colors-solarized/mutt-colors-solarized-light-16.muttrc
 # #mutt-colors-solarized
 
 

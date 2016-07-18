@@ -115,11 +115,11 @@ macro pager \e2 ":set display_filter='t-prot -cmektl --bigq --pgp-short --pgp-mo
  bind index \cE  "edit-type"            # edit the current message's Content-Type
  bind index x    "exit"                 # exit without saving changes
  bind index \cK  "extract-keys"         # extract PGP public keys
- bind index G    "fetch-mail"           # retrieve mail from POP server
  bind index F    "flag-message"         # toggle a message's 'important' flag
  bind index \cF  "forget-passphrase"    # wipe PGP passphrase from memory
  bind index f    "forward-message"      # forward a message with comments
  bind index gg    "first-entry"         # jump to the first entry
+ bind index G    "last-entry"           # retrieve mail from POP server
  # bind index g    "group-reply"          # reply to all recipients
  bind index l    "limit"                # show only messages matching a pattern
  bind index L    "list-reply"           # reply to specified mailing list

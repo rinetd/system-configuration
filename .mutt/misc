@@ -85,7 +85,8 @@ folder-hook ~/.Mail/trash 'bind index d delete-message'
 
 # macro index \cb |urlview\n
 # macro pager \cb |urlview\n
-
+# 多个收件账号的时候，回复邮件的时候默认从哪个来就从哪个发出去
+set reverse_name
 
 #　wait_key当外部程序退出时，是否要求用户按一个键才返回。这在察看某些shell命令输出时是比要的，否则它们一下就消失了。set wait_key=yes 
 # 这里我设置为no主要就是因为从浏览器里面开的的时候还要按一下太麻烦了，google-chrome
@@ -96,11 +97,11 @@ set use_from=yes
 # 此选项确保从真正的邮送域发送信件
 set envelope_from=yes
 # 默认使用的的邮送域
-set from='vinurs <haiyuan.zhang@kaixiangtech.com>'
+set from='<haiyuan.zhang@kaixiangtech.com>'
 #set from='vinurs <haiyuan.vinurs@gmail.com>'
-macro generic "<esc>1" ":set from='zhang.haiyuan@server.embedway.com'"
-macro generic "<esc>2" ":set from='haiyuan.vinurs@gmail.com'"
-macro generic "<esc>3" ":set from='haiyuan.victor@gmail.com'"
+macro generic "<esc>1" ":set from='haiyuan.zhang@kaixiangtech.com'"
+macro generic "<esc>2" ":set from='haiyuan.zhang@sihuatech.com'"
+macro generic "<esc>3" ":set from='haiyuan.vinurs@gmail.com'"
 
 
 # 邮件结尾加上我的签名档
