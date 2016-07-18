@@ -109,4 +109,6 @@ macro generic "<esc>3" ":set from='haiyuan.vinurs@gmail.com'"
 set signature="mutt-signature.sh |"
 
 set status_chars  = " *%A"
+# set status_format=" %r %b %f %n　　　Del %d　　　Msgs %m %l %> (%P)"
+set date_format="!%H:%M %a %d %b　　 "
 set status_format = "───[ Folder: %f ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"
