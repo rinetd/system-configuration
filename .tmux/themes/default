@@ -1,0 +1,153 @@
+#!/bin/sh
+#
+# Toggle mouse mode in tmux, handling the new setting in 2.1.
+# if [ -z "$TMUX" ]; then
+#   echo "Not in tmux." >&2
+#   exit 1
+# fi
+
+left_separator='|'
+left_separator_black=''
+right_separator='|'
+right_separator_black=''
+
+session_symbol=''
+
+# panes
+tmux_conf_theme_pane_border_fg=${tmux_conf_theme_pane_border_fg:-colour238}               # light gray
+tmux_conf_theme_pane_active_border_fg=${tmux_conf_theme_pane_active_border_fg:-colour39}  # light blue
+
+tmux set -g pane-border-style fg=$tmux_conf_theme_pane_border_fg \; set -g pane-active-border-style fg=$tmux_conf_theme_pane_active_border_fg
+#uncomment for fat borders
+#tmux set -ga pane-border-style bg=$tmux_conf_theme_pane_border_fg \; set -ga pane-active-border-style bg=$tmux_conf_theme_pane_active_border_fg
+
+tmux_conf_theme_display_panes_active_colour=${tmux_conf_theme_display_panes_active_colour:-colour39}  # light blue
+tmux_conf_theme_display_panes_colour=${tmux_conf_theme_display_panes_colour:-colour39}                # light blue
+tmux set -g display-panes-active-colour $tmux_conf_theme_display_panes_active_colour \; set -g display-panes-colour $tmux_conf_theme_display_panes_colour
+
+tmux_conf_theme_highlight_focused_pane=${tmux_conf_theme_highlight_focused_pane:-disabled}
+tmux_conf_theme_focused_pane_fg=${tmux_conf_theme_focused_pane_fg:-default}   # default
+tmux_conf_theme_focused_pane_bg=${tmux_conf_theme_focused_pane_bg:-colour23}  # dark blue/green
+highlight_focused_pane_enabled=$( ([ x"$tmux_conf_theme_highlight_focused_pane" = x"enabled" ] || [ -z "$tmux_conf_theme_highlight_focused_pane" ]) && echo "true" || echo "false" )
+if [ x"$highlight_focused_pane_enabled" = x"true" ] ; then
+    tmux setw -g window-active-style "fg=$tmux_conf_theme_focused_pane_fg,bg=$tmux_conf_theme_focused_pane_bg"
+else
+    tmux setw -g window-active-style default
+fi
+
+# messages
+tmux_conf_theme_message_fg=${tmux_conf_theme_message_fg:-colour16}  # black
+tmux_conf_theme_message_bg=${tmux_conf_theme_message_bg:-colour226} # yellow
+tmux_conf_theme_message_attr=${tmux_conf_theme_message_attr:-bold}
+tmux set -g message-style fg=$tmux_conf_theme_message_fg,bg=$tmux_conf_theme_message_bg,$tmux_conf_theme_message_attr
+
+tmux_conf_theme_message_command_fg=${tmux_conf_theme_message_command_fg:-colour16}   # black
+tmux_conf_theme_message_command_bg=${tmux_conf_theme_message_command_bg:-colour160}  # light yellow
+tmux set -g message-command-style fg=$tmux_conf_theme_message_command_fg,bg=$tmux_conf_theme_message_command_bg,$tmux_conf_theme_message_attr
+
+# windows mode
+tmux_conf_theme_mode_fg=${tmux_conf_theme_mode_fg:-colour16}  # black
+tmux_conf_theme_mode_bg=${tmux_conf_theme_mode_bg:-colour226} # yellow
+tmux_conf_theme_mode_attr=${tmux_conf_theme_mode_attr:-bold}
+tmux setw -g mode-style fg=$tmux_conf_theme_mode_fg,bg=$tmux_conf_theme_mode_bg,$tmux_conf_theme_mode_attr
+
+# status line
+tmux_conf_theme_status_fg=${tmux_conf_theme_status_fg:-colour253} # white
+tmux_conf_theme_status_bg=${tmux_conf_theme_status_bg:-colour232} # dark gray
+tmux set -g status-style fg=$tmux_conf_theme_status_fg,bg=$tmux_conf_theme_status_bg
+
+tmux_conf_theme_session_fg=${tmux_conf_theme_session_fg:-colour16}  # black
+tmux_conf_theme_session_bg=${tmux_conf_theme_session_bg:-colour226} # yellow
+status_left="#[fg=$tmux_conf_theme_session_fg,bg=$tmux_conf_theme_session_bg,bold] ❐ #S #[fg=$tmux_conf_theme_session_bg,bg=$tmux_conf_theme_status_bg,nobold]$left_separator_black"
+if [ x"`tmux -q -L tmux_theme_status_left_test -f /dev/null new-session -d \; show -g -v status-left \; kill-session`" = x"[#S] " ] ; then
+    status_left="$status_left "
+fi
+tmux set -g status-left-length 32 \; set -g status-left "$status_left"
+
+tmux_conf_theme_window_status_fg=${tmux_conf_theme_window_status_fg:-colour245} # light gray
+tmux_conf_theme_window_status_bg=${tmux_conf_theme_window_status_bg:-colour232} # dark gray
+window_status_format="#I #W"
+tmux setw -g window-status-style fg=$tmux_conf_theme_window_status_fg,bg=$tmux_conf_theme_window_status_bg \; setw -g window-status-format "$window_status_format"
+
+tmux_conf_theme_window_status_current_fg=${tmux_conf_theme_window_status_current_fg:-colour16} # black
+tmux_conf_theme_window_status_current_bg=${tmux_conf_theme_window_status_current_bg:-colour39} # light blue
+window_status_current_format="#[fg=$tmux_conf_theme_window_status_bg,bg=$tmux_conf_theme_window_status_current_bg]$left_separator_black#[fg=$tmux_conf_theme_window_status_current_fg,bg=$tmux_conf_theme_window_status_current_bg,bold] #I $left_separator #W #[fg=$tmux_conf_theme_window_status_current_bg,bg=$tmux_conf_theme_status_bg,nobold]$left_separator_black"
+tmux setw -g window-status-current-format "$window_status_current_format"
+tmux set -g status-justify left
+
+tmux_conf_theme_window_status_activity_fg=${tmux_conf_theme_window_status_activity_fg:-default}
+tmux_conf_theme_window_status_activity_bg=${tmux_conf_theme_window_status_activity_bg:-default}
+tmux_conf_theme_window_status_activity_attr=${tmux_conf_theme_window_status_activity_attr:-underscore}
+tmux setw -g window-status-activity-style fg=$tmux_conf_theme_window_status_activity_fg,bg=$tmux_conf_theme_window_status_activity_bg,$tmux_conf_theme_window_status_activity_attr
+
+tmux_conf_theme_window_status_bell_fg=${tmux_conf_theme_window_status_bell_fg:-colour226} # yellow
+tmux_conf_theme_window_status_bell_bg=${tmux_conf_theme_window_status_bell_bg:-default}
+tmux_conf_theme_window_status_bell_attr=${tmux_conf_theme_window_status_bell_attr:-blink,bold}
+tmux setw -g window-status-bell-style fg=$tmux_conf_theme_window_status_bell_fg,bg=$tmux_conf_theme_window_status_bell_bg,$tmux_conf_theme_window_status_bell_attr
+
+window_status_last_fg=colour39 # light blue
+window_status_last_attr=default
+tmux setw -g window-status-last-style $window_status_last_attr,fg=$window_status_last_fg
+
+tmux_conf_theme_prefix=${tmux_conf_theme_prefix:-disabled}
+tmux_conf_theme_battery=${tmux_conf_theme_battery:-enabled}
+tmux_conf_theme_time=${tmux_conf_theme_time:-enabled}
+tmux_conf_theme_date=${tmux_conf_theme_date:-enabled}
+tmux_conf_theme_username=${tmux_conf_theme_username:-enabled}
+tmux_conf_theme_hostname=${tmux_conf_theme_hostname:-enabled}
+
+prefix_enabled=$( ([ x"$tmux_conf_theme_prefix" = x"enabled" ] || [ -z "$tmux_conf_theme_prefix" ]) && echo "true" || echo "false" )
+battery_enabled=$( ([ x"$tmux_conf_theme_battery" = x"enabled" ] || [ -z "$tmux_conf_theme_battery" ]) && echo "true" || echo "false" )
+time_enabled=$( ([ x"$tmux_conf_theme_time" = x"enabled" ] || [ -z "$tmux_conf_theme_time" ]) && echo "true" || echo "false" )
+date_enabled=$( ([ x"$tmux_conf_theme_date" = x"enabled" ] || [ -z "$tmux_conf_theme_date" ]) && echo "true" || echo "false" )
+username_enabled=$( ([ x"$tmux_conf_theme_username" = x"enabled" ] || [ -z "$tmux_conf_theme_username" ] || ([ x"$tmux_conf_theme_username" = x"ssh" ] && ([ -n "$SSH_CLIENT" ] || [ -n "$SSH_CONNECTION" ] || [ -n "$SSH_TTY" ]))) && echo "true" || echo "false" )
+hostname_enabled=$( ([ x"$tmux_conf_theme_hostname" = x"enabled" ] || [ -z "$tmux_conf_theme_hostname" ] || ([ x"$tmux_conf_theme_hostname" = x"ssh" ] && ([ -n "$SSH_CLIENT" ] || [ -n "$SSH_CONNECTION" ] || [ -n "$SSH_TTY" ]))) && echo "true" || echo "false" )
+
+tmux_conf_theme_prefix_fg=${tmux_conf_theme_prefix_fg:-colour253}       # white
+tmux_conf_theme_prefix_bg=${tmux_conf_theme_prefix_bg:-colour16}        # black
+tmux_conf_theme_time_date_fg=${tmux_conf_theme_time_date_fg:-colour247} # light gray
+tmux_conf_theme_time_date_bg=${tmux_conf_theme_time_date_bg:-colour232} # dark gray
+tmux_conf_theme_username_fg=colour254                                   # white
+tmux_conf_theme_username_bg=colour160                                   # red
+tmux_conf_theme_hostname_fg=colour16                                    # black
+tmux_conf_theme_hostname_bg=colour254                                   # white
+
+if [ x"$prefix_enabled" = x"true" ] ; then
+    status_right_prefix="#{?client_prefix,#[fg=$tmux_conf_theme_prefix_fg]#[bg=$tmux_conf_theme_prefix_bg]#[bold]⌨ #[fg=$tmux_conf_theme_prefix_fg]#[bg=$tmux_conf_theme_status_bg]#[nobold],}"
+fi
+if [ x"$battery_enabled" = x"true" ] ; then
+    status_right_battery="${tmux_conf_battery:-#(cut -c3- ~/.tmux.conf | sh -s battery ${tmux_conf_battery_symbol:-block} ${tmux_conf_battery_symbol_count:-auto} \"${tmux_conf_battery_palette:-colour160,colour254,colour16}\" ${tmux_conf_battery_status:-enabled})} "
+    has_battery=$(eval echo \$${status_right_battery#\#})
+    if [ -n "$has_battery" ] && ([ x"$time_enabled" = x"true" ] || [ x"$date_enabled" = x"true" ]) ; then
+        status_right_battery="${status_right_battery}#[fg=$tmux_conf_theme_time_date_fg,nobold]$right_separator"
+    fi
+fi
+if [ x"$time_enabled" = x"true" ] ; then
+    status_right_time="#[fg=$tmux_conf_theme_time_date_fg,nobold]${status_right_time} %R "
+    if [ x"$date_enabled" = x"true" ] ; then
+        status_right_time="${status_right_time}#[fg=$tmux_conf_theme_time_date_fg,nobold]$right_separator"
+    fi
+fi
+if [ x"$date_enabled" = x"true" ] ; then
+    status_right_date="#[fg=$tmux_conf_theme_time_date_fg,nobold] %d %b "
+fi
+if [ x"$username_enabled" = x"true" ] ; then
+    status_right_username="#[fg=$tmux_conf_theme_username_bg,bg=$tmux_conf_theme_time_date_bg,nobold]$right_separator_black#[fg=$tmux_conf_theme_username_fg,bg=$tmux_conf_theme_username_bg,nobold] #(whoami) "
+fi
+if [ x"$hostname_enabled" = x"true" ] ; then
+    if [ x"$username_enabled" = x"true" ] ; then
+        status_right_hostname="#[bg=$tmux_conf_theme_username_bg]"
+    else
+        status_right_hostname="#[bg=$tmux_conf_theme_time-data_bg]"
+    fi
+    status_right_hostname="#[fg=$tmux_conf_theme_hostname_bg,nobold]${status_right_hostname}$right_separator_black#[fg=$tmux_conf_theme_hostname_fg,bg=$tmux_conf_theme_hostname_bg,bold] #h "
+fi
+
+status_right="${status_right_prefix}${status_right_battery}${status_right_time}${status_right_date}${status_right_username}${status_right_hostname}"
+tmux set -g status-right-length 64 \; set -g status-right "$status_right"
+
+# clock
+clock_mode_colour=colour39  # light blue
+tmux setw -g clock-mode-colour $clock_mode_colour
+
+
