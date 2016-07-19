@@ -77,6 +77,8 @@ files_common+=(.astylerc)
 files_common+=(.Mail-Mew)
 # mutt
 files_common+=(.mutt .muttrc .Mail)
+# urlview
+files_common+=(.urlview)
 # getmail配合mutt收邮件
 files_common+=(.getmail)
 # 用来取代getmail的
