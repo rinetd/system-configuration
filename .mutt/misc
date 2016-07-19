@@ -112,3 +112,10 @@ set status_chars  = " *%A"
 # set status_format=" %r %b %f %n　　　Del %d　　　Msgs %m %l %> (%P)"
 set date_format="!%H:%M %a %d %b　　 "
 set status_format = "───[ Folder: %f ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"
+
+# 切换信箱的时候(直接按y)以后的界面显示内容，不过貌似目前没法显示该信箱里面新的邮件的个数
+set folder_format="%2C %t %N %F %2l %-8.8u %-8.8g %8s %d %f"
+
+
+
+

@@ -9,7 +9,6 @@ set envelope_from=yes
 source ~/.mutt/boxes
 
 # # 自定义界面颜色
-#source ~/.mutt/color
 source ~/.mutt/colors
 # source ~/.mutt/mutt-colors-solarized/mutt-colors-solarized-light-16.muttrc
 # #mutt-colors-solarized
