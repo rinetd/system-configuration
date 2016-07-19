@@ -49,7 +49,8 @@ macro pager \e0 ":unset display_filter; exec exit\n:exec display-message\n"     
 macro pager \e1 ":set display_filter='t-prot -cmektlS --bigq --pgp-short --pgp-move-vrf -Mmutt -L/home/alfie/etc/mutt/listfooters/'; exec exit\n:exec display-message\n" "Turn TOFU protection on"
 macro pager \e2 ":set display_filter='t-prot -cmektl --bigq --pgp-short --pgp-move-vrf -Mmutt -L/home/alfie/etc/mutt/listfooters/'; exec exit\n:exec display-message\n"  "Turn TOFU protection on (except signature)"
 
-
+# 切换邮箱
+macro index,pager y <change-folder>?<toggle-mailboxes>
 
 
 #--------------------------------------------------------------------------
@@ -99,6 +100,8 @@ bind index gg   "first-entry"         # jump to the first entry
 bind index G    "last-entry"           # retrieve mail from POP server
 bind index <enter>  "display-message"  # display a message
 
+bind index d    "delete-message"       # delete the current entry
+
  bind index b    "bounce-message"       # remail a message to another user
  bind index c    "change-folder"        # open a different folder
  bind index \ec  "change-folder-readonly"  # open a different folder in read only mode
@@ -108,62 +111,63 @@ bind index <enter>  "display-message"  # display a message
  bind index a    "create-alias"         # create an alias from a message sender
  bind index \eC  "decode-copy"          # decode a message and copy it to a file/mailbox
  bind index \es  "decode-save"          # decode a message and save it to a file/mailbox
- bind index d    "delete-message"       # delete the current entry
- bind index D    "delete-pattern"       # delete messages matching a pattern
- bind index \ed  "delete-subthread"     # delete all messages in subthread
- bind index \cD  "delete-thread"        # delete all messages in thread
- bind index @    "display-address"      # display full address of sender
- bind index h    "display-toggle-weed"  # display message and toggle header weeding
- bind index e    "edit"                 # edit the current message
- bind index \cE  "edit-type"            # edit the current message's Content-Type
- bind index x    "exit"                 # exit without saving changes
- bind index \cK  "extract-keys"         # extract PGP public keys
- bind index F    "flag-message"         # toggle a message's 'important' flag
- bind index \cF  "forget-passphrase"    # wipe PGP passphrase from memory
- bind index f    "forward-message"      # forward a message with comments
-  bind index l    "limit"                # show only messages matching a pattern
- bind index L    "list-reply"           # reply to specified mailing list
- bind index m    "mail"                 # compose a new mail message
- bind index \ek  "mail-key"             # mail a PGP public key
- bind index \t   "next-new"             # jump to the next new message
- bind index \en  "next-subthread"       # jump to the next subthread
- bind index \cN  "next-thread"          # jump to the next thread
- bind index j    "next-undeleted"       # move to the next undeleted message
-#bind index      "next-unread"          # jump to the next unread message
- bind index P    "parent-message"       # jump to parent message in thread
- bind index |    "pipe-message"         # pipe message/attachment to a shell command
- bind index \e\t "previous-new"         # jump to the previous new message
- bind index Z    "previous-page"        # move to the previous page
- bind index \ep  "previous-subthread"   # jump to previous subthread
- bind index \cP  "previous-thread"      # jump to previous thread
- bind index k    "previous-undeleted"   # move to the last undelete message
-#bind index      "previous-unread"      # jump to the previous unread message
- bind index p    "print-message"        # print the current entry
- bind index Q    "query"                # query external program for addresses
- bind index q    "quit"                 # save changes to mailbox and quit
- bind index \er  "read-subthread"       # mark the current subthread as read
- bind index \cR  "read-thread"          # mark the current thread as read
- bind index R    "recall-message"       # recall a postponed message
- bind index r    "reply"                # reply to a message
- bind index \ee  "resend-message"       # resend message and preserve MIME structure
- bind index s    "save-message"         # save message/attachment to a file
- bind index w    "set-flag"             # set a status flag on a message
- bind index V    "show-version"         # show the Mutt version number and date
- bind index \el  "show-limit"           # show currently active limit pattern, if any
- bind index o    "sort-mailbox"         # sort messages
- bind index O    "sort-reverse"         # sort messages in reverse order
- bind index $    "sync-mailbox"         # save changes to mailbox
- bind index T    "tag-pattern"          # tag messages matching a pattern
- bind index \et  "tag-thread"           # tag/untag all messages in the current thread
- bind index N    "toggle-new"           # toggle a message's 'new' flag
- bind index %    "toggle-write"         # toggle whether the mailbox will be rewritten
- bind index u    "undelete-message"     # undelete the current entry
- bind index U    "undelete-pattern"     # undelete messages matching a pattern
- bind index \eu  "undelete-subthread"   # undelete all messages in subthread
- bind index \cU  "undelete-thread"      # undelete all messages in thread
- bind index \cT  "untag-pattern"        # untag messages matching a pattern
- bind index v    "view-attachments"     # show MIME attachments
- bind index \eP  "check-traditional-pgp"   # check for classic pgp
+# delete message
+
+ # bind index D    "delete-pattern"       # delete messages matching a pattern
+#  bind index \ed  "delete-subthread"     # delete all messages in subthread
+#  bind index \cD  "delete-thread"        # delete all messages in thread
+#  bind index @    "display-address"      # display full address of sender
+#  bind index h    "display-toggle-weed"  # display message and toggle header weeding
+#  bind index e    "edit"                 # edit the current message
+#  bind index \cE  "edit-type"            # edit the current message's Content-Type
+#  bind index x    "exit"                 # exit without saving changes
+#  bind index \cK  "extract-keys"         # extract PGP public keys
+#  bind index F    "flag-message"         # toggle a message's 'important' flag
+#  bind index \cF  "forget-passphrase"    # wipe PGP passphrase from memory
+#  bind index f    "forward-message"      # forward a message with comments
+#   bind index l    "limit"                # show only messages matching a pattern
+#  bind index L    "list-reply"           # reply to specified mailing list
+#  bind index m    "mail"                 # compose a new mail message
+#  bind index \ek  "mail-key"             # mail a PGP public key
+#  bind index \t   "next-new"             # jump to the next new message
+#  bind index \en  "next-subthread"       # jump to the next subthread
+#  bind index \cN  "next-thread"          # jump to the next thread
+#  bind index j    "next-undeleted"       # move to the next undeleted message
+# #bind index      "next-unread"          # jump to the next unread message
+#  bind index P    "parent-message"       # jump to parent message in thread
+#  bind index |    "pipe-message"         # pipe message/attachment to a shell command
+#  bind index \e\t "previous-new"         # jump to the previous new message
+#  bind index Z    "previous-page"        # move to the previous page
+#  bind index \ep  "previous-subthread"   # jump to previous subthread
+#  bind index \cP  "previous-thread"      # jump to previous thread
+#  bind index k    "previous-undeleted"   # move to the last undelete message
+# #bind index      "previous-unread"      # jump to the previous unread message
+#  bind index p    "print-message"        # print the current entry
+#  bind index Q    "query"                # query external program for addresses
+#  bind index q    "quit"                 # save changes to mailbox and quit
+#  bind index \er  "read-subthread"       # mark the current subthread as read
+#  bind index \cR  "read-thread"          # mark the current thread as read
+#  bind index R    "recall-message"       # recall a postponed message
+#  bind index r    "reply"                # reply to a message
+#  bind index \ee  "resend-message"       # resend message and preserve MIME structure
+#  bind index s    "save-message"         # save message/attachment to a file
+#  bind index w    "set-flag"             # set a status flag on a message
+#  bind index V    "show-version"         # show the Mutt version number and date
+#  bind index \el  "show-limit"           # show currently active limit pattern, if any
+#  bind index o    "sort-mailbox"         # sort messages
+#  bind index O    "sort-reverse"         # sort messages in reverse order
+#  bind index $    "sync-mailbox"         # save changes to mailbox
+#  bind index T    "tag-pattern"          # tag messages matching a pattern
+#  bind index \et  "tag-thread"           # tag/untag all messages in the current thread
+#  bind index N    "toggle-new"           # toggle a message's 'new' flag
+#  bind index %    "toggle-write"         # toggle whether the mailbox will be rewritten
+#  bind index u    "undelete-message"     # undelete the current entry
+#  bind index U    "undelete-pattern"     # undelete messages matching a pattern
+#  bind index \eu  "undelete-subthread"   # undelete all messages in subthread
+#  bind index \cU  "undelete-thread"      # undelete all messages in thread
+#  bind index \cT  "untag-pattern"        # untag messages matching a pattern
+#  bind index v    "view-attachments"     # show MIME attachments
+#  bind index \eP  "check-traditional-pgp"   # check for classic pgp
 
 
 #--------------------------------------------------------------------------

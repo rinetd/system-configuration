@@ -41,6 +41,7 @@ mailboxes  +思华
 mailboxes  "+--------- Maillist ----------" 
 # 发件箱/草稿箱
 mailboxes +Drafts \
-		  +Sent
+		  +Sent \
+		  +Trash
 
 

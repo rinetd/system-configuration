@@ -17,6 +17,6 @@ bind index,pager \CO  sidebar-open
 color sidebar_new cyan default
 
 # b = toggle sidebar
-# macro index b '<enter-command>toggle sidebar_visible<enter>'
-# macro pager b '<enter-command>toggle sidebar_visible<enter>'
+macro index B '<enter-command>toggle sidebar_visible<enter>'
+macro pager B '<enter-command>toggle sidebar_visible<enter>'
 
