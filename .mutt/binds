@@ -30,9 +30,16 @@
  macro index    A  "!vim $HOME/etc/mutt/aliases\n:source $HOME/etc/mutt/aliases\n"  "Edit alias-file and reread"
  macro pager    A  "!vim $HOME/etc/mutt/aliases\n:source $HOME/etc/mutt/aliases\n"  "Edit alias-file and reread"
 
- # 列出邮件里面的所有URL
- macro index  l  "|urlview\n"  "call urlview to extract URLs out of a message"
- macro pager  l  "|urlview\n"  "call urlview to extract URLs out of a message"
+# 列出邮件里面的所有URL
+macro index  l  "|urlview\n"  "call urlview to extract URLs out of a message"
+macro pager  l  "|urlview\n"  "call urlview to extract URLs out of a message"
+
+# 删除邮件
+# macro index,pager d "<delete-message><sync-mailbox>aa"
+macro index,pager d delete-message
+
+
+# macro index,pager E <change-folder>=Trash<enter><delete-pattern>~A<enter>
 
  macro generic  <f1>  "!w3m /usr/share/doc/mutt/manual.txt.gz\n"  "Show Mutt documentation"
  macro index    <f1>  "!w3m /usr/share/doc/mutt/manual.txt.gz\n"  "Show Mutt documentation"
@@ -100,7 +107,8 @@ bind index gg   "first-entry"         # jump to the first entry
 bind index G    "last-entry"           # retrieve mail from POP server
 bind index <enter>  "display-message"  # display a message
 
-bind index d    "delete-message"       # delete the current entry
+
+# bind index D purge-message
 
  bind index b    "bounce-message"       # remail a message to another user
  bind index c    "change-folder"        # open a different folder
@@ -195,7 +203,6 @@ bind pager \ck    "previous-entry"          # move to the previous entry
 #  bind pager a    "create-alias"            # create an alias from a message sender
 #  bind pager \eC  "decode-copy"             # decode a message and copy it to a file/mailbox
 #  bind pager \es  "decode-save"             # decode a message and save it to a file/mailbox
-#  bind pager d    "delete-message"          # delete the current entry
 #  bind pager \ed  "delete-subthread"        # delete all messages in subthread
 #  bind pager \cD  "delete-thread"           # delete all messages in thread
 #  bind pager @    "display-address"         # display full address of sender
@@ -404,5 +411,7 @@ bind pager \ck    "previous-entry"          # move to the previous entry
 #bind editor      "transpose-chars"    # transpose character under cursor with previous
  bind editor \eu  "upcase-word"        # uppercase all characters in current word
 
+# empty the Trash dir
+macro index,pager E <change-folder>=Trash<enter><delete-pattern>~A<enter>
 
 # vim: set ft=muttrc tw=0 nowrap:

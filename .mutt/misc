@@ -102,6 +102,7 @@ set from='<haiyuan.zhang@kaixiangtech.com>'
 macro generic "<esc>1" ":set from='haiyuan.zhang@kaixiangtech.com'"
 macro generic "<esc>2" ":set from='haiyuan.zhang@sihuatech.com'"
 macro generic "<esc>3" ":set from='haiyuan.vinurs@gmail.com'"
+set delete = yes
 
 
 # 邮件结尾加上我的签名档

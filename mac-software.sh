@@ -70,7 +70,8 @@ brew unlink openssl && brew link openssl --force
 
 # mutt
 brew tap sgeb/mutt
-brew install sgeb/mutt/mutt  --with-confirm-attachment-patch --with-gmail-labels-patch --with-sidebar-patch --with-gmail-server-search-patch
+# 安装mutt，开启sidebar/trash patch
+brew install sgeb/mutt/mutt  --with-confirm-attachment-patch --with-gmail-labels-patch --with-sidebar-patch --with-gmail-server-search-patch --with-trash-patch
 brew install offlineimap
 brew install msmtp
 brew install notmuch
