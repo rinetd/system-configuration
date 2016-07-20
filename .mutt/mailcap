@@ -1,8 +1,18 @@
-#text/html; w3m -dump -o  document_charse=%{charset} %s; nametemplate=%s.html; copiousoutput
-text/html; w3m -o document_charse=%{charset} %s; nametemplate=%s.html
-text/html; w3m -dump -o document_charse=%{charset} %s; nametemplate=%s.html; copiousoutput
-#image/*; ~/.mutt/w3m-img %s
-image/*; qiv %s
-# application/msword; wvHtml --charset=gb2312 %s - | lynx --dump -stdin;
-# nametemplate=%s.html; copiousoutput
+# Images
+image/jpeg; /Users/vinurs/.mutt/view_attachment.sh %s
+image/pjpeg; /Users/vinurs/.mutt/view_attachment.sh %s
+image/png; /Users/vinurs/.mutt/view_attachment.sh %s
+image/gif; /Users/vinurs/.mutt/view_attachment.sh %s
+
+# PDF
+application/pdf; /Users/vinurs/.mutt/view_attachment.sh %s pdf
+
+# HTML
+# -- always use lynx; it's gay to use safari for this
+text/html; elinks -force-html %s
+
+application/octet-stream; ~/.mutt/mutt.octet.filter %s; copiousoutput
+
+
+
 
