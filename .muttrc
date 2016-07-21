@@ -32,6 +32,7 @@ source ~/.mutt/charsets
 
 # Check my mutt-specific mailcap before consulting the system-wide one.
 set mailcap_path="${HOME}/.mutt/mailcap:/etc/mailcap"
+auto_view application/octet-stream
 
 # 其他设置
 source ~/.mutt/misc
