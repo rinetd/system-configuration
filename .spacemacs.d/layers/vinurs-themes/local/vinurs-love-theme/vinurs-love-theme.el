@@ -167,9 +167,10 @@ Semantic, and Ansi-Color faces are included.")
    ;;    `(success                        ((,class (:foreground ,cham-3))))
    ;;    ;; Font lock faces
    ;;    `(font-lock-builtin-face         ((,class (:foreground ,plum-2))))
-   ;; 注释的设置
-   `(font-lock-comment-face         ((,class (:slant italic :foreground ,alum-4 :background ,white))))
-   `(font-lock-comment-face         ((,class (:slant italic :foreground ,alum-4))))
+
+   ;; 注释相关的设置，注释背景是白色，前面是灰色
+   `(font-lock-comment-face         ((,class (:slant italic :foreground "gray70" :background ,default-bg-color))))
+
    `(font-lock-constant-face        ((,class (:weight light :foreground ,blue-3))))
    `(font-lock-function-name-face   ((,class (:foreground ,red-3))))
    `(font-lock-keyword-face         ((,class (:foreground ,blue-3 :weight light))))
