@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@vinurs-mac.local
 ;; Version: $Id: @(#)c-settings.el,v 0.0 2016/05/02 09:11:36 vinurs Exp $
-;; Changed: <victor 02/20/2011 11:29:30>
+;; Changed: <vinurs 07/22/2016 08:48:54>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -44,12 +44,13 @@
 ;;;;##########################################################################
 
 
+;; (evil-end-of-line &optional COUNT)
 
 ;; Create my personal style.
 (defconst vinurs-c-style
   '(
     ;; c的缩进为４个空格
-    (c-basic-offset . 4)
+    (c-basic-offset . 8)
     (indent-tabs-mode . nil)
 	;; 按tab键之后缩进
     (c-tab-always-indent  . t)
@@ -96,6 +97,55 @@
     )
   "vinurs' C Programming Style")
 (c-add-style "vinurs" vinurs-c-style)
+(defconst vinurs-c-style
+  '(
+    ;; c的缩进为４个空格
+    (c-basic-offset . 8)
+    (indent-tabs-mode . nil)
+	;; 按tab键之后缩进
+    (c-tab-always-indent  . t)
+
+	;; 宏相关设置
+	;; 宏设置相关 *********************************
+	;; 在c语言中，对宏进行语法分析，这样便于缩进
+	(c-syntactic-indentation-in-macros . t)
+	;; 这个是专属于cc-mode的，对宏定义最后一行的反斜杠的位置的定义
+	(c-backslash-column . 33)
+	;; 对于反斜杠进行连接的代码，自动对齐最后的反斜杠
+	(c-auto-align-backslashes . t)
+	;; 宏设置相关结束 *****************************
+	
+	;; 这个不知道有什么用
+    ;; (c-comment-only-line-offset . 8)
+	
+    ;; ;; (c-hanging-braces-alist     . ((substatement-open after)
+    ;; ;;                                (brace-list-open)))
+    ;; (c-hanging-colons-alist     . ((member-init-intro before)
+    ;;                                (inher-intro)
+    ;;                                ;; (case-label after)
+    ;;                                (label after)
+    ;;                                (access-label after)))
+    ;; (c-cleanup-list             . (
+    ;;                                ;; scope-operator
+    ;;                                ;; 如果函数体为空的时候直接将{}连起来
+    ;;                                empty-defun-braces
+    ;;                                ;; } else {变紧凑
+    ;;                                ;; brace-else-brace
+    ;;                                ;; brace-elseif-brace
+    ;;                                ;; compact-empty-funcall
+    ;;                                ;; defun-close-semi
+    ;;                                )
+    ;;                             )
+    ;; (c-offsets-alist            . ((arglist-close . c-lineup-arglist)
+    ;;                                (substatement-open . 0)
+    ;;                                ;; case语句跟switch同列
+    ;;                                (case-label        . 0)
+    ;;                                (block-open        . 4)
+    ;;                                (knr-argdecl-intro . -)))
+    ;; (c-echo-syntactic-information-p . t)
+
+    )
+  "vinurs' gluster Programming Style")
 
 ;; Customizations for all modes in CC Mode.
 (defun vinurs-c-mode-hook ()

@@ -83,6 +83,9 @@ brew install lynx
 brew install getmail
 # 用来过滤getmail收到的邮件
 brew install procmail
+# 邮件客户端
+brew install mu
+
 
 # 终端里面直接打开图片?
 # imlib2用来转化图片
