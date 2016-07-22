@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@vinurs-mac.local
 ;; Version: $Id: @(#)user-config.el,v 0.0 2016/05/17 07:28:04 vinurs Exp $
-;; Changed: <victor 02/20/2011 11:29:30>
+;; Changed: <vinurs 07/22/2016 08:47:32>
 ;; Keywords:
 ;; X-URL: not distributed yet
 
@@ -70,9 +70,9 @@
   )
 
 ;; 一些emacs的快捷键我还是喜欢的
-(define-key evil-motion-state-map (kbd "e") 'end-of-line) 
-(define-key evil-motion-state-map (kbd "C-e") 'end-of-line) 
- 
+(define-key evil-motion-state-map (kbd "e") 'evil-end-of-line) 
+(define-key evil-motion-state-map (kbd "C-e") 'evil-end-of-line) 
+
 ;; 这里总觉得这样放乱糟糟的
 (with-eval-after-load 'helm-swoop
   (define-key helm-swoop-map (kbd "C-r") 'helm-previous-line)
