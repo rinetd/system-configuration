@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)vinurs-coding-settings.el,v 0.0 2011/02/18 15:05:04 victor Exp $
-;; Changed: <vinurs 06/22/2016 07:01:13>
+;; Changed: <vinurs 07/22/2016 22:22:35>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -44,7 +44,6 @@
 ;;;;##########################################################################
 ;;;;  User Options, Variables
 ;;;;##########################################################################
-
 
 
 

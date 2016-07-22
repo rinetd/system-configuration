@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)extensions.el,v 0.0 2016/07/22 22:19:22 vinurs Exp $
-;; Changed: <vinurs 07/22/2016 22:29:31>
+;; Changed: <vinurs 07/22/2016 22:34:38>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -43,11 +43,6 @@
 ;;;;  User Options, Variables
 ;;;;##########################################################################
 
-
-;; 编码设置:utf-8之类，所有的文件全部以utf8保存
-(require 'vinurs-coding-settings)
-
-333
 
 (provide 'extensions)
 

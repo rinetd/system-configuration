@@ -33,8 +33,10 @@
   '(
 	 ;; 记录每个键的按键次数
 	 (keyfreq)
+
 	 ;; highlight tail性感的小尾巴标识最近修改
 	 (highlight-tail)
+
 	 ;; 新建文件的时候自动根据后缀补全一些文件的基本信息
 	 (template :location local)
 	 ;;    (general :location local)
@@ -43,9 +45,9 @@
 	 ;; dot画图语言
 	 (graphviz-dot-mode)
 	 ;; mode-line用图标来显示
-	 (mode-icons)
+	 ;; (mode-icons)
 	 ;; vinurs-theme，自己改造的主题
-	 (vinurs-theme :location local)
+	 ;; (vinurs-theme :location local)
 	 )
   "The list of Lisp packages required by the vinurs-basic layer.
 
@@ -158,7 +160,7 @@ Each entry is either:
   ;; Code
   :post-init
   (progn
-	(require 'graphviz-dot-mode-settings)
+    (require 'graphviz-dot-mode-settings)
 	)
   ;; Code
   :pre-config
@@ -177,7 +179,6 @@ Each entry is either:
 	  )
 	)
   ) 
-
 
 
 ;;; packages.el ends here

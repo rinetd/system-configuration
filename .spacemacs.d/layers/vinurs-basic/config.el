@@ -1,10 +1,11 @@
+;; add to load-path first
 (push "~/.spacemacs.d/layers/vinurs-basic/" load-path)
 
 ;; Prefixes
 ;; 除了spacemac自定义的前缀键，我自己另外定义了oa表示我自己的应用程序
 (setq spacemacs/key-binding-prefixes '(("o"   "user-defineds")
                                        ("oa"  "applications")
-									   ))
+                                       ))
 (mapc (lambda (x) (apply #'spacemacs/declare-prefix x))
       spacemacs/key-binding-prefixes)
 
@@ -18,18 +19,14 @@
 ;; emacs server相关
 ;; 对于用client打开的文件，也用C-x k关闭
 (add-hook 'server-switch-hook
-		  (lambda ()
-			(when (current-local-map)
-			  (use-local-map (copy-keymap (current-local-map))))
-			(when server-buffer-clients
-			  (local-set-key (kbd "C-x k") 'server-edit))))  
+          (lambda ()
+            (when (current-local-map)
+              (use-local-map (copy-keymap (current-local-map))))
+            (when server-buffer-clients
+              (local-set-key (kbd "C-x k") 'server-edit))))  
 
 ;; 设置info目录路径 
 (add-to-list 'Info-default-directory-list "/usr/share/info")
-
-;; 配置path环境变量
-(setenv "PATH" (concat "/usr/local/bin/:" (getenv "PATH")))
-(setq exec-path (append exec-path '("/usr/local/bin/")))
 
 ;;;###autoload
 (defun am-add-hooks (hooks function &optional append local)
@@ -63,12 +60,9 @@ HOOKS can be one list or just a hook."
 
 
 
-;;由菜单修改配置的东西将会保存在custom-file里
-(setq custom-file "~/.spacemacs.d/custom.el")
-
 ;; org-mode, 自动换行
 (add-hook 'org-mode-hook
-    (lambda () (setq truncate-lines nil)))
+          (lambda () (setq truncate-lines nil)))
 
 ;; 一行太长的时候自动换行
 (setq truncate-lines t)
@@ -99,8 +93,8 @@ HOOKS can be one list or just a hook."
      )   
     ;; for window
     (((type graphic) (class color))
-     (:background "white"
-                  :foreground "black"
+     (:background "default"
+                  :foreground "green"
                   ))
     ;; default
     (t (:foreground "blue"
