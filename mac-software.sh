@@ -84,6 +84,10 @@ brew install getmail
 # 用来过滤getmail收到的邮件
 brew install procmail
 
+# 终端里面直接打开图片?
+# imlib2用来转化图片
+brew reinstall libcaca --with-imlib2
+
 brew install perl
 # 格式化代码工具
 brew install editorconfig
