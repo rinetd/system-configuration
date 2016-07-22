@@ -85,7 +85,8 @@ brew install getmail
 brew install procmail
 
 brew install perl
-
+# 格式化代码工具
+brew install editorconfig
 # Node.js
 brew install node
 brew install nodejs
