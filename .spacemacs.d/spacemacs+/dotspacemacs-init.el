@@ -97,12 +97,12 @@
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
    ;; size to make separators look not too crappy.
    dotspacemacs-default-font '("Source Code Pro"
-                               :size 13
+                               :size 18
                                :weight normal
                                :width normal
                                :powerline-scale 1.1)
-   dotspacemacs-themes '(tsdh-light 
-    						 )
+   ;; dotspacemacs-themes '(tsdh-light 
+   ;;  						 )
 
    ;; The leader key
    dotspacemacs-leader-key "SPC"

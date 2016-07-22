@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@vinurs-mac.local
 ;; Version: $Id: @(#)user-config.el,v 0.0 2016/05/17 07:28:04 vinurs Exp $
-;; Changed: <vinurs 07/22/2016 08:47:32>
+;; Changed: <vinurs 07/22/2016 22:52:54>
 ;; Keywords:
 ;; X-URL: not distributed yet
 
@@ -51,50 +51,57 @@
 ;; you should place you code here."
  
 
-;; 保存打开的文件
-(desktop-save-mode)
-(desktop-read)
-(setq-default save-place t) 
+
+;; (setq powerline-default-separator 'arrow)
+
+;; ; 在编辑模式下面c-h用来删除前面一个字符
+;; (define-key evil-insert-state-map (kbd "C-h") 'delete-backward-char)
+;; ;; 在helm模式下面映射c-h为删除前一个字符
+;; (with-eval-after-load 'helm
+;;   (define-key helm-map (kbd "C-h") 'delete-backward-char)
+;;   (define-key helm-map (kbd "C-k") 'kill-line)  
+;;   )
+
+;; ;; 一些emacs的快捷键我还是喜欢的
+;; (define-key evil-motion-state-map (kbd "e") 'evil-end-of-line) 
+;; (define-key evil-motion-state-map (kbd "C-e") 'evil-end-of-line) 
+
+;; ;; 这里总觉得这样放乱糟糟的
+;; (with-eval-after-load 'helm-swoop
+;;   (define-key helm-swoop-map (kbd "C-r") 'helm-previous-line)
+;;   (define-key helm-swoop-map (kbd "C-s") 'helm-next-line)
+;;   (define-key helm-multi-swoop-map (kbd "C-r") 'helm-previous-line)
+;;   (define-key helm-multi-swoop-map (kbd "C-s") 'helm-next-line)
+;;   )
 
 
-(setq powerline-default-separator 'arrow)
+;; (setq tab-width 4)
+
+;; ;; 缩进提示线的配置，竖线
+;; (setq indent-tabs-mode nil) 
+;; (setq indent-guide-delay 0.1) 
+;; ;; 这个跟自动补全下拉菜单配合得不好，所以暂时不启用
+;; ;;(setq indent-guide-recursive t) 
+;; (indent-guide-global-mode) 
+
+;; ;; 美化显示符号（elisp），比如lambda会显示为λ
+;; ;; (prettify-symbols-mode)
+;; ;; (global-prettify-symbols-mode 1)
+;; ;;  (spacemacs/helm-gtags-define-keys-for-mode 'c-mode)
+
+
 ;; 不显示结尾的空格
 (setq-default spacemacs-show-trailing-whitespace nil) 
 
-; 在编辑模式下面c-h用来删除前面一个字符
-(define-key evil-insert-state-map (kbd "C-h") 'delete-backward-char)
-;; 在helm模式下面映射c-h为删除前一个字符
-(with-eval-after-load 'helm
-  (define-key helm-map (kbd "C-h") 'delete-backward-char)
-  (define-key helm-map (kbd "C-k") 'kill-line)  
-  )
 
-;; 一些emacs的快捷键我还是喜欢的
-(define-key evil-motion-state-map (kbd "e") 'evil-end-of-line) 
-(define-key evil-motion-state-map (kbd "C-e") 'evil-end-of-line) 
-
-;; 这里总觉得这样放乱糟糟的
-(with-eval-after-load 'helm-swoop
-  (define-key helm-swoop-map (kbd "C-r") 'helm-previous-line)
-  (define-key helm-swoop-map (kbd "C-s") 'helm-next-line)
-  (define-key helm-multi-swoop-map (kbd "C-r") 'helm-previous-line)
-  (define-key helm-multi-swoop-map (kbd "C-s") 'helm-next-line)
-  )
+;;由菜单修改配置的东西将会保存在custom-file里
+(setq custom-file "~/.spacemacs.d/custom.el")
 
 
-(setq tab-width 4)
-
-;; 缩进提示线的配置，竖线
-(setq indent-tabs-mode nil) 
-(setq indent-guide-delay 0.1) 
-;; 这个跟自动补全下拉菜单配合得不好，所以暂时不启用
-;;(setq indent-guide-recursive t) 
-(indent-guide-global-mode) 
-
-;; 美化显示符号（elisp），比如lambda会显示为λ
-;; (prettify-symbols-mode)
-;; (global-prettify-symbols-mode 1)
-;;  (spacemacs/helm-gtags-define-keys-for-mode 'c-mode)
+;; 保存打开的文件以及文件中光标位置，重新打开emacs以后恢复
+(desktop-save-mode)
+(desktop-read)
+(setq-default save-place t) 
 
 
 
