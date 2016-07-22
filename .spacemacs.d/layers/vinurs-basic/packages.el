@@ -36,7 +36,6 @@
 
 	 ;; highlight tail性感的小尾巴标识最近修改
 	 (highlight-tail)
-
 	 ;; 新建文件的时候自动根据后缀补全一些文件的基本信息
 	 (template :location local)
 	 ;;    (general :location local)
