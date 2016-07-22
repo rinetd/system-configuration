@@ -36,6 +36,7 @@
 
 	 ;; git相关
 	 ;; magit
+
 	 ;; muttrc 
 	 muttrc-mode
 	 )
@@ -116,6 +117,7 @@ Each entry is either:
 	(progn
 	  ))
   )
+
 ;; (defun vinurs-dev-env/init-magit ()
 ;;   (use-package magit
 ;;     :defer t
