@@ -2,14 +2,7 @@
 ;; This file is loaded by Spacemacs at startup.
 ;; It must be stored in your home directory.
 
-(defun dotspacemacs/layers ()
-  "Configuration Layers declaration.
-You should not put any user code in this function besides modifying the variable
-values."
-  (load-file "~/.spacemacs.d/spacemacs+/dotspacemacs-layers.el")
-  )
-
-
+;; first step
 (defun dotspacemacs/init ()
   "Initialization function.
 This function is called at the very startup of Spacemacs initialization
@@ -19,6 +12,7 @@ values."
   (load-file "~/.spacemacs.d/spacemacs+/dotspacemacs-init.el")
   )
 
+;; second step
 (defun dotspacemacs/user-init ()
   "Initialization function for user code.
 It is called immediately after `dotspacemacs/init', before layer configuration
@@ -27,9 +21,19 @@ executes.
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
   (load-file "~/.spacemacs.d/spacemacs+/dotspacemacs-user-init.el")
-
   )
 
+
+;; third step
+(defun dotspacemacs/layers ()
+  "Configuration Layers declaration.
+ You should not put any user code in this function besides modifying the variable
+ values."
+  (load-file "~/.spacemacs.d/spacemacs+/dotspacemacs-layers.el")
+  )
+
+
+;; last step
 (defun dotspacemacs/user-config ()
   "Configuration function for user code.
 This function is called at the very end of Spacemacs initialization after
