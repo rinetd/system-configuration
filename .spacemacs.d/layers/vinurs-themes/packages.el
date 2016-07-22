@@ -31,8 +31,8 @@
 
 (defconst vinurs-themes-packages
   '(
-(vinurs-love-theme :location local)
-)
+    (vinurs-love-theme :location local)
+    )
   "The list of Lisp packages required by the vinurs-themes layer.
 
 Each entry is either:
@@ -63,7 +63,7 @@ Each entry is either:
 
 (defun vinurs-themes/init-vinurs-love-theme ()
   (use-package vinurs-love-theme
-	)
+    )
   
   )
 

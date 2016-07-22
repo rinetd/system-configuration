@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@vinurs-mac.local
 ;; Version: $Id: @(#)dotspacemacs-layers.el,v 0.0 2016/05/25 15:13:53 vinurs Exp $
-;; Changed: <vinurs 07/22/2016 22:56:44>
+;; Changed: <vinurs 07/22/2016 22:57:51>
 ;; Keywords:
 ;; X-URL: not distributed yet
 
@@ -116,7 +116,7 @@
 
    ;;    )
    ;;  ;; end 自动补全
-   ;;  vinurs-themes
+   vinurs-themes
    ) 
  ;; end of dotspacemacs-configuration-layers
  ;; List of additional packages that will be installed without being
