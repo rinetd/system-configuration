@@ -71,6 +71,47 @@ Each entry is either:
       - A list beginning with the symbol `recipe' is a melpa
         recipe.  See: https://github.com/milkypostman/melpa#recipe-format")
 
+
+(defun vinurs-basic/init-keyfreq ()
+  (use-package keyfreq
+    ;; 启动emacs的时候就加载该插件
+    :demand t
+    :config
+    (progn
+      (require 'keyfreq-settings)
+      )
+    )
+  )
+
+(defun vinurs-basic/init-highlight-tail ()
+  (use-package highlight-tail
+    :demand t
+    :config
+    (progn
+      (message "enable lllll highlight tail")
+      ;; 设置高亮的颜色
+      (setq highlight-tail-colors
+            '(("#c1e156" . 0)
+              ("#b8ff07" . 25)
+              ("#00c377" . 60))) 
+
+      ;; const则渐变固定长度的修 改，而这个长度则是由highlight-tail-const-width来控制的
+      (setq highlight-tail-steps 80
+            highlight-tail-timer 0.1
+            highlight-tail-const-width 30
+            ) 
+
+      (setq highlight-tail-posterior-type 'const) 
+      ;; 全局开启highlight-tail mode
+      (highlight-tail-mode) 
+
+
+      )
+
+    )
+  )  
+
+
 (defun vinurs-basic/init-parent-mode () 
   (use-package parent-mode
     :defer t)
@@ -93,37 +134,10 @@ Each entry is either:
 
   )
 
-(defun vinurs-basic/init-highlight-tail ()
-  (use-package highlight-tail
-    :defer t
-    :init
-    (progn
-      ;; 全局开启highlight-tail mode
-      (highlight-tail-mode t)
-      ;; const则渐变固定长度的修 改，而这个长度则是由highlight-tail-const-width来控制的
-      (setq highlight-tail-posterior-type 'const)
-      (setq highlight-tail-steps 80
-            highlight-tail-timer 0.1
-            highlight-tail-const-width 30
-            ) 
-      ;; 设置高亮的颜色
-      (setq highlight-tail-colors
-            '(("#c1e156" . 0)
-              ("#b8ff07" . 25)
-              ("#00c377" . 60))) 
-      ))
-  )
 
 
 
-(defun vinurs-basic/init-keyfreq ()
-  (use-package keyfreq
-    :defer t
-    :init
-    (progn
-      (require 'keyfreq-settings)
-      ))
-  )
+
 
 
 (defun vinurs-basic/init-template () 
@@ -139,7 +153,6 @@ Each entry is either:
     (template-initialize)
     )
   )
-
 
 ;; (spacemacs|use-package-add-hook graphviz-dot-mode
 ;;   :pre-init

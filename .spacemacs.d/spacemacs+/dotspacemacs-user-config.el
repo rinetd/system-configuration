@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@vinurs-mac.local
 ;; Version: $Id: @(#)user-config.el,v 0.0 2016/05/17 07:28:04 vinurs Exp $
-;; Changed: <vinurs 07/23/2016 17:52:23>
+;; Changed: <vinurs 07/23/2016 23:25:02>
 ;; Keywords:
 ;; X-URL: not distributed yet
 
@@ -99,6 +99,11 @@
 (desktop-save-mode)
 (desktop-read)
 (setq-default save-place t) 
+
+
+;; 全局开启highlight-tail mode
+;; (highlight-tail-mode) 
+
 
 
 (provide 'dotspacemacs-user-config)

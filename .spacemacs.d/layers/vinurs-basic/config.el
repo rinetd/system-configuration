@@ -82,25 +82,25 @@
 ;; 行号相关
 (global-linum-mode t)
 ;; TODO 增加一些定制行号的字体的配置    
-(custom-set-faces
- '(linum
-   (   
-    ;; for tty
-    (((type tty) (class color))
-     (:foreground "black"
-                  :background "white"
-                  :inherit)
-     )   
-    ;; for window
-    (((type graphic) (class color))
-     (:background "default"
-                  :foreground "green"
-                  ))
-    ;; default
-    (t (:foreground "blue"
-                    :background "black"
-                    )))
-   ))
+;; (custom-set-faces
+;;  '(linum
+;;    (   
+;;     ;; for tty
+;;     (((type tty) (class color))
+;;      (:foreground "black"
+;;                   :background "white"
+;;                   :inherit)
+;;      )   
+;;     ;; for window
+;;     (((type graphic) (class color))
+;;      (:background "default"
+;;                   :foreground "green"
+;;                   ))
+;;     ;; default
+;;     (t (:foreground "blue"
+;;                     :background "black"
+;;                     )))
+;;    ))
 
 ;;set my fullname and my email,they can be used when mailing
 (setq user-full-name "haiyuan.zhang")
