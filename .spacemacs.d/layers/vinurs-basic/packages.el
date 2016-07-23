@@ -40,13 +40,12 @@
     ;; (template :location local)
     ;;    (general :location local)
     ;; (parent-mode)
-    ;; 保存上次打开的文件
+
     ;; dot画图语言
-    ;; (graphviz-dot-mode)
+    (graphviz-dot-mode)
+
     ;; mode-line用图标来显示
     ;; (mode-icons)
-    ;; vinurs-theme，自己改造的主题
-    ;; (vinurs-theme :location local)
     )
   "The list of Lisp packages required by the vinurs-basic layer.
 
