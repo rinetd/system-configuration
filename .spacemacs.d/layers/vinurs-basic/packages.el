@@ -103,7 +103,8 @@ Each entry is either:
 
       (setq highlight-tail-posterior-type 'const) 
       ;; 全局开启highlight-tail mode
-      (highlight-tail-mode) 
+      ;; 这个暂时放在user-config里面，放在这里的时候启动会报错
+      ;; (highlight-tail-mode) 
 
 
       )
