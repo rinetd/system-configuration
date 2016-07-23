@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@vinurs-mac.local
 ;; Version: $Id: @(#)user-config.el,v 0.0 2016/05/17 07:28:04 vinurs Exp $
-;; Changed: <vinurs 07/23/2016 08:29:43>
+;; Changed: <vinurs 07/23/2016 17:52:23>
 ;; Keywords:
 ;; X-URL: not distributed yet
 
@@ -85,6 +85,8 @@
 
   )
 
+;; 原来打开文件的时候不能用template，这里重新定义一下打开文件的函数
+
 
 ;; 不显示结尾的空格
 (setq-default spacemacs-show-trailing-whitespace nil) 
@@ -97,7 +99,6 @@
 (desktop-save-mode)
 (desktop-read)
 (setq-default save-place t) 
-
 
 
 (provide 'dotspacemacs-user-config)

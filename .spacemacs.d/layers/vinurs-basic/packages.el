@@ -128,11 +128,16 @@ Each entry is either:
 
 (defun vinurs-basic/init-template () 
   (use-package template
+    :init
+    (progn
+      )
     )
-  (setq template-default-directories 
-        '("~/.spacemacs.d/layers/vinurs-basic/local/template/templates"
-          ))
-  (template-initialize)
+  (progn
+    (setq template-default-directories 
+          '("~/.spacemacs.d/layers/vinurs-basic/local/template/templates"
+            ))
+    (template-initialize)
+    )
   )
 
 
