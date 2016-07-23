@@ -2,6 +2,8 @@
 ;; This file is loaded by Spacemacs at startup.
 ;; It must be stored in your home directory.
 
+(push "~/.spacemacs.d/spacemacs+" load-path)
+
 ;; first step
 (defun dotspacemacs/init ()
   "Initialization function.

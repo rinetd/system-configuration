@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@vinurs-mac.local
 ;; Version: $Id: @(#)user-config.el,v 0.0 2016/05/17 07:28:04 vinurs Exp $
-;; Changed: <vinurs 07/22/2016 22:52:54>
+;; Changed: <vinurs 07/23/2016 08:29:43>
 ;; Keywords:
 ;; X-URL: not distributed yet
 
@@ -54,26 +54,8 @@
 
 ;; (setq powerline-default-separator 'arrow)
 
-;; ; 在编辑模式下面c-h用来删除前面一个字符
-;; (define-key evil-insert-state-map (kbd "C-h") 'delete-backward-char)
-;; ;; 在helm模式下面映射c-h为删除前一个字符
-;; (with-eval-after-load 'helm
-;;   (define-key helm-map (kbd "C-h") 'delete-backward-char)
-;;   (define-key helm-map (kbd "C-k") 'kill-line)  
-;;   )
-
-;; ;; 一些emacs的快捷键我还是喜欢的
-;; (define-key evil-motion-state-map (kbd "e") 'evil-end-of-line) 
-;; (define-key evil-motion-state-map (kbd "C-e") 'evil-end-of-line) 
-
-;; ;; 这里总觉得这样放乱糟糟的
-;; (with-eval-after-load 'helm-swoop
-;;   (define-key helm-swoop-map (kbd "C-r") 'helm-previous-line)
-;;   (define-key helm-swoop-map (kbd "C-s") 'helm-next-line)
-;;   (define-key helm-multi-swoop-map (kbd "C-r") 'helm-previous-line)
-;;   (define-key helm-multi-swoop-map (kbd "C-s") 'helm-next-line)
-;;   )
-
+;; 对spacemacs自身的键绑定作的一些修改
+(require 'dotspacemacs-keybinds)
 
 ;; (setq tab-width 4)
 
@@ -89,10 +71,23 @@
 ;; ;; (global-prettify-symbols-mode 1)
 ;; ;;  (spacemacs/helm-gtags-define-keys-for-mode 'c-mode)
 
+;;;;;;;;; 键映射相关
+;; mac键重新映射
+(when (spacemacs/system-is-mac)
+  ;; key bindings
+  ;; for emacs
+  (setq mac-right-option-modifier 'control)
+  (setq mac-left-option-modifier 'alt)
+
+  ;;(setq mac-command-modifier 'control)
+  (setq mac-command-modifier 'meta)
+  (global-set-key [kp-delete] 'delete-char) ;; sets fn-delete to be right-delete
+
+  )
+
 
 ;; 不显示结尾的空格
 (setq-default spacemacs-show-trailing-whitespace nil) 
-
 
 ;;由菜单修改配置的东西将会保存在custom-file里
 (setq custom-file "~/.spacemacs.d/custom.el")

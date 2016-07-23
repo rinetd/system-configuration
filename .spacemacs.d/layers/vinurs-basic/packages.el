@@ -122,7 +122,6 @@ Each entry is either:
     :init
     (progn
       (require 'keyfreq-settings)
-
       ))
   )
 
@@ -134,8 +133,6 @@ Each entry is either:
         '("~/.spacemacs.d/layers/vinurs-basic/local/template/templates"
           ))
   (template-initialize)
-
-
   )
 
 
