@@ -40,10 +40,12 @@
     ;; 新建文件的时候自动根据后缀补全一些文件的基本信息
     (template :location local)
 
-    ;;    (general :location local)
-    ;; (parent-mode)
+    ;; 括号匹配
+    (parent-mode)
 
-    )
+    ;;    (general :location local)
+
+    ) 
   "The list of Lisp packages required by the vinurs-basic layer.
 
 Each entry is either:
@@ -115,25 +117,25 @@ Each entry is either:
 
 (defun vinurs-basic/init-parent-mode () 
   (use-package parent-mode
-    :defer t)
-  ;; TODO: 增加加粗当前括号的功能
-  ;; 不过目前的这种效果也有用
-  (show-paren-mode 1)
-  (setq show-paren-delay 0)
-  ;; (setq show-paren-style 'parenthesis) ; highlight brackets
+    :demand t
+    :config
+    (progn
+      ;; highlight entire expression
+      (setq show-paren-style 'expression) 
 
-  (setq show-paren-style 'expression) ; highlight entire expression
-
-  ;; (setq show-paren-style 'mixed) ; highlight brackets if visible, else entire expression
-
-  (require 'paren)
-  ;; (set-face-background 'show-paren-match (face-background 'default))
-  ;; (set-face-foreground 'show-paren-match "#def")
-  ;; 匹配的地方字体加粗，这个比较好，一直是我想要的
-  (set-face-attribute 'show-paren-match nil :weight 'extra-bold)
+      (setq show-paren-delay 0) 
+      ;; highlight brackets
+      ;; (setq show-paren-style 'parenthesis) 
 
 
-  )
+      ;; highlight brackets if visible, else entire expression
+      ;; 这种情况下只高亮括号，不高亮括号里面的内容
+      ;; (setq show-paren-style 'mixed) 
+
+      
+      )
+    )
+  ) 
 
 
 

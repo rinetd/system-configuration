@@ -106,14 +106,6 @@
 (setq user-full-name "haiyuan.zhang")
 (setq user-mail-address "haiyuan.vinurs@gmail.com")
 
-;; 保存session, use only one desktop
-;; (desktop-save-mode)
-;; (desktop-read)
-
-;;(desktop-save-mode 1)
-;;(setq desktop-path '("~/.spacemacs.d/"))
-;;(setq desktop-dirname "~/.spacemacs.d/")
-;;(setq desktop-base-file-name ".emacs-desktop")
 
 ;; 括号匹配相关
 ;; 高亮括号配对

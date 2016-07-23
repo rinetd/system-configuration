@@ -128,7 +128,9 @@ Semantic, and Ansi-Color faces are included.")
    `(fringe                         ((,class (:foreground ,alum-2 :background ,white))))
    `(highlight                      ((,class (:background ,alum-1))))
    `(sentence-highlight-face        ((,class (:background ,alum-1))))
-   `(show-paren-match               ((,class (:background ,alum-1))))
+   ;; 括号匹配的时候，配对的括号里面的字体
+   `(show-paren-match               ((,class (:background ,alum-1 :weight bold :background "cyan"))))
+
    `(region                         ((,class (:background ,butter-1))))
    `(secondary-selection            ((,class (:background ,blue-0))))
    ;; C-s的时候显示的颜色
@@ -311,12 +313,7 @@ Semantic, and Ansi-Color faces are included.")
    'vinurs-love
    `(ansi-color-names-vector [,alum-6 ,red-3 ,cham-3 ,butter-3
                                       ,blue-3 ,plum-3 ,blue-1 ,alum-1]))
-  )
-
-;;;###autoload
-(when (and (boundp 'custom-theme-load-path) load-file-name)
-  (add-to-list 'custom-theme-load-path
-               (file-name-as-directory (file-name-directory load-file-name))))
+  ) 
 
 (provide-theme 'vinurs-love)
 
