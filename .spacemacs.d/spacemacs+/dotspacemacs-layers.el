@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@vinurs-mac.local
 ;; Version: $Id: @(#)dotspacemacs-layers.el,v 0.0 2016/05/25 15:13:53 vinurs Exp $
-;; Changed: <vinurs 07/22/2016 22:57:51>
+;; Changed: <vinurs 07/24/2016 07:33:47>
 ;; Keywords:
 ;; X-URL: not distributed yet
 
@@ -90,8 +90,8 @@
 
    ;;  ;; (python)
    ;;  (colors)
-   ;;  ;; 开发环境的搭建
-   ;;  vinurs-dev-env
+   ;; 开发环境的搭建
+   vinurs-dev-env
    ;;  ;; 这个关于git的layer还是不错的
    ;;  git
    ;;  ;; 自动补全的layer

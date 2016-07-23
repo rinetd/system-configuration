@@ -31,11 +31,12 @@
 
 (defconst vinurs-dev-env-packages
   '(
-	 helm-gtags
-	 ggtags
+    ;; dot画图语言
+    (graphviz-dot-mode)
 
-   ;; dot画图语言
-   (graphviz-dot-mode)
+
+	 ;; helm-gtags
+	 ;; ggtags
 
 
 	 ;; git相关
@@ -111,7 +112,11 @@ Each entry is either:
   (use-package graphviz-dot-mode
     :mode "\\.dot$"
     :defer t
-    :init)
+    :config
+    (progn
+      (require 'graphviz-dot-mode-settings)
+      )
+    )
   )
 
 (defun vinurs-dev-env/init-muttrc-mode ()
