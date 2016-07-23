@@ -41,11 +41,6 @@
     ;;    (general :location local)
     ;; (parent-mode)
 
-    ;; dot画图语言
-    (graphviz-dot-mode)
-
-    ;; mode-line用图标来显示
-    ;; (mode-icons)
     )
   "The list of Lisp packages required by the vinurs-basic layer.
 
@@ -118,17 +113,6 @@ Each entry is either:
   )
 
 
-(defun vinurs-basic/init-mode-icons ()
-  (use-package mode-icons
-    :defer t
-    :init
-    (progn
-      (setq mode-icons-change-mode-name nil)
-      (mode-icons-mode)
-      ;; (setq mode-icons-desaturate-active t)
-
-      ))
-  )
 
 (defun vinurs-basic/init-keyfreq ()
   (use-package keyfreq
@@ -153,30 +137,30 @@ Each entry is either:
   )
 
 
-(spacemacs|use-package-add-hook graphviz-dot-mode
-  :pre-init
-  ;; Code
-  :post-init
-  (progn
-    (require 'graphviz-dot-mode-settings)
-    )
-  ;; Code
-  :pre-config
-  ;; Code
-  :post-config
-  ;; Code
-  )
+;; (spacemacs|use-package-add-hook graphviz-dot-mode
+;;   :pre-init
+;;   ;; Code
+;;   :post-init
+;;   (progn
+;;     (require 'graphviz-dot-mode-settings)
+;;     )
+;;   ;; Code
+;;   :pre-config
+;;   ;; Code
+;;   :post-config
+;;   ;; Code
+;;   )
 
-(defun vinurs-basic/init-graphviz-dot-mode ()
-  (use-package graphviz-dot-mode
-    :mode "\\.dot$"
-    :defer t
-    :init
-    (progn
-      ;; (require 'graphviz-dot-mode-settings)
-      )
-    )
-  ) 
+;; (defun vinurs-basic/init-graphviz-dot-mode ()
+;;   (use-package graphviz-dot-mode
+;;     :mode "\\.dot$"
+;;     :defer t
+;;     :init
+;;     (progn
+;;       ;; (require 'graphviz-dot-mode-settings)
+;;       )
+;;     )
+;;   ) 
 
 
 ;;; packages.el ends here

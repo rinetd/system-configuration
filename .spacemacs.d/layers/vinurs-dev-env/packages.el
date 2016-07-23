@@ -34,6 +34,10 @@
 	 helm-gtags
 	 ggtags
 
+   ;; dot画图语言
+   (graphviz-dot-mode)
+
+
 	 ;; git相关
 	 ;; magit
 
