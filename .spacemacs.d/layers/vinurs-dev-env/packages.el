@@ -35,8 +35,8 @@
     (graphviz-dot-mode)
 
 
-	 ;; helm-gtags
-	 ;; ggtags
+	 helm-gtags
+	 ggtags
 
 
 	 ;; git相关
