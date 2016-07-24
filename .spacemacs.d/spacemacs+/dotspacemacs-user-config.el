@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@vinurs-mac.local
 ;; Version: $Id: @(#)user-config.el,v 0.0 2016/05/17 07:28:04 vinurs Exp $
-;; Changed: <vinurs 07/24/2016 07:08:09>
+;; Changed: <vinurs 07/24/2016 21:41:08>
 ;; Keywords:
 ;; X-URL: not distributed yet
 
@@ -90,9 +90,6 @@
 
 ;; 不显示结尾的空格
 (setq-default spacemacs-show-trailing-whitespace nil) 
-
-;;由菜单修改配置的东西将会保存在custom-file里
-(setq custom-file "~/.spacemacs.d/custom.el")
 
 
 ;; 保存打开的文件以及文件中光标位置，重新打开emacs以后恢复
