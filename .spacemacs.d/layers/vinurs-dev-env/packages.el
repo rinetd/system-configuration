@@ -72,6 +72,28 @@ Each entry is either:
       - A list beginning with the symbol `recipe' is a melpa
         recipe.  See: https://github.com/milkypostman/melpa#recipe-format")
 
+
+(defun vinurs-dev-env/init-graphviz-dot-mode ()
+  (use-package graphviz-dot-mode
+    :mode "\\.dot$"
+    :defer t
+    :config
+    (progn
+      (require 'graphviz-dot-mode-settings)
+      )
+    )
+  )
+
+(defun vinurs-dev-env/init-muttrc-mode ()
+  (use-package muttrc-mode
+	:mode "\\.muttrc$"
+	:defer t
+	:init
+	(progn
+	  ))
+  )
+
+
 (defun vinurs-dev-env/init-ggtags ()
   (use-package ggtags
     :defer t))
@@ -107,25 +129,6 @@ Each entry is either:
       (define-key helm-gtags-mode-map (kbd "C-x 4 .") 'helm-gtags-find-tag-other-window)
       (define-key helm-gtags-mode-map (kbd "M-,") 'helm-gtags-pop-stack)
       (define-key helm-gtags-mode-map (kbd "M-*") 'helm-gtags-pop-stack))))
-
-(defun vinurs-dev-env/init-graphviz-dot-mode ()
-  (use-package graphviz-dot-mode
-    :mode "\\.dot$"
-    :defer t
-    :config
-    (progn
-      (require 'graphviz-dot-mode-settings)
-      )
-    )
-  )
-
-(defun vinurs-dev-env/init-muttrc-mode ()
-  (use-package muttrc-mode
-	:defer t
-	:init
-	(progn
-	  ))
-  )
 
 ;; (defun vinurs-dev-env/init-magit ()
 ;;   (use-package magit
