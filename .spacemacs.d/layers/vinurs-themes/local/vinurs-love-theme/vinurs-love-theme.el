@@ -156,8 +156,12 @@ Semantic, and Ansi-Color faces are included.")
    ;;    `(whitespace-trailing ((,class (:background ,"red" :foreground ,war))))
    ;;    `(trailing-whitespace            ((,class (:background ,default-bg-color))))
 
-   ;;    ;; Mode line faces,状态栏
-   ;;    `(mode-line                      ((,class (:background ,blue-1 :foreground ,alum-1))))
+	;; Mode line faces,状态栏
+;;      `(mode-line                      ((,class (:background ,blue-1 :foreground ,alum-1))))
+	;; `(mode-line                      ((,class (:background ,blue-1 :foreground "red"))))
+
+	;; `(powerline-active1                      ((,class (:background "green" :foreground "red"))))
+	;; `(powerline-active2                      ((,class (:background "blue" :foreground "red"))))
    ;;    `(mode-line-inactive             ((,class (:background ,alum-1 :foreground ,alum-3))))
    ;;    ;; Window border face
    ;;    `(vertical-border                ((,class (:foreground ,alum-3))))
