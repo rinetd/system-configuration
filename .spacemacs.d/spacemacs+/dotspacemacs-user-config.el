@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@vinurs-mac.local
 ;; Version: $Id: @(#)user-config.el,v 0.0 2016/05/17 07:28:04 vinurs Exp $
-;; Changed: <vinurs 07/24/2016 21:41:08>
+;; Changed: <vinurs 07/25/2016 20:52:10>
 ;; Keywords:
 ;; X-URL: not distributed yet
 
@@ -84,6 +84,15 @@
   (global-set-key [kp-delete] 'delete-char) ;; sets fn-delete to be right-delete
 
   )
+
+;; space s s
+;; If there is no symbol at the cursor, use the last used words instead.
+(setq helm-swoop-pre-input-function
+  (lambda ()
+	(let (($pre-input (thing-at-point 'symbol)))
+	  (if (eq (length $pre-input) 0)
+		helm-swoop-pattern ;; this variable keeps the last used words
+		$pre-input)))) 
 
 ;; 原来打开文件的时候不能用template，这里重新定义一下打开文件的函数
 

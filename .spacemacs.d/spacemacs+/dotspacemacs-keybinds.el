@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)dotspacemacs-keybinds.el,v 0.0 2016/07/23 08:25:41 vinurs Exp $
-;; Changed: <vinurs 07/25/2016 20:48:08>
+;; Changed: <vinurs 07/25/2016 20:51:08>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
