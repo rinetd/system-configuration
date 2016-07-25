@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)dotspacemacs-keybinds.el,v 0.0 2016/07/23 08:25:41 vinurs Exp $
-;; Changed: <vinurs 07/23/2016 08:38:03>
+;; Changed: <vinurs 07/25/2016 20:48:08>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -50,7 +50,9 @@
   (define-key helm-map (kbd "C-h") 'delete-backward-char)
   (define-key helm-map (kbd "C-k") 'kill-line)  
   )
-
+(with-eval-after-load 'helm-projectile
+  (define-key helm-projectile-find-file-map  (kbd "C-h") 'delete-backward-char)
+)
 ;; 一些emacs的快捷键我还是喜欢的
 (define-key evil-motion-state-map (kbd "e") 'evil-end-of-line) 
 (define-key evil-motion-state-map (kbd "C-e") 'evil-end-of-line) 
