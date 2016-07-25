@@ -139,7 +139,7 @@ Semantic, and Ansi-Color faces are included.")
    ;;    `(evil-ex-substitute-matches     ((,class (:background ,red-0 :strike-through ,red-1))))
    ;;    `(evil-ex-substitute-replacement ((,class (:background ,cham-0))))
    ;;    ;;`(helm-swoop-target-word-face    ((,class (:background ,cham-1))))
-   ;;    `(helm-swoop-target-word-face    ((,class (:background ,"red"))))
+      `(helm-swoop-target-word-face    ((,class (:background ,"red"))))
    ;;    `(helm-swoop-target-line-face    ((,class (:background ,alum-1))))
    ;;    `(helm-swoop-target-line-block-face ((,class (:background ,alum-1))))
 
@@ -256,13 +256,17 @@ Semantic, and Ansi-Color faces are included.")
    ;;    `(mu4e-replied-face              ((,class (:foreground ,alum-4))))
    ;;    `(mu4e-header-highlight-face     ((,class (:background ,alum-1))))
    `(window-numbering-face ((t (:background ,"red" :weight bold))) t)
-   ;;    ;; Helm
+	;; Helm
+	;; helm对话框里面当前行的颜色
+	`(helm-selection                 ((,class (:background ,"cyan"))))
+	;; helm搜索的单词颜色 
+	`(helm-swoop-target-word-face    ((,class (:background ,"red"))))
+
    ;;    ;; 用helm-swoop的时候出来的第一行的颜色设置
    ;;    `(helm-source-header             ((,class (:background ,butter-2 :foreground ,alum-5
    ;; 														  :weight bold :height 1.3
    ;; 														  :family "Sans Serif"))))
-   ;;    `(helm-selection                 ((,class (:background ,"light blue"))))
-   ;;    ;;`(helm-selection                 ((,class (:background ,alum-1))))
+	   ;;    ;;`(helm-selection                 ((,class (:background ,alum-1))))
    ;;    `(helm-action                    ((,class (:background ,"red"))))
    ;;    ;;   `(helm-candidate-number          ((,class (:background ,alum-5
    ;;    `(helm-candidate-number          ((,class (:background ,"red"
