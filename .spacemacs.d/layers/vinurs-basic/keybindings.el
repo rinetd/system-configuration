@@ -1,5 +1,6 @@
 
 ;; 代码折叠相关快捷键设定
+;; 这个代码copy from https://emacs.stackexchange.com/questions/20922/hiding-and-showing-all-blocks-with-one-binding
 (defun my-hs-toggle-all ()
   "If anything isn't hidden, run `hs-hide-all', else run `hs-show-all'."
   (interactive)
