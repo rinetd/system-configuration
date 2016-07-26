@@ -1,9 +1,16 @@
 
 ;; 代码折叠相关快捷键设定
-(spacemacs/set-leader-keys "ha" 'hs-hide-all) 
-(spacemacs/set-leader-keys "hA" 'hs-show-all) 
+(defun my-hs-toggle-all ()
+  "If anything isn't hidden, run `hs-hide-all', else run `hs-show-all'."
+  (interactive)
+  (let ((starting-ov-count (length (overlays-in (point-min) (point-max)))))
+    (hs-hide-all)
+    (when (equal (length (overlays-in (point-min) (point-max))) starting-ov-count)
+      (hs-show-all)))) 
+(spacemacs/set-leader-keys "ha" 'my-hs-toggle-all) 
+;; (spacemacs/set-leader-keys "ha" 'hs-hide-all) 
+;; (spacemacs/set-leader-keys "hA" 'hs-show-all) 
 (spacemacs/set-leader-keys "ht" 'hs-toggle-hiding) 
-
 
 
 
