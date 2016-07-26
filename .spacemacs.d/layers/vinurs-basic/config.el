@@ -106,6 +106,10 @@
 (setq user-full-name "haiyuan.zhang")
 (setq user-mail-address "haiyuan.vinurs@gmail.com")
 
+;;;设置标题栏显示文件的完整路径名
+(setq frame-title-format
+  '("vinurs@知行合一^-^--PATH:%S" (buffer-file-name "%f"
+									(dired-directory dired-directory "%b")))) 
 
 ;; 括号匹配相关
 ;; 高亮括号配对
