@@ -104,7 +104,7 @@
 ;; 保存打开的文件以及文件中光标位置，重新打开emacs以后恢复
 (desktop-save-mode)
 (desktop-read)
-(setq-default save-place t) 
+;;(setq-default save-place t) 
 
 
 ;; 全局开启highlight-tail mode

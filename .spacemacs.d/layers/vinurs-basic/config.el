@@ -13,8 +13,8 @@
 ;; ;; 个人信息的相关定义:邮件，全名
 ;; (require 'personality)
 
-;; ;; 编码设置:utf-8之类，所有的文件全部以utf8保存
-;; (require 'vinurs-coding-settings)
+;; 编码设置:utf-8之类，所有的文件全部以utf8保存
+(require 'vinurs-coding-settings) 
 
 ;; emacs server相关
 ;; 对于用client打开的文件，也用C-x k关闭
