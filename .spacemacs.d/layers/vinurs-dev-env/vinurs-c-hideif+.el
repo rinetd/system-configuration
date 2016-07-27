@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)vinurs-c-hideif+.el,v 0.0 2016/07/27 12:39:34 vinurs Exp $
-;; Changed: <vinurs 07/27/2016 14:28:42>
+;; Changed: <vinurs 07/27/2016 14:29:46>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -53,11 +53,11 @@
         (while (re-search-forward "^\\s-*#\\s-*\\(if\\|else\\|endif\\)" limit 'move)
           (setq str (match-string 1))
           (if (string= str "if")
-              (progn
-                (setq depth (1+ depth))
-                (when (and (null start) (looking-at "\\s-+0"))
-                  (setq start (match-end 0)
-                        start-depth depth)))
+			(progn
+			  (setq depth (1+ depth))
+			  (when (and (null start) (looking-at "\\s-+0"))
+				(setq start (match-end 0)
+				  start-depth depth)))
             (when (and start (= depth start-depth))
               (c-put-font-lock-face start (match-beginning 0) 'font-lock-comment-face)
               (setq start nil))
@@ -71,8 +71,8 @@
 
 (defun my-c-mode-common-hook ()
   (font-lock-add-keywords
-   nil
-   '((my-c-mode-font-lock-if0 (0 font-lock-comment-face prepend))) 'add-to-end)) 
+	nil
+	'((my-c-mode-font-lock-if0 (0 font-lock-comment-face prepend))) 'add-to-end)) 
 
 (add-hook 'c-mode-common-hook 'my-c-mode-common-hook) 
 
