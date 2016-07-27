@@ -12,7 +12,7 @@
 (require 'glusterfs-mode)
 
 ;; c-settings
-(require 'c-settings)
+(require 'c-settings) 
 
 ;; lisp-settings
 (require 'lisp-settings) 
