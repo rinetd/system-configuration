@@ -172,6 +172,9 @@ Semantic, and Ansi-Color faces are included.")
 	;; 注释相关的设置，注释背景是白色，前面是灰色
 	`(font-lock-comment-face         ((,class (:slant italic :foreground "gray70" :background "gray96"))))
 
+	;; doxygen模式的注释
+	`(font-lock-doc-face         ((,class (:slant italic :foreground "gray70" :background "gray96"))))
+
 	`(font-lock-constant-face        ((,class (:weight light :foreground ,blue-3))))
 	`(font-lock-function-name-face   ((,class (:foreground ,red-3))))
 	`(font-lock-keyword-face         ((,class (:foreground ,blue-3 :weight light))))
