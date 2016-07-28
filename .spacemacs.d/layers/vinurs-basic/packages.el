@@ -31,9 +31,7 @@
 
 (defconst vinurs-basic-packages
   '(
-	 ;; el-get
-	 ;; 很多包在spacemacs所认同的库里面没有，因此我需要用el-get来下载
-
+	 
 	 ;; 记录每个键的按键次数
 	 (keyfreq)
 
@@ -93,7 +91,6 @@ Each entry is either:
     :demand t
     :config
     (progn
-      (message "enable lllll highlight tail")
       ;; 设置高亮的颜色
       (setq highlight-tail-colors
 		'(("#c1e156" . 0)
