@@ -31,21 +31,24 @@
 
 (defconst vinurs-basic-packages
   '(
-    ;; 记录每个键的按键次数
-    (keyfreq)
+	 ;; el-get
+	 ;; 很多包在spacemacs所认同的库里面没有，因此我需要用el-get来下载
 
-    ;; highlight tail性感的小尾巴标识最近修改
-    (highlight-tail)
+	 ;; 记录每个键的按键次数
+	 (keyfreq)
 
-    ;; 新建文件的时候自动根据后缀补全一些文件的基本信息
-    (template :location local)
+	 ;; highlight tail性感的小尾巴标识最近修改
+	 (highlight-tail)
 
-    ;; 括号匹配
-    (parent-mode)
+	 ;; 新建文件的时候自动根据后缀补全一些文件的基本信息
+	 (template :location local)
 
-    ;;    (general :location local)
+	 ;; 括号匹配
+	 (parent-mode)
 
-    ) 
+	 ;;    (general :location local)
+
+	 ) 
   "The list of Lisp packages required by the vinurs-basic layer.
 
 Each entry is either:
@@ -93,15 +96,15 @@ Each entry is either:
       (message "enable lllll highlight tail")
       ;; 设置高亮的颜色
       (setq highlight-tail-colors
-            '(("#c1e156" . 0)
-              ("#b8ff07" . 25)
-              ("#00c377" . 60))) 
+		'(("#c1e156" . 0)
+		   ("#b8ff07" . 25)
+		   ("#00c377" . 60))) 
 
       ;; const则渐变固定长度的修 改，而这个长度则是由highlight-tail-const-width来控制的
       (setq highlight-tail-steps 80
-            highlight-tail-timer 0.1
-            highlight-tail-const-width 30
-            ) 
+		highlight-tail-timer 0.1
+		highlight-tail-const-width 30
+		) 
 
       (setq highlight-tail-posterior-type 'const) 
       ;; 全局开启highlight-tail mode
@@ -151,8 +154,8 @@ Each entry is either:
     )
   (progn
     (setq template-default-directories 
-          '("~/.spacemacs.d/layers/vinurs-basic/local/template/templates"
-            ))
+	  '("~/.spacemacs.d/layers/vinurs-basic/local/template/templates"
+		 ))
     (template-initialize)
     )
   )

@@ -31,13 +31,15 @@
 
 (defconst vinurs-dev-env-packages
   '(
-    ;; dot画图语言
-    (graphviz-dot-mode)
+	 ;; dot画图语言
+	 (graphviz-dot-mode)
 
 
 	 helm-gtags
 	 ggtags
 
+	 ;; doxymacs
+	 ;; (doxymacs :location local)
 
 	 ;; git相关
 	 ;; magit
@@ -88,6 +90,14 @@ Each entry is either:
   (use-package muttrc-mode
 	:mode "\\.muttrc$"
 	:defer t
+	:init
+	(progn
+	  ))
+  )
+
+(defun vinurs-dev-env/init-doxymacs ()
+  (use-package doxymacs
+	:demand t
 	:init
 	(progn
 	  ))

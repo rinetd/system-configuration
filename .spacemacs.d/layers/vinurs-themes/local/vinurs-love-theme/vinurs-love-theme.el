@@ -173,7 +173,7 @@ Semantic, and Ansi-Color faces are included.")
 	`(font-lock-comment-face         ((,class (:slant italic :foreground "gray70" :background "gray96"))))
 
 	;; doxygen模式的注释
-	`(font-lock-doc-face         ((,class (:slant italic :foreground "gray70" :background "gray96"))))
+	`(font-lock-doc-face         ((,class (:slant italic :foreground "#2aa1ae" ))))
 
 	`(font-lock-constant-face        ((,class (:weight light :foreground ,blue-3))))
 	`(font-lock-function-name-face   ((,class (:foreground ,red-3))))
