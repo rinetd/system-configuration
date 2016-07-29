@@ -39,7 +39,7 @@
 	 ggtags
 
 	 ;; doxymacs
-	 ;; (doxymacs :location local)
+	 (vinurs-doxymacs :location local)
 
 	 ;; git相关
 	 ;; magit
@@ -95,12 +95,10 @@ Each entry is either:
 	  ))
   )
 
-(defun vinurs-dev-env/init-doxymacs ()
-  (use-package doxymacs
+(defun vinurs-dev-env/init-vinurs-doxymacs ()
+  (use-package vinurs-doxymacs
 	:demand t
-	:init
-	(progn
-	  ))
+	)
   )
 
 
