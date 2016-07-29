@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)vinurs-doxymacs.el,v 0.0 2016/07/28 23:19:44 vinurs Exp $
-;; Changed: <vinurs 07/29/2016 08:13:42>
+;; Changed: <vinurs 07/29/2016 08:34:53>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -45,7 +45,25 @@
 
 
 
+
+(spacemacs/declare-prefix "oad" "graphviz/doxymacs") 
+(setq vinurs/doxymacs-key-binding-prefixes "oad")
+
 (add-hook 'c-mode-common-hook 'doxymacs-mode)
+
+(with-eval-after-load 'doxymacs
+  (spacemacs/set-leader-keys
+	(concat vinurs/doxymacs-key-binding-prefixes "f") 'doxymacs-insert-function-comment
+	;; 这个暂时不需要
+	;; (concat vinurs/doxymacs-key-binding-prefixes "s") 'doxymacs-blank-singleline-comment
+	(concat vinurs/doxymacs-key-binding-prefixes "m") 'doxymacs-blank-multiline-comment
+	(concat vinurs/doxymacs-key-binding-prefixes "d") 'doxymacs-define-dot-h-file-macro
+	) 
+
+  ;; (define-key doxymacs-mode-map "\C-cdd"
+  ;;   'doxymacs-define-dot-h-file-macro)
+
+  )
 
 (defun my-doxymacs-font-lock-hook ()
    (if (or (eq major-mode 'c-mode) (eq major-mode 'c++-mode))
@@ -119,11 +137,6 @@
  "Default JaveDoc-style template for file documentation.")
 
 
-(with-eval-after-load 'doxymacs
-  (define-key doxymacs-mode-map "\C-cdd"
-    'doxymacs-define-dot-h-file-macro)
-
-  )
 
 (defun doxymacs-define-dot-h-file-macro ()
   "Inserts Doxygen documentation for the next function declaration at
@@ -131,19 +144,6 @@ current point."
   (interactive "*")
   (doxymacs-call-template "dot-h-file-macro")
   )
-
-;;#ifndef _A_H_20110824075139
-;;#define _A_H_20110824075139
-
-
-;;#endif /* _A_H_20110824075139 */
-
-
-;;#ifndef _(>>>FILE_UPCASE<<<)_H_(>>>YEAR<<<)(>>>MONTH<<<)(>>>DAY<<<)(>>>HOUR<<<)(>>>MINUTE<<<)(>>>SECOND<<<)
-;;#define _(>>>FILE_UPCASE<<<)_H_(>>>YEAR<<<)(>>>MONTH<<<)(>>>DAY<<<)(>>>HOUR<<<)(>>>MINUTE<<<)(>>>SECOND<<<)
-
-
-;;#endif /* _(>>>FILE_UPCASE<<<)_H_(>>>YEAR<<<)(>>>MONTH<<<)(>>>DAY<<<)(>>>HOUR<<<)(>>>MINUTE<<<)(>>>SECOND<<<) */
 
 (defconst doxymacs-JavaDoc-dot-h-file-macro-template
   '("#ifndef _"

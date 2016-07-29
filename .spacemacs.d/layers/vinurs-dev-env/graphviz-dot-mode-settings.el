@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@vinurs-mac.local
 ;; Version: $Id: @(#)graphviz-dot-mode-settings.el,v 0.0 2016/05/11 19:09:02 vinurs Exp $
-;; Changed: <victor 02/20/2011 11:29:30>
+;; Changed: <vinurs 07/29/2016 08:22:51>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -43,7 +43,7 @@
 ;;;;  User Options, Variables
 ;;;;##########################################################################
 
-(spacemacs/declare-prefix "oad" "graphviz")
+(spacemacs/declare-prefix "oad" "graphviz/doxymacs") 
 (setq vinurs/graphviz-key-binding-prefixes "oad")
 
 
