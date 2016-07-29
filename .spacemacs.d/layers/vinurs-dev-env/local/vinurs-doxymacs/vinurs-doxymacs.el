@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)vinurs-doxymacs.el,v 0.0 2016/07/28 23:19:44 vinurs Exp $
-;; Changed: <vinurs 07/29/2016 08:34:53>
+;; Changed: <vinurs 07/29/2016 11:04:11>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -44,26 +44,26 @@
 ;;;;##########################################################################
 
 
+(add-hook 'c-mode-common-hook 'doxymacs-mode)
 
+
+(with-eval-after-load 'doxymacs
 
 (spacemacs/declare-prefix "oad" "graphviz/doxymacs") 
 (setq vinurs/doxymacs-key-binding-prefixes "oad")
 
-(add-hook 'c-mode-common-hook 'doxymacs-mode)
 
-(with-eval-after-load 'doxymacs
   (spacemacs/set-leader-keys
 	(concat vinurs/doxymacs-key-binding-prefixes "f") 'doxymacs-insert-function-comment
 	;; 这个暂时不需要
 	;; (concat vinurs/doxymacs-key-binding-prefixes "s") 'doxymacs-blank-singleline-comment
-	(concat vinurs/doxymacs-key-binding-prefixes "m") 'doxymacs-blank-multiline-comment
+	(concat vinurs/doxymacs-key-binding-prefixes "m") 'doxymacs-insert-blank-multiline-comment
 	(concat vinurs/doxymacs-key-binding-prefixes "d") 'doxymacs-define-dot-h-file-macro
 	) 
 
   ;; (define-key doxymacs-mode-map "\C-cdd"
   ;;   'doxymacs-define-dot-h-file-macro)
 
-  )
 
 (defun my-doxymacs-font-lock-hook ()
    (if (or (eq major-mode 'c-mode) (eq major-mode 'c++-mode))
@@ -232,6 +232,7 @@ current point."
   "Default dot h file macro template for file documentation.")
 
 
+) 
 
 (provide 'vinurs-doxymacs)
 
