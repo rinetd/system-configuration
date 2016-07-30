@@ -2,6 +2,9 @@
 ;; This file is loaded by Spacemacs at startup.
 ;; It must be stored in your home directory.
 
+(message "start spacemacs init.el %s"
+  (format-time-string"%a %H:%M:%S" (current-time)))
+
 (push "~/.spacemacs.d/spacemacs+" load-path)
 ;;由菜单修改配置的东西将会保存在custom-file里
 (setq custom-file "~/.spacemacs.d/custom.el")
@@ -16,6 +19,9 @@ You should not put any user code in there besides modifying the variable
 values."
   (load-file "~/.spacemacs.d/spacemacs+/dotspacemacs-init.el")
   )
+(message "dotspacemacs/init end %s"
+  (format-time-string"%a %H:%M:%S" (current-time)))
+
 
 ;; second step
 (defun dotspacemacs/user-init ()
@@ -27,6 +33,9 @@ before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
   (load-file "~/.spacemacs.d/spacemacs+/dotspacemacs-user-init.el")
   )
+(message "dotspacemacs/user-init end %s"
+  (format-time-string"%a %H:%M:%S" (current-time)))
+
 
 
 ;; third step
@@ -36,6 +45,9 @@ before packages are loaded. If you are unsure, you should try in setting them in
  values."
   (load-file "~/.spacemacs.d/spacemacs+/dotspacemacs-layers.el")
   )
+(message "dotspacemacs/layers end %s"
+  (format-time-string"%a %H:%M:%S" (current-time)))
+
 
 
 ;; last step
@@ -48,4 +60,7 @@ explicitly specified that a variable should be set before a package is loaded,
 you should place you code here."
   (load-file "~/.spacemacs.d/spacemacs+/dotspacemacs-user-config.el") 
   )
+(message "dotspacemacs/user-config end %s"
+  (format-time-string"%a %H:%M:%S" (current-time)))
+
 

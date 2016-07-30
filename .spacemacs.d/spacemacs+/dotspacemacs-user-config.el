@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@vinurs-mac.local
 ;; Version: $Id: @(#)user-config.el,v 0.0 2016/05/17 07:28:04 vinurs Exp $
-;; Changed: <vinurs 07/30/2016 08:45:33>
+;; Changed: <vinurs 07/30/2016 11:10:21>
 ;; Keywords:
 ;; X-URL: not distributed yet
 
@@ -85,15 +85,14 @@
 
 
 ;; 保存打开的文件以及文件中光标位置，重新打开emacs以后恢复
-(desktop-save-mode)
-(desktop-read)
-;;(setq-default save-place t) 
-
+(require 'vinurs-desktop-save) 
 
 ;; 全局开启highlight-tail mode
-;; (highlight-tail-mode) 
+(highlight-tail-mode) 
 
-
+(message (format-time-string"%a %H:%M:%S" (current-time))) 
+;;
+(message "load user config end")
 
 (provide 'dotspacemacs-user-config)
 
