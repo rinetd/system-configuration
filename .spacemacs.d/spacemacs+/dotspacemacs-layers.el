@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@vinurs-mac.local
 ;; Version: $Id: @(#)dotspacemacs-layers.el,v 0.0 2016/05/25 15:13:53 vinurs Exp $
-;; Changed: <vinurs 07/24/2016 07:33:47>
+;; Changed: <vinurs 07/30/2016 12:04:18>
 ;; Keywords:
 ;; X-URL: not distributed yet
 
@@ -49,87 +49,87 @@
 
 
 (setq-default
- ;; Base distribution to use. This is a layer contained in the directory
- ;; `+distribution'. For now available distributions are `spacemacs-base'
- ;; or `spacemacs'. (default 'spacemacs)
- dotspacemacs-distribution 'spacemacs
- ;; List of additional paths where to look for configuration layers.
- ;; Paths must have a trailing slash (i.e. `~/.mycontribs/')
- ;; dotspacemacs-configuration-layer-path '("~/.spacemacs.d/layers")
- dotspacemacs-configuration-layer-path '()
- ;; List of configuration layers to load. If it is the symbol `all' instead
- ;; of a list then all discovered layers will be installed.
- dotspacemacs-configuration-layers
- '(
+  ;; Base distribution to use. This is a layer contained in the directory
+  ;; `+distribution'. For now available distributions are `spacemacs-base'
+  ;; or `spacemacs'. (default 'spacemacs)
+  dotspacemacs-distribution 'spacemacs
+  ;; List of additional paths where to look for configuration layers.
+  ;; Paths must have a trailing slash (i.e. `~/.mycontribs/')
+  ;; dotspacemacs-configuration-layer-path '("~/.spacemacs.d/layers")
+  dotspacemacs-configuration-layer-path '()
+  ;; List of configuration layers to load. If it is the symbol `all' instead
+  ;; of a list then all discovered layers will be installed.
+  dotspacemacs-configuration-layers
+  '(
 	 ;; ----------------------------------------------------------------
 	 ;; Example of useful layers you may want to use right away.
 	 ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
 	 ;; <M-m f e R> (Emacs style) to install them.
-   ;; ----------------------------------------------------------------
+	 ;; ----------------------------------------------------------------
 	 better-defaults
-   ;; 我自己的一些基础配置，用起来更加舒服一点
-   vinurs-basic
+	 ;; 我自己的一些基础配置，用起来更加舒服一点
+	 vinurs-basic
 
-   ;; 跟mac按键兼容，暂时还是不要用了吧，按键感觉不适应
+	 ;; 跟mac按键兼容，暂时还是不要用了吧，按键感觉不适应
 	 ;; osx
 
-   ;;  ranger
-   ;;  ;;	gtags
-   ;;  ;; semantic
-   ;;  emacs-lisp
-   ;;  ;;(syntax-checking :variables syntax-checking-enable-by-default t)
-   ;;  markdown
-   ;;  org
-   ;;  ;; (shell :variables
-   ;;  ;;        shell-default-height 30
-   ;;  ;;        shell-default-position 'bottom)
+	 ;;  ranger
+	 ;;  ;;	gtags
+	 ;;  ;; semantic
+	 ;;  emacs-lisp
+	 ;;  ;;(syntax-checking :variables syntax-checking-enable-by-default t)
+	 ;;  markdown
+	 ;;  org
+	 ;;  ;; (shell :variables
+	 ;;  ;;        shell-default-height 30
+	 ;;  ;;        shell-default-position 'bottom)
 
-   ;;  ;; spell-checking
-   ;;  themes-megapack
-   ;;  (c-c++)
+	 ;;  ;; spell-checking
+	 ;;  themes-megapack
+	 ;;  (c-c++)
 
-   ;;  ;; (python)
-   ;;  (colors)
-   ;; 开发环境的搭建
-   vinurs-dev-env
-   ;;  ;; 这个关于git的layer还是不错的
-   ;;  git
-   ;;  ;; 自动补全的layer
-   ;;  (auto-completion
-   ;;    :variables
-   ;;    ;; return键表示确认当前的选择
-   ;;    auto-completion-return-key-behavior 'complete
-   ;;    ;; 自动补全中tab是一直循环着可选项
-   ;;    auto-completion-tab-key-behavior 'cycle
-   ;;    auto-completion-complete-with-key-sequence nil
-   ;;    auto-completion-complete-with-key-sequence-delay 0.0
-   ;;    auto-completion-private-snippets-directory nil
-   ;;    ;; 弹出式的自动补全
-   ;;    auto-completion-enable-snippets-in-popup t
-   ;;    ;; 自动补全出的时候还带对应的帮助信息
-   ;;    auto-completion-enable-help-tooltip t
-   ;;    ;; 私有snippets目录
-   ;;    auto-completion-private-snippets-directory (concat (car dotspacemacs-configuration-layer-path)
-   ;; 												"snippets/")
+	 ;;  ;; (python)
+	 ;;  (colors)
+	 ;; 开发环境的搭建
+	 vinurs-dev-env
+	 ;;  ;; 这个关于git的layer还是不错的
+	 ;;  git
+	 ;;  ;; 自动补全的layer
+	 ;;  (auto-completion
+	 ;;    :variables
+	 ;;    ;; return键表示确认当前的选择
+	 ;;    auto-completion-return-key-behavior 'complete
+	 ;;    ;; 自动补全中tab是一直循环着可选项
+	 ;;    auto-completion-tab-key-behavior 'cycle
+	 ;;    auto-completion-complete-with-key-sequence nil
+	 ;;    auto-completion-complete-with-key-sequence-delay 0.0
+	 ;;    auto-completion-private-snippets-directory nil
+	 ;;    ;; 弹出式的自动补全
+	 ;;    auto-completion-enable-snippets-in-popup t
+	 ;;    ;; 自动补全出的时候还带对应的帮助信息
+	 ;;    auto-completion-enable-help-tooltip t
+	 ;;    ;; 私有snippets目录
+	 ;;    auto-completion-private-snippets-directory (concat (car dotspacemacs-configuration-layer-path)
+	 ;; 												"snippets/")
 
-   ;;    auto-completion-enable-sort-by-usage t
+	 ;;    auto-completion-enable-sort-by-usage t
 
-   ;;    )
-   ;;  ;; end 自动补全
-   vinurs-themes
-   ) 
- ;; end of dotspacemacs-configuration-layers
- ;; List of additional packages that will be installed without being
- ;; wrapped in a layer. If you need some configuration for these
- ;; packages, then consider creating a layer. You can also put the
- ;; configuration in `dotspacemacs/user-config'.
- dotspacemacs-additional-packages '()
- ;; A list of packages and/or extensions that will not be install and loaded.
- dotspacemacs-excluded-packages '()
- ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
- ;; are declared in a layer which is not a member of
- ;; the list `dotspacemacs-configuration-layers'. (default t)
- dotspacemacs-delete-orphan-packages t)
+	 ;;    )
+	 ;;  ;; end 自动补全
+	 vinurs-themes
+	 ) 
+  ;; end of dotspacemacs-configuration-layers
+  ;; List of additional packages that will be installed without being
+  ;; wrapped in a layer. If you need some configuration for these
+  ;; packages, then consider creating a layer. You can also put the
+  ;; configuration in `dotspacemacs/user-config'.
+  dotspacemacs-additional-packages '()
+  ;; A list of packages and/or extensions that will not be install and loaded.
+  dotspacemacs-excluded-packages '()
+  ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
+  ;; are declared in a layer which is not a member of
+  ;; the list `dotspacemacs-configuration-layers'. (default t)
+  dotspacemacs-delete-orphan-packages t)
 
 
 (provide 'dotspacemacs-layers)
