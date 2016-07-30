@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@vinurs-mac.local
 ;; Version: $Id: @(#)user-config.el,v 0.0 2016/05/17 07:28:04 vinurs Exp $
-;; Changed: <vinurs 07/27/2016 10:05:59>
+;; Changed: <vinurs 07/30/2016 08:45:33>
 ;; Keywords:
 ;; X-URL: not distributed yet
 
@@ -71,20 +71,6 @@
 ;; ;; (global-prettify-symbols-mode 1)
 ;; ;;  (spacemacs/helm-gtags-define-keys-for-mode 'c-mode)
 
-;;;;;;;;; 键映射相关
-;; mac键重新映射
-(when (spacemacs/system-is-mac)
-  ;; key bindings
-  ;; for emacs
-  (setq mac-right-option-modifier 'control)
-  (setq mac-left-option-modifier 'alt)
-
-  ;;(setq mac-command-modifier 'control)
-  (setq mac-command-modifier 'meta)
-  (global-set-key [kp-delete] 'delete-char) ;; sets fn-delete to be right-delete
-
-  )
-
 ;; space s s
 ;; Use search query at the cursor  (default)
 (setq helm-swoop-pre-input-function
@@ -105,7 +91,7 @@
 
 
 ;; 全局开启highlight-tail mode
-(highlight-tail-mode) 
+;; (highlight-tail-mode) 
 
 
 
