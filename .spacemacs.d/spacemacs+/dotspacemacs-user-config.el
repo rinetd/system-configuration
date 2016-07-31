@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@vinurs-mac.local
 ;; Version: $Id: @(#)user-config.el,v 0.0 2016/05/17 07:28:04 vinurs Exp $
-;; Changed: <vinurs 07/30/2016 11:10:21>
+;; Changed: <vinurs 07/30/2016 14:00:15>
 ;; Keywords:
 ;; X-URL: not distributed yet
 
@@ -93,6 +93,7 @@
 (message (format-time-string"%a %H:%M:%S" (current-time))) 
 ;;
 (message "load user config end")
+
 
 (provide 'dotspacemacs-user-config)
 

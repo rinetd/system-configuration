@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@vinurs-mac.local
 ;; Version: $Id: @(#)dotspacemacs-layers.el,v 0.0 2016/05/25 15:13:53 vinurs Exp $
-;; Changed: <vinurs 07/30/2016 12:04:18>
+;; Changed: <vinurs 07/30/2016 14:00:06>
 ;; Keywords:
 ;; X-URL: not distributed yet
 
@@ -90,32 +90,39 @@
 
 	 ;;  ;; (python)
 	 ;;  (colors)
-	 ;; 开发环境的搭建
-	 vinurs-dev-env
 	 ;;  ;; 这个关于git的layer还是不错的
 	 ;;  git
-	 ;;  ;; 自动补全的layer
-	 ;;  (auto-completion
-	 ;;    :variables
-	 ;;    ;; return键表示确认当前的选择
-	 ;;    auto-completion-return-key-behavior 'complete
-	 ;;    ;; 自动补全中tab是一直循环着可选项
-	 ;;    auto-completion-tab-key-behavior 'cycle
-	 ;;    auto-completion-complete-with-key-sequence nil
-	 ;;    auto-completion-complete-with-key-sequence-delay 0.0
-	 ;;    auto-completion-private-snippets-directory nil
-	 ;;    ;; 弹出式的自动补全
-	 ;;    auto-completion-enable-snippets-in-popup t
-	 ;;    ;; 自动补全出的时候还带对应的帮助信息
-	 ;;    auto-completion-enable-help-tooltip t
-	 ;;    ;; 私有snippets目录
-	 ;;    auto-completion-private-snippets-directory (concat (car dotspacemacs-configuration-layer-path)
-	 ;; 												"snippets/")
 
-	 ;;    auto-completion-enable-sort-by-usage t
+	 c-c++
+	 gtags
 
-	 ;;    )
-	 ;;  ;; end 自动补全
+	 ;; 自动补全的layer
+	 (auto-completion
+	   :variables
+	   ;; return键表示确认当前的选择
+	   auto-completion-return-key-behavior 'complete
+	   ;; 自动补全中tab是一直循环着可选项
+	   auto-completion-tab-key-behavior 'cycle
+	   auto-completion-complete-with-key-sequence nil
+	   auto-completion-complete-with-key-sequence-delay 0.0
+	   auto-completion-private-snippets-directory nil
+
+	   ;; snippets自动补全也在弹出的界面显示
+	   auto-completion-enable-snippets-in-popup t
+
+	   ;; 自动补全出的时候还带对应的帮助信息
+	   auto-completion-enable-help-tooltip t
+	   ;; 私有snippets目录
+	   auto-completion-private-snippets-directory (concat (car dotspacemacs-configuration-layer-path)
+	 												"snippets/")
+
+	   auto-completion-enable-sort-by-usage t
+	   )
+	 ;; end 自动补全
+
+	 ;; 开发环境的搭建
+	 vinurs-dev-env
+
 	 vinurs-themes
 	 ) 
   ;; end of dotspacemacs-configuration-layers

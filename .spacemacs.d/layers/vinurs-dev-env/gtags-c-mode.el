@@ -1,10 +1,10 @@
-;;; c-settings.el --- 
+;;; gtags-c-mode.el --- 
 
-;; Copyright 2016 vinurs
+;; Copyright 2016 haiyuan.zhang
 ;;
-;; Author: vinurs@vinurs-mac.local
-;; Version: $Id: @(#)c-settings.el,v 0.0 2016/05/02 09:11:36 vinurs Exp $
-;; Changed: <vinurs 07/30/2016 13:50:14>
+;; Author: haiyuan.vinurs@gmail.com
+;; Version: $Id: @(#)gtags-c-mode.el,v 0.0 2016/07/30 13:49:39 vinurs Exp $
+;; Changed: <vinurs 07/30/2016 14:04:53>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -27,7 +27,7 @@
 ;; 
 
 ;; Put this file into your load-path and the following into your ~/.emacs:
-;;   (require 'c-settings)
+;;   (require 'gtags-c-mode)
 
 
 
@@ -44,16 +44,11 @@
 ;;;;##########################################################################
 
 
+(with-eval-after-load 'helm-gtags
 
-;; code style settings
-(require 'vinurs-c-code-style) 
+  )
 
-;; hide if0,以及快捷键显示隐藏hideif
-(require 'vinurs-c-hideif+) 
 
-;; gtags/helm-gtags针对C语言的设置
-(require 'gtags-c-mode) 
+(provide 'gtags-c-mode)
 
-(provide 'c-settings)
-
-;;; c-settings.el ends here
+;;; gtags-c-mode.el ends here

@@ -35,8 +35,8 @@
 	 (graphviz-dot-mode)
 
 
-	 helm-gtags
-	 ggtags
+	 ;; helm-gtags
+	 ;; ggtags
 
 	 ;; doxymacs
 	 (vinurs-doxymacs :location local)
@@ -102,41 +102,41 @@ Each entry is either:
   )
 
 
-(defun vinurs-dev-env/init-ggtags ()
-  (use-package ggtags
-    :defer t))
+;; (defun vinurs-dev-env/init-ggtags ()
+;;   (use-package ggtags
+;;     :defer t))
 
-(defun vinurs-dev-env/init-helm-gtags ()
-  (use-package helm-gtags
-    :defer t
-    :init
-    (progn
-      (setq helm-gtags-ignore-case t
-		helm-gtags-auto-update t
-		helm-gtags-use-input-at-cursor t
-		helm-gtags-pulse-at-cursor t)
-      ;; modes that do not have a layer, define here
-      (spacemacs/helm-gtags-define-keys-for-mode 'tcl-mode)
-      (spacemacs/helm-gtags-define-keys-for-mode 'c-mode)
-      (spacemacs/helm-gtags-define-keys-for-mode 'java-mode)
-      (spacemacs/helm-gtags-define-keys-for-mode 'vhdl-mode)
-      (spacemacs/helm-gtags-define-keys-for-mode 'shell-script-mode)
-      (spacemacs/helm-gtags-define-keys-for-mode 'awk-mode)
-      (spacemacs/helm-gtags-define-keys-for-mode 'asm-mode)
-      (spacemacs/helm-gtags-define-keys-for-mode 'dired-mode)
-      (spacemacs/helm-gtags-define-keys-for-mode 'compilation-mode)
-      (spacemacs/helm-gtags-define-keys-for-mode 'shell-mode)
+;; (defun vinurs-dev-env/init-helm-gtags ()
+;;   (use-package helm-gtags
+;;     :defer t
+;;     :init
+;;     (progn
+;;       (setq helm-gtags-ignore-case t
+;; 		helm-gtags-auto-update t
+;; 		helm-gtags-use-input-at-cursor t
+;; 		helm-gtags-pulse-at-cursor t)
+;;       ;; modes that do not have a layer, define here
+;;       (spacemacs/helm-gtags-define-keys-for-mode 'tcl-mode)
+;;       (spacemacs/helm-gtags-define-keys-for-mode 'c-mode)
+;;       (spacemacs/helm-gtags-define-keys-for-mode 'java-mode)
+;;       (spacemacs/helm-gtags-define-keys-for-mode 'vhdl-mode)
+;;       (spacemacs/helm-gtags-define-keys-for-mode 'shell-script-mode)
+;;       (spacemacs/helm-gtags-define-keys-for-mode 'awk-mode)
+;;       (spacemacs/helm-gtags-define-keys-for-mode 'asm-mode)
+;;       (spacemacs/helm-gtags-define-keys-for-mode 'dired-mode)
+;;       (spacemacs/helm-gtags-define-keys-for-mode 'compilation-mode)
+;;       (spacemacs/helm-gtags-define-keys-for-mode 'shell-mode)
 
-      (spacemacs/ggtags-enable-eldoc 'tcl-mode)
-      (spacemacs/ggtags-enable-eldoc 'java-mode)
-      (spacemacs/ggtags-enable-eldoc 'vhdl-mode))
-    :config
-    (progn
-      ;; if anyone uses helm-gtags, they would want to use these key bindings
-      (define-key helm-gtags-mode-map (kbd "M-.") 'ggtags-find-tag-dwim)
-      (define-key helm-gtags-mode-map (kbd "C-x 4 .") 'helm-gtags-find-tag-other-window)
-      (define-key helm-gtags-mode-map (kbd "M-,") 'helm-gtags-pop-stack)
-      (define-key helm-gtags-mode-map (kbd "M-*") 'helm-gtags-pop-stack))))
+;;       (spacemacs/ggtags-enable-eldoc 'tcl-mode)
+;;       (spacemacs/ggtags-enable-eldoc 'java-mode)
+;;       (spacemacs/ggtags-enable-eldoc 'vhdl-mode))
+;;     :config
+;;     (progn
+;;       ;; if anyone uses helm-gtags, they would want to use these key bindings
+;;       (define-key helm-gtags-mode-map (kbd "M-.") 'ggtags-find-tag-dwim)
+;;       (define-key helm-gtags-mode-map (kbd "C-x 4 .") 'helm-gtags-find-tag-other-window)
+;;       (define-key helm-gtags-mode-map (kbd "M-,") 'helm-gtags-pop-stack)
+;;       (define-key helm-gtags-mode-map (kbd "M-*") 'helm-gtags-pop-stack))))
 
 ;; (defun vinurs-dev-env/init-magit ()
 ;;   (use-package magit
