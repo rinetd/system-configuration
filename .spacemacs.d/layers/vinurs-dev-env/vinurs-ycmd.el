@@ -1,10 +1,10 @@
-;;; c-settings.el --- 
+;;; vinurs-ycmd.el --- 
 
-;; Copyright 2016 vinurs
+;; Copyright 2016 haiyuan.zhang
 ;;
-;; Author: vinurs@vinurs-mac.local
-;; Version: $Id: @(#)c-settings.el,v 0.0 2016/05/02 09:11:36 vinurs Exp $
-;; Changed: <vinurs 08/01/2016 04:10:48>
+;; Author: haiyuan.vinurs@gmail.com
+;; Version: $Id: @(#)vinurs-ycmd.el,v 0.0 2016/08/01 04:10:10 vinurs Exp $
+;; Changed: <vinurs 08/01/2016 04:50:21>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -27,7 +27,7 @@
 ;; 
 
 ;; Put this file into your load-path and the following into your ~/.emacs:
-;;   (require 'c-settings)
+;;   (require 'vinurs-ycmd)
 
 
 
@@ -43,25 +43,21 @@
 ;;;;  User Options, Variables
 ;;;;##########################################################################
 
+(add-hook 'after-init-hook #'global-ycmd-mode)
+(set-variable 'ycmd-server-command '("python" "/Users/vinurs/system-configuration/github/ycmd/ycmd/")) 
 
 
-;; code style settings
-(require 'vinurs-c-code-style) 
+;; (with-eval-after-load 'ycmd
 
-;; hide if0,以及快捷键显示隐藏hideif
-(require 'vinurs-c-hideif+) 
 
-;; gtags/helm-gtags针对C语言的设置
-(require 'gtags-c-mode) 
+;;   ;; (set-variable 'ycmd-global-config "/path/to/global_config.py")
 
-;; ycmd
-(require 'vinurs-ycmd) 
-
+   
+;;   ) 
 
 
 
 
+(provide 'vinurs-ycmd)
 
-(provide 'c-settings)
-
-;;; c-settings.el ends here
+;;; vinurs-ycmd.el ends here

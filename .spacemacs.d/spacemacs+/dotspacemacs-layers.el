@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@vinurs-mac.local
 ;; Version: $Id: @(#)dotspacemacs-layers.el,v 0.0 2016/05/25 15:13:53 vinurs Exp $
-;; Changed: <vinurs 07/30/2016 14:00:06>
+;; Changed: <vinurs 08/01/2016 04:36:03>
 ;; Keywords:
 ;; X-URL: not distributed yet
 
@@ -55,8 +55,8 @@
   dotspacemacs-distribution 'spacemacs
   ;; List of additional paths where to look for configuration layers.
   ;; Paths must have a trailing slash (i.e. `~/.mycontribs/')
-  ;; dotspacemacs-configuration-layer-path '("~/.spacemacs.d/layers")
-  dotspacemacs-configuration-layer-path '()
+  dotspacemacs-configuration-layer-path '("~/.spacemacs.d/layers")
+  ;; dotspacemacs-configuration-layer-path '()
   ;; List of configuration layers to load. If it is the symbol `all' instead
   ;; of a list then all discovered layers will be installed.
   dotspacemacs-configuration-layers
@@ -95,7 +95,8 @@
 
 	 c-c++
 	 gtags
-
+	 ycmd
+	 syntax-checking
 	 ;; 自动补全的layer
 	 (auto-completion
 	   :variables
@@ -113,8 +114,10 @@
 	   ;; 自动补全出的时候还带对应的帮助信息
 	   auto-completion-enable-help-tooltip t
 	   ;; 私有snippets目录
-	   auto-completion-private-snippets-directory (concat (car dotspacemacs-configuration-layer-path)
-	 												"snippets/")
+	   ;; auto-completion-private-snippets-directory (concat (car dotspacemacs-configuration-layer-path)
+	   ;; 												"snippets/")
+	   auto-completion-private-snippets-directory "~/.spacemacs.d/snippets/"
+
 
 	   auto-completion-enable-sort-by-usage t
 	   )

@@ -240,6 +240,8 @@ brew tap d12frosted/emacs-plus
 brew install emacs-plus --HEAD --with-cocoa --with-gnutls --with-librsvg --with-imagemagick --with-spacemacs-icon
 brew linkapps
 brew install emacs-clang-complete-async
+# ycmd
+# clone 
 
 #brew cask install emacs
 
