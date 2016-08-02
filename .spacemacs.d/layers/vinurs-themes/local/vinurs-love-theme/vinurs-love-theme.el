@@ -112,6 +112,7 @@ Semantic, and Ansi-Color faces are included.")
 	'(company-tooltip-common ((t (:inherit company-tooltip :weight bold :underline nil))))
 	'(company-tooltip-common-selection ((t (:inherit company-tooltip-selection :weight bold :underline nil))))
 	'(company-tooltip-selection ((t (:background "purple3"))))
+	'(sp-pair-overlay-face ((t (:background "azure"))))
 
 	;; `(ac-completion-face ((,class (:background ,"red" :foreground ,"green"))))
 	;; `(ac-candidate-face ((,class (:inherit nil :background "light green"))))
