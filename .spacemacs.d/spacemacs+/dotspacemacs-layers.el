@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@vinurs-mac.local
 ;; Version: $Id: @(#)dotspacemacs-layers.el,v 0.0 2016/05/25 15:13:53 vinurs Exp $
-;; Changed: <vinurs 08/01/2016 04:36:03>
+;; Changed: <vinurs 08/01/2016 09:50:56>
 ;; Keywords:
 ;; X-URL: not distributed yet
 
@@ -95,8 +95,8 @@
 
 	 c-c++
 	 gtags
-	 ycmd
-	 syntax-checking
+	 ;; ycmd
+	 ;; syntax-checking
 	 ;; 自动补全的layer
 	 (auto-completion
 	   :variables
