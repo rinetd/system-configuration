@@ -29,6 +29,8 @@ git clone https://github.com/vinurs/website.git
 git clone https://github.com/vinurs/hexo-theme-yelee.git website/themes/yelee
 # 用org-mode来配合hexo写blog
 git clone https://github.com/vinurs/hexo-renderer-org.git
+# 支持文章置顶
+git clone https://github.com/vinurs/hexo-generator-index.git
 
 # aria2的浏览器插件，可以在浏览器里面查看aria2下载的情况
 git clone https://github.com/ziahamza/webui-aria2.git
