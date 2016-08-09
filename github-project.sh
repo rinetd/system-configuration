@@ -18,6 +18,8 @@
 
 # download project from github into github project
 github_dir=~/system-configuration/github/
+rm -rf ~/github
+ln -s ~/system-configuration/github ~/
 cd $github_dir
 
 # 系统配置文件的wiki
@@ -31,6 +33,8 @@ git clone https://github.com/vinurs/hexo-theme-yelee.git website/themes/yelee
 git clone https://github.com/vinurs/hexo-renderer-org.git
 # 支持文章置顶
 git clone https://github.com/vinurs/hexo-generator-index.git
+# 最终的blog
+git clone https://github.com/vinurs/vinurs.github.io.git
 
 # aria2的浏览器插件，可以在浏览器里面查看aria2下载的情况
 git clone https://github.com/ziahamza/webui-aria2.git

@@ -243,6 +243,9 @@ brew install emacs-clang-complete-async
 # ycmd
 # clone 
 
+# 统计每天的编程时间
+pip install wakatime
+
 #brew cask install emacs
 
 # 这个不用了，改用1password

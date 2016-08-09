@@ -7,7 +7,7 @@
 # 
 #         Version:  1.0
 #         Created:  2013/09/27 10:02:22
-#         Changed:  <vinurs 03/29/2016 23:05:06>
+#         Changed:  <vinurs 08/03/2016 19:11:27>
 #        Revision:  none
 # 
 #          Author:  zhanghaiyuan
@@ -15,6 +15,9 @@
 # 
 #==============================================================================
 ##
+
+# 加载环境变量
+source env.rc 
 
 # 获得系统类型:linux or mac
 export system_type=$(uname)

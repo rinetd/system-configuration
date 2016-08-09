@@ -40,7 +40,8 @@
 
 	 ;; doxymacs
 	 (vinurs-doxymacs :location local)
-
+	 ;; 统计编程时长
+	 (vinurs-waketime :location local)
 	 ;; git相关
 	 ;; magit
 
@@ -100,6 +101,13 @@ Each entry is either:
 	:demand t
 	)
   )
+
+(defun vinurs-dev-env/init-vinurs-waketime ()
+  (use-package vinurs-waketime
+	:demand t
+	)
+  )
+
 
 
 ;; (defun vinurs-dev-env/init-ggtags ()

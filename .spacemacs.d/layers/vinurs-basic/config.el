@@ -60,9 +60,9 @@
 
 
 
-;; ;; org-mode, 自动换行
-;; (add-hook 'org-mode-hook
-;;           (lambda () (setq truncate-lines nil)))
+;; org-mode, 自动换行
+(add-hook 'org-mode-hook
+           (lambda () (setq truncate-lines nil))) 
 
 ;; 一行太长的时候自动换行
 (setq truncate-lines t)
