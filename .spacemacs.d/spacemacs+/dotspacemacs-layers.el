@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@vinurs-mac.local
 ;; Version: $Id: @(#)dotspacemacs-layers.el,v 0.0 2016/05/25 15:13:53 vinurs Exp $
-;; Changed: <vinurs 08/01/2016 09:50:56>
+;; Changed: <vinurs 08/09/2016 14:59:17>
 ;; Keywords:
 ;; X-URL: not distributed yet
 
@@ -69,7 +69,8 @@
 	 better-defaults
 	 ;; 我自己的一些基础配置，用起来更加舒服一点
 	 vinurs-basic
-
+	 ;; 用来写文档
+	 markdown
 	 ;; 跟mac按键兼容，暂时还是不要用了吧，按键感觉不适应
 	 ;; osx
 
