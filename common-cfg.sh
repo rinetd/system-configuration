@@ -49,6 +49,8 @@ files_common+=(.htoprc)
 files_common+=(.indent.pro)
 # lftp
 files_common+=(.lftp)
+# tor
+files_common+=(.tor)
 # ftpd
 files_common+=(.ftproot)
 # emacs

@@ -38,6 +38,7 @@ brew install aria2
 # 配合aria2使用的web页面
 git clone https://github.com/ziahamza/webui-aria2.git ~/system-configuration/webui-aria2
 
+
 # common cmd
 brew install gdb
 brew install lftp
@@ -294,6 +295,10 @@ brew install tor
 brew install arm
 brew install torsocks
 brew cask install torbrowser
+# 代理相关
+brew install shadowsocks-libev
+brew install Caskroom/cask/shadowsocksx --force
+
 
 # 防止dns污染
 brew cask install dnscrypt
