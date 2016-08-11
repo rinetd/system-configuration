@@ -50,7 +50,7 @@ files_common+=(.indent.pro)
 # lftp
 files_common+=(.lftp)
 # tor
-files_common+=(.tor)
+files_common+=(.torrc)
 # ftpd
 files_common+=(.ftproot)
 # emacs
