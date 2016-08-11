@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@vinurs-mac.local
 ;; Version: $Id: @(#)dotspacemacs-layers.el,v 0.0 2016/05/25 15:13:53 vinurs Exp $
-;; Changed: <vinurs 08/09/2016 14:59:17>
+;; Changed: <vinurs 08/12/2016 02:31:37>
 ;; Keywords:
 ;; X-URL: not distributed yet
 
@@ -70,7 +70,7 @@
 	 ;; 我自己的一些基础配置，用起来更加舒服一点
 	 vinurs-basic
 	 ;; 用来写文档
-	 markdown
+	 ;; markdown
 	 ;; 跟mac按键兼容，暂时还是不要用了吧，按键感觉不适应
 	 ;; osx
 
@@ -80,7 +80,7 @@
 	 ;;  emacs-lisp
 	 ;;  ;;(syntax-checking :variables syntax-checking-enable-by-default t)
 	 ;;  markdown
-	 ;;  org
+	 org
 	 ;;  ;; (shell :variables
 	 ;;  ;;        shell-default-height 30
 	 ;;  ;;        shell-default-position 'bottom)
