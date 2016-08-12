@@ -12,6 +12,17 @@
 ## Tor will look for this file in various places based on your platform:
 ## https://www.torproject.org/docs/faq#torrc
 
+# 北朝鲜 {kp}
+# 伊朗 {ir}
+# 叙利亚 {sy}
+# 巴基斯 {pk}
+# 古巴 {cu}
+# 越南 {vn}
+
+ExcludeNodes {cn},{hk},{mo},{kp},{ir},{sy},{pk},{cu},{vn} ###规避中国/香港/澳门等
+
+strictnodes 1  ##严格执行第一条规则，即使链接不到任何节点。
+
 ## Tor opens a SOCKS proxy on port 9050 by default -- even if you don't
 ## configure one below. Set "SOCKSPort 0" if you plan to run Tor only
 ## as a relay, and not make any local application connections yourself.
@@ -201,4 +212,7 @@
 ## a private bridge, for example because you'll give out your bridge
 ## address manually to your friends, uncomment this line:
 #PublishServerDescriptor 0
+
+# 这个是tor的前置代理ss，毕竟如今我大中华局域网内如今没法直接访问tor网络
+Socks5Proxy 127.0.0.1:7070 
 

@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@vinurs-mac.local
 ;; Version: $Id: @(#)dotspacemacs-layers.el,v 0.0 2016/05/25 15:13:53 vinurs Exp $
-;; Changed: <vinurs 08/12/2016 02:31:37>
+;; Changed: <vinurs 08/12/2016 03:05:48>
 ;; Keywords:
 ;; X-URL: not distributed yet
 
@@ -74,13 +74,12 @@
 	 ;; 跟mac按键兼容，暂时还是不要用了吧，按键感觉不适应
 	 ;; osx
 
-	 ;;  ranger
-	 ;;  ;;	gtags
-	 ;;  ;; semantic
-	 ;;  emacs-lisp
-	 ;;  ;;(syntax-checking :variables syntax-checking-enable-by-default t)
-	 ;;  markdown
+	 
+	 ;; spacemacs自带的org layer，效果非常好
 	 org
+	 ;; 对org的一些配置
+	 vinurs-org
+
 	 ;;  ;; (shell :variables
 	 ;;  ;;        shell-default-height 30
 	 ;;  ;;        shell-default-position 'bottom)
