@@ -37,6 +37,7 @@
 	 ;; 记录每个键的按键次数
 	 (keyfreq)
 
+
 	 ;; google翻译 
 	 ;; 可惜Google在中国不能用
 	 ;; (google-translate)
