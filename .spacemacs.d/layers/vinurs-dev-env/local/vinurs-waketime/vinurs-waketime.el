@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)vinurs-waketime.el,v 0.0 2016/08/03 09:03:28 vinurs Exp $
-;; Changed: <vinurs 08/03/2016 09:57:36>
+;; Changed: <vinurs 08/16/2016 20:17:34>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -44,10 +44,7 @@
 ;;;;##########################################################################
 
 
-
-;; setq wakatime api
-(setq wakatime-api-key "d55da042-7f9e-4901-84aa-2464c8cbd687")
-
+(require 'waketime-priv) 
 ;; TODO: 增加系统判断，mac os跟linux上面的安装路径应该不同吧
 (setq wakatime-cli-path "/usr/local/bin/wakatime")
 

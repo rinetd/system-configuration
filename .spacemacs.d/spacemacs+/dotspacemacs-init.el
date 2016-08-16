@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@vinurs-mac.local
 ;; Version: $Id: @(#)dotspacemacs-layers.el,v 0.0 2016/05/25 15:13:53 vinurs Exp $
-;; Changed: <vinurs 08/16/2016 19:36:32>
+;; Changed: <vinurs 08/16/2016 20:14:20>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -226,8 +226,10 @@
    dotspacemacs-whitespace-cleanup nil
    )
 
-;; load el-get
-;; (require 'vinurs-elget) 
+;; emacs.d private cfg 
+;; add to load-path first
+(push "~/Dropbox/home/.emacs.d/" load-path)
+
 
 (provide 'dotspacemacs-init)
 
