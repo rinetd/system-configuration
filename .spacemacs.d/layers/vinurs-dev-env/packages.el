@@ -34,15 +34,16 @@
 	 ;; dot画图语言
 	 (graphviz-dot-mode)
 
+	 ;; 统计编程时长
+	 (vinurs-waketime :location local)
+
 
 	 ;; helm-gtags
 	 ;; ggtags
 
 	 ;; doxymacs
 	 (vinurs-doxymacs :location local)
-	 ;; 统计编程时长
-	 (vinurs-waketime :location local)
-
+	 
 	 ;; git相关
 	 ;; magit
 
