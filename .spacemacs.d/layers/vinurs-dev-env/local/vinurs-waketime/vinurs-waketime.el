@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)vinurs-waketime.el,v 0.0 2016/08/03 09:03:28 vinurs Exp $
-;; Changed: <vinurs 08/16/2016 20:17:34>
+;; Changed: <vinurs 08/16/2016 20:23:04>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -45,8 +45,20 @@
 
 
 (require 'waketime-priv) 
-;; TODO: 增加系统判断，mac os跟linux上面的安装路径应该不同吧
-(setq wakatime-cli-path "/usr/local/bin/wakatime")
+
+;; check OS type
+(cond
+  ((string-equal system-type "windows-nt") ; Microsoft Windows
+	(progn
+	  (message "Microsoft Windows")))
+  ((string-equal system-type "darwin") ; Mac OS X
+	(progn
+	  (setq wakatime-cli-path "/usr/local/bin/wakatime")
+	  ))
+  ((string-equal system-type "gnu/linux") ; linux
+	(progn
+	  (message "Linux"))))
+
 
 ;; setq wakatime mode
 (if (file-exists-p wakatime-cli-path)
