@@ -32,9 +32,6 @@
 (defconst vinurs-basic-packages
   '(
 	 
-	 ;; 记录每个键的按键次数
-	 (keyfreq)
-
 	 ;; highlight tail性感的小尾巴标识最近修改
 	 (highlight-tail)
 
@@ -74,17 +71,6 @@ Each entry is either:
       - A list beginning with the symbol `recipe' is a melpa
         recipe.  See: https://github.com/milkypostman/melpa#recipe-format")
 
-
-(defun vinurs-basic/init-keyfreq ()
-  (use-package keyfreq
-    ;; 启动emacs的时候就加载该插件
-    :demand t
-    :config
-    (progn
-      (require 'keyfreq-settings)
-      )
-    )
-  )
 
 (defun vinurs-basic/init-highlight-tail ()
   (use-package highlight-tail
