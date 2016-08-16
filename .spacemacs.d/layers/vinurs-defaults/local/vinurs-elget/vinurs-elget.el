@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)vinurs-elget.el,v 0.0 2016/07/28 20:41:24 vinurs Exp $
-;; Changed: <vinurs 07/29/2016 07:18:24>
+;; Changed: <vinurs 08/16/2016 19:57:48>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -60,8 +60,21 @@
   (require 'el-get)) 
  
 (add-to-list 'el-get-recipe-path "~/.spacemacs.d/el-get-user/")
+
+
+;; 我自己需要的一些软件包
+(setq my-el-get-packages
+      '(
+		 ;;统计每天的编程时间 
+		 wakatime-mode
+        )
+	  
+      )
+
+
 (el-get 'sync)
 
+(el-get 'sync my-el-get-packages)
 
 (provide 'vinurs-elget)
 

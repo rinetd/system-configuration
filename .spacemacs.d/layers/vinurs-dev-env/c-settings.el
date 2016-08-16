@@ -55,7 +55,7 @@
 (require 'gtags-c-mode) 
 
 ;; ycmd
-(require 'vinurs-ycmd) 
+;; (require 'vinurs-ycmd) 
 
 
 

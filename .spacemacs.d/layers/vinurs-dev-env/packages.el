@@ -41,7 +41,7 @@
 	 ;; doxymacs
 	 (vinurs-doxymacs :location local)
 	 ;; 统计编程时长
-	 (vinurs-waketime :location local)
+	 ;; (vinurs-waketime :location local)
 	 ;; git相关
 	 ;; magit
 

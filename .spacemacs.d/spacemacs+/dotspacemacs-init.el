@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@vinurs-mac.local
 ;; Version: $Id: @(#)dotspacemacs-layers.el,v 0.0 2016/05/25 15:13:53 vinurs Exp $
-;; Changed: <vinurs 07/28/2016 20:41:37>
+;; Changed: <vinurs 08/16/2016 19:36:32>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -227,7 +227,7 @@
    )
 
 ;; load el-get
-(require 'vinurs-elget) 
+;; (require 'vinurs-elget) 
 
 (provide 'dotspacemacs-init)
 

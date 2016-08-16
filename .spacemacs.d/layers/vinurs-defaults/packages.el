@@ -31,9 +31,15 @@
 
 (defconst vinurs-defaults-packages
   '(
+	 ;; 先装个el-get，很多软件都在el-get里面
+	 (vinurs-elget :location local)
+
 	 ;; 记录每个键的按键次数
 	 (keyfreq)
 
+	 ;; google翻译 
+	 ;; 可惜Google在中国不能用
+	 ;; (google-translate)
 
 	 )
   "The list of Lisp packages required by the vinurs-defaults layer.
@@ -64,6 +70,16 @@ Each entry is either:
         recipe.  See: https://github.com/milkypostman/melpa#recipe-format")
 
 
+(defun vinurs-defaults/init-vinurs-elget ()
+  (use-package vinurs-elget
+    ;; 启动emacs的时候就加载该插件
+    :demand t
+    :config
+    (progn
+      )
+    )
+  )
+
 
 (defun vinurs-defaults/init-keyfreq ()
   (use-package keyfreq
@@ -72,6 +88,17 @@ Each entry is either:
     :config
     (progn
       (require 'keyfreq-settings)
+      )
+    )
+  )
+
+
+(defun vinurs-defaults/init-google-translate()
+  (use-package google-translate
+    ;; 启动emacs的时候就加载该插件
+    :demand t
+    :config
+    (progn
       )
     )
   )
