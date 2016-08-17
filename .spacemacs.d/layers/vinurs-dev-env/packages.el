@@ -41,10 +41,8 @@
 	 ;; ggtags
 
 	 ;; doxymacs
-	 (vinurs-doxymacs :location local)
+	 ;; (vinurs-doxymacs :location local)
 	 
-	 ;; git相关
-	 ;; magit
 
 	 ;; muttrc 
 	 muttrc-mode
@@ -149,15 +147,6 @@ Each entry is either:
 ;;       (define-key helm-gtags-mode-map (kbd "C-x 4 .") 'helm-gtags-find-tag-other-window)
 ;;       (define-key helm-gtags-mode-map (kbd "M-,") 'helm-gtags-pop-stack)
 ;;       (define-key helm-gtags-mode-map (kbd "M-*") 'helm-gtags-pop-stack))))
-
-;; (defun vinurs-dev-env/init-magit ()
-;;   (use-package magit
-;;     :defer t
-;;     :init
-;; 	(progn
-;; 	  (require 'git-settings))
-;; 	)
-;;   )
 
 
 

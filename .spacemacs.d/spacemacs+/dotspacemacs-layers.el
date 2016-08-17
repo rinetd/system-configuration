@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@vinurs-mac.local
 ;; Version: $Id: @(#)dotspacemacs-layers.el,v 0.0 2016/05/25 15:13:53 vinurs Exp $
-;; Changed: <vinurs 08/16/2016 18:57:27>
+;; Changed: <vinurs 08/17/2016 08:33:56>
 ;; Keywords:
 ;; X-URL: not distributed yet
 
@@ -93,8 +93,9 @@
 
 	 ;;  ;; (python)
 	 ;;  (colors)
-	 ;;  ;; 这个关于git的layer还是不错的
-	 ;;  git
+
+	 ;; 这个关于git的layer还是不错的
+	 git
 
 	 c-c++
 	 gtags
