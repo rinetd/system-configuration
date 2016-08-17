@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)vinurs-elget.el,v 0.0 2016/07/28 20:41:24 vinurs Exp $
-;; Changed: <vinurs 08/16/2016 20:53:15>
+;; Changed: <vinurs 08/17/2016 07:14:08>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -69,9 +69,9 @@
 		 wakatime-mode
 
 		 ;; 代码折叠
-		 vimish-fold
-		 dash
-		 s
+		 ;; vimish-fold
+		 ;; dash
+		 ;; s
 
         )
 	  
