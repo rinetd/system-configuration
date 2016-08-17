@@ -318,6 +318,14 @@ Semantic, and Ansi-Color faces are included.")
 	;; 	 ((,class (:overline   ,blue-1))))
 	;;    `(semantic-unmatched-syntax-face
 	;; 	 ((,class (:underline  ,red-1))))
+
+
+	;; magit
+	`(magit-branch-current ((t (:inherit bold
+								 :background "dark cyan"
+								 :foreground "#4f97d7"
+								 :box 1))))
+
 	)
 
   (custom-theme-set-variables
