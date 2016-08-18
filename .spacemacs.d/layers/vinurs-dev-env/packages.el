@@ -41,7 +41,7 @@
 	 ;; ggtags
 
 	 ;; doxymacs
-	 ;; (vinurs-doxymacs :location local)
+	 (vinurs-doxymacs :location local)
 	 
 
 	 ;; muttrc 
