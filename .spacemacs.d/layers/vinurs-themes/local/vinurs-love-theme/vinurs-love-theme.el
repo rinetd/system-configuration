@@ -325,8 +325,8 @@ Semantic, and Ansi-Color faces are included.")
 								 :background "dark cyan"
 								 :foreground "#4f97d7"
 								 :box 1))))
-
-	)
+	`(magit-section-highlight ((t (:background "light blue"))))
+	) 
 
   (custom-theme-set-variables
 	'vinurs-love
