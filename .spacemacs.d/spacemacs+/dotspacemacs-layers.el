@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@vinurs-mac.local
 ;; Version: $Id: @(#)dotspacemacs-layers.el,v 0.0 2016/05/25 15:13:53 vinurs Exp $
-;; Changed: <vinurs 08/17/2016 08:33:56>
+;; Changed: <vinurs 08/18/2016 08:14:07>
 ;; Keywords:
 ;; X-URL: not distributed yet
 
@@ -118,8 +118,6 @@
 	   ;; 自动补全出的时候还带对应的帮助信息
 	   auto-completion-enable-help-tooltip t
 	   ;; 私有snippets目录
-	   ;; auto-completion-private-snippets-directory (concat (car dotspacemacs-configuration-layer-path)
-	   ;; 												"snippets/")
 	   auto-completion-private-snippets-directory "~/.spacemacs.d/snippets/"
 
 

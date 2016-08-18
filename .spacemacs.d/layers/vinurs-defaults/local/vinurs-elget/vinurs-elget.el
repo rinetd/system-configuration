@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)vinurs-elget.el,v 0.0 2016/07/28 20:41:24 vinurs Exp $
-;; Changed: <vinurs 08/17/2016 07:14:08>
+;; Changed: <vinurs 08/18/2016 11:38:25>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -68,6 +68,8 @@
 		 ;;统计每天的编程时间 
 		 wakatime-mode
 
+		 ;; 代码注释专用
+		 doxymacs
 		 ;; 代码折叠
 		 ;; vimish-fold
 		 ;; dash
