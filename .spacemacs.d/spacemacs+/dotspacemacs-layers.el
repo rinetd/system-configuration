@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@vinurs-mac.local
 ;; Version: $Id: @(#)dotspacemacs-layers.el,v 0.0 2016/05/25 15:13:53 vinurs Exp $
-;; Changed: <vinurs 08/18/2016 08:14:07>
+;; Changed: <vinurs 08/19/2016 07:22:16>
 ;; Keywords:
 ;; X-URL: not distributed yet
 
@@ -75,7 +75,7 @@
 	 ;; 用来写文档
 	 ;; markdown
 	 ;; 跟mac按键兼容，暂时还是不要用了吧，按键感觉不适应
-	 ;; osx
+	 osx
 
 	 
 	 ;; spacemacs自带的org layer，效果非常好

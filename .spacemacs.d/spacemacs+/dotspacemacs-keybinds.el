@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)dotspacemacs-keybinds.el,v 0.0 2016/07/23 08:25:41 vinurs Exp $
-;; Changed: <vinurs 07/30/2016 08:45:38>
+;; Changed: <vinurs 08/19/2016 07:42:04>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -65,19 +65,21 @@
   (define-key helm-multi-swoop-map (kbd "C-s") 'helm-next-line)
   )
 
+
 ;;;;;;;;; 键映射相关
 ;; mac键重新映射
-(when (spacemacs/system-is-mac)
-  ;; key bindings
-  ;; for emacs
-  (setq mac-right-option-modifier 'control)
-  (setq mac-left-option-modifier 'alt)
+;; 这个暂时先去掉，现在的spcemacs里面不需要这个
+;; (when (spacemacs/system-is-mac)
+;;   ;; key bindings
+;;   ;; for emacs
+;;   (setq mac-right-option-modifier 'control)
+;;   (setq mac-left-option-modifier 'alt)
 
-  ;;(setq mac-command-modifier 'control)
-  (setq mac-command-modifier 'meta)
-  (global-set-key [kp-delete] 'delete-char) ;; sets fn-delete to be right-delete
+;;   ;;(setq mac-command-modifier 'control)
+;;   (setq mac-command-modifier 'meta)
+;;   (global-set-key [kp-delete] 'delete-char) ;; sets fn-delete to be right-delete
 
-  )
+;;   )
 
 
 
