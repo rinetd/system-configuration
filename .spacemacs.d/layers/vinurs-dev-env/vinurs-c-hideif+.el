@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)vinurs-c-hideif+.el,v 0.0 2016/07/27 12:39:34 vinurs Exp $
-;; Changed: <vinurs 07/27/2016 14:29:46>
+;; Changed: <vinurs 08/23/2016 09:57:07>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -68,6 +68,8 @@
   nil) 
 
 
+
+(spacemacs|diminish hide-ifdef-mode " ⓗ" " h") 
 
 (defun my-c-mode-common-hook ()
   (font-lock-add-keywords
