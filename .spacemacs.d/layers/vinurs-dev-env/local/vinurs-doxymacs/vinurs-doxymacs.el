@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)vinurs-doxymacs.el,v 0.0 2016/07/28 23:19:44 vinurs Exp $
-;; Changed: <vinurs 08/18/2016 11:46:31>
+;; Changed: <vinurs 08/23/2016 15:58:31>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -54,11 +54,21 @@
 
 
   (spacemacs/set-leader-keys
-	(concat vinurs/doxymacs-key-binding-prefixes "f") 'doxymacs-insert-function-comment
+	(concat vinurs/doxymacs-key-binding-prefixes "f")
+	'doxymacs-insert-function-comment
+
 	;; 这个暂时不需要
 	;; (concat vinurs/doxymacs-key-binding-prefixes "s") 'doxymacs-blank-singleline-comment
-	(concat vinurs/doxymacs-key-binding-prefixes "m") 'doxymacs-insert-blank-multiline-comment
-	(concat vinurs/doxymacs-key-binding-prefixes "d") 'doxymacs-define-dot-h-file-macro
+	(concat vinurs/doxymacs-key-binding-prefixes "m")
+	'doxymacs-insert-blank-multiline-comment
+
+	(concat vinurs/doxymacs-key-binding-prefixes "d")
+	'doxymacs-define-dot-h-file-macro
+
+	;; 
+	(concat vinurs/doxymacs-key-binding-prefixes "u")
+	'doxymacs-insert-member-comment
+
 	) 
 
   ;; (define-key doxymacs-mode-map "\C-cdd"
@@ -88,7 +98,7 @@
 		  (list
 			'l
 			"/** " '> 'n
-			" * " (doxymacs-doxygen-command-char) "brief " 'p '> 'n
+			" * " (doxymacs-doxygen-command-char) "brief  " 'p '> 'n
 			" * " '> 'n
 			(doxymacs-parm-tempo-element (cdr (assoc 'args next-func)))
 			(unless (string-match

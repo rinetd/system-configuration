@@ -82,6 +82,7 @@ Each entry is either:
     :config
     (progn
       (require 'graphviz-dot-mode-settings)
+	  (spacemacs|diminish doxymacs-mode " ⓓ" " d") 
       )
     )
   )
@@ -92,7 +93,11 @@ Each entry is either:
 	:defer t
 	:init
 	(progn
-	  ))
+	  )
+	:config
+	(progn
+	  )
+	)
   )
 
 
@@ -100,13 +105,21 @@ Each entry is either:
 (defun vinurs-dev-env/init-vinurs-doxymacs ()
   (use-package vinurs-doxymacs
 	:demand t
+	:config
+	(progn
+      (spacemacs|diminish doxymacs-mode " Ⓓ" " D") 
+	  )
 	)
-  )
+  ) 
 
 
 (defun vinurs-dev-env/init-vinurs-waketime ()
   (use-package vinurs-waketime
 	:demand t
+	:config
+	(progn
+      (spacemacs|diminish wakatime-mode " ⓦ" " w")
+	  )
 	)
   )
 
