@@ -39,7 +39,7 @@ else
     # 下面就开始创建新的session
     # 开头的几个window，公用的
 	# mutt邮件客户端
-	tmux -2 new-session -s $TMUX_SESSION -n mutt\; send-keys 'mutt' C-m \; detach-client
+	#tmux -2 new-session -s $TMUX_SESSION -n mutt\; send-keys 'mutt' C-m \; detach-client
 
     # 默认打开叫sys-monitor的窗口，专门用来监控系统当前的性能的
     tmux -2 new-session -s $TMUX_SESSION -n sys-monitor \; detach-client
