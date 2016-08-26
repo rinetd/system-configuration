@@ -39,7 +39,8 @@ git clone https://github.com/vinurs/vinurs.github.io.git
 # aria2的浏览器插件，可以在浏览器里面查看aria2下载的情况
 git clone https://github.com/ziahamza/webui-aria2.git
 
-
+# libfuse
+git clone https://github.com/libfuse/libfuse.git
 
 
 cd -

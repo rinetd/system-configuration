@@ -273,6 +273,11 @@ Semantic, and Ansi-Color faces are included.")
 	`(helm-source-header             ((,class (:background ,butter-2 :foreground ,alum-5
 												:weight bold :height 1.3
 												:family "Sans Serif"))))
+	`(helm-buffer-directory ((t (:background "orchid4" :foreground "#b2b2b2"))))
+	`(helm-buffer-file ((t (:background "gray100" :foreground "dark magenta"))))
+	`(helm-buffer-process ((t (:background "gray100" :foreground "dark blue"))))
+	`(helm-buffer-size ((t (:background "gray100" :foreground "red3"))))
+
 	;;    ;;`(helm-selection                 ((,class (:background ,alum-1))))
 	;;    `(helm-action                    ((,class (:background ,"red"))))
 	;;    ;;   `(helm-candidate-number          ((,class (:background ,alum-5
@@ -319,6 +324,12 @@ Semantic, and Ansi-Color faces are included.")
 	;;    `(semantic-unmatched-syntax-face
 	;; 	 ((,class (:underline  ,red-1))))
 
+	;; avy goto line
+
+	;; `(avy-lead-face ((t (:background "#293239" :foreground "dark blue"))))
+	;; `(avy-lead-face-0 ((t (:background "#293239" :foreground "dark magenta"))))
+	;; `(avy-lead-face-1 ((t (:background "#293239" :foreground "dark magenta"))))
+	;; `(avy-lead-face-2 ((t (:background "#293239" :foreground "dark magenta"))))
 
 	;; magit
 	`(magit-branch-current ((t (:inherit bold
