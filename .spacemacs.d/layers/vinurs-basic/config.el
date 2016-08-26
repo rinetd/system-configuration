@@ -1,20 +1,10 @@
 ;; add to load-path first
 (push "~/.spacemacs.d/layers/vinurs-basic/" load-path)
 
-;; Prefixes
-;; 除了spacemac自定义的前缀键，我自己另外定义了oa表示我自己的应用程序
-(setq spacemacs/key-binding-prefixes '(("o"   "user-defineds")
-                                       ("oa"  "applications")
-                                       ))
-(mapc (lambda (x) (apply #'spacemacs/declare-prefix x))
-      spacemacs/key-binding-prefixes)
-
 
 ;; ;; 个人信息的相关定义:邮件，全名
 ;; (require 'personality)
 
-;; 编码设置:utf-8之类，所有的文件全部以utf8保存
-(require 'vinurs-coding-settings) 
 
 ;; emacs server相关
 ;; 对于用client打开的文件，也用C-x k关闭
@@ -60,24 +50,11 @@
 
 
 
-;; org-mode, 自动换行
-(add-hook 'org-mode-hook
-           (lambda () (setq truncate-lines nil))) 
-
-;; 一行太长的时候自动换行
-(setq truncate-lines t)
-;; 不显示工具栏，碍眼
-(tool-bar-mode -1)
 
 ;; Insert multiple spaces for indentation:
 (setq indent-tabs-mode nil) 
 
 ;; Insert TAB for indentation:
-;; 屏幕滚动更加平滑
-(setq mouse-wheel-scroll-amount '(3 ((shift) . 1))) ;; two lines at a time
-(setq mouse-wheel-progressive-speed nil) ;; don't accelerate scrolling
-(setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
-
 ;;(require 'helm-swoop-settings)
 ;; 行号相关
 (global-linum-mode t)
@@ -106,10 +83,6 @@
 (setq user-full-name "haiyuan.zhang")
 (setq user-mail-address "haiyuan.vinurs@gmail.com")
 
-;;;设置标题栏显示文件的完整路径名
-(setq frame-title-format
-  '("vinurs@知行合一^-^--PATH:%S" (buffer-file-name "%f"
-									(dired-directory dired-directory "%b")))) 
 
 ;; 括号匹配相关
 ;; 高亮括号配对

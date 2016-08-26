@@ -324,12 +324,13 @@ Semantic, and Ansi-Color faces are included.")
 	;;    `(semantic-unmatched-syntax-face
 	;; 	 ((,class (:underline  ,red-1))))
 
-	;; avy goto line
-
-	;; `(avy-lead-face ((t (:background "#293239" :foreground "dark blue"))))
-	;; `(avy-lead-face-0 ((t (:background "#293239" :foreground "dark magenta"))))
-	;; `(avy-lead-face-1 ((t (:background "#293239" :foreground "dark magenta"))))
-	;; `(avy-lead-face-2 ((t (:background "#293239" :foreground "dark magenta"))))
+	;; avy goto line配置
+	;; 默认的时候的颜色
+	`(avy-lead-face ((t (:background "light green" :foreground "#a31db1"))))
+	;; 匹配了第一个字符以后的颜色
+	`(avy-lead-face-0 ((t (:background "light green" :foreground "#4f97d7"))))
+	`(avy-lead-face-1 ((t (:background "#293239" :foreground "#a31db1"))))
+	`(avy-lead-face-2 ((t (:background "#293239" :foreground "#4f97d7"))))
 
 	;; magit
 	`(magit-branch-current ((t (:inherit bold
