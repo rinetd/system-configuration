@@ -43,6 +43,10 @@
 	 ;; 括号匹配
 	 (parent-mode)
 
+	 ;; 新建文件的时候自动根据后缀补全一些文件的基本信息
+	 (template :location local)
+
+
 	 ;; google翻译 
 	 ;; 可惜Google在中国不能用, fuck GFW
 	 ;; (google-translate)
@@ -129,15 +133,36 @@ Each entry is either:
 		) 
 
       (setq highlight-tail-posterior-type 'const) 
-      ;; 全局开启highlight-tail mode
-      ;; 这个暂时放在user-config里面，放在这里的时候启动会报错
-      ;; (highlight-tail-mode) 
 
+	  (highlight-tail-make-faces
+		(highlight-tail-get-colors-fade-table-with-key 'default)) 
+
+      ;; 全局开启highlight-tail mode
+	  ;; 如果发现启动的时候报这个错误:
+	  ;; Error running timer ‘highlight-tail-check-if-defaultbgcolor-changed’: (invalid-function highlight-tail-get-colors-fade-table-with-key)
+	  ;; 那是因为这个宏在源文件中定义得比较晚，不过不影响使用，如果有洁癖，那么可以打开源文件，把这个宏定义移动到开头，那么久可以去掉这个错误了
+      (highlight-tail-mode) 
 
       )
 
     )
   )  
+
+
+(defun vinurs-defaults/init-template () 
+  (use-package template
+    :init
+    (progn
+      )
+    )
+  (progn
+    (setq template-default-directories 
+	  '("~/.spacemacs.d/layers/vinurs-defaults/local/template/templates"
+		 ))
+    (template-initialize)
+    )
+  )
+
 
 
 (defun vinurs-defaults/init-parent-mode () 
@@ -151,7 +176,6 @@ Each entry is either:
       (setq show-paren-delay 0) 
       ;; highlight brackets
       ;; (setq show-paren-style 'parenthesis) 
-
 
       ;; highlight brackets if visible, else entire expression
       ;; 这种情况下只高亮括号，不高亮括号里面的内容
