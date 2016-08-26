@@ -33,11 +33,6 @@
   '(
 	 
 	 
-	 ;; 新建文件的时候自动根据后缀补全一些文件的基本信息
-	 (template :location local)
-
-	 
-	 ;;    (general :location local)
 
 	 ) 
   "The list of Lisp packages required by the vinurs-basic layer.
@@ -76,47 +71,6 @@ Each entry is either:
 
 
 
-
-
-
-(defun vinurs-basic/init-template () 
-  (use-package template
-    :init
-    (progn
-      )
-    )
-  (progn
-    (setq template-default-directories 
-	  '("~/.spacemacs.d/layers/vinurs-basic/local/template/templates"
-		 ))
-    (template-initialize)
-    )
-  )
-
-;; (spacemacs|use-package-add-hook graphviz-dot-mode
-;;   :pre-init
-;;   ;; Code
-;;   :post-init
-;;   (progn
-;;     (require 'graphviz-dot-mode-settings)
-;;     )
-;;   ;; Code
-;;   :pre-config
-;;   ;; Code
-;;   :post-config
-;;   ;; Code
-;;   )
-
-;; (defun vinurs-basic/init-graphviz-dot-mode ()
-;;   (use-package graphviz-dot-mode
-;;     :mode "\\.dot$"
-;;     :defer t
-;;     :init
-;;     (progn
-;;       ;; (require 'graphviz-dot-mode-settings)
-;;       )
-;;     )
-;;   ) 
 
 
 ;;; packages.el ends here

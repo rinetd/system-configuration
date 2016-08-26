@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@vinurs-mac.local
 ;; Version: $Id: @(#)user-config.el,v 0.0 2016/05/17 07:28:04 vinurs Exp $
-;; Changed: <vinurs 07/30/2016 14:00:15>
+;; Changed: <vinurs 08/26/2016 17:31:09>
 ;; Keywords:
 ;; X-URL: not distributed yet
 
@@ -87,8 +87,7 @@
 ;; 保存打开的文件以及文件中光标位置，重新打开emacs以后恢复
 (require 'vinurs-desktop-save) 
 
-;; 全局开启highlight-tail mode
-(highlight-tail-mode) 
+
 
 (message (format-time-string"%a %H:%M:%S" (current-time))) 
 ;;
