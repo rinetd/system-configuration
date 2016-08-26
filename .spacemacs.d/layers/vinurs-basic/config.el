@@ -89,28 +89,6 @@
 (electric-pair-mode)
 
 
-;;show the time
-(display-time-mode 1)
-(setq display-time-24hr-format t)
-(setq display-time-day-and-date t)
-(setq display-time-interval 10)
-(setq display-time-format "%Y-%m-%d %A %H:%M")
-
-;;时间 戳设置，设定文档上次保存到信息
-;;只要在文档里有里Time-stamp:的设置，就会自动保存时间戳
-;;启用time-stamp
-(setq time-stamp-active t)
-;;去掉time-stamp的警告
-(setq time-stamp-warn-inactive t)
-;;设置time-stamp的格式
-(setq time-stamp-format "%:u %02m/%02d/%04y %02H:%02M:%02S")
-;;修改时间戳提示字符
-(setq time-stamp-start "Changed:[  \t]+\\\\?[\"<]+")
-(setq time-stamp-end: "\n")
-;;前15行的时间戳提示符有效
-(setq time-stamp-line-limit 15)
-;;将修改时间戳的动作添加到保存文件动作里
-(add-hook 'write-file-hooks 'time-stamp)
 
 ;; 高亮括号配对
 (show-paren-mode t)
