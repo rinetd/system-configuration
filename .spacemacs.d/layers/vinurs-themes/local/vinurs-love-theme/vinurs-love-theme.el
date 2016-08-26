@@ -324,6 +324,12 @@ Semantic, and Ansi-Color faces are included.")
 	;;    `(semantic-unmatched-syntax-face
 	;; 	 ((,class (:underline  ,red-1))))
 
+	;; avy goto line
+
+	;; `(avy-lead-face ((t (:background "#293239" :foreground "dark blue"))))
+	;; `(avy-lead-face-0 ((t (:background "#293239" :foreground "dark magenta"))))
+	;; `(avy-lead-face-1 ((t (:background "#293239" :foreground "dark magenta"))))
+	;; `(avy-lead-face-2 ((t (:background "#293239" :foreground "dark magenta"))))
 
 	;; magit
 	`(magit-branch-current ((t (:inherit bold
