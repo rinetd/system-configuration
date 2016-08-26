@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@vinurs-mac.local
 ;; Version: $Id: @(#)dotspacemacs-layers.el,v 0.0 2016/05/25 15:13:53 vinurs Exp $
-;; Changed: <vinurs 08/19/2016 07:22:16>
+;; Changed: <vinurs 08/26/2016 16:54:44>
 ;; Keywords:
 ;; X-URL: not distributed yet
 
@@ -67,9 +67,10 @@
 	 ;; <M-m f e R> (Emacs style) to install them.
 	 ;; ----------------------------------------------------------------
 	 better-defaults
-	 ;; 我自己的默认配置，增强使用方便性
 
+	 ;; 我自己的默认配置，增强使用方便性
 	 vinurs-defaults
+
 	 ;; 我自己的一些基础配置，用起来更加舒服一点
 	 vinurs-basic
 	 ;; 用来写文档
