@@ -278,6 +278,7 @@ Semantic, and Ansi-Color faces are included.")
 	`(helm-buffer-process ((t (:background "gray100" :foreground "dark blue"))))
 	`(helm-buffer-size ((t (:background "gray100" :foreground "red3"))))
 
+	`(helm-ff-file ((t (:background "light green" :foreground "#b2b2b2" :weight normal))))
 	;;    ;;`(helm-selection                 ((,class (:background ,alum-1))))
 	;;    `(helm-action                    ((,class (:background ,"red"))))
 	;;    ;;   `(helm-candidate-number          ((,class (:background ,alum-5
