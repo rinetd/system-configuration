@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)config.el,v 0.0 2016/08/26 16:55:31 vinurs Exp $
-;; Changed: <vinurs 08/26/2016 16:55:42>
+;; Changed: <vinurs 08/28/2016 10:02:08>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -47,6 +47,10 @@
 ;; org-mode, 自动换行
 (add-hook 'org-mode-hook
   (lambda () (setq truncate-lines nil))) 
+
+
+
+
 
 
 
