@@ -1,10 +1,10 @@
-;;; config.el --- 
+;;; funcs.el --- 
 
 ;; Copyright 2016 haiyuan.zhang
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
-;; Version: $Id: @(#)config.el,v 0.0 2016/08/26 16:55:31 vinurs Exp $
-;; Changed: <vinurs 08/31/2016 09:47:03>
+;; Version: $Id: @(#)funcs.el,v 0.0 2016/08/31 09:48:58 vinurs Exp $
+;; Changed: <vinurs 08/31/2016 09:48:59>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -27,7 +27,7 @@
 ;; 
 
 ;; Put this file into your load-path and the following into your ~/.emacs:
-;;   (require 'config)
+;;   (require 'funcs)
 
 
 
@@ -44,18 +44,9 @@
 ;;;;##########################################################################
 
 
-;; org-mode, 自动换行
-(add-hook 'org-mode-hook
-  (lambda () (setq truncate-lines nil))) 
-
-;; org文件里面的代码块高亮
-(setq org-src-fontify-natively t) 
 
 
 
+(provide 'funcs)
 
-
-
-(provide 'config)
-
-;;; config.el ends here
+;;; funcs.el ends here
