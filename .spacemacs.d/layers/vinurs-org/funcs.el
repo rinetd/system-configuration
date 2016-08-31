@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)funcs.el,v 0.0 2016/08/31 09:50:13 vinurs Exp $
-;; Changed: <vinurs 08/31/2016 09:57:29>
+;; Changed: <vinurs 08/31/2016 10:15:29>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -63,15 +63,15 @@
     (previous-line 2)
     (org-edit-src-code))) 
 
-
 (add-hook 'org-mode-hook '(lambda ()
                             ;; keybinding for editing source code blocks
-                            (local-set-key (kbd "C-c s e")
-							  'org-edit-src-code)
-                            ;; keybinding for inserting code blocks
-                            (local-set-key (kbd "C-c s i")
-							  'org-insert-src-block)
-                            )) 
+							(spacemacs/set-leader-keys-for-major-mode 'org-mode
+							  "i e" 'org-edit-src-code) 
+							;; keybinding for inserting code blocks
+							(spacemacs/set-leader-keys-for-major-mode 'org-mode
+							  "i s" 'org-insert-src-block) 
+
+							)) 
 
 (provide 'funcs)
 
