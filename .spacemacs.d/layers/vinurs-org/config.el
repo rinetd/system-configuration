@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)config.el,v 0.0 2016/08/26 16:55:31 vinurs Exp $
-;; Changed: <vinurs 08/31/2016 17:39:49>
+;; Changed: <vinurs 08/31/2016 18:08:17>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -53,6 +53,24 @@
 
 ;; 对于org文档里面的不可见部分也能显示
 (setq org-catch-invisible-edits 'show) 
+
+;; 在org-mode里面移动相关
+(add-hook 'org-mode-hook
+  '(lambda ()
+	 (spacemacs/set-leader-keys-for-major-mode 'org-mode
+	   "g n" 'outline-next-visible-heading) 
+	 (spacemacs/set-leader-keys-for-major-mode 'org-mode
+	   "g p" 'outline-previous-visible-heading) 
+	 (spacemacs/set-leader-keys-for-major-mode 'org-mode
+	   "g f" 'org-forward-heading-same-level) 
+	 (spacemacs/set-leader-keys-for-major-mode 'org-mode
+	   "g b" 'org-backward-heading-same-level) 
+	 (spacemacs/set-leader-keys-for-major-mode 'org-mode
+	   "g u" 'outline-up-heading) 
+	 (spacemacs/set-leader-keys-for-major-mode 'org-mode
+	   "g j" 'org-goto) 
+	 
+	 )) 
 
 
 
