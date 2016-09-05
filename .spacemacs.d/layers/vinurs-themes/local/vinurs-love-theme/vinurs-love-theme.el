@@ -237,7 +237,10 @@ Semantic, and Ansi-Color faces are included.")
 	;;    ;; Flyspell
 	;;    `(flyspell-duplicate             ((,class (:underline ,orange-1))))
 	;;    `(flyspell-incorrect             ((,class (:underline ,red-1 :background ,red-0))))
-	;;    ;; Org mode
+
+
+	;; Org mode
+
 	;;    `(org-level-1                    ((,class (:foreground ,blue-3 :weight bold))))
 	;;    `(org-level-2                    ((,class (:foreground ,blue-3))))
 	;;    `(org-level-3                    ((,class (:foreground ,blue-3))))
@@ -257,6 +260,8 @@ Semantic, and Ansi-Color faces are included.")
 	;;    `(mu4e-unread-face               ((,class (:foreground ,blue-3 :weight bold))))
 	;;    `(mu4e-replied-face              ((,class (:foreground ,alum-4))))
 	;;    `(mu4e-header-highlight-face     ((,class (:background ,alum-1))))
+
+
 	`(window-numbering-face ((t (:background ,"red" :weight bold))) t)
 
 	;; Helm
