@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)dotspacemacs-keybinds.el,v 0.0 2016/07/23 08:25:41 vinurs Exp $
-;; Changed: <vinurs 08/22/2016 18:53:01>
+;; Changed: <vinurs 09/12/2016 17:23:16>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -72,11 +72,16 @@
 (when (spacemacs/system-is-mac)
   ;; key bindings
   ;; for emacs
-  (setq mac-right-option-modifier 'control)
-  (setq mac-left-option-modifier 'alt)
+  (setq mac-right-option-modifier 'control) 
 
-  ;;(setq mac-command-modifier 'control)
-  (setq mac-command-modifier 'meta)
+  (setq mac-command-modifier 'meta) 
+  (setq mac-right-command-modifier 'super) 
+
+  ;; 增大/缩小/恢复字体大小
+  (global-set-key (kbd "S-=") 'spacemacs/scale-up-font) 
+  (global-set-key (kbd "S--") 'spacemacs/scale-down-font) 
+  (global-set-key (kbd "S-0") 'spacemacs/reset-font-size) 
+
   (global-set-key [kp-delete] 'delete-char) ;; sets fn-delete to be right-delete
 
   ) 
