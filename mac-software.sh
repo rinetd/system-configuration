@@ -51,6 +51,8 @@ brew install wget
 brew install sdcv
 brew install cmake
 
+# pandoc
+brew install pandoc
 
 # for common lisp
 # 这里不安装sbcl，因为我使用Clozure CL
