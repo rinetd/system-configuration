@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@vinurs-mac.local
 ;; Version: $Id: @(#)dotspacemacs-layers.el,v 0.0 2016/05/25 15:13:53 vinurs Exp $
-;; Changed: <vinurs 08/26/2016 16:54:44>
+;; Changed: <vinurs 09/12/2016 20:40:08>
 ;; Keywords:
 ;; X-URL: not distributed yet
 
@@ -97,7 +97,8 @@
 
 	 ;; 这个关于git的layer还是不错的
 	 git
-
+	 ;; for doc convert
+	 pandoc
 	 c-c++
 	 gtags
 	 ;; ycmd

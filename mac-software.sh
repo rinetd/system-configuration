@@ -53,6 +53,7 @@ brew install cmake
 
 # pandoc
 brew install pandoc
+brew cask install mactex
 
 # for common lisp
 # 这里不安装sbcl，因为我使用Clozure CL
