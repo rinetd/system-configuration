@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)keybindings.el,v 0.0 2016/08/26 16:59:26 vinurs Exp $
-;; Changed: <vinurs 08/26/2016 16:59:56>
+;; Changed: <vinurs 09/14/2016 17:11:38>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -69,7 +69,8 @@
 (spacemacs/set-leader-keys "hR" 'hlt-unhighlight-region) 
 ;; 设置highlight字体以及颜色
 
-
+;; M-x命令
+(spacemacs/set-leader-keys "ox" 'helm-M-x) 
 
 
 (provide 'keybindings)
