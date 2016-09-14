@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@vinurs-mac.local
 ;; Version: $Id: @(#)dotspacemacs-layers.el,v 0.0 2016/05/25 15:13:53 vinurs Exp $
-;; Changed: <vinurs 09/12/2016 20:40:08>
+;; Changed: <vinurs 09/14/2016 11:25:05>
 ;; Keywords:
 ;; X-URL: not distributed yet
 
@@ -81,7 +81,7 @@
 	 
 	 ;; spacemacs自带的org layer，效果非常好
 	 org
-	 ;; 对org的一些配置
+	 ;; 对org的一些额外的配置
 	 vinurs-org
 
 	 ;;  ;; (shell :variables

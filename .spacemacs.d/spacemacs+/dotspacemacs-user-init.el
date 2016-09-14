@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@vinurs-mac.local
 ;; Version: $Id: @(#)dotspacemacs-layers.el,v 0.0 2016/05/25 15:13:53 vinurs Exp $
-;; Changed: <vinurs 09/13/2016 08:31:12>
+;; Changed: <vinurs 09/14/2016 11:26:50>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -56,10 +56,8 @@
 ;; 配置path环境变量
 (setenv "PATH" (concat "/usr/local/bin/:" (getenv "PATH"))) 
 (setq exec-path (append exec-path '("/usr/local/bin/")))
-(setq org-pandoc-options-for-latex-pdf '((latex-engine . "xelatex"))) 
-;; (setq org-export-latex-inputenc-alist '(("utf8" "utf8x"))) 
-;; (require 'ox-latex) 
-;; (setq org-latex-default-packages-alist (cons '("mathletters" "ucs" nil) org-latex-default-packages-alist)) 
+
+
 
 
 (provide 'dotspacemacs-user-init)
