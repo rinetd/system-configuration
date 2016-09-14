@@ -1,4 +1,4 @@
--*- mode: org; -*-
+# -*- mode: org; -*-
 #+TITLE: (>>>POINT<<<)
 #+AUTHOR: (>>>USER_NAME<<<)
 #+EMAIL: <(>>>AUTHOR<<<)>
