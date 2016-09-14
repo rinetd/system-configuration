@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)config.el,v 0.0 2016/08/26 16:55:31 vinurs Exp $
-;; Changed: <vinurs 08/31/2016 18:08:17>
+;; Changed: <vinurs 09/14/2016 17:02:39>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -71,6 +71,13 @@
 	   "g j" 'org-goto) 
 	 
 	 )) 
+
+
+;; 设置pandoc把org导成pdf的时候的参数
+(setq org-pandoc-options-for-latex-pdf '((latex-engine . "xelatex")
+										  ;; 字体配置
+										  (variable . "mainfont=Songti SC")
+										  ))
 
 
 

@@ -4,7 +4,7 @@
 #+EMAIL: <(>>>AUTHOR<<<)>
 #+DATE: <(>>>VC_DATE<<<)>
 #+STARTUP: content
-#+LANGUAGE:  zh 
+#+LANGUAGE:  zh-CN
 #+TAGS: 
 #+EXCLUDE_TAGS: 
 #+CATEGORIES: 
