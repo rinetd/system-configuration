@@ -1,7 +1,21 @@
 # count all code lines in this directory and its subdirectory
 function cnt-code()
 {
-    find ./ -name "*.c" -o -name "*.h" | xargs wc -l
+	# c/h files
+	line=`find ./ -name "*.c" -o -name "*.h" | xargs wc -l | grep "total" | awk '{print $2}'`
+	if [ $line"x" != "x" ]; then
+		echo "c files:$line "
+	fi
+
+
+	# lisp files
+	line=`find ./ -name "*.el" | xargs wc -l | grep "total" | awk '{print $2}'`
+	if [ $line"x" != "x" ]; then
+		echo "elisp files:$line "
+	fi
+
+
+
 }
 
 
