@@ -95,7 +95,8 @@ files_common+=(.proximac)
 files_common+=(.icons)
 # log用来存放一些应用的log目录，这样方便删除
 files_common+=(.log)
-
+# mountpoint
+files_common+=(mountpoint)
 
 # files
 for i in "${files_common[@]}"; do
