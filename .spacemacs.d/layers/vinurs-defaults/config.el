@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)config.el,v 0.0 2016/08/16 19:00:47 vinurs Exp $
-;; Changed: <vinurs 08/26/2016 17:43:51>
+;; Changed: <vinurs 09/27/2016 22:06:54>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -59,11 +59,14 @@
 
 ;; 设置hlt-highlight-symbol的颜色
 (setq hlt-auto-face-backgrounds
-  '("red" "green" "yellow" "blue" "magenta" "cyan"  "DeepPink"
-	 "MediumPurple1" "SpringGreen1" "DarkOrange" "HotPink1" isearch
-	 isearch-fail lazy-highlight mode-line mode-line-inactive next-error
-	 nobreak-space secondary-selection tooltip trailing-whitespace
-	 header-line mode-line-highlight "dark cyan" )
+  '(
+	 "red" "green"
+	 "yellow"  "magenta" "cyan"  "DeepPink"
+	 "MediumPurple1" "SpringGreen1" "DarkOrange" "HotPink1" 
+	 ;; isearch-fail lazy-highlight mode-line mode-line-inactive next-error
+	 ;; nobreak-space secondary-selection tooltip trailing-whitespace
+	 ;; header-line mode-line-highlight "dark cyan"
+	 )
   ) 
 
 ;; 一行太长的时候自动换行
