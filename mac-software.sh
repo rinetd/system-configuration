@@ -311,5 +311,7 @@ brew cask install macid
 # 挺好的翻墙软件
 brew cask install lantern
 
+# 用来连接windows远程桌面
+brew install rdesktop
 
 
