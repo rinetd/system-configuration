@@ -2,3 +2,4 @@
 desktop/
 .emacs-desktop
 custom.el
+el-get

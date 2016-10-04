@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)vinurs-elget.el,v 0.0 2016/07/28 20:41:24 vinurs Exp $
-;; Changed: <vinurs 08/18/2016 11:38:25>
+;; Changed: <vinurs 10/04/2016 21:43:01>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -45,9 +45,9 @@
 
 
 ;; 设置el-get的init-packages路径
-(add-to-list 'load-path "~/.emacs.d/el-get/el-get")
+;; (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
+(add-to-list 'load-path "~/.spacemacs.d/el-get/el-get")
 (setq el-get-user-package-directory "~/.spacemacs.d/el-get-init-packages")
-
 
 ;; 每次启动el-get的时候检测el-get是否已经安装，如果没有安装就自动安装
 (unless (require 'el-get nil 'noerror)
@@ -56,8 +56,13 @@
 	'("melpa" . "http://melpa.org/packages/")) 
   (package-refresh-contents) 
   (package-initialize) 
+  ;; 将el-get安装在.spacemacs.d目录下
+  (setq user-emacs-directory "~/.spacemacs.d/") 
   (package-install 'el-get) 
-  (require 'el-get)) 
+  ;; 恢复user-emacs-directory
+  (require 'el-get)
+  (setq user-emacs-directory "~/.emacs.d/") 
+  )
  
 (add-to-list 'el-get-recipe-path "~/.spacemacs.d/el-get-user/")
 
@@ -74,15 +79,28 @@
 		 ;; vimish-fold
 		 ;; dash
 		 ;; s
-
         )
-	  
       )
 
 
-(el-get 'sync)
 
-(el-get 'sync my-el-get-packages)
+
+(progn
+  (setq user-emacs-directory "~/.spacemacs.d/") 
+  (setq el-get-dir "~/.spacemacs.d/el-get")
+  (setq el-get-recipe-path-elpa
+	"~/.spacemacs.d/el-get/el-get/recipes/elpa/")
+  (setq el-get-recipe-path-emacswiki
+	 "~/.spacemacs.d/el-get/el-get/recipes/emacswiki/")
+  (setq el-get-status-file
+	"~/.spacemacs.d/el-get/.status.el")
+  (setq el-get-user-package-directory
+	"~/.spacemacs.d/el-get-init-packages")
+
+  (el-get 'sync)
+  (el-get 'sync my-el-get-packages)
+  (setq user-emacs-directory "~/.emacs.d/") 
+  ) 
 
 (provide 'vinurs-elget)
 
