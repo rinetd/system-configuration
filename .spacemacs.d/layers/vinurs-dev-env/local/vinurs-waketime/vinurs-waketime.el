@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)vinurs-waketime.el,v 0.0 2016/08/03 09:03:28 vinurs Exp $
-;; Changed: <vinurs 08/16/2016 20:23:04>
+;; Changed: <vinurs 10/05/2016 09:28:11>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -45,6 +45,7 @@
 
 
 (require 'waketime-priv) 
+(require 'wakatime-mode) 
 
 ;; check OS type
 (cond
@@ -53,7 +54,8 @@
 	  (message "Microsoft Windows")))
   ((string-equal system-type "darwin") ; Mac OS X
 	(progn
-	  (setq wakatime-cli-path "/usr/local/bin/wakatime")
+	  (setq wakatime-python-bin "/usr/local/bin/python2") 
+	  (setq wakatime-cli-path "/usr/local/bin/wakatime") 
 	  ))
   ((string-equal system-type "gnu/linux") ; linux
 	(progn
@@ -61,9 +63,12 @@
 
 
 ;; setq wakatime mode
-(if (file-exists-p wakatime-cli-path)
-  (global-wakatime-mode) 
-  )
+;; (if (file-exists-p wakatime-cli-path)
+;; (global-wakatime-mode) 
+;; ) 
+
+
+
 
 
 (provide 'vinurs-waketime)
