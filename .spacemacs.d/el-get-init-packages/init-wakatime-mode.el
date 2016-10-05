@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)init-wakatime-mode.el,v 0.0 2016/10/04 21:35:46 vinurs Exp $
-;; Changed: <vinurs 10/04/2016 21:35:47>
+;; Changed: <vinurs 10/05/2016 09:15:37>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -43,8 +43,10 @@
 ;;;;  User Options, Variables
 ;;;;##########################################################################
 
+(require 'wakatime-mode) 
 
 
+ 
 
 
 (provide 'init-wakatime-mode)
