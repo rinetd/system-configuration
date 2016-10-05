@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@vinurs-mac.local
 ;; Version: $Id: @(#)user-config.el,v 0.0 2016/05/17 07:28:04 vinurs Exp $
-;; Changed: <vinurs 08/26/2016 17:31:09>
+;; Changed: <vinurs 10/05/2016 10:21:09>
 ;; Keywords:
 ;; X-URL: not distributed yet
 
@@ -86,6 +86,15 @@
 
 ;; 保存打开的文件以及文件中光标位置，重新打开emacs以后恢复
 (require 'vinurs-desktop-save) 
+
+;; Prefixes
+;; 除了spacemac自定义的前缀键，我自己另外定义了oa表示我自己的应用程序
+(setq vinurs-spacemacs/key-binding-prefixes '(
+											   ("o"   "user-defineds")
+											   ("oa"  "applications")
+											   )) 
+(mapc (lambda (x) (apply #'spacemacs/declare-prefix x))
+  vinurs-spacemacs/key-binding-prefixes) 
 
 
 

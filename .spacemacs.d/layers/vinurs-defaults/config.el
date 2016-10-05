@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)config.el,v 0.0 2016/08/16 19:00:47 vinurs Exp $
-;; Changed: <vinurs 09/27/2016 22:06:54>
+;; Changed: <vinurs 10/05/2016 10:23:17>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -47,21 +47,12 @@
 ;; add to load-path first
 (push "~/.spacemacs.d/layers/vinurs-defaults/" load-path)
 
-;; Prefixes
-;; 除了spacemac自定义的前缀键，我自己另外定义了oa表示我自己的应用程序
-(setq spacemacs/key-binding-prefixes '(("o"   "user-defineds")
-										("oa"  "applications")
-										))
-(mapc (lambda (x) (apply #'spacemacs/declare-prefix x))
-  spacemacs/key-binding-prefixes)
-
 
 
 ;; 设置hlt-highlight-symbol的颜色
 (setq hlt-auto-face-backgrounds
   '(
-	 "red" "green"
-	 "yellow"  "magenta" "cyan"  "DeepPink"
+	 "red" "green" "yellow"  "magenta" "cyan"  "DeepPink"
 	 "MediumPurple1" "SpringGreen1" "DarkOrange" "HotPink1" 
 	 ;; isearch-fail lazy-highlight mode-line mode-line-inactive next-error
 	 ;; nobreak-space secondary-selection tooltip trailing-whitespace
