@@ -97,6 +97,8 @@ files_common+=(.icons)
 files_common+=(.log)
 # mountpoint
 files_common+=(mountpoint)
+# wakatime统计每天的编程时间的
+files_common+=(.wakatime.cfg)
 
 # files
 for i in "${files_common[@]}"; do
