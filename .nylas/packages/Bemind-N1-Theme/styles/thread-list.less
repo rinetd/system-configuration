@@ -1,0 +1,25 @@
+
+.thread-list.handler-split .list-item.selected {
+  color: @list-focused-color !important;
+}
+
+
+.thread-list.handler-split .list-item.selected .subject {
+  color: @black;
+}
+
+
+.thread-list .focused .thread-icon,
+.draft-list .focused .thread-icon,
+.thread-list .focused .draft-icon,
+.draft-list .focused .draft-icon {
+  -webkit-filter: brightness(600%) grayscale(100%) invert(80%);
+}
+
+
+.thread-list .focused .mail-important-icon,
+.draft-list .focused .mail-important-icon {
+  -webkit-filter: brightness(600%) grayscale(100%) invert(80%);
+  opacity: 0.5;
+}
+
