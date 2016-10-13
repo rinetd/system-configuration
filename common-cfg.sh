@@ -99,6 +99,8 @@ files_common+=(.log)
 files_common+=(mountpoint)
 # wakatime统计每天的编程时间的
 files_common+=(.wakatime.cfg)
+# N1邮件客户端
+files_common+=(.nylas)
 
 # files
 for i in "${files_common[@]}"; do
