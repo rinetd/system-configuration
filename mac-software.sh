@@ -175,6 +175,8 @@ brew install texinfo
 # gpg
 brew install gpg
 brew install gpg2
+# 通过这个发邮件可以使用gpg
+brew cask install gpgtools
 
 # astyle
 brew install astyle
