@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@vinurs-mac.local
 ;; Version: $Id: @(#)dotspacemacs-layers.el,v 0.0 2016/05/25 15:13:53 vinurs Exp $
-;; Changed: <vinurs 09/19/2016 23:25:34>
+;; Changed: <vinurs 10/18/2016 22:30:25>
 ;; Keywords:
 ;; X-URL: not distributed yet
 
@@ -104,6 +104,7 @@
 	 ;; syntax-checking
 	 ;; 自动补全的layer
 	 (auto-completion
+	   :enabled-for c c++ jave elisp
 	   :variables
 	   ;; return键表示确认当前的选择
 	   auto-completion-return-key-behavior 'complete

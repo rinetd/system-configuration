@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)keybindings.el,v 0.0 2016/08/31 09:47:44 vinurs Exp $
-;; Changed: <vinurs 08/31/2016 09:47:45>
+;; Changed: <vinurs 10/18/2016 20:39:58>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -44,7 +44,8 @@
 ;;;;##########################################################################
 
 
-
+;; 导成pdf，后面这个需要集中修改一下org的快捷键
+(spacemacs/set-leader-keys "aod" 'org-pandoc-export-to-latex-pdf) 
 
 
 (provide 'keybindings)

@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)funcs.el,v 0.0 2016/08/31 09:50:13 vinurs Exp $
-;; Changed: <vinurs 10/18/2016 09:18:59>
+;; Changed: <vinurs 10/18/2016 22:02:00>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -72,14 +72,6 @@
 							  "i s" 'org-insert-src-block) 
 
 							)) 
-
-;; 单独设置orgtable的字体，为了中英文表格能够对齐
-;; (custom-set-faces
-;;   ;; custom-set-faces was added by Custom.
-;;   ;; If you edit it by hand, you could mess it up, so be careful.
-;;   ;; Your init file should contain only one such instance.
-;;   ;; If there is more than one, they won't work right.
-;;   '(org-table ((t (:foreground "#6c71c4" :family "Ubuntu Mono")))))
 
 ;; (defvar emacs-english-font "Monaco"
 ;;   "The font name of English.") 

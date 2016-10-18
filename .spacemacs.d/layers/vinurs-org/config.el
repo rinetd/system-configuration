@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)config.el,v 0.0 2016/08/26 16:55:31 vinurs Exp $
-;; Changed: <vinurs 09/14/2016 17:02:39>
+;; Changed: <vinurs 10/18/2016 22:23:39>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -78,6 +78,15 @@
 										  ;; 字体配置
 										  (variable . "mainfont=Songti SC")
 										  ))
+
+
+;; 单独设置orgtable的字体，为了中英文表格能够对齐
+;; (custom-set-faces
+;;   ;; custom-set-faces was added by Custom.
+;;   ;; If you edit it by hand, you could mess it up, so be careful.
+;;   ;; Your init file should contain only one such instance.
+;;   ;; If there is more than one, they won't work right.
+;;   '(org-table ((t (:foreground "#6c71c4" :family "Ubuntu Mono")))))
 
 
 
