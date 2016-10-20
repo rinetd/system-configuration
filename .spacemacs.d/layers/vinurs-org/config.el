@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)config.el,v 0.0 2016/08/26 16:55:31 vinurs Exp $
-;; Changed: <vinurs 10/18/2016 22:23:39>
+;; Changed: <vinurs 10/19/2016 23:45:13>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -43,10 +43,12 @@
 ;;;;  User Options, Variables
 ;;;;##########################################################################
 
+(push "~/.spacemacs.d/layers/vinurs-org" load-path) 
 
 ;; org-mode, 自动换行
 (add-hook 'org-mode-hook
   (lambda () (setq truncate-lines nil))) 
+
 
 ;; org文件里面的代码块高亮
 (setq org-src-fontify-natively t) 
@@ -77,7 +79,7 @@
 (setq org-pandoc-options-for-latex-pdf '((latex-engine . "xelatex")
 										  ;; 字体配置
 										  (variable . "mainfont=Songti SC")
-										  ))
+										  )) 
 
 
 ;; 单独设置orgtable的字体，为了中英文表格能够对齐
@@ -88,7 +90,8 @@
 ;;   ;; If there is more than one, they won't work right.
 ;;   '(org-table ((t (:foreground "#6c71c4" :family "Ubuntu Mono")))))
 
-
+;; orgmode todo
+(require 'org-todo) 
 
 
 (provide 'config)
