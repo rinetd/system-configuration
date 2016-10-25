@@ -49,6 +49,7 @@
 	 (template :location local)
 
 	 ;; 日历相关配置
+	 ;; 农历
 	 (cal-china-x)
 	 (calfw)
 
@@ -204,7 +205,7 @@ Each entry is either:
   ) 
 
 
-;; 比较好的emacs日历
+;; 比较好的emacs中国日历
 (defun vinurs-defaults/init-cal-china-x()
   (use-package cal-china-x
     ;; 启动emacs的时候就加载该插件
