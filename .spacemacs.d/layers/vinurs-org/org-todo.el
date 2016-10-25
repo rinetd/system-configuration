@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)org-todo.el,v 0.0 2016/10/19 22:50:11 vinurs Exp $
-;; Changed: <vinurs 10/20/2016 06:25:53>
+;; Changed: <vinurs 10/20/2016 20:59:23>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -48,7 +48,7 @@
 ;; keywords定义,括号里面为缩写,@表示状态改变的时候记一个笔记，！表示状态改变的时候加个时间戳
 (setq org-todo-keywords
   '(
-	 (sequence "TODO(t)" "|" "DONE(d@/!)")
+	 (sequence "TODO(t!)" "|" "DONE(d@/!)")
 	 (sequence "REPORT(r@/!)" "BUG(b@/!)" "KNOWNCAUSE(k@/!)" "|" "FIXED(f@/!)")
 	 (sequence "|" "CANCELED(c@/!)")
 	 )) 
@@ -105,6 +105,7 @@
   (list
 	"~/Dropbox/home/.org-agenda/inbox.org" ;; 要做的事情
 	"~/Dropbox/home/.org-agenda/trash.org" ;; 被删除的事情
+	"~/Dropbox/home/.org-agenda/shopping.org" ;; 需要买的东西
 	"~/Dropbox/home/.org-agenda/finished.org" ;; 已完成的事情
 	)) 
 

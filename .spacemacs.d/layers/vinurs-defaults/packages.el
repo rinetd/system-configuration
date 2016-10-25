@@ -34,6 +34,8 @@
 	 ;; 先装个el-get，很多软件都在el-get里面
 	 (vinurs-elget :location local)
 
+	 (chinese-fonts-setup)
+
 	 ;; 记录每个键的按键次数
 	 (keyfreq)
 
@@ -46,6 +48,9 @@
 	 ;; 新建文件的时候自动根据后缀补全一些文件的基本信息
 	 (template :location local)
 
+	 ;; 日历相关配置
+	 (cal-china-x)
+	 (calfw)
 
 	 ;; google翻译 
 	 ;; 可惜Google在中国不能用, fuck GFW
@@ -101,6 +106,18 @@ Each entry is either:
       )
     )
   )
+
+(defun vinurs-defaults/init-chinese-fonts-setup ()
+  (use-package chinese-fonts-setup
+    ;; 启动emacs的时候就加载该插件
+    :demand t
+    :config
+    (progn
+	   (require 'vinurs-chinese-fonts-setup) 
+      )
+    )
+  )
+
 
 
 (defun vinurs-defaults/init-google-translate()
@@ -185,5 +202,34 @@ Each entry is either:
       )
     )
   ) 
+
+
+;; 比较好的emacs日历
+(defun vinurs-defaults/init-cal-china-x()
+  (use-package cal-china-x
+    ;; 启动emacs的时候就加载该插件
+    :demand t
+
+    :config
+    (progn
+      )
+    )
+  )
+
+
+;; 比较好的emacs日历
+(defun vinurs-defaults/init-calfw()
+  (use-package calfw
+    ;; 启动emacs的时候就加载该插件
+    :demand t
+
+    :config
+    (progn
+	  (require 'vinurs-calendar)
+      )
+    )
+  )
+
+
 
 ;;; packages.el ends here

@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@vinurs-mac.local
 ;; Version: $Id: @(#)dotspacemacs-layers.el,v 0.0 2016/05/25 15:13:53 vinurs Exp $
-;; Changed: <vinurs 10/18/2016 22:35:53>
+;; Changed: <vinurs 10/21/2016 07:23:22>
 ;; Keywords:
 ;; X-URL: not distributed yet
 
@@ -67,6 +67,13 @@
 	 ;; <M-m f e R> (Emacs style) to install them.
 	 ;; ----------------------------------------------------------------
 	 better-defaults
+	 ;; (chinese
+	 ;;   :variables
+	 ;;   chinese-default-input-method nil
+	 ;;   chinese-enable-avy-pinyin nil
+	 ;;   chinese-enable-youdao-dict nil
+	 ;;   chinese-enable-fcitx nil
+	 ;;   )
 
 	 ;; 我自己的默认配置，增强使用方便性
 	 vinurs-defaults
