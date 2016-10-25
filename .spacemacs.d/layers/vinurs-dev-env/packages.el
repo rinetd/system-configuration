@@ -42,10 +42,13 @@
 
 	 ;; doxymacs
 	 (vinurs-doxymacs :location local)
-	 
 
 	 ;; muttrc 
 	 muttrc-mode
+
+	 ;; autocomplete
+	 (vinurs-autocomplete :location local)
+
 	 )
   "The list of Lisp packages required by the vinurs-dev-env layer.
 
@@ -123,7 +126,16 @@ Each entry is either:
 	)
   )
 
-
+(defun vinurs-dev-env/init-vinurs-autocomplete ()
+  (use-package vinurs-autocomplete
+	:demand t
+	:config
+	(progn
+      ;; (spacemacs|diminish wakatime-mode " ⓦ" " w")
+	  )
+	)
+)
+ 
 
 
 

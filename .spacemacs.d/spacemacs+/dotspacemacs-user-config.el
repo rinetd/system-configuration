@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@vinurs-mac.local
 ;; Version: $Id: @(#)user-config.el,v 0.0 2016/05/17 07:28:04 vinurs Exp $
-;; Changed: <vinurs 10/25/2016 20:03:53>
+;; Changed: <vinurs 10/25/2016 20:08:16>
 ;; Keywords:
 ;; X-URL: not distributed yet
 
@@ -82,9 +82,6 @@
 
 ;; 不显示结尾的空格
 (setq-default spacemacs-show-trailing-whitespace nil) 
-
-;; 全局打开自动补全
-(global-company-mode) 
 
 
 ;; 保存打开的文件以及文件中光标位置，重新打开emacs以后恢复
