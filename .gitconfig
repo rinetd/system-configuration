@@ -13,12 +13,17 @@
 	dt-cached = difftool --cached
 	dt-responsity = difftool HEAD
 	ls-remote-local-br = remote show origin 
+	# 删除远程分支
+	rm-remote-branch = "!f(){ git branch -r -d origin/\"$1\" ; git push origin :\"$1\" ;};f"
+
 	# log
 	la = log --abbrev-commit 
 	pl = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
 
 	unstage = reset HEAD --
 	visual = !open -a Tower
+	# 不跟踪一个文件
+	# untrack = rm --cache --
 [push]
 	default = simple
 # 颜色相关设置，不过我都是调用的外部命令，所以这个配置意义不是很大
