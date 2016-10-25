@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)vinurs-autocomplete.el,v 0.0 2016/10/25 20:07:06 vinurs Exp $
-;; Changed: <vinurs 10/25/2016 20:16:01>
+;; Changed: <vinurs 10/25/2016 20:18:14>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -48,6 +48,7 @@
 (global-company-mode) 
 
 
+;; 增加自动补全的快捷键设置
 
 (provide 'vinurs-autocomplete)
 
