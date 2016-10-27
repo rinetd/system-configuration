@@ -178,6 +178,9 @@ brew install gpg2
 # 通过这个发邮件可以使用gpg
 brew cask install gpgtools
 
+# stat-menus，系统监控软件
+brew cask install istat-menus
+
 # astyle
 brew install astyle
 # indent
