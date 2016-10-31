@@ -7,7 +7,7 @@
 # 
 #         Version:  1.0
 #         Created:  2012/08/05 10:24:48
-#         Changed:  <vinurs 07/17/2016 10:08:14>
+#         Changed:  <vinurs 10/31/2016 19:26:10>
 #        Revision:  none
 # 
 #          Author:  zhanghaiyuan
@@ -44,17 +44,17 @@ else
     # 默认打开叫sys-monitor的窗口，专门用来监控系统当前的性能的
     tmux -2 new-session -s $TMUX_SESSION -n sys-monitor \; detach-client
     # system configuration
-    tmux attach-session -t $TMUX_SESSION \; new-window -n sys-cfg\; send-keys 'cd ~/system-configuration' C-m \; split-window -h \; send-keys 'cd ~/system-configuration' C-m \; detach-client
-    # emacs
-    tmux attach-session -t $TMUX_SESSION \; new-window -n emacs \; split-window -h \; detach-client
-    # git
-    tmux attach-session -t $TMUX_SESSION \; new-window -n git \; split-window -h \; detach-client
-    # blog
-    tmux attach-session -t $TMUX_SESSION \; new-window -n blog \; split-window -h \; detach-client
-    # lisp
-    tmux attach-session -t $TMUX_SESSION \; new-window -n lisp \; split-window -h \; detach-client
-    # other
-    tmux attach-session -t $TMUX_SESSION \; new-window  \; detach-client
+    # tmux attach-session -t $TMUX_SESSION \; new-window -n sys-cfg\; send-keys 'cd ~/system-configuration' C-m \; split-window -h \; send-keys 'cd ~/system-configuration' C-m \; detach-client
+    # # emacs
+    # tmux attach-session -t $TMUX_SESSION \; new-window -n emacs \; split-window -h \; detach-client
+    # # git
+    # tmux attach-session -t $TMUX_SESSION \; new-window -n git \; split-window -h \; detach-client
+    # # blog
+    # tmux attach-session -t $TMUX_SESSION \; new-window -n blog \; split-window -h \; detach-client
+    # # lisp
+    # tmux attach-session -t $TMUX_SESSION \; new-window -n lisp \; split-window -h \; detach-client
+    # # other
+    # tmux attach-session -t $TMUX_SESSION \; new-window  \; detach-client
 	
 
     tmux attach-session -t $TMUX_SESSION \; new-window 
