@@ -181,6 +181,9 @@ brew cask install gpgtools
 # stat-menus，系统监控软件
 brew cask install istat-menus
 
+# sublime-text
+brew cask install sublime-text 
+
 # astyle
 brew install astyle
 # indent
