@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)keybindings.el,v 0.0 2016/08/26 16:59:26 vinurs Exp $
-;; Changed: <vinurs 11/02/2016 10:10:11>
+;; Changed: <vinurs 11/02/2016 10:12:55>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -73,7 +73,7 @@
 (spacemacs/set-leader-keys "ox" 'helm-M-x) 
 
 
-(spacemacs/set-leader-keys "bk" 'ido-kill-buffer) 
+;; (spacemacs/set-leader-keys "bk" 'ido-kill-buffer) 
 
 
 (provide 'keybindings)
