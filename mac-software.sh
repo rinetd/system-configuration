@@ -241,7 +241,7 @@ brew cask install launchrocket
 # mac下很不错的中端
 brew cask install iterm2
 
-# adium 很好的聊天客户端
+# adium 很好的IRC聊天客户端
 brew cask install adium
 
 # emacs

@@ -18,7 +18,9 @@
 
 # download project from github into github project
 github_dir=~/system-configuration/github/
-rm -rf ~/github
+github_backup_suffix=`(date '+%Y-%m%d-%H%M%S')`
+github_backup_dir="github-${github_backup_suffix}"
+mv ~/github   ~/github_backup_dir
 ln -s ~/system-configuration/github ~/
 cd $github_dir
 
@@ -41,6 +43,9 @@ git clone https://github.com/ziahamza/webui-aria2.git
 
 # libfuse
 git clone https://github.com/libfuse/libfuse.git
+
+# vinurs private gluster,里面有我对gluster的缺少的一些函数的补充
+git clone git@gitlab.com:vinurs/vinurs-gluster.git
 
 
 cd -
