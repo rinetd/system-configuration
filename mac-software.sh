@@ -244,6 +244,9 @@ brew cask install iterm2
 # adium 很好的IRC聊天客户端
 brew cask install adium
 
+# 电子书管理软件，很赞
+brew search Calibre
+
 # emacs
 # 删除系统自带的emacs
 sudo rm /usr/bin/emacs
