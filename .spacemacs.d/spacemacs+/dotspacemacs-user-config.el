@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@vinurs-mac.local
 ;; Version: $Id: @(#)user-config.el,v 0.0 2016/05/17 07:28:04 vinurs Exp $
-;; Changed: <vinurs 10/25/2016 20:08:16>
+;; Changed: <vinurs 11/17/2016 17:49:28>
 ;; Keywords:
 ;; X-URL: not distributed yet
 
@@ -96,6 +96,9 @@
 (mapc (lambda (x) (apply #'spacemacs/declare-prefix x))
   vinurs-spacemacs/key-binding-prefixes) 
 
+
+;; 全局开启自动缩进
+(aggressive-indent-global-mode t) 
 
 
 (message (format-time-string"%a %H:%M:%S" (current-time))) 
