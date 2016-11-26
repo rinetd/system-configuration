@@ -24,6 +24,13 @@ mv ~/github   ~/github_backup_dir
 ln -s ~/system-configuration/github ~/
 cd $github_dir
 
+# github-extra,网上搜集的一些有用的git的命令以及自己定义的一些git的额外的命令
+git clone https://github.com/vinurs/git-extras.git
+cd git-extras
+make
+cp -f git-extras-completion.zsh git-vinurs-extras-completion.zsh ~/.zsh/
+cd -
+
 # 系统配置文件的wiki
 git clone https://github.com/vinurs/system-configuration.wiki.git
 

@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@vinurs-mac.local
 ;; Version: $Id: @(#)user-config.el,v 0.0 2016/05/17 07:28:04 vinurs Exp $
-;; Changed: <vinurs 11/17/2016 17:49:28>
+;; Changed: <vinurs 11/17/2016 19:14:25>
 ;; Keywords:
 ;; X-URL: not distributed yet
 
@@ -98,7 +98,7 @@
 
 
 ;; 全局开启自动缩进
-(aggressive-indent-global-mode t) 
+;; (aggressive-indent-global-mode t) 
 
 
 (message (format-time-string"%a %H:%M:%S" (current-time))) 

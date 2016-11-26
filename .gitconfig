@@ -22,6 +22,10 @@
 
 	unstage = reset HEAD --
 	visual = !open -a Tower
+	show-remote-tags = ls-remote --tags
+	show-remote-branches = ls-remote --heads
+	show-local-tags = tag
+	show-local-branches = branch
 	# 不跟踪一个文件
 	# untrack = rm --cache --
 [push]
