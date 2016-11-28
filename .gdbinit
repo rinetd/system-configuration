@@ -8,3 +8,4 @@ end
 document cls
 Clears the screen with a simple command.
 end
+set step-mode on

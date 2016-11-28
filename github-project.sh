@@ -54,6 +54,11 @@ git clone https://github.com/libfuse/libfuse.git
 # vinurs private gluster,里面有我对gluster的缺少的一些函数的补充
 git clone git@gitlab.com:vinurs/vinurs-gluster.git
 
+# openstack swift
+git clone https://github.com/openstack/swift.git
+
+# ceph
+git clone https://github.com/ceph/ceph.git
 
 cd -
 
