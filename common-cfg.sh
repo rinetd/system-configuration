@@ -75,6 +75,8 @@ files_common+=(.ssh)
 files_common+=(.gnupg)
 # astyle
 files_common+=(.astylerc)
+# uncrustify格式化工具
+files_common+=(.uncrustify.cfg)
 # mew mail
 files_common+=(.Mail-Mew)
 # mutt

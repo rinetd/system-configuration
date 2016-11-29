@@ -51,6 +51,9 @@ brew install wget
 brew install sdcv
 brew install cmake
 
+# 代码格式化工具
+brew install uncrustify
+
 # pandoc
 brew install pandoc
 brew cask install mactex
