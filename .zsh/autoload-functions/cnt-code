@@ -1,12 +1,28 @@
 # count all code lines in this directory and its subdirectory
 function cnt-code()
 {
+	# h files
+	line=`find ./ -name "*.h" | xargs wc -l | grep "total" | awk '{print $2}'`
+	if [ $line"x" != "x" ]; then
+		echo ".h files:$line "
+	fi
+
 	# c/h files
-	line=`find ./ -name "*.c" -o -name "*.h" | xargs wc -l | grep "total" | awk '{print $2}'`
+	line=`find ./ -name "*.c" | xargs wc -l | grep "total" | awk '{print $2}'`
 	if [ $line"x" != "x" ]; then
 		echo "c files:$line "
 	fi
+	# cc file
+	line=`find ./ -name "*.cc" | xargs wc -l | grep "total" | awk '{print $2}'`
+	if [ $line"x" != "x" ]; then
+		echo "c++ files:$line "
+	fi
 
+        # lisp files
+        line=`find ./ -name "*.py" | xargs wc -l | grep "total" | awk '{print $2}'`
+        if [ $line"x" != "x" ]; then
+                echo "python files:$line "
+        fi
 
 	# lisp files
 	line=`find ./ -name "*.el" | xargs wc -l | grep "total" | awk '{print $2}'`
