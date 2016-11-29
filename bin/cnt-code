@@ -3,7 +3,7 @@
 
 import commands
 
-files_dict = [
+filetypes_dict = [
     {'regrex': '*.h',
      'filename': "h"
     },
@@ -22,17 +22,14 @@ files_dict = [
 ]
 
 
-for code_file in files_dict:
-    # print code_file["regrex"]
-    ret_code,ret_output = commands.getstatusoutput(\
-                                   'find ./ -name \\' + code_file["regrex"]  + \
+for filetype in filetypes_dict:
+    ret_code,file_lines = commands.getstatusoutput(\
+                                   'find ./ -name \'' + filetype["regrex"]  + "\'" \
                                    '| xargs wc -l | tail -n 1 | ' \
                                     "awk '{print $1}'")
-    # print ret_output
-    # print ret_code
-    if ret_output+"x" != "x":
+    if file_lines+"x" != "x":
         # >右对齐
-        print('{0:>6}: {1:>7}'.format(code_file['filename'], ret_output)) 
+        print('{0:>6}: {1:>7}'.format(filetype['filename'], file_lines)) 
         
 
 
