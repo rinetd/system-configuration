@@ -1,1 +1,0 @@
-{"digest":"6f5de9936fb00fd73754fd8d298d79699b6f42b0","css":".snooze-mail-label {\n  display: flex;\n  align-items: center;\n}\n.snooze-mail-label img {\n  background-color: #472b82;\n  margin-right: 5px;\n}\n","imports":[{"path":"static/variables/ui-variables.less","digest":"391921cec1ce13fe8cd456d1775e958a2acade6f"}],"version":1}
