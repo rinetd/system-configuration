@@ -60,5 +60,8 @@ git clone https://github.com/openstack/swift.git
 # ceph
 git clone https://github.com/ceph/ceph.git
 
+# 用uncrustify来进行缩进
+git clone https://github.com/vinurs/emacs-uncrustify-mode.git
+
 cd -
 

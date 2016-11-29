@@ -8,8 +8,12 @@
 (setq standard-indent 4)
 (setq-default indent-tabs-mode t) 
 
+
 ;; for gluster dev
 (require 'glusterfs-mode)
+
+;; uncrustify-mode
+(require 'uncrustify-mode) 
 
 ;; c-settings
 (require 'c-settings) 

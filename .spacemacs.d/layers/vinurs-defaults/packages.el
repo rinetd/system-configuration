@@ -33,6 +33,8 @@
   '(
 	 ;; 先装个el-get，很多软件都在el-get里面
 	 (vinurs-elget :location local)
+	 ;; 可以用来安装单个文件
+	 (auto-install :location local)
 
 	 (chinese-fonts-setup)
 
@@ -95,6 +97,18 @@ Each entry is either:
       )
     )
   )
+
+(defun vinurs-defaults/init-auto-install ()
+  (use-package auto-install
+    ;; 启动emacs的时候就加载该插件
+    :demand t
+    :config
+    (progn
+	  (setq auto-install-directory "~/.spacemacs.d/auto-install/") 
+      )
+    )
+  )
+
 
 
 (defun vinurs-defaults/init-keyfreq ()
