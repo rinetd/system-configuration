@@ -1,0 +1,38 @@
+#!/usr/bin/env python
+#-*- coding:utf-8 -*-
+
+import commands
+
+files_dict = [
+    {'regrex': '*.h',
+     'filename': "h"
+    },
+    {'regrex': '*.c',
+     'filename': "c"
+    },
+    {'regrex': '*.cpp',
+     'filename': "cpp"
+    },
+    {'regrex': '*.py',
+     'filename': "python"
+    },
+    {'regrex': '*.el',
+     'filename': "elisp"
+    }
+]
+
+
+for code_file in files_dict:
+    # print code_file["regrex"]
+    ret_code,ret_output = commands.getstatusoutput(\
+                                   'find ./ -name \\' + code_file["regrex"]  + \
+                                   '| xargs wc -l | tail -n 1 | ' \
+                                    "awk '{print $1}'")
+    # print ret_output
+    # print ret_code
+    if ret_output+"x" != "x":
+        # >右对齐
+        print('{0:>6}: {1:>7}'.format(code_file['filename'], ret_output)) 
+        
+
+
