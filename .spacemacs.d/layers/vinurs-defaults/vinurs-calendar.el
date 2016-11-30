@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)vinurs-calendar.el,v 0.0 2016/10/21 05:56:31 vinurs Exp $
-;; Changed: <vinurs 10/25/2016 23:26:33>
+;; Changed: <vinurs 11/30/2016 06:59:28>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -150,6 +150,7 @@
 (setq hebrew-holidays nil)    ;; 不显示希伯来人的节日
 (setq islamic-holidays nil)   ;; 不显示伊斯兰教的节日
 
+
 (setq cal-china-x-important-holidays
   (append cal-china-x-chinese-holidays
 	;; vinurs定义的一些节日
@@ -161,8 +162,11 @@
   ) 
 
 
+(setq calendar-mark-holidays-flag t) 
+;; (defvar displayed-month 1) 
 
 (setq calendar-holidays cal-china-x-important-holidays) 
+;; (setq calendar-holidays cal-china-x-chinese-holidays) 
 
 
 

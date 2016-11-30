@@ -58,6 +58,9 @@ brew install uncrustify
 brew install pandoc
 brew cask install mactex
 
+# 当某一个窗口的焦点被挪开多少秒以后，该窗口自动最小化
+brew cask install hocus-focus 
+
 # for common lisp
 # 这里不安装sbcl，因为我使用Clozure CL
 brew install sbcl
