@@ -58,6 +58,7 @@ brew install uncrustify
 brew install pandoc
 brew cask install mactex
 
+
 # 当某一个窗口的焦点被挪开多少秒以后，该窗口自动最小化
 brew cask install hocus-focus 
 
@@ -318,7 +319,7 @@ brew cask install torbrowser
 # 代理相关
 brew install shadowsocks-libev
 brew install Caskroom/cask/shadowsocksx --force
-
+brew cask install vyprvpn
 
 # 防止dns污染
 brew cask install dnscrypt
