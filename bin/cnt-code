@@ -18,6 +18,9 @@ filetypes_dict = [
     },
     {'regrex': '*.el',
      'filename': "elisp"
+    },
+    {'regrex': '*.js',
+     'filename': "javascript"
     }
 ]
 
