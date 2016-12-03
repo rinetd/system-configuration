@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@vinurs-mac.local
 ;; Version: $Id: @(#)dotspacemacs-layers.el,v 0.0 2016/05/25 15:13:53 vinurs Exp $
-;; Changed: <vinurs 10/25/2016 19:59:00>
+;; Changed: <vinurs 12/03/2016 14:54:14>
 ;; Keywords:
 ;; X-URL: not distributed yet
 
@@ -84,7 +84,7 @@
 	 ;; markdown
 	 ;; 跟mac按键兼容，暂时还是不要用了吧，按键感觉不适应
 	 osx
-
+	 yaml
 	 ;; for doc convert
 	 pandoc
 	 ;; spacemacs自带的org layer，效果非常好
