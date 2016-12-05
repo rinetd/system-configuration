@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)vinurs-desktop-save.el,v 0.0 2016/07/30 11:09:54 vinurs Exp $
-;; Changed: <vinurs 12/05/2016 22:30:14>
+;; Changed: <vinurs 12/05/2016 22:36:45>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -75,11 +75,11 @@ saved desktop at startup:
 				 ;; (dired-regexp-history . 20)
 				 ;; (extended-command-history . 30)
 				 ;; (face-name-history . 20)
-				 (file-name-history . 100)
-				 (ido-buffer-history . 100)
-				 (ido-last-directory-list . 100)
-				 (ido-work-directory-list . 100)
-				 (ido-work-file-list . 100)
+				 ;; (file-name-history . 100)
+				 ;; (ido-buffer-history . 100)
+				 ;; (ido-last-directory-list . 100)
+				 ;; (ido-work-directory-list . 100)
+				 ;; (ido-work-file-list . 100)
 				 ;; (magit-read-rev-history . 50)
 				 ;; (minibuffer-history . 50)
 				 ;; (org-refile-history . 50)
@@ -88,7 +88,7 @@ saved desktop at startup:
 				 ;; (read-expression-history . 60)
 				 ;; (regexp-history . 60)
 				 ;; (regexp-search-ring . 20)
-				 register-alist
+				 ;; register-alist
 				 ;; (search-ring . 20)
 				 ;; (shell-command-history . 50)
 				 ;; tags-file-name
