@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@vinurs-mac.local
 ;; Version: $Id: @(#)graphviz-dot-mode-settings.el,v 0.0 2016/05/11 19:09:02 vinurs Exp $
-;; Changed: <vinurs 07/29/2016 08:22:51>
+;; Changed: <vinurs 12/05/2016 14:41:48>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -43,8 +43,8 @@
 ;;;;  User Options, Variables
 ;;;;##########################################################################
 
-(spacemacs/declare-prefix "oad" "graphviz/doxymacs") 
-(setq vinurs/graphviz-key-binding-prefixes "oad")
+;; (spacemacs/declare-prefix "oad" "graphviz/doxymacs") 
+;; (setq vinurs/graphviz-key-binding-prefixes "oad")
 
 
 (defun new-graphviz-dot-preview ()
@@ -153,14 +153,26 @@ loaded in GNU Emacs, and `image-formats-alist' for XEmacs."
 		(when (eq l '())
 		  (message "No image found.")))))) 
 
-;; open -a Preview 1.png
+;; (spacemacs/set-leader-keys
+;;   (concat vinurs/graphviz-key-binding-prefixes "c") 'compile
+;;   (concat vinurs/graphviz-key-binding-prefixes "v") 'graphviz-dot-view
+;;   (concat vinurs/graphviz-key-binding-prefixes "p") 'new1-graphviz-dot-preview
+;;   (concat vinurs/graphviz-key-binding-prefixes "P") 'new-graphviz-dot-preview
+;;   ) 
 
-(spacemacs/set-leader-keys
-  (concat vinurs/graphviz-key-binding-prefixes "c") 'compile
-  (concat vinurs/graphviz-key-binding-prefixes "v") 'graphviz-dot-view
-  (concat vinurs/graphviz-key-binding-prefixes "p") 'new1-graphviz-dot-preview
-  (concat vinurs/graphviz-key-binding-prefixes "P") 'new-graphviz-dot-preview
-  ) 
+
+(add-hook 'graphviz-dot-mode-hook
+  '(lambda ()
+	 ;; compile dot files
+	 (spacemacs/set-leader-keys-for-major-mode 'graphviz-dot-mode
+	   "c" 'compile) 
+	 ;; preview
+	 (spacemacs/set-leader-keys-for-major-mode 'graphviz-dot-mode
+	   "p" 'new1-graphviz-dot-preview) 
+	 )) 
+
+
+
 
 
 

@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)config.el,v 0.0 2016/08/26 16:55:31 vinurs Exp $
-;; Changed: <vinurs 10/19/2016 23:45:13>
+;; Changed: <vinurs 12/04/2016 14:39:24>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -78,7 +78,7 @@
 ;; 设置pandoc把org导成pdf的时候的参数
 (setq org-pandoc-options-for-latex-pdf '((latex-engine . "xelatex")
 										  ;; 字体配置
-										  (variable . "mainfont=Songti SC")
+										  (variable . "mainfont=STKaiti")
 										  )) 
 
 

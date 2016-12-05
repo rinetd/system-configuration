@@ -85,7 +85,7 @@ Each entry is either:
     :config
     (progn
       (require 'graphviz-dot-mode-settings)
-	  (spacemacs|diminish doxymacs-mode " ⓓ" " d") 
+	  (spacemacs|diminish graphviz-dot-mode " ⓓ" " d") 
       )
     )
   )
