@@ -31,11 +31,13 @@
 
 (defconst vinurs-defaults-packages
   '(
+	 ;; pkg manager，有些软件还是需要用el-get之类的来进行安装的
 	 ;; 先装个el-get，很多软件都在el-get里面
 	 (vinurs-elget :location local)
 	 ;; 可以用来安装单个文件
 	 (auto-install :location local)
 
+	 ;; 汉字跟英文，设置中英文对齐的
 	 (chinese-fonts-setup)
 
 	 ;; 记录每个键的按键次数
