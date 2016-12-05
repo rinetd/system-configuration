@@ -7,7 +7,7 @@
 # 
 #         Version:  1.0
 #         Created:  2012/08/05 10:24:48
-#         Changed:  <vinurs 10/31/2016 19:26:10>
+#         Changed:  <vinurs 12/05/2016 16:41:42>
 #        Revision:  none
 # 
 #          Author:  zhanghaiyuan
@@ -49,8 +49,8 @@ else
     # tmux attach-session -t $TMUX_SESSION \; new-window -n emacs \; split-window -h \; detach-client
     # # git
     # tmux attach-session -t $TMUX_SESSION \; new-window -n git \; split-window -h \; detach-client
-    # # blog
-    # tmux attach-session -t $TMUX_SESSION \; new-window -n blog \; split-window -h \; detach-client
+    # blog
+    tmux attach-session -t $TMUX_SESSION \; new-window -n blog \; split-window -h \; detach-client
     # # lisp
     # tmux attach-session -t $TMUX_SESSION \; new-window -n lisp \; split-window -h \; detach-client
     # # other
