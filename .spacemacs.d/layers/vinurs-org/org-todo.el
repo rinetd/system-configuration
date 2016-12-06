@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)org-todo.el,v 0.0 2016/10/19 22:50:11 vinurs Exp $
-;; Changed: <vinurs 10/20/2016 20:59:23>
+;; Changed: <vinurs 12/06/2016 09:17:44>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -45,12 +45,32 @@
 
 
 
-;; keywords定义,括号里面为缩写,@表示状态改变的时候记一个笔记，！表示状态改变的时候加个时间戳
+;; 目前所有gtd相关的都存放在这个目录下面
+(setq org-agenda-files
+  (list
+	"~/Dropbox/home/.org-agenda/inbox.org" ;; 要做的事情
+	;; "~/Dropbox/home/.org-agenda/trash.org" ;; 被删除的事情
+	;; "~/Dropbox/home/.org-agenda/shopping.org" ;; 需要买的东西
+	;; "~/Dropbox/home/.org-agenda/finished.org" ;; 已完成的事情
+	)) 
+
+
+;; keywords定义,括号里面为缩写,@表示状态改变的时候记一个笔记，
+;; 添加笔记和状态变更信息(包括时间信息)，用"@"表示
+;; 只添加状态变更信息，用"!"表示，！表示状态改变的时候加个时间戳
+;; 这个通过定义带快速选择键的关键词时，在快速选择键后用"X/Y"来表示，X表示进入该状态时的动作，Y表示离开该状态时的动作。对于一个状态(以"DONE"为例)，以下形式都是合法的:
+;; DONE(d@)       ; 进入时添加笔记
+;; DONE(d/!)      ; 离开时添加变更信息
+;; DONE(d@/!)     ; 进入时添加笔记，离开时添加变更信息
+;; http://www.zmonster.me/2015/07/15/org-mode-planning.html#orgheadline2参照这里的解释
 (setq org-todo-keywords
   '(
-	 (sequence "TODO(t!)" "|" "DONE(d@/!)")
+	 ;; 通用GTD流程
+	 (sequence "TODO(t@/!)" "|" "DONE(d@/!)")
+	 ;; bug处理流程
 	 (sequence "REPORT(r@/!)" "BUG(b@/!)" "KNOWNCAUSE(k@/!)" "|" "FIXED(f@/!)")
 	 (sequence "|" "CANCELED(c@/!)")
+	 (sequence "|" "ABORT(a@/!)")
 	 )) 
 
 
@@ -100,14 +120,6 @@
 (setq org-log-done 'note)
 
 
-;; 目前所有gtd相关的都存放在这个目录下面
-(setq org-agenda-files
-  (list
-	"~/Dropbox/home/.org-agenda/inbox.org" ;; 要做的事情
-	"~/Dropbox/home/.org-agenda/trash.org" ;; 被删除的事情
-	"~/Dropbox/home/.org-agenda/shopping.org" ;; 需要买的东西
-	"~/Dropbox/home/.org-agenda/finished.org" ;; 已完成的事情
-	)) 
 
 
 

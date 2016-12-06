@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)config.el,v 0.0 2016/08/26 16:55:31 vinurs Exp $
-;; Changed: <vinurs 12/04/2016 14:39:24>
+;; Changed: <vinurs 12/06/2016 23:02:51>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -45,53 +45,35 @@
 
 (push "~/.spacemacs.d/layers/vinurs-org" load-path) 
 
-;; org-mode, 自动换行
-(add-hook 'org-mode-hook
-  (lambda () (setq truncate-lines nil))) 
+;; 加载了orgmode以后加载下面的代码
+(with-eval-after-load 'org
+
+  ;; here goes your Org config :)
+  ;; org-mode, 自动换行
+  (add-hook 'org-mode-hook
+	(lambda () (setq truncate-lines nil))) 
+  ;; org文件里面的代码块高亮
+  (setq org-src-fontify-natively t) 
+
+  ;; 对于org文档里面的不可见部分也能显示
+  (setq org-catch-invisible-edits 'show) 
+  
+
+  ;; 设置pandoc把org导成pdf的时候的参数
+  (setq org-pandoc-options-for-latex-pdf '((latex-engine . "xelatex")
+											;; 字体配置
+											(variable . "mainfont=STKaiti")
+											)) 
+
+  ;; orgmode todo
+  (require 'org-todo) 
 
 
-;; org文件里面的代码块高亮
-(setq org-src-fontify-natively t) 
-
-;; 对于org文档里面的不可见部分也能显示
-(setq org-catch-invisible-edits 'show) 
-
-;; 在org-mode里面移动相关
-(add-hook 'org-mode-hook
-  '(lambda ()
-	 (spacemacs/set-leader-keys-for-major-mode 'org-mode
-	   "g n" 'outline-next-visible-heading) 
-	 (spacemacs/set-leader-keys-for-major-mode 'org-mode
-	   "g p" 'outline-previous-visible-heading) 
-	 (spacemacs/set-leader-keys-for-major-mode 'org-mode
-	   "g f" 'org-forward-heading-same-level) 
-	 (spacemacs/set-leader-keys-for-major-mode 'org-mode
-	   "g b" 'org-backward-heading-same-level) 
-	 (spacemacs/set-leader-keys-for-major-mode 'org-mode
-	   "g u" 'outline-up-heading) 
-	 (spacemacs/set-leader-keys-for-major-mode 'org-mode
-	   "g j" 'org-goto) 
-	 
-	 )) 
+  )
 
 
-;; 设置pandoc把org导成pdf的时候的参数
-(setq org-pandoc-options-for-latex-pdf '((latex-engine . "xelatex")
-										  ;; 字体配置
-										  (variable . "mainfont=STKaiti")
-										  )) 
 
 
-;; 单独设置orgtable的字体，为了中英文表格能够对齐
-;; (custom-set-faces
-;;   ;; custom-set-faces was added by Custom.
-;;   ;; If you edit it by hand, you could mess it up, so be careful.
-;;   ;; Your init file should contain only one such instance.
-;;   ;; If there is more than one, they won't work right.
-;;   '(org-table ((t (:foreground "#6c71c4" :family "Ubuntu Mono")))))
-
-;; orgmode todo
-(require 'org-todo) 
 
 
 (provide 'config)

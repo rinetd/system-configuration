@@ -54,8 +54,8 @@
 
 	 ;; 日历相关配置
 	 ;; 农历
-	 (cal-china-x)
-	 (calfw)
+	 ;; (cal-china-x)
+	 ;; (calfw)
 
 	 ;; google翻译 
 	 ;; 可惜Google在中国不能用, fuck GFW

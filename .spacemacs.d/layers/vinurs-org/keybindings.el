@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)keybindings.el,v 0.0 2016/08/31 09:47:44 vinurs Exp $
-;; Changed: <vinurs 12/04/2016 14:40:22>
+;; Changed: <vinurs 12/06/2016 23:04:08>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -43,7 +43,48 @@
 ;;;;  User Options, Variables
 ;;;;##########################################################################
 
+(with-eval-after-load 'org
+  ;; here goes your Org config :)
+  ;; ....
 
+  ;; 在org-mode里面移动相关
+  (add-hook 'org-mode-hook
+	'(lambda ()
+	   (spacemacs/set-leader-keys-for-major-mode 'org-mode
+		 "g n" 'outline-next-visible-heading) 
+	   (spacemacs/set-leader-keys-for-major-mode 'org-mode
+		 "g p" 'outline-previous-visible-heading) 
+	   (spacemacs/set-leader-keys-for-major-mode 'org-mode
+		 "g f" 'org-forward-heading-same-level) 
+	   (spacemacs/set-leader-keys-for-major-mode 'org-mode
+		 "g b" 'org-backward-heading-same-level) 
+	   (spacemacs/set-leader-keys-for-major-mode 'org-mode
+		 "g u" 'outline-up-heading) 
+	   (spacemacs/set-leader-keys-for-major-mode 'org-mode
+		 "g j" 'org-goto) 
+
+	   ;; keybinding for editing source code blocks
+	   (spacemacs/set-leader-keys-for-major-mode 'org-mode
+		 "i e" 'org-edit-src-code) 
+	   ;; insert footnote
+	   (spacemacs/set-leader-keys-for-major-mode 'org-mode
+		 "i f" 'org-footnote-action) 
+	   ;; keybinding for inserting code blocks
+	   (spacemacs/set-leader-keys-for-major-mode 'org-mode
+		 "i s" 'org-insert-src-block) 
+	   ;; insert html readmore
+	   (spacemacs/set-leader-keys-for-major-mode 'org-mode
+		 "i r" 'org-insert-html-readmore) 
+
+	   ;; GTD
+	   ;; 每一个事件的状态切换
+	   (spacemacs/set-leader-keys-for-major-mode 'org-mode
+		 "g t" 'org-todo) 
+
+   
+	   )) 
+
+  )
 
 ;; ;; 导成pdf，后面这个需要集中修改一下org的快捷键
 ;; (spacemacs/set-leader-keys-for-major-mode
@@ -62,20 +103,6 @@
 ;; 											   ("oa"  "applications")
 ;; 											   )) 
 
-(add-hook 'org-mode-hook '(lambda ()
-                            ;; keybinding for editing source code blocks
-							(spacemacs/set-leader-keys-for-major-mode 'org-mode
-							  "i e" 'org-edit-src-code) 
-							;; insert footnote
-							(spacemacs/set-leader-keys-for-major-mode 'org-mode
-							  "i f" 'org-footnote-action) 
-							;; keybinding for inserting code blocks
-							(spacemacs/set-leader-keys-for-major-mode 'org-mode
-							  "i s" 'org-insert-src-block) 
-							;; insert html readmore
-							(spacemacs/set-leader-keys-for-major-mode 'org-mode
-							  "i r" 'org-insert-html-readmore) 
-							)) 
 
 (provide 'keybindings)
 
