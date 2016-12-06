@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@vinurs-mac.local
 ;; Version: $Id: @(#)user-config.el,v 0.0 2016/05/17 07:28:04 vinurs Exp $
-;; Changed: <vinurs 11/17/2016 19:14:25>
+;; Changed: <vinurs 12/06/2016 20:06:54>
 ;; Keywords:
 ;; X-URL: not distributed yet
 
@@ -57,7 +57,6 @@
 ;; 对spacemacs自身的键绑定作的一些修改
 (require 'dotspacemacs-keybinds)
 
-;; (setq tab-width 4)
 
 ;; ;; 缩进提示线的配置，竖线
 ;; (setq indent-tabs-mode nil) 
@@ -83,9 +82,6 @@
 ;; 不显示结尾的空格
 (setq-default spacemacs-show-trailing-whitespace nil) 
 
-
-;; 保存打开的文件以及文件中光标位置，重新打开emacs以后恢复
-(require 'vinurs-desktop-save) 
 
 ;; Prefixes
 ;; 除了spacemac自定义的前缀键，我自己另外定义了oa表示我自己的应用程序

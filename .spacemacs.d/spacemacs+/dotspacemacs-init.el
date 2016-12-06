@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@vinurs-mac.local
 ;; Version: $Id: @(#)dotspacemacs-layers.el,v 0.0 2016/05/25 15:13:53 vinurs Exp $
-;; Changed: <vinurs 12/06/2016 19:55:43>
+;; Changed: <vinurs 12/06/2016 20:01:43>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -163,8 +163,8 @@
    dotspacemacs-enable-paste-micro-state nil
    ;; Which-key delay in seconds. The which-key buffer is the popup listing
    ;; the commands bound to the current keystroke sequence. (default 0.4)
-  ;; 不要延时
-   dotspacemacs-which-key-delay 0.0
+  ;; 延时减少
+   dotspacemacs-which-key-delay 0.2
    ;; Which-key frame position. Possible values are `right', `bottom' and
    ;; `right-then-bottom'. right-then-bottom tries to display the frame to the
    ;; right; if there is insufficient space it displays it at the bottom.
