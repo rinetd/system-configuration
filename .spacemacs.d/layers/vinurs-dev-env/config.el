@@ -16,8 +16,20 @@
 (require 'uncrustify-mode) 
 
 ;; c-settings
-(require 'c-settings) 
+(with-eval-after-load 'cc-mode
+  ;; c-settings
+  (require 'c-settings) 
+  ;; c++-settings
+  (require 'c++-settings) 
+  ) 
 
 ;; lisp-settings
-(require 'lisp-settings) 
+(with-eval-after-load 'lisp-mode
+  (require 'lisp-settings) 
+)
+
+;; emacs-lisp-settings
+(with-eval-after-load 'emacs-lisp-mode
+  (require 'emacs-lisp-settings) 
+  )
 
