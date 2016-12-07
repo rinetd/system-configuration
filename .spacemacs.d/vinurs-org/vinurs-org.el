@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)vinurs-org.el,v 0.0 2016/12/07 10:27:09 vinurs Exp $
-;; Changed: <vinurs 12/07/2016 10:27:10>
+;; Changed: <vinurs 12/07/2016 10:36:27>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -43,9 +43,11 @@
 ;;;;  User Options, Variables
 ;;;;##########################################################################
 
+;; 一些有用的函数
+(require 'vinurs-org-funcs) 
 
-
-
+;; 键绑定
+(require 'vinurs-org-keybindings) 
 
 (provide 'vinurs-org)
 

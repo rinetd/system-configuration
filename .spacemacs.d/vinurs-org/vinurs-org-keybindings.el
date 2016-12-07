@@ -1,10 +1,10 @@
-;;; keybindings.el --- 
+;;; vinurs-org-keybindings.el --- 
 
 ;; Copyright 2016 haiyuan.zhang
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)keybindings.el,v 0.0 2016/08/31 09:47:44 vinurs Exp $
-;; Changed: <vinurs 12/06/2016 23:04:08>
+;; Changed: <vinurs 12/07/2016 10:36:08>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -104,6 +104,6 @@
 ;; 											   )) 
 
 
-(provide 'keybindings)
+(provide 'vinurs-org-keybindings)
 
 ;;; keybindings.el ends here

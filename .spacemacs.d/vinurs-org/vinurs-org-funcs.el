@@ -1,10 +1,10 @@
-;;; funcs.el --- 
+;;; vinurs-org-funcs.el --- 
 
 ;; Copyright 2016 haiyuan.zhang
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)funcs.el,v 0.0 2016/08/31 09:50:13 vinurs Exp $
-;; Changed: <vinurs 12/04/2016 14:19:22>
+;; Changed: <vinurs 12/07/2016 10:34:42>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -84,6 +84,6 @@ after the current line"
 
 
 
-(provide 'funcs)
+(provide 'vinurs-org-funcs)
 
 ;;; funcs.el ends here

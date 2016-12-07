@@ -1,10 +1,10 @@
-;;; config.el --- 
+;;; vinurs-org-config.el --- 
 
 ;; Copyright 2016 haiyuan.zhang
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)config.el,v 0.0 2016/08/26 16:55:31 vinurs Exp $
-;; Changed: <vinurs 12/07/2016 08:14:16>
+;; Changed: <vinurs 12/07/2016 10:37:44>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -89,6 +89,6 @@
 
 
 
-(provide 'config)
+(provide 'vinurs-org-config)
 
 ;;; config.el ends here

@@ -1,10 +1,10 @@
-;;; org-todo.el --- 
+;;; vinurs-org-todo.el --- 
 
 ;; Copyright 2016 haiyuan.zhang
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)org-todo.el,v 0.0 2016/10/19 22:50:11 vinurs Exp $
-;; Changed: <vinurs 12/06/2016 09:17:44>
+;; Changed: <vinurs 12/07/2016 10:38:25>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -124,6 +124,6 @@
 
 
 
-(provide 'org-todo)
+(provide 'vinurs-org-todo)
 
 ;;; org-todo.el ends here
