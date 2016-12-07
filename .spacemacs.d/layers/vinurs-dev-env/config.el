@@ -17,8 +17,12 @@
 
 ;; c-settings
 (with-eval-after-load 'cc-mode
+  ;; c/c++ common settings
+  (require 'c-c++-common-settings) 
+
   ;; c-settings
   (require 'c-settings) 
+
   ;; c++-settings
   (require 'c++-settings) 
   ) 

@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)c++-settings.el,v 0.0 2016/12/07 17:09:32 vinurs Exp $
-;; Changed: <vinurs 12/07/2016 17:41:34>
+;; Changed: <vinurs 12/08/2016 11:16:36>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -42,16 +42,6 @@
 ;;;;##########################################################################
 ;;;;  User Options, Variables
 ;;;;##########################################################################
-
-;; 给一段宏后面增加反斜杠
-(spacemacs/set-leader-keys-for-major-mode 'c++-mode
-  "m s" 'c-backslash-region) 
-;; 给一段宏后面移反斜杠
-(spacemacs/set-leader-keys-for-major-mode 'c++-mode
-  "m r" (defun remove-c-backslash () (interactive)
-		  (setq current-prefix-arg '(4)) ; C-u
-		  (call-interactively 'c-backslash-region))
-  ) 
 
 
 

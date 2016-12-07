@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@vinurs-mac.local
 ;; Version: $Id: @(#)dotspacemacs-layers.el,v 0.0 2016/05/25 15:13:53 vinurs Exp $
-;; Changed: <vinurs 12/06/2016 22:15:36>
+;; Changed: <vinurs 12/09/2016 09:04:13>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -35,7 +35,7 @@
 ;;; Code:
 
 (eval-when-compile
-  (require 'cl))
+   (require 'cl))
 
 
 
@@ -58,7 +58,7 @@
    ;; This variable has no effect if Emacs is launched with the parameter
    ;; `--insecure' which forces the value of this variable to nil.
    ;; (default t)
-  ;; 启用https
+   ;; 启用https
    dotspacemacs-elpa-https nil
    ;; Maximum allowed time in seconds to contact an ELPA repository.
    dotspacemacs-elpa-timeout 5
@@ -71,7 +71,7 @@
    ;; unchanged. (default 'vim)
    dotspacemacs-editing-style 'vim
    ;; If non nil output loading progress in `*Messages*' buffer. (default nil)
-   dotspacemacs-verbose-loading nil
+   dotspacemacs-verbose-loading t
    ;; Specify the startup banner. Default value is `official', it displays
    ;; the official spacemacs logo. An integer value is the index of text
    ;; banner, `random' chooses a random text banner in `core/banners'
@@ -91,17 +91,17 @@
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-;; Default theme applied at startup
- ;; dotspacemacs-default-theme 'spacemacs-light
+   ;; Default theme applied at startup
+   ;; dotspacemacs-default-theme 'spacemacs-light
    ;; If non nil the cursor color matches the state color in GUI Emacs.
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
    ;; size to make separators look not too crappy.
    dotspacemacs-default-font '("Source Code Pro"
-                               :size 18
-                               :weight normal
-                               :width normal
-                               :powerline-scale 1.1)
+								 :size 18
+								 :weight normal
+								 :width normal
+								 :powerline-scale 1.1)
    ;; dotspacemacs-themes '(tsdh-light 
    ;;  						 )
 
@@ -163,8 +163,8 @@
    dotspacemacs-enable-paste-micro-state nil
    ;; Which-key delay in seconds. The which-key buffer is the popup listing
    ;; the commands bound to the current keystroke sequence. (default 0.4)
-  ;; 延时减少
-   dotspacemacs-which-key-delay 0.2
+   ;; 延时减少
+   dotspacemacs-which-key-delay 0.4
    ;; Which-key frame position. Possible values are `right', `bottom' and
    ;; `right-then-bottom'. right-then-bottom tries to display the frame to the
    ;; right; if there is insufficient space it displays it at the bottom.
@@ -183,7 +183,7 @@
    ;; If non nil the frame is maximized when Emacs starts up.
    ;; Takes effect only if `dotspacemacs-fullscreen-at-startup' is nil.
    ;; (default nil) (Emacs 24.4+ only)
-  ;; 窗口最大化
+   ;; 窗口最大化
    dotspacemacs-maximized-at-startup t
    ;; A value from the range (0..100), in increasing opacity, which describes
    ;; the transparency level of a frame when it's active or selected.
@@ -202,7 +202,7 @@
    ;; If non nil line numbers are turned on in all `prog-mode' and `text-mode'
    ;; derivatives. If set to `relative', also turns on relative line numbers.
    ;; (default nil)
-   dotspacemacs-line-numbers t
+   dotspacemacs-line-numbers relative
    ;; If non-nil smartparens-strict-mode will be enabled in programming modes.
    ;; (default nil)
    dotspacemacs-smartparens-strict-mode nil
@@ -228,10 +228,6 @@
    ;; (default nil)
    dotspacemacs-whitespace-cleanup nil
    )
-
-;; emacs.d private cfg 
-;; add to load-path first
-(push "~/Dropbox/home/.emacs.d/" load-path)
 
 
 (provide 'dotspacemacs-init)

@@ -1,10 +1,10 @@
-;;; vinurs-c-hideif+.el --- 
+;;; c-c++-common-settings.el --- 
 
 ;; Copyright 2016 haiyuan.zhang
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
-;; Version: $Id: @(#)vinurs-c-hideif+.el,v 0.0 2016/07/27 12:39:34 vinurs Exp $
-;; Changed: <vinurs 08/23/2016 09:57:07>
+;; Version: $Id: @(#)c-c++-common-settings.el,v 0.0 2016/12/08 11:13:16 vinurs Exp $
+;; Changed: <vinurs 12/08/2016 19:25:46>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -27,7 +27,7 @@
 ;; 
 
 ;; Put this file into your load-path and the following into your ~/.emacs:
-;;   (require 'vinurs-c-hideif+)
+;;   (require 'c-c++-common-settings)
 
 
 
@@ -44,7 +44,43 @@
 ;;;;##########################################################################
 
 
-(defun my-c-mode-font-lock-if0 (limit)
+;;  c/c++ common settings
+
+;; 定义各种前缀
+(mapc (lambda (x) (apply #'spacemacs/declare-prefix-for-mode x))
+  '(
+	 ;; Macro相关
+	 (c-mode "mm"   "Macro")
+	 (c++-mode "mm"   "Macro")
+	 ;; hide/show
+	 (c-mode "mh"   "hide/show")
+	 (c++-mode "mh"   "hide/show")
+
+	 )) 
+
+
+;; 给一段宏后面增加反斜杠
+(spacemacs/set-leader-keys-for-major-mode 'c-mode
+  "m s" 'c-backslash-region) 
+;; 给一段宏后面移反斜杠
+(spacemacs/set-leader-keys-for-major-mode 'c-mode
+  "m r" (defun remove-c-backslash () (interactive)
+		  (setq current-prefix-arg '(4)) ; C-u
+		  (call-interactively 'c-backslash-region))
+  ) 
+
+;; 给一段宏后面增加反斜杠
+(spacemacs/set-leader-keys-for-major-mode 'c++-mode
+  "m s" 'c-backslash-region) 
+;; 给一段宏后面移反斜杠
+(spacemacs/set-leader-keys-for-major-mode 'c++-mode
+  "m r" (defun remove-c-backslash () (interactive)
+		  (setq current-prefix-arg '(4)) ; C-u
+		  (call-interactively 'c-backslash-region))
+  ) 
+
+;; #if 0配色
+(defun c-common-mode-font-lock-if0 (limit)
   (save-restriction
     (widen)
     (save-excursion
@@ -67,20 +103,18 @@
           (c-put-font-lock-face start (point) 'font-lock-comment-face)))))
   nil) 
 
-
-
-(spacemacs|diminish hide-ifdef-mode " ⓗ" " h") 
-
-(defun my-c-mode-common-hook ()
+(defun c-if0-font-lock ()
   (font-lock-add-keywords
 	nil
-	'((my-c-mode-font-lock-if0 (0 font-lock-comment-face prepend))) 'add-to-end)) 
+	'((c-common-mode-font-lock-if0
+		(0 font-lock-comment-face prepend)))
+	'add-to-end))
 
-(add-hook 'c-mode-common-hook 'my-c-mode-common-hook) 
-
+(add-hook 'c-mode-hook 'c-if0-font-lock) 
+(add-hook 'c++-mode-hook 'c-if0-font-lock) 
 
 ;; 首先是一个小函数，把所有的 #if 0 包含的代码给折叠起来。
-(defun my-hide-if-0()
+(defun hide-if-0()
   "hide #if 0 blocks, inspired by internet. --lgfang"
   (interactive)
   (require 'hideif)
@@ -88,15 +122,10 @@
     (goto-char (point-min))
     (while (re-search-forward "^[ \t]*#if[ \t]*0" nil t) (hide-ifdef-block)) )
   ) 
-(add-hook 'c-mode-hook 'my-hide-if-0)
-
+(add-hook 'c-mode-hook 'hide-if-0)
+(add-hook 'c++-mode-hook 'hide-if-0) 
 
 ;; 对于#ifdef进行折叠
-;; 代码copy from http://blog.chinaunix.net/uid-7717190-id-2564925.html
-(add-hook 'c-mode-common-hook
-  (lambda ()
-	(spacemacs/set-leader-keys "he" 'my-hif-toggle-block) 
-	)) 
 
 ;;; for hideif
 (defun my-hif-toggle-block ()
@@ -121,9 +150,14 @@
 		overlays (cdr overlays)))
     found)) 
 
+(spacemacs/set-leader-keys-for-major-mode 'c-mode
+  "h e" 'my-hif-toggle-block) 
+(spacemacs/set-leader-keys-for-major-mode 'c++-mode
+  "h e" 'my-hif-toggle-block) 
 
 
 
-(provide 'vinurs-c-hideif+)
 
-;;; vinurs-c-hideif+.el ends here
+(provide 'c-c++-common-settings)
+
+;;; c-c++-common-settings.el ends here

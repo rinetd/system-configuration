@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)org-todo.el,v 0.0 2016/10/19 22:50:11 vinurs Exp $
-;; Changed: <vinurs 12/07/2016 10:38:25>
+;; Changed: <vinurs 12/08/2016 21:59:24>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -44,16 +44,77 @@
 ;;;;##########################################################################
 
 
+;; 把这个目录下面的全部包含进来
+(setq org-directory "~/Dropbox/home/.org-agenda") 
+(setq org-agenda-files `(,org-directory)) 
 
-;; 目前所有gtd相关的都存放在这个目录下面
-(setq org-agenda-files
-  (list
-	"~/Dropbox/home/.org-agenda/inbox.org" ;; 要做的事情
-	;; "~/Dropbox/home/.org-agenda/trash.org" ;; 被删除的事情
-	;; "~/Dropbox/home/.org-agenda/shopping.org" ;; 需要买的东西
-	;; "~/Dropbox/home/.org-agenda/finished.org" ;; 已完成的事情
-	)) 
 
+;; capture模板, 快速记录任务的时候
+(setq org-capture-templates
+  '(
+	 ("a" "搜集所有未分类的任务" entry
+	   (file+headline "~/Dropbox/home/.org-agenda/inbox.org" "Tasks")
+	   "* %?\n 收集于: %U\n %i\n") 
+	 ("b" "读书清单" entry 
+	   (file+headline
+		 "~/Dropbox/home/.org-agenda/books.org"
+		 "Books")
+	   "* TODO %?\n  添加于: %U\n %i\n\n"
+	   :empty-lines 1)
+
+	 ("s" "购物清单" entry 
+	   (file+headline
+		 "~/Dropbox/home/.org-agenda/shopping.org"
+		 "ShoppingList")
+	   "* TODO %?\n  添加于: %U\n %i\n\n"
+	   :empty-lines 1)
+	 ("l" "生活相关" entry 
+	   (file+headline
+		 "~/Dropbox/home/.org-agenda/life.org"
+		 "ShoppingList")
+	   "* TODO %?\n  添加于: %U\n %i\n\n"
+	   :empty-lines 1)
+
+	 ("w" "工作相关" entry
+	   (file+headline "~/Dropbox/home/.org-agenda/work.org" "Tasks")
+	   "* TODO %?\n %U\n" :clock-in t :clock-resume t)
+	 ("p" "周期性任务" entry
+	   (file+headline "~/Dropbox/home/.org-agenda/periodical-task.org" "Tasks")
+	   "* TODO %?\n  %U\n %i\n")
+	 ("i" "自我提升" entry
+	   (file+headline "~/Dropbox/home/.org-agenda/self-improvement.org" "Tasks")
+	   "* TODO %?\n  %U\n %i\n")
+	 )) 
+
+;; 任务太多完成以后归档的文件
+(setq org-archive-location "%s_archive::* Archive")
+
+;; 提前2天提醒
+(setq org-deadline-warning-days 2)
+
+;; appt配置
+(setq appt-audible t) 
+;; 任务开始前的多长时间开始提醒，以分钟为单位
+(setq appt-message-warning-time 10)
+;; 提醒持续时间（秒）
+(setq appt-display-duration '30)
+;;在状态栏显示时间（分钟）
+(setq appt-display-mode-line t)
+
+
+;; (setq org-capture-templates
+;;   (quote (("i" "idea" entry (file (concat org-directory "/idea.org"))
+;; 			"*  %^{Title} %?\n%U\n%a\n")
+;; 		   ("t" "todo" entry (file (concat org-directory "/gtd.org"))
+;; 			 "* TODO %?\n%U\n%a\n" :clock-in t :clock-resume t)
+;; 		   ("n" "note" entry (file (concat org-directory "/note.org"))
+;; 			 "* %? :NOTE:\n%U\n%a\n" :clock-in t :clock-resume t)
+;; 		   ("j" "Journal" entry (file+datetree (concat org-directory "/journal.org"))
+;; 			 "*  %^{Title} %?\n%U\n%a\n" :clock-in t :clock-resume t)
+;; 		   ("b" "Book" entry (file+datetree \t \t (concat org-directory "/book.org"))
+;; 			 "* Topic: %^{Description}  %^g %? Added: %U") 
+		   
+;; 		   )))
 
 ;; keywords定义,括号里面为缩写,@表示状态改变的时候记一个笔记，
 ;; 添加笔记和状态变更信息(包括时间信息)，用"@"表示
