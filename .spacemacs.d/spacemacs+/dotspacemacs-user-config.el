@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@vinurs-mac.local
 ;; Version: $Id: @(#)user-config.el,v 0.0 2016/05/17 07:28:04 vinurs Exp $
-;; Changed: <vinurs 12/06/2016 20:06:54>
+;; Changed: <vinurs 12/07/2016 10:29:03>
 ;; Keywords:
 ;; X-URL: not distributed yet
 
@@ -92,6 +92,12 @@
 (mapc (lambda (x) (apply #'spacemacs/declare-prefix x))
   vinurs-spacemacs/key-binding-prefixes) 
 
+;; 对org的一些额外的配置
+;; 加载了orgmode以后加载下面的代码
+(with-eval-after-load 'org
+  (push "~/.spacemacs.d/vinurs-org" load-path) 
+  (require 'vinurs-org) 
+  )
 
 ;; 全局开启自动缩进
 ;; (aggressive-indent-global-mode t) 

@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@vinurs-mac.local
 ;; Version: $Id: @(#)dotspacemacs-layers.el,v 0.0 2016/05/25 15:13:53 vinurs Exp $
-;; Changed: <vinurs 12/07/2016 08:12:48>
+;; Changed: <vinurs 12/07/2016 10:26:36>
 ;; Keywords:
 ;; X-URL: not distributed yet
 
@@ -96,8 +96,6 @@
 	   org-enable-github-support t
 	   ;; 设置每个项目相关的todo list在每个项目的根目录下面
 	   org-projectile-file "TODOs.org")
-	 ;; 对org的一些额外的配置
-	 vinurs-org
 
 	 
 	 ;;  ;; spell-checking
