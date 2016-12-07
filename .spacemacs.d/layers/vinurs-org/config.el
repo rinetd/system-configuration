@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)config.el,v 0.0 2016/08/26 16:55:31 vinurs Exp $
-;; Changed: <vinurs 12/06/2016 23:02:51>
+;; Changed: <vinurs 12/07/2016 08:14:16>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -64,6 +64,19 @@
 											;; 字体配置
 											(variable . "mainfont=STKaiti")
 											)) 
+
+  ;; spacemacs里面的标题级别显示的符号，很漂亮
+  (setq org-bullets-bullet-list '("✹" "✤" "✪" "❈" "✬"
+								   "✭" "❀" "⇍" "☛"
+								   "⤁" "⤘" ))
+
+  ;; ;; 设置每个项目相关的todo list在每个项目的根目录下面
+  ;; (setq-default dotspacemacs-configuration-layers
+  ;; 	'((org :variables org-projectile-file "TODOs.org"))) 
+  ;; (with-eval-after-load 'org-agenda
+  ;; 	(require 'org-projectile)
+  ;; 	(push (org-projectile:todo-files) org-agenda-files)) 
+  ;; (add-to-list 'org-capture-templates (org-projectile:project-todo-entry)) 
 
   ;; orgmode todo
   (require 'org-todo) 

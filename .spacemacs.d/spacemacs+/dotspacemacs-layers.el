@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@vinurs-mac.local
 ;; Version: $Id: @(#)dotspacemacs-layers.el,v 0.0 2016/05/25 15:13:53 vinurs Exp $
-;; Changed: <vinurs 12/06/2016 22:33:59>
+;; Changed: <vinurs 12/07/2016 08:12:48>
 ;; Keywords:
 ;; X-URL: not distributed yet
 
@@ -82,7 +82,7 @@
 	 vinurs-basic
 
 	 ;; 跟mac按键兼容，暂时还是不要用了吧，按键感觉不适应
-	 osx
+	 ;; osx
 
 	 ;; 用得比较多的配置文件的格式
 	 yaml
@@ -92,7 +92,10 @@
 	 ;; 用来写文档
 	 markdown
 	 ;; spacemacs自带的org layer，效果非常好
-	 (org :variables org-enable-github-support t)
+	 (org :variables
+	   org-enable-github-support t
+	   ;; 设置每个项目相关的todo list在每个项目的根目录下面
+	   org-projectile-file "TODOs.org")
 	 ;; 对org的一些额外的配置
 	 vinurs-org
 
