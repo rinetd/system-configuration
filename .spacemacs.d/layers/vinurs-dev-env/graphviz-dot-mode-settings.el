@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@vinurs-mac.local
 ;; Version: $Id: @(#)graphviz-dot-mode-settings.el,v 0.0 2016/05/11 19:09:02 vinurs Exp $
-;; Changed: <vinurs 12/05/2016 14:41:48>
+;; Changed: <vinurs 12/07/2016 17:53:20>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -153,12 +153,6 @@ loaded in GNU Emacs, and `image-formats-alist' for XEmacs."
 		(when (eq l '())
 		  (message "No image found.")))))) 
 
-;; (spacemacs/set-leader-keys
-;;   (concat vinurs/graphviz-key-binding-prefixes "c") 'compile
-;;   (concat vinurs/graphviz-key-binding-prefixes "v") 'graphviz-dot-view
-;;   (concat vinurs/graphviz-key-binding-prefixes "p") 'new1-graphviz-dot-preview
-;;   (concat vinurs/graphviz-key-binding-prefixes "P") 'new-graphviz-dot-preview
-;;   ) 
 
 
 (add-hook 'graphviz-dot-mode-hook
