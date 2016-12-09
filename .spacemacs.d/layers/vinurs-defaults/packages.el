@@ -44,7 +44,7 @@
 	 (keyfreq)
 
 	 ;; highlight tail性感的小尾巴标识最近修改
-	 (highlight-tail)
+	 ;; (highlight-tail)
 
 	 ;; 括号匹配
 	 (parent-mode)
@@ -147,40 +147,40 @@ Each entry is either:
     )
   )
 
-(defun vinurs-defaults/init-highlight-tail ()
-  (use-package highlight-tail
-    :demand t
-    :config
-    (progn
+;; (defun vinurs-defaults/init-highlight-tail ()
+;;   (use-package highlight-tail
+;;     :demand t
+;;     :config
+;;     (progn
 
-      (spacemacs|diminish highlight-tail-mode " ℋ" " H") 
-      ;; 设置高亮的颜色
-      (setq highlight-tail-colors
-		'(("#c1e156" . 0)
-		   ("#b8ff07" . 25)
-		   ("#00c377" . 60))) 
+;;       (spacemacs|diminish highlight-tail-mode " ℋ" " H") 
+;;       ;; 设置高亮的颜色
+;;       (setq highlight-tail-colors
+;; 		'(("#c1e156" . 0)
+;; 		   ("#b8ff07" . 25)
+;; 		   ("#00c377" . 60))) 
 
-      ;; const则渐变固定长度的修 改，而这个长度则是由highlight-tail-const-width来控制的
-      (setq highlight-tail-steps 80
-		highlight-tail-timer 0.1
-		highlight-tail-const-width 30
-		) 
+;;       ;; const则渐变固定长度的修 改，而这个长度则是由highlight-tail-const-width来控制的
+;;       (setq highlight-tail-steps 80
+;; 		highlight-tail-timer 0.1
+;; 		highlight-tail-const-width 30
+;; 		) 
 
-      (setq highlight-tail-posterior-type 'const) 
+;;       (setq highlight-tail-posterior-type 'const) 
 
-	  (highlight-tail-make-faces
-		(highlight-tail-get-colors-fade-table-with-key 'default)) 
+;; 	  (highlight-tail-make-faces
+;; 		(highlight-tail-get-colors-fade-table-with-key 'default)) 
 
-      ;; 全局开启highlight-tail mode
-	  ;; 如果发现启动的时候报这个错误:
-	  ;; Error running timer ‘highlight-tail-check-if-defaultbgcolor-changed’: (invalid-function highlight-tail-get-colors-fade-table-with-key)
-	  ;; 那是因为这个宏在源文件中定义得比较晚，不过不影响使用，如果有洁癖，那么可以打开源文件，把这个宏定义移动到开头，那么久可以去掉这个错误了
-      (highlight-tail-mode) 
+;;       ;; 全局开启highlight-tail mode
+;; 	  ;; 如果发现启动的时候报这个错误:
+;; 	  ;; Error running timer ‘highlight-tail-check-if-defaultbgcolor-changed’: (invalid-function highlight-tail-get-colors-fade-table-with-key)
+;; 	  ;; 那是因为这个宏在源文件中定义得比较晚，不过不影响使用，如果有洁癖，那么可以打开源文件，把这个宏定义移动到开头，那么久可以去掉这个错误了
+;;       (highlight-tail-mode) 
 
-      )
+;;       )
 
-    )
-  )  
+;;     )
+;;   )  
 
 
 (defun vinurs-defaults/init-template () 
