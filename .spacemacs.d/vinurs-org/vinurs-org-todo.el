@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)org-todo.el,v 0.0 2016/10/19 22:50:11 vinurs Exp $
-;; Changed: <vinurs 12/08/2016 21:59:24>
+;; Changed: <vinurs 12/09/2016 15:40:37>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
