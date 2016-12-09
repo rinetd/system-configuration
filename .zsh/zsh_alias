@@ -13,7 +13,6 @@ alias grep='grep --color=auto -n'
 alias g-compile='cd ~/.personal/compile'
 alias g-trash='cd ~/.local/share/Trash/files'
 
-alias top=htop
 alias vi='vim'
 
 alias reset='clear'

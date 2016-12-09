@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@vinurs-mac.local
 ;; Version: $Id: @(#)dotspacemacs-layers.el,v 0.0 2016/05/25 15:13:53 vinurs Exp $
-;; Changed: <vinurs 12/07/2016 10:26:36>
+;; Changed: <vinurs 12/09/2016 11:37:53>
 ;; Keywords:
 ;; X-URL: not distributed yet
 
@@ -82,7 +82,7 @@
 	 vinurs-basic
 
 	 ;; 跟mac按键兼容，暂时还是不要用了吧，按键感觉不适应
-	 ;; osx
+	 osx
 
 	 ;; 用得比较多的配置文件的格式
 	 yaml

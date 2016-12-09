@@ -4,7 +4,11 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)c-c++-common-settings.el,v 0.0 2016/12/08 11:13:16 vinurs Exp $
-;; Changed: <vinurs 12/08/2016 19:25:46>
+<<<<<<< HEAD:.spacemacs.d/layers/vinurs-dev-env/c-c++-common-settings.el
+;; Changed: <vinurs 12/09/2016 15:42:55>
+=======
+;; Changed: <vinurs 12/09/2016 12:22:52>
+>>>>>>> dev:.spacemacs.d/layers/vinurs-dev-env/c-c++-common-settings.el
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -55,7 +59,9 @@
 	 ;; hide/show
 	 (c-mode "mh"   "hide/show")
 	 (c++-mode "mh"   "hide/show")
-
+	 ;; format code
+	 (c-mode "mf"   "format")
+	 (c++-mode "mf"   "format")
 	 )) 
 
 
@@ -155,6 +161,18 @@
 (spacemacs/set-leader-keys-for-major-mode 'c++-mode
   "h e" 'my-hif-toggle-block) 
 
+
+;; uncrustify-mode
+(require 'uncrustify-mode) 
+(spacemacs/set-leader-keys-for-major-mode 'c-mode
+  "f r" 'uncrustify-region) 
+(spacemacs/set-leader-keys-for-major-mode 'c-mode
+  "f b" 'uncrustify-buffer) 
+
+(spacemacs/set-leader-keys-for-major-mode 'c++-mode
+  "f r" 'uncrustify-region) 
+(spacemacs/set-leader-keys-for-major-mode 'c++-mode
+  "f b" 'uncrustify-buffer) 
 
 
 

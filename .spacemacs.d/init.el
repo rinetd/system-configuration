@@ -10,6 +10,10 @@
 (show-current-timestamp "begin start spacemacs") 
 
 (push "~/.spacemacs.d/spacemacs+" load-path)
+;; emacs.d private cfg 
+;; add to load-path first
+(push "~/Dropbox/home/.emacs.d/" load-path)
+
 ;;由菜单修改配置的东西将会保存在custom-file里
 (setq custom-file "~/.spacemacs.d/custom.el")
 

@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)config.el,v 0.0 2016/08/26 16:55:31 vinurs Exp $
-;; Changed: <vinurs 12/07/2016 18:49:51>
+;; Changed: <vinurs 12/09/2016 15:44:15>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -48,6 +48,15 @@
 ;; org-mode, 自动换行
 (add-hook 'org-mode-hook
   (lambda () (setq truncate-lines nil))) 
+;; agenda mode
+(add-hook 'org-agenda-mode-hook
+  (lambda ()
+	(progn
+	  (setq truncate-lines nil)
+	  ;; 关闭显示行号，要不然太丑了
+	  (linum-mode -1) 
+	  ))) 
+
 ;; org文件里面的代码块高亮
 (setq org-src-fontify-natively t) 
 
@@ -76,9 +85,6 @@
 
 ;; orgmode todo
 (require 'vinurs-org-todo) 
-
-
-
 
 
 

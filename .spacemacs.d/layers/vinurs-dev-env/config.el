@@ -12,8 +12,6 @@
 ;; for gluster dev
 (require 'glusterfs-mode)
 
-;; uncrustify-mode
-(require 'uncrustify-mode) 
 
 ;; c-settings
 (with-eval-after-load 'cc-mode
