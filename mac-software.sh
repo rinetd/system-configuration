@@ -58,6 +58,9 @@ brew install uncrustify
 brew install pandoc
 brew cask install mactex
 
+# karabiner-elements，用来对键盘进行修改
+brew cask install karabiner-elements
+
 
 # 当某一个窗口的焦点被挪开多少秒以后，该窗口自动最小化
 brew cask install hocus-focus 
