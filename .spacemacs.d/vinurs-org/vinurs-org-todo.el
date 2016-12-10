@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)org-todo.el,v 0.0 2016/10/19 22:50:11 vinurs Exp $
-;; Changed: <vinurs 12/09/2016 15:45:08>
+;; Changed: <vinurs 12/10/2016 11:09:03>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -127,7 +127,7 @@
 (setq org-todo-keywords
   '(
 	 ;; 通用GTD流程
-	 (sequence "TODO(t@/!)" "|" "DONE(d@/!)")
+	 (sequence "TODO(t@/!)" "PROCESSING(p@/!)" "|" "DONE(d@/!)")
 	 ;; bug处理流程
 	 (sequence "REPORT(r@/!)" "BUG(b@/!)" "KNOWNCAUSE(k@/!)" "|" "FIXED(f@/!)")
 	 (sequence "|" "CANCELED(c@/!)")

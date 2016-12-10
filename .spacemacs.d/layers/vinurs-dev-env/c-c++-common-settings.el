@@ -4,11 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)c-c++-common-settings.el,v 0.0 2016/12/08 11:13:16 vinurs Exp $
-<<<<<<< HEAD:.spacemacs.d/layers/vinurs-dev-env/c-c++-common-settings.el
-;; Changed: <vinurs 12/09/2016 15:42:55>
-=======
-;; Changed: <vinurs 12/09/2016 12:22:52>
->>>>>>> dev:.spacemacs.d/layers/vinurs-dev-env/c-c++-common-settings.el
+;; Changed: <vinurs 12/10/2016 11:14:16>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 

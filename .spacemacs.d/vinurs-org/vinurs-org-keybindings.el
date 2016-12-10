@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)keybindings.el,v 0.0 2016/08/31 09:47:44 vinurs Exp $
-;; Changed: <vinurs 12/07/2016 10:36:08>
+;; Changed: <vinurs 12/10/2016 10:24:51>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -98,10 +98,17 @@
 ;; 将space+o+m定义成major-mode
 (spacemacs/set-leader-keys "aod" 'org-pandoc-export-to-latex-pdf) 
 
-;; (setq vinurs-spacemacs/key-binding-prefixes '(
-;; 											   ("mo"   "user-defineds")
-;; 											   ("oa"  "applications")
-;; 											   )) 
+;; 重新定义org-agenda函数
+;; 主要增加了最大化窗口功能
+(spacemacs/set-leader-keys
+  "aoa"
+  (defun vinurs-org-agenda-list (&optional ARG START-DAY SPAN WITH-HOUR)
+	(interactive)
+	(org-agenda-list ARG START-DAY SPAN WITH-HOUR)
+	;; 最大化agenda窗口
+	(delete-other-windows)
+	)
+  ) 
 
 
 (provide 'vinurs-org-keybindings)
