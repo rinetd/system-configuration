@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)org-todo.el,v 0.0 2016/10/19 22:50:11 vinurs Exp $
-;; Changed: <vinurs 12/10/2016 21:49:13>
+;; Changed: <vinurs 12/11/2016 00:09:33>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -78,9 +78,6 @@
 	 ("w" "工作相关" entry
 	   (file+headline "~/Dropbox/home/.org-agenda/work.org" "Tasks")
 	   "* TODO %?\n %U\n" :clock-in t :clock-resume t)
-	 ("p" "周期性任务" entry
-	   (file+headline "~/Dropbox/home/.org-agenda/periodical-task.org" "Tasks")
-	   "* TODO %?\n  %U\n %i\n")
 	 ("i" "自我提升" entry
 	   (file+headline "~/Dropbox/home/.org-agenda/self-improvement.org" "Tasks")
 	   "* TODO %?\n  %U\n %i\n")
@@ -122,14 +119,14 @@
 
 ;; 每隔5分钟更新一下appt list
 (run-at-time "1 sec" 300 'org-agenda-to-appt) 
+;; update appt list on agenda view
+(add-hook 'org-finalize-agenda-hook 'org-agenda-to-appt) 
 
 ;; (appt-activate 1)                ;; activate appointment notification
 ;; (display-time)                   ;; activate time display
 
 
 
-;; (run-at-time "24:01" 3600 'org-agenda-to-appt)           ;; update appt list hourly
-;; (add-hook 'org-finalize-agenda-hook 'org-agenda-to-appt) ;; update appt list on agenda view
 
 ;; (defun notify-osx (title message)   
 ;;   (call-process "terminal-notifier"		 
