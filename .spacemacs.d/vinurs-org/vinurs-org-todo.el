@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)org-todo.el,v 0.0 2016/10/19 22:50:11 vinurs Exp $
-;; Changed: <vinurs 12/10/2016 11:09:03>
+;; Changed: <vinurs 12/10/2016 21:49:13>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -92,29 +92,82 @@
 ;; 提前2天提醒
 (setq org-deadline-warning-days 2)
 
-;; appt配置
-(setq appt-audible t) 
-;; 任务开始前的多长时间开始提醒，以分钟为单位
-(setq appt-message-warning-time 10)
-;; 提醒持续时间（秒）
-(setq appt-display-duration '30)
-;;在状态栏显示时间（分钟）
-(setq appt-display-mode-line t)
 
 
-;; (setq org-capture-templates
-;;   (quote (("i" "idea" entry (file (concat org-directory "/idea.org"))
-;; 			"*  %^{Title} %?\n%U\n%a\n")
-;; 		   ("t" "todo" entry (file (concat org-directory "/gtd.org"))
-;; 			 "* TODO %?\n%U\n%a\n" :clock-in t :clock-resume t)
-;; 		   ("n" "note" entry (file (concat org-directory "/note.org"))
-;; 			 "* %? :NOTE:\n%U\n%a\n" :clock-in t :clock-resume t)
-;; 		   ("j" "Journal" entry (file+datetree (concat org-directory "/journal.org"))
-;; 			 "*  %^{Title} %?\n%U\n%a\n" :clock-in t :clock-resume t)
-;; 		   ("b" "Book" entry (file+datetree \t \t (concat org-directory "/book.org"))
-;; 			 "* Topic: %^{Description}  %^g %? Added: %U") 
-		   
-;; 		   )))
+;;;;;;;;;; appt相关配置
+(setq
+  ;; clear existing appt list
+  appt-time-msg-list nil
+
+  ;; 任务开始前的多长时间开始提醒，以分钟为单位
+  appt-message-warning-time 10
+
+  ;; 在上面的appt-message-warning-time到了以后，从那时候开始每隔10(分钟)提醒一次
+  appt-display-interval '10
+
+  ;; 提醒持续时间（秒）
+  appt-display-duration '15
+
+  ;;在状态栏显示时间（分钟）
+  appt-display-mode-line t
+
+  ;; If this is non-nil, Emacs displays the appointment message in another window. The default is t.
+  appt-msg-window t
+  
+  appt-audible t
+
+  ;; pass warnings to the designated window function
+  appt-display-format 'window
+  ) 
+
+;; 每隔5分钟更新一下appt list
+(run-at-time "1 sec" 300 'org-agenda-to-appt) 
+
+;; (appt-activate 1)                ;; activate appointment notification
+;; (display-time)                   ;; activate time display
+
+
+
+;; (run-at-time "24:01" 3600 'org-agenda-to-appt)           ;; update appt list hourly
+;; (add-hook 'org-finalize-agenda-hook 'org-agenda-to-appt) ;; update appt list on agenda view
+
+;; (defun notify-osx (title message)   
+;;   (call-process "terminal-notifier"		 
+;; 	nil 0 nil		 
+;; 	"-group" "Emacs"		 
+;; 	"-title" title		 
+;; 	"-sender" "org.gnu.Emacs"
+;; 	"-message" message
+;; 	"-activate" "oeg.gnu.Emacs")) 
+
+;; (notify-osx "hello" "nihao") 
+
+;; (defun my-appt-display (min-to-app new-time msg)
+;;   (notify-osx
+;; 	(format "Appointment in %s minutes" min-to-app)    ;; passed to -title in terminal-notifier call
+;; 	(format "%s" msg)))                                ;; passed to -message in terminal-notifier call
+;; (setq appt-disp-window-function (function my-appt-display)) 
+
+
+
+;; (org-agenda-to-appt)             ;; generate the appt list from org agenda files on emacs launch
+;; (run-at-time "24:01" 3600 'org-agenda-to-appt)           ;; update appt list hourly
+;; (add-hook 'org-finalize-agenda-hook 'org-agenda-to-appt) ;; update appt list on agenda view
+
+;; (defun my-appt-display (min-to-app new-time msg)
+;;   (notify-osx
+;; 	(format "Appointment in %s minutes" min-to-app)    ;; passed to -title in terminal-notifier call
+;; 	(format "%s" msg)))                                ;; passed to -message in terminal-notifier call
+;; (setq appt-disp-window-function (function my-appt-display))
+;; (defun notify-osx (title message)
+;;   (call-process "terminal-notifier"
+;; 	nil 0 nil
+;; 	"-group" "Emacs"
+;; 	"-title" title
+;; 	"-sender" "org.gnu.Emacs"
+;; 	"-message" message
+;; 	"-activate" "oeg.gnu.Emacs")) 
+
 
 ;; keywords定义,括号里面为缩写,@表示状态改变的时候记一个笔记，
 ;; 添加笔记和状态变更信息(包括时间信息)，用"@"表示
@@ -127,7 +180,7 @@
 (setq org-todo-keywords
   '(
 	 ;; 通用GTD流程
-	 (sequence "TODO(t@/!)" "PROCESSING(p@/!)" "|" "DONE(d@/!)")
+	 (sequence "TODO(t@/!)" "正在处理(p@/!)" "|" "已完成(d@/!)")
 	 ;; bug处理流程
 	 (sequence "REPORT(r@/!)" "BUG(b@/!)" "KNOWNCAUSE(k@/!)" "|" "FIXED(f@/!)")
 	 (sequence "|" "CANCELED(c@/!)")
@@ -147,6 +200,7 @@
 	 ("休闲" .      (:foreground "MediumBlue" :weight bold)) 
 	 ("PENDING" .   (:background "LightGreen" :foreground "gray" :weight bold))
 	 ("DONE" .      (:background "azure" :foreground "Darkgreen" :weight bold)) 
+	 ("已完成" .      (:background "azure" :foreground "Darkgreen" :weight bold)) 
 	 ("ABORT" .     (:background "gray" :foreground "black"))
 	 )) 
 
