@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)emacs-lisp-settings.el,v 0.0 2016/12/07 17:15:19 vinurs Exp $
-;; Changed: <vinurs 12/09/2016 09:04:03>
+;; Changed: <vinurs 12/11/2016 00:39:54>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -44,7 +44,7 @@
 ;;;;##########################################################################
 
 
-(setq lisp-indent-offset 3)
+(setq lisp-indent-offset 3) 
 
 
 
