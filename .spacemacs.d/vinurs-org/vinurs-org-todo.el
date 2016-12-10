@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)org-todo.el,v 0.0 2016/10/19 22:50:11 vinurs Exp $
-;; Changed: <vinurs 12/11/2016 00:09:33>
+;; Changed: <vinurs 12/11/2016 00:34:39>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -48,6 +48,8 @@
 (setq org-directory "~/Dropbox/home/.org-agenda") 
 (setq org-agenda-files `(,org-directory)) 
 
+;; 默认agenda只显示当天的
+(setq org-agenda-span 1)  
 
 ;; capture模板, 快速记录任务的时候
 (setq org-capture-templates
