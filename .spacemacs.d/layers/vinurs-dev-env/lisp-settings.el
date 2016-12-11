@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@vinurs-mac.local
 ;; Version: $Id: @(#)listp-settings.el,v 0.0 2016/05/02 09:12:23 vinurs Exp $
-;; Changed: <vinurs 06/30/2016 21:27:07>
+;; Changed: <vinurs 12/11/2016 00:41:36>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -43,7 +43,7 @@
 ;;;;  User Options, Variables
 ;;;;##########################################################################
 
-(setq lisp-indent-offset 2) 
+(setq lisp-indent-offset 3) 
 
 
 

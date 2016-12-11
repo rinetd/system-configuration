@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)org-todo.el,v 0.0 2016/10/19 22:50:11 vinurs Exp $
-;; Changed: <vinurs 12/09/2016 15:45:08>
+;; Changed: <vinurs 12/11/2016 14:59:00>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -35,7 +35,7 @@
 ;;; Code:
 
 (eval-when-compile
-  (require 'cl))
+   (require 'cl))
 
 
 
@@ -49,42 +49,60 @@
 (setq org-agenda-files `(,org-directory)) 
 
 
+;; 自动更新org-agenda buffer
+(defun redo-all-agenda-buffers ()
+   (interactive)
+   (dolist (buffer (buffer-list))
+   	  (with-current-buffer buffer
+   		 (when (derived-mode-p 'org-agenda-mode)
+			(progn
+			   (display-buffer buffer)
+			   (org-agenda-maybe-redo)
+			   ))))) 
+(add-hook 'org-mode-hook
+   (lambda()
+	  (add-hook 'after-save-hook 'redo-all-agenda-buffers nil 'make-it-local) 
+	  )) 
+
+
+
+;; 默认agenda只显示当天的
+(setq org-agenda-span 1)  
+
+
 ;; capture模板, 快速记录任务的时候
 (setq org-capture-templates
-  '(
-	 ("a" "搜集所有未分类的任务" entry
-	   (file+headline "~/Dropbox/home/.org-agenda/inbox.org" "Tasks")
-	   "* %?\n 收集于: %U\n %i\n") 
-	 ("b" "读书清单" entry 
-	   (file+headline
-		 "~/Dropbox/home/.org-agenda/books.org"
-		 "Books")
-	   "* TODO %?\n  添加于: %U\n %i\n\n"
-	   :empty-lines 1)
+   '(
+	   ("a" "搜集所有未分类的任务" entry
+		  (file+headline "~/Dropbox/home/.org-agenda/inbox.org" "Tasks")
+		  "* %?\n 收集于: %U\n %i\n") 
+	   ("b" "读书清单" entry 
+		  (file+headline
+			 "~/Dropbox/home/.org-agenda/books.org"
+			 "Books")
+		  "* TODO %?\n  添加于: %U\n %i\n\n"
+		  :empty-lines 1)
 
-	 ("s" "购物清单" entry 
-	   (file+headline
-		 "~/Dropbox/home/.org-agenda/shopping.org"
-		 "ShoppingList")
-	   "* TODO %?\n  添加于: %U\n %i\n\n"
-	   :empty-lines 1)
-	 ("l" "生活相关" entry 
-	   (file+headline
-		 "~/Dropbox/home/.org-agenda/life.org"
-		 "ShoppingList")
-	   "* TODO %?\n  添加于: %U\n %i\n\n"
-	   :empty-lines 1)
+	   ("s" "购物清单" entry 
+		  (file+headline
+			 "~/Dropbox/home/.org-agenda/shopping.org"
+			 "ShoppingList")
+		  "* TODO %?\n  添加于: %U\n %i\n\n"
+		  :empty-lines 1)
+	   ("l" "生活相关" entry 
+		  (file+headline
+			 "~/Dropbox/home/.org-agenda/life.org"
+			 "ShoppingList")
+		  "* TODO %?\n  添加于: %U\n %i\n\n"
+		  :empty-lines 1)
 
-	 ("w" "工作相关" entry
-	   (file+headline "~/Dropbox/home/.org-agenda/work.org" "Tasks")
-	   "* TODO %?\n %U\n" :clock-in t :clock-resume t)
-	 ("p" "周期性任务" entry
-	   (file+headline "~/Dropbox/home/.org-agenda/periodical-task.org" "Tasks")
-	   "* TODO %?\n  %U\n %i\n")
-	 ("i" "自我提升" entry
-	   (file+headline "~/Dropbox/home/.org-agenda/self-improvement.org" "Tasks")
-	   "* TODO %?\n  %U\n %i\n")
-	 )) 
+	   ("w" "工作相关" entry
+		  (file+headline "~/Dropbox/home/.org-agenda/work.org" "Tasks")
+		  "* TODO %?\n %U\n" :clock-in t :clock-resume t)
+	   ("i" "自我提升" entry
+		  (file+headline "~/Dropbox/home/.org-agenda/self-improvement.org" "Tasks")
+		  "* TODO %?\n  %U\n %i\n")
+	   )) 
 
 ;; 任务太多完成以后归档的文件
 (setq org-archive-location "%s_archive::* Archive")
@@ -92,29 +110,82 @@
 ;; 提前2天提醒
 (setq org-deadline-warning-days 2)
 
-;; appt配置
-(setq appt-audible t) 
-;; 任务开始前的多长时间开始提醒，以分钟为单位
-(setq appt-message-warning-time 10)
-;; 提醒持续时间（秒）
-(setq appt-display-duration '30)
-;;在状态栏显示时间（分钟）
-(setq appt-display-mode-line t)
 
 
-;; (setq org-capture-templates
-;;   (quote (("i" "idea" entry (file (concat org-directory "/idea.org"))
-;; 			"*  %^{Title} %?\n%U\n%a\n")
-;; 		   ("t" "todo" entry (file (concat org-directory "/gtd.org"))
-;; 			 "* TODO %?\n%U\n%a\n" :clock-in t :clock-resume t)
-;; 		   ("n" "note" entry (file (concat org-directory "/note.org"))
-;; 			 "* %? :NOTE:\n%U\n%a\n" :clock-in t :clock-resume t)
-;; 		   ("j" "Journal" entry (file+datetree (concat org-directory "/journal.org"))
-;; 			 "*  %^{Title} %?\n%U\n%a\n" :clock-in t :clock-resume t)
-;; 		   ("b" "Book" entry (file+datetree \t \t (concat org-directory "/book.org"))
-;; 			 "* Topic: %^{Description}  %^g %? Added: %U") 
-		   
-;; 		   )))
+;;;;;;;;;; appt相关配置
+(setq
+   ;; clear existing appt list
+   appt-time-msg-list nil
+
+   ;; 任务开始前的多长时间开始提醒，以分钟为单位
+   appt-message-warning-time 10
+
+   ;; 在上面的appt-message-warning-time到了以后，从那时候开始每隔10(分钟)提醒一次
+   appt-display-interval '10
+
+   ;; 提醒持续时间（秒）
+   appt-display-duration '15
+
+   ;;在状态栏显示时间（分钟）
+   appt-display-mode-line t
+
+   ;; If this is non-nil, Emacs displays the appointment message in another window. The default is t.
+   appt-msg-window t
+   
+   appt-audible t
+
+   ;; pass warnings to the designated window function
+   appt-display-format 'window
+   ) 
+
+;; 每隔5分钟更新一下appt list
+(run-at-time "1 sec" 300 'org-agenda-to-appt) 
+;; update appt list on agenda view
+(add-hook 'org-finalize-agenda-hook 'org-agenda-to-appt) 
+
+;; (appt-activate 1)                ;; activate appointment notification
+;; (display-time)                   ;; activate time display
+
+
+
+
+;; (defun notify-osx (title message)   
+;;   (call-process "terminal-notifier"		 
+;; 	nil 0 nil		 
+;; 	"-group" "Emacs"		 
+;; 	"-title" title		 
+;; 	"-sender" "org.gnu.Emacs"
+;; 	"-message" message
+;; 	"-activate" "oeg.gnu.Emacs")) 
+
+;; (notify-osx "hello" "nihao") 
+
+;; (defun my-appt-display (min-to-app new-time msg)
+;;   (notify-osx
+;; 	(format "Appointment in %s minutes" min-to-app)    ;; passed to -title in terminal-notifier call
+;; 	(format "%s" msg)))                                ;; passed to -message in terminal-notifier call
+;; (setq appt-disp-window-function (function my-appt-display)) 
+
+
+
+;; (org-agenda-to-appt)             ;; generate the appt list from org agenda files on emacs launch
+;; (run-at-time "24:01" 3600 'org-agenda-to-appt)           ;; update appt list hourly
+;; (add-hook 'org-finalize-agenda-hook 'org-agenda-to-appt) ;; update appt list on agenda view
+
+;; (defun my-appt-display (min-to-app new-time msg)
+;;   (notify-osx
+;; 	(format "Appointment in %s minutes" min-to-app)    ;; passed to -title in terminal-notifier call
+;; 	(format "%s" msg)))                                ;; passed to -message in terminal-notifier call
+;; (setq appt-disp-window-function (function my-appt-display))
+;; (defun notify-osx (title message)
+;;   (call-process "terminal-notifier"
+;; 	nil 0 nil
+;; 	"-group" "Emacs"
+;; 	"-title" title
+;; 	"-sender" "org.gnu.Emacs"
+;; 	"-message" message
+;; 	"-activate" "oeg.gnu.Emacs")) 
+
 
 ;; keywords定义,括号里面为缩写,@表示状态改变的时候记一个笔记，
 ;; 添加笔记和状态变更信息(包括时间信息)，用"@"表示
@@ -125,50 +196,51 @@
 ;; DONE(d@/!)     ; 进入时添加笔记，离开时添加变更信息
 ;; http://www.zmonster.me/2015/07/15/org-mode-planning.html#orgheadline2参照这里的解释
 (setq org-todo-keywords
-  '(
-	 ;; 通用GTD流程
-	 (sequence "TODO(t@/!)" "|" "DONE(d@/!)")
-	 ;; bug处理流程
-	 (sequence "REPORT(r@/!)" "BUG(b@/!)" "KNOWNCAUSE(k@/!)" "|" "FIXED(f@/!)")
-	 (sequence "|" "CANCELED(c@/!)")
-	 (sequence "|" "ABORT(a@/!)")
-	 )) 
+   '(
+	   ;; 通用GTD流程
+	   (sequence "TODO(t@/!)" "正在处理(p@/!)" "|" "已完成(d@/!)")
+	   ;; bug处理流程
+	   (sequence "REPORT(r@/!)" "BUG(b@/!)" "KNOWNCAUSE(k@/!)" "|" "FIXED(f@/!)")
+	   (sequence "|" "CANCELED(c@/!)")
+	   (sequence "|" "ABORT(a@/!)")
+	   )) 
 
 
 
 ;; 关键字的字体设置
 (setq org-todo-keyword-faces
-  '(
-	 ("TODO" .      (:inherit hl-todo :foreground "#cc9393"))
-	 ("STARTED" . "yellow")
-	 ("CANCELED" . (:foreground "blue" :weight bold))
-	 ("工作" .      (:background "red" :foreground "white" :weight bold))
-	 ("学习" .      (:background "white" :foreground "red" :weight bold))
-	 ("休闲" .      (:foreground "MediumBlue" :weight bold)) 
-	 ("PENDING" .   (:background "LightGreen" :foreground "gray" :weight bold))
-	 ("DONE" .      (:background "azure" :foreground "Darkgreen" :weight bold)) 
-	 ("ABORT" .     (:background "gray" :foreground "black"))
-	 )) 
+   '(
+	   ("TODO" .      (:inherit hl-todo :foreground "#cc9393"))
+	   ("STARTED" . "yellow")
+	   ("CANCELED" . (:foreground "blue" :weight bold))
+	   ("工作" .      (:background "red" :foreground "white" :weight bold))
+	   ("学习" .      (:background "white" :foreground "red" :weight bold))
+	   ("休闲" .      (:foreground "MediumBlue" :weight bold)) 
+	   ("PENDING" .   (:background "LightGreen" :foreground "gray" :weight bold))
+	   ("DONE" .      (:background "azure" :foreground "Darkgreen" :weight bold)) 
+	   ("已完成" .      (:background "azure" :foreground "Darkgreen" :weight bold)) 
+	   ("ABORT" .     (:background "gray" :foreground "black"))
+	   )) 
 
 
 ;; 定义标签
 (setq org-tag-alist (quote ((:startgroup)
-							 ("@errand" . ?e)
-							 ("@office" . ?o)
-							 ("@home" . ?H)
-							 ("@farm" . ?f)
-							 (:endgroup)
-							 ("WAITING" . ?w)
-							 ("HOLD" . ?h)
-							 ("PERSONAL" . ?P)
-							 ("WORK" . ?W)
-							 ("FARM" . ?F)
-							 ("ORG" . ?O)
-							 ("NORANG" . ?N)
-							 ("crypt" . ?E)
-							 ("NOTE" . ?n)
-							 ("CANCELLED" . ?c)
-							 ("FLAGGED" . ??))))
+							  ("@errand" . ?e)
+							  ("@office" . ?o)
+							  ("@home" . ?H)
+							  ("@farm" . ?f)
+							  (:endgroup)
+							  ("WAITING" . ?w)
+							  ("HOLD" . ?h)
+							  ("PERSONAL" . ?P)
+							  ("WORK" . ?W)
+							  ("FARM" . ?F)
+							  ("ORG" . ?O)
+							  ("NORANG" . ?N)
+							  ("crypt" . ?E)
+							  ("NOTE" . ?n)
+							  ("CANCELLED" . ?c)
+							  ("FLAGGED" . ??))))
 
 ;; 记录下整个TODO list的所有状态改变的时间
 ;; 设置后每次将任务改变为 DONE 状态时在任务下添加一行内容 CLOSED: [timestamp]
