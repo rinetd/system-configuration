@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)org-todo.el,v 0.0 2016/10/19 22:50:11 vinurs Exp $
-;; Changed: <vinurs 12/11/2016 00:41:57>
+;; Changed: <vinurs 12/11/2016 14:59:00>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -49,9 +49,26 @@
 (setq org-agenda-files `(,org-directory)) 
 
 
+;; 自动更新org-agenda buffer
+(defun redo-all-agenda-buffers ()
+   (interactive)
+   (dolist (buffer (buffer-list))
+   	  (with-current-buffer buffer
+   		 (when (derived-mode-p 'org-agenda-mode)
+			(progn
+			   (display-buffer buffer)
+			   (org-agenda-maybe-redo)
+			   ))))) 
+(add-hook 'org-mode-hook
+   (lambda()
+	  (add-hook 'after-save-hook 'redo-all-agenda-buffers nil 'make-it-local) 
+	  )) 
+
+
 
 ;; 默认agenda只显示当天的
 (setq org-agenda-span 1)  
+
 
 ;; capture模板, 快速记录任务的时候
 (setq org-capture-templates
