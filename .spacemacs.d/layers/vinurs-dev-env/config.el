@@ -5,7 +5,8 @@
 (setq default-tab-width 4) 
 (setq-default tab-width 4)
 (setq standard-indent 4)
-(setq-default indent-tabs-mode t) 
+;; TODO: 下面这个后面也要删掉
+;; (setq-default indent-tabs-mode t) 
 
 
 ;; for gluster dev

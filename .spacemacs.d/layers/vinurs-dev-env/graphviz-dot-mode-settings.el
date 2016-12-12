@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@vinurs-mac.local
 ;; Version: $Id: @(#)graphviz-dot-mode-settings.el,v 0.0 2016/05/11 19:09:02 vinurs Exp $
-;; Changed: <vinurs 12/12/2016 19:49:48>
+;; Changed: <vinurs 12/12/2016 23:30:47>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -171,9 +171,77 @@ loaded in GNU Emacs, and `image-formats-alist' for XEmacs."
 
 			)) 
 
+(defun graphviz-dot-indent-line ()
+   "Indent current line of dot code."
+   (interactive)
+   (if (bolp)
+      (graphviz-dot-real-indent-line)
+      (save-excursion
+         (graphviz-dot-real-indent-line)))) 
 
-
-
+;; 重新定义这个函数，貌似现在缩进有点问题
+(defun graphviz-dot-real-indent-line ()
+   "Indent current line of dot code."
+   (beginning-of-line)
+   (cond
+      ((bobp)
+         ;; simple case, indent to 0
+         (indent-line-to 0))
+      ((looking-at "^[ \t]*}[ \t]*$")
+         ;; block closing, deindent relative to previous line
+         (indent-line-to (save-excursion
+                            (forward-line -1)
+                            (if (looking-at "\\(^.*{[^}]*$\\)")
+                               ;; previous line opened a block
+                               ;; use same indentation
+                               (current-indentation)
+                               (max 0 (- (current-indentation) graphviz-dot-indent-width))))))
+      ;; other cases need to look at previous lines
+      (t
+         (indent-line-to (save-excursion
+                            (forward-line -1)
+                            (cond
+                               ((looking-at "\\(^.*{[^}]*$\\)")
+                                  ;; previous line opened a block
+                                  ;; indent to that line
+                                  (+ (current-indentation) graphviz-dot-indent-width))
+                               ((and (not (looking-at ".*\\[.*\\].*"))
+                                   (looking-at ".*\\[.*")) ; TODO:PP : can be 1 regex
+                                  ;; previous line started filling
+                                  ;; attributes, intend to that start
+                                  (search-forward "[")
+                                  (current-column))
+                               ((and (not (looking-at ".*\\[.*\\].*"))
+                                   (looking-at ".*\\].*")) ; TODO:PP : "
+                                  ;; previous line stopped filling
+                                  ;; attributes, find the line that started
+                                  ;; filling them and indent to that line
+                                  (while (or (looking-at ".*\\[.*\\].*")
+                                            (not (looking-at ".*\\[.*"))) ; TODO:PP : "
+                                     (forward-line -1))
+                                  (current-indentation))
+                               (t
+                                  ;; default case, indent the
+                                  ;; same as previous NON-BLANK line
+                                  ;; (or the first line, if there are no previous non-blank lines)
+                                  (while (and (< (point-min) (point))
+                                            (looking-at "^\[ \t\]*$"))
+                                     (forward-line -1))
+                                  ;; 寻找]
+                                  (if (and (looking-at ".*\\].*")
+                                         (not (looking-at ".*\\[.*")))
+                                     (progn
+                                        (while (or (looking-at ".*\\[.*\\].*")
+                                                  (not (looking-at ".*\\[.*"))) ; TODO:PP : "
+                                           (progn
+                                              (forward-line -1)
+                                              )
+                                           )
+                                        (current-indentation)
+                                        )
+                                     (progn
+                                        (current-indentation)
+                                        ))) ))) ))) 
 
 
 (provide 'graphviz-dot-mode-settings)
