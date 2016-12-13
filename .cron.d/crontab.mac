@@ -21,6 +21,8 @@ PATH=/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:~/bin
 # 每30分钟去检测一下aria是否在运行
 */1 * * * * aria.sh
 
+# 每天12点的时候去删除一下tmux的日志
+00 12 * * * tmux-log-clr
 
 # 每隔10分钟用getmail去取一下邮件
 # */10 * * * * getmail.sh 1>/dev/null 2>&1

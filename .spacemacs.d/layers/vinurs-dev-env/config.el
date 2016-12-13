@@ -1,12 +1,12 @@
 (push "~/.spacemacs.d/layers/vinurs-dev-env/" load-path) 
-;;(push "/Users/vinurs/system-configuration/.spacemacs.d/layers/vinurs-dev-env/" load-path)
-;; 映射c-h为delete
-;; (define-key helm-map (kbd "C-h") 'delete-backward-char)
-;; (semantic-mode 1)
-;; (spacemacs/toggle-semantic-stickyfunc-globally-on)
+
+
+;; TODO: 这个好奇怪，后面要删掉
+(setq default-tab-width 4) 
 (setq-default tab-width 4)
 (setq standard-indent 4)
-(setq-default indent-tabs-mode t) 
+;; TODO: 下面这个后面也要删掉
+;; (setq-default indent-tabs-mode t) 
 
 
 ;; for gluster dev

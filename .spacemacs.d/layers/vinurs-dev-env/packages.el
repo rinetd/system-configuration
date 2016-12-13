@@ -84,7 +84,7 @@ Each entry is either:
     :defer t
     :config
     (progn
-      (require 'graphviz-dot-mode-settings)
+      (require 'graphviz-dot-mode-settings) 
 	  (spacemacs|diminish graphviz-dot-mode " ⓓ" " d") 
       )
     )

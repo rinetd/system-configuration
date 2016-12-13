@@ -7,6 +7,8 @@ alias rm='rm -i'
 alias ls='ls -F '
 alias cls='reset '
 
+# 笔记本目录
+alias g-notebook='cd ~/Dropbox/home/notebook'
 
 alias ll='ls -l'
 alias grep='grep --color=auto -n'

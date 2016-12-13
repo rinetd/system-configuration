@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)config.el,v 0.0 2016/08/26 16:55:31 vinurs Exp $
-;; Changed: <vinurs 12/09/2016 15:44:15>
+;; Changed: <vinurs 12/12/2016 09:07:04>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -57,7 +57,7 @@
 	  (linum-mode -1) 
 	  ))) 
 
-;; org文件里面的代码块高亮
+;; 编辑org文件的时候，org文件里面的代码块高亮
 (setq org-src-fontify-natively t) 
 
 ;; 对于org文档里面的不可见部分也能显示
