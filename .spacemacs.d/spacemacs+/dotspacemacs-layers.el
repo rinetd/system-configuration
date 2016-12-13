@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@vinurs-mac.local
 ;; Version: $Id: @(#)dotspacemacs-layers.el,v 0.0 2016/05/25 15:13:53 vinurs Exp $
-;; Changed: <vinurs 12/09/2016 11:37:53>
+;; Changed: <vinurs 12/13/2016 20:57:31>
 ;; Keywords:
 ;; X-URL: not distributed yet
 
@@ -60,20 +60,13 @@
   ;; List of configuration layers to load. If it is the symbol `all' instead
   ;; of a list then all discovered layers will be installed.
   dotspacemacs-configuration-layers
-  '(
+   '(
 	 ;; ----------------------------------------------------------------
 	 ;; Example of useful layers you may want to use right away.
 	 ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
 	 ;; <M-m f e R> (Emacs style) to install them.
 	 ;; ----------------------------------------------------------------
 	 better-defaults
-	 ;; (chinese
-	 ;;   :variables
-	 ;;   chinese-default-input-method nil
-	 ;;   chinese-enable-avy-pinyin nil
-	 ;;   chinese-enable-youdao-dict nil
-	 ;;   chinese-enable-fcitx nil
-	 ;;   )
 
 	 ;; 我自己的默认配置，增强使用方便性
 	 vinurs-defaults
@@ -98,12 +91,6 @@
 	   org-projectile-file "TODOs.org")
 
 	 
-	 ;;  ;; spell-checking
-	 ;;  themes-megapack
-	 ;;  (c-c++)
-
-	 ;;  ;; (python)
-	 ;;  (colors)
 
 	 ;; dev相关工具
 	 ;; 这个关于git的layer还是不错的
