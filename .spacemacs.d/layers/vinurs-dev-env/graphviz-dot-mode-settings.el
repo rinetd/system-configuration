@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@vinurs-mac.local
 ;; Version: $Id: @(#)graphviz-dot-mode-settings.el,v 0.0 2016/05/11 19:09:02 vinurs Exp $
-;; Changed: <vinurs 12/12/2016 23:30:47>
+;; Changed: <vinurs 12/13/2016 10:29:51>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -151,10 +151,6 @@ loaded in GNU Emacs, and `image-formats-alist' for XEmacs."
 		(when (eq l '())
 		  (message "No image found.")))))) 
 
-(add-hook 'c-mode-common-hook
-	 (lambda ()
-			(hs-minor-mode 1)
-			))
 
 (add-hook 'graphviz-dot-mode-hook
   '(lambda ()
