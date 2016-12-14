@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)vinurs-elget.el,v 0.0 2016/07/28 20:41:24 vinurs Exp $
-;; Changed: <vinurs 10/05/2016 09:11:53>
+;; Changed: <vinurs 12/13/2016 21:59:47>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -35,7 +35,7 @@
 ;;; Code:
 
 (eval-when-compile
-  (require 'cl))
+   (require 'cl))
 
 
 
@@ -50,56 +50,53 @@
 
 ;; 每次启动el-get的时候检测el-get是否已经安装，如果没有安装就自动安装
 (unless (require 'el-get nil 'noerror)
-  (require 'package) 
-  (add-to-list 'package-archives
-	'("melpa" . "http://melpa.org/packages/")) 
-  (package-refresh-contents) 
-  (package-initialize) 
-  ;; 将el-get安装在.spacemacs.d目录下
-  (setq user-emacs-directory "~/.spacemacs.d/") 
-  (package-install 'el-get) 
-  (require 'el-get)
-  ;; 恢复user-emacs-directory
-  (setq user-emacs-directory "~/.emacs.d/") 
-  )
- 
+   (require 'package) 
+   (add-to-list 'package-archives
+      '("melpa" . "http://melpa.org/packages/")) 
+   (package-refresh-contents) 
+   (package-initialize) 
+   ;; 将el-get安装在.spacemacs.d目录下
+   (setq user-emacs-directory "~/.spacemacs.d/") 
+   (package-install 'el-get) 
+   (require 'el-get)
+   ;; 恢复user-emacs-directory
+   (setq user-emacs-directory "~/.emacs.d/") 
+   )
+
 (add-to-list 'el-get-recipe-path "~/.spacemacs.d/el-get-user/")
 
 
 ;; 我自己需要的一些软件包
 (setq my-el-get-packages
-      '(
-		 ;;统计每天的编程时间 
-		 wakatime-mode
+   '(
+       ;;统计每天的编程时间 
+       wakatime-mode
 
-		 ;; 代码注释专用
-		 doxymacs
-		 ;; 代码折叠
-		 ;; vimish-fold
-		 ;; dash
-		 ;; s
-        )
-      )
+       ;; 代码注释专用
+       doxymacs
+       
+       )
+   )
 
 
 ;; 设置一些可选参数
 (setq el-get-dir "~/.spacemacs.d/el-get")
 (setq el-get-recipe-path-elpa
-  "~/.spacemacs.d/el-get/el-get/recipes/elpa/")
+   "~/.spacemacs.d/el-get/el-get/recipes/elpa/")
 (setq el-get-recipe-path-emacswiki
-  "~/.spacemacs.d/el-get/el-get/recipes/emacswiki/")
+   "~/.spacemacs.d/el-get/el-get/recipes/emacswiki/")
 (setq el-get-status-file
-  "~/.spacemacs.d/el-get/.status.el")
+   "~/.spacemacs.d/el-get/.status.el")
 (setq el-get-user-package-directory
-  "~/.spacemacs.d/el-get-init-packages")
+   "~/.spacemacs.d/el-get-init-packages")
 
 
 (progn
-  (setq user-emacs-directory "~/.spacemacs.d/") 
-  (el-get 'sync)
-  (el-get 'sync my-el-get-packages)
-  (setq user-emacs-directory "~/.emacs.d/") 
-  ) 
+   (setq user-emacs-directory "~/.spacemacs.d/") 
+   (el-get 'sync)
+   (el-get 'sync my-el-get-packages)
+   (setq user-emacs-directory "~/.emacs.d/") 
+   ) 
 
 (provide 'vinurs-elget)
 

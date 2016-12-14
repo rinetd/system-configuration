@@ -40,8 +40,6 @@
 	 ;; helm-gtags
 	 ;; ggtags
 
-	 ;; doxymacs
-	 (vinurs-doxymacs :location local)
 
 	 ;; muttrc 
 	 muttrc-mode
@@ -103,17 +101,6 @@ Each entry is either:
 	)
   )
 
-
-
-(defun vinurs-dev-env/init-vinurs-doxymacs ()
-  (use-package vinurs-doxymacs
-	:demand t
-	:config
-	(progn
-      (spacemacs|diminish doxymacs-mode " Ⓓ" " D") 
-	  )
-	)
-  ) 
 
 
 (defun vinurs-dev-env/init-vinurs-waketime ()
