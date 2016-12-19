@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@vinurs-mac.local
 ;; Version: $Id: @(#)user-config.el,v 0.0 2016/05/17 07:28:04 vinurs Exp $
-;; Changed: <vinurs 12/07/2016 10:29:03>
+;; Changed: <vinurs 12/20/2016 09:18:02>
 ;; Keywords:
 ;; X-URL: not distributed yet
 
@@ -102,6 +102,14 @@
 ;; 全局开启自动缩进
 ;; (aggressive-indent-global-mode t) 
 
+
+;; 由于禁用了spaceline，所以各种图标在状态栏显示带空格，这个去掉空格
+;; 各种模式的图标重新配置
+(spacemacs|diminish yas-minor-mode "ⓨ" "y") 
+(spacemacs|diminish company-mode "ⓐ" "a")
+(spacemacs|diminish auto-complete-mode "ⓐ" "a")
+(spacemacs|diminish smartparens-mode "ⓟ" "p")
+(spacemacs|diminish which-key-mode "Ⓚ" "K")
 
 (message (format-time-string"%a %H:%M:%S" (current-time))) 
 ;;

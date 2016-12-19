@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)gtags-c-mode.el,v 0.0 2016/07/30 13:49:39 vinurs Exp $
-;; Changed: <vinurs 08/23/2016 15:12:39>
+;; Changed: <vinurs 12/20/2016 07:35:20>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -45,8 +45,8 @@
 
 
 
-(spacemacs|diminish helm-gtags-mode " ⓖ" " g") 
-(spacemacs|diminish ggtags-mode " ğ"  " G") 
+(spacemacs|diminish helm-gtags-mode "ⓖ" "g") 
+(spacemacs|diminish ggtags-mode "ğ"  "G") 
 
 (with-eval-after-load 'helm-gtags
   )

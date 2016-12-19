@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)config.el,v 0.0 2016/08/16 19:00:47 vinurs Exp $
-;; Changed: <vinurs 12/08/2016 15:13:29>
+;; Changed: <vinurs 12/20/2016 07:33:31>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -86,12 +86,12 @@
 (setq display-time-format "%Y-%m-%d %A %H:%M")
 
 ;; 给server-buffers-clients 配置图标
-(spacemacs|diminish server-buffer-clients " ⓢ" " S") 
+(spacemacs|diminish server-buffer-clients "ⓢ" "S") 
 
 ;; hide if
-(spacemacs|diminish hide-ifdef-hiding " ℌ" " h") 
+(spacemacs|diminish hide-ifdef-hiding "ℌ" "h") 
 
-(spacemacs|diminish hide-ifdef-mode " ⓗ" " h") 
+(spacemacs|diminish hide-ifdef-mode "ⓗ" "h") 
 
 ;;时间 戳设置，设定文档上次保存到信息
 ;;只要在文档里有里Time-stamp:的设置，就会自动保存时间戳
