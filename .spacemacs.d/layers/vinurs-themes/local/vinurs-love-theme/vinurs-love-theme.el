@@ -239,7 +239,13 @@ Semantic, and Ansi-Color faces are included.")
 	;;    `(flyspell-incorrect             ((,class (:underline ,red-1 :background ,red-0))))
 
 
-	;; Org mode
+     ;; Org mode
+
+     ;; org文件里面嵌入代码的时候的颜色
+     `(org-block                    ((,class (:background "gray83" :foreground "dark cyan"))))
+     `(org-block-begin-line                    ((,class (:background "#373040" :foreground "light green"))))
+     `(org-block-end-line                    ((,class (:background "#373040" :foreground "light green"))))
+
 
 	;;    `(org-level-1                    ((,class (:foreground ,blue-3 :weight bold))))
 	;;    `(org-level-2                    ((,class (:foreground ,blue-3))))

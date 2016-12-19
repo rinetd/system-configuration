@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)org-todo.el,v 0.0 2016/10/19 22:50:11 vinurs Exp $
-;; Changed: <vinurs 12/11/2016 14:59:00>
+;; Changed: <vinurs 12/15/2016 09:10:40>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -75,7 +75,9 @@
    '(
 	   ("a" "搜集所有未分类的任务" entry
 		  (file+headline "~/Dropbox/home/.org-agenda/inbox.org" "Tasks")
-		  "* %?\n 收集于: %U\n %i\n") 
+          "* TODO %?\n :PROPERTIES: \n :CATEGORY: 未分类 \n :END: \n收集于: %U\n %i\n"
+          ) 
+
 	   ("b" "读书清单" entry 
 		  (file+headline
 			 "~/Dropbox/home/.org-agenda/books.org"
@@ -99,6 +101,8 @@
 	   ("w" "工作相关" entry
 		  (file+headline "~/Dropbox/home/.org-agenda/work.org" "Tasks")
 		  "* TODO %?\n %U\n" :clock-in t :clock-resume t)
+
+
 	   ("i" "自我提升" entry
 		  (file+headline "~/Dropbox/home/.org-agenda/self-improvement.org" "Tasks")
 		  "* TODO %?\n  %U\n %i\n")
