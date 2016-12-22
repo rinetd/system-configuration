@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@vinurs-mac.local
 ;; Version: $Id: @(#)dotspacemacs-layers.el,v 0.0 2016/05/25 15:13:53 vinurs Exp $
-;; Changed: <vinurs 12/13/2016 20:57:31>
+;; Changed: <vinurs 12/20/2016 07:28:00>
 ;; Keywords:
 ;; X-URL: not distributed yet
 
@@ -137,7 +137,9 @@
   ;; configuration in `dotspacemacs/user-config'.
   dotspacemacs-additional-packages '()
   ;; A list of packages and/or extensions that will not be install and loaded.
-  dotspacemacs-excluded-packages '()
+   dotspacemacs-excluded-packages
+   '( spaceline
+       )
   ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
   ;; are declared in a layer which is not a member of
   ;; the list `dotspacemacs-configuration-layers'. (default t)

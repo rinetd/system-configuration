@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)init-doxymacs.el,v 0.0 2016/10/04 21:34:01 vinurs Exp $
-;; Changed: <vinurs 12/14/2016 20:20:27>
+;; Changed: <vinurs 12/20/2016 07:34:39>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -81,7 +81,7 @@
 
 (with-eval-after-load 'doxymacs
 
-   (spacemacs|diminish doxymacs-mode " Ⓓ" " D") 
+   (spacemacs|diminish doxymacs-mode "Ⓓ" "D") 
 
    (setq doxymacs-doxygen-style "JavaDoc") 
 

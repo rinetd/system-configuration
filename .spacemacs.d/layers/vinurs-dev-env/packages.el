@@ -83,7 +83,7 @@ Each entry is either:
     :config
     (progn
       (require 'graphviz-dot-mode-settings) 
-	  (spacemacs|diminish graphviz-dot-mode " ⓓ" " d") 
+	  (spacemacs|diminish graphviz-dot-mode "ⓓ" "d") 
       )
     )
   )
@@ -108,7 +108,7 @@ Each entry is either:
 	:demand t
 	:config
 	(progn
-      (spacemacs|diminish wakatime-mode " ⓦ" " w")
+      (spacemacs|diminish wakatime-mode "ⓦ" "w")
 	  )
 	)
   )
@@ -118,7 +118,7 @@ Each entry is either:
 	:demand t
 	:config
 	(progn
-      ;; (spacemacs|diminish wakatime-mode " ⓦ" " w")
+      ;; (spacemacs|diminish wakatime-mode "ⓦ" "w")
 	  )
 	)
 )

@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@vinurs-mac.local
 ;; Version: $Id: @(#)user-config.el,v 0.0 2016/05/17 07:28:04 vinurs Exp $
-;; Changed: <vinurs 12/07/2016 10:29:03>
+;; Changed: <vinurs 12/20/2016 23:34:02>
 ;; Keywords:
 ;; X-URL: not distributed yet
 
@@ -35,7 +35,7 @@
 ;;; Code:
 
 (eval-when-compile
-  (require 'cl))
+   (require 'cl))
 
 
 
@@ -49,7 +49,7 @@
 ;; This is the place where most of your configurations should be done. Unless it is
 ;; explicitly specified that a variable should be set before a package is loaded,
 ;; you should place you code here."
- 
+
 
 
 ;; (setq powerline-default-separator 'arrow)
@@ -73,7 +73,7 @@
 ;; space s s
 ;; Use search query at the cursor  (default)
 (setq helm-swoop-pre-input-function
-  (lambda () (thing-at-point 'symbol))) 
+   (lambda () (thing-at-point 'symbol))) 
 
 
 ;; 原来打开文件的时候不能用template，这里重新定义一下打开文件的函数
@@ -86,22 +86,30 @@
 ;; Prefixes
 ;; 除了spacemac自定义的前缀键，我自己另外定义了oa表示我自己的应用程序
 (setq vinurs-spacemacs/key-binding-prefixes '(
-											   ("o"   "user-defineds")
-											   ("oa"  "applications")
-											   )) 
+                                                ("o"   "user-defineds")
+                                                ("oa"  "applications")
+                                                )) 
 (mapc (lambda (x) (apply #'spacemacs/declare-prefix x))
-  vinurs-spacemacs/key-binding-prefixes) 
+   vinurs-spacemacs/key-binding-prefixes) 
 
 ;; 对org的一些额外的配置
 ;; 加载了orgmode以后加载下面的代码
 (with-eval-after-load 'org
-  (push "~/.spacemacs.d/vinurs-org" load-path) 
-  (require 'vinurs-org) 
-  )
+   (push "~/.spacemacs.d/vinurs-org" load-path) 
+   (require 'vinurs-org) 
+   )
 
 ;; 全局开启自动缩进
 ;; (aggressive-indent-global-mode t) 
 
+
+;; 由于禁用了spaceline，所以各种图标在状态栏显示带空格，这个去掉空格
+;; 各种模式的图标重新配置
+(spacemacs|diminish yas-minor-mode "ⓨ" "y") 
+(spacemacs|diminish company-mode "ⓐ" "a")
+(spacemacs|diminish auto-complete-mode "ⓐ" "a")
+(spacemacs|diminish smartparens-mode "ⓟ" "p")
+(spacemacs|diminish which-key-mode "Ⓚ" "K")
 
 (message (format-time-string"%a %H:%M:%S" (current-time))) 
 ;;

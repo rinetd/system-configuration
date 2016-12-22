@@ -153,7 +153,7 @@ Each entry is either:
 ;;     :config
 ;;     (progn
 
-;;       (spacemacs|diminish highlight-tail-mode " ℋ" " H") 
+;;       (spacemacs|diminish highlight-tail-mode "ℋ" "H") 
 ;;       ;; 设置高亮的颜色
 ;;       (setq highlight-tail-colors
 ;; 		'(("#c1e156" . 0)
