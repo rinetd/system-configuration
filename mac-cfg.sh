@@ -27,6 +27,7 @@ sudo cp -f current_dir/ftpd.conf /etc/
 files_mac=()
 
 files_mac+=(.iterm2)
+files_mac+=(.karabiner.d)
 
 # files
 for i in "${files_mac[@]}"; do
