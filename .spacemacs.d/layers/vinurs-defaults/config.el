@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)config.el,v 0.0 2016/08/16 19:00:47 vinurs Exp $
-;; Changed: <vinurs 12/20/2016 07:33:31>
+;; Changed: <vinurs 12/29/2016 14:41:40>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -108,6 +108,18 @@
 (setq time-stamp-line-limit 15)
 ;;将修改时间戳的动作添加到保存文件动作里
 (add-hook 'write-file-hooks 'time-stamp)
+
+;; 括号匹配相关
+;; 高亮括号配对
+(electric-pair-mode)
+
+;; 高亮括号配对
+(show-paren-mode t)
+(setq show-paren-style 'parenthesis)
+(setq hl-paren-colors
+   '("blue" "purple" "cyan" "magenta" "green" "blue"
+       "brown"  "salmon2" "wheat4"))
+
 
 
 (provide 'config)

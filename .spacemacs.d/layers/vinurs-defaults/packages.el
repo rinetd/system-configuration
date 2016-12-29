@@ -49,6 +49,9 @@
 	 ;; 括号匹配
 	 (parent-mode)
 
+      ;; 高亮括号
+      ;; (rainbow-delimiters)
+
 	 ;; 新建文件的时候自动根据后缀补全一些文件的基本信息
 	 (template :location local)
 
@@ -134,6 +137,18 @@ Each entry is either:
       )
     )
   )
+
+(defun vinurs-defaults/init-rainbow-delimiters ()
+   (use-package rainbow-delimiters
+      ;; 启动emacs的时候就加载该插件
+      :demand t
+      :config
+      (progn
+         (require 'vinurs-rainbow-delimiters-settings)
+         )
+      )
+   )
+
 
 
 

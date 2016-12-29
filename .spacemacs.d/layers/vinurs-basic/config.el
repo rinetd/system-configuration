@@ -56,45 +56,11 @@
 
 ;; Insert TAB for indentation:
 ;;(require 'helm-swoop-settings)
-;; 行号相关
-(global-linum-mode t)
-;; TODO 增加一些定制行号的字体的配置    
-;; (custom-set-faces
-;;  '(linum
-;;    (   
-;;     ;; for tty
-;;     (((type tty) (class color))
-;;      (:foreground "black"
-;;                   :background "white"
-;;                   :inherit)
-;;      )   
-;;     ;; for window
-;;     (((type graphic) (class color))
-;;      (:background "default"
-;;                   :foreground "green"
-;;                   ))
-;;     ;; default
-;;     (t (:foreground "blue"
-;;                     :background "black"
-;;                     )))
-;;    ))
+
 
 ;;set my fullname and my email,they can be used when mailing
 (setq user-full-name "haiyuan.zhang")
 (setq user-mail-address "haiyuan.vinurs@gmail.com")
 
-
-;; 括号匹配相关
-;; 高亮括号配对
-(electric-pair-mode)
-
-
-
-;; 高亮括号配对
-(show-paren-mode t)
-(setq show-paren-style 'parenthesis)
-(setq hl-paren-colors
-      '("blue" "purple" "cyan" "magenta" "green" "blue"
-        "brown"  "salmon2" "wheat4"))
 
 
