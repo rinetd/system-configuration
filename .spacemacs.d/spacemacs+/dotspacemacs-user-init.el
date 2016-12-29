@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@vinurs-mac.local
 ;; Version: $Id: @(#)dotspacemacs-layers.el,v 0.0 2016/05/25 15:13:53 vinurs Exp $
-;; Changed: <vinurs 09/14/2016 11:26:50>
+;; Changed: <vinurs 12/29/2016 14:53:35>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -57,8 +57,10 @@
 (setenv "PATH" (concat "/usr/local/bin/:" (getenv "PATH"))) 
 (setq exec-path (append exec-path '("/usr/local/bin/")))
 
-
-
+;; 显示行号
+(global-linum-mode) 
+;; 高亮当前行
+(global-hl-line-mode t) 
 
 (provide 'dotspacemacs-user-init)
 
