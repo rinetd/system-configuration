@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)org-todo.el,v 0.0 2016/10/19 22:50:11 vinurs Exp $
-;; Changed: <vinurs 12/15/2016 09:10:40>
+;; Changed: <vinurs 12/29/2016 15:18:16>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -91,6 +91,7 @@
 			 "ShoppingList")
 		  "* TODO %?\n  添加于: %U\n %i\n\n"
 		  :empty-lines 1)
+
 	   ("l" "生活相关" entry 
 		  (file+headline
 			 "~/Dropbox/home/.org-agenda/life.org"
@@ -101,6 +102,11 @@
 	   ("w" "工作相关" entry
 		  (file+headline "~/Dropbox/home/.org-agenda/work.org" "Tasks")
 		  "* TODO %?\n %U\n" :clock-in t :clock-resume t)
+
+       ("e" "效率提高" entry
+		  (file+headline "~/Dropbox/home/.org-agenda/self-improvement.org" "Tasks")
+
+          "* TODO %?\n :PROPERTIES: \n :CATEGORY: 效率提高 \n :END: \n")
 
 
 	   ("i" "自我提升" entry
