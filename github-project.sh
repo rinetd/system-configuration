@@ -57,6 +57,9 @@ git clone git@gitlab.com:vinurs/vinurs-gluster.git
 # gluster
 git clone https://github.com/gluster/glusterfs.git
 
+# linux kernel
+git clone https://github.com/torvalds/linux.git
+
 # openstack swift
 git clone https://github.com/openstack/swift.git
 
