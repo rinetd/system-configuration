@@ -12,8 +12,12 @@ filetypes_dict = [
      'filename': "c"
     },
     {'regrex': '*.cpp',
-     'filename': "cpp"
+     'filename': "cpp(cpp)"
     },
+    {'regrex': '*.cc',
+     'filename': "cpp(cc)"
+    },
+
     {'regrex': '*.py',
      'filename': "python"
     },
@@ -33,7 +37,7 @@ for filetype in filetypes_dict:
                                     "awk '{print $1}'")
     if file_lines+"x" != "x":
         # >右对齐
-        print('{0:>6}: {1:>7}'.format(filetype['filename'], file_lines)) 
+        print('{0:>10}: {1:>7}'.format(filetype['filename'], file_lines)) 
         
 
 
