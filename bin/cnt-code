@@ -17,7 +17,9 @@ filetypes_dict = [
     {'regrex': '*.cc',
      'filename': "cpp(cc)"
     },
-
+    {'regrex': '*.cmake',
+     'filename': "cmake"
+    },
     {'regrex': '*.py',
      'filename': "python"
     },
