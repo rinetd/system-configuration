@@ -24,6 +24,15 @@ filetypes_dict = [
     {'regrex': '*.el',
      'filename': "elisp"
     },
+    {'regrex': '*.sh',
+     'filename': "shell"
+    },
+    {'regrex': '*.md',
+     'filename': "Markdown"
+    },
+    {'regrex': '*.org',
+     'filename': "Org"
+    },
     {'regrex': '*.js',
      'filename': "javascript"
     }
