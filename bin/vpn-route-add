@@ -44,6 +44,7 @@ elif [ "$1"x = "shata"x ]; then
     fi
     pppip=`ifconfig $2|grep inet|awk '{print $2}'`
     sudo route add 10.4.8.0/16 $pppip
+    sudo route add 10.1.21.0/16 $pppip
 
 else
     usage
