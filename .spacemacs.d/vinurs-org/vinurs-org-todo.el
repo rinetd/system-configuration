@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)org-todo.el,v 0.0 2016/10/19 22:50:11 vinurs Exp $
-;; Changed: <vinurs 12/29/2016 15:18:16>
+;; Changed: <vinurs 01/11/2017 12:05:31>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -59,10 +59,10 @@
 			   (display-buffer buffer)
 			   (org-agenda-maybe-redo)
 			   ))))) 
-(add-hook 'org-mode-hook
-   (lambda()
-	  (add-hook 'after-save-hook 'redo-all-agenda-buffers nil 'make-it-local) 
-	  )) 
+;; (add-hook 'org-mode-hook
+;;    (lambda()
+;; 	  (add-hook 'after-save-hook 'redo-all-agenda-buffers nil 'make-it-local) 
+;; 	  )) 
 
 
 
