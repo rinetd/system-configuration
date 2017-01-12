@@ -4,7 +4,7 @@
 ;;
 ;; Author: haiyuan.vinurs@gmail.com
 ;; Version: $Id: @(#)vinurs-calendar.el,v 0.0 2016/10/21 05:56:31 vinurs Exp $
-;; Changed: <vinurs 11/30/2016 06:59:28>
+;; Changed: <vinurs 01/12/2017 23:01:57>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -44,35 +44,28 @@
 ;;;;##########################################################################
 
 
-(require 'holidays-priv) 
 
 ;; (spacemacs/declare-prefix "oac" "calendar") 
 
+;; icalfw设置
 ;; 定义快捷键
 (spacemacs/set-leader-keys "oac" 'cfw:open-calendar-buffer) 
 
-;; First day of the week
-(setq calendar-week-start-day 1) ; 0:Sunday, 1:Monday
-
-
-(defun my-open-calendar ()
-  (interactive)
-  (cfw:open-calendar-buffer
-	:contents-sources
-	(list
-	  ;; (cfw:org-create-source "Green")  ; orgmode source
-	  ;; (cfw:howm-create-source "Blue")  ; howm source
-	  ;; (cfw:cal-create-source "Orange") ; diary source
-	  ;; (cfw:ical-create-source "Moon" "~/moon.ics" "Gray")  ; ICS source1
-	  ;; (cfw:ical-create-source "gcal" "https://..../basic.ics" "IndianRed") ; google calendar ICS
-	  )
-	)) 
-
+;; 日历边框设置
+;; Another unicode chars
+(setq cfw:fchar-junction ?╬
+   cfw:fchar-vertical-line ?║
+   cfw:fchar-horizontal-line ?═
+   cfw:fchar-left-junction ?╠
+   cfw:fchar-right-junction ?╣
+   cfw:fchar-top-junction ?╦
+   cfw:fchar-top-left-corner ?╔
+   cfw:fchar-top-right-corner ?╗) 
 
 ;; 中文月份 
 (setq calendar-month-name-array
-  ["一月" "二月" "三月"     "四月"   "五月"      "六月"
-	"七月"    "八月"   "九月" "十月" "十一月" "十二月"]) 
+   ["一月" "二月" "三月"     "四月"   "五月"      "六月"
+      "七月"    "八月"   "九月" "十月" "十一月" "十二月"]) 
 ;; 英文月份
 ;; (setq calendar-month-name-array
 ;;   ["January" "February" "March"     "April"   "May"      "June"
@@ -81,93 +74,28 @@
 
 ;; Week days
 (setq calendar-day-name-array
-  ["周日" "周一" "周二" "周三" "周四" "周五" "周六"]) 
+   ["周日" "周一" "周二" "周三" "周四" "周五" "周六"]) 
 ;; 英文星期
 ;; (setq calendar-day-name-array
 ;;   ["Sunday" "Monday" "Tuesday" "Wednesday" "Thursday" "Friday" "Saturday"]) 
 
 
-;; (require 'holidays) 
-(setq holiday-vinurs-holidays
-  '(
-	 ;;公历节日
-	 (holiday-fixed 1 1 "元旦")
+;; First day of the week
+(setq calendar-week-start-day 1) ; 0:Sunday, 1:Monday
+;;; Customs
 
-	 (holiday-fixed 2 14 "情人节")
-	 (holiday-fixed 3 8 "妇女节")
-	 (holiday-fixed 3 14 "白色情人节")
-	 (holiday-fixed 4 1 "愚人节")
-	 (holiday-fixed 5 1 "劳动节")
-	 (holiday-fixed 5 4 "青年节")
-	 (holiday-float 5 0 2 "母亲节")
-	 (holiday-fixed 6 1 "儿童节")
-	 (holiday-float 6 0 3 "父亲节")
-	 (holiday-fixed 9 10 "教师节")
-	 (holiday-fixed 10 1 "国庆节")
-	 (holiday-fixed 12 25 "圣诞节")
+(defcustom cfw:openmax t
+   "open cfw buffer maximize"
+   :group 'cfw
+   :type 'boolean) 
 
-	 ;; 农历节日
-	 (holiday-lunar 1 1 "春节" 0)
-	 (holiday-lunar 1 2 "春节" 0)
-	 (holiday-lunar 1 3 "春节" 0)
-	 (holiday-lunar 1 15 "元宵节" 0)
+(add-hook 'cfw:calendar-mode-hook
+   (lambda ()
+      ;; 禁用高亮当前行
+      (setq-local global-hl-line-mode
+         nil))) 
 
-	 (holiday-solar-term "清明" "清明节")
-	 (holiday-solar-term "小寒" "小寒" )
-	 (holiday-solar-term "大寒" "大寒" )
-	 (holiday-solar-term "立春" "立春" )
-	 (holiday-solar-term "雨水" "雨水" )
-	 (holiday-solar-term "惊蛰" "惊蛰" )
-	 (holiday-solar-term "春分" "春分" )
-	 (holiday-solar-term "谷雨" "谷雨" )
-	 (holiday-solar-term "立夏" "立夏" )
-	 (holiday-solar-term "小满" "小满" )
-	 (holiday-solar-term "芒种" "芒种" )
-	 (holiday-solar-term "夏至" "夏至" )
-	 (holiday-solar-term "小暑" "小暑" )
-	 (holiday-solar-term "大暑" "大暑" )
-	 (holiday-solar-term "立秋" "立秋" )
-	 (holiday-solar-term "处暑" "处暑" )
-	 (holiday-solar-term "白露" "白露" )
-	 (holiday-solar-term "秋分" "秋分" )
-	 (holiday-solar-term "寒露" "寒露" )
-	 (holiday-solar-term "霜降" "霜降" )
-	 (holiday-solar-term "立冬" "立冬" )
-	 (holiday-solar-term "小雪" "小雪" )
-	 (holiday-solar-term "大雪" "大雪" )
-	 (holiday-solar-term "冬至" "冬至" )
-	 (holiday-lunar 5 5 "端午节" 0)
-	 (holiday-lunar 8 15 "中秋节" 0)
-	 (holiday-lunar 7 7 "七夕情人节" 0)
-	 (holiday-lunar 12 8 "腊八节" 0)
-	 (holiday-lunar 9 9 "重阳节" 0)
-	 (holiday-lunar 12 22 "冬至" 0)
-
-	 )) 
-
-(setq mark-holidays-in-calendar t) 
-(setq christian-holidays nil) ;; 不显示基督教的节日
-(setq hebrew-holidays nil)    ;; 不显示希伯来人的节日
-(setq islamic-holidays nil)   ;; 不显示伊斯兰教的节日
-
-
-(setq cal-china-x-important-holidays
-  (append cal-china-x-chinese-holidays
-	;; vinurs定义的一些节日
-    holiday-vinurs-holidays
-
-	;;vinurs-private-holidays 
-	vinurs-private-holidays
-	)
-  ) 
-
-
-(setq calendar-mark-holidays-flag t) 
-;; (defvar displayed-month 1) 
-
-(setq calendar-holidays cal-china-x-important-holidays) 
-;; (setq calendar-holidays cal-china-x-chinese-holidays) 
-
+ 
 
 
 ;; 定义字体
@@ -192,23 +120,108 @@
 ;;  '(cfw:face-toolbar-button-on ((t :foreground "Gray50" :weight bold)))) 
 
 
+(defun my-open-calendar ()
+  (interactive)
+  (cfw:open-calendar-buffer
+	:contents-sources
+	(list
+	  ;; (cfw:org-create-source "Green")  ; orgmode source
+	  ;; (cfw:howm-create-source "Blue")  ; howm source
+	  ;; (cfw:cal-create-source "Orange") ; diary source
+	  ;; (cfw:ical-create-source "Moon" "~/moon.ics" "Gray")  ; ICS source1
+	  ;; (cfw:ical-create-source "gcal" "https://..../basic.ics" "IndianRed") ; google calendar ICS
+	  )
+	)) 
 
 
-;; 日历边框设置
-;; Another unicode chars
-(setq cfw:fchar-junction ?╬
-  cfw:fchar-vertical-line ?║
-  cfw:fchar-horizontal-line ?═
-  cfw:fchar-left-junction ?╠
-  cfw:fchar-right-junction ?╣
-  cfw:fchar-top-junction ?╦
-  cfw:fchar-top-left-corner ?╔
-  cfw:fchar-top-right-corner ?╗) 
+
+;; (require 'holidays) 
+;; (setq holiday-vinurs-holidays
+;;   '(
+;; 	 ;;公历节日
+;; 	 (holiday-fixed 1 1 "元旦")
+
+;; 	 (holiday-fixed 2 14 "情人节")
+;; 	 (holiday-fixed 3 8 "妇女节")
+;; 	 (holiday-fixed 3 14 "白色情人节")
+;; 	 (holiday-fixed 4 1 "愚人节")
+;; 	 (holiday-fixed 5 1 "劳动节")
+;; 	 (holiday-fixed 5 4 "青年节")
+;; 	 (holiday-float 5 0 2 "母亲节")
+;; 	 (holiday-fixed 6 1 "儿童节")
+;; 	 (holiday-float 6 0 3 "父亲节")
+;; 	 (holiday-fixed 9 10 "教师节")
+;; 	 (holiday-fixed 10 1 "国庆节")
+;; 	 (holiday-fixed 12 25 "圣诞节")
+
+;; 	 ;; 农历节日
+;; 	 (holiday-lunar 1 1 "春节" 0)
+;; 	 (holiday-lunar 1 2 "春节" 0)
+;; 	 (holiday-lunar 1 3 "春节" 0)
+;; 	 (holiday-lunar 1 15 "元宵节" 0)
+
+;; 	 (holiday-solar-term "清明" "清明节")
+;; 	 (holiday-solar-term "小寒" "小寒" )
+;; 	 (holiday-solar-term "大寒" "大寒" )
+;; 	 (holiday-solar-term "立春" "立春" )
+;; 	 (holiday-solar-term "雨水" "雨水" )
+;; 	 (holiday-solar-term "惊蛰" "惊蛰" )
+;; 	 (holiday-solar-term "春分" "春分" )
+;; 	 (holiday-solar-term "谷雨" "谷雨" )
+;; 	 (holiday-solar-term "立夏" "立夏" )
+;; 	 (holiday-solar-term "小满" "小满" )
+;; 	 (holiday-solar-term "芒种" "芒种" )
+;; 	 (holiday-solar-term "夏至" "夏至" )
+;; 	 (holiday-solar-term "小暑" "小暑" )
+;; 	 (holiday-solar-term "大暑" "大暑" )
+;; 	 (holiday-solar-term "立秋" "立秋" )
+;; 	 (holiday-solar-term "处暑" "处暑" )
+;; 	 (holiday-solar-term "白露" "白露" )
+;; 	 (holiday-solar-term "秋分" "秋分" )
+;; 	 (holiday-solar-term "寒露" "寒露" )
+;; 	 (holiday-solar-term "霜降" "霜降" )
+;; 	 (holiday-solar-term "立冬" "立冬" )
+;; 	 (holiday-solar-term "小雪" "小雪" )
+;; 	 (holiday-solar-term "大雪" "大雪" )
+;; 	 (holiday-solar-term "冬至" "冬至" )
+;; 	 (holiday-lunar 5 5 "端午节" 0)
+;; 	 (holiday-lunar 8 15 "中秋节" 0)
+;; 	 (holiday-lunar 7 7 "七夕情人节" 0)
+;; 	 (holiday-lunar 12 8 "腊八节" 0)
+;; 	 (holiday-lunar 9 9 "重阳节" 0)
+;; 	 (holiday-lunar 12 22 "冬至" 0)
+
+;; 	 )) 
+
+;; (setq mark-holidays-in-calendar t) 
+;; (setq christian-holidays nil) ;; 不显示基督教的节日
+;; (setq hebrew-holidays nil)    ;; 不显示希伯来人的节日
+;; (setq islamic-holidays nil)   ;; 不显示伊斯兰教的节日
+
+
+;; (setq cal-china-x-important-holidays
+;;   (append cal-china-x-chinese-holidays
+;; 	;; vinurs定义的一些节日
+;;     holiday-vinurs-holidays
+
+;; 	;;vinurs-private-holidays 
+;; 	vinurs-private-holidays
+;; 	)
+;;   ) 
+
+
+;; (setq calendar-mark-holidays-flag t) 
+;; ;; (defvar displayed-month 1) 
+
+;; (setq calendar-holidays cal-china-x-important-holidays) 
+;; (setq calendar-holidays cal-china-x-chinese-holidays) 
 
 
 
-;; (spacemacs//set-monospaced-font   "Source Code Pro" "Hiragino Sans GB" 14 16) 
-;; (spacemacs//set-monospaced-font   "Source Code Pro" "Hiragino Sans GB" 14 16) 
+
+
+
+(require 'holidays-priv) 
 
 
 (provide 'vinurs-calendar)
