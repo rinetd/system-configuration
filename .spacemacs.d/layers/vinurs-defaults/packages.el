@@ -56,9 +56,11 @@
 	 (template :location local)
 
 	 ;; 日历相关配置
+      ;; 日历框架
+      (calfw)
+
 	 ;; 农历
 	 ;; (cal-china-x)
-	 ;; (calfw)
 
 	 ;; google翻译 
 	 ;; 可惜Google在中国不能用, fuck GFW
