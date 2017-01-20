@@ -55,13 +55,6 @@
 	 ;; 新建文件的时候自动根据后缀补全一些文件的基本信息
 	 (template :location local)
 
-	 ;; 日历相关配置
-      ;; 日历框架
-      (calfw)
-
-	 ;; 农历
-	 ;; (cal-china-x)
-
 	 ;; google翻译 
 	 ;; 可惜Google在中国不能用, fuck GFW
 	 ;; (google-translate)
@@ -250,19 +243,6 @@ Each entry is either:
     )
   )
 
-
-;; 比较好的emacs日历
-(defun vinurs-defaults/init-calfw()
-  (use-package calfw
-    ;; 启动emacs的时候就加载该插件
-    :demand t
-
-    :config
-    (progn
-	  (require 'vinurs-calendar)
-      )
-    )
-  )
 
 
 

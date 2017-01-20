@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@vinurs-mac.local
 ;; Version: $Id: @(#)graphviz-dot-mode-settings.el,v 0.0 2016/05/11 19:09:02 vinurs Exp $
-;; Changed: <vinurs 12/13/2016 10:29:51>
+;; Changed: <vinurs 01/20/2017 11:56:24>
 ;; Keywords: 
 ;; X-URL: not distributed yet
 
@@ -153,19 +153,18 @@ loaded in GNU Emacs, and `image-formats-alist' for XEmacs."
 
 
 (add-hook 'graphviz-dot-mode-hook
-  '(lambda ()
+   '(lambda ()
 
-			;; 括号折叠
-			(hs-minor-mode 1)
+       ;; 括号折叠
+       (hs-minor-mode 1)
+       ;; compile dot files
+       (spacemacs/set-leader-keys-for-major-mode 'graphviz-dot-mode
+          "c" 'compile) 
+       ;; preview
+       (spacemacs/set-leader-keys-for-major-mode 'graphviz-dot-mode
+          "p" 'new1-graphviz-dot-preview) 
 
-			;; compile dot files
-			(spacemacs/set-leader-keys-for-major-mode 'graphviz-dot-mode
-				 "c" 'compile) 
-			;; preview
-			(spacemacs/set-leader-keys-for-major-mode 'graphviz-dot-mode
-				 "p" 'new1-graphviz-dot-preview) 
-
-			)) 
+       )) 
 
 (defun graphviz-dot-indent-line ()
    "Indent current line of dot code."
