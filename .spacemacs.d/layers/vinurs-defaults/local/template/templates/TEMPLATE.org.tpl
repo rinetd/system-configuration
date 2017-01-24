@@ -13,3 +13,9 @@
 #+OPTIONS: 
 #+THUMBNAILIMAGE: 
 
+
+
+#+BEGIN_HTML
+  <!--more-->
+#+END_HTML
+
