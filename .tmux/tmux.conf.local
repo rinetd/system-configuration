@@ -36,8 +36,8 @@ tmux_conf_battery_palette='#d70000,#e4e4e4,#000000'
 #tmux_conf_battery_palette=heat
 
 # display the battery status: charging (U+26A1) / discharging (U+1F50B)
-tmux_conf_battery_status=enabled
-#tmux_conf_battery_status=disabled
+# tmux_conf_battery_status=enabled
+tmux_conf_battery_status=disabled
 
 # or alternatively use an external tool, e.g. https://github.com/Goles/Battery
 #tmux_conf_battery='#(battery -t) '

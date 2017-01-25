@@ -4,7 +4,7 @@
 ;;
 ;; Author: vinurs@vinurs-mac.local
 ;; Version: $Id: @(#)dotspacemacs-layers.el,v 0.0 2016/05/25 15:13:53 vinurs Exp $
-;; Changed: <vinurs 12/20/2016 07:28:00>
+;; Changed: <vinurs 01/13/2017 16:06:32>
 ;; Keywords:
 ;; X-URL: not distributed yet
 
@@ -70,6 +70,9 @@
 
 	 ;; 我自己的默认配置，增强使用方便性
 	 vinurs-defaults
+
+       ;; 日历相关
+       spacemacs-calendar-layer
 
 	 ;; 我自己的一些基础配置，用起来更加舒服一点
 	 vinurs-basic
