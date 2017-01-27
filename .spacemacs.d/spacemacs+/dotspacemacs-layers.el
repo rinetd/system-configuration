@@ -70,6 +70,7 @@
 
 	 ;; 我自己的默认配置，增强使用方便性
 	 vinurs-defaults
+	funny
 
        ;; 日历相关
        spacemacs-calendar-layer

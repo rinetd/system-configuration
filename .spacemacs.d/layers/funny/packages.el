@@ -30,7 +30,10 @@
 ;;; Code:
 
 (defconst funny-packages
-  '()
+   '(
+       ;; 状态栏一只猫，好好玩
+       (nyan-mode)
+       )
   "The list of Lisp packages required by the funny layer.
 
 Each entry is either:
@@ -57,6 +60,16 @@ Each entry is either:
 
       - A list beginning with the symbol `recipe' is a melpa
         recipe.  See: https://github.com/milkypostman/melpa#recipe-format")
+
+(defun funny/init-nyan-mode ()
+   (use-package nyan-mode
+      ;; 启动emacs的时候就加载该插件
+      :demand t
+      :config
+      (progn
+         )
+      )
+   )
 
 
 ;;; packages.el ends here
