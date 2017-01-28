@@ -31,8 +31,10 @@
 
 (defconst funny-packages
    '(
-       ;; 状态栏一只猫，好好玩
+       ;; 状态栏一只猫，显示在当前buffer中的位置
        (nyan-mode)
+       ;; 显示emojis
+       (emojify)
        )
   "The list of Lisp packages required by the funny layer.
 
@@ -67,6 +69,19 @@ Each entry is either:
       :demand t
       :config
       (progn
+         (nyan-mode t) 
+         )
+      )
+   )
+
+
+(defun funny/init-emojify ()
+   (use-package emojify
+      ;; 启动emacs的时候就加载该插件
+      :demand t
+      :config
+      (progn
+         (global-emojify-mode t) 
          )
       )
    )
