@@ -39,7 +39,7 @@ git clone https://github.com/vinurs/website.git
 # 个人blog的主题
 git clone https://github.com/vinurs/hexo-theme-yelee.git website/themes/yelee
 # 用org-mode来配合hexo写blog
-git clone https://github.com/vinurs/hexo-renderer-org.git
+# git clone https://github.com/vinurs/hexo-renderer-org.git
 # 支持文章置顶
 git clone https://github.com/vinurs/hexo-generator-index.git
 # 最终的blog
