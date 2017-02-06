@@ -248,7 +248,7 @@ brew cask install appcleaner
 brew cask install dropbox
 brew cask install totalfinder
 brew cask install launchrocket
-# mac下很不错的中端
+# mac下很不错的终端
 brew cask install iterm2
 
 # adium 很好的IRC聊天客户端
